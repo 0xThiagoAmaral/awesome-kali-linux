@@ -151,9 +151,9 @@ for value in ['*.tmp','evidence/*-job.json']:
 ignore.write_bytes(t.encode('utf-8'))
 attrs=ROOT/'.gitattributes'
 t=attrs.read_text(encoding='utf-8')
-for value in ['sources/upstream/** -diff','vault/02-Tools/*/*documentacao*.md whitespace=-blank-at-eol',
+for value in ['sources/upstream/** -text -diff','vault/02-Tools/*/*documentacao*.md -text whitespace=-blank-at-eol',
               '# Preserve literal upstream code whitespace and verbatim license endings.',
-              'vault/02-Tools/*/*-docs-*.md whitespace=-blank-at-eol',
+              'vault/02-Tools/*/*-docs-*.md -text whitespace=-blank-at-eol',
               'LICENSE whitespace=-blank-at-eof','LICENSES/*.txt whitespace=-blank-at-eof']:
     if value not in t:
         t+='\n'+value+'\n'

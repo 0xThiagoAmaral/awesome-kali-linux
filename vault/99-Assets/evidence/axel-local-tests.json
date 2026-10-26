@@ -1,0 +1,169 @@
+{
+  "passed": true,
+  "installed_version": "Axel 2.17.14 (linux-gnu)",
+  "fixture": "Owned 127.0.0.1 HTTP server; no Internet requests",
+  "fixture_port": 34623,
+  "fixture_closed": true,
+  "checks": [
+    {
+      "check": "Downloaded bytes match the owned fixture exactly",
+      "pass": true,
+      "bytes": 65536,
+      "sha256": "7daca2095d0438260fa849183dfc67faa459fdf4936e1bc91eec6b281b27e4c2"
+    },
+    {
+      "check": "Quiet mode stdout is empty",
+      "pass": true
+    },
+    {
+      "check": "Custom header and user-agent reached the fixture",
+      "pass": true
+    },
+    {
+      "check": "No-clobber preserves the existing complete file",
+      "pass": true,
+      "observed_exit_status": 1
+    },
+    {
+      "check": "No state file remains after successful download",
+      "pass": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "axel",
+        "--version"
+      ],
+      "stdout": "Axel 2.17.14 (linux-gnu)\n\nCopyright 2001-2007 Wilmer van der Gaast,\n\t  2007-2009 Giridhar Appaji Nag,\n\t  2008-2010 Philipp Hagemeister,\n\t  2015-2017 Joao Eriberto Mota Filho,\n\t  2016-2017 Stephen Thirlwall,\n\t  2017      Antonio Quartulli,\n\t  2017-2024 Ismael Luceno,\n\t\t    and others.\nPlease, see the CREDITS file.\n\n\n\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "axel",
+        "--help"
+      ],
+      "stdout": "Axel 2.17.14 (linux-gnu)\nUsage: axel [options] url1 [url2] [url...]\n\n--max-speed=x\t\t-s x\tSpecify maximum speed (bytes per second)\n--num-connections=x\t-n x\tSpecify maximum number of connections\n--max-redirect=x\t\tSpecify maximum number of redirections\n--output=f\t\t-o f\tSpecify local output file\n--search[=n]\t\t-S[n]\tSearch for mirrors and download from n servers\n--ipv4\t\t\t-4\tUse the IPv4 protocol\n--ipv6\t\t\t-6\tUse the IPv6 protocol\n--header=x\t\t-H x\tAdd HTTP header string\n--user-agent=x\t\t-U x\tSet user agent\n--no-proxy\t\t-N\tJust don't use any proxy server\n--insecure\t\t-k\tDon't verify the SSL certificate\n--no-clobber\t\t-c\tSkip download if file already exists\n--quiet\t\t\t-q\tLeave stdout alone\n--verbose\t\t-v\tMore status information\n--alternate\t\t-a\tAlternate progress indicator\n--percentage\t\t-p\tPrint simple percentages instead of progress bar (0-100)\n--help\t\t\t-h\tThis information\n--timeout=x\t\t-T x\tSet I/O and connection timeout\n--version\t\t-V\tVersion information\n\nVisit https://github.com/axel-download-accelerator/axel/issues to report bugs\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "axel",
+        "-q",
+        "-n",
+        "2",
+        "-s",
+        "131072",
+        "-T",
+        "5",
+        "-H",
+        "X-Fieldbook: offline-fixture",
+        "-U",
+        "Fieldbook-Axel-Test",
+        "-o",
+        "<TEST_DIR>/download.bin",
+        "http://127.0.0.1:34623/fixture.bin"
+      ],
+      "stdout": "",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "axel",
+        "-c",
+        "-q",
+        "-o",
+        "<TEST_DIR>/download.bin",
+        "http://127.0.0.1:34623/fixture.bin"
+      ],
+      "stdout": "",
+      "stderr": "No state file, cannot resume!\n",
+      "exit_status": 1
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "range": "bytes=0-",
+      "user_agent": "Fieldbook-Axel-Test",
+      "custom_header": "offline-fixture"
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-65535",
+      "user_agent": "Fieldbook-Axel-Test",
+      "custom_header": "offline-fixture"
+    },
+    {
+      "method": "GET",
+      "range": "bytes=0-",
+      "user_agent": "Axel/2.17.14 (linux-gnu)",
+      "custom_header": null
+    }
+  ],
+  "source_manual_sha256": "af355d08b20a6a45e431d4d355b67ec9f2dabc9d58b852224812bd68f4fa4de2",
+  "test_script_sha256": "9bf5e77bcf705a336f3df5c1909d8a1654a7d00c1f0b2e87a4108e7a2f925ab9",
+  "manual_long_options": [
+    "--alternate",
+    "--header",
+    "--help",
+    "--insecure",
+    "--ipv4",
+    "--ipv6",
+    "--location-trusted",
+    "--max-redirect",
+    "--max-speed",
+    "--netrc",
+    "--no-clobber",
+    "--no-netrc",
+    "--no-proxy",
+    "--num-connections",
+    "--output",
+    "--progress",
+    "--quiet",
+    "--search",
+    "--timeout",
+    "--user-agent",
+    "--verbose",
+    "--version"
+  ],
+  "installed_help_long_options": [
+    "--alternate",
+    "--header",
+    "--help",
+    "--insecure",
+    "--ipv4",
+    "--ipv6",
+    "--max-redirect",
+    "--max-speed",
+    "--no-clobber",
+    "--no-proxy",
+    "--num-connections",
+    "--output",
+    "--percentage",
+    "--quiet",
+    "--search",
+    "--timeout",
+    "--user-agent",
+    "--verbose",
+    "--version"
+  ],
+  "manual_options_not_listed_by_installed_help": [
+    "--location-trusted",
+    "--netrc",
+    "--no-netrc",
+    "--progress"
+  ],
+  "installed_help_options_not_in_manual": [
+    "--percentage"
+  ],
+  "error": null,
+  "limits": [
+    "Only version/help, one local range-capable HTTP download and no-clobber were exercised.",
+    "Not a test of external URLs, TLS, proxies, FTP, GUI or every option.",
+    "Documentation remains faithful to its pinned source even when installed flags differ."
+  ]
+}

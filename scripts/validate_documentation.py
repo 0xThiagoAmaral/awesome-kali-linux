@@ -6,6 +6,7 @@ import json
 import pathlib
 import re
 from import_translate_docs import code_bodies,outside_code
+from plain_manual import prepare_manual
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 manifest_path=ROOT/'catalog/imported-documentation.json'
@@ -33,7 +34,29 @@ for tool,record in manifest.items():
         if not note.exists() or not original.exists():
             continue
         source=original.read_bytes().decode('utf-8')
+        if doc.get('source_format')=='sectioned-plain-text-v1':
+            source,manual=prepare_manual(source,tool)
+            prepared=ROOT/doc['prepared_source']
+            add(label+' prepared-source hash',prepared.exists() and digest(prepared)==doc['prepared_source_sha256'])
+            add(label+' deterministic format conversion',prepared.exists() and prepared.read_bytes()==source.encode('utf-8'))
+            add(label+' all original manual text accounted',manual['all_source_text_accounted'])
+            add(label+' manual-structure manifest',manual==doc['manual_structure'])
         translated=note.read_bytes().decode('utf-8')
+        if doc.get('editorial_translation'):
+            editorial=doc['editorial_translation']
+            p=ROOT/editorial['translation_file']
+            add(label+' editorial translation hash',p.exists() and digest(p)==editorial['translation_sha256'])
+            add(label+' editorial source binding',editorial['source_sha256']==doc['source_sha256'])
+            add(label+' editorial not mislabeled human-reviewed',editorial['human_review']=='pending' and doc['translation_method']=='assistant-translated')
+        if doc.get('runtime_compatibility'):
+            compatibility=doc['runtime_compatibility']
+            path=ROOT/compatibility['evidence']
+            add(label+' recorded runtime evidence hash',path.exists() and digest(path)==compatibility['sha256'])
+            if path.exists():
+                runtime=json.loads(path.read_text(encoding='utf-8'))
+                add(label+' runtime evidence source binding',runtime['source_manual_sha256']==doc['source_sha256'])
+                script=ROOT/'scripts'/('test_'+tool+'.py')
+                add(label+' runtime evidence script hash',script.exists() and digest(script)==runtime['test_script_sha256'])
         add(label+' exact fenced-code bodies',code_bodies(source)==code_bodies(translated),len(code_bodies(source)))
         source_inline=[]
         translated_inline=[]

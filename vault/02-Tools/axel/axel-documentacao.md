@@ -12,7 +12,7 @@ source_commit: "dc10ba0c8f8d804c1568df5dba3cdd6fa89572b1"
 source_sha256: "bfb19b48b5d60fe43691c0d13fd930055be2afdc74923dd7b3a6e6235911c2d6"
 license_spdx: "GPL-2.0"
 human_review: "pending"
-source_scope: "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage"
+source_scope: "Pinned root README plus the complete doc/axel.txt reference manual; external sites and all other sources still require separate coverage review"
 ---
 
 > Tradução automática local para português, ainda sem revisão humana integral. Estrutura e blocos de código preservados; referências externas não significam conteúdo espelhado.

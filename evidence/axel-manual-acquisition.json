@@ -1,0 +1,21 @@
+{
+  "commit": "dc10ba0c8f8d804c1568df5dba3cdd6fa89572b1",
+  "source_sha256": "af355d08b20a6a45e431d4d355b67ec9f2dabc9d58b852224812bd68f4fa4de2",
+  "license_spdx": "GPL-2.0",
+  "nested_license_overrides": [],
+  "sections": [
+    "NAME",
+    "SYNOPSIS",
+    "DESCRIPTION",
+    "OPTIONS",
+    "NOTE",
+    "RETURN VALUE",
+    "EXAMPLES",
+    "FILES",
+    "COPYRIGHT",
+    "HELP THIS PROJECT"
+  ],
+  "options": 22,
+  "literal_blocks": 5,
+  "all_source_text_accounted": true
+}

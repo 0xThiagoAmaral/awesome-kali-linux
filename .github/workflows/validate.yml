@@ -22,3 +22,5 @@ jobs:
         run: python3 scripts/test_documentation_pipeline.py
       - name: Audit local document fragments
         run: python3 scripts/audit_offline_anchors.py
+      - name: Test plain-text manual conversion
+        run: python3 scripts/test_plain_manual.py

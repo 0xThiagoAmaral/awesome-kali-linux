@@ -31,7 +31,7 @@ atftp,True,not-verified,0,0,False,False,False,identify-licensed-official-documen
 atomic-operator,True,MIT,1,1,True,False,False,review-source-coverage-and-translation
 autopsy,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 autorecon,True,GPL-3.0,1,1,True,False,False,review-source-coverage-and-translation
-axel,True,GPL-2.0,1,1,True,False,False,review-source-coverage-and-translation
+axel,True,GPL-2.0,2,2,True,False,False,review-source-coverage-and-translation
 azurehound,True,GPL-3.0,1,1,True,False,False,review-source-coverage-and-translation
 b374k,True,MIT,1,1,True,False,False,review-source-coverage-and-translation
 backdoor-factory,True,BSD-3-Clause,1,1,True,False,False,review-source-coverage-and-translation

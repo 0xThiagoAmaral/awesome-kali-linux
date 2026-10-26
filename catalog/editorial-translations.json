@@ -1,0 +1,13 @@
+{
+  "axel": {
+    "doc/axel.txt": {
+      "source_sha256": "af355d08b20a6a45e431d4d355b67ec9f2dabc9d58b852224812bd68f4fa4de2",
+      "translation_file": "translations/pt-BR/axel/doc-axel-txt.md",
+      "translation_sha256": "beec91582fcd70fd566d7eba93dfa47cce0788eb3d26a2a42c6748878d5c3b88",
+      "translation_method": "assistant-translated",
+      "review_scope": "AI-assisted section-by-section translation of all 10 sections and 22 option descriptions; not independent human review",
+      "human_review": "pending",
+      "license_spdx": "GPL-2.0"
+    }
+  }
+}

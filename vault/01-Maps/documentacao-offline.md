@@ -8,34 +8,34 @@ tags: ["documentation", "offline"]
 
 # Documentação offline — acervo
 
-**24 ferramentas com notas importadas; 44 documentos disponíveis.**
-43 traduções automáticas e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
+**24 ferramentas com notas importadas; 45 documentos disponíveis.**
+43 traduções automáticas, 1 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
 
 Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.
 
 | Ferramenta | Documentos locais | Consulta rápida | Licença da fonte | Situação |
 |---|---|---|---|---|
-| above | [README.md](../02-Tools/above/above-documentacao.md) | [Comandos essenciais](../02-Tools/above/above-cheatsheet-upstream.md) | Apache-2.0 | Revisão pendente |
+| above | [README.md](../02-Tools/above/above-documentacao.md) | [Exemplos upstream](../02-Tools/above/above-cheatsheet-upstream.md) | Apache-2.0 | Revisão pendente |
 | adaptixc2 | [README.md](../02-Tools/adaptixc2/adaptixc2-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
-| aflplusplus | [README.md](../02-Tools/aflplusplus/aflplusplus-documentacao.md) · [docs/README.md](../02-Tools/aflplusplus/aflplusplus-docs-readme-md.md) · [docs/INSTALL.md](../02-Tools/aflplusplus/aflplusplus-docs-install-md.md) · [docs/FAQ.md](../02-Tools/aflplusplus/aflplusplus-docs-faq-md.md) · [docs/features.md](../02-Tools/aflplusplus/aflplusplus-docs-features-md.md) · [docs/FrameShift.md](../02-Tools/aflplusplus/aflplusplus-docs-frameshift-md.md) · [docs/IJON.md](../02-Tools/aflplusplus/aflplusplus-docs-ijon-md.md) · [docs/SAND.md](../02-Tools/aflplusplus/aflplusplus-docs-sand-md.md) · [docs/afl-fuzz_approach.md](../02-Tools/aflplusplus/aflplusplus-docs-afl-fuzz-approach-md.md) · [docs/best_practices.md](../02-Tools/aflplusplus/aflplusplus-docs-best-practices-md.md) · [docs/custom_mutators.md](../02-Tools/aflplusplus/aflplusplus-docs-custom-mutators-md.md) · [docs/env_variables.md](../02-Tools/aflplusplus/aflplusplus-docs-env-variables-md.md) · [docs/fuzzing_binary-only_targets.md](../02-Tools/aflplusplus/aflplusplus-docs-fuzzing-binary-only-targets-md.md) · [docs/fuzzing_in_depth.md](../02-Tools/aflplusplus/aflplusplus-docs-fuzzing-in-depth-md.md) · [docs/important_changes.md](../02-Tools/aflplusplus/aflplusplus-docs-important-changes-md.md) · [docs/rpc_statsd.md](../02-Tools/aflplusplus/aflplusplus-docs-rpc-statsd-md.md) · [docs/third_party_tools.md](../02-Tools/aflplusplus/aflplusplus-docs-third-party-tools-md.md) · [docs/tutorials.md](../02-Tools/aflplusplus/aflplusplus-docs-tutorials-md.md) · [docs/value_profiling.md](../02-Tools/aflplusplus/aflplusplus-docs-value-profiling-md.md) · [docs/Changelog.md](../02-Tools/aflplusplus/aflplusplus-docs-changelog-md.md) | [Comandos essenciais](../02-Tools/aflplusplus/aflplusplus-cheatsheet-upstream.md) | AGPL-3.0 | Revisão pendente |
+| aflplusplus | [README.md](../02-Tools/aflplusplus/aflplusplus-documentacao.md) · [docs/README.md](../02-Tools/aflplusplus/aflplusplus-docs-readme-md.md) · [docs/INSTALL.md](../02-Tools/aflplusplus/aflplusplus-docs-install-md.md) · [docs/FAQ.md](../02-Tools/aflplusplus/aflplusplus-docs-faq-md.md) · [docs/features.md](../02-Tools/aflplusplus/aflplusplus-docs-features-md.md) · [docs/FrameShift.md](../02-Tools/aflplusplus/aflplusplus-docs-frameshift-md.md) · [docs/IJON.md](../02-Tools/aflplusplus/aflplusplus-docs-ijon-md.md) · [docs/SAND.md](../02-Tools/aflplusplus/aflplusplus-docs-sand-md.md) · [docs/afl-fuzz_approach.md](../02-Tools/aflplusplus/aflplusplus-docs-afl-fuzz-approach-md.md) · [docs/best_practices.md](../02-Tools/aflplusplus/aflplusplus-docs-best-practices-md.md) · [docs/custom_mutators.md](../02-Tools/aflplusplus/aflplusplus-docs-custom-mutators-md.md) · [docs/env_variables.md](../02-Tools/aflplusplus/aflplusplus-docs-env-variables-md.md) · [docs/fuzzing_binary-only_targets.md](../02-Tools/aflplusplus/aflplusplus-docs-fuzzing-binary-only-targets-md.md) · [docs/fuzzing_in_depth.md](../02-Tools/aflplusplus/aflplusplus-docs-fuzzing-in-depth-md.md) · [docs/important_changes.md](../02-Tools/aflplusplus/aflplusplus-docs-important-changes-md.md) · [docs/rpc_statsd.md](../02-Tools/aflplusplus/aflplusplus-docs-rpc-statsd-md.md) · [docs/third_party_tools.md](../02-Tools/aflplusplus/aflplusplus-docs-third-party-tools-md.md) · [docs/tutorials.md](../02-Tools/aflplusplus/aflplusplus-docs-tutorials-md.md) · [docs/value_profiling.md](../02-Tools/aflplusplus/aflplusplus-docs-value-profiling-md.md) · [docs/Changelog.md](../02-Tools/aflplusplus/aflplusplus-docs-changelog-md.md) | [Exemplos upstream](../02-Tools/aflplusplus/aflplusplus-cheatsheet-upstream.md) | AGPL-3.0 | Revisão pendente |
 | airgeddon | [README.md](../02-Tools/airgeddon/airgeddon-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
 | altdns | [README.md](../02-Tools/altdns/altdns-documentacao.md) | Pendente | Apache-2.0 | Revisão pendente |
 | apple-bleee | [README.md](../02-Tools/apple-bleee/apple-bleee-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
 | arjun | [README.md](../02-Tools/arjun/arjun-documentacao.md) | Pendente | AGPL-3.0 | Revisão pendente |
 | arp-scan | [README.md](../02-Tools/arp-scan/arp-scan-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
 | arsenal-ng | [README.md](../02-Tools/arsenal-ng/arsenal-ng-documentacao.md) | Pendente | MIT | Revisão pendente |
-| assetfinder | [README.md](../02-Tools/assetfinder/assetfinder-documentacao.md) | [Comandos essenciais](../02-Tools/assetfinder/assetfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |
+| assetfinder | [README.md](../02-Tools/assetfinder/assetfinder-documentacao.md) | [Exemplos upstream](../02-Tools/assetfinder/assetfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | atomic-operator | [README.md](../02-Tools/atomic-operator/atomic-operator-documentacao.md) | Pendente | MIT | Revisão pendente |
 | autorecon | [README.md](../02-Tools/autorecon/autorecon-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
-| axel | [README.md](../02-Tools/axel/axel-documentacao.md) | Pendente | GPL-2.0 | Revisão pendente |
+| axel | [README.md](../02-Tools/axel/axel-documentacao.md) · [doc/axel.txt](../02-Tools/axel/axel-doc-axel-txt.md) | [Cheatsheet local](../02-Tools/axel/axel-cheatsheet.md) | GPL-2.0 | Revisão pendente |
 | azurehound | [README.md](../02-Tools/azurehound/azurehound-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
 | b374k | [README.md](../02-Tools/b374k/b374k-documentacao.md) | Pendente | MIT | Revisão pendente |
 | backdoor-factory | [README.md](../02-Tools/backdoor-factory/backdoor-factory-documentacao.md) | Pendente | BSD-3-Clause | Revisão pendente |
 | berate-ap | [README.md](../02-Tools/berate-ap/berate-ap-documentacao.md) | Pendente | BSD-2-Clause | Revisão pendente |
-| feroxbuster | [README.md](../02-Tools/feroxbuster/feroxbuster-documentacao.md) | [Comandos essenciais](../02-Tools/feroxbuster/feroxbuster-cheatsheet-upstream.md) | MIT | Revisão pendente |
-| ffuf | [README.md](../02-Tools/ffuf/ffuf-documentacao.md) | [Comandos essenciais](../02-Tools/ffuf/ffuf-cheatsheet-upstream.md) | MIT | Revisão pendente |
-| gobuster | [README.md](../02-Tools/gobuster/gobuster-documentacao.md) | [Comandos essenciais](../02-Tools/gobuster/gobuster-cheatsheet-upstream.md) | Apache-2.0 | Revisão pendente |
-| katana | [README.md](../02-Tools/katana/katana-documentacao.md) | [Comandos essenciais](../02-Tools/katana/katana-cheatsheet-upstream.md) | MIT | Revisão pendente |
-| naabu | [README.md](../02-Tools/naabu/naabu-documentacao.md) | [Comandos essenciais](../02-Tools/naabu/naabu-cheatsheet-upstream.md) | MIT | Revisão pendente |
-| nuclei | [README.md](../02-Tools/nuclei/nuclei-documentacao.md) · [README_PT-BR.md](../02-Tools/nuclei/nuclei-documentacao-pt-br-oficial.md) | [Comandos essenciais](../02-Tools/nuclei/nuclei-cheatsheet-upstream.md) | MIT | Revisão pendente |
-| subfinder | [README.md](../02-Tools/subfinder/subfinder-documentacao.md) | [Comandos essenciais](../02-Tools/subfinder/subfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |
+| feroxbuster | [README.md](../02-Tools/feroxbuster/feroxbuster-documentacao.md) | [Exemplos upstream](../02-Tools/feroxbuster/feroxbuster-cheatsheet-upstream.md) | MIT | Revisão pendente |
+| ffuf | [README.md](../02-Tools/ffuf/ffuf-documentacao.md) | [Exemplos upstream](../02-Tools/ffuf/ffuf-cheatsheet-upstream.md) · [Cheatsheet local](../02-Tools/ffuf/ffuf-cheatsheet.md) | MIT | Revisão pendente |
+| gobuster | [README.md](../02-Tools/gobuster/gobuster-documentacao.md) | [Exemplos upstream](../02-Tools/gobuster/gobuster-cheatsheet-upstream.md) | Apache-2.0 | Revisão pendente |
+| katana | [README.md](../02-Tools/katana/katana-documentacao.md) | [Exemplos upstream](../02-Tools/katana/katana-cheatsheet-upstream.md) | MIT | Revisão pendente |
+| naabu | [README.md](../02-Tools/naabu/naabu-documentacao.md) | [Exemplos upstream](../02-Tools/naabu/naabu-cheatsheet-upstream.md) | MIT | Revisão pendente |
+| nuclei | [README.md](../02-Tools/nuclei/nuclei-documentacao.md) · [README_PT-BR.md](../02-Tools/nuclei/nuclei-documentacao-pt-br-oficial.md) | [Exemplos upstream](../02-Tools/nuclei/nuclei-cheatsheet-upstream.md) | MIT | Revisão pendente |
+| subfinder | [README.md](../02-Tools/subfinder/subfinder-documentacao.md) | [Exemplos upstream](../02-Tools/subfinder/subfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |

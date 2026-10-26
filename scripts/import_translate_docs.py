@@ -14,6 +14,7 @@ import unicodedata
 import urllib.parse
 from translation_engine import LocalTranslator
 from enrich_local_assets import resolve_reference
+from plain_manual import prepare_manual
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 BT=chr(96)
@@ -284,6 +285,8 @@ def main():
     parser.add_argument('--force',action='store_true')
     args=parser.parse_args()
     registry=json.loads((ROOT/'catalog/source-registry.json').read_text(encoding='utf-8'))
+    editorial_file=ROOT/'catalog/editorial-translations.json'
+    editorials=json.loads(editorial_file.read_text(encoding='utf-8')) if editorial_file.exists() else {}
     tr=LocalTranslator(args.runtime)
     report_file=ROOT/'catalog/imported-documentation.json'
     report=json.loads(report_file.read_text(encoding='utf-8')) if report_file.exists() else {}
@@ -325,16 +328,39 @@ def main():
             raw.parent.mkdir(parents=True,exist_ok=True)
             raw.write_bytes(data)
             source=data.decode('utf-8')
+            format_info={}
+            manual_changes=[]
+            if doc.get('source_format')=='sectioned-plain-text-v1':
+                source,manual_evidence=prepare_manual(source,tool)
+                prepared=originals/(doc['path']+'.presentation.md.source')
+                prepared.write_bytes(source.encode('utf-8'))
+                format_info={'source_format':doc['source_format'],
+                             'prepared_source':prepared.relative_to(ROOT).as_posix(),
+                             'prepared_source_sha256':sha(source.encode('utf-8')),
+                             'manual_structure':manual_evidence}
+                manual_changes=[{'kind':'plain-text-manual-to-markdown','details':manual_evidence['presentation_changes']}]
             name=note_name(tool,doc)
             note=dest/(name+'.md')
             native_portuguese=doc.get('language','en').startswith('pt')
-            translated=source if native_portuguese else translate_body(source,tr)
+            editorial=editorials.get(tool,{}).get(doc['path'])
+            if editorial:
+                assert editorial['source_sha256']==sha(data),'Editorial translation source changed'
+                editorial_path=(ROOT/editorial['translation_file']).resolve()
+                assert editorial_path.is_relative_to(ROOT)
+                editorial_bytes=editorial_path.read_bytes()
+                assert sha(editorial_bytes)==editorial['translation_sha256']
+                translated=editorial_bytes.decode('utf-8')
+                assert code_bodies(translated)==code_bodies(source),'Editorial translation changed literal examples'
+                format_info['editorial_translation']=editorial
+            else:
+                translated=source if native_portuguese else translate_body(source,tr)
             old_heads=[value for _,value in markdown_headings(source)]
             new_heads=[value for _,value in markdown_headings(translated)]
             heading_map={slug(a):slug(b) for a,b in zip(old_heads,new_heads)}
             translated,anchor_changes=preserve_heading_anchors(source,translated)
             translated,changes=mirror_images(translated,record,assets,note,doc['path'])
             changes+=anchor_changes
+            changes+=manual_changes
             if normalize_legacy_headings(source)!=source:
                 changes.append({'kind':'legacy-markdown-heading-spacing-normalized'})
             translated,link_changes=resolve_relative_links(translated,record,doc['path'],note,assets,heading_map)
@@ -345,13 +371,28 @@ def main():
             if not any(level==1 for level,_ in markdown_headings(translated)):
                 translated='# '+tool+' — documentação oficial\n\n'+translated
             props={'title':tool+' — documentação oficial','type':'official-documentation','tool':tool,
-                   'status':'official-translation' if native_portuguese else 'translated-machine','reviewed':'2026-10-26','language':doc.get('language') if native_portuguese else 'pt-BR',
+                   'status':'official-translation' if native_portuguese else 'source-checked' if editorial else 'translated-machine','reviewed':'2026-10-26','language':doc.get('language') if native_portuguese else 'pt-BR',
                    'tags':['documentation','tool/'+tool],'cssclasses':['fieldbook'],
                    'source_url':doc['source_url'],'source_commit':record['commit'],
                    'source_sha256':doc['sha256'],'license_spdx':doc.get('license_spdx',record['license_spdx']),
                    'human_review':'pending','source_scope':record['source_scope']}
+            compatibility_notice=''
+            runtime_path=ROOT/'evidence'/(tool+'-local-tests.json')
+            if doc.get('source_format')=='sectioned-plain-text-v1' and runtime_path.exists():
+                runtime=json.loads(runtime_path.read_text(encoding='utf-8'))
+                if runtime.get('source_manual_sha256')==doc['sha256'] and runtime.get('passed'):
+                    evidence_rel='../../99-Assets/evidence/'+runtime_path.name
+                    missing=', '.join(BT+x+BT for x in runtime['manual_options_not_listed_by_installed_help'])
+                    extra=', '.join(BT+x+BT for x in runtime['installed_help_options_not_in_manual'])
+                    compatibility_notice='> **Compatibilidade observada:** '+runtime['installed_version']+'. A ajuda dessa instalação não lista '+missing+'. Ela lista '+extra+', ausente deste manual. A fonte fixada foi mantida sem trocar opções silenciosamente. [Evidência e limites do teste]('+evidence_rel+').\n\n'
+                    props['test_status']='partial-local'
+                    props['tested_version']=runtime['installed_version']
+                    format_info['runtime_compatibility']={'evidence':'evidence/'+runtime_path.name,'sha256':sha(runtime_path.read_bytes())}
             fm='---\n'+'\n'.join(k+': '+json.dumps(v,ensure_ascii=False) for k,v in props.items())+'\n---\n\n'
             notice=('> Texto em português fornecido pelo próprio projeto upstream e preservado nesta importação. Links e imagens receberam adaptações para navegação local; isso não comprova revisão técnica por este repositório.\n\n' if native_portuguese else '> Tradução automática local para português, ainda sem revisão humana integral. Estrutura e blocos de código preservados; referências externas não significam conteúdo espelhado.\n\n')
+            if editorial:
+                notice='> Tradução para português produzida por assistente de IA e conferida seção por seção contra a fonte. Revisão humana independente: pendente. Opções e exemplos originais foram preservados; nenhum exemplo foi executado automaticamente.\n\n'
+            notice+=compatibility_notice
             license_link=pathlib.Path(os.path.relpath(assets/'LICENSE.txt',note.parent)).as_posix()
             attribution='\n\n---\n\n## Procedência desta tradução\n\nFonte: ['+record['repository']+']('+doc['source_url']+'). Licença: ['+doc.get('license_spdx',record['license_spdx'])+']('+license_link+'). Commit: '+record['commit']+'.\n\nO original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.\n'
             final=fm+notice+translated+attribution
@@ -363,9 +404,10 @@ def main():
                               'translation_sha256':sha(final.encode('utf-8')),
                               'source_fenced_blocks':len(code_bodies(source)),
                               'code_blocks_equal':code_bodies(translated)==code_bodies(source),
-                              'translation_method':'upstream-portuguese' if native_portuguese else 'machine-local',
+                              'translation_method':'upstream-portuguese' if native_portuguese else 'assistant-translated' if editorial else 'machine-local',
                               'pipeline_version':PIPELINE_VERSION,
                               'presentation_changes':changes,'human_review':'pending'})
+            documents[-1].update(format_info)
             report[tool]={'repository':record['repository'],'commit':record['commit'],'license_spdx':record['license_spdx'],
                           'documents':list(documents),'source_scope':record['source_scope'],'kali_official_page_complete':False,
                           'translation_complete_for_acquired_documents':len(documents)==len(selected_docs),

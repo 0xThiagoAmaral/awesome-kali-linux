@@ -1,8 +1,8 @@
 {
   "passed": true,
   "tools": 24,
-  "documents": 44,
-  "code_blocks": 377,
+  "documents": 45,
+  "code_blocks": 382,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -1816,6 +1816,94 @@
     },
     {
       "check": "axel:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt exact fenced-code bodies",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "check": "axel:doc/axel.txt inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 62,
+        "translation": 68
+      }
+    },
+    {
+      "check": "axel:doc/axel.txt no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "axel:doc/axel.txt review status honest",
       "pass": true,
       "detail": null
     },

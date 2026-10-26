@@ -6736,7 +6736,7 @@
         "note": "vault/02-Tools/axel/axel-documentacao.md",
         "original": "sources/upstream/axel/README.md.source",
         "source_sha256": "bfb19b48b5d60fe43691c0d13fd930055be2afdc74923dd7b3a6e6235911c2d6",
-        "translation_sha256": "95d1b32c6ac912bff3fa752bd33afab25ab6a24daa8934a9e137b1f946a67802",
+        "translation_sha256": "f7aac845d867230f5eae4fd01fe2d892293fdcbdbc43f08a511a5ff643414e69",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
@@ -6800,9 +6800,162 @@
           }
         ],
         "human_review": "pending"
+      },
+      {
+        "source_path": "doc/axel.txt",
+        "note": "vault/02-Tools/axel/axel-doc-axel-txt.md",
+        "original": "sources/upstream/axel/doc/axel.txt.source",
+        "source_sha256": "af355d08b20a6a45e431d4d355b67ec9f2dabc9d58b852224812bd68f4fa4de2",
+        "translation_sha256": "ffb8ed751537ab3a58be06386591b217a8c487c10ddc8c0b0b48856248b7f4e4",
+        "source_fenced_blocks": 5,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "note"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "return-value"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "copyright"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "help-this-project"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Plain manual sections mapped to Markdown headings",
+              "Wrapped prose lines joined within paragraphs",
+              "Original synopsis and prompt examples fenced without body changes",
+              "Option syntax and configuration paths protected as inline literals"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "sectioned-plain-text-v1",
+        "prepared_source": "sources/upstream/axel/doc/axel.txt.presentation.md.source",
+        "prepared_source_sha256": "d69d9b5279e0b478b1abbe7d3d39cec14188850917bbf2c4d0f82aac3d27a43a",
+        "manual_structure": {
+          "format": "sectioned-plain-text-v1",
+          "source_lines": 136,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "NOTE",
+            "RETURN VALUE",
+            "EXAMPLES",
+            "FILES",
+            "COPYRIGHT",
+            "HELP THIS PROJECT"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 5,
+              "body": " axel [OPTIONS] url1 [url2] [url...]\n"
+            },
+            {
+              "first_line": 102,
+              "body": "    $ axel http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.1.0-amd64-netinst.iso\n"
+            },
+            {
+              "first_line": 104,
+              "body": "    $ axel ftp://ftp.nl.kernel.org/pub/linux/kernel/v2.2/linux-2.2.20.tar.bz2\n"
+            },
+            {
+              "first_line": 109,
+              "body": "    $ axel ftp://ftp.{be,nl,uk,de}.kernel.org/pub/linux/kernel/v2.4/linux-2.4.17.tar.bz2\n"
+            },
+            {
+              "first_line": 114,
+              "body": "    $ axel -S4 ftp://ftp.kernel.org/pub/linux/kernel/v2.4/linux-2.4.17.tar.bz2\n"
+            }
+          ],
+          "option_syntax": [
+            "--max-speed=x, -s x",
+            "--num-connections=x, -n x",
+            "--max-redirect=x",
+            "--location-trusted",
+            "--output=x, -o x",
+            "--search[=x], -S[x]",
+            "--netrc[=x], -R[x]",
+            "--no-netrc",
+            "--ipv6, -6",
+            "--ipv4, -4",
+            "--no-proxy, -N",
+            "--insecure, -k",
+            "--no-clobber, -c",
+            "--verbose, -v",
+            "--quiet, -q",
+            "--alternate, -a",
+            "--progress, -p",
+            "--header=x, -H x",
+            "--user-agent=x, -U x",
+            "--help, -h",
+            "--timeout=x, -T x",
+            "--version, -V"
+          ],
+          "file_paths": [
+            "/etc/axelrc",
+            "~/.axelrc",
+            "~/.netrc"
+          ],
+          "presentation_changes": [
+            "Plain manual sections mapped to Markdown headings",
+            "Wrapped prose lines joined within paragraphs",
+            "Original synopsis and prompt examples fenced without body changes",
+            "Option syntax and configuration paths protected as inline literals"
+          ]
+        },
+        "editorial_translation": {
+          "source_sha256": "af355d08b20a6a45e431d4d355b67ec9f2dabc9d58b852224812bd68f4fa4de2",
+          "translation_file": "translations/pt-BR/axel/doc-axel-txt.md",
+          "translation_sha256": "beec91582fcd70fd566d7eba93dfa47cce0788eb3d26a2a42c6748878d5c3b88",
+          "translation_method": "assistant-translated",
+          "review_scope": "AI-assisted section-by-section translation of all 10 sections and 22 option descriptions; not independent human review",
+          "human_review": "pending",
+          "license_spdx": "GPL-2.0"
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/axel-local-tests.json",
+          "sha256": "2ef5fb21e68bec6188f1d0c868370654f5b5f709b06e8a4315fa51614541132e"
+        }
       }
     ],
-    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "source_scope": "Pinned root README plus the complete doc/axel.txt reference manual; external sites and all other sources still require separate coverage review",
     "kali_official_page_complete": false,
     "translation_complete_for_acquired_documents": true,
     "human_review_complete": false,

@@ -13,12 +13,14 @@ sources=json.loads((ROOT/'catalog/source-registry.json').read_text(encoding='utf
 coverage=json.loads((ROOT/'catalog/documentation-coverage.json').read_text(encoding='utf-8'))
 sheet_path=ROOT/'catalog/cheatsheet-provenance.json'
 sheets=json.loads(sheet_path.read_text(encoding='utf-8')) if sheet_path.exists() else {}
+local_sheets={p.parent.name:p.relative_to(ROOT).as_posix() for p in (ROOT/'vault/02-Tools').glob('*/*-cheatsheet.md')}
 pub_path=ROOT/'catalog/publication.json'
 publication=json.loads(pub_path.read_text(encoding='utf-8')) if pub_path.exists() else {}
 publication_status='[Publicado na branch main]('+publication['repository']+') — marco verificado em '+publication['verified_date'] if publication.get('published') else 'Pendente de autenticação e envio'
 documents=[d for x in imports.values() for d in x['documents']]
 native=sum(d.get('translation_method')=='upstream-portuguese' for d in documents)
-machine=len(documents)-native
+assistant=sum(d.get('translation_method')=='assistant-translated' for d in documents)
+machine=len(documents)-native-assistant
 blocks=sum(d['source_fenced_blocks'] for d in documents)
 
 def put(path,text):
@@ -87,7 +89,7 @@ lines=['---','title: "Documentação offline — acervo"','type: "moc"','status:
        'reviewed: "2026-10-26"','tags: ["documentation", "offline"]','---','',
        '# Documentação offline — acervo','',
        f'**{len(imports)} ferramentas com notas importadas; {len(documents)} documentos disponíveis.**',
-       f'{machine} traduções automáticas e {native} fonte(s) oficial(is) em português. Revisão humana completa: pendente.',
+       f'{machine} traduções automáticas, {assistant} tradução(ões) editorial(is) por assistente de IA e {native} fonte(s) oficial(is) em português. Revisão humana completa: pendente.',
        '',
        'Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.',
        '',
@@ -97,7 +99,12 @@ for tool,record in sorted(imports.items()):
     for doc in record['documents']:
         rel=pathlib.Path(doc['note']).relative_to('vault').as_posix()
         links.append('['+doc['source_path']+'](../'+rel+')')
-    sheet='[Comandos essenciais](../'+pathlib.Path(sheets[tool]['note']).relative_to('vault').as_posix()+')' if tool in sheets else 'Pendente'
+    sheet_links=[]
+    if tool in sheets:
+        sheet_links.append('[Exemplos upstream](../'+pathlib.Path(sheets[tool]['note']).relative_to('vault').as_posix()+')')
+    if tool in local_sheets:
+        sheet_links.append('[Cheatsheet local](../'+pathlib.Path(local_sheets[tool]).relative_to('vault').as_posix()+')')
+    sheet=' · '.join(sheet_links) or 'Pendente'
     lines.append('| '+tool+' | '+' · '.join(links)+' | '+sheet+' | '+record['license_spdx']+' | Revisão pendente |')
 put(pathlib.Path('vault/01-Maps/documentacao-offline.md'),'\n'.join(lines))
 home=ROOT/'vault/00-Home.md'
@@ -113,9 +120,11 @@ put(pathlib.Path('docs/COBERTURA.md'),f"""# Cobertura real
 | Fontes upstream licenciadas adquiridas | {len(sources)} ferramentas |
 | Notas de documentação disponíveis | {len(documents)} documentos em {len(imports)} ferramentas |
 | Traduções automáticas | {machine} documentos, ainda sem revisão humana integral |
+| Traduções editoriais por assistente de IA | {assistant}, conferidas contra a fonte; revisão humana independente pendente |
 | Português oficial upstream | {native} documento(s) |
 | Blocos de código preservados | {blocks}, sujeitos à conferência de integridade atual |
 | Folhas de comandos upstream | {len(sheets)} folhas; {sum(len(x['recipes']) for x in sheets.values())} exemplos literais, não executados |
+| Cheatsheets autorais complementares | {len(local_sheets)} folhas, com escopo de teste indicado em cada nota |
 | Ferramentas com documentação integral e revisão concluídas | 0 |
 | Todo o Kali full/everything concluído | Não |
 | Publicação GitHub | {publication_status} |
@@ -134,8 +143,9 @@ text+=marker+f"""
 
 Já há **{len(documents)} documentos de {len(imports)} ferramentas** no
 [acervo offline](vault/01-Maps/documentacao-offline.md), com originais, licenças e hashes.
-São traduções automáticas ou português fornecido upstream, devidamente identificados.
+São traduções automáticas, traduções editoriais por assistente de IA ou português fornecido upstream, devidamente identificados.
 O acervo também inclui **{len(sheets)} folhas de comandos** com exemplos oficiais e procedência verificável.
+Há ainda **{len(local_sheets)} cheatsheets autorais complementares**, com limites de validação explícitos.
 Isso **não** significa documentação integral das 820 ferramentas nem revisão humana concluída.
 
 [Cobertura por ferramenta](catalog/documentation-coverage.csv) ·
@@ -162,8 +172,10 @@ t=attrs.read_text(encoding='utf-8')
 for value in ['sources/upstream/** -text -diff','vault/02-Tools/*/*documentacao*.md -text whitespace=-blank-at-eol,-space-before-tab',
               '# Preserve literal upstream code whitespace and verbatim license endings.',
               'vault/02-Tools/*/*-docs-*.md -text whitespace=-blank-at-eol',
+              'vault/02-Tools/*/*-doc-*.md -text whitespace=-blank-at-eol',
               'vault/02-Tools/*/*-cheatsheet-upstream.md -text whitespace=-blank-at-eol',
               'vault/99-Assets/upstream/** -text whitespace=-blank-at-eof',
+              'translations/** -text whitespace=-blank-at-eol',
               'LICENSE whitespace=-blank-at-eof','LICENSES/*.txt whitespace=-blank-at-eof']:
     if value not in t:
         t+='\n'+value+'\n'
@@ -181,7 +193,9 @@ if 'audit_offline_anchors.py' not in t:
 if 'verify_release_manifest.py' not in t:
     t=t.replace('      - name: Validate local notes and links',
                 '      - name: Verify byte-exact release files\n        run: python3 scripts/verify_release_manifest.py\n      - name: Validate local notes and links')
+if 'test_plain_manual.py' not in t:
+    t+='      - name: Test plain-text manual conversion\n        run: python3 scripts/test_plain_manual.py\n'
 workflow.write_bytes(t.encode('utf-8'))
 put(pathlib.Path('requirements-translation.txt'),'ctranslate2==4.8.4\nsentencepiece==0.2.1')
-print(json.dumps({'documents':len(documents),'tools':len(imports),'machine':machine,'official_portuguese':native,
+print(json.dumps({'documents':len(documents),'tools':len(imports),'machine':machine,'assistant_translated':assistant,'official_portuguese':native,
                   'full_goal_complete':False,'licensing':'Own text CC-BY-SA-4.0; own scripts MIT; upstream licenses retained'},ensure_ascii=False,indent=2))

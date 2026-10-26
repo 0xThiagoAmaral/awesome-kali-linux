@@ -18,4 +18,6 @@ ferramentas Kali ou modelo de tradução é redistribuído neste pacote.
 
 ## Reconhecimentos exigidos pelas fontes
 
+This product includes software developed by the University of California, Lawrence Berkeley Laboratory and its contributors.
+
 This software was developed by Stanford University.

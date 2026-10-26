@@ -188,6 +188,7 @@ for value in ['sources/upstream/** -text -diff','vault/02-Tools/*/*documentacao*
               'vault/02-Tools/*/*-doc-*.md -text whitespace=-blank-at-eol',
               'vault/02-Tools/*/*-cheatsheet-upstream.md -text whitespace=-blank-at-eol',
               'vault/99-Assets/upstream/** -text whitespace=-blank-at-eof',
+              'vault/99-Assets/upstream/tcpdump/COPYRIGHT.package.txt -text whitespace=-space-before-tab,-blank-at-eof',
               'translations/** -text whitespace=-blank-at-eol',
               'vault/02-Tools/*/*-[1-9].md -text whitespace=-blank-at-eol',
               'LICENSES/LicenseRef-*.txt -text',

@@ -11,6 +11,9 @@ from package_source import validate_package_source,package_fields
 from package_layout_repairs import repair_arping_layout,ARPING_SHA
 from package_layout_repairs import prepare_dns_package_layout,DNSENUM_SHA,DNSRECON_SHA
 from package_layout_repairs import prepare_fping_layout,FPING_SHA,FPING6_SHA
+from package_layout_repairs import prepare_tcpdump_layout,TCPDUMP_SHA
+from test_tcpdump_offline import fixture_bytes,checksum
+import struct
 from test_dns_help import extract_help_flags
 from import_translate_docs import code_bodies
 import hashlib
@@ -233,5 +236,56 @@ class NetdiscoverFpingTests(unittest.TestCase):
     def test_required_acknowledgement_cannot_be_removed(self):
         record=copy.deepcopy(self.registry['fping']);record.pop('required_acknowledgement')
         with self.assertRaises(AssertionError):validate_package_source(record,self.root/'vault/99-Assets/upstream/fping')
+
+class TcpdumpManualTests(unittest.TestCase):
+    def setUp(self):
+        self.root=pathlib.Path(__file__).resolve().parents[1]
+        self.raw=(self.root/'sources/upstream/tcpdump/tcpdump.8.source').read_bytes()
+        self.source=self.raw.decode('utf-8')
+    def test_complete_structure(self):
+        rendered,info=prepare_packaged_manual(self.source,'tcpdump')
+        self.assertEqual(hashlib.sha256(self.raw).hexdigest(),TCPDUMP_SHA)
+        self.assertEqual(len(info['sections']),10)
+        self.assertEqual(len(info['subsections']),16)
+        self.assertEqual(len(info['option_syntax']),84)
+        self.assertEqual(len(code_bodies(rendered)),41)
+        self.assertIn('ATP Packets',info['subsections'])
+    def test_macro_not_executed_and_text_not_omitted(self):
+        adjusted,info=prepare_tcpdump_layout(self.source)
+        self.assertEqual(info['original_macro_definition'],'.de HD\n.sp 1.5\n.B\n..\n')
+        text=lambda s:[line for line in s.splitlines(keepends=True) if not line.startswith('.')]
+        self.assertEqual(text(adjusted),text(self.source))
+        self.assertNotIn('.de HD',adjusted)
+    def test_unreviewed_source_rejected(self):
+        with self.assertRaises(ValueError):prepare_tcpdump_layout(self.source+'\n')
+    def test_filter_commands_and_output_stay_literal(self):
+        rendered,_=prepare_packaged_manual(self.source,'tcpdump')
+        bodies=code_bodies(rendered)
+        self.assertIn("tcpdump 'icmp[icmptype] != icmp-echo and icmp[icmptype] != icmp-echoreply'",''.join(bodies))
+        self.assertIn('jssmag.209',''.join(bodies))
+    def test_inline_identifiers_protected_and_quotes_rendered(self):
+        rendered,_=prepare_packaged_manual(self.source,'tcpdump')
+        self.assertIn('`tcpdump` prints',rendered)
+        self.assertIn('“captured”',rendered)
+        self.assertNotIn("``captured''",rendered)
+    def test_original_file_notice_retained(self):
+        record=json.loads((self.root/'catalog/source-registry.json').read_text(encoding='utf-8'))['tcpdump']
+        self.assertEqual(record['license_spdx'],'LicenseRef-Tcpdump-Manpage')
+        legal=self.root/'vault/99-Assets/upstream/tcpdump/LICENSE.txt'
+        self.assertEqual(legal.read_bytes(),self.raw.split(b'.TH TCPDUMP ',1)[0])
+        self.assertTrue(validate_package_source(record,legal.parent))
+    def test_synthetic_fixture_deterministic(self):
+        data=fixture_bytes()
+        self.assertEqual(len(data),243)
+        self.assertEqual(hashlib.sha256(data).hexdigest(),'7005a7c9eb01b607624f745519e81e5df52147d1d3f9e8c59e4ba57a8bb157c9')
+        self.assertEqual(data,(self.root/'vault/99-Assets/fixtures/tcpdump-demo.pcap').read_bytes())
+    def test_synthetic_packet_structure_and_ip_checksums(self):
+        data=fixture_bytes();offset=24;types=[]
+        while offset<len(data):
+            _,_,size,original=struct.unpack_from('<IIII',data,offset);offset+=16
+            packet=data[offset:offset+size];offset+=size
+            self.assertEqual(size,original);types.append(struct.unpack_from('!H',packet,12)[0])
+            if types[-1]==0x0800:self.assertEqual(checksum(packet[14:34]),0)
+        self.assertEqual(offset,len(data));self.assertEqual(types,[0x0806,0x0800,0x0800])
 if __name__=='__main__':
     unittest.main()

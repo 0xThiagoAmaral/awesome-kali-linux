@@ -700,7 +700,7 @@ swaks,True,not-verified,0,0,False,False,False,identify-licensed-official-documen
 syft,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 t50,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 tailscale,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
-tcpdump,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
+tcpdump,True,LicenseRef-Tcpdump-Manpage,1,1,True,False,False,review-source-coverage-and-translation
 tcpflow,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 tcpick,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 tcpreplay,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation

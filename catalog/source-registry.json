@@ -1676,5 +1676,67 @@
         "sha256": "2089b46418648044247b1d5e894c5c7d99fd81fdcdffe2872948dab74ef6da57"
       }
     ]
+  },
+  "tcpdump": {
+    "source_kind": "installed-kali-package",
+    "package": "tcpdump",
+    "binary_version": "4.99.6-2",
+    "source_package": "tcpdump",
+    "source_version": "4.99.6-2",
+    "copyright_sha256": "3e640f444358d031690de4c8fb040fb866386460dd9c51f3ffb875bbfb2342e2",
+    "tool": "tcpdump",
+    "repository": "https://www.tcpdump.org/",
+    "commit": null,
+    "git_commit": null,
+    "license_spdx": "LicenseRef-Tcpdump-Manpage",
+    "license_url": "https://www.tcpdump.org/",
+    "license_url_role": "project-reference; exact file notice retained locally",
+    "license_sha256": "4894fe314fb2d60dc2084853f7bce9df92efe6636b63bfb49899d72799919d53",
+    "license_reference_file": "LICENSES/LicenseRef-Tcpdump-Manpage.txt",
+    "required_acknowledgement": "This product includes software developed by the University of California, Lawrence Berkeley Laboratory and its contributors.",
+    "license_review_status": "verified-selected-manual",
+    "source_scope": "Complete installed English tcpdump(8) manual; separately referenced pcap-filter(7), pcap(3PCAP), libraries and upstream website documentation remain pending coverage",
+    "license_review": {
+      "basis": "Selected tcpdump.8 has its own complete redistribution/modification notice. Exact pre-TH notice retained verbatim, including historical advertising acknowledgement/no-endorsement wording. No retroactive waiver or standard SPDX replacement is assumed from the unstructured package copyright; full package copyright retained separately.",
+      "review_method": "assistant-source-inspection",
+      "independent_legal_review": false,
+      "selected_document_sha256": "a683c08e923292a49006a2efe59eddddb64616bf684c55f56eb5c1a4c0bd3a91",
+      "package_copyright_sha256": "3e640f444358d031690de4c8fb040fb866386460dd9c51f3ffb875bbfb2342e2",
+      "file_specific_notice_sha256": "4894fe314fb2d60dc2084853f7bce9df92efe6636b63bfb49899d72799919d53"
+    },
+    "documents": [
+      {
+        "path": "tcpdump.8",
+        "installed_path": "/usr/share/man/man8/tcpdump.8.gz",
+        "sha256": "a683c08e923292a49006a2efe59eddddb64616bf684c55f56eb5c1a4c0bd3a91",
+        "compressed_sha256": "5083a6769a758633d095d2c53003c907f4f5af5274c6f734e848795d2e539c6d",
+        "bytes": 67066,
+        "language": "en",
+        "source_format": "packaged-man-roff-v1",
+        "source_url": "https://www.tcpdump.org/",
+        "source_url_role": "project-reference-not-exact-file",
+        "compressed_asset": "originals/tcpdump.8.gz",
+        "runtime_evidence_file": "tcpdump-local-tests.json"
+      }
+    ],
+    "source_snapshot_asset": "PACKAGE-SNAPSHOT.json",
+    "source_snapshot_sha256": "4795035df33af0b8c303eaf540d06cc989773ce69199e31320ac4a15d9917964",
+    "assets": [
+      {
+        "path": "COPYRIGHT.package.txt",
+        "bytes": 6257,
+        "sha256": "3e640f444358d031690de4c8fb040fb866386460dd9c51f3ffb875bbfb2342e2"
+      },
+      {
+        "path": "originals/tcpdump.8.gz",
+        "bytes": 22832,
+        "sha256": "5083a6769a758633d095d2c53003c907f4f5af5274c6f734e848795d2e539c6d"
+      },
+      {
+        "path": "PACKAGE-SNAPSHOT.json",
+        "bytes": 2240,
+        "sha256": "4795035df33af0b8c303eaf540d06cc989773ce69199e31320ac4a15d9917964"
+      }
+    ]
   }
 }

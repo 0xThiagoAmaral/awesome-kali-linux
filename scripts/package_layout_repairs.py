@@ -73,3 +73,17 @@ def prepare_fping_layout(source):
         'changes':['Exact generated Pod::Man preamble retained as data, never executed',
                    'Only exact source-bound justification/hyphenation/Sp layout mappings applied',
                    'Vb/Ve verbatim blocks and known font/size/quote escapes rendered without macro execution']}
+
+TCPDUMP_SHA='a683c08e923292a49006a2efe59eddddb64616bf684c55f56eb5c1a4c0bd3a91'
+def prepare_tcpdump_layout(source):
+    if hashlib.sha256(source.encode()).hexdigest()!=TCPDUMP_SHA:
+        raise ValueError('Unreviewed tcpdump manual; source-specific macro review required')
+    definition='.de HD\n.sp 1.5\n.B\n..\n'
+    assert source.count(definition)==1 and source.count('\n.HD\n')==1
+    body=source.replace(definition,'').replace('\n.HD\n','\n.sp 1.5\n.B\n')
+    text=lambda s:[x for x in s.splitlines(keepends=True) if not x.startswith('.')]
+    assert text(body)==text(source),'Macro-layout mapping changed source text'
+    return body,{'source_sha256':TCPDUMP_SHA,'original_macro_definition':definition,
+        'changes':['Exact HD macro definition retained as provenance, not executed',
+                   'Its single call mapped explicitly to spacing/bold requests',
+                   'All non-request source lines unchanged; protocol sections and literal examples retained']}

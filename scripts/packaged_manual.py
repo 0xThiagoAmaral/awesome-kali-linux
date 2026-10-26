@@ -3,11 +3,11 @@
 """Non-executing man(7) subset for package sources. Unknown syntax fails closed."""
 import re
 import shlex
-from package_layout_repairs import repair_arping_layout,prepare_dns_package_layout,prepare_fping_layout
+from package_layout_repairs import repair_arping_layout,prepare_dns_package_layout,prepare_fping_layout,prepare_tcpdump_layout
 
 BT=chr(96)
 STYLES={'B','I','BR','BI','RB','RI','IR','IB'}
-ALLOWED=STYLES|{'TH','SH','SS','P','PP','TP','IP','nf','fi','fam','in','sp','RS','RE','IX','Vb','Ve'}
+ALLOWED=STYLES|{'TH','SH','SS','P','PP','LP','TP','IP','nf','fi','fam','in','sp','RS','RE','IX','Vb','Ve','PD','na','ad','br','ti'}
 
 def arguments(value):
     lexer=shlex.shlex(value,posix=True)
@@ -21,7 +21,8 @@ def decode(value):
     value=value.replace(r'\\','\ue000').replace(r'\e','\ue000').replace(r'\.','.')
     value=re.sub(r'\\s(?:[-+]\d+|\d)','',value)
     value=value.replace(r'\*(L"','"').replace(r'\*(R"','"').replace(r'\*(C'+chr(96),BT).replace(r"\*(C'",BT)
-    value=value.replace(r'\-', '-').replace(r'\&','').replace(r'\~',' ').replace(r'\:','').replace(r'\(cq',"'").replace(r'\(dq','"').replace(r'\(bu','•')
+    value=value.replace(r'\(em','—').replace(r'\(->','→')
+    value=value.replace(r'\-', '-').replace(r'\&','').replace(r'\%','').replace(r'\~',' ').replace(r'\:','').replace(r'\(cq',"'").replace(r'\(dq','"').replace(r'\(bu','•')
     value=re.sub(r'\\f(?:[BIRP]|\([A-Z]{2})','',value)
     if '\\' in value:
         raise ValueError('Unknown package-manual escape: '+value)
@@ -38,6 +39,17 @@ def styled(kind,args,literal=False):
     return plain if re.fullmatch(r'<https?://[^ >]+>',plain) else result.replace(BT*2,'')
 
 def prepare_packaged_manual(source,tool):
+    if tool=='tcpdump':
+        original=source
+        source,provenance=prepare_tcpdump_layout(source)
+        rendered,evidence=_prepare_packaged_manual(source,tool)
+        evidence.update(source_lines=len(original.splitlines()),layout_adjusted_lines=len(source.splitlines()),
+            source_layout_adapter=provenance,line_number_basis='Layout-adjusted source; exact original retained',
+            subsections=[' '.join(arguments(m[1])) for m in re.finditer(r'^\.SS (.*)$',source,re.M)])
+        evidence['presentation_changes']+=provenance['changes']
+        evidence['presentation_changes'].append('Troff prose quote glyphs normalized only outside literal blocks; original source untouched')
+        evidence['presentation_changes'].append('Inline roff B/I/CW identifiers retained as Markdown code so translation cannot alter field/option syntax')
+        return rendered,evidence
     if tool=='fping':
         original=source
         source,binary,provenance=prepare_fping_layout(source)
@@ -148,7 +160,7 @@ def _prepare_packaged_manual(source,tool):
         elif kind=='SS':
             flush_term(); flush(); flush_literal()
             out.append('### '+decode(' '.join(args))+'\n\n')
-        elif kind in {'P','PP','TP','IP'}:
+        elif kind in {'P','PP','LP','TP','IP'}:
             flush_term(); flush()
             if nofill or section=='SYNOPSIS': literal.append('')
             elif kind=='TP': in_term=True
@@ -157,7 +169,7 @@ def _prepare_packaged_manual(source,tool):
                 elif args:
                     term.append(BT+decode(args[0])+BT)
                     flush_term()
-        elif kind in {'nf','fi','fam','in','sp','RS','RE','IX','Vb','Ve'}:
+        elif kind in {'nf','fi','fam','in','sp','RS','RE','IX','Vb','Ve','PD','na','ad','br','ti'}:
             layouts.append({'first_line':unit['first_line'],'request':kind,'args':args})
             if kind in {'nf','Vb'}:
                 flush_term(); flush(); nofill=True
@@ -168,7 +180,12 @@ def _prepare_packaged_manual(source,tool):
                 else: flush()
         elif kind in STYLES or kind=='text':
             is_literal=nofill or section=='SYNOPSIS'
-            value=styled(kind,args,is_literal) if kind in STYLES else decode(unit['text'])
+            raw_text=unit.get('text','')
+            if tool=='tcpdump' and not is_literal:
+                raw_text=re.sub(r"``([^`]+?)''",lambda m:'“'+m[1]+'”',raw_text)
+                raw_text=re.sub(r"`([^`']+)'",lambda m:'‘'+m[1]+'’',raw_text)
+                raw_text=re.sub(r'\\f(?:[BI]|\(CW)(.+?)\\f[PR]',lambda m:BT+decode(m[1])+BT,raw_text)
+            value=styled(kind,args,is_literal) if kind in STYLES else decode(raw_text)
             if is_literal:
                 if first_literal is None: first_literal=unit['first_line']
                 literal.append(value)

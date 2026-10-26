@@ -1,0 +1,346 @@
+{
+  "passed": true,
+  "binary": "tcpdump",
+  "installed_version": "tcpdump version 4.99.6",
+  "test_status": "offline-fixture",
+  "commands": [
+    {
+      "label": "help",
+      "argv": [
+        "tcpdump",
+        "--help"
+      ],
+      "stdout": "tcpdump version 4.99.6\nlibpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)\nOpenSSL 3.6.2 7 Apr 2026\n64-bit build, 64-bit time_t\nUsage: tcpdump [-AbdDefghHIJKlLnNOpqStuUvxX#] [ -B size ] [ -c count ] [--count]\n\t\t[ -C file_size ] [ -E algo:secret ] [ -F file ] [ -G seconds ]\n\t\t[ -i interface ] [ --immediate-mode ] [ -j tstamptype ]\n\t\t[ -M secret ] [ --number ] [ --print ] [ -Q in|out|inout ]\n\t\t[ -r file ] [ -s snaplen ] [ -T type ] [ --version ]\n\t\t[ -V file ] [ -w file ] [ -W filecount ] [ -y datalinktype ]\n\t\t[ --time-stamp-precision precision ] [ --micro ] [ --nano ]\n\t\t[ -z postrotate-command ] [ -Z user ] [ expression ]\n",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "version",
+      "argv": [
+        "tcpdump",
+        "--version"
+      ],
+      "stdout": "tcpdump version 4.99.6\nlibpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)\nOpenSSL 3.6.2 7 Apr 2026\n64-bit build, 64-bit time_t\n",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "package-version",
+      "argv": [
+        "dpkg-query",
+        "-W",
+        "-f=${Version}",
+        "tcpdump"
+      ],
+      "stdout": "4.99.6-2",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "read-all",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "-tt",
+        "-r",
+        "<TEST_DIR>/fixture.pcap"
+      ],
+      "stdout": "1700000000.000000 ARP, Request who-has 192.0.2.1 tell 192.0.2.10, length 28\n1700000001.000000 IP 192.0.2.10.12345 > 198.51.100.20.80: Flags [S], seq 1, win 64240, length 0\n1700000002.000000 IP 192.0.2.10.53000 > 198.51.100.53.53: 4660+ A? example.invalid. (33)\n",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "count tcp port 80",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "--count",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "tcp port 80"
+      ],
+      "stdout": "1 packet\n",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "count udp port 53",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "--count",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "udp port 53"
+      ],
+      "stdout": "1 packet\n",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "count arp",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "--count",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "arp"
+      ],
+      "stdout": "1 packet\n",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "count ip",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "--count",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "ip"
+      ],
+      "stdout": "2 packets\n",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "count (tcp or udp) and port 53",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "--count",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "(tcp or udp) and port 53"
+      ],
+      "stdout": "1 packet\n",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "count not ip",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "--count",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "not ip"
+      ],
+      "stdout": "1 packet\n",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "write-filtered",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "-w",
+        "<TEST_DIR>/tcp-only.pcap",
+        "tcp"
+      ],
+      "stdout": "",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "read-filtered",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "--count",
+        "-r",
+        "<TEST_DIR>/tcp-only.pcap"
+      ],
+      "stdout": "1 packet\n",
+      "stderr": "reading from file <TEST_DIR>/tcp-only.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "compile-filter",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "-d",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "tcp"
+      ],
+      "stdout": "(000) ldh      [12]\n(001) jeq      #0x800           jt 2\tjf 4\n(002) ldb      [23]\n(003) jeq      #0x6             jt 10\tjf 11\n(004) jeq      #0x86dd          jt 5\tjf 11\n(005) ldb      [20]\n(006) jeq      #0x6             jt 10\tjf 7\n(007) jeq      #0x2c            jt 8\tjf 11\n(008) ldb      [54]\n(009) jeq      #0x6             jt 10\tjf 11\n(010) ret      #65535\n(011) ret      #0\n",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\n",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "label": "invalid-filter",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "-r",
+        "<TEST_DIR>/fixture.pcap",
+        "tcp and ("
+      ],
+      "stdout": "",
+      "stderr": "reading from file <TEST_DIR>/fixture.pcap, link-type EN10MB (Ethernet), snapshot length 65535\ntcpdump: can't parse filter expression: syntax error\n",
+      "exit_status": 1,
+      "expected_exit_status": 1
+    }
+  ],
+  "checks": [
+    {
+      "check": "help exit status",
+      "pass": true
+    },
+    {
+      "check": "version exit status",
+      "pass": true
+    },
+    {
+      "check": "package-version exit status",
+      "pass": true
+    },
+    {
+      "check": "read-all exit status",
+      "pass": true
+    },
+    {
+      "check": "Synthetic input decodes as three packets",
+      "pass": true,
+      "observed_lines": 3
+    },
+    {
+      "check": "count tcp port 80 exit status",
+      "pass": true
+    },
+    {
+      "check": "Offline filter tcp port 80",
+      "pass": true,
+      "expected_count": 1,
+      "observed_count": 1
+    },
+    {
+      "check": "count udp port 53 exit status",
+      "pass": true
+    },
+    {
+      "check": "Offline filter udp port 53",
+      "pass": true,
+      "expected_count": 1,
+      "observed_count": 1
+    },
+    {
+      "check": "count arp exit status",
+      "pass": true
+    },
+    {
+      "check": "Offline filter arp",
+      "pass": true,
+      "expected_count": 1,
+      "observed_count": 1
+    },
+    {
+      "check": "count ip exit status",
+      "pass": true
+    },
+    {
+      "check": "Offline filter ip",
+      "pass": true,
+      "expected_count": 2,
+      "observed_count": 2
+    },
+    {
+      "check": "count (tcp or udp) and port 53 exit status",
+      "pass": true
+    },
+    {
+      "check": "Offline filter (tcp or udp) and port 53",
+      "pass": true,
+      "expected_count": 1,
+      "observed_count": 1
+    },
+    {
+      "check": "count not ip exit status",
+      "pass": true
+    },
+    {
+      "check": "Offline filter not ip",
+      "pass": true,
+      "expected_count": 1,
+      "observed_count": 1
+    },
+    {
+      "check": "write-filtered exit status",
+      "pass": true
+    },
+    {
+      "check": "read-filtered exit status",
+      "pass": true
+    },
+    {
+      "check": "Filtered output contains one packet",
+      "pass": true
+    },
+    {
+      "check": "compile-filter exit status",
+      "pass": true
+    },
+    {
+      "check": "invalid-filter exit status",
+      "pass": true
+    },
+    {
+      "check": "Invalid filter reports syntax error",
+      "pass": true
+    },
+    {
+      "check": "Input PCAP bytes unchanged",
+      "pass": true
+    },
+    {
+      "check": "Installed manual bytes unchanged",
+      "pass": true
+    },
+    {
+      "check": "Installed package matches recorded source",
+      "pass": true
+    }
+  ],
+  "fixture": "Synthetic owned Ethernet PCAP: ARP request, TCP SYN, UDP DNS query; reserved documentation addresses only",
+  "fixture_sha256": "7005a7c9eb01b607624f745519e81e5df52147d1d3f9e8c59e4ba57a8bb157c9",
+  "fixture_bytes": 243,
+  "fixture_packets": 3,
+  "filtered_output_sha256": "537ddcc6212a9be433ff160728a84c55ffb20a65fd97db3f77615bddfe620751",
+  "source_manual_sha256": "a683c08e923292a49006a2efe59eddddb64616bf684c55f56eb5c1a4c0bd3a91",
+  "test_script": "scripts/test_tcpdump_offline.py",
+  "test_script_sha256": "9ce12b65fdac36c43e7e4a380467bbaaa7d95698b6b7d70f5b5a9fca25096f1c",
+  "manual_options_not_listed_by_installed_help": [],
+  "installed_help_options_not_in_manual": [],
+  "installed_manual_before_sha256": "5083a6769a758633d095d2c53003c907f4f5af5274c6f734e848795d2e539c6d",
+  "installed_manual_after_sha256": "5083a6769a758633d095d2c53003c907f4f5af5274c6f734e848795d2e539c6d",
+  "live_capture_requested": false,
+  "packet_send_operation_requested": false,
+  "temporary_directory_removed": true,
+  "compatibility_summary_pt": "Ajuda/versão e leitura de PCAP sintético próprio verificadas. Filtros, contagem, gravação de cópia filtrada e rejeição de filtro inválido foram exercitados somente com -r. A ajuda compacta não foi tratada como lista integral de opções. Nenhuma captura ao vivo, interface ou envio foi solicitado.",
+  "verification_scope_pt": "Teste offline limitado aos comandos registrados; não comprova todas as opções, protocolos ou backends.",
+  "limits": [
+    "No live capture, interface enumeration, packet transmission or external DNS lookup was requested.",
+    "Only three synthetic protocol examples and selected offline filters tested; original historical examples were not executed."
+  ]
+}

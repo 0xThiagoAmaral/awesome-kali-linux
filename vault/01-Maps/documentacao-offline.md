@@ -8,8 +8,8 @@ tags: ["documentation", "offline"]
 
 # Documentação offline — acervo
 
-**31 ferramentas com notas importadas; 56 documentos disponíveis.**
-43 traduções automáticas, 12 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
+**32 ferramentas com notas importadas; 57 documentos disponíveis.**
+44 traduções automáticas, 12 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
 
 Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.
 
@@ -45,4 +45,5 @@ Estas páginas preservam a documentação adquirida, não substituem manuais nã
 | netdiscover | [netdiscover.8](../02-Tools/netdiscover/netdiscover-netdiscover-8.md) | [netdiscover — cheatsheet](../02-Tools/netdiscover/netdiscover-cheatsheet.md) | GPL-3.0-or-later | Revisão pendente |
 | nuclei | [README.md](../02-Tools/nuclei/nuclei-documentacao.md) · [README_PT-BR.md](../02-Tools/nuclei/nuclei-documentacao-pt-br-oficial.md) | [Exemplos upstream](../02-Tools/nuclei/nuclei-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | subfinder | [README.md](../02-Tools/subfinder/subfinder-documentacao.md) | [Exemplos upstream](../02-Tools/subfinder/subfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |
+| tcpdump | [tcpdump.8](../02-Tools/tcpdump/tcpdump-tcpdump-8.md) | [tcpdump — cheatsheet](../02-Tools/tcpdump/tcpdump-cheatsheet.md) | LicenseRef-Tcpdump-Manpage | Revisão pendente |
 | whois | [whois.1](../02-Tools/whois/whois-whois-1.md) | [whois — cheatsheet](../02-Tools/whois/whois-cheatsheet.md) | GPL-2.0-or-later | Revisão pendente |

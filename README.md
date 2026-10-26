@@ -119,16 +119,18 @@ Curadoria e notas autorais: CC BY-SA 4.0; scripts: MIT. Conteúdos upstream mant
 ## Documentação offline — andamento
 
 
-Já há **56 documentos de 31 ferramentas** no
+Já há **57 documentos de 32 ferramentas** no
 [acervo offline](vault/01-Maps/documentacao-offline.md), com originais, licenças e hashes.
 São traduções automáticas, traduções editoriais por assistente de IA ou português fornecido upstream, devidamente identificados.
 O acervo também inclui **10 folhas de comandos** com exemplos oficiais e procedência verificável.
-Há ainda **13 cheatsheets autorais complementares**, com limites de validação explícitos.
+Há ainda **14 cheatsheets autorais complementares**, com limites de validação explícitos.
 Isso **não** significa documentação integral das 820 ferramentas nem revisão humana concluída.
 
 [Cobertura por ferramenta](catalog/documentation-coverage.csv) ·
 [Metodologia e direitos](THIRD_PARTY.md) · [Licenças](LICENSE-POLICY.md).
 
 ### Reconhecimentos das fontes
+
+This product includes software developed by the University of California, Lawrence Berkeley Laboratory and its contributors.
 
 This software was developed by Stanford University.

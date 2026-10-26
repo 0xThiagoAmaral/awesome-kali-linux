@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "tools": 31,
-  "documents": 56,
-  "code_blocks": 432,
+  "tools": 32,
+  "documents": 57,
+  "code_blocks": 473,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -4484,6 +4484,174 @@
     },
     {
       "check": "fping:fping6.8 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump exact named license variant retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump retained asset hash: COPYRIGHT.package.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump retained asset hash: originals/tcpdump.8.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump retained asset hash: PACKAGE-SNAPSHOT.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump native source snapshot, gzip, notice and version binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 required source acknowledgement",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump acknowledgement in third-party record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 exact fenced-code bodies",
+      "pass": true,
+      "detail": 41
+    },
+    {
+      "check": "tcpdump:tcpdump.8 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 430,
+        "translation": 435
+      }
+    },
+    {
+      "check": "tcpdump:tcpdump.8 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "tcpdump:tcpdump.8 review status honest",
       "pass": true,
       "detail": null
     }

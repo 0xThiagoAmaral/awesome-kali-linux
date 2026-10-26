@@ -34,3 +34,5 @@ translations/** -text whitespace=-blank-at-eol
 LICENSES/LicenseRef-*.txt -text
 
 vault/02-Tools/*/*-[1-9].md -text whitespace=-blank-at-eol
+
+vault/99-Assets/upstream/tcpdump/COPYRIGHT.package.txt -text whitespace=-space-before-tab,-blank-at-eof

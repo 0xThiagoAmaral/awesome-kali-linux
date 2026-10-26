@@ -1,0 +1,153 @@
+.TH DNSRECON 1
+.SH NAME
+dnsrecon \- DNS Enumeration and Scanning Tool
+.SH SYNOPSIS
+\fBdnsrecon\fR
+\fR[\fB\-h\fR]
+\fR[\fB\-d\fR \fIDOMAIN\fR]
+\fR[\fB\-n\fR \fINS_SERVER\fR]
+\fR[\fB\-r\fR \fIRANGE\fR]
+\fR[\fB\-D\fR \fIDICTIONARY\fR]
+\fR[\fB\-f\fR]
+\fR[\fB\-a\fR]
+\fR[\fB\-s\fR]
+\fR[\fB\-b\fR]
+\fR[\fB\-k\fR]
+\fR[\fB\-w\fR]
+\fR[\fB\-z\fR]
+\fR[\fB\-y\fR]
+\fR[\fB\-\-threads\fR \fITHREADS\fR]
+\fR[\fB\-\-lifetime\fR \fILIFETIME\fR]
+\fR[\fB\-\-tcp\fR]
+\fR[\fB\-\-db\fR \fIDB\fR]
+\fR[\fB\-x\fR \fIXML\fR]
+\fR[\fB\-c\fR \fICSV\fR]
+\fR[\fB\-j\fR \fIJSON\fR]
+\fR[\fB\-\-iw\fR]
+\fR[\fB\-\-disable_check_recursion\fR]
+\fR[\fB\-\-disable_check_bindversion\fR]
+\fR[\fB\-v\fR]
+\fR[\fB\-V\fR]
+\fR[\fB\-t\fR \fITYPE\fR]
+.SH DESCRIPTION
+.PP
+dsnrecon is a simple python script that enables to gather DNS-oriented information on a given target.
+.SH OPTIONS
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+show help message and exit
+.TP
+\fB\-d\fR \fIDOMAIN\fR, \fB\-\-domain\fR \fIDOMAIN\fR
+Target domain.
+.TP
+\fB\-n\fR \fINS_SERVER\fR, \fB\-\-name_server\fR \fINS_SERVER\fR
+Domain server to use. If none is given, the SOA of the
+target will be used. Multiple servers can be specified
+using a comma separated list.
+.TP
+\fB\-r\fR \fIRANGE\fR, \fB\-\-range\fR \fIRANGE\fR
+IP range for reverse lookup brute force in formats
+(first-last) or in (range/bitmask).
+.TP
+\fB\-D\fR \fIDICTIONARY\fR, \fB\-\-dictionary\fR \fIDICTIONARY\fR
+Dictionary file of subdomain and hostnames to use for
+brute force. Filter out of brute force domain lookup,
+records that resolve to the wildcard defined IP
+address when saving records.
+.TP
+\fB\-f\fR
+Filter out of brute force domain lookup, records that
+resolve to the wildcard defined IP address when saving
+records.
+.TP
+\fB\-a\fR
+Perform AXFR with standard enumeration.
+.TP
+\fB\-b\fR
+Perform Bing enumeration with standard enumeration.
+.TP
+\fB\-s\fR
+Perform a reverse lookup of IPv4 ranges in the SPF
+record with standard enumeration.
+.TP
+\fB\-y\fR
+Perform Yandex enumeration with standard enumeration.
+.TP
+\fB\-k\fR
+Perform crt.sh enumeration with standard enumeration.
+.TP
+\fB\-w\fR
+Perform deep whois record analysis and reverse lookup
+of IP ranges found through Whois when doing a standard
+enumeration.
+.TP
+\fB\-z\fR
+Performs a DNSSEC zone walk with standard enumeration.
+.TP
+\fB\-\-threads\fR \fITHREADS\fR
+Number of threads to use in reverse lookups, forward
+lookups, brute force and SRV record enumeration.
+.TP
+\fB\-\-lifetime\fR \fILIFETIME\fR
+Time to wait for a server to respond to a query. default is 3.
+.TP
+\fB\-\-tcp\fR
+Use TCP protocol to make queries.
+.TP
+\fB\-\-db\fR \fIDB\fR
+SQLite 3 file to save found records.
+.TP
+\fB\-x\fR \fIXML\fR, \fB\-\-xml\fR \fIXML\fR
+XML file to save found records.
+.TP
+\fB\-c\fR \fICSV\fR, \fB\-\-csv\fR \fICSV\fR
+Comma separated value file.
+.TP
+\fB\-j\fR \fIJSON\fR, \fB\-\-json\fR \fIJSON\fR
+JSON file.
+.TP
+\fB\-\-iw\fR
+Continue brute forcing a domain even if wildcard
+records are discovered.
+.TP
+\fB\-\-disable_check_recursion\fR
+Disables check for recursion on name servers
+.TP
+\fB\-\-disable_check_bindversion\fR
+Disables check for BIND version on name servers
+.TP
+\fB\-v\fR
+Enable verbose
+.TP
+\fB\-V\fR
+Show version
+.TP
+\fB\-t\fR \fITYPE\fR, \fB\-\-type\fR \fITYPE\fR
+Type of enumeration to perform. There are several possible types:
+.IP
+\(bu \fBstd\fR: SOA, NS, A, AAAA, MX and SRV.
+.IP
+\(bu \fBrvl\fR: Reverse lookup of a given CIDR or IP range.
+.IP
+\(bu \fBbrt\fR: Brute force domains and hosts using a given dictionary.
+.IP
+\(bu \fBsrv\fR: SRV records.
+.IP
+\(bu \fBaxfr\fR: Test all NS servers for a zone transfer.
+.IP
+\(bu \fBbing\fR: Perform Bing search for subdomains and hosts.
+.IP
+\(bu \fByand\fR: Perform Yandex search for subdomains and hosts.
+.IP
+\(bu \fBcrt\fR: Perform crt.sh search for subdomains and hosts.
+.IP
+\(bu \fBsnoop\fR: Perform cache snooping against all NS servers for a given domain, testing all with file containing the domains, file given with -D option.
+.IP
+\(bu \fBtld\fR: Remove the TLD of given domain and test against all TLDs registered in IANA.
+.IP
+\(bu \fBzonewalk\fR: Perform a DNSSEC zone walk using NSEC records.
+.SH EXAMPLES
+.TP
+.B attempts a zone transfer (AXFR) on the zonetransfer.me domain
+dnsrecon -t axfr -d zonetransfer.me
+

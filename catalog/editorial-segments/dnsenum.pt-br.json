@@ -1,0 +1,469 @@
+{
+  "source_sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+  "prepared_sha256": "972888000161b8c4991322bd7bf4380132a9f1eaa02896275a1c00853959a280",
+  "license_spdx": "GPL-2.0-or-later",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "dnsenum -- multithread script to enumerate information on a domain and to discover non-contiguous IP blocks",
+      "translation": "dnsenum -- script multithread para enumerar informações sobre um domínio e descobrir blocos IP não contíguos"
+    },
+    {
+      "id": 2,
+      "source": "VERSION",
+      "translation": "VERSÃO"
+    },
+    {
+      "id": 3,
+      "source": "dnsenum version 1.3.1",
+      "translation": "dnsenum versão 1.3.1"
+    },
+    {
+      "id": 4,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 5,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 6,
+      "source": "Supported operations: nslookup, zonetransfer, google scraping, domain brute force (support also recursion), whois ip and reverse lookups.",
+      "translation": "Operações compatíveis: nslookup, transferência de zona, extração de resultados do Google, força bruta de domínios (também com recursão), whois de IPs e consultas reversas."
+    },
+    {
+      "id": 7,
+      "source": "Operations:",
+      "translation": "Operações:"
+    },
+    {
+      "id": 8,
+      "source": "1) Get the host's address (A record).",
+      "translation": "1) Obtém o endereço do host (registro A)."
+    },
+    {
+      "id": 9,
+      "source": "2) Get the nameservers (threaded).",
+      "translation": "2) Obtém os servidores de nomes (com threads)."
+    },
+    {
+      "id": 10,
+      "source": "3) Get the MX record (threaded).",
+      "translation": "3) Obtém o registro MX (com threads)."
+    },
+    {
+      "id": 11,
+      "source": "4) Perform AXFR queries on nameservers (threaded).",
+      "translation": "4) Executa consultas AXFR nos servidores de nomes (com threads)."
+    },
+    {
+      "id": 12,
+      "source": "5) Get extra names and subdomains via google scraping (google query = \"-www site:domain\").",
+      "translation": "5) Obtém nomes e subdomínios adicionais por extração de resultados do Google (consulta do Google = \"`-www site:domain`\")."
+    },
+    {
+      "id": 13,
+      "source": "6) Brute force subdomains from  (REQUIRED), can also perform recursion on subdomain that have NS records (all threaded).",
+      "translation": "6) Faz força bruta de subdomínios a partir de (OBRIGATÓRIO); também pode executar recursão em subdomínios que tenham registros NS (tudo com threads).\n\n> **Nota editorial:** o original deixa em branco a origem após \"from\" nesta frase. A opção `-f`, descrita adiante, especifica o arquivo de subdomínios; a lacuna não foi preenchida silenciosamente."
+    },
+    {
+      "id": 14,
+      "source": "7) Calculate Class C IP network ranges from the results and perform whois queries on them (threaded).",
+      "translation": "7) Calcula intervalos de rede IP de classe C a partir dos resultados e executa consultas whois sobre eles (com threads)."
+    },
+    {
+      "id": 15,
+      "source": "8) Perform reverse lookups on netranges (class C or/and whois netranges)(threaded).",
+      "translation": "8) Executa consultas reversas em intervalos de rede (classe C e/ou intervalos whois), com threads."
+    },
+    {
+      "id": 16,
+      "source": "9) Write to domain_ips.txt file non-contiguous ip-blocks results.",
+      "translation": "9) Grava os resultados de blocos IP não contíguos no arquivo `domain_ips.txt`."
+    },
+    {
+      "id": 17,
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": 18,
+      "source": "The brute force -f switch takes priority over default dns.txt",
+      "translation": "A opção de força bruta `-f` tem prioridade sobre o arquivo padrão `dns.txt`."
+    },
+    {
+      "id": 19,
+      "source": "GENERAL OPTIONS:",
+      "translation": "OPÇÕES GERAIS:"
+    },
+    {
+      "id": 20,
+      "source": "`--dnsserver <server>`",
+      "translation": "`--dnsserver <server>`"
+    },
+    {
+      "id": 21,
+      "source": "Use this DNS server to perform all A, NS and MX queries, the AXFR and PTR queries are sent to the domain's NS servers.",
+      "translation": "Usa este servidor DNS para executar todas as consultas A, NS e MX; as consultas AXFR e PTR são enviadas aos servidores NS do domínio."
+    },
+    {
+      "id": 22,
+      "source": "`--enum`",
+      "translation": "`--enum`"
+    },
+    {
+      "id": 23,
+      "source": "Shortcut option equivalent to --threads 5 -s 20 -w.",
+      "translation": "Atalho equivalente a `--threads 5 -s 20 -w`."
+    },
+    {
+      "id": 24,
+      "source": "`-h,  --help`",
+      "translation": "`-h,  --help`"
+    },
+    {
+      "id": 25,
+      "source": "Print the help message.",
+      "translation": "Imprime a mensagem de ajuda."
+    },
+    {
+      "id": 26,
+      "source": "`--noreverse`",
+      "translation": "`--noreverse`"
+    },
+    {
+      "id": 27,
+      "source": "Skip the reverse lookup operations. Reverse lookups can take long time on big netranges.",
+      "translation": "Pula as operações de consulta reversa. Consultas reversas podem demorar bastante em intervalos de rede grandes."
+    },
+    {
+      "id": 28,
+      "source": "`--nocolor`",
+      "translation": "`--nocolor`"
+    },
+    {
+      "id": 29,
+      "source": "Disable ANSIColor output. This option is only intended to be used on consoles that do not support color output.",
+      "translation": "Desativa a saída ANSIColor. Esta opção destina-se apenas a consoles que não oferecem suporte à saída em cores."
+    },
+    {
+      "id": 30,
+      "source": "`--private`",
+      "translation": "`--private`"
+    },
+    {
+      "id": 31,
+      "source": "Show and save private ips at the end of the file domain_ips.txt.",
+      "translation": "Mostra e salva os IPs privados no final do arquivo `domain_ips.txt`."
+    },
+    {
+      "id": 32,
+      "source": "`--subfile <file>`",
+      "translation": "`--subfile <file>`"
+    },
+    {
+      "id": 33,
+      "source": "Write all valid subdomains to this file. Subdomains are taken from NS and MX records, zonetransfer, google scraping, brute force and reverse lookup hostnames.",
+      "translation": "Grava todos os subdomínios válidos neste arquivo. Os subdomínios são obtidos de registros NS e MX, transferências de zona, extração de resultados do Google, força bruta e nomes de hosts de consultas reversas."
+    },
+    {
+      "id": 34,
+      "source": "`-t,  --timeout <value>`",
+      "translation": "`-t,  --timeout <value>`"
+    },
+    {
+      "id": 35,
+      "source": "The tcp and udp timeout values in seconds (default: 10s).",
+      "translation": "Os valores de timeout TCP e UDP em segundos (padrão: 10 s)."
+    },
+    {
+      "id": 36,
+      "source": "`--threads <va>`",
+      "translation": "`--threads <va>`"
+    },
+    {
+      "id": 37,
+      "source": "The number of threads that will perform different queries.",
+      "translation": "O número de threads que executarão as diferentes consultas."
+    },
+    {
+      "id": 38,
+      "source": "`-v,  --verbose`",
+      "translation": "`-v,  --verbose`"
+    },
+    {
+      "id": 39,
+      "source": "Be verbose (show all the progress and all the error messages).",
+      "translation": "Exibe informações detalhadas (todo o progresso e todas as mensagens de erro)."
+    },
+    {
+      "id": 40,
+      "source": "Notes: neither the default domain nor the resolver search list are appended to domains that don't contain any dots.",
+      "translation": "Notas: nem o domínio padrão nem a lista de pesquisa do resolvedor são acrescentados a domínios que não contêm nenhum ponto."
+    },
+    {
+      "id": 41,
+      "source": "GOOGLE SCRAPING OPTIONS:",
+      "translation": "OPÇÕES DE EXTRAÇÃO DO GOOGLE:"
+    },
+    {
+      "id": 42,
+      "source": "This function will scrap subdomains from google search, using query: -www site:domain.",
+      "translation": "Esta função extrai subdomínios da pesquisa do Google usando a consulta: `-www site:domain`."
+    },
+    {
+      "id": 43,
+      "source": "`-p,  --pages <value>`",
+      "translation": "`-p,  --pages <value>`"
+    },
+    {
+      "id": 44,
+      "source": "The number of google search pages to process when scraping names, the -s switch must be specified, (default: 20 pages).",
+      "translation": "O número de páginas de pesquisa do Google a processar ao extrair nomes; a opção `-s` deve ser especificada (padrão: 20 páginas)."
+    },
+    {
+      "id": 45,
+      "source": "`-s,  --scrap <value>`",
+      "translation": "`-s,  --scrap <value>`"
+    },
+    {
+      "id": 46,
+      "source": "The maximum number of subdomains that will be scraped from google.",
+      "translation": "O número máximo de subdomínios a extrair do Google."
+    },
+    {
+      "id": 47,
+      "source": "NOTES: Google can block our queries with the malware detection. Http proxy options for google scraping are automatically loaded from the environment if the vars http_proxy or HTTP_PROXY are present. \"http_proxy=http://127.0.0.1:8118/\" or \"HTTP_PROXY=http://127.0.0.1:8118/\". On IO errors the mechanize browser object will automatically call die.",
+      "translation": "NOTAS: o Google pode bloquear nossas consultas com sua detecção de malware. As opções de proxy HTTP para a extração do Google são carregadas automaticamente do ambiente se as variáveis `http_proxy` ou `HTTP_PROXY` estiverem presentes: \"`http_proxy=http://127.0.0.1:8118/`\" ou \"`HTTP_PROXY=http://127.0.0.1:8118/`\". Em erros de E/S, o objeto de navegador mechanize chamará `die` automaticamente."
+    },
+    {
+      "id": 48,
+      "source": "BRUTE FORCE OPTIONS:",
+      "translation": "OPÇÕES DE FORÇA BRUTA:"
+    },
+    {
+      "id": 49,
+      "source": "`-f,  --file <file>`",
+      "translation": "`-f,  --file <file>`"
+    },
+    {
+      "id": 50,
+      "source": "Read subdomains from this file to perform brute force.",
+      "translation": "Lê subdomínios deste arquivo para executar força bruta."
+    },
+    {
+      "id": 51,
+      "source": "`-u,  --update <a|g|r|z>`",
+      "translation": "`-u,  --update <a|g|r|z>`"
+    },
+    {
+      "id": 52,
+      "source": "Update the file specified with the -f switch with valid subdomains.",
+      "translation": "Atualiza o arquivo especificado com a opção `-f` usando subdomínios válidos."
+    },
+    {
+      "id": 53,
+      "source": "-u a\t\tUpdate using all results.",
+      "translation": "`-u a` — atualiza usando todos os resultados."
+    },
+    {
+      "id": 54,
+      "source": "-u g\t\tUpdate using only google scraping results.",
+      "translation": "`-u g` — atualiza usando apenas resultados da extração do Google."
+    },
+    {
+      "id": 55,
+      "source": "-u r\t\tUpdate using only reverse lookup results.",
+      "translation": "`-u r` — atualiza usando apenas resultados de consultas reversas."
+    },
+    {
+      "id": 56,
+      "source": "-u z\t\tUpdate using only zonetransfer results.",
+      "translation": "`-u z` — atualiza usando apenas resultados de transferências de zona."
+    },
+    {
+      "id": 57,
+      "source": "`-r,  --recursion`",
+      "translation": "`-r,  --recursion`"
+    },
+    {
+      "id": 58,
+      "source": "Recursion on subdomains, brute force all discovered subdomains that have an NS record.",
+      "translation": "Recursão em subdomínios: executa força bruta em todos os subdomínios descobertos que tenham um registro NS."
+    },
+    {
+      "id": 59,
+      "source": "NOTES: To perform recursion first we must check previous subdomains results (zonetransfer, google scraping and brute force) for NS records after that we perform brute force on valid subdomains that have NS records and so on. NS, MX and reverse lookup results are not concerned.",
+      "translation": "NOTAS: para executar recursão, primeiro precisamos verificar se os resultados anteriores de subdomínios (transferência de zona, extração do Google e força bruta) contêm registros NS; depois executamos força bruta nos subdomínios válidos que tenham esses registros, e assim por diante. Os resultados de NS, MX e consultas reversas não são incluídos nesse processo."
+    },
+    {
+      "id": 60,
+      "source": "WHOIS IP OPTIONS:",
+      "translation": "OPÇÕES DE WHOIS DE IP:"
+    },
+    {
+      "id": 61,
+      "source": "Perform whois ip queries on c class netanges discovered from previous operations.",
+      "translation": "Executa consultas whois de IPs nos intervalos de rede de classe C descobertos pelas operações anteriores."
+    },
+    {
+      "id": 62,
+      "source": "`-d,  --delay <value>`",
+      "translation": "`-d,  --delay <value>`"
+    },
+    {
+      "id": 63,
+      "source": "The maximum value of seconds to wait between whois queries, the value is defined randomly, (default: 3s).",
+      "translation": "O valor máximo, em segundos, de espera entre consultas whois; o valor é definido aleatoriamente (padrão: 3 s)."
+    },
+    {
+      "id": 64,
+      "source": "NOTES: whois servers will limit the number of connections.",
+      "translation": "NOTAS: servidores whois limitam o número de conexões."
+    },
+    {
+      "id": 65,
+      "source": "`-w,  --whois`",
+      "translation": "`-w,  --whois`"
+    },
+    {
+      "id": 66,
+      "source": "Perform the whois queries on c class network ranges. Warning: this can generate very large netranges and it will take lot of time to perform reverse lookups.",
+      "translation": "Executa consultas whois nos intervalos de rede de classe C. Aviso: isso pode gerar intervalos de rede muito grandes, e as consultas reversas levarão bastante tempo."
+    },
+    {
+      "id": 67,
+      "source": "NOTES: The whois query should recursively query the various whois providers until it gets the more detailed information including either TechPhone or OrgTechPhone by default. See: perldoc Net::Whois::IP. On errors the netrange will be a default c class /24.",
+      "translation": "NOTAS: por padrão, a consulta whois deve consultar recursivamente os diversos provedores whois até obter as informações mais detalhadas, incluindo `TechPhone` ou `OrgTechPhone`. Veja: `perldoc Net::Whois::IP`. Em caso de erros, o intervalo de rede será uma rede de classe C `/24` padrão."
+    },
+    {
+      "id": 68,
+      "source": "REVERSE LOOKUP OPTIONS:",
+      "translation": "OPÇÕES DE CONSULTA REVERSA:"
+    },
+    {
+      "id": 69,
+      "source": "`-e,  --exclude <regexp>`",
+      "translation": "`-e,  --exclude <regexp>`"
+    },
+    {
+      "id": 70,
+      "source": "Exclude PTR records that match the regexp expression from reverse lookup results, useful on invalid hostnames.",
+      "translation": "Exclui dos resultados de consulta reversa os registros PTR que correspondam à expressão regular; útil para nomes de host inválidos."
+    },
+    {
+      "id": 71,
+      "source": "NOTES: PTR records that not match the domain are also excluded. Verbose mode will show all results.",
+      "translation": "NOTAS: registros PTR que não correspondam ao domínio também são excluídos. O modo detalhado mostra todos os resultados."
+    },
+    {
+      "id": 72,
+      "source": "OUTPUT FILES",
+      "translation": "ARQUIVOS DE SAÍDA"
+    },
+    {
+      "id": 73,
+      "source": "Final non-contiguous ip blocks are written to domain_ips.txt file.",
+      "translation": "Os blocos IP não contíguos finais são gravados no arquivo `domain_ips.txt`."
+    },
+    {
+      "id": 74,
+      "source": "NOTES: Final non-contiguous ip blocks are calculated :",
+      "translation": "NOTAS: os blocos IP não contíguos finais são calculados:"
+    },
+    {
+      "id": 75,
+      "source": "1) From reverse lookups that were performed on netranges ( c class network ranges or whois netranges ).",
+      "translation": "1) A partir das consultas reversas executadas nos intervalos de rede (intervalos de classe C ou intervalos whois)."
+    },
+    {
+      "id": 76,
+      "source": "2) If the noreverse switch is used then they are calculated from previous operations results (nslookups, zonetransfers, google scraping and brute forcing).",
+      "translation": "2) Se a opção `noreverse` for usada, são calculados a partir dos resultados das operações anteriores (nslookups, transferências de zona, extração do Google e força bruta)."
+    },
+    {
+      "id": 77,
+      "source": "README",
+      "translation": "README"
+    },
+    {
+      "id": 78,
+      "source": "dnsenum: multithread script to enumerate information on a domain and to discover non-contiguous ip blocks.",
+      "translation": "dnsenum: script multithread para enumerar informações sobre um domínio e descobrir blocos IP não contíguos."
+    },
+    {
+      "id": 79,
+      "source": "PREREQUISITES",
+      "translation": "PRÉ-REQUISITOS"
+    },
+    {
+      "id": 80,
+      "source": "Modules that are included in perl 5.28.0: Getopt::Long, IO::File, Thread::Queue.",
+      "translation": "Módulos incluídos no Perl 5.28.0: `Getopt::Long`, `IO::File`, `Thread::Queue`."
+    },
+    {
+      "id": 81,
+      "source": "Other Necessary modules: Must have: Net::DNS, Net::IP, Net::Netmask. Optional: Net::Whois::IP, HTML::Parser, WWW::Mechanize.",
+      "translation": "Outros módulos necessários: obrigatórios: `Net::DNS`, `Net::IP`, `Net::Netmask`. Opcionais: `Net::Whois::IP`, `HTML::Parser`, `WWW::Mechanize`."
+    },
+    {
+      "id": 82,
+      "source": "Perl ithreads modules (perl must be compiled with ithreads support): threads, threads::shared.",
+      "translation": "Módulos ithreads do Perl (o Perl precisa ser compilado com suporte a ithreads): `threads`, `threads::shared`."
+    },
+    {
+      "id": 83,
+      "source": "AUTHORS",
+      "translation": "AUTORES"
+    },
+    {
+      "id": 84,
+      "source": "Filip Waeytens\t<filip.waeytens[at]gmail.com>",
+      "translation": "Filip Waeytens\t<filip.waeytens[at]gmail.com>"
+    },
+    {
+      "id": 85,
+      "source": "tix tixxDZ\t<tixxdz[at]gmail.com>",
+      "translation": "tix tixxDZ\t<tixxdz[at]gmail.com>"
+    },
+    {
+      "id": 86,
+      "source": "MAINTAINER",
+      "translation": "MANTENEDOR"
+    },
+    {
+      "id": 87,
+      "source": "Network Silence",
+      "translation": "Network Silence"
+    },
+    {
+      "id": 88,
+      "source": "COPYRIGHT",
+      "translation": "COPYRIGHT"
+    },
+    {
+      "id": 89,
+      "source": "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.",
+      "translation": "Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo sob os termos da GNU General Public License, publicada pela Free Software Foundation, na versão 2 da licença ou, a seu critério, em qualquer versão posterior."
+    },
+    {
+      "id": 90,
+      "source": "SCRIPT CATEGORIES",
+      "translation": "CATEGORIAS DO SCRIPT"
+    },
+    {
+      "id": 91,
+      "source": "Networking DNS",
+      "translation": "Redes DNS"
+    }
+  ]
+}

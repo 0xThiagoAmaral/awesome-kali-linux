@@ -1,0 +1,46 @@
+{
+  "source_kind": "installed-kali-package",
+  "package": "dnsenum",
+  "binary_version": "1.3.2-1",
+  "source_package": "dnsenum",
+  "source_version": "1.3.2-1",
+  "license_review": {
+    "basis": "Complete selected manual COPYRIGHT explicitly grants GPL version 2 or later; package DEP5 Files: * and debian/* also GPL-2+. Generated Pod::Man preamble is not executed, and full source/copyright/legal text retained.",
+    "review_method": "assistant-source-inspection",
+    "independent_legal_review": false,
+    "selected_document_sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+    "package_copyright_sha256": "b9e78b9e021c007bb606ca2eba744a7b8ef76898afab49599f35edfc10e97ac8"
+  },
+  "documents": [
+    {
+      "path": "dnsenum.1",
+      "installed_path": "/usr/share/man/man1/dnsenum.1.gz",
+      "sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+      "compressed_sha256": "333c44ac49827ff737fe955c756055e233b6927e7c2cec57c8e95644417a5232",
+      "bytes": 9287,
+      "language": "en",
+      "source_format": "packaged-man-roff-v1",
+      "source_url": "https://github.com/SparrowOchon/dnsenum2",
+      "source_url_role": "project-reference-not-exact-file",
+      "compressed_asset": "originals/dnsenum.1.gz",
+      "runtime_evidence_file": "dnsenum-help-tests.json"
+    }
+  ],
+  "retained_files": [
+    {
+      "path": "COPYRIGHT.package.txt",
+      "bytes": 1711,
+      "sha256": "b9e78b9e021c007bb606ca2eba744a7b8ef76898afab49599f35edfc10e97ac8"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    {
+      "path": "originals/dnsenum.1.gz",
+      "bytes": 3596,
+      "sha256": "333c44ac49827ff737fe955c756055e233b6927e7c2cec57c8e95644417a5232"
+    }
+  ]
+}

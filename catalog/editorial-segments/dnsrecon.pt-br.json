@@ -1,0 +1,364 @@
+{
+  "source_sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+  "prepared_sha256": "5e482b457951cbf6aaf97206f3ccd60d15100366f000ba695b3545f387a64d68",
+  "license_spdx": "GPL-2.0-only",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "dnsrecon - DNS Enumeration and Scanning Tool",
+      "translation": "dnsrecon - ferramenta de enumeração e varredura DNS"
+    },
+    {
+      "id": 2,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 3,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 4,
+      "source": "dsnrecon is a simple python script that enables to gather DNS-oriented information on a given target.",
+      "translation": "dsnrecon é um script Python simples que permite reunir informações relacionadas a DNS sobre um alvo especificado.\n\n> **Nota editorial:** o original escreve \"dsnrecon\" nesta frase; o nome do programa, nas opções e na sinopse, é `dnsrecon`. A grafia da frase de origem foi mantida."
+    },
+    {
+      "id": 5,
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": 6,
+      "source": "`-h, --help`",
+      "translation": "`-h, --help`"
+    },
+    {
+      "id": 7,
+      "source": "show help message and exit",
+      "translation": "Mostra a mensagem de ajuda e encerra."
+    },
+    {
+      "id": 8,
+      "source": "`-d DOMAIN, --domain DOMAIN`",
+      "translation": "`-d DOMAIN, --domain DOMAIN`"
+    },
+    {
+      "id": 9,
+      "source": "Target domain.",
+      "translation": "Domínio-alvo."
+    },
+    {
+      "id": 10,
+      "source": "`-n NS_SERVER, --name_server NS_SERVER`",
+      "translation": "`-n NS_SERVER, --name_server NS_SERVER`"
+    },
+    {
+      "id": 11,
+      "source": "Domain server to use. If none is given, the SOA of the target will be used. Multiple servers can be specified using a comma separated list.",
+      "translation": "Servidor de domínio a utilizar. Se nenhum for fornecido, será usado o SOA do alvo. Vários servidores podem ser especificados em uma lista separada por vírgulas."
+    },
+    {
+      "id": 12,
+      "source": "`-r RANGE, --range RANGE`",
+      "translation": "`-r RANGE, --range RANGE`"
+    },
+    {
+      "id": 13,
+      "source": "IP range for reverse lookup brute force in formats (first-last) or in (range/bitmask).",
+      "translation": "Intervalo de IPs para força bruta de consultas reversas, nos formatos (primeiro-último) ou (intervalo/máscara em bits)."
+    },
+    {
+      "id": 14,
+      "source": "`-D DICTIONARY, --dictionary DICTIONARY`",
+      "translation": "`-D DICTIONARY, --dictionary DICTIONARY`"
+    },
+    {
+      "id": 15,
+      "source": "Dictionary file of subdomain and hostnames to use for brute force. Filter out of brute force domain lookup, records that resolve to the wildcard defined IP address when saving records.",
+      "translation": "Arquivo de dicionário de subdomínios e nomes de hosts a usar na força bruta. Ao salvar registros, filtra da consulta de domínio por força bruta os registros que resolvam para o endereço IP definido pelo wildcard."
+    },
+    {
+      "id": 16,
+      "source": "`-f`",
+      "translation": "`-f`"
+    },
+    {
+      "id": 17,
+      "source": "Filter out of brute force domain lookup, records that resolve to the wildcard defined IP address when saving records.",
+      "translation": "Ao salvar registros, filtra da consulta de domínio por força bruta os registros que resolvam para o endereço IP definido pelo wildcard."
+    },
+    {
+      "id": 18,
+      "source": "`-a`",
+      "translation": "`-a`"
+    },
+    {
+      "id": 19,
+      "source": "Perform AXFR with standard enumeration.",
+      "translation": "Executa AXFR junto com a enumeração padrão."
+    },
+    {
+      "id": 20,
+      "source": "`-b`",
+      "translation": "`-b`"
+    },
+    {
+      "id": 21,
+      "source": "Perform Bing enumeration with standard enumeration.",
+      "translation": "Executa enumeração pelo Bing junto com a enumeração padrão."
+    },
+    {
+      "id": 22,
+      "source": "`-s`",
+      "translation": "`-s`"
+    },
+    {
+      "id": 23,
+      "source": "Perform a reverse lookup of IPv4 ranges in the SPF record with standard enumeration.",
+      "translation": "Executa consultas reversas dos intervalos IPv4 presentes no registro SPF junto com a enumeração padrão."
+    },
+    {
+      "id": 24,
+      "source": "`-y`",
+      "translation": "`-y`"
+    },
+    {
+      "id": 25,
+      "source": "Perform Yandex enumeration with standard enumeration.",
+      "translation": "Executa enumeração pelo Yandex junto com a enumeração padrão."
+    },
+    {
+      "id": 26,
+      "source": "`-k`",
+      "translation": "`-k`"
+    },
+    {
+      "id": 27,
+      "source": "Perform crt.sh enumeration with standard enumeration.",
+      "translation": "Executa enumeração pelo crt.sh junto com a enumeração padrão."
+    },
+    {
+      "id": 28,
+      "source": "`-w`",
+      "translation": "`-w`"
+    },
+    {
+      "id": 29,
+      "source": "Perform deep whois record analysis and reverse lookup of IP ranges found through Whois when doing a standard enumeration.",
+      "translation": "Executa análise aprofundada dos registros whois e consulta reversa dos intervalos IP encontrados pelo Whois durante uma enumeração padrão."
+    },
+    {
+      "id": 30,
+      "source": "`-z`",
+      "translation": "`-z`"
+    },
+    {
+      "id": 31,
+      "source": "Performs a DNSSEC zone walk with standard enumeration.",
+      "translation": "Executa uma caminhada de zona DNSSEC junto com a enumeração padrão."
+    },
+    {
+      "id": 32,
+      "source": "`--threads THREADS`",
+      "translation": "`--threads THREADS`"
+    },
+    {
+      "id": 33,
+      "source": "Number of threads to use in reverse lookups, forward lookups, brute force and SRV record enumeration.",
+      "translation": "Número de threads a usar em consultas reversas, consultas diretas, força bruta e enumeração de registros SRV."
+    },
+    {
+      "id": 34,
+      "source": "`--lifetime LIFETIME`",
+      "translation": "`--lifetime LIFETIME`"
+    },
+    {
+      "id": 35,
+      "source": "Time to wait for a server to respond to a query. default is 3.",
+      "translation": "Tempo de espera pela resposta de um servidor a uma consulta. O padrão é 3."
+    },
+    {
+      "id": 36,
+      "source": "`--tcp`",
+      "translation": "`--tcp`"
+    },
+    {
+      "id": 37,
+      "source": "Use TCP protocol to make queries.",
+      "translation": "Usa o protocolo TCP para executar consultas."
+    },
+    {
+      "id": 38,
+      "source": "`--db DB`",
+      "translation": "`--db DB`"
+    },
+    {
+      "id": 39,
+      "source": "SQLite 3 file to save found records.",
+      "translation": "Arquivo SQLite 3 para salvar os registros encontrados."
+    },
+    {
+      "id": 40,
+      "source": "`-x XML, --xml XML`",
+      "translation": "`-x XML, --xml XML`"
+    },
+    {
+      "id": 41,
+      "source": "XML file to save found records.",
+      "translation": "Arquivo XML para salvar os registros encontrados."
+    },
+    {
+      "id": 42,
+      "source": "`-c CSV, --csv CSV`",
+      "translation": "`-c CSV, --csv CSV`"
+    },
+    {
+      "id": 43,
+      "source": "Comma separated value file.",
+      "translation": "Arquivo de valores separados por vírgulas."
+    },
+    {
+      "id": 44,
+      "source": "`-j JSON, --json JSON`",
+      "translation": "`-j JSON, --json JSON`"
+    },
+    {
+      "id": 45,
+      "source": "JSON file.",
+      "translation": "Arquivo JSON."
+    },
+    {
+      "id": 46,
+      "source": "`--iw`",
+      "translation": "`--iw`"
+    },
+    {
+      "id": 47,
+      "source": "Continue brute forcing a domain even if wildcard records are discovered.",
+      "translation": "Continua a força bruta de um domínio mesmo quando registros wildcard são descobertos."
+    },
+    {
+      "id": 48,
+      "source": "`--disable_check_recursion`",
+      "translation": "`--disable_check_recursion`"
+    },
+    {
+      "id": 49,
+      "source": "Disables check for recursion on name servers",
+      "translation": "Desativa a verificação de recursão nos servidores de nomes."
+    },
+    {
+      "id": 50,
+      "source": "`--disable_check_bindversion`",
+      "translation": "`--disable_check_bindversion`"
+    },
+    {
+      "id": 51,
+      "source": "Disables check for BIND version on name servers",
+      "translation": "Desativa a verificação da versão do BIND nos servidores de nomes."
+    },
+    {
+      "id": 52,
+      "source": "`-v`",
+      "translation": "`-v`"
+    },
+    {
+      "id": 53,
+      "source": "Enable verbose",
+      "translation": "Ativa a saída detalhada."
+    },
+    {
+      "id": 54,
+      "source": "`-V`",
+      "translation": "`-V`"
+    },
+    {
+      "id": 55,
+      "source": "Show version",
+      "translation": "Mostra a versão."
+    },
+    {
+      "id": 56,
+      "source": "`-t TYPE, --type TYPE`",
+      "translation": "`-t TYPE, --type TYPE`"
+    },
+    {
+      "id": 57,
+      "source": "Type of enumeration to perform. There are several possible types:",
+      "translation": "Tipo de enumeração a executar. Há vários tipos possíveis:"
+    },
+    {
+      "id": 58,
+      "source": "std: SOA, NS, A, AAAA, MX and SRV.",
+      "translation": "`std`: SOA, NS, A, AAAA, MX e SRV."
+    },
+    {
+      "id": 59,
+      "source": "rvl: Reverse lookup of a given CIDR or IP range.",
+      "translation": "`rvl`: consulta reversa de um CIDR ou intervalo de IPs especificado."
+    },
+    {
+      "id": 60,
+      "source": "brt: Brute force domains and hosts using a given dictionary.",
+      "translation": "`brt`: força bruta de domínios e hosts usando um dicionário especificado."
+    },
+    {
+      "id": 61,
+      "source": "srv: SRV records.",
+      "translation": "`srv`: registros SRV."
+    },
+    {
+      "id": 62,
+      "source": "axfr: Test all NS servers for a zone transfer.",
+      "translation": "`axfr`: testa todos os servidores NS para uma transferência de zona."
+    },
+    {
+      "id": 63,
+      "source": "bing: Perform Bing search for subdomains and hosts.",
+      "translation": "`bing`: pesquisa no Bing por subdomínios e hosts."
+    },
+    {
+      "id": 64,
+      "source": "yand: Perform Yandex search for subdomains and hosts.",
+      "translation": "`yand`: pesquisa no Yandex por subdomínios e hosts."
+    },
+    {
+      "id": 65,
+      "source": "crt: Perform crt.sh search for subdomains and hosts.",
+      "translation": "`crt`: pesquisa no crt.sh por subdomínios e hosts."
+    },
+    {
+      "id": 66,
+      "source": "snoop: Perform cache snooping against all NS servers for a given domain, testing all with file containing the domains, file given with -D option.",
+      "translation": "`snoop`: executa cache snooping em todos os servidores NS de um domínio especificado, testando cada um com um arquivo de domínios fornecido pela opção `-D`."
+    },
+    {
+      "id": 67,
+      "source": "tld: Remove the TLD of given domain and test against all TLDs registered in IANA.",
+      "translation": "`tld`: remove o TLD do domínio especificado e testa contra todos os TLDs registrados na IANA."
+    },
+    {
+      "id": 68,
+      "source": "zonewalk: Perform a DNSSEC zone walk using NSEC records.",
+      "translation": "`zonewalk`: executa uma caminhada de zona DNSSEC usando registros NSEC."
+    },
+    {
+      "id": 69,
+      "source": "EXAMPLES",
+      "translation": "EXEMPLOS"
+    },
+    {
+      "id": 70,
+      "source": "attempts a zone transfer (AXFR) on the zonetransfer.me domain",
+      "translation": "Tenta uma transferência de zona (AXFR) no domínio zonetransfer.me"
+    }
+  ]
+}

@@ -1413,5 +1413,121 @@
         "sha256": "5d0690f9b6e12b9c0b1411486ca9cce62417ee78b43ecb57442c18cfd9a59f96"
       }
     ]
+  },
+  "dnsenum": {
+    "source_kind": "installed-kali-package",
+    "package": "dnsenum",
+    "binary_version": "1.3.2-1",
+    "source_package": "dnsenum",
+    "source_version": "1.3.2-1",
+    "copyright_sha256": "b9e78b9e021c007bb606ca2eba744a7b8ef76898afab49599f35edfc10e97ac8",
+    "tool": "dnsenum",
+    "repository": "https://github.com/SparrowOchon/dnsenum2",
+    "commit": null,
+    "git_commit": null,
+    "license_spdx": "GPL-2.0-or-later",
+    "license_url": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+    "license_sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+    "license_review_status": "verified-selected-manual",
+    "source_scope": "Complete installed English dnsenum(1) manual only; upstream README, websites and additional documentation remain separate pending coverage",
+    "license_review": {
+      "basis": "Complete selected manual COPYRIGHT explicitly grants GPL version 2 or later; package DEP5 Files: * and debian/* also GPL-2+. Generated Pod::Man preamble is not executed, and full source/copyright/legal text retained.",
+      "review_method": "assistant-source-inspection",
+      "independent_legal_review": false,
+      "selected_document_sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+      "package_copyright_sha256": "b9e78b9e021c007bb606ca2eba744a7b8ef76898afab49599f35edfc10e97ac8"
+    },
+    "documents": [
+      {
+        "path": "dnsenum.1",
+        "installed_path": "/usr/share/man/man1/dnsenum.1.gz",
+        "sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+        "compressed_sha256": "333c44ac49827ff737fe955c756055e233b6927e7c2cec57c8e95644417a5232",
+        "bytes": 9287,
+        "language": "en",
+        "source_format": "packaged-man-roff-v1",
+        "source_url": "https://github.com/SparrowOchon/dnsenum2",
+        "source_url_role": "project-reference-not-exact-file",
+        "compressed_asset": "originals/dnsenum.1.gz",
+        "runtime_evidence_file": "dnsenum-help-tests.json"
+      }
+    ],
+    "source_snapshot_asset": "PACKAGE-SNAPSHOT.json",
+    "source_snapshot_sha256": "3e5cc1aec98027f48cdae8cedaf71e4563401b19f858f76a3822c72b3d7d6695",
+    "assets": [
+      {
+        "path": "COPYRIGHT.package.txt",
+        "bytes": 1711,
+        "sha256": "b9e78b9e021c007bb606ca2eba744a7b8ef76898afab49599f35edfc10e97ac8"
+      },
+      {
+        "path": "originals/dnsenum.1.gz",
+        "bytes": 3596,
+        "sha256": "333c44ac49827ff737fe955c756055e233b6927e7c2cec57c8e95644417a5232"
+      },
+      {
+        "path": "PACKAGE-SNAPSHOT.json",
+        "bytes": 1825,
+        "sha256": "3e5cc1aec98027f48cdae8cedaf71e4563401b19f858f76a3822c72b3d7d6695"
+      }
+    ]
+  },
+  "dnsrecon": {
+    "source_kind": "installed-kali-package",
+    "package": "dnsrecon",
+    "binary_version": "1.3.1-3",
+    "source_package": "dnsrecon",
+    "source_version": "1.3.1-3",
+    "copyright_sha256": "c6ac3410daea14c3fdd37f301acdc06166af153fc8927cf3838946e9313a13e6",
+    "tool": "dnsrecon",
+    "repository": "https://github.com/darkoperator/dnsrecon",
+    "commit": null,
+    "git_commit": null,
+    "license_spdx": "GPL-2.0-only",
+    "license_url": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+    "license_sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+    "license_review_status": "verified-selected-manual",
+    "source_scope": "Complete installed English dnsrecon(1) manual only; upstream README, websites and additional documentation remain separate pending coverage",
+    "license_review": {
+      "basis": "Package DEP5 Files: * uses GPL-2 (version 2 only), debian/* GPL-2+. Selected manual has no separate notice. Version 2 is used as the compatible choice without inferring an or-later grant from packaging. Full package copyright and GPL-2 text retained.",
+      "review_method": "assistant-source-inspection",
+      "independent_legal_review": false,
+      "selected_document_sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+      "package_copyright_sha256": "c6ac3410daea14c3fdd37f301acdc06166af153fc8927cf3838946e9313a13e6"
+    },
+    "documents": [
+      {
+        "path": "dnsrecon.1",
+        "installed_path": "/usr/share/man/man1/dnsrecon.1.gz",
+        "sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+        "compressed_sha256": "62a6e5740a9af1f0fc72914c29f947e440c3dd0f2f01ebd371aacec116717304",
+        "bytes": 4213,
+        "language": "en",
+        "source_format": "packaged-man-roff-v1",
+        "source_url": "https://github.com/darkoperator/dnsrecon",
+        "source_url_role": "project-reference-not-exact-file",
+        "compressed_asset": "originals/dnsrecon.1.gz",
+        "runtime_evidence_file": "dnsrecon-help-tests.json"
+      }
+    ],
+    "source_snapshot_asset": "PACKAGE-SNAPSHOT.json",
+    "source_snapshot_sha256": "a7fbb986c2276a7e8503fa5a804c20ccf2b13619b29b942442ebda75cfcbf625",
+    "assets": [
+      {
+        "path": "COPYRIGHT.package.txt",
+        "bytes": 2205,
+        "sha256": "c6ac3410daea14c3fdd37f301acdc06166af153fc8927cf3838946e9313a13e6"
+      },
+      {
+        "path": "originals/dnsrecon.1.gz",
+        "bytes": 1483,
+        "sha256": "62a6e5740a9af1f0fc72914c29f947e440c3dd0f2f01ebd371aacec116717304"
+      },
+      {
+        "path": "PACKAGE-SNAPSHOT.json",
+        "bytes": 1866,
+        "sha256": "a7fbb986c2276a7e8503fa5a804c20ccf2b13619b29b942442ebda75cfcbf625"
+      }
+    ]
   }
 }

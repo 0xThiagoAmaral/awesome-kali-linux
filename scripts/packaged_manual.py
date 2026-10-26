@@ -3,11 +3,11 @@
 """Non-executing man(7) subset for package sources. Unknown syntax fails closed."""
 import re
 import shlex
-from package_layout_repairs import repair_arping_layout
+from package_layout_repairs import repair_arping_layout,prepare_dns_package_layout
 
 BT=chr(96)
 STYLES={'B','I','BR','BI','RB','RI','IR','IB'}
-ALLOWED=STYLES|{'TH','SH','SS','P','PP','TP','IP','nf','fi','fam','in','sp','RS'}
+ALLOWED=STYLES|{'TH','SH','SS','P','PP','TP','IP','nf','fi','fam','in','sp','RS','RE','IX'}
 
 def arguments(value):
     lexer=shlex.shlex(value,posix=True)
@@ -19,7 +19,7 @@ def arguments(value):
 def decode(value):
     if '\ue000' in value: raise ValueError('Reserved decoder sentinel in source')
     value=value.replace(r'\\','\ue000').replace(r'\.','.')
-    value=value.replace(r'\-', '-').replace(r'\&','').replace(r'\~',' ').replace(r'\:','').replace(r'\(cq',"'").replace(r'\(dq','"')
+    value=value.replace(r'\-', '-').replace(r'\&','').replace(r'\~',' ').replace(r'\:','').replace(r'\(cq',"'").replace(r'\(dq','"').replace(r'\(bu','•')
     value=re.sub(r'\\f(?:[BIRP]|\([A-Z]{2})','',value)
     if '\\' in value:
         raise ValueError('Unknown package-manual escape: '+value)
@@ -36,6 +36,14 @@ def styled(kind,args,literal=False):
     return plain if re.fullmatch(r'<https?://[^ >]+>',plain) else result.replace(BT*2,'')
 
 def prepare_packaged_manual(source,tool):
+    if tool in {'dnsenum','dnsrecon'}:
+        original=source
+        source,provenance=prepare_dns_package_layout(source,tool)
+        rendered,evidence=_prepare_packaged_manual(source,tool)
+        evidence.update(source_lines=len(original.splitlines()),layout_adjusted_lines=len(source.splitlines()),
+            source_layout_adapter=provenance,line_number_basis='Layout-adjusted source; exact original retained')
+        evidence['presentation_changes']+=provenance['changes']
+        return rendered,evidence
     if tool=='arping':
         original=source
         source,repairs=repair_arping_layout(source)
@@ -64,18 +72,20 @@ def _prepare_packaged_manual(source,tool):
         units.append(unit)
     assert ''.join(x['raw'] for x in units)==source
     titles=[x for x in units if x['kind']=='TH']
-    if len(titles)!=1 or len(titles[0]['args'])<3:
-        raise ValueError('One dated TH title required')
+    if len(titles)!=1 or len(titles[0]['args'])<2:
+        raise ValueError('One TH title with name and section required')
     title=titles[0]['args']
     if title[0].lower()!=tool:
         raise ValueError('Package/manual name mismatch')
     out=['# '+tool+'\n\n']
     paragraph=[]; term=[]; literal=[]; blocks=[]; sections=[]; options=[]; layouts=[]; tables=[]
-    section=None; nofill=False; in_term=False; first_literal=None
+    section=None; nofill=False; in_term=False; first_literal=None; bullet=False
     def flush():
+        nonlocal bullet
         if paragraph:
-            out.append(' '.join(paragraph)+'\n\n')
+            out.append(('- ' if bullet else '')+' '.join(paragraph)+'\n\n')
             paragraph.clear()
+            bullet=False
     def flush_term():
         nonlocal in_term
         if term:
@@ -120,9 +130,11 @@ def _prepare_packaged_manual(source,tool):
             if nofill or section=='SYNOPSIS': literal.append('')
             elif kind=='TP': in_term=True
             elif kind=='IP':
-                term.append(BT+decode(args[0])+BT if args else '')
-                flush_term()
-        elif kind in {'nf','fi','fam','in','sp','RS'}:
+                if args and decode(args[0])=='•': bullet=True
+                elif args:
+                    term.append(BT+decode(args[0])+BT)
+                    flush_term()
+        elif kind in {'nf','fi','fam','in','sp','RS','RE','IX'}:
             layouts.append({'first_line':unit['first_line'],'request':kind,'args':args})
             if kind=='nf':
                 flush_term(); flush(); nofill=True
@@ -144,6 +156,8 @@ def _prepare_packaged_manual(source,tool):
                 flush_term()
             else:
                 flush_term()
+                if value.startswith('• '):
+                    flush(); bullet=True; value=value[2:]
                 if value.strip(): paragraph.append(value.strip())
                 else: flush()
         else: raise AssertionError(kind)

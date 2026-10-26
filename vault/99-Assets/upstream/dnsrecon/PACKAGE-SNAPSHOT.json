@@ -1,0 +1,46 @@
+{
+  "source_kind": "installed-kali-package",
+  "package": "dnsrecon",
+  "binary_version": "1.3.1-3",
+  "source_package": "dnsrecon",
+  "source_version": "1.3.1-3",
+  "license_review": {
+    "basis": "Package DEP5 Files: * uses GPL-2 (version 2 only), debian/* GPL-2+. Selected manual has no separate notice. Version 2 is used as the compatible choice without inferring an or-later grant from packaging. Full package copyright and GPL-2 text retained.",
+    "review_method": "assistant-source-inspection",
+    "independent_legal_review": false,
+    "selected_document_sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+    "package_copyright_sha256": "c6ac3410daea14c3fdd37f301acdc06166af153fc8927cf3838946e9313a13e6"
+  },
+  "documents": [
+    {
+      "path": "dnsrecon.1",
+      "installed_path": "/usr/share/man/man1/dnsrecon.1.gz",
+      "sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+      "compressed_sha256": "62a6e5740a9af1f0fc72914c29f947e440c3dd0f2f01ebd371aacec116717304",
+      "bytes": 4213,
+      "language": "en",
+      "source_format": "packaged-man-roff-v1",
+      "source_url": "https://github.com/darkoperator/dnsrecon",
+      "source_url_role": "project-reference-not-exact-file",
+      "compressed_asset": "originals/dnsrecon.1.gz",
+      "runtime_evidence_file": "dnsrecon-help-tests.json"
+    }
+  ],
+  "retained_files": [
+    {
+      "path": "COPYRIGHT.package.txt",
+      "bytes": 2205,
+      "sha256": "c6ac3410daea14c3fdd37f301acdc06166af153fc8927cf3838946e9313a13e6"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    {
+      "path": "originals/dnsrecon.1.gz",
+      "bytes": 1483,
+      "sha256": "62a6e5740a9af1f0fc72914c29f947e440c3dd0f2f01ebd371aacec116717304"
+    }
+  ]
+}

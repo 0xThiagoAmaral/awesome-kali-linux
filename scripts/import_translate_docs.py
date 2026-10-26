@@ -390,7 +390,7 @@ def main():
             if doc.get('source_format') in {'man-roff-v1','man-roff-extended-v1','packaged-man-roff-v1'}:
                 props['title']=manual_evidence['title'][0].lower()+' — manual de referência'
                 props['binary']=manual_evidence['title'][0].lower()
-                props['source_manual_date']=manual_evidence['title'][2]
+                props['source_manual_date']=manual_evidence['title'][2] if len(manual_evidence['title'])>2 else None
                 props['manual_section']=manual_evidence['title'][1]
             compatibility_notice=''
             runtime_path=ROOT/'evidence'/doc.get('runtime_evidence_file',tool+'-local-tests.json')

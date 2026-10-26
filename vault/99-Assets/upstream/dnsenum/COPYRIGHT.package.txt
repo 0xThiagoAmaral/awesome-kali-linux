@@ -1,0 +1,38 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: dnsenum2
+Source: https://github.com/SparrowOchon/dnsenum2
+
+Files: *
+Copyright: 2012 Filip Waeytens <filip.waeytens@gmail.com>
+           2012 tix tixxDZ <tixxdz@gmail.com>
+           2019 Network Silence <tshah688@gmail.com>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2012-2019 Devon Kearns (dookie) <dookie@kali.org>
+           2012-2014 Mati Aharoni <muts@kali.org>
+           2019-2024 Joao Eriberto Mota Filho <eriberto@debian.org>
+           2019      Raphaël Hertzog <hertzog@debian.org>
+           2019      Sophie Brun <sophie@offensive-security.com>
+           2020      Samuel Henrique <samueloph@debian.org>
+           2024      gregor herrmann <gregoa@debian.org>
+License: GPL-2+
+Comment: this package was taken from Kali Linux and was fully updated.
+         So, there was some packaging work before it enters in Debian.
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+Comment:
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".

@@ -9416,5 +9416,1015 @@
         "Limited PT-BR terminology glossary; commands and URLs protected"
       ]
     }
+  },
+  "dnsenum": {
+    "repository": "https://github.com/SparrowOchon/dnsenum2",
+    "commit": null,
+    "source_kind": "installed-kali-package",
+    "package": "dnsenum",
+    "binary_version": "1.3.2-1",
+    "source_package": "dnsenum",
+    "source_version": "1.3.2-1",
+    "source_snapshot_sha256": "3e5cc1aec98027f48cdae8cedaf71e4563401b19f858f76a3822c72b3d7d6695",
+    "license_spdx": "GPL-2.0-or-later",
+    "documents": [
+      {
+        "source_path": "dnsenum.1",
+        "note": "vault/02-Tools/dnsenum/dnsenum-dnsenum-1.md",
+        "original": "sources/upstream/dnsenum/dnsenum.1.source",
+        "source_sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+        "license_spdx": "GPL-2.0-or-later",
+        "translation_sha256": "5db853568526635d2ff201dba34059cdab50a48dc150875e686c4291a8b818ca",
+        "source_fenced_blocks": 1,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.7-truthful-native-package-sources",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "general-options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "google-scraping-options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "brute-force-options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "whois-ip-options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "reverse-lookup-options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "output-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "prerequisites"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "authors"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "maintainer"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "script-categories"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+              "Paragraph lines joined; style macros mapped to inline code",
+              "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+              "Raw source bytes retained separately; non-content layout requests recorded",
+              "Historical statements translated from dated source, not independently retested claims",
+              "Exact Pod::Man generated preamble retained here and in raw source, not executed",
+              "Two exact justification/hyphenation requests omitted from Markdown layout",
+              "Pod::Man Sp mapped to sp; IX index markers retained as metadata, never executed"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "packaged-man-roff-v1",
+        "prepared_source": "sources/upstream/dnsenum/dnsenum.1.presentation.md.source",
+        "prepared_source_sha256": "972888000161b8c4991322bd7bf4380132a9f1eaa02896275a1c00853959a280",
+        "manual_structure": {
+          "format": "packaged-man-roff-v1",
+          "title": [
+            "DNSENUM",
+            "1",
+            "2024-04-21",
+            "perl v5.38.2",
+            "User Contributed Perl Documentation"
+          ],
+          "source_lines": 307,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "VERSION",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "OUTPUT FILES",
+            "README",
+            "PREREQUISITES",
+            "AUTHORS",
+            "MAINTAINER",
+            "COPYRIGHT",
+            "SCRIPT CATEGORIES"
+          ],
+          "option_syntax": [
+            "--dnsserver <server>",
+            "--enum",
+            "-h,  --help",
+            "--noreverse",
+            "--nocolor",
+            "--private",
+            "--subfile <file>",
+            "-t,  --timeout <value>",
+            "--threads <va>",
+            "-v,  --verbose",
+            "-p,  --pages <value>",
+            "-s,  --scrap <value>",
+            "-f,  --file <file>",
+            "-u,  --update <a|g|r|z>",
+            "-r,  --recursion",
+            "-d,  --delay <value>",
+            "-w,  --whois",
+            "-e,  --exclude <regexp>"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 11,
+              "body": "dnsenum [options] <domain> -f dns.txt\n",
+              "origin": "decoded non-executing roff presentation"
+            }
+          ],
+          "layout_requests": [
+            {
+              "first_line": 7,
+              "request": "IX",
+              "args": [
+                "Header",
+                "VERSION"
+              ]
+            },
+            {
+              "first_line": 10,
+              "request": "IX",
+              "args": [
+                "Header",
+                "SYNOPSIS"
+              ]
+            },
+            {
+              "first_line": 13,
+              "request": "IX",
+              "args": [
+                "Header",
+                "DESCRIPTION"
+              ]
+            },
+            {
+              "first_line": 40,
+              "request": "IX",
+              "args": [
+                "Header",
+                "OPTIONS"
+              ]
+            },
+            {
+              "first_line": 43,
+              "request": "IX",
+              "args": [
+                "Subsection",
+                "GENERAL OPTIONS:"
+              ]
+            },
+            {
+              "first_line": 44,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 46,
+              "request": "IX",
+              "args": [
+                "Item",
+                "--dnsserver <server>"
+              ]
+            },
+            {
+              "first_line": 50,
+              "request": "IX",
+              "args": [
+                "Item",
+                "--enum"
+              ]
+            },
+            {
+              "first_line": 53,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-h, --help"
+              ]
+            },
+            {
+              "first_line": 56,
+              "request": "IX",
+              "args": [
+                "Item",
+                "--noreverse"
+              ]
+            },
+            {
+              "first_line": 60,
+              "request": "IX",
+              "args": [
+                "Item",
+                "--nocolor"
+              ]
+            },
+            {
+              "first_line": 65,
+              "request": "IX",
+              "args": [
+                "Item",
+                "--private"
+              ]
+            },
+            {
+              "first_line": 68,
+              "request": "IX",
+              "args": [
+                "Item",
+                "--subfile <file>"
+              ]
+            },
+            {
+              "first_line": 73,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-t, --timeout <value>"
+              ]
+            },
+            {
+              "first_line": 76,
+              "request": "IX",
+              "args": [
+                "Item",
+                "--threads <va>"
+              ]
+            },
+            {
+              "first_line": 79,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-v, --verbose"
+              ]
+            },
+            {
+              "first_line": 81,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 82,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 83,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 84,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 85,
+              "request": "RS",
+              "args": [
+                "3"
+              ]
+            },
+            {
+              "first_line": 89,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 91,
+              "request": "IX",
+              "args": [
+                "Subsection",
+                "GOOGLE SCRAPING OPTIONS:"
+              ]
+            },
+            {
+              "first_line": 92,
+              "request": "RS",
+              "args": [
+                "3"
+              ]
+            },
+            {
+              "first_line": 95,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 96,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 98,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-p, --pages <value>"
+              ]
+            },
+            {
+              "first_line": 102,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-s, --scrap <value>"
+              ]
+            },
+            {
+              "first_line": 104,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 105,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 106,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 107,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 108,
+              "request": "RS",
+              "args": [
+                "3"
+              ]
+            },
+            {
+              "first_line": 115,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 117,
+              "request": "IX",
+              "args": [
+                "Subsection",
+                "BRUTE FORCE OPTIONS:"
+              ]
+            },
+            {
+              "first_line": 118,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 120,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-f, --file <file>"
+              ]
+            },
+            {
+              "first_line": 123,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-u, --update <a|g|r|z>"
+              ]
+            },
+            {
+              "first_line": 125,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 126,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 127,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 128,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 129,
+              "request": "RS",
+              "args": [
+                "35"
+              ]
+            },
+            {
+              "first_line": 131,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 133,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 135,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 137,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 138,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 140,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-r, --recursion"
+              ]
+            },
+            {
+              "first_line": 143,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 144,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 145,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 146,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 147,
+              "request": "RS",
+              "args": [
+                "3"
+              ]
+            },
+            {
+              "first_line": 152,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 154,
+              "request": "IX",
+              "args": [
+                "Subsection",
+                "WHOIS IP OPTIONS:"
+              ]
+            },
+            {
+              "first_line": 157,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 159,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-d, --delay <value>"
+              ]
+            },
+            {
+              "first_line": 162,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 163,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 164,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 165,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 166,
+              "request": "RS",
+              "args": [
+                "3"
+              ]
+            },
+            {
+              "first_line": 169,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 170,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 172,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-w, --whois"
+              ]
+            },
+            {
+              "first_line": 176,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 177,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 178,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 179,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 180,
+              "request": "RS",
+              "args": [
+                "3"
+              ]
+            },
+            {
+              "first_line": 186,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 188,
+              "request": "IX",
+              "args": [
+                "Subsection",
+                "REVERSE LOOKUP OPTIONS:"
+              ]
+            },
+            {
+              "first_line": 189,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 191,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-e, --exclude <regexp>"
+              ]
+            },
+            {
+              "first_line": 194,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 195,
+              "request": "RS",
+              "args": [
+                "4"
+              ]
+            },
+            {
+              "first_line": 196,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 197,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 198,
+              "request": "RS",
+              "args": [
+                "3"
+              ]
+            },
+            {
+              "first_line": 202,
+              "request": "RE",
+              "args": []
+            },
+            {
+              "first_line": 204,
+              "request": "IX",
+              "args": [
+                "Header",
+                "OUTPUT FILES"
+              ]
+            },
+            {
+              "first_line": 217,
+              "request": "IX",
+              "args": [
+                "Header",
+                "README"
+              ]
+            },
+            {
+              "first_line": 221,
+              "request": "IX",
+              "args": [
+                "Header",
+                "PREREQUISITES"
+              ]
+            },
+            {
+              "first_line": 232,
+              "request": "IX",
+              "args": [
+                "Header",
+                "AUTHORS"
+              ]
+            },
+            {
+              "first_line": 237,
+              "request": "IX",
+              "args": [
+                "Header",
+                "MAINTAINER"
+              ]
+            },
+            {
+              "first_line": 240,
+              "request": "IX",
+              "args": [
+                "Header",
+                "COPYRIGHT"
+              ]
+            },
+            {
+              "first_line": 246,
+              "request": "IX",
+              "args": [
+                "Header",
+                "SCRIPT CATEGORIES"
+              ]
+            }
+          ],
+          "source_comments": [
+            {
+              "raw": ".\\\" For nroff, turn off justification.  Always turn off hyphenation; it makes\n",
+              "first_line": 2,
+              "kind": "comment"
+            },
+            {
+              "raw": ".\\\" way too many mistakes in technical documents.\n",
+              "first_line": 3,
+              "kind": "comment"
+            }
+          ],
+          "presentation_changes": [
+            "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+            "Paragraph lines joined; style macros mapped to inline code",
+            "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+            "Raw source bytes retained separately; non-content layout requests recorded",
+            "Historical statements translated from dated source, not independently retested claims",
+            "Exact Pod::Man generated preamble retained here and in raw source, not executed",
+            "Two exact justification/hyphenation requests omitted from Markdown layout",
+            "Pod::Man Sp mapped to sp; IX index markers retained as metadata, never executed"
+          ],
+          "layout_adjusted_lines": 248,
+          "source_layout_adapter": {
+            "source_sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+            "original_preamble": ".\\\" -*- mode: troff; coding: utf-8 -*-\n.\\\" Automatically generated by Pod::Man 5.01 (Pod::Simple 3.43)\n.\\\"\n.\\\" Standard preamble:\n.\\\" ========================================================================\n.de Sp \\\" Vertical space (when we can't use .PP)\n.if t .sp .5v\n.if n .sp\n..\n.de Vb \\\" Begin verbatim text\n.ft CW\n.nf\n.ne \\\\$1\n..\n.de Ve \\\" End verbatim text\n.ft R\n.fi\n..\n.\\\" \\*(C` and \\*(C' are quotes in nroff, nothing in troff, for use with C<>.\n.ie n \\{\\\n.    ds C` \"\"\n.    ds C' \"\"\n'br\\}\n.el\\{\\\n.    ds C`\n.    ds C'\n'br\\}\n.\\\"\n.\\\" Escape single quotes in literal strings from groff's Unicode transform.\n.ie \\n(.g .ds Aq \\(aq\n.el       .ds Aq '\n.\\\"\n.\\\" If the F register is >0, we'll generate index entries on stderr for\n.\\\" titles (.TH), headers (.SH), subsections (.SS), items (.Ip), and index\n.\\\" entries marked with X<> in POD.  Of course, you'll have to process the\n.\\\" output yourself in some meaningful fashion.\n.\\\"\n.\\\" Avoid warning from groff about undefined register 'F'.\n.de IX\n..\n.nr rF 0\n.if \\n(.g .if rF .nr rF 1\n.if (\\n(rF:(\\n(.g==0)) \\{\\\n.    if \\nF \\{\\\n.        de IX\n.        tm Index:\\\\$1\\t\\\\n%\\t\"\\\\$2\"\n..\n.        if !\\nF==2 \\{\\\n.            nr % 0\n.            nr F 2\n.        \\}\n.    \\}\n.\\}\n.rr rF\n.\\\" ========================================================================\n.\\\"\n.IX Title \"DNSENUM 1\"\n",
+            "preamble_sha256": "42acee358cf61fb5e217bd968bd067d4fd5f4317cdd23e9ef9cc29e3f2908f54",
+            "changes": [
+              "Exact Pod::Man generated preamble retained here and in raw source, not executed",
+              "Two exact justification/hyphenation requests omitted from Markdown layout",
+              "Pod::Man Sp mapped to sp; IX index markers retained as metadata, never executed"
+            ]
+          },
+          "line_number_basis": "Layout-adjusted source; exact original retained"
+        },
+        "editorial_translation": {
+          "source_sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+          "translation_file": "translations/pt-BR/dnsenum/dnsenum.1.md",
+          "translation_sha256": "9718d0e9baa70a35d592256cc417a2da05b14a12e1d4d17238e98c2574169d21",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "GPL-2.0-or-later",
+          "segment_file": "catalog/editorial-segments/dnsenum.pt-br.json",
+          "segment_sha256": "f236aecd9762cb36c62d3962faa05264da424bd82ea485a64ea7ea16711aeb0d",
+          "review_scope": "All 92 source-bound segments; 12 sections and 18 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/dnsenum-help-tests.json",
+          "sha256": "e72538e555125517df890cb5284e00fd7ab1740457cb43d489bab2a687f59eda",
+          "test_script": "scripts/test_dns_help.py"
+        }
+      }
+    ],
+    "source_scope": "Complete installed English dnsenum(1) manual only; upstream README, websites and additional documentation remain separate pending coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "dnsrecon": {
+    "repository": "https://github.com/darkoperator/dnsrecon",
+    "commit": null,
+    "source_kind": "installed-kali-package",
+    "package": "dnsrecon",
+    "binary_version": "1.3.1-3",
+    "source_package": "dnsrecon",
+    "source_version": "1.3.1-3",
+    "source_snapshot_sha256": "a7fbb986c2276a7e8503fa5a804c20ccf2b13619b29b942442ebda75cfcbf625",
+    "license_spdx": "GPL-2.0-only",
+    "documents": [
+      {
+        "source_path": "dnsrecon.1",
+        "note": "vault/02-Tools/dnsrecon/dnsrecon-dnsrecon-1.md",
+        "original": "sources/upstream/dnsrecon/dnsrecon.1.source",
+        "source_sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+        "license_spdx": "GPL-2.0-only",
+        "translation_sha256": "19439ebe587856f6eabeddb39983ac778d97c2432ea3fb3b811d9bdfc8034926",
+        "source_fenced_blocks": 2,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.7-truthful-native-package-sources",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-v-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+              "Paragraph lines joined; style macros mapped to inline code",
+              "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+              "Raw source bytes retained separately; non-content layout requests recorded",
+              "Historical statements translated from dated source, not independently retested claims",
+              "Example prose made translatable instead of treating its bold explanatory sentence as an option identifier",
+              "Exact example command fenced; no command executed; missing manual date remains null"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "packaged-man-roff-v1",
+        "prepared_source": "sources/upstream/dnsrecon/dnsrecon.1.presentation.md.source",
+        "prepared_source_sha256": "5e482b457951cbf6aaf97206f3ccd60d15100366f000ba695b3545f387a64d68",
+        "manual_structure": {
+          "format": "packaged-man-roff-v1",
+          "title": [
+            "DNSRECON",
+            "1"
+          ],
+          "source_lines": 153,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "EXAMPLES"
+          ],
+          "option_syntax": [
+            "-h, --help",
+            "-d DOMAIN, --domain DOMAIN",
+            "-n NS_SERVER, --name_server NS_SERVER",
+            "-r RANGE, --range RANGE",
+            "-D DICTIONARY, --dictionary DICTIONARY",
+            "-f",
+            "-a",
+            "-b",
+            "-s",
+            "-y",
+            "-k",
+            "-w",
+            "-z",
+            "--threads THREADS",
+            "--lifetime LIFETIME",
+            "--tcp",
+            "--db DB",
+            "-x XML, --xml XML",
+            "-c CSV, --csv CSV",
+            "-j JSON, --json JSON",
+            "--iw",
+            "--disable_check_recursion",
+            "--disable_check_bindversion",
+            "-v",
+            "-V",
+            "-t TYPE, --type TYPE"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 5,
+              "body": "dnsrecon [-h] [-d DOMAIN] [-n NS_SERVER] [-r RANGE] [-D DICTIONARY] [-f] [-a] [-s] [-b] [-k] [-w] [-z] [-y] [--threads THREADS] [--lifetime LIFETIME] [--tcp] [--db DB] [-x XML] [-c CSV] [-j JSON] [--iw] [--disable_check_recursion] [--disable_check_bindversion] [-v] [-V] [-t TYPE]\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 153,
+              "body": "dnsrecon -t axfr -d zonetransfer.me\n",
+              "origin": "decoded non-executing roff presentation"
+            }
+          ],
+          "layout_requests": [
+            {
+              "first_line": 152,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 154,
+              "request": "fi",
+              "args": []
+            }
+          ],
+          "source_comments": [],
+          "presentation_changes": [
+            "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+            "Paragraph lines joined; style macros mapped to inline code",
+            "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+            "Raw source bytes retained separately; non-content layout requests recorded",
+            "Historical statements translated from dated source, not independently retested claims",
+            "Example prose made translatable instead of treating its bold explanatory sentence as an option identifier",
+            "Exact example command fenced; no command executed; missing manual date remains null"
+          ],
+          "layout_adjusted_lines": 155,
+          "source_layout_adapter": {
+            "source_sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+            "changes": [
+              "Example prose made translatable instead of treating its bold explanatory sentence as an option identifier",
+              "Exact example command fenced; no command executed; missing manual date remains null"
+            ],
+            "replacement": {
+              "before": ".TP\n.B attempts a zone transfer (AXFR) on the zonetransfer.me domain\ndnsrecon -t axfr -d zonetransfer.me\n",
+              "after": ".PP\nattempts a zone transfer (AXFR) on the zonetransfer.me domain\n.nf\ndnsrecon -t axfr -d zonetransfer.me\n.fi\n",
+              "occurrences": 1
+            }
+          },
+          "line_number_basis": "Layout-adjusted source; exact original retained"
+        },
+        "editorial_translation": {
+          "source_sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+          "translation_file": "translations/pt-BR/dnsrecon/dnsrecon.1.md",
+          "translation_sha256": "07f18961857d49a2e052afcc425c1595cba4e3c04884d4b08a31544f96d3c1cb",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "GPL-2.0-only",
+          "segment_file": "catalog/editorial-segments/dnsrecon.pt-br.json",
+          "segment_sha256": "d21cbf2f02748a13a8d7c8d320d7cc31f6e69f6ee5b1a9d319c4334d7d404074",
+          "review_scope": "All 71 source-bound segments; 5 sections and 26 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/dnsrecon-help-tests.json",
+          "sha256": "e7d359a6efedd67e6139925f1950d0e666c12a1389ee028398c58530e00d6862",
+          "test_script": "scripts/test_dns_help.py"
+        }
+      }
+    ],
+    "source_scope": "Complete installed English dnsrecon(1) manual only; upstream README, websites and additional documentation remain separate pending coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
   }
 }

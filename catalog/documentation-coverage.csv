@@ -154,10 +154,10 @@ dmitry,True,not-verified,0,0,False,False,False,identify-licensed-official-docume
 dns2tcp,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 dnscat2,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 dnschef,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
-dnsenum,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
+dnsenum,True,GPL-2.0-or-later,1,1,True,False,False,review-source-coverage-and-translation
 dnsgen,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 dnsmap,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
-dnsrecon,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
+dnsrecon,True,GPL-2.0-only,1,1,True,False,False,review-source-coverage-and-translation
 dnstracer,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 dnstwist,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 dnswalk,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation

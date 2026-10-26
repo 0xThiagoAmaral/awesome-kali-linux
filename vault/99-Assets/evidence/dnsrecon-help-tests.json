@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "binary": "dnsrecon",
+  "installed_version": "dnsrecon 1.3.1-3",
+  "test_status": "help-only",
+  "commands": [
+    {
+      "argv": [
+        "dnsrecon",
+        "--help"
+      ],
+      "stdout": "usage: dnsrecon [-h] [-d DOMAIN] [-iL INPUT_LIST] [-n NS_SERVER] [-r RANGE]\n                [-D DICTIONARY] [-f] [-a] [-s] [-b] [-y] [-k] [-w] [-z]\n                [--threads THREADS] [--lifetime LIFETIME]\n                [--loglevel {DEBUG,INFO,WARNING,ERROR,CRITICAL}] [--tcp]\n                [--db DB] [-x XML] [-c CSV] [-j JSON] [--iw]\n                [--disable_check_nxdomain] [--disable_check_recursion]\n                [--disable_check_bindversion] [-V] [-v] [-t TYPE]\n\noptions:\n  -h, --help            show this help message and exit\n  -d, --domain DOMAIN   Target domain.\n  -iL, --input-list INPUT_LIST\n                        File containing a list of domains to perform DNS enumeration on, one per line.\n  -n, --name_server NS_SERVER\n                        Domain server to use. If none is given, the SOA of the target will be used. Multiple servers can be specified using a comma separated list.\n  -r, --range RANGE     IP range for reverse lookup brute force in formats (first-last) or in (range/bitmask).\n  -D, --dictionary DICTIONARY\n                        Dictionary file of subdomain and hostnames to use for brute force.\n  -f                    Filter out of brute force domain lookup, records that resolve to the wildcard defined IP address when saving records.\n  -a                    Perform AXFR with standard enumeration.\n  -s                    Perform a reverse lookup of IPv4 ranges in the SPF record with standard enumeration.\n  -b                    Perform Bing enumeration with standard enumeration.\n  -y                    Perform Yandex enumeration with standard enumeration.\n  -k                    Perform crt.sh enumeration with standard enumeration.\n  -w                    Perform deep whois record analysis and reverse lookup of IP ranges found through Whois when doing a standard enumeration.\n  -z                    Performs a DNSSEC zone walk with standard enumeration.\n  --threads THREADS     Number of threads to use in reverse lookups, forward lookups, brute force and SRV record enumeration.\n  --lifetime LIFETIME   Time to wait for a server to respond to a query. default is 3.0\n  --loglevel {DEBUG,INFO,WARNING,ERROR,CRITICAL}\n                        Log level to use. default is INFO\n  --tcp                 Use TCP protocol to make queries.\n  --db DB               SQLite 3 file to save found records.\n  -x, --xml XML         XML file to save found records.\n  -c, --csv CSV         Save output to a comma separated value file.\n  -j, --json JSON       save output to a JSON file.\n  --iw                  Continue brute forcing a domain even if a wildcard record is discovered.\n  --disable_check_nxdomain\n                        Disables check for NXDOMAIN hijacking on name servers.\n  --disable_check_recursion\n                        Disables check for recursion on name servers\n  --disable_check_bindversion\n                        Disables check for BIND version on name servers\n  -V, --version         DNSrecon version\n  -v, --verbose         Enable verbosity\n  -t, --type TYPE       Type of enumeration to perform.\n                        Possible types:\n                            std:      SOA, NS, A, AAAA, MX and SRV.\n                            rvl:      Reverse lookup of a given CIDR or IP range.\n                            brt:      Brute force domains and hosts using a given dictionary.\n                            srv:      SRV records.\n                            axfr:     Test all NS servers for a zone transfer.\n                            bing:     Perform Bing search for subdomains and hosts.\n                            yand:     Perform Yandex search for subdomains and hosts.\n                            crt:      Perform crt.sh search for subdomains and hosts.\n                            snoop:    Perform cache snooping against all NS servers for a given domain, testing\n                                      all with file containing the domains, file given with -D option.\n                        \n                            tld:      Remove the TLD of given domain and test against all TLDs registered in IANA.\n                            zonewalk: Perform a DNSSEC zone walk using NSEC records.\n",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "argv": [
+        "dnsrecon",
+        "-h"
+      ],
+      "stdout": "usage: dnsrecon [-h] [-d DOMAIN] [-iL INPUT_LIST] [-n NS_SERVER] [-r RANGE]\n                [-D DICTIONARY] [-f] [-a] [-s] [-b] [-y] [-k] [-w] [-z]\n                [--threads THREADS] [--lifetime LIFETIME]\n                [--loglevel {DEBUG,INFO,WARNING,ERROR,CRITICAL}] [--tcp]\n                [--db DB] [-x XML] [-c CSV] [-j JSON] [--iw]\n                [--disable_check_nxdomain] [--disable_check_recursion]\n                [--disable_check_bindversion] [-V] [-v] [-t TYPE]\n\noptions:\n  -h, --help            show this help message and exit\n  -d, --domain DOMAIN   Target domain.\n  -iL, --input-list INPUT_LIST\n                        File containing a list of domains to perform DNS enumeration on, one per line.\n  -n, --name_server NS_SERVER\n                        Domain server to use. If none is given, the SOA of the target will be used. Multiple servers can be specified using a comma separated list.\n  -r, --range RANGE     IP range for reverse lookup brute force in formats (first-last) or in (range/bitmask).\n  -D, --dictionary DICTIONARY\n                        Dictionary file of subdomain and hostnames to use for brute force.\n  -f                    Filter out of brute force domain lookup, records that resolve to the wildcard defined IP address when saving records.\n  -a                    Perform AXFR with standard enumeration.\n  -s                    Perform a reverse lookup of IPv4 ranges in the SPF record with standard enumeration.\n  -b                    Perform Bing enumeration with standard enumeration.\n  -y                    Perform Yandex enumeration with standard enumeration.\n  -k                    Perform crt.sh enumeration with standard enumeration.\n  -w                    Perform deep whois record analysis and reverse lookup of IP ranges found through Whois when doing a standard enumeration.\n  -z                    Performs a DNSSEC zone walk with standard enumeration.\n  --threads THREADS     Number of threads to use in reverse lookups, forward lookups, brute force and SRV record enumeration.\n  --lifetime LIFETIME   Time to wait for a server to respond to a query. default is 3.0\n  --loglevel {DEBUG,INFO,WARNING,ERROR,CRITICAL}\n                        Log level to use. default is INFO\n  --tcp                 Use TCP protocol to make queries.\n  --db DB               SQLite 3 file to save found records.\n  -x, --xml XML         XML file to save found records.\n  -c, --csv CSV         Save output to a comma separated value file.\n  -j, --json JSON       save output to a JSON file.\n  --iw                  Continue brute forcing a domain even if a wildcard record is discovered.\n  --disable_check_nxdomain\n                        Disables check for NXDOMAIN hijacking on name servers.\n  --disable_check_recursion\n                        Disables check for recursion on name servers\n  --disable_check_bindversion\n                        Disables check for BIND version on name servers\n  -V, --version         DNSrecon version\n  -v, --verbose         Enable verbosity\n  -t, --type TYPE       Type of enumeration to perform.\n                        Possible types:\n                            std:      SOA, NS, A, AAAA, MX and SRV.\n                            rvl:      Reverse lookup of a given CIDR or IP range.\n                            brt:      Brute force domains and hosts using a given dictionary.\n                            srv:      SRV records.\n                            axfr:     Test all NS servers for a zone transfer.\n                            bing:     Perform Bing search for subdomains and hosts.\n                            yand:     Perform Yandex search for subdomains and hosts.\n                            crt:      Perform crt.sh search for subdomains and hosts.\n                            snoop:    Perform cache snooping against all NS servers for a given domain, testing\n                                      all with file containing the domains, file given with -D option.\n                        \n                            tld:      Remove the TLD of given domain and test against all TLDs registered in IANA.\n                            zonewalk: Perform a DNSSEC zone walk using NSEC records.\n",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "argv": [
+        "dnsrecon",
+        "-V"
+      ],
+      "stdout": "DNSRecon version 1.3.1 https://www.darkoperator.com\n",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    },
+    {
+      "argv": [
+        "dpkg-query",
+        "-W",
+        "-f=${Version}",
+        "dnsrecon"
+      ],
+      "stdout": "1.3.1-3",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    }
+  ],
+  "manual_options": [
+    "--csv",
+    "--db",
+    "--dictionary",
+    "--disable_check_bindversion",
+    "--disable_check_recursion",
+    "--domain",
+    "--help",
+    "--iw",
+    "--json",
+    "--lifetime",
+    "--name_server",
+    "--range",
+    "--tcp",
+    "--threads",
+    "--type",
+    "--xml",
+    "-D",
+    "-V",
+    "-a",
+    "-b",
+    "-c",
+    "-d",
+    "-f",
+    "-h",
+    "-j",
+    "-k",
+    "-n",
+    "-r",
+    "-s",
+    "-t",
+    "-v",
+    "-w",
+    "-x",
+    "-y",
+    "-z"
+  ],
+  "installed_help_options": [
+    "--csv",
+    "--db",
+    "--dictionary",
+    "--disable_check_bindversion",
+    "--disable_check_nxdomain",
+    "--disable_check_recursion",
+    "--domain",
+    "--help",
+    "--input-list",
+    "--iw",
+    "--json",
+    "--lifetime",
+    "--loglevel",
+    "--name_server",
+    "--range",
+    "--tcp",
+    "--threads",
+    "--type",
+    "--verbose",
+    "--version",
+    "--xml",
+    "-D",
+    "-V",
+    "-a",
+    "-b",
+    "-c",
+    "-d",
+    "-f",
+    "-h",
+    "-iL",
+    "-j",
+    "-k",
+    "-n",
+    "-r",
+    "-s",
+    "-t",
+    "-v",
+    "-w",
+    "-x",
+    "-y",
+    "-z"
+  ],
+  "manual_options_not_listed_by_installed_help": [],
+  "installed_help_options_not_in_manual": [
+    "--disable_check_nxdomain",
+    "--input-list",
+    "--loglevel",
+    "--verbose",
+    "--version",
+    "-iL"
+  ],
+  "source_manual_sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+  "test_script": "scripts/test_dns_help.py",
+  "test_script_sha256": "359ff60fcde763f203988a261d445d284bb4cda155a919a82fc9870af8110d80",
+  "temporary_directory_empty": true,
+  "installed_manual_before_sha256": "62a6e5740a9af1f0fc72914c29f947e440c3dd0f2f01ebd371aacec116717304",
+  "installed_manual_after_sha256": "62a6e5740a9af1f0fc72914c29f947e440c3dd0f2f01ebd371aacec116717304",
+  "installed_manual_unchanged": true,
+  "network_query_requested": false,
+  "target_supplied": false,
+  "verification_scope_pt": "Conferidas somente as duas formas de ajuda, versão do pacote e dnsrecon -V. Nenhum domínio, endereço, servidor DNS ou alvo foi fornecido; nenhuma consulta de enumeração foi solicitada.",
+  "help_header_lines": [
+    "usage: dnsrecon [-h] [-d DOMAIN] [-iL INPUT_LIST] [-n NS_SERVER] [-r RANGE]",
+    "                [-D DICTIONARY] [-f] [-a] [-s] [-b] [-y] [-k] [-w] [-z]",
+    "                [--threads THREADS] [--lifetime LIFETIME]",
+    "                [--loglevel {DEBUG,INFO,WARNING,ERROR,CRITICAL}] [--tcp]",
+    "                [--db DB] [-x XML] [-c CSV] [-j JSON] [--iw]"
+  ],
+  "limits": [
+    "Help/version only; no DNS, AXFR, brute force, third-party search or Whois operation tested.",
+    "Option-name comparison does not demonstrate that all option combinations or backends work."
+  ]
+}

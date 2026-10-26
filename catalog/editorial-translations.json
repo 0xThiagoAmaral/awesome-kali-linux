@@ -79,5 +79,31 @@
       "segment_sha256": "fb250298fa3be5af7dc6a992681481fa883126f82d5662d1c9d9806d722a675f",
       "review_scope": "All 128 source-bound segments; 8 sections and 16 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
     }
+  },
+  "dnsenum": {
+    "dnsenum.1": {
+      "source_sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+      "translation_file": "translations/pt-BR/dnsenum/dnsenum.1.md",
+      "translation_sha256": "9718d0e9baa70a35d592256cc417a2da05b14a12e1d4d17238e98c2574169d21",
+      "translation_method": "assistant-translated",
+      "human_review": "pending",
+      "license_spdx": "GPL-2.0-or-later",
+      "segment_file": "catalog/editorial-segments/dnsenum.pt-br.json",
+      "segment_sha256": "f236aecd9762cb36c62d3962faa05264da424bd82ea485a64ea7ea16711aeb0d",
+      "review_scope": "All 92 source-bound segments; 12 sections and 18 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+    }
+  },
+  "dnsrecon": {
+    "dnsrecon.1": {
+      "source_sha256": "e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430",
+      "translation_file": "translations/pt-BR/dnsrecon/dnsrecon.1.md",
+      "translation_sha256": "07f18961857d49a2e052afcc425c1595cba4e3c04884d4b08a31544f96d3c1cb",
+      "translation_method": "assistant-translated",
+      "human_review": "pending",
+      "license_spdx": "GPL-2.0-only",
+      "segment_file": "catalog/editorial-segments/dnsrecon.pt-br.json",
+      "segment_sha256": "d21cbf2f02748a13a8d7c8d320d7cc31f6e69f6ee5b1a9d319c4334d7d404074",
+      "review_scope": "All 71 source-bound segments; 5 sections and 26 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+    }
   }
 }

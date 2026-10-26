@@ -25,3 +25,31 @@ def repair_arping_layout(source):
     text=lambda s:[line for line in s.splitlines(keepends=True) if not line.startswith('.')]
     assert text(source)==text(amended),'A layout repair changed source text'
     return amended,repairs
+
+DNSENUM_SHA='ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800'
+DNSRECON_SHA='e57945a2a52ccca3d4200b41cfca13cbfb024ead0413ba373306211e1af00430'
+
+def prepare_dns_package_layout(source,tool):
+    expected={'dnsenum':DNSENUM_SHA,'dnsrecon':DNSRECON_SHA}[tool]
+    if hashlib.sha256(source.encode()).hexdigest()!=expected:
+        raise ValueError('Unreviewed '+tool+' manual source; new layout review required')
+    if tool=='dnsenum':
+        marker='.TH DNSENUM 1 '
+        assert source.count(marker)==1
+        offset=source.index(marker)
+        preamble=source[:offset]
+        body=source[offset:]
+        assert body.count('.if n .ad l\n')==1 and body.count('.nh\n')==1
+        body=body.replace('.if n .ad l\n','').replace('.nh\n','').replace('.Sp\n','.sp\n')
+        return body,{'source_sha256':expected,'original_preamble':preamble,
+            'preamble_sha256':hashlib.sha256(preamble.encode()).hexdigest(),
+            'changes':['Exact Pod::Man generated preamble retained here and in raw source, not executed',
+                       'Two exact justification/hyphenation requests omitted from Markdown layout',
+                       'Pod::Man Sp mapped to sp; IX index markers retained as metadata, never executed']}
+    before='.TP\n.B attempts a zone transfer (AXFR) on the zonetransfer.me domain\ndnsrecon -t axfr -d zonetransfer.me\n'
+    after='.PP\nattempts a zone transfer (AXFR) on the zonetransfer.me domain\n.nf\ndnsrecon -t axfr -d zonetransfer.me\n.fi\n'
+    assert source.count(before)==1
+    return source.replace(before,after),{'source_sha256':expected,'changes':[
+        'Example prose made translatable instead of treating its bold explanatory sentence as an option identifier',
+        'Exact example command fenced; no command executed; missing manual date remains null'],
+        'replacement':{'before':before,'after':after,'occurrences':1}}

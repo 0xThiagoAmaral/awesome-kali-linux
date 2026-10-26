@@ -8,8 +8,8 @@ tags: ["documentation", "offline"]
 
 # Documentação offline — acervo
 
-**27 ferramentas com notas importadas; 51 documentos disponíveis.**
-43 traduções automáticas, 7 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
+**29 ferramentas com notas importadas; 53 documentos disponíveis.**
+43 traduções automáticas, 9 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
 
 Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.
 
@@ -33,6 +33,8 @@ Estas páginas preservam a documentação adquirida, não substituem manuais nã
 | b374k | [README.md](../02-Tools/b374k/b374k-documentacao.md) | Pendente | MIT | Revisão pendente |
 | backdoor-factory | [README.md](../02-Tools/backdoor-factory/backdoor-factory-documentacao.md) | Pendente | BSD-3-Clause | Revisão pendente |
 | berate-ap | [README.md](../02-Tools/berate-ap/berate-ap-documentacao.md) | Pendente | BSD-2-Clause | Revisão pendente |
+| dnsenum | [dnsenum.1](../02-Tools/dnsenum/dnsenum-dnsenum-1.md) | [dnsenum — cheatsheet](../02-Tools/dnsenum/dnsenum-cheatsheet.md) | GPL-2.0-or-later | Revisão pendente |
+| dnsrecon | [dnsrecon.1](../02-Tools/dnsrecon/dnsrecon-dnsrecon-1.md) | [dnsrecon — cheatsheet](../02-Tools/dnsrecon/dnsrecon-cheatsheet.md) | GPL-2.0-only | Revisão pendente |
 | feroxbuster | [README.md](../02-Tools/feroxbuster/feroxbuster-documentacao.md) | [Exemplos upstream](../02-Tools/feroxbuster/feroxbuster-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | ffuf | [README.md](../02-Tools/ffuf/ffuf-documentacao.md) | [Exemplos upstream](../02-Tools/ffuf/ffuf-cheatsheet-upstream.md) · [ffuf — cheatsheet](../02-Tools/ffuf/ffuf-cheatsheet.md) | MIT | Revisão pendente |
 | gobuster | [README.md](../02-Tools/gobuster/gobuster-documentacao.md) | [Exemplos upstream](../02-Tools/gobuster/gobuster-cheatsheet-upstream.md) | Apache-2.0 | Revisão pendente |

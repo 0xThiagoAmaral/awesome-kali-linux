@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "binary": "dnsenum",
+  "installed_version": "dnsenum 1.3.2-1",
+  "test_status": "help-only",
+  "commands": [
+    {
+      "argv": [
+        "dnsenum",
+        "--help"
+      ],
+      "stdout": "dnsenum VERSION:1.3.1\nUsage: dnsenum [Options] <domain>\n[Options]:\nNote: If no -f tag supplied will default to /usr/share/dnsenum/dns.txt or\nthe dns.txt file in the same directory as dnsenum\nGENERAL OPTIONS:\n  --dnsserver \t<server>\n\t\t\tUse this DNS server for A, NS and MX queries.\n  --enum\t\tShortcut option equivalent to --threads 5 -s 15 -w.\n  -h, --help\t\tPrint this help message.\n  --noreverse\t\tSkip the reverse lookup operations.\n  --nocolor\t\tDisable ANSIColor output.\n  --private\t\tShow and save private ips at the end of the file domain_ips.txt.\n  --subfile <file>\tWrite all valid subdomains to this file.\n  -t, --timeout <value>\tThe tcp and udp timeout values in seconds (default: 10s).\n  --threads <value>\tThe number of threads that will perform different queries.\n  -v, --verbose\t\tBe verbose: show all the progress and all the error messages.\nGOOGLE SCRAPING OPTIONS:\n  -p, --pages <value>\tThe number of google search pages to process when scraping names,\n\t\t\tthe default is 5 pages, the -s switch must be specified.\n  -s, --scrap <value>\tThe maximum number of subdomains that will be scraped from Google (default 15).\nBRUTE FORCE OPTIONS:\n  -f, --file <file>\tRead subdomains from this file to perform brute force. (Takes priority over default dns.txt)\n  -u, --update\t<a|g|r|z>\n\t\t\tUpdate the file specified with the -f switch with valid subdomains.\n\ta (all)\t\tUpdate using all results.\n\tg\t\tUpdate using only google scraping results.\n\tr\t\tUpdate using only reverse lookup results.\n\tz\t\tUpdate using only zonetransfer results.\n  -r, --recursion\tRecursion on subdomains, brute force all discovered subdomains that have an NS record.\nWHOIS NETRANGE OPTIONS:\n  -d, --delay <value>\tThe maximum value of seconds to wait between whois queries, the value is defined randomly, default: 3s.\n  -w, --whois\t\tPerform the whois queries on c class network ranges.\n\t\t\t **Warning**: this can generate very large netranges and it will take lot of time to perform reverse lookups.\nREVERSE LOOKUP OPTIONS:\n  -e, --exclude\t<regexp>\n\t\t\tExclude PTR records that match the regexp expression from reverse lookup results, useful on invalid hostnames.\nOUTPUT OPTIONS:\n  -o --output <file>\tOutput in XML format. Can be imported in MagicTree (www.gremwell.com)\n",
+      "stderr": "",
+      "exit_status": 1,
+      "expected_exit_status": 1
+    },
+    {
+      "argv": [
+        "dnsenum",
+        "-h"
+      ],
+      "stdout": "dnsenum VERSION:1.3.1\nUsage: dnsenum [Options] <domain>\n[Options]:\nNote: If no -f tag supplied will default to /usr/share/dnsenum/dns.txt or\nthe dns.txt file in the same directory as dnsenum\nGENERAL OPTIONS:\n  --dnsserver \t<server>\n\t\t\tUse this DNS server for A, NS and MX queries.\n  --enum\t\tShortcut option equivalent to --threads 5 -s 15 -w.\n  -h, --help\t\tPrint this help message.\n  --noreverse\t\tSkip the reverse lookup operations.\n  --nocolor\t\tDisable ANSIColor output.\n  --private\t\tShow and save private ips at the end of the file domain_ips.txt.\n  --subfile <file>\tWrite all valid subdomains to this file.\n  -t, --timeout <value>\tThe tcp and udp timeout values in seconds (default: 10s).\n  --threads <value>\tThe number of threads that will perform different queries.\n  -v, --verbose\t\tBe verbose: show all the progress and all the error messages.\nGOOGLE SCRAPING OPTIONS:\n  -p, --pages <value>\tThe number of google search pages to process when scraping names,\n\t\t\tthe default is 5 pages, the -s switch must be specified.\n  -s, --scrap <value>\tThe maximum number of subdomains that will be scraped from Google (default 15).\nBRUTE FORCE OPTIONS:\n  -f, --file <file>\tRead subdomains from this file to perform brute force. (Takes priority over default dns.txt)\n  -u, --update\t<a|g|r|z>\n\t\t\tUpdate the file specified with the -f switch with valid subdomains.\n\ta (all)\t\tUpdate using all results.\n\tg\t\tUpdate using only google scraping results.\n\tr\t\tUpdate using only reverse lookup results.\n\tz\t\tUpdate using only zonetransfer results.\n  -r, --recursion\tRecursion on subdomains, brute force all discovered subdomains that have an NS record.\nWHOIS NETRANGE OPTIONS:\n  -d, --delay <value>\tThe maximum value of seconds to wait between whois queries, the value is defined randomly, default: 3s.\n  -w, --whois\t\tPerform the whois queries on c class network ranges.\n\t\t\t **Warning**: this can generate very large netranges and it will take lot of time to perform reverse lookups.\nREVERSE LOOKUP OPTIONS:\n  -e, --exclude\t<regexp>\n\t\t\tExclude PTR records that match the regexp expression from reverse lookup results, useful on invalid hostnames.\nOUTPUT OPTIONS:\n  -o --output <file>\tOutput in XML format. Can be imported in MagicTree (www.gremwell.com)\n",
+      "stderr": "",
+      "exit_status": 1,
+      "expected_exit_status": 1
+    },
+    {
+      "argv": [
+        "dpkg-query",
+        "-W",
+        "-f=${Version}",
+        "dnsenum"
+      ],
+      "stdout": "1.3.2-1",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    }
+  ],
+  "manual_options": [
+    "--delay",
+    "--dnsserver",
+    "--enum",
+    "--exclude",
+    "--file",
+    "--help",
+    "--nocolor",
+    "--noreverse",
+    "--pages",
+    "--private",
+    "--recursion",
+    "--scrap",
+    "--subfile",
+    "--threads",
+    "--timeout",
+    "--update",
+    "--verbose",
+    "--whois",
+    "-d",
+    "-e",
+    "-f",
+    "-h",
+    "-p",
+    "-r",
+    "-s",
+    "-t",
+    "-u",
+    "-v",
+    "-w"
+  ],
+  "installed_help_options": [
+    "--delay",
+    "--dnsserver",
+    "--enum",
+    "--exclude",
+    "--file",
+    "--help",
+    "--nocolor",
+    "--noreverse",
+    "--output",
+    "--pages",
+    "--private",
+    "--recursion",
+    "--scrap",
+    "--subfile",
+    "--threads",
+    "--timeout",
+    "--update",
+    "--verbose",
+    "--whois",
+    "-d",
+    "-e",
+    "-f",
+    "-h",
+    "-o",
+    "-p",
+    "-r",
+    "-s",
+    "-t",
+    "-u",
+    "-v",
+    "-w"
+  ],
+  "manual_options_not_listed_by_installed_help": [],
+  "installed_help_options_not_in_manual": [
+    "--output",
+    "-o"
+  ],
+  "source_manual_sha256": "ef15de4554816ca9298fe894e4b1f2d3a2281ee1a50cad5f25e7e49d0f217800",
+  "test_script": "scripts/test_dns_help.py",
+  "test_script_sha256": "359ff60fcde763f203988a261d445d284bb4cda155a919a82fc9870af8110d80",
+  "temporary_directory_empty": true,
+  "installed_manual_before_sha256": "333c44ac49827ff737fe955c756055e233b6927e7c2cec57c8e95644417a5232",
+  "installed_manual_after_sha256": "333c44ac49827ff737fe955c756055e233b6927e7c2cec57c8e95644417a5232",
+  "installed_manual_unchanged": true,
+  "network_query_requested": false,
+  "target_supplied": false,
+  "verification_scope_pt": "Conferidas somente as duas formas de ajuda, versão do pacote. Nenhum domínio, endereço, servidor DNS ou alvo foi fornecido; nenhuma consulta de enumeração foi solicitada. A ajuda retorna código 1. Manual e banner do executável dizem 1.3.1; a versão dpkg é 1.3.2-1. O manual descreve --enum como --threads 5 -s 20 -w e --pages padrão 20; a ajuda instalada mostra -s 15 e padrão 5 páginas. Os textos de origem não foram alterados, e esses padrões não foram testados em consultas reais.",
+  "help_header_lines": [
+    "dnsenum VERSION:1.3.1",
+    "Usage: dnsenum [Options] <domain>",
+    "[Options]:",
+    "Note: If no -f tag supplied will default to /usr/share/dnsenum/dns.txt or",
+    "the dns.txt file in the same directory as dnsenum"
+  ],
+  "limits": [
+    "Help/version only; no DNS, AXFR, brute force, third-party search or Whois operation tested.",
+    "Option-name comparison does not demonstrate that all option combinations or backends work."
+  ],
+  "binary_reported_version": "1.3.1",
+  "documented_default_discrepancies": {
+    "enum": {
+      "manual": "--threads 5 -s 20 -w",
+      "installed_help": "--threads 5 -s 15 -w",
+      "observed_in_help": true
+    },
+    "pages": {
+      "manual": 20,
+      "installed_help": 5,
+      "observed_in_help": true
+    },
+    "query_behavior_tested": false
+  }
+}

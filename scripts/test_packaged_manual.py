@@ -9,6 +9,8 @@ import shutil
 import tempfile
 from package_source import validate_package_source,package_fields
 from package_layout_repairs import repair_arping_layout,ARPING_SHA
+from package_layout_repairs import prepare_dns_package_layout,DNSENUM_SHA,DNSRECON_SHA
+from test_dns_help import extract_help_flags
 from import_translate_docs import code_bodies
 import hashlib
 from packaged_manual import prepare_packaged_manual,arguments,decode
@@ -133,5 +135,48 @@ class NbtscanManualTests(unittest.TestCase):
     def test_native_snapshot(self):
         record=json.loads((self.root/'catalog/source-registry.json').read_text(encoding='utf-8'))['nbtscan']
         self.assertTrue(validate_package_source(record,self.root/'vault/99-Assets/upstream/nbtscan'))
+
+class DnsManualTests(unittest.TestCase):
+    def setUp(self):
+        self.root=pathlib.Path(__file__).resolve().parents[1]
+    def source(self,tool):
+        return (self.root/'sources/upstream'/tool/(tool+'.1.source')).read_text(encoding='utf-8')
+    def test_pod_preamble_is_data_not_executed(self):
+        rendered,info=prepare_packaged_manual(self.source('dnsenum'),'dnsenum')
+        adapter=info['source_layout_adapter']
+        self.assertIn('.de Vb',adapter['original_preamble'])
+        self.assertIn('tm Index:',adapter['original_preamble'])
+        self.assertNotIn('.de Vb',rendered)
+        self.assertEqual(hashlib.sha256(self.source('dnsenum').encode()).hexdigest(),DNSENUM_SHA)
+    def test_pod_sections_options_and_bullets(self):
+        rendered,info=prepare_packaged_manual(self.source('dnsenum'),'dnsenum')
+        self.assertEqual(len(info['sections']),12)
+        self.assertEqual(len(info['option_syntax']),18)
+        self.assertIn('- 1) Get the host',rendered)
+        self.assertIn('## COPYRIGHT',rendered)
+        self.assertEqual(len(code_bodies(rendered)),1)
+    def test_unreviewed_dns_sources_fail_closed(self):
+        for tool in ['dnsenum','dnsrecon']:
+            with self.subTest(tool=tool),self.assertRaises(ValueError):
+                prepare_packaged_manual(self.source(tool)+'\n',tool)
+    def test_missing_date_not_fabricated(self):
+        _,info=prepare_packaged_manual(self.source('dnsrecon'),'dnsrecon')
+        self.assertEqual(info['title'],['DNSRECON','1'])
+    def test_dnsrecon_types_and_original_command(self):
+        rendered,info=prepare_packaged_manual(self.source('dnsrecon'),'dnsrecon')
+        self.assertEqual(len(info['sections']),5)
+        self.assertEqual(len(info['option_syntax']),26)
+        self.assertIn('--disable_check_bindversion',rendered)
+        self.assertIn('- zonewalk:',rendered)
+        self.assertEqual(code_bodies(rendered)[-1],'dnsrecon -t axfr -d zonetransfer.me\n')
+        self.assertNotIn('attempts a zone transfer',''.join(code_bodies(rendered)))
+    def test_flag_extraction_preserves_multichar_and_underscores(self):
+        text='  -iL INPUT_LIST, --input-list INPUT_LIST  explanation\n  --disable_check_nxdomain\nDescription: query -www site:domain\n'
+        self.assertEqual(extract_help_flags(text),['--disable_check_nxdomain','--input-list','-iL'])
+    def test_distinct_package_license_choices(self):
+        registry=json.loads((self.root/'catalog/source-registry.json').read_text(encoding='utf-8'))
+        for tool,expected in [('dnsenum','GPL-2.0-or-later'),('dnsrecon','GPL-2.0-only')]:
+            self.assertEqual(registry[tool]['license_spdx'],expected)
+            self.assertTrue(validate_package_source(registry[tool],self.root/'vault/99-Assets/upstream'/tool))
 if __name__=='__main__':
     unittest.main()

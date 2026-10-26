@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "tools": 27,
-  "documents": 51,
-  "code_blocks": 413,
+  "tools": 29,
+  "documents": 53,
+  "code_blocks": 416,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -3614,6 +3614,352 @@
     },
     {
       "check": "nbtscan:nbtscan.1 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum retained asset hash: COPYRIGHT.package.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum retained asset hash: originals/dnsenum.1.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum retained asset hash: PACKAGE-SNAPSHOT.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum native source snapshot, gzip, notice and version binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 exact fenced-code bodies",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "dnsenum:dnsenum.1 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 18,
+        "translation": 61
+      }
+    },
+    {
+      "check": "dnsenum:dnsenum.1 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsenum:dnsenum.1 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "dnsenum:dnsenum.1 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon retained asset hash: COPYRIGHT.package.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon retained asset hash: originals/dnsrecon.1.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon retained asset hash: PACKAGE-SNAPSHOT.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon native source snapshot, gzip, notice and version binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 exact fenced-code bodies",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 26,
+        "translation": 50
+      }
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "dnsrecon:dnsrecon.1 review status honest",
       "pass": true,
       "detail": null
     }

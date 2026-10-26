@@ -1,0 +1,53 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: dnsrecon
+Source: https://github.com/darkoperator/dnsrecon
+
+Files: *
+Copyright: 2012-2024 Carlos Perez <Carlos_Perez@darkoperator.com>
+License: GPL-2
+
+Files: dnsrecon/lib/bingenum.py
+       dnsrecon/lib/yandexenum.py
+Copyright: 2017-2020 Cristiano Maruti
+License: GPL-2
+
+Files: debian/*
+Copyright: 2012,2013,2014 Devon Kearns <dookie@kali.org>
+           2012, 2014 Mati Aharoni <muts@kali.org>
+           2015, 2018, 2020 Sophie Brun <sophie@offensive-security.com>
+           2016-2024 Marcos Fouces <marcos@debian.org>
+           2023 Leandro Cunha <leandrocunha016@gmail.com>
+License: GPL-2+
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; Applies version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".

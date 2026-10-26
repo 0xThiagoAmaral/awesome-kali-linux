@@ -3,14 +3,14 @@
 | Critério | Estado observado |
 |---|---|
 | Catálogo oficial | 820 registros; 806 com metadado everything |
-| Fontes upstream licenciadas adquiridas | 27 ferramentas |
-| Notas de documentação disponíveis | 51 documentos em 27 ferramentas |
+| Fontes upstream licenciadas adquiridas | 29 ferramentas |
+| Notas de documentação disponíveis | 53 documentos em 29 ferramentas |
 | Traduções automáticas | 43 documentos, ainda sem revisão humana integral |
-| Traduções editoriais por assistente de IA | 7, conferidas contra a fonte; revisão humana independente pendente |
+| Traduções editoriais por assistente de IA | 9, conferidas contra a fonte; revisão humana independente pendente |
 | Português oficial upstream | 1 documento(s) |
-| Blocos de código preservados | 413, sujeitos à conferência de integridade atual |
+| Blocos de código preservados | 416, sujeitos à conferência de integridade atual |
 | Folhas de comandos upstream | 10 folhas; 44 exemplos literais, não executados |
-| Cheatsheets autorais complementares | 9 folhas, com escopo de teste indicado em cada nota |
+| Cheatsheets autorais complementares | 11 folhas, com escopo de teste indicado em cada nota |
 | Ferramentas com documentação integral e revisão concluídas | 0 |
 | Todo o Kali full/everything concluído | Não |
 | Publicação GitHub | [Publicado na branch main](https://github.com/0xThiagoAmaral/awesome-kali-linux) — marco verificado em 2026-10-26 |

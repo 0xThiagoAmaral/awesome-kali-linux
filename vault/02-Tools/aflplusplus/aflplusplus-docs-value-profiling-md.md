@@ -24,6 +24,7 @@ Em vez de apenas perguntar se uma comparação foi alcançada, AFL++ também ras
 fechar os operandos observados são iguais. Isto ajuda em comparações transformadas
 onde as tentativas de solução direta são fracas ou impossíveis.
 
+<a id="activation"></a>
 ## Activação
 
 Perfil de valor atualmente usa instrumentação VP runtime no alvo principal.
@@ -61,6 +62,7 @@ uma vez que a fronteira VP também reflete entradas já descobertas.
 os processos ativaram somente os itens da fila. Entradas desabilitadas antes da ativação, como
 sementes duplicadas de cobertura, não são reconsideradas para VP.
 
+<a id="frontier"></a>
 ## Fronteira
 
 VP mantém uma fronteira das distâncias mais conhecidas para os pares `(site, slot)`.
@@ -152,6 +154,7 @@ estável para a vida útil do mapa em tempo de execução. Se todas as oito form
 ocupado por outras tags, o novo site lógico é omitido em vez de compartilhar ou
 despejar o estado de um sítio existente.
 
+<a id="focus-set"></a>
 ## Foco Definir
 
 O custo de uma batida de tempo de execução é definido por quantos locais distintos são ao vivo, não por
@@ -193,6 +196,7 @@ execução, e uma reconstrução está agendada para o próximo item da fila ass
 a contagem passa o orçamento. A sobreposição é, portanto, limitada por uma fila
 entrada, não um ciclo de fila.
 
+<a id="site-retirement"></a>
 ## Aposentadoria do Site
 
 O mesmo passe aposenta sites que deixaram de pagar por si mesmos:
@@ -234,6 +238,7 @@ desaparece.
 Observação caixa de areia, usado pelo guarda de aparar, temporariamente levanta a aposentadoria em
 os locais que observa, para que um guarda nunca leia o seu próprio sinal como perdido.
 
+<a id="instrumented-compares"></a>
 ## Comparações instrumentadas
 
 Além de ignorar o controle de loop canônico compara, as instruções passam gotas
@@ -250,6 +255,7 @@ pontos como uma construção simples.
 
 Trocas e comparações de rotina não são filtradas desta forma.
 
+<a id="stats"></a>
 ## Estatísticas
 
 Entradas de fila somente VP são contadas em `value_profile_finds` e em
@@ -262,6 +268,7 @@ Note que `cycles_wo_finds`, ea escalada de estrago fechado sobre ele, contar
 crescimento da fila em vez do relógio de procura, então as entradas somente de VP ainda repõem
 Eles.
 
+<a id="mutation-scope"></a>
 ## Âmbito da Mutação
 
 O VP orienta actualmente quais os itens da fila que são mantidos e favorecidos. Ainda não existe
@@ -283,6 +290,6 @@ Em uma compilação de 64 bits, o mapa fixo prático é sobre 10.6 MiB.
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/value_profiling.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/value_profiling.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

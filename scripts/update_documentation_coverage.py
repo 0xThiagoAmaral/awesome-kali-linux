@@ -46,8 +46,8 @@ result={'schema_version':1,'scope':'Entire pinned Kali tools catalog, with every
                  'Obsidian rendering and clean offline release validated',
                  'Public GitHub repository/release created and verified'],
         'tools':coverage}
-(ROOT/'catalog/documentation-coverage.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(ROOT/'catalog/github-documentation-candidates.json').write_text(json.dumps(github_candidates,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'catalog/documentation-coverage.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
+(ROOT/'catalog/github-documentation-candidates.json').write_text(json.dumps(github_candidates,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
 buf=io.StringIO(newline='')
 fields=['tool','in_everything','license_status','upstream_acquired_documents','upstream_translated_documents',
         'code_integrity_verified','human_review_complete','full_tool_documentation_complete','next_action']

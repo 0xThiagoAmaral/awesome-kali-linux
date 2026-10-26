@@ -21,7 +21,7 @@ source_scope: "Official English repository README/docs and available upstream Po
 
 Sniffer de segurança de rede para encontrar vulnerabilidades na rede. Projetado para pentesters e engenheiros de segurança.
 
-[Imagem/recurso externo: referência](https://github.com/caster0x00/Above/blob/313f550ebb87d815aeece6792104b8c3f2a9db8f//banner/banner.png)
+![](../../99-Assets/upstream/above/banner/banner.png)
 
 ```text
         ___    __                  
@@ -52,6 +52,7 @@ Acima está um sniffer de segurança de rede para encontrar vulnerabilidades em 
 
 > Acima permite que os pentesters automatizem o processo de encontrar vulnerabilidades em hardware de rede. Protocolos de descoberta, roteamento dinâmico, 802.1Q, protocolos de resolução, ICS, FHRP, STP, LLMNR/NBT-NS, etc.
 
+<a id="supported-protocols"></a>
 ## Protocolos suportados
 
 Detecta até 28 protocolos:
@@ -86,6 +87,7 @@ SSDP (Simple Service Discovery Protocol)
 MNDP (MikroTik Neighbor Discovery Protocol)
 SNMP (Simple Network Management Protocol)
 ```
+<a id="operating-mechanism"></a>
 ## Mecanismo de funcionamento
 
 Acima funciona em dois modos:
@@ -118,6 +120,7 @@ options:
 
 ---
 
+<a id="information-about-protocols"></a>
 ## Informação sobre protocolos
 
 As informações obtidas serão úteis não só para o pentester, mas também para o engenheiro de segurança, ele saberá o que precisa prestar atenção.
@@ -167,11 +170,13 @@ sudo python3 setup.py install
 ```
 
 Não se esqueça de **desativar** seu firewall no macOS!
+<a id="settings--network--firewall"></a>
 #### Configurações > Rede > Firewall
 --------------------------
 
 # How to Use
 
+<a id="hot-mode"></a>
 ## Modo quente
 
 > Acima requer acesso root para farejar
@@ -220,6 +225,7 @@ caster@kali:~$ sudo above --interface eth0 --timer 120 --output above.pcap
 ```
 > Se você interromper a ferramenta com CTRL+C, o tráfego ainda é gravado no arquivo
 
+<a id="cold-mode"></a>
 ## Modo frio
 
 Se você já tem algum tráfego gravado, você pode usar o argumento `--input` para procurar possíveis problemas de segurança

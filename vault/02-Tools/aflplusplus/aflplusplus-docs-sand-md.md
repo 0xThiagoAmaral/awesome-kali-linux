@@ -24,12 +24,14 @@ source_scope: "Repository root README and owned doc/docs/documentation Markdown 
 - Preprint: [arXiv](https://arxiv.org/abs/2402.16497), aceito pelo ICSE 2025
 - Repo principal (para papel, reprodução, referência ou citação): https://github.com/wtdcode/sand-aflpp
 
+<a id="motivation"></a>
 ## Motivação
 
 SAND introduz um novo fluxo de trabalho fuzzing que pode reduzir (ou mesmo eliminar) a sobrecarga do higienizador e combinar diferentes higienizadores em uma campanha fuzzing.
 
 O ponto chave do SAND é que: higienizar todas as entradas está desperdiçando o poder do fuzzing, porque as entradas de desencadeamento de bugs são extremamente raras (~1%). Obviamente, nem todas as entradas valem a pena passar por higienizadores. Portanto, se pudermos de alguma forma "prever" se uma entrada pudesse acionar bugs (definidos como "padrão de execução"), poderíamos salvar muito o poder do fuzzing apenas por higienizar uma pequena proporção de todas as entradas. É exatamente assim que o SAND funciona.
 
+<a id="usage"></a>
 ## Uso
 
 Para um fluxo de trabalho fuzzing normal, temos:
@@ -48,6 +50,7 @@ Então você começa:
 - quase o mesmo desempenho que `afl-fuzz -i seeds -o out -- ./target_native`
 - e a mesma capacidade de encontrar erros que o `afl-fuzz -i seeds -o out -- ./target_asan`
 
+<a id="example-workflow"></a>
 ## Exemplo de fluxo de trabalho
 
 Tome [teste-instr.c](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/test-instr.c) como um exemplo.
@@ -79,24 +82,29 @@ AFL_NO_UI=1 AFL_SKIP_CPUFREQ=1 afl-fuzz -i /tmp/test -o /tmp/out -w ./asanubsan 
 
 É isso!
 
+<a id="tips"></a>
 ## Dicas
 
+<a id="alternative-execution-patterns"></a>
 ### Padrões de execução alternativos
 
 Por padrão, o SAND usa o valor de hash do mapa de cobertura simplificado como padrão de execução, ou seja, se uma entrada tiver um mapa de cobertura único e simples, ele será enviado para higienizadores para inspeção. Isto irá funcionar para a maioria dos casos. Contudo, se você estiver fortemente preocupado com erros ausentes, tente o `AFL_SAN_ABSTRACTION=unique_trace afl-fuzz ...`, que filtra entradas com um mapa de cobertura _unique_. Lembre- se que isso aumenta significativamente o número de entradas em 4-10 vezes, levando a uma taxa de transferência muito menor. Alternativamente, o SAND também suporta o `AFL_SAN_ABSTRACTION=coverage_increase`, que é essencialmente igual a executar higienizadores no corpus e, portanto, ter quase zero sobrecarga, mas a um custo de faltando ~15% bugs na nossa avaliação.
 
 SAND usa uma cache de de deduplicação limitada de 8 MB por padrão. Defina `AFL_SAN_DEDUP_SIZE` para o tamanho de cache desejado no MB. As colisões de índice de cache despejam o hash antigo e podem fazer com que uma entrada seja verificada novamente.
 
+<a id="run-as-many-sanitizers-as-possible"></a>
 ### Executar tantos higiénicos quanto possível
 
 Embora tenhamos usado a ASAN como exemplo, a SAND funciona melhor se você fornecer mais higienizadores, por exemplo, UBSAN e MSAN.
 
 Você pode fazê-lo via `afl-fuzz -i seeds -o out -w ./target_asan -w ./target_msan -w ./target_ubsan -- ./target_native`. Não se preocupe com os higienizadores lentos como MSAN, SAND ainda poderia executar muito rápido, porque apenas um pouco de entradas são higienizadas.
 
+<a id="bugs-types"></a>
 ### Tipos de erros
 
 O padrão de execução avaliado em nossos artigos está visando os bugs comuns, como captura ASAN/MSAN/UBSAN. Para outros tipos de bugs, você provavelmente precisa definir novos padrões de execução e reavaliar.
 
+<a id="my-throughput-is-greatly-impacted"></a>
 ### Meu rendimento é muito impactado
 
 Geralmente, isto é devido a muitas entradas passando por higienizadores, por exemplo, por causa de alvos instáveis. Você pode verificar estatísticas do `plot_file` para confirmar isso. Tente mudar os padrões de execução como indicado acima.
@@ -106,6 +114,6 @@ Geralmente, isto é devido a muitas entradas passando por higienizadores, por ex
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/SAND.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/SAND.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

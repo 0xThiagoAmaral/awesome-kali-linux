@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "notes": 73,
+  "local_fragments_checked": 166,
+  "failures": [],
+  "limits": [
+    "Static heading/HTML-ID audit; native Obsidian rendering and interaction still require a separate visual check."
+  ]
+}

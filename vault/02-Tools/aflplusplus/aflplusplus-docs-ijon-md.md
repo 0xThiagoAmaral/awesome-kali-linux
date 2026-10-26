@@ -36,6 +36,7 @@ Dados de teste e benchmarks disponíveis em: [Repositório de Dados IJON](https:
 
 **NOTE** Existe também uma implementação IJON para o modo qemu_, ver [qemu_mode/README.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/qemu_mode/README.md)
 
+<a id="important-linker-parameters"></a>
 ## IMPORTANTE: Parâmetros do linker
 
 Se seu compilador não usar ld.bfd ou lld ou o linker é chamado diretamente pelo seu ambiente de compilação, então vincular o binário alvo falhará:
@@ -58,8 +59,10 @@ export CPP_FLAGS="-Wl,-z,muldefs"
 export LD_FLAGS="-z muldefs"
 ```
 
+<a id="ijon-api-reference"></a>
 ## Referência IJON API
 
+<a id="core-value-tracking-macros"></a>
 ### Macros de Rastreamento do Valor Principal
 
 #### `IJON_MAX(x)`
@@ -82,6 +85,7 @@ Incrementar a entrada do mapa de cobertura para o valor `x`.
 Ao contrário de `IJON_SET`, isso recompensa **como frequentemente** diferentes valores ocorrem.
 Exemplo: `IJON_INC(packet_type)` faz AFL explorar muitos tipos de pacotes diferentes.
 
+<a id="state-management-macros"></a>
 ### Macros de Gestão do Estado
 
 #### `IJON_STATE(n)`
@@ -95,6 +99,7 @@ Hashing de estado escopo: incorpora temporariamente a variável `x` no hash de e
 Útil para distinguir comportamentos baseados no contexto de execução.
 Exemplo: `IJON_CTX(function_id)` faz AFL rastrear o mesmo código de forma diferente, dependendo da função ativa.
 
+<a id="distance-and-comparison-macros"></a>
 ### Distância e Comparação Macros
 
 #### `IJON_STRDIST(x, y)`
@@ -116,6 +121,7 @@ Retorna o número de zero bits principais no `x`.
 Pode ser usado para medir como “fechar” um valor é zero ou um poder de dois.
 Exemplo: `IJON_BITS(mask)` para entradas onde o alinhamento importa.
 
+<a id="stack-aware-macros"></a>
 ### Macros de Aware de Pilha
 
 #### `IJON_STACK_MAX(x)`
@@ -127,8 +133,10 @@ Exemplo: `IJON_STACK_MAX(buffer_len)` recompensa o progresso em diferentes funç
 Como `IJON_MIN(x)`, mas scoped para a pilha de chamadas atual.
 Exemplo: A `IJON_STACK_MIN(depth)` recompensa atingir uma recursão mais rasa em um contexto, mais profunda em outro.
 
+<a id="example-usage"></a>
 ## Uso do Exemplo
 
+<a id="maze-example"></a>
 ### Exemplo de labirinto
 
 Em um labirinto que queremos ativar cobertura em novos locais no labirinto, podemos simplesmente usar `IJON_SET`:
@@ -146,6 +154,7 @@ while (true) {
 }
 ```
 
+<a id="protocol-example"></a>
 ### Exemplo de protocolo
 
 Quando nós fuzz um protocolo, nós queremos recompensar diferentes tipos de mensagem e estados:
@@ -156,6 +165,7 @@ state_log = (state_log << 8) + msg.type;
 IJON_STATE(state_log); // reward new message sequences
 ```
 
+<a id="retiring-completed-max-targets"></a>
 ### Aposentar metas máximas concluídas
 
 Usar `IJON_MAX_UNTIL(x, limit)` quando um objectivo IJON max tem um superior conhecido
@@ -175,8 +185,10 @@ O programador repete-os round-robin depois de cada 15 turnos normal programador,
 assim, IJON replay ocupa no máximo uma de cada 16 oportunidades de agendamento.
 a cobertura encontrada durante o replay entra na fila como uma entrada root independente.
 
+<a id="usage-instructions"></a>
 ## Instruções de utilização
 
+<a id="building-afl-with-ijon"></a>
 ### Construindo AFL++ com IJON
 
 ```bash
@@ -184,6 +196,7 @@ make clean
 make LLVM_CONFIG=llvm-config-18 source-only
 ```
 
+<a id="ijon-mode-debug-build-for-afl-fuzz"></a>
 ### Compilação de depuração do modo IJON para o afl-fuzz
 
 Note que isso não afeta qualquer funcionalidade ijon, ele apenas cria um arquivo extra.
@@ -199,6 +212,7 @@ de suas anotações max/min até agora, o que pode ajudá-lo a entender o progre
 
 Por exemplo, você pode verificar a posição do eixo y atual do Mario.
 
+<a id="compiling-target-programs"></a>
 ### Compilando Programas- Alvo
 
 Ao usar a instrumentação IJON em AFL++, é necessário invocar `__AFL_INIT()` no início da função `main()` do seu programa alvo:
@@ -218,13 +232,16 @@ Definir as variáveis de ambiente durante a compilação:
 AFL_LLVM_IJON=1 CC=afl-clang-fast CXX=afl-clang-fast++ make
 ```
 
+<a id="fuzzing-configuration"></a>
 ### Configuração do Fuzzing
 
+<a id="basic-fuzzing"></a>
 #### Fuzzing básico
 ```bash
 AFL_IJON_HISTORY_LIMIT=1000 afl-fuzz -i input_dir -o output_dir -- ./target
 ```
 
+<a id="for-large-targets-bitmap--65k"></a>
 #### Para alvos grandes (bitmap > 65k)
 ```bash
 echo test > test_input.txt && AFL_DUMP_MAP_SIZE=1 ./target
@@ -232,12 +249,14 @@ echo test > test_input.txt && AFL_DUMP_MAP_SIZE=1 ./target
 AFL_IJON_HISTORY_LIMIT=1000 afl-fuzz -S worker -i input_dir -o output_dir -- ./target
 ```
 
+<a id="environment-variables"></a>
 ### Variáveis de Ambiente
 
 - **`AFL_LLVM_IJON=1`**: Activa a instrumentação IJON durante a compilação
 - **`AFL_IJON_HISTORY_LIMIT=N`**: Define o número máximo de entradas de valor máximo de IJON armazenadas na máquina (por omissão: 20)
 - **`AFL_IJON_RETIRE_MAX=1`**: Trata os valores máximos de `UINT64_MAX` IJON como alvos completados e pára de agendar a entrada de IJON armazenada
 
+<a id="performance-super-mario-bros-level-11-ijon_maxpos_y16-world_pos"></a>
 ## Desempenho (Super Mario Bros. Nível 1.1, ijon_max(pos_y/16, world_pos))
 
 Ambiente de teste: Ubuntu 20.04, 16 GB de RAM, 8 núcleos
@@ -253,6 +272,7 @@ Ambiente de teste: Ubuntu 20.04, 16 GB de RAM, 8 núcleos
 
 No geral, o IJON AFL++ é ~2.4x mais rápido em média (76.0 min -> 31.2 min).
 
+<a id="performance-maze-ijon_setijon_hashintx-y"></a>
 ## Desempenho (Maze, IJON_SET(ijon_hashint(x, y))))
 
 Ambiente de teste: Ubuntu 20.04, 16 GB de RAM, 8 núcleos
@@ -271,8 +291,10 @@ Ambiente de teste: Ubuntu 20.04, 16 GB de RAM, 8 núcleos
 |10|1 min 32 s|2 min 32 s|12 min 7 s|11 min 50 s|1 min 5 s|24 s|17 min 10 s|1 min 42 s|
 |AVG|2 min 55 s|1 min 44 s (1,68x)|14 min 14 s|7 min 46 s (1,83x)|1 min 23 s|21.9 s (3. 8x)|7 min 51 s|1 min 39 s (4,75x)|
 
+<a id="implementation-details"></a>
 ## Detalhes da Implementação
 
+<a id="memory-layout"></a>
 ### Disposição da Memória
 
 Esta implementação usa um layout de memória compartilhada dinâmica unificada que funciona para todos os tamanhos de mapa:
@@ -326,6 +348,7 @@ Base Address    ┌────────────────────�
 - **Disposição Consistente**: Mesma organização de memória, independentemente do tamanho do alvo
 - **Suporte rápido**: Offsets IJON preservados em sessões fuzzing
 
+<a id="the-other-tools"></a>
 ### As outras ferramentas
 
 `afl-showmap`, `afl-cmin`, `afl-tmin` e `afl-analyze` ver o mesmo mapa
@@ -346,6 +369,6 @@ por isso.
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/IJON.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/IJON.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

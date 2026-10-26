@@ -51,6 +51,7 @@ os mantenedores não recebem dinheiro).
 Ver [LICENÇAS. md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/LICENSING.md) para uma visão geral em linguagem simples e
 [Seção de licença](#licença) abaixo para obter detalhes.
 
+<a id="getting-started"></a>
 ## Começar
 
 Aqui está alguma informação para você começar:
@@ -73,6 +74,7 @@ por favor visite [docs/README.md](aflplusplus-docs-readme-md.md).
 configuração padrão no Google
 [fuzzbench](https://github.com/google/fuzzbench/tree/master/fuzzers/aflplusplus).
 
+<a id="building-and-installing-afl"></a>
 ## Construindo e instalando AFL++
 
 Para ter AFL++ facilmente disponível com tudo compilado, puxe a imagem diretamente
@@ -93,6 +95,7 @@ estado de desenvolvimento de AFL++.
 Para construir AFL++ - *que recomendamos* - continue em
 [docs/INSTALL.md](aflplusplus-docs-install-md.md).
 
+<a id="quick-start-fuzzing-with-afl"></a>
 ## Início rápido: Fuzzing com AFL++
 
 *NOTE: Antes de começar, leia sobre o
@@ -159,6 +162,7 @@ lacunas para além do código morto e para gerar listas de autorização de inst
 7. Não podemos sublinhar isto o suficiente - se você quiser fuzz eficazmente, leia o
 Documento [docs/fuzzing_in_profund.md](aflplusplus-docs-fuzzing-in-depth-md.md)!
 
+<a id="contact"></a>
 ## Contacto
 
 Perguntas, preocupações, relatórios de insectos?
@@ -168,6 +172,7 @@ Perguntas, preocupações, relatórios de insectos?
 * Dê uma olhada no nosso [Perguntas Frequentes](aflplusplus-docs-faq-md.md) e [Melhores Práticas](aflplusplus-docs-best-practices-md.md).
 * **Melhor: junte-se ao [Servidor Zulip fuzzing](https://fuzz.zulipchat.com/)!**
 
+<a id="branches"></a>
 ## Ramos
 
 Existem os seguintes ramos:
@@ -183,6 +188,7 @@ ou tem um erro. **Somente aceitamos PRs (pedidos de execução) para o ramo 'dev
 * (qualquer outra): ramos experimentais para trabalhar em características específicas ou testar novos
 funcionalidade ou alterações.
 
+<a id="help-wanted"></a>
 ## Ajuda desejada
 
 Vejam o nosso [lista de problemas com a tag "ajuda desejada"](https://github.com/AFLplusplus/AFLplusplus/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22help%20wanted%22).
@@ -192,6 +198,7 @@ algo legal. Se você tem outras idéias - apenas crie um problema e proponha-o!
 Para todos que querem contribuir (e enviar pedidos de pull), por favor leia o nosso
 [Orientações para as contribuições](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/CONTRIBUTING.md) antes de enviar.
 
+<a id="special-thanks"></a>
 ## Obrigado especiais.
 
 Muitas das melhorias para a AFL original e AFL++ não seria possível
@@ -291,6 +298,7 @@ Você pode encontrar a configuração padrão AFL++ no [fuzzbench](https://githu
 [zread](https://zread.ai/AFLplusplus/AFLplusplus)
 [Ask DeepWiki](https://deepwiki.com/AFLplusplus/AFLplusplus)
 
+<a id="license"></a>
 ## Licença
 
 AFL++ está licenciada sob a licença **GNU AGPL-3.0-ou-later**. Em suma, você pode usar

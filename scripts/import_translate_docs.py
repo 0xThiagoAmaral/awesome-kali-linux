@@ -13,15 +13,16 @@ import time
 import unicodedata
 import urllib.parse
 from translation_engine import LocalTranslator
+from enrich_local_assets import resolve_reference
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 BT=chr(96)
 FENCE=re.compile(r'^(\s*)('+BT+r'{3,}|~{3,})(.*)$')
-PIPELINE_VERSION='0.3-source-language-and-literal-integrity'
+PIPELINE_VERSION='0.6-tables-images-and-source-link-corrections'
 
 def save_json(path,value):
     temp=path.with_suffix(path.suffix+'.tmp')
-    temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
     temp.replace(path)
 
 def note_name(tool,doc):
@@ -50,6 +51,7 @@ def code_bodies(text):
 
 def slug(value):
     value=re.sub(r'<[^>]*>','',value).replace(BT,'').strip().lower()
+    value=re.sub(r'!?\[([^\]]+)\]\([^)]+\)',r'\1',value)
     value=re.sub(r'[^\w -]','',value,flags=re.U)
     return value.replace(' ','-')
 
@@ -73,11 +75,55 @@ def outside_code(text,callback):
     result.append(callback(''.join(plain)))
     return ''.join(result)
 
+def markdown_headings(text):
+    headings=[]
+    def collect(part):
+        headings.extend((len(m.group(1)),m.group(2)) for m in re.finditer(r'^(#{1,6})\s+(.+)$',part,re.M))
+        return part
+    outside_code(normalize_legacy_headings(text),collect)
+    return headings
+
+def normalize_legacy_headings(text):
+    """Present legacy GitHub headings consistently, without touching fenced examples."""
+    def convert(part):
+        return re.sub(r'^(#{1,6})(?=[A-Za-z])(.+)$',
+                      lambda m:m.group(1)+' '+m.group(2).rstrip('#').rstrip(),part,flags=re.M)
+    return outside_code(text,convert)
+
+def preserve_heading_anchors(source,translated):
+    """Retain original source heading IDs so cross-document links survive translation."""
+    old=markdown_headings(source)
+    new=markdown_headings(translated)
+    assert len(old)==len(new),'Translation changed the heading count'
+    counts={}
+    ids=[]
+    for _,value in old:
+        base=slug(value)
+        occurrence=counts.get(base,0)
+        counts[base]=occurrence+1
+        ids.append(base+('-'+str(occurrence) if occurrence else ''))
+    existing=set(re.findall(r'\b(?:id|name)=["\x27]([^"\x27]+)',translated))
+    index=0
+    changes=[]
+    def convert(part):
+        nonlocal index
+        def heading(match):
+            nonlocal index
+            alias=ids[index]
+            index+=1
+            if alias and alias!=slug(match.group(2)) and alias not in existing:
+                existing.add(alias)
+                changes.append({'kind':'original-heading-id-preserved','anchor':alias})
+                return '<a id="'+alias+'"></a>\n'+match.group()
+            return match.group()
+        return re.sub(r'^(#{1,6})[ \t]+(.+)$',heading,part,flags=re.M)
+    return outside_code(translated,convert),changes
+
 def translate_body(source,tr):
     out=[]
     active=None
     heading_map={}
-    for line in source.splitlines(keepends=True):
+    for line in normalize_legacy_headings(source).splitlines(keepends=True):
         end='\n' if line.endswith('\n') else ''
         stripped=line.rstrip('\r\n')
         m=FENCE.match(stripped)
@@ -106,7 +152,7 @@ def translate_body(source,tr):
             out.append(line)
             continue
         if stripped.lstrip().startswith('|'):
-            out.append('|'.join(tr.text(x.strip()) if x.strip() else '' for x in stripped.split('|'))+end)
+            out.append('|'.join(tr.text(x.strip()) if x.strip() else '' for x in re.split(r'(?<!\\)\|',stripped))+end)
             continue
         prefix=re.match(r'^(\s*(?:[-*+]|\d+\.)\s+(?:\[[ xX]\]\s+)?)(.*)$',stripped)
         if prefix:
@@ -119,13 +165,12 @@ def translate_body(source,tr):
     assert code_bodies(result)==code_bodies(source),'Literal fenced code changed'
     return result
 
-def mirror_images(text,record,asset_root,note):
+def mirror_images(text,record,asset_root,note,doc_path='README.md'):
     modifications=[]
     available={x['path']:asset_root/pathlib.Path(x['path']) for x in record['assets']}
-    by_name={pathlib.PurePosixPath(k).name:v for k,v in available.items()}
     def resolve(url):
-        decoded=urllib.parse.unquote(url.split('?')[0].split('#')[0])
-        target=available.get(decoded.lstrip('./')) or by_name.get(pathlib.PurePosixPath(decoded).name)
+        path=resolve_reference(url,doc_path,record['repository'])
+        target=available.get(path)
         if target and target.exists():
             return pathlib.Path(os.path.relpath(target,note.parent)).as_posix()
         return None
@@ -155,8 +200,17 @@ def mirror_images(text,record,asset_root,note):
 
 def resolve_relative_links(text,record,doc_path,note,asset_root,heading_map):
     changes=[]
+    correction_file=ROOT/'catalog/source-link-corrections.json'
+    corrections=json.loads(correction_file.read_text(encoding='utf-8')).get(record['tool'],{}) if correction_file.exists() else {}
     def link(match):
         label,url=match.group(1),match.group(2)
+        if url in corrections:
+            replacement=corrections[url]
+            changes.append({'kind':'source-link-correction','from':url,'to':replacement})
+            if replacement=='@retained-license':
+                target=pathlib.Path(os.path.relpath(asset_root/'LICENSE.txt',note.parent)).as_posix()
+                return '['+label+']('+target+')'
+            url=replacement
         parsed=urllib.parse.urlsplit(url)
         own_page=url.split('#')[0].rstrip('/') in [record['repository'].rstrip('/'),record['repository']+'/blob/'+record['commit']+'/'+doc_path]
         if parsed.fragment and (own_page or not parsed.path and not parsed.scheme):
@@ -181,10 +235,45 @@ def resolve_relative_links(text,record,doc_path,note,asset_root,heading_map):
         changes.append({'kind':'unacquired-relative-reference-pinned-online','source_path':joined})
         return '['+label+']('+target+')'
     def convert(part):
+        # Linked images must be protected before matching their enclosing text link.
+        images=[]
+        def hide_image(match):
+            token='AKLIMAGE'+str(len(images))+'TOKEN'
+            images.append(match.group())
+            return token
+        part=re.sub(r'!\[[^\]]*\]\([^)]+\)',hide_image,part)
         part=re.sub(r'(?<!!)\[([^\]]+)\]\(([^)]+)\)',link,part)
+        for index,image in enumerate(images):
+            part=part.replace('AKLIMAGE'+str(index)+'TOKEN',image)
+        for before,after in corrections.items():
+            if after=='@retained-license':
+                after=pathlib.Path(os.path.relpath(asset_root/'LICENSE.txt',note.parent)).as_posix()
+            elif after.startswith('#'):
+                after='#'+heading_map.get(after[1:],after[1:])
+            for quote in ['"',chr(39)]:
+                needle='href='+quote+before+quote
+                if needle in part:
+                    part=part.replace(needle,'href='+quote+after+quote)
+                    changes.append({'kind':'source-html-link-correction','from':before,'to':after})
         for before,after in heading_map.items():
             part=part.replace('href="#'+before+'"','href="#'+after+'"')
         return part
+    return outside_code(text,convert),changes
+
+def preserve_contributor_anchors(text):
+    """Attach all-contributors badge links to the actual matching contributor cell."""
+    changes=[]
+    def convert(part):
+        def cell(match):
+            cell_text=match.group()
+            aliases=sorted(set(re.findall(r'href=["\x27]#((?:infra|ideas)-[^"\x27]+)',cell_text)))
+            prefix=''.join('<a id="'+value+'"></a>' for value in aliases)
+            if prefix:
+                changes.extend({'kind':'contributor-badge-anchor-preserved','anchor':value,'destination':'matching contributor table cell'} for value in aliases)
+                end=cell_text.index('>')+1
+                cell_text=cell_text[:end]+prefix+cell_text[end:]
+            return cell_text
+        return re.sub(r'<td\b[^>]*>.*?</td>',cell,part,flags=re.S|re.I)
     return outside_code(text,convert),changes
 
 def main():
@@ -240,14 +329,20 @@ def main():
             note=dest/(name+'.md')
             native_portuguese=doc.get('language','en').startswith('pt')
             translated=source if native_portuguese else translate_body(source,tr)
-            old_heads=re.findall(r'^#{1,6}\s+(.+)$',source,re.M)
-            new_heads=re.findall(r'^#{1,6}\s+(.+)$',translated,re.M)
+            old_heads=[value for _,value in markdown_headings(source)]
+            new_heads=[value for _,value in markdown_headings(translated)]
             heading_map={slug(a):slug(b) for a,b in zip(old_heads,new_heads)}
-            translated,changes=mirror_images(translated,record,assets,note)
+            translated,anchor_changes=preserve_heading_anchors(source,translated)
+            translated,changes=mirror_images(translated,record,assets,note,doc['path'])
+            changes+=anchor_changes
+            if normalize_legacy_headings(source)!=source:
+                changes.append({'kind':'legacy-markdown-heading-spacing-normalized'})
             translated,link_changes=resolve_relative_links(translated,record,doc['path'],note,assets,heading_map)
             changes+=link_changes
+            translated,contributor_changes=preserve_contributor_anchors(translated)
+            changes+=contributor_changes
             # Add a visible title only if the source did not have a Markdown H1.
-            if not re.search(r'^# ',translated,re.M):
+            if not any(level==1 for level,_ in markdown_headings(translated)):
                 translated='# '+tool+' — documentação oficial\n\n'+translated
             props={'title':tool+' — documentação oficial','type':'official-documentation','tool':tool,
                    'status':'official-translation' if native_portuguese else 'translated-machine','reviewed':'2026-10-26','language':doc.get('language') if native_portuguese else 'pt-BR',
@@ -258,7 +353,7 @@ def main():
             fm='---\n'+'\n'.join(k+': '+json.dumps(v,ensure_ascii=False) for k,v in props.items())+'\n---\n\n'
             notice=('> Texto em português fornecido pelo próprio projeto upstream e preservado nesta importação. Links e imagens receberam adaptações para navegação local; isso não comprova revisão técnica por este repositório.\n\n' if native_portuguese else '> Tradução automática local para português, ainda sem revisão humana integral. Estrutura e blocos de código preservados; referências externas não significam conteúdo espelhado.\n\n')
             license_link=pathlib.Path(os.path.relpath(assets/'LICENSE.txt',note.parent)).as_posix()
-            attribution='\n\n---\n\n## Procedência desta tradução\n\nFonte: ['+record['repository']+']('+doc['source_url']+'). Licença: ['+record['license_spdx']+']('+license_link+'). Commit: '+record['commit']+'.\n\nO original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.\n'
+            attribution='\n\n---\n\n## Procedência desta tradução\n\nFonte: ['+record['repository']+']('+doc['source_url']+'). Licença: ['+doc.get('license_spdx',record['license_spdx'])+']('+license_link+'). Commit: '+record['commit']+'.\n\nO original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.\n'
             final=fm+notice+translated+attribution
             temp_note=note.with_suffix('.md.tmp')
             temp_note.write_bytes(final.encode('utf-8'))
@@ -290,7 +385,7 @@ def main():
     result={'tools':len(report),'documents':sum(len(x['documents']) for x in report.values()),
             'all_fenced_code_preserved':all(d['code_blocks_equal'] for x in report.values() for d in x['documents']),
             'human_review_complete':False,'full_kali_corpus_complete':False}
-    (ROOT/'evidence/documentation-import.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (ROOT/'evidence/documentation-import.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
     job['status']='completed'
     job['completed_epoch']=time.time()
     job['result']=result

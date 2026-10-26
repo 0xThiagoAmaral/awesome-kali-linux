@@ -22,6 +22,7 @@ source_scope: "Repository root README and owned doc/docs/documentation Markdown 
 Esta é a lista de todas as alterações notáveis feitas em cada público
 lançamento da ferramenta. Consulte README.md para o manual geral de instruções.
 
+<a id="version-504a-dev"></a>
 ### Versão ++5.04a (dev)
   - afl-fuzz
     - frameshift timeout fix (fixes spurious timeouts that can occur, especially
@@ -32,6 +33,7 @@ lançamento da ferramenta. Consulte README.md para o manual geral de instruçõe
       which silently disabled PCGUARD instrumentation for the target
 
 
+<a id="version-503c-release"></a>
 ### Versão ++5.03c (lançamento)
 ! Implementação do Perfil de Valor para AFL++ por Khaled Yakdan (@kyakdan) que
     is much more efficient and intelligent than the libfuzzer implementation.
@@ -135,6 +137,7 @@ afl-fuzz
       disabled
 
 
+<a id="version-502c-release"></a>
 ### Versão ++5.02c (lançamento)
 !!! Você precisa recompilar o modo persistente / LLVMFuzzerTestOneInput alvo !!!!
   - afl-saúde:
@@ -173,6 +176,7 @@ afl-fuzz
   - páginas man: fixou as seções SINOPSIS e OPTIONS para várias ferramentas
 
 
+<a id="version-501c-release"></a>
 ### Versão ++5.01c (lançamento)
   - O modo persistente do MacOS agora usa o modo futex agora também o que aumenta a velocidade
     and reduces system call overhead (opt out with AFL_FAST_CHILD_SYNC) - this
@@ -199,6 +203,7 @@ afl-fuzz
     - WIP!
 
 
+<a id="version-500c-release"></a>
 ### Versão ++5.00c (lançamento)
 ! AFL++ agora é um projeto AGPL 3.0!
 ! Os arquivos onde a licença poderia ser trocada foram movidos para AGPL 3.0+, arquivos
@@ -286,6 +291,7 @@ afl-fuzz
     - MacOS support is back, thanks to @Jay-1409 !
 
 
+<a id="version-440c-release"></a>
 ### Versão ++4.40c (lançamento)
   - Afl-fuzz:
     - FrameShift integrated and enabled by default, disable with
@@ -324,6 +330,7 @@ afl-fuzz
     - multiple AFL++ out directories now supported, thanks to @Jay-1409 !
 
 
+<a id="version-435c-release"></a>
 ### Versão ++4.35c (lançamento)
   - Misturado com o GUIFuzz++: Libertando o Fuzzing de Caixa Cinza no Usuário Gráfico do Desktop
                       Interfacing Applications
@@ -348,6 +355,7 @@ afl-fuzz
     - Gramatron: fixes + cjson switch by @CarvedCoder, fix by @jubnzv
 
 
+<a id="version-434c-release"></a>
 ### Versão ++4.34c (lançamento)
   - IJON integração por @vi3tL0u1s - muito obrigado!!
     - see docs/IJON.md on how to use it
@@ -378,6 +386,7 @@ afl-fuzz
     - added AIXCC Team Atlanta's zero-mq plugin to add testcases from remote
 
 
+<a id="version-433c-release"></a>
 ### Versão ++4.33c (lançamento)
   - Afl-fuzz:
     - Use `AFL_PRELOAD_DISCRIMINATE_FORKSERVER_PARENT` if you use AFL_PRELOAD
@@ -413,6 +422,7 @@ afl-fuzz
     - Properly determine map size
 
 
+<a id="version-432c-release"></a>
 ### Versão ++4.32c (lançamento)
   - Corrigido um erro onde após uma reinicialização rápida de um corpo completo fuzzed afl-fuzz
     terminates with "need at least one valid input seed that does not crash"
@@ -432,6 +442,7 @@ afl-fuzz
   - modo_ frida:
     - fixes for new MacOS + M4 hardware
 
+<a id="version-431c-release"></a>
 ### Versão ++4.31c (lançamento)
   - Modo SAND adicionado (docs/SAND.md) para fuzzing mais eficaz com higienizadores
     (thanks to @wtdcode !)
@@ -450,6 +461,7 @@ afl-fuzz
     - fix bug with large map sizes when multiple libraries are loaded after
       the shared memory was obtained.
 
+<a id="version-430c-release"></a>
 ### Versão ++4.30c (lançamento)
 ! afl-gcc e afl-clang funcionalidade está agora removida!
   - Afl-fuzz:
@@ -495,6 +507,7 @@ afl-fuzz
   - adicionado personalizado_ mutantes/autotokens/ standalone/autotokens- standalone
   - Os cabeçalhos AFL++ estão agora instalados em $PREFIX/include/afl
 
+<a id="version-421c-release"></a>
 ### Versão ++4.21c (lançamento)
   * afl-fuzz
     - fixed a regression in afl-fuzz that resulted in a 5-10% performace loss
@@ -534,6 +547,7 @@ afl-fuzz
   * Corrigido um erro shmem mmap (que raramente surgiu no MacOS)
   * libtokencap: script generate_libtoken_dict.sh adicionado por @a-shvedov
 
+<a id="version-420c-release"></a>
 ### Versão ++4.20c (lançamento)
 ! Agora é introduzido um novo modelo de comunicação forkserver. afl-fuzz is
     backward compatible to old compiled targets if they are not built
@@ -574,6 +588,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - Impedir que os arquivos temporários sejam deixados para trás ao interromper o afl-whatsup
   - Mais benchmarks de CPU adicionados ao benchmark/
 
+<a id="version-410c-release"></a>
 ### Versão ++4.10c (lançamento)
   - Afl-fuzz:
     - default power schedule is now EXPLORE, due a fix in fast schedules
@@ -605,6 +620,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - atualizou o mutador de gramática personalizado
   - o documento afl-cmin não funciona no macOS (mas o afl-cmin.bash funciona)
 
+<a id="version-409c-release"></a>
 ### Versão ++4.09c (lançamento)
   - Afl-fuzz:
     - fixed the new mutation implementation for two bugs
@@ -636,6 +652,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - adicionado benchmark/benchmark.py se você quiser ver quão bom é o seu fuzzing
     speed is in comparison to other setups.
 
+<a id="version-408c-release"></a>
 ### Versão ++4.08c (lançamento)
   - Afl-fuzz:
     - new mutation engine: mutations that favor discovery more paths are
@@ -668,6 +685,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - modo_ qemu:
     - added qemu_mode/utils/qemu_get_symbol_addr.sh
 
+<a id="version-407c-release"></a>
 ### Versão ++4.07c (lançamento)
   - Afl-fuzz:
     - reverse reading the seeds only on restarts (increases performance)
@@ -696,6 +714,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     - TritonDSE in custom_mutators/aflpp_tritondse
     - SymQEMU in custom_mutators/symqemu
 
+<a id="version-406c-release"></a>
 ### Versão ++4.06c (lançamento)
   - Afl-fuzz:
     - ensure temporary file descriptor is closed when not used
@@ -728,6 +747,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - exemplos C de mutantes personalizados corrigidos
   - mais pequenas correções e suporte multi-plataforma
 
+<a id="version-405c-release"></a>
 ### Versão ++4.05c (lançamento)
   - MacOS: libdislocator, libtokencap etc. não funcionam com o moderno
     MacOS anymore, but could be patched to work, see this issue if you
@@ -748,6 +768,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - geral melhor higienizador default ajuste manipulação
   - várias correções de erros menores
 
+<a id="version-404c-release"></a>
 ### Versão ++4.04c (lançamento)
   - corrigir scripts de compilação gramaatron e gramatical_mutator
   - melhorias na configuração do afl-persistente e na configuração do sistema afl-afl
@@ -770,6 +791,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
       ignoring the command line.
 
 
+<a id="version-403c-release"></a>
 ### Versão ++4.03c (lançamento)
   - Construindo agora dá um resumo de construção o que conseguiu e o que não
   - Afl-fuzz:
@@ -800,6 +822,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     - build now uses all available cores
 
 
+<a id="version-402c-release"></a>
 ### Versão ++4.02c (lançamento)
   - afl-cc:
     - important fix for the default pcguard mode when LLVM IR vector
@@ -814,6 +837,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     - change post_process hook to allow returning NULL and 0 length to
       tell afl-fuzz to skip this mutated input
 
+<a id="version-401c-release"></a>
 ### Versão ++4.01c (lançamento)
   - fixou os scripts */build_...sh para trabalhar fora do git
   - novo mutante personalizado: libafl com o símbolo fuzzing :)
@@ -855,6 +879,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
       unmaintained :-(
 
 
+<a id="version-400c-release"></a>
 ### Versão ++4.00c (lançamento)
   - reestruturação de documentação completa, tornada possível pelo Google Season
     of Docs :) thank you Jana!
@@ -928,6 +953,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - removido utils/afl_frida porque frida_mode/ agora é muito melhor
   - alvo de desinstalação adicionado ao makefile (todo: update new readme!)
 
+<a id="version-314c-release"></a>
 ### Versão ++3.14c (lançamento)
   - Afl-fuzz:
     - fix -F when a '/' was part of the parameter
@@ -965,6 +991,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     afl-cmin, afl-tmin, and afl-showmap, by @jhertz
   - removeu documentos desatualizados, melhorou a documentação existente
 
+<a id="version-313c-release"></a>
 ### Versão ++3.13c (lançamento)
   - Nota: plot_data mudou para o tempo relativo a partir do tempo unix no 3.10
   - frida_mode - novo modo que usa frida para fuzz alvos apenas binários,
@@ -1022,6 +1049,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     current filename
   - o afl-showmap/cmin irá agora processar os itens da fila em ordem alfabética
 
+<a id="version-312c-release"></a>
 ### Versão ++3.12c (lançamento)
   - Afl-fuzz:
     - added AFL_TARGET_ENV variable to pass extra env vars to the target
@@ -1045,6 +1073,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - adicionado DEFAULT_PERMISSION para config.h para todos os arquivos criados, padrão
     to 0600
 
+<a id="version-311c-release"></a>
 ### Versão ++3.11c (lançamento)
   - Afl-fuzz:
     - better auto detection of map size
@@ -1075,6 +1104,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     - we no longer perform a "git drop"
   - afl-cmin: suporta nomes de arquivos com espaços
 
+<a id="version-310c-release"></a>
 ### Versão ++3.10c (lançamento)
   - Suporte para Mac OS ARM64
   - Suporte Android fixo e atualizado por Joey Jiaojg - obrigado!
@@ -1146,6 +1176,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - @Edznux adicionou uma documentação agradável sobre como usar rpc.statsd com
     AFL++ in docs/rpc_statsd.md, thanks!
 
+<a id="version-300c-release"></a>
 ### Versão ++3.00c (lançamento)
   - lvm_ modo/ e gcc_ plug- in/ movido para instrumentação/
   - exemplos/ renomeados para utils/
@@ -1210,6 +1241,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - Adicionado AFL_ CRASH_ EXITCODE env variável para tratar um filho de código de saída como crash
 
 
+<a id="version-268c-release"></a>
 ### Versão ++2.68c (lançamento)
   - adicionou o excelente mutante gramatical GSoC AFL++ por Shengtuo ao nosso
     custom_mutators/ (see custom_mutators/README.md) - or get it here:
@@ -1238,6 +1270,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     - deprecated LLVM SKIPSINGLEBLOCK env environment
 
 
+<a id="version-267c-release"></a>
 ### Versão ++2.67c (lançamento)
   - Suporte para o módulo de instantâneo AFL++ melhorado:
     https://github.com/AFLplusplus/AFL-Snapshot-LKM
@@ -1287,6 +1320,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - novo README, FAQ adicionada
 
 
+<a id="version-266c-release"></a>
 ### Versão ++2.66c (lançamento)
   - renomeou o branch principal no Github para "stable"
   - renomeado mestre/escravo para principal/secundário
@@ -1350,6 +1384,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     gcc 10 so afl-clang-lto can be build
 
 
+<a id="version-265c-release"></a>
 ### Versão ++2.65c (lançamento):
   - Afl-fuzz:
      - AFL_MAP_SIZE was not working correctly
@@ -1395,6 +1430,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
       intact if in a git/svn checkout - unless "deepclean" is used
 
 
+<a id="version-264c-release"></a>
 ### Versão ++2.64c (lançamento):
   - Modo LTO em modo lvm_ mode:
     - now requires llvm11 - but compiles all targets! :)
@@ -1419,6 +1455,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - mais refatorização
 
 
+<a id="version-263c-release"></a>
 ### Versão ++2.63c (lançamento):
 
 ! o repositório foi movido de vanhauser- thc para AFLplusplus. Agora é
@@ -1474,6 +1511,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     libraries.
 
 
+<a id="version-262c-release"></a>
 ### Versão ++2.62c (lançamento):
 
   - Correção importante para funções de alocação de memória que resultam em afl-fuzz
@@ -1482,6 +1520,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - O CmpLog não precisa mais de sancov
 
 
+<a id="version-261c-release"></a>
 ### Versão ++2.61c (lançamento):
 
   - use -march=native se disponível
@@ -1537,6 +1576,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - libdislocalator: AFL_ALIGNED_ALLOC para forçar o alinhamento do tamanho a max_align_t
 
 
+<a id="version-260c-release"></a>
 ### Versão ++2.60c (lançamento):
 
   - fixou um erro crítico no afl-tmin que foi introduzido durante ++2.53d
@@ -1549,6 +1589,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - agora definimos QEMU_SET_ENV de AFL_PRELOAD quando qemu_mode é usado
 
 
+<a id="version-259c-release"></a>
 ### Versão ++2.59c (lançamento):
 
   - qbdi_ modo: bibliotecas nativas do fuzz andróide via framework QBDI
@@ -1581,6 +1622,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - avisos desnecessários removidos
 
 
+<a id="version-258c-release"></a>
 ### Versão ++2.58c (lançamento):
 
   - revertida patch para não desvincular e recriar o arquivo de entrada, resultou em
@@ -1591,6 +1633,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - Testes gcc_plugin adicionados à estrutura de testes
 
 
+<a id="version-254d-257c-release"></a>
 ### Versão ++2.54d-2.57c (lançamento):
 
   - saltamos para 2.57 em vez de 2.55 para alcançar a versão do Google
@@ -1621,6 +1664,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - laf-intel em llvm_mode agora também lida com comparações de pontos flutuantes
 
 
+<a id="version-254c-release"></a>
 ### Versão ++2.54c (lançamento):
 
   - refactoração de código grande:
@@ -1649,6 +1693,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - instrumentação apenas imediata para CompareCoverage
 
 
+<a id="version-253c-release"></a>
 ### Versão ++2.53c (lançamento):
 
   - README é agora README.md
@@ -1691,6 +1736,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     that is longer but in line with other llvm specific env vars
 
 
+<a id="version-252c-2019-06-05"></a>
 ### Versão ++2.52c (2019-06-05):
 
   - patches comunitários aplicados. Veja documentos/patches para a lista completa.
@@ -1708,6 +1754,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     https://github.com/andreafioraldi/afl and with community patches added
 
 
+<a id="version-252b-2017-11-04"></a>
 ### Versão 2.52b (2017-11-04):
 
   - Modificado patches QEMU de 2.3.0 para 2.10.0. Resolução de problemas necessária
@@ -1727,11 +1774,13 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - Adicionado suporte para parâmetros em triage_crashes.sh. Patch by Adam of
     DC949.
 
+<a id="version-251b-2017-08-30"></a>
 ### Versão 2.51b (2017-08-30):
 
   - Made afl-tmin call setsid para evitar que o lixo traceback da glibc apareça
     up on the terminal in some distros. Suggested by Jakub Wilk.
 
+<a id="version-250b-2017-08-19"></a>
 ### Versão 2.50b (2017-08-19):
 
   - Arranjei um interessante caso de esquina localizado por Jakub Wilk.
@@ -1745,12 +1794,14 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
 
   - O currículo in-place agora preserva .synced. Sugerido por Jakub Wilk.
 
+<a id="version-249b-2017-07-18"></a>
 ### Versão 2.49b (2017-07-18):
 
   - Adicionado AFL_TMIN_EXACT para permitir restrição de caminho para minimização de falhas.
 
   - Datas adicionadas para lançamentos (retroativamente para todo 2017).
 
+<a id="version-248b-2017-07-17"></a>
 ### Versão 2.48b (2017-07-17):
 
   - Adicionado AFL_ALLOW_TMP para permitir que alguns scripts sejam executados em /tmp.
@@ -1759,10 +1810,12 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
 
   - Tornou possível apontar -o e -f para o mesmo arquivo em afl-tmin.
 
+<a id="version-247b-2017-07-14"></a>
 ### Versão 2.47b (2017-07-14):
 
   - Manuseamento fixo de cwd em afl-tmin.
 
+<a id="version-246b-2017-07-10"></a>
 ### Versão 2.46b (2017-07-10):
 
   - libdislocator agora suporta AFL_LD_NO_CALLOC_OVER para pessoas que não
@@ -1772,6 +1825,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
 
   - Adicionado um pequeno dicionário JSON, inspirado em um dicionário feito por Jakub Wilk.
 
+<a id="version-245b-2017-07-04"></a>
 ### Versão 2.45b (2017-07-04):
 
   - Adicionado suporte ao strstr, strcasestr à libtokencap. Contribuído por
@@ -1781,6 +1835,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
 
   - Definitivamente não há bugs no afl-showmap -c agora.
 
+<a id="version-244b-2017-06-28"></a>
 ### Versão 2.44b (2017-06-28):
 
   - Adicionado um indicador visual do modo ASAN / MSAN ao compilar.
@@ -1794,22 +1849,26 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
   - Adicionado uma nota sobre alocator_may_return_null=1 nem sempre trabalhando com
     ASAN. Spotted by Jakub Wilk.
 
+<a id="version-243b-2017-06-16"></a>
 ### Versão 2.43b (2017-06-16):
 
   - Adicionado AFL_NO_ARITH para ajudar no fuzzing de formatos baseados em texto.
     Requested by Jakub Wilk.
 
+<a id="version-242b-2017-06-02"></a>
 ### Versão 2.42b (2017-06-02):
 
   - Renomeou a macro R () para evitar um problema com lvm_mode no último
     versions of LLVM. Fix suggested by Christian Holler.
 
+<a id="version-241b-2017-04-12"></a>
 ### Versão 2.41b (2017-04-12):
 
   - Dirigiu-se a uma grande queixa de usuário relacionada à detecção de tempo- limite.
     inputs are now binned as "hangs" only if they exceed a far more generous
     time limit than the one used to reject slow paths.
 
+<a id="version-240b-2017-04-02"></a>
 ### Versão 2.40b (2017-04-02):
 
   - Corrigido um pequeno descuido na estratégia de inserção de palavras de dicionário.
@@ -1819,6 +1878,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
 
   - Regras de cor ajustadas para "já está feito?" indicadores.
 
+<a id="version-239b-2017-02-02"></a>
 ### Versão 2.39b (2017-02-02):
 
   - Relatório de erro melhorado em afl-cmin. Sugerido pelo floyd.
@@ -1827,11 +1887,13 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
 
   - Adicionado uma menção de afl-monitor.
 
+<a id="version-238b-2017-01-22"></a>
 ### Versão 2.38b (2017-01-22):
 
   - Adicionado -mllvm -sanitizer-coverage-block-threshold=0 para trace-pc-guard
     mode, as suggested by Kostya Serebryany.
 
+<a id="version-237b-2017-01-22"></a>
 ### Versão 2.37b (2017-01-22):
 
   - Marcado por Jakub Wilk.
@@ -1846,6 +1908,7 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
     Note that for some reason, this mode doesn't perform as well as
     "vanilla" afl-clang-fast / afl-clang.
 
+<a id="version-236b-2017-01-14"></a>
 ### Versão 2.36b (2017-01-14):
 
   - Corrigido um erro cosmético mau free() ao interromper as sessões -S. Spotted
@@ -1872,18 +1935,21 @@ Recompile todos os alvos que são instrumentados para CMPLOG/Redqueen!
 Sim, eu sei que eu tenho um backlog em vários outros recursos pedidos.
 Fiquem ligados!
 
+<a id="version-235b"></a>
 ### Versão 2.35b:
 
   - Corrigimos uma pequena falha na linha cmdline, detectada por Leo Barnes.
 
   - Corrigido um erro bobo na libdislocator. manchado por Johannes Schultz.
 
+<a id="version-234b"></a>
 ### Versão 2.34b:
 
   - Adicionado uma nota sobre afl-tmin para technical_details.txt.
 
   - Adicionado suporte para AFL_NO_UI, como sugerido por Leo Barnes.
 
+<a id="version-233b"></a>
 ### Versão 2.33b:
 
   - Adicionado código para strip -Wl,-z,defs e -Wl,--no-undefined para afl-clang-fast,
@@ -1891,6 +1957,7 @@ Fiquem ligados!
 
   - Adicionado algumas dicas fuzzing para Android.
 
+<a id="version-232b"></a>
 ### Versão 2.32b:
 
   - Adicionado uma verificação para AFL_HARDEN combinada com AFL_USE_*SAN. Sugerido por
@@ -1899,6 +1966,7 @@ Fiquem ligados!
   - Fez vários outros ajustes cosméticos para ciclo timing na sequência do
     big tweak made in 2.31b.
 
+<a id="version-231b"></a>
 ### Versão 2.31b:
 
   - O ciclo de estragos alterado conta para um aumento acentuado do desempenho, especialmente
@@ -1911,6 +1979,7 @@ Fiquem ligados!
     more improvements may follow as I do more experiments and get more
     definitive data.
 
+<a id="version-230b"></a>
 ### Versão 2.30b:
 
   - Fez pequenas melhorias no modo persistente para evitar o controle remoto
@@ -1923,12 +1992,14 @@ Fiquem ligados!
   - Made bitmaps de modo persistente um pouco mais consistente e ajustado a maneira
     this is shown in the UI, especially in persistent mode.
 
+<a id="version-229b"></a>
 ### Versão 2.29b:
 
   - Fez uma correção menor #include para llvm_mode. Sugerido por Jonathan Metzman.
 
   - Fiz actualizações cosméticas aos médicos.
 
+<a id="version-228b"></a>
 ### Versão 2.28b:
 
   - Adicionado "Life pro tips" para docs/.
@@ -1939,6 +2010,7 @@ Fiquem ligados!
 
   - Acrescentou uma importante dica de segurança.
 
+<a id="version-227b"></a>
 ### Versão 2.27b:
 
   - Adicionado libtokencap, um recurso simples para interceptar strcmp / memcmp e
@@ -1948,6 +2020,7 @@ Fiquem ligados!
 
   - A demonstração em exemplos/instrumentado_cmp não é mais.
 
+<a id="version-226b"></a>
 ### Versão 2.26b:
 
   - Fiz uma correção para libdislocator.so para compilar no MacOS X.
@@ -1956,17 +2029,20 @@ Fiquem ligados!
 
   - Renomeado AFL_LD_PRELOAD para AFL_PRELOAD.
 
+<a id="version-225b"></a>
 ### Versão 2.25b:
 
   - Fiz algumas atualizações cosméticas para libdislocator.so, renomeado um env
     variable.
 
+<a id="version-224b"></a>
 ### Versão 2.24b:
 
   - Adicionado libdislocator.so, um alocador experimental e abusivo.
     it out with AFL_LD_PRELOAD=/path/to/libdislocator.so when running
     afl-fuzz.
 
+<a id="version-223b"></a>
 ### Versão 2.23b:
 
   - Melhorou a métrica de estabilidade para binários de modo persistente.
@@ -1975,6 +2051,7 @@ Fiquem ligados!
   - Fez uma melhoria relacionada que pode trazer a métrica para 100% para aqueles
     targets.
 
+<a id="version-222b"></a>
 ### Versão 2.22b:
 
   - Mencionou os potenciais conflitos entre MSAN / ASAN e FORTIFY_OURCE.
@@ -1986,6 +2063,7 @@ Fiquem ligados!
   - Fez uma alteração no manuseamento de ./afl-clang-fast-v.
     Jan Kneschke.
 
+<a id="version-221b"></a>
 ### Versão 2.21b:
 
   - Adicionado algumas notas de relatório de falha para Solaris em docs/INSTALL, como
@@ -1993,6 +2071,7 @@ Fiquem ligados!
 
   - Corrigimos uma pequena confusão de IU com estatísticas de estratégia de destruição.
 
+<a id="version-220b"></a>
 ### Versão 2.20b:
 
   - Renovou o manuseio de caminhos variáveis, substituindo a contagem de caminhos por um
@@ -2007,17 +2086,20 @@ Fiquem ligados!
 
   - Adicionado suporte experimental para paralelização -M.
 
+<a id="version-219b"></a>
 ### Versão 2.19b:
 
   - Fez uma correção para certificar-se de que a ligação de CPU automática acontece em não- sobreposição
     times.
 
+<a id="version-218b"></a>
 ### Versão 2.18b:
 
   - Fez várias melhorias de desempenho para has_new_bits() e
     classify_counts(). This should offer a robust performance bump with
     fast targets.
 
+<a id="version-217b"></a>
 ### Versão 2.17b:
 
   - Matou a opção -Z manual e propensa a erros. No Linux, a AFL irá agora
@@ -2026,6 +2108,7 @@ Fiquem ligados!
 
   - Fiz algumas actualizações de documentos nestas linhas.
 
+<a id="version-216b"></a>
 ### Versão 2.16b:
 
   - Suporte melhorado para versões mais antigas do clang (esperançosamente sem
@@ -2034,6 +2117,7 @@ Fiquem ligados!
   - Moveu os dados da versão do Makefile para config.h. Sugerido por
     Jonathan Metzman.
 
+<a id="version-215b"></a>
 ### Versão 2.15b:
 
   - Adicionado uma seção README na procura de bugs não-crashing.
@@ -2041,6 +2125,7 @@ Fiquem ligados!
   - Adicionamos dados de licença a vários arquivos chatos. Contribuído por
     Jonathan Metzman.
 
+<a id="version-214b"></a>
 ### Versão 2.14b:
 
   - Adicionado FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION como uma macro definida quando
@@ -2048,6 +2133,7 @@ Fiquem ligados!
 
   - Refrescou alguns dos documentos não-x86.
 
+<a id="version-213b"></a>
 ### Versão 2.13b:
 
   - Corrigido um erro de teste de compilação espúrio com trace-pc e llvm_mode/Makefile.
@@ -2055,11 +2141,13 @@ Fiquem ligados!
 
   - Resolveu um problema de cosmética com o que se passa, visto por Brandon Perry.
 
+<a id="version-212b"></a>
 ### Versão 2.12b:
 
   - Corrigido um problema menor em afl-tmin que pode tornar o alfabeto minimização menos
     efficient during passes > 1. Spotted by Daniel Binderman.
 
+<a id="version-211b"></a>
 ### Versão 2.11b:
 
   - Corrigido um erro de digitação menor em instrumentado_cmp, manchado por Hanno Eissfeldt.
@@ -2071,16 +2159,19 @@ Fiquem ligados!
   - Corrigido um erro de digitação em post_library_png.so.c em exemplos/. Spotted by Kostya
     Serebryany.
 
+<a id="version-210b"></a>
 ### Versão 2.10b:
 
   - Corrigimos uma falha na contagem do núcleo, reportada por Tyler Nighswander.
 
+<a id="version-209b"></a>
 ### Versão 2.09b:
 
   - Fiz várias atualizações de documentação.
 
   - Adicionado alguns indicadores visuais para promover e simplificar o uso de -Z.
 
+<a id="version-208b"></a>
 ### Versão 2.08b:
 
   - Adicionado suporte explícito para - m32 e - m64 para lvm_ mode. Inspirado por
@@ -2088,6 +2179,7 @@ Fiquem ligados!
 
   - Adicionada uma nova opção de benchmarking, conforme solicitado por Kostya Serebryany.
 
+<a id="version-207b"></a>
 ### Versão 2.07b:
 
   - Adicionada opção de afinidade de CPU (- Z) no Linux. Com alguma precaução, isto pode
@@ -2099,6 +2191,7 @@ Fiquem ligados!
   - Corrigido confundindo mensagens de erro CPU_TARGET com a compilação QEMU.
     Daniel Komaromy and others.
 
+<a id="version-206b"></a>
 ### Versão 2.06b:
 
   - Trabalhou em torno de soluços de modo persistente LLVM com código compartilhado.
@@ -2112,16 +2205,19 @@ Fiquem ligados!
     allow AFL to be built as a library. This is fairly use-specific and
     may have relatively little appeal to general audiences.
 
+<a id="version-205b"></a>
 ### Versão 2.05b:
 
   - Colocar o __sanitizer_cov_module_init & co por trás do #ifdef para evitar problemas
     with ASAN. Spotted by Christian Holler.
 
+<a id="version-204b"></a>
 ### Versão 2.04b:
 
   - Cobertura de chamadas indiretas removidas de -fsanitize-coverage (uma vez que é
     redundant). Spotted by Kostya Serebryany.
 
+<a id="version-203b"></a>
 ### Versão 2.03b:
 
   - Adicionado suporte experimental -fsanitize-coverage=trace-pc que acompanha
@@ -2144,11 +2240,13 @@ Fiquem ligados!
   - Adicionado AFL_LD_PRELOAD para permitir que LD_PRELOAD seja definido para alvos sem
     affecting AFL itself. Suggested by Daniel Godas-Lopez.
 
+<a id="version-202b"></a>
 ### Versão 2.02b:
 
   - Corrigido um erro "lcamtuf não pode contar até 16" na fase de destruição. Reportado
     by Guillaume Endignoux.
 
+<a id="version-201b"></a>
 ### Versão 2. 01b:
 
   - Fez uma melhoria na codificação de cores do contador do ciclo, com base no feedback
@@ -2158,6 +2256,7 @@ Fiquem ligados!
 
   - Corrigido um problema de instalação com afl-as, como visto por ilovezfs.
 
+<a id="version-200b"></a>
 ### Versão 2.00b:
 
   - Limpei o manuseio de cor após um pequeno snafu em 1,99b (afetando alguns
@@ -2165,6 +2264,7 @@ Fiquem ligados!
 
   - Fiz pequenas atualizações para a documentação.
 
+<a id="version-199b"></a>
 ### Versão 1.99b:
 
   - Substantially reformulou a saída e a lógica interna do afl-analyze.
@@ -2176,12 +2276,14 @@ Fiquem ligados!
 
   - Documentos atualizados para melhor explicar afl-analyze.
 
+<a id="version-198b"></a>
 ### Versão 1.98b:
 
   - Melhorado para detecção de "cordas chatas" em afl-analyze.
 
   - Adicionado technical_details.txt para afl-analyze.
 
+<a id="version-197b"></a>
 ### Versão 1.97b:
 
   - Adicionado afl-analyze, uma ferramenta bacana para analisar a estrutura de um arquivo
@@ -2192,6 +2294,7 @@ Fiquem ligados!
 
   - Corrigido um par de erros de digitação, como relatado por Jakub Wilk e outros.
 
+<a id="version-196b"></a>
 ### Versão 1.96b:
 
   - Adicionado -fpic para CFLAGS para o plugin clang, como sugerido por Hanno Boeck.
@@ -2203,6 +2306,7 @@ Fiquem ligados!
   - Adicionado suporte para AFL_SHUFFLE_QUEUE, baseado em discussões com
     Christian Holler.
 
+<a id="version-195b"></a>
 ### Versão 1.95b:
 
   - Corrigido um bug inofensivo ao manusear -B. Manuseado por Jacek Wielemborek.
@@ -2218,6 +2322,7 @@ Fiquem ligados!
   - Fez uma alteração para evitar a configuração espúria do __AFL_SHM_ID quando
     AFL_DUMB_FORKSRV is set in conjunction with -n. Spotted by Jakub Wilk.
 
+<a id="version-194b"></a>
 ### Versão 1.94b:
 
   - Alinhamento do alocador alterado para melhorar o suporte para sistemas não-x86 (agora
@@ -2228,20 +2333,24 @@ Fiquem ligados!
   - Corrigido um erro obscuro que afetaria as pessoas que tentam usar o afl-gcc
     with $TMP set but $TMPDIR absent. Spotted by Jeremy Barnes.
 
+<a id="version-193b"></a>
 ### Versão 1.93b:
 
   - Esperançosamente corrigir um problema com MacOS X e modo persistente, visto por
     Leo Barnes.
 
+<a id="version-192b"></a>
 ### Versão 1.92b:
 
   - Fez mais uma correção C++ (namespaces). Reportado por Daniel Lockyer.
 
+<a id="version-191b"></a>
 ### Versão 1.91b:
 
   - Fez outra correção para fazer 1.90b funcionar corretamente com C++ (d'oh).
     Problem spotted by Daniel Lockyer.
 
+<a id="version-190b"></a>
 ### Versão 1.90b:
 
   - Corrigido um pequeno erro de digitação manchado por Kai Zhao; e fez várias outras atualizações menores
@@ -2252,6 +2361,7 @@ Fiquem ligados!
   - Corrigido um problema potencial com assinaturas de modo diferido sendo otimizado
     out by the linker (with --gc-sections).
 
+<a id="version-189b"></a>
 ### Versão 1.89b:
 
   - Renovou o suporte para modos de forkserver persistentes e diferidos.
@@ -2260,11 +2370,13 @@ Fiquem ligados!
 
   - Adicionado um pouco mais informações sobre afl-showmap. Sugerido por Jacek Wielemborek.
 
+<a id="version-188b"></a>
 ### Versão 1.88b:
 
   - Feito AFL_ EXIT_ WHEN_ DONE funcionar em modo não- tty. Problema visto por
     Jacek Wielemborek.
 
+<a id="version-187b"></a>
 ### Versão 1.87b:
 
   - Adicionado QuickStartGuide.txt, um doc de início rápido de uma página.
@@ -2273,6 +2385,7 @@ Fiquem ligados!
 
   - Revogado várias partes do README.
 
+<a id="version-186b"></a>
 ### Versão 1.86b:
 
   - Adicionado suporte para AFL_SKIP_CRASHES, que é uma solução muito hackish para
@@ -2283,12 +2396,14 @@ Fiquem ligados!
 
   - Corrigido um erro de digitação menor no show_stats. Marcado por Dingbao Xie.
 
+<a id="version-185b"></a>
 ### Versão 1.85b:
 
   - Corrigido uma sentença em notas em paralelo fuzzing. Graças a Jakub Wilk.
 
   - Corrigido um pequeno defeito na afl-cmin.
 
+<a id="version-184b"></a>
 ### Versão 1.84b:
 
   - Made SIMPLE_FILES comportar-se como esperado ao nomear diretórios de backup para
@@ -2303,6 +2418,7 @@ Fiquem ligados!
   - Fiz uma correção para nenhum suporte a lahf / sahf em versões mais antigas do FreeBSD.
     Patch contributed by Alex Moneger.
 
+<a id="version-183b"></a>
 ### Versão 1. 83b:
 
   - Corrigido um problema com xargs -d em sistemas não-Linux em afl-cmin.
@@ -2311,6 +2427,7 @@ Fiquem ligados!
   - Corrigido uma declaração implícita no modo LLVM no MacOS X. Reportado por
     Kai Zhao.
 
+<a id="version-182b"></a>
 ### Versão 1.82b:
 
   - Corrigido uma condição de raça inofensiva, mas irritante no modo persistente - sinal
@@ -2320,6 +2437,7 @@ Fiquem ligados!
 
   - AFL_PERSISTENTE alterado para forçar AFL_NO_VAR_CHECK.
 
+<a id="version-181b"></a>
 ### Versão 1.81b:
 
   - Adicionado modo persistente para o fuzzing em processo. Veja llvm_mode/README.llvm.
@@ -2331,6 +2449,7 @@ Fiquem ligados!
   - Incluído uma correção potencial para problemas de modo LLVM no MacOS X, com base no
     investigation done by teor2345.
 
+<a id="version-180b"></a>
 ### Versão 1.80b:
 
   - Tornou o afl- cmin tolerante aos espaços em branco nos nomes de arquivos. Sugerido por
@@ -2338,6 +2457,7 @@ Fiquem ligados!
 
   - Adicionado suporte para AFL_EXIT_WHEN_DONE, como sugerido por Michael Rash.
 
+<a id="version-179b"></a>
 ### Versão 1.79b:
 
   - Adicionado suporte para níveis de dicionário, veja casos de teste/README.testcasos.
@@ -2346,6 +2466,7 @@ Fiquem ligados!
 
   - Adicionei uma nota sobre Preeny.
 
+<a id="version-178b"></a>
 ### Versão 1.78b:
 
   - Adicionado um dicionário para PDF, contribuído por Ben Nagy.
@@ -2355,6 +2476,7 @@ Fiquem ligados!
   - Corrigido um problema com detecção de repórter de crash no MacOS X, como relatado por
     Louis Dassy.
 
+<a id="version-177b"></a>
 ### Versão 1.77b:
 
   - Estendi a opção -x para suportar dicionários de arquivo único.
@@ -2363,6 +2485,7 @@ Fiquem ligados!
 
   - Removeu novas linhas das palavras- chave HTML em casos de teste/_extras/html/.
 
+<a id="version-176b"></a>
 ### Versão 1.76b:
 
   - Reduzir significativamente o número de executivos duplicados durante
@@ -2377,6 +2500,7 @@ Fiquem ligados!
 
   - Acrescentou uma nota sobre integrar afl-fuzz com ferramentas de terceiros.
 
+<a id="version-175b"></a>
 ### Versão 1.75b:
 
   - Melhorar argv_fuzzing para permitir que emita args vazios.
@@ -2392,6 +2516,7 @@ Fiquem ligados!
 
   - Corrigido um erro de digitação, reportado por Jakub Wilk.
 
+<a id="version-174b"></a>
 ### Versão 1.74b:
 
   - Adicionado um exemplo argv[] fuzzing wrapper em exemplos/argv_fuzzing.
@@ -2413,6 +2538,7 @@ Fiquem ligados!
   - Alternar o modo qemu_ para usar o recém- lançado QEMU 2.3.0, que contém
     a couple of minor bugfixes.
 
+<a id="version-173b"></a>
 ### Versão 1. 73b:
 
   - Corrigido um erro bastante estúpido em mapas efetor que às vezes poderia causar
@@ -2420,6 +2546,7 @@ Fiquem ligados!
     could lead to SEGV if eff_map is aligned with page boundary and followed
     by an unmapped page. Spotted by Jonathan Gray.
 
+<a id="version-172b"></a>
 ### Versão 1.72b:
 
   - Corrigido uma falha na instalação não-x86, manchado por Tobias Ospelt.
@@ -2427,6 +2554,7 @@ Fiquem ligados!
   - Adicionado uma salvaguarda menor para lvm_mode Makefile após um relatório de
     Kai Zhao.
 
+<a id="version-171b"></a>
 ### Versão 1.71b:
 
   - Corrigido um erro com cópias instaladas da AFL a tentar usar o modo QEMU. Spotted
@@ -2437,6 +2565,7 @@ Fiquem ligados!
 
   - Corrigi um erro de digitação, graças ao Jakub Wilk.
 
+<a id="version-170b"></a>
 ### Versão 1.70b:
 
   - Código de retomada modificado para reutilizar o valor de tempo- limite original ao retomar
@@ -2453,11 +2582,13 @@ Fiquem ligados!
 
   - Adicionado uma nota mais proeminente sobre os trade-offs do MacOS X para Makefile.
 
+<a id="version-169b"></a>
 ### Versão 1.69b:
 
   - Adicionado suporte para inicialização diferida no modo LLVM. Sugerido por
     Richard Godbee.
 
+<a id="version-168b"></a>
 ### Versão 1.68b:
 
   - Corrigido uma falha PRNG menor que faria os primeiros segundos de um fuzzing
@@ -2468,10 +2599,12 @@ Fiquem ligados!
 
   - Esclareceu a nota de rodapé em README.
 
+<a id="version-167b"></a>
 ### Versão 1.67b:
 
   - Fez mais uma correção para llvm_mode Makefile, visto por Jakub Wilk.
 
+<a id="version-166b"></a>
 ### Versão 1.66b:
 
   - Adicionado suporte CC / CXX para llvm_ mode Makefile. Solicitado por Charlie Eriksen.
@@ -2483,12 +2616,14 @@ Fiquem ligados!
   - Data e hora de compilação removidas dos banners para dar às pessoas determinísticas
     builds. Requested by Jakub Wilk.
 
+<a id="version-165b"></a>
 ### Versão 1.65b:
 
   - Consertei um snafu com algum código sobrando em afl-clang-rápido.
 
   - Corrigimos até erros de digitação.
 
+<a id="version-164b"></a>
 ### Versão 1.64b:
 
   - Mais simplificado afl-clang-fast runtime, revertendo .init_array para
@@ -2502,6 +2637,7 @@ Fiquem ligados!
   - Ajuste desnecessário da densidade de instrumentação para o modo LLVM.
     Reported by Jonathan Neuschafer.
 
+<a id="version-163b"></a>
 ### Versão 1.63b:
 
   - Actualizado cgroups_asan/ com uma nova versão do Sam, fez algumas alterações
@@ -2509,6 +2645,7 @@ Fiquem ligados!
 
   - Erro de digitação, graças ao Jakub Wilk.
 
+<a id="version-162b"></a>
 ### Versão 1.62b:
 
   - Melhorar o manuseamento de -x em afl-clang-fast,
@@ -2518,6 +2655,7 @@ Fiquem ligados!
 
   - Corrigido o bug lvm-config para o bem (graças a Tobias Ospelt).
 
+<a id="version-161b"></a>
 ### Versão 1.61b:
 
   - Corrigido um erro obscuro que compila o OpenSSL com o afl- clang- fast. Patch by
@@ -2529,6 +2667,7 @@ Fiquem ligados!
     Tobias Ospelt. (There is another odd bug there that hasn't been fully
     fixed - TBD).
 
+<a id="version-160b"></a>
 ### Versão 1.60b:
 
   - Exemplos permitidos/llvm_instrumentação/ para graduar-se em llvm_mode/.
@@ -2551,6 +2690,7 @@ Fiquem ligados!
 
   - Adicionado MEM_BARRIER() ao afl-showmap e afl-tmin, só para garantir.
 
+<a id="version-159b"></a>
 ### Versão 1.59b:
 
   - Importação da instrumentação experimental LLVM de Laszlo Szekeres para
@@ -2559,6 +2699,7 @@ Fiquem ligados!
 
   - Corrigiu outro erro, graças ao Jakub Wilk.
 
+<a id="version-158b"></a>
 ### Versão 1.58b:
 
   - Adicionado uma solução para o comportamento abortar() em programas -lpthread no modo QEMU.
@@ -2567,6 +2708,7 @@ Fiquem ligados!
   - Foram feitas várias atualizações de documentação, incluindo links para a estática
     instrumentation tool (sister_projects.txt).
 
+<a id="version-157b"></a>
 ### Versão 1. 57b:
 
   - Corrigido um problema com exceção de manipulação em algumas versões do MacOS X.
@@ -2575,6 +2717,7 @@ Fiquem ligados!
   - Ajustei o afl- gcc para usar o BIN_ PATH em vez de um texto fixo na ajuda
     messages.
 
+<a id="version-156b"></a>
 ### Versão 1.56b:
 
   - Renomeado related_work.txt para historical_notes.txt.
@@ -2584,11 +2727,13 @@ Fiquem ligados!
   - Adicionado docs/irmã_projects.txt com uma lista de inspirados ou de perto
     related utilities.
 
+<a id="version-155b"></a>
 ### Versão 1.55b:
 
   - Corrigido uma falha com abertura do afl- showmap /dev/null com O_RDONLY quando
     running in quiet mode. Spotted by Tyler Nighswander.
 
+<a id="version-154b"></a>
 ### Versão 1.54b:
 
   - Adicionado outro exemplo pós-processador para PNG.
@@ -2598,17 +2743,20 @@ Fiquem ligados!
 
   - Melhor manipulação -ldl. Sugerido por Jakub Wilk.
 
+<a id="version-153b"></a>
 ### Versão 1.53b:
 
   - Corrigido um problema -l encomendando que aparentemente ainda é um problema no Ubuntu.
     Spotted by William Robinet.
 
+<a id="version-152b"></a>
 ### Versão 1.52b:
 
   - Adicionado suporte para pós-processadores de formato de arquivo. Solicitado por Ben Nagy. This
     feature is intentionally buried, since it's fairly easy to misuse and
     useful only in some scenarios. See examples/post_library/.
 
+<a id="version-151b"></a>
 ### Versão 1. 51b:
 
   - Tornou possível substituir corretamente LD_BIND_NOW depois de um muito incomum
@@ -2618,6 +2766,7 @@ Fiquem ligados!
 
   - Corrigido um erro em AFL_DUMB_FORKSRV.
 
+<a id="version-150b"></a>
 ### Versão 1.50b:
 
   - Corrigido um erro flock () que impediria que erros de reuso de dir chutassem
@@ -2630,12 +2779,14 @@ Fiquem ligados!
 
   - Corrigido um erro de digitação ou dois.
 
+<a id="version-149b"></a>
 ### Versão 1.49b:
 
   - Adicionado código para salvar a linha de comando original em fuzzer_stats e
     crashes/README.txt. Also saves fuzzer version in fuzzer_stats.
     Requested by Ben Nagy.
 
+<a id="version-148b"></a>
 ### Versão 1.48b:
 
   - Corrigido um erro com o servidor de garfos QEMU falha quando a tradução é tentada
@@ -2643,6 +2794,7 @@ Fiquem ligados!
     bumping into a particularly nasty security bug in the tested binary).
     Reported by Tyler Nighswander.
 
+<a id="version-147b"></a>
 ### Versão 1.47b:
 
   - Corrigido um erro com afl-cmin no modo -Q reclamando sobre não ser binário
@@ -2653,6 +2805,7 @@ Fiquem ligados!
 
   - Melhorou o uso de cores ao mostrar a contagem de falhas no modo -C.
 
+<a id="version-146b"></a>
 ### Versão 1.46b:
 
   - Melhor desempenho de instrumentação em sistemas de 32 bits ao se livrar de
@@ -2661,6 +2814,7 @@ Fiquem ligados!
 
   - Os números de profundidade do caminho foram mais precisos com os casos de teste importados.
 
+<a id="version-145b"></a>
 ### Versão 1.45b:
 
   - Adicionado suporte para SIMPLE_FILES em config.h para pessoas que não gostam
@@ -2678,6 +2832,7 @@ Fiquem ligados!
 
   - Fiz várias pequenas atualizações para os documentos.
 
+<a id="version-144b"></a>
 ### Versão 1.44b:
 
   - Corrigido duas tentativas confusas para obter o modo -C funcionar corretamente
@@ -2688,6 +2843,7 @@ Fiquem ligados!
 
   - Despediu-se da Hello Kitty, como solicitado por Padraig Brady.
 
+<a id="version-141b"></a>
 ### Versão 1.41b:
 
   - Adicionado AFL_ ALLOUW_ CRASHES=1 ao afl- cmin. Permite a quebra de entradas no
@@ -2708,6 +2864,7 @@ Fiquem ligados!
 
   - Corrigido erros de digitação e fez melhorias em vários documentos.
 
+<a id="version-140b"></a>
 ### Versão 1.40b:
 
   - Alternado para tamanhos menores de bloco op durante os primeiros passes sobre o
@@ -2718,6 +2875,7 @@ Fiquem ligados!
 
   - Atualizei um monte de médicos.
 
+<a id="version-139b"></a>
 ### Versão 1.39b:
 
   - Adicionado a capacidade de pular entradas enviando SIGUSR1 para o fuzzer.
@@ -2734,6 +2892,7 @@ Fiquem ligados!
     versus 50 ms - ~40 execs/sec) and made several other cosmetic changes
     to the timeout code.
 
+<a id="version-138b"></a>
 ### Versão 1.38b:
 
   - Corrigido um bug no script de construção QEMU, visto por William Robinet.
@@ -2745,6 +2904,7 @@ Fiquem ligados!
 
   - Erro de digitação, graças ao Jakub Wilk.
 
+<a id="version-137b"></a>
 ### Versão 1.37b:
 
   - Adicionados mapas efetores, que detectam regiões que parecem não responder
@@ -2776,6 +2936,7 @@ Fiquem ligados!
   - Mudou o Afl-cmin de volta para Bash, não estava a pensar bem.
     on bash because other shells may have restrictive limits on array sizes.
 
+<a id="version-136b"></a>
 ### Versão 1.36b:
 
   - Mudou o afl-cmin para /bin/sh. Graças ao Jonathan Gray.
@@ -2792,16 +2953,19 @@ Fiquem ligados!
 
   - Acredites ou não, arranjei alguns erros, graças ao Jakub Wilk.
 
+<a id="version-135b"></a>
 ### Versão 1.35b:
 
   - Limpou expressões regulares em alguns dos scripts para evitar erros
     on *BSD systems. Spotted by Jonathan Gray.
 
+<a id="version-134b"></a>
 ### Versão 1. 34b:
 
   - Executou uma documentação substancial e limpeza de saída do programa para
     better explain the QEMU feature.
 
+<a id="version-133b"></a>
 ### Versão 1. 33b:
 
   - Adicionado suporte para AFL_INST_RATIO e AFL_INST_LIBS no modo QEMU.
@@ -2817,12 +2981,14 @@ Fiquem ligados!
 
   - Adicionado uma verificação de binários instrumentados ao passar -Q para afl-fuzz.
 
+<a id="version-132b"></a>
 ### Versão 1.32b:
 
   - Corrigido 'make install' após as alterações do QEMU. Manchado por Hanno Boeck.
 
   - Manipulação EXTRA_PAR fixa em afl-cmin.
 
+<a id="version-131b"></a>
 ### Versão 1. 31b:
 
   - Aleluia! Graças a Andrew Griffiths, agora apoiamos muito rápido, caixa preta
@@ -2831,6 +2997,7 @@ Fiquem ligados!
     To use this feature, you need to follow the instructions in that
     directory and then run afl-fuzz with -Q.
 
+<a id="version-130b"></a>
 ### Versão 1.30b:
 
   - Adicionado -s (síntese) opção para afl-whatsup. Sugerido por Jodie Cunningham.
@@ -2844,6 +3011,7 @@ Fiquem ligados!
 
   - Corrigidas mensagens de falha de processo com - m nenhuma.
 
+<a id="version-129b"></a>
 ### Versão 1.29b:
 
   - Melhorado o nome dos casos de teste quando orig: já está presente no arquivo
@@ -2851,6 +3019,7 @@ Fiquem ligados!
 
   - Fez melhorias substanciais no technical_details.txt.
 
+<a id="version-128b"></a>
 ### Versão 1.28b:
 
   - Fez um pequeno ajuste na instrumentação para preservar a direcionalidade
@@ -2861,6 +3030,7 @@ Fiquem ligados!
 
   - Acrescentou vários cheques de sanidade à afl-cmin.
 
+<a id="version-127b"></a>
 ### Versão 1.27b:
 
   - Graças ao Hanno Boeck pela dica.
@@ -2872,6 +3042,7 @@ Fiquem ligados!
 
   - Removeu o current_todo.txt e limpou os documentos restantes.
 
+<a id="version-126b"></a>
 ### Versão 1.26b:
 
   - Adicionado total execs/sec stat para afl-whatsup.
@@ -2887,6 +3058,7 @@ Fiquem ligados!
   - Corrigido um problema de limite de memória durante o processo de compilação no NetBSD-current.
     Reported by Thomas Klausner.
 
+<a id="version-125b"></a>
 ### Versão 1.25b:
 
   - Introduziu o afl- whatsup, uma ferramenta simples para consultar o estado de
@@ -2900,15 +3072,18 @@ Fiquem ligados!
   - Melhorou as verificações dos valores - m e - t no afl- cmin. Bug report
     from Evan Huus.
 
+<a id="version-124b"></a>
 ### Versão 1.24b:
 
   - Introduzido afl-getcpu, uma ferramenta experimental para medir empiricamente
     CPU preemption rates. Thanks to Jakub Wilk for the idea.
 
+<a id="version-123b"></a>
 ### Versão 1.23b:
 
   - Reverteu uma mudança para afl-cmin que realmente o tornou mais lento.
 
+<a id="version-122b"></a>
 ### Versão 1.22b:
 
   - Retrabalhado afl-showmap.c para suportar opções normais, incluindo -o, -q,
@@ -2921,6 +3096,7 @@ Fiquem ligados!
 
   - Corrigi outro erro de digitação em afl-tmin, cortesia de Jakub Wilk.
 
+<a id="version-121b"></a>
 ### Versão 1.21b:
 
   - Graduado minimum_corpus.sh para afl-cmin. Agora é uma primeira classe
@@ -2933,6 +3109,7 @@ Fiquem ligados!
 
   - Fez diversas alterações no documento para documentar afl-cmin e outras coisas.
 
+<a id="version-120b"></a>
 ### Versão 1.20b:
 
   - Adicionado AFL_ DUMB_ FORKSRV, conforme solicitado por Jakub Wilk. Isto só funciona
@@ -2948,6 +3125,7 @@ Fiquem ligados!
 
   - Corrigido um erro de digitação (via Jakub Wilk).
 
+<a id="version-119b"></a>
 ### Versão 1.19b:
 
   - Melhor detecção de falhas exec em afl-fuzz e afl-showmap.
@@ -2956,6 +3134,7 @@ Fiquem ligados!
 
   - Adicionado afl-tmin, um minimizer útil habilitado para instrumentação.
 
+<a id="version-118b"></a>
 ### Versão 1.18b:
 
   - Corrigido um erro sério, mas de curta duração no comportamento de retomada introduzido
@@ -2963,6 +3142,7 @@ Fiquem ligados!
 
   - Adicionado o modo -t nn+ para caminhos de soft-skipping timing-out.
 
+<a id="version-117b"></a>
 ### Versão 1.17b:
 
   - Corrigido um aviso compilador introduzido em 1.16b para versões mais recentes do GCC.
@@ -2974,6 +3154,7 @@ Fiquem ligados!
   - Fez várias melhorias de desempenho para aritismo determinístico
     and known int steps.
 
+<a id="version-116b"></a>
 ### Versão 1.16b:
 
   - Adicionado um pouco de código para fazer a retomada pegar do último conhecido
@@ -2983,6 +3164,7 @@ Fiquem ligados!
   - Alternado para controle de tempo- limite mais apertado para programas lentos (3x ao invés de
     5x average exec speed at init).
 
+<a id="version-115b"></a>
 ### Versão 1.15b:
 
   - Adicionado suporte para AFL_NO_VAR_CHECK para acelerar a retomada e inibir
@@ -2995,6 +3177,7 @@ Fiquem ligados!
   - Tornou a UI um pouco mais descritiva adicionando "n/a" em vez de "0" em um
     couple of corner cases.
 
+<a id="version-114b"></a>
 ### Versão 1.14b:
 
   - Adicionado um dicionário (parcial) para JavaScript.
@@ -3003,6 +3186,7 @@ Fiquem ligados!
 
   - Ajustou a lógica de escala de estragos adicionado em 1.12b.
 
+<a id="version-113b"></a>
 ### Versão 1.13b:
 
   - Melhorou o desempenho de minimize_corpus.sh com a mudança para um
@@ -3010,6 +3194,7 @@ Fiquem ligados!
 
   - Fez várias revisões menores aos documentos.
 
+<a id="version-112b"></a>
 ### Versão 1.12b:
 
   - Melhorou a geração de dicionários para evitar corridas idênticas
@@ -3028,10 +3213,12 @@ Fiquem ligados!
 
   - Erro de digitação de moar fixo, conforme relatado por Jakub Wilk.
 
+<a id="version-111b"></a>
 ### Versão 1.11b:
 
   - Adicionado um pouco mais informações sobre estratégias de dicionário para a tela de status.
 
+<a id="version-110b"></a>
 ### Versão 1.10b:
 
   - Revisou o comportamento do dicionário para usar a inserção e sobrescrever
@@ -3040,6 +3227,7 @@ Fiquem ligados!
 
   - Adicionado uma menção de "*" no status_screen.txt, como sugerido por Jakub Wilk.
 
+<a id="version-109b"></a>
 ### Versão 1.09b:
 
   - Corrigido um problema cosmético com "extras" contagem de palco nem sempre sendo
@@ -3048,10 +3236,12 @@ Fiquem ligados!
   - Corrigido um erro de digitação relatado por Jakub Wilk e feito alguma documentação menor
     improvements.
 
+<a id="version-108b"></a>
 ### Versão 1.08b:
 
   - Corrigido um erro div-by-zero no código recém-adicionado ao usar um dicionário.
 
+<a id="version-107b"></a>
 ### Versão 1.07b:
 
   - Adicionado código que encontra e extrai automaticamente os tokens de sintaxe do
@@ -3064,6 +3254,7 @@ Fiquem ligados!
 
   - Adicionado um par de amostras de formato de arquivo mais exótico.
 
+<a id="version-106b"></a>
 ### Versão 1.06b:
 
   - Alternado para um relatório ligeiramente mais preciso (se ainda não muito útil)
@@ -3077,6 +3268,7 @@ Fiquem ligados!
   - Ajustou as chances de fuzzing casos de teste não favoritos para ter certeza de que
     baseline coverage of all inputs is reached sooner.
 
+<a id="version-105b"></a>
 ### Versão 1.05b:
 
   - Adicionado um dicionário para WebP.
@@ -3084,6 +3276,7 @@ Fiquem ligados!
   - Fez algumas melhorias de desempenho adicionais para minimizar_corpus.sh,
     getting deeper into the bash woods.
 
+<a id="version-104b"></a>
 ### Versão 1.04b:
 
   - Fez melhorias substanciais de desempenho para minimizar_corpus.sh com
@@ -3092,6 +3285,7 @@ Fiquem ligados!
 
   - Ajustei o afl-showmap para suportar o formato usado pelo novo script.
 
+<a id="version-103b"></a>
 ### Versão 1. 03b:
 
   - Adicionado código para pular README.txt no diretório de entrada para fazer o estoiro
@@ -3099,6 +3293,7 @@ Fiquem ligados!
 
   - Adicionado um dicionário para SQLite.
 
+<a id="version-102b"></a>
 ### Versão 1.02b:
 
   - Reverter o caminho ./ pesquisa em minimize_corpus.sh porque as pessoas fizeram
@@ -3110,10 +3305,12 @@ Fiquem ligados!
 
   - Adicionado uma verificação de binários /tmp e -f locais em afl-fuzz.
 
+<a id="version-101b"></a>
 ### Versão 1.01b:
 
   - Adicionado dicionários para XML e GIF.
 
+<a id="version-100b"></a>
 ### Versão 1.00b:
 
   - Melhorou ligeiramente o desempenho de minimize_corpus.sh, especialmente sobre
@@ -3121,6 +3318,7 @@ Fiquem ligados!
 
   - Fez algumas melhorias nos timeouts de calibração para varreduras retomadas.
 
+<a id="version-099b"></a>
 ### Versão 0, 99b:
 
   - Corrigido minimum_corpus.sh para trabalhar com traço, como sugerido por Jakub Wilk.
@@ -3131,6 +3329,7 @@ Fiquem ligados!
   - Adicionado suporte para o afl-as --version, conforme exigido por uma compilação funky
     script. Reported by William Robinet.
 
+<a id="version-098b"></a>
 ### Versão 0,98b:
 
   - Adicionado um dicionário para TIFF.
@@ -3142,6 +3341,7 @@ Fiquem ligados!
     most notably including minimize_corpus.sh and triage_crashes.sh.
     Requested by Jonathan Gray.
 
+<a id="version-097b"></a>
 ### Versão 0.97b:
 
   - Corrigido problemas cosméticos em torno da nomeação de arquivos de estratégia -x.
@@ -3151,6 +3351,7 @@ Fiquem ligados!
   - Corrigido uma falha muito rara ao executar instrumentação 64-bit código que faz
     heavy use of xmm registers that are also touched by glibc.
 
+<a id="version-096b"></a>
 ### Versão 0.96b:
 
   - Adicionado suporte para dicionários extras, testcases fornecidos/_extras/png/
@@ -3163,6 +3364,7 @@ Fiquem ligados!
 
   - Corrigido afl-plot sintaxe para gnuplot 5.x. Reportado por David Necas.
 
+<a id="version-095b"></a>
 ### Versão 0, 95b:
 
   - Limpei o código OSX ReportCrash. Graças a Tobias Ospelt por ajuda.
@@ -3171,6 +3373,7 @@ Fiquem ligados!
 
   - Refrescou o arquivo INSTALL.
 
+<a id="version-094b"></a>
 ### Versão 0.94b:
 
   - Adicionado currículo no local (-i-) para tratar de uma queixa comum do usuário.
@@ -3178,10 +3381,12 @@ Fiquem ligados!
   - Adicionado uma solução terrível para ReportCrash no MacOS X. Problema
     spotted by Joseph Gentle.
 
+<a id="version-093b"></a>
 ### Versão 0.93b:
 
   - Corrigido a solução link(), conforme relatado por Jakub Wilk.
 
+<a id="version-092b"></a>
 ### Versão 0.92b:
 
   - Adicionado suporte para leitura de casos de teste de outro sistema de arquivos.
@@ -3191,6 +3396,7 @@ Fiquem ligados!
 
   - Adicionado um documento PDF exemplo.
 
+<a id="version-091b"></a>
 ### Versão 0.91b:
 
   - Refatored minimize_corpus.sh para torná-lo um pouco mais fácil de usar e para
@@ -3199,6 +3405,7 @@ Fiquem ligados!
 
   - Um pouco melhorou o desempenho do código de splicing.
 
+<a id="version-090b"></a>
 ### Versão 0, 90b:
 
   - Moveu- se para um algoritmo onde os caminhos são marcados como preferencialmente baseados
@@ -3222,6 +3429,7 @@ Fiquem ligados!
   - Adicionado uma verificação tty para o aviso de cores no Makefile, para manter a compilação distro
     logs tidy. Suggested by Jakub Wilk.
 
+<a id="version-089b"></a>
 ### Versão 0,89b:
 
   - Renomeado afl-plot.sh para afl-plot, como solicitado por Padraig Brady.
@@ -3230,6 +3438,7 @@ Fiquem ligados!
 
   - Adicionada informação de banner para fuzzer_stats, povoou-o para afl-plot.
 
+<a id="version-088b"></a>
 ### Versão 0.88b:
 
   - Adicionado suporte para plotagem, com design e implementação com base em um
@@ -3246,10 +3455,12 @@ Fiquem ligados!
 
   - Adicionado algum detalhe para fuzzer_stats para paridade com plot_file.
 
+<a id="version-087b"></a>
 ### Versão 0.87b:
 
   - Adicionado suporte para MSAN, via AFL_USE_MSAN, o mesmo gotchas que para ASAN.
 
+<a id="version-086b"></a>
 ### Versão 0.86b:
 
   - Adicionado AFL_ NO_ FORKSRV, permitindo que o servidor de fork seja contornado. Sugerido
@@ -3259,6 +3470,7 @@ Fiquem ligados!
 
   - Fez pequenas melhorias para crash_triage.sh, como sugerido por Jakub Wilk.
 
+<a id="version-085b"></a>
 ### Versão 0.85b:
 
   - Corrigido o código de contagem de CPU - sem sysctlbyname () no OpenBSD, d'oh. Bug
@@ -3267,6 +3479,7 @@ Fiquem ligados!
   - Fez uma ligeira correcção às mensagens de erro - o conselho sobre os testes
     with ulimit was a tiny bit off by a factor of 1024.
 
+<a id="version-084b"></a>
 ### Versão 0. 84b:
 
   - Adicionado suporte para o widget de CPU em algumas plataformas não-Linux (espero).
@@ -3274,6 +3487,7 @@ Fiquem ligados!
 
   - Limpei o changelog (muito meta).
 
+<a id="version-083b"></a>
 ### Versão 0. 83b:
 
   - Adicionado exemplos/clang_asm_normalize/ e notas relacionadas em
@@ -3281,6 +3495,7 @@ Fiquem ligados!
 
   - Adicionado conselhos sobre a utilização de hardware em README.
 
+<a id="version-082b"></a>
 ### Versão 0.82b:
 
   - Foram feitas correções adicionais para o suporte ao Xcode, malabarismo -Q e -q flags.
@@ -3289,6 +3504,7 @@ Fiquem ligados!
   - Adicionado uma verificação para __asm__ blocos e muda para .intel_syntax na montagem.
     Based on feedback from Ryan Govostes.
 
+<a id="version-081b"></a>
 ### Versão 0.81b:
 
   - Uma solução para o Xcode 6 como falha na bandeira -Q. Encontrado por Ryan Govostes.
@@ -3297,6 +3513,7 @@ Fiquem ligados!
 
   - Consertar um caminho ligeiramente quebrado marcando condicionalmente.
 
+<a id="version-080b"></a>
 ### Versão 0.80b:
 
   - Adicionado uma verificação para $PATH-induzido loops. Problema notado por Kartik Agaram.
@@ -3306,6 +3523,7 @@ Fiquem ligados!
   - Adicionado um sobreposição para AFL_USE_ ASAN se definido no tempo de compilação AFL. Solicitado por
     Hanno Boeck.
 
+<a id="version-079b"></a>
 ### Versão 0,79b:
 
   - Fez pequenos ajustes para a lógica de pulo de caminho.
@@ -3313,6 +3531,7 @@ Fiquem ligados!
   - Foram feitas várias atualizações de documentação para refletir as alterações na seleção do caminho
     made in 0.78b.
 
+<a id="version-078b"></a>
 ### Versão 0, 78b:
 
   - Foi adicionada uma verificação do governador da CPU. Relatório de erros do Joe Zbiciak.
@@ -3332,6 +3551,7 @@ Fiquem ligados!
     64k and added a warning to detect older binaries that rely on smaller
     bitmaps.
 
+<a id="version-077b"></a>
 ### Versão 0, 77b:
 
   - Adicionado AFL_SKIP_CHECKS para ignorar as verificações binárias quando realmente justificadas.
@@ -3341,11 +3561,13 @@ Fiquem ligados!
 
   - Adicionado um aviso para as corridas que são abortadas no início.
 
+<a id="version-076b"></a>
 ### Versão 0, 76b:
 
   - Incorporou outra correção de manuseio de sinal para Solaris. Sugestão
     submitted by Martin Carpenter.
 
+<a id="version-075b"></a>
 ### Versão 0, 75b:
 
   - Implementou um kludge ligeiramente mais "elegant" para a falha %llu (ver
@@ -3353,6 +3575,7 @@ Fiquem ligados!
 
   - Avisos de carga de CPU relaxados para permanecer em sincronia com a realidade.
 
+<a id="version-074b"></a>
 ### Versão 0.74b:
 
   - Mudado para médias de velocidade exec mais responsivas e melhor velocidade de UI
@@ -3361,11 +3584,13 @@ Fiquem ligados!
   - Corrigido um erro com leituras interrompidas no Solaris. Problema detectado por Martin
     Carpenter.
 
+<a id="version-073b"></a>
 ### Versão 0.73b:
 
   - Corrigido um memcpy() perdido em vez de memmove() em buffers sobrepostos.
     Mostly harmless but still dumb. Mistake spotted thanks to David Higgs.
 
+<a id="version-072b"></a>
 ### Versão 0.72b:
 
   - Tamanho do mapa alterado até 32k. Você pode querer recompilar instrumentado
@@ -3381,18 +3606,21 @@ Fiquem ligados!
     rhetorical question in the comments in afl-as.h has been answered.
     Tracked down by Mudge Zatko.
 
+<a id="version-071b"></a>
 ### Versão 0.71b:
 
   - Adicionado uma correção para a verificação de ELF não-sensical MacOS.
 
   - Fiz algumas melhorias nos controlos ASAN.
 
+<a id="version-070b"></a>
 ### Versão 0, 70b:
 
   - Adicionado detecção explícita de binários ASANified.
 
   - Questões de compilação fixas em Solaris. Reportado por Martin Carpenter.
 
+<a id="version-069b"></a>
 ### Versão 0.69b:
 
   - Melhoria da detecção de binários não instrumentados.
@@ -3405,10 +3633,12 @@ Fiquem ligados!
   - Corrigido para um SIGFPE cosmético quando Ctrl- C é pressionado enquanto o servidor de garfos
     is spinning up.
 
+<a id="version-068b"></a>
 ### Versão 0. 68b:
 
   - Adicionado modo de exploração de crash! Woot!
 
+<a id="version-067b"></a>
 ### Versão 0.67b:
 
   - Corrigido vários erros de digitação mais, o projeto agora está totalmente livre de erros.
@@ -3421,6 +3651,7 @@ Fiquem ligados!
 
   - Foi possível substituir o O3 em Makefile, sugerido por Jakub Wilk.
 
+<a id="version-066b"></a>
 ### Versão 0.66b:
 
   - Corrigido um problema muito obscuro com os sistemas de compilação que usam o gcc como montador
@@ -3430,6 +3661,7 @@ Fiquem ligados!
   - Corrigido um erro ao limpar as pastas de saída sincronizadas do fuzzer. Problema relatado
     by Thomas Jarosch.
 
+<a id="version-065b"></a>
 ### Versão 0.65b:
 
   - Limpei os códigos de fuga da shell printf em Makefile.
@@ -3437,10 +3669,12 @@ Fiquem ligados!
   - Adicionado mais cor ao fuzzer_stats, fornecido documentação curta do arquivo
     format, and made several other stats-related improvements.
 
+<a id="version-064b"></a>
 ### Versão 0.64b:
 
   - Suporte GCC habilitado no MacOS X.
 
+<a id="version-063b"></a>
 ### Versão 0.63b:
 
   - Forneceu uma forma nova e simplificada de passar dados em arquivos (@@). Veja README.
@@ -3454,6 +3688,7 @@ Fiquem ligados!
   - Adicionado um aviso de tempo de construção para terminais de vídeo inversos e melhor
     instructions in status_screen.txt.
 
+<a id="version-062b"></a>
 ### Versão 0.62b:
 
   - Fez pequenas melhorias para o alocador, como sugerido por Tobias Ospelt.
@@ -3464,6 +3699,7 @@ Fiquem ligados!
 
   - Erros corrigidos em paralelo_fuzzing.txt. Problemas detectados por Thomas Jarosch.
 
+<a id="version-061b"></a>
 ### Versão 0.61b:
 
   - Corrigido um problema menor com detecção de clang em sistemas com um clang cc
@@ -3473,6 +3709,7 @@ Fiquem ligados!
 
   - Corrigido uma falha com remoção de falha (README.txt deixado para trás, d'oh).
 
+<a id="version-060b"></a>
 ### Versão 0.60b:
 
   - Corrigido problemas com tabelas de salto geradas por versões exóticas do GCC. Isto
@@ -3486,6 +3723,7 @@ Fiquem ligados!
 
   - Adicionado documentos/INSTALL.
 
+<a id="version-059b"></a>
 ### Versão 0.59b:
 
   - Modificado 'make install' para também instalar casos de teste.
@@ -3494,6 +3732,7 @@ Fiquem ligados!
 
   - Mais trabalho em RLIMIT_AS para OpenBSD.
 
+<a id="version-058b"></a>
 ### Versão 0.58b:
 
   - Adicionado uma verificação de contagem de núcleos no Linux.
@@ -3502,6 +3741,7 @@ Fiquem ligados!
 
   - Adicionado um medidor de utilização de CPU rudimentar para ajudar com o carregamento ideal.
 
+<a id="version-057b"></a>
 ### Versão 0.57b:
 
   - Corrigições feitas para suportar o FreeBSD e o OpenBSD: use_64bit agora é inferido se não
@@ -3514,6 +3754,7 @@ Fiquem ligados!
 
   - Fez um par de melhorias Makefile como proposto por Jakub Wilk.
 
+<a id="version-056b"></a>
 ### Versão 0.56b:
 
   - Adicionada redução da densidade de instrumentação probabilística no modo ASAN.
@@ -3521,6 +3762,7 @@ Fiquem ligados!
 
   - Notas atualizadas_for_asan.txt.
 
+<a id="version-055b"></a>
 ### Versão 0.55b:
 
   - Comportamento out_dir mais inteligente implementado, apagando automaticamente diretórios
@@ -3535,11 +3777,13 @@ Fiquem ligados!
   - Tornou possível retomar fazendo -i <out_dir>, sem precisar especificar
     -i <out_dir>/queue/.
 
+<a id="version-054b"></a>
 ### Versão 0.54b:
 
   - Adicionado uma correção para -Wformat mensagens de aviso (oops, eu pensei que tinha sido em
     place for a while).
 
+<a id="version-053b"></a>
 ### Versão 0.53b:
 
   - Redesenhou o código de detecção duplicado para lidar melhor com
@@ -3561,6 +3805,7 @@ Fiquem ligados!
   - Adicionado uma correção para razões de corte inofensivas, mas absurdas mostrado se o primeiro exec em
     the trimmer timed out. Spotted by @EspenGx.
 
+<a id="version-052b"></a>
 ### Versão 0.52b:
 
   - Adicionado um resumo rápido do conteúdo em exemplos/.
@@ -3574,6 +3819,7 @@ Fiquem ligados!
     (To fix this, simply move <out_dir>/.state/* from an older run
     to <out_dir>/.state/deterministic_done/*.)
 
+<a id="version-051b"></a>
 ### Versão 0.51b:
 
   - Alterou a ordem de pesquisa para afl-as para evitar o problema com cópias mais antigas
@@ -3586,6 +3832,7 @@ Fiquem ligados!
 
   - Corrigido o alvo test_prev em Makefile, como relatado por Ozzy Johnson.
 
+<a id="version-050b"></a>
 ### Versão 0, 50b:
 
   - Melhorou a lógica de 'make install', como sugerido por Padraig Brady.
@@ -3606,6 +3853,7 @@ Fiquem ligados!
 
   - Fez uma correção de regressão para afl-as para ignorar etiquetas .LB no modo gcc.
 
+<a id="version-049b"></a>
 ### Versão 0, 49b:
 
   - Corrigido mais erros de digitação, como encontrado por Jakub Wilk.
@@ -3621,6 +3869,7 @@ Fiquem ligados!
   - Melhor processo de instalação para criar corretamente ligações simbólicas, em vez de
     copies of binaries.
 
+<a id="version-048b"></a>
 ### Versão 0, 48b:
 
   - Melhor afl- fuzz para o conjunto de forças ASAN_ OPTIONS=abort_ on_ error=1. Caso contrário,
@@ -3634,6 +3883,7 @@ Fiquem ligados!
     .o file has 5+ parameters. No impact on code running under afl-fuzz or
     afl-showmap. Issue spotted by Padraig Brady.
 
+<a id="version-047b"></a>
 ### Versão 0, 47b:
 
   - Corrigido outro erro Makefile para compilações paralelas de afl. Problema identificado
@@ -3646,6 +3896,7 @@ Fiquem ligados!
 
   - Moveu o projeto para https://lcamtuf.coredump.cx/afl/.
 
+<a id="version-046b"></a>
 ### Versão 0.46b:
 
   - Limpa as dependências do Makefile para compilações paralelas.
@@ -3661,6 +3912,7 @@ Fiquem ligados!
     switch between .code32 and .code64. Addresses a glitch spotted by
     Hanno Boeck with compiling ToT gdb.
 
+<a id="version-045b"></a>
 ### Versão 0, 45b:
 
   - Implementou um aparador de caso de teste. Resultados em 20-30% de redução de tamanho para muitos
@@ -3682,6 +3934,7 @@ Fiquem ligados!
   - Alternado para comportamento sadio com stdout não-tty (menos saída gerada,
     no ANSI art).
 
+<a id="version-044b"></a>
 ### Versão 0.44b:
 
   - Adicionado suporte para AFL_CC e AFL_CXX, baseado em um patch de Ben Laurie.
@@ -3698,6 +3951,7 @@ Fiquem ligados!
   - Uso mais consistente de códigos de reset de cores, como sugerido por Oliver
     Kunz.
 
+<a id="version-043b"></a>
 ### Versão 0.43b:
 
   - Corrigido um bug com 64 bits de relocações compartilhadas por gcc.
@@ -3711,6 +3965,7 @@ Fiquem ligados!
 
   - Fiz uma pequena alteração na verificação de Makefile GCC. Sugerido por Hanno Boeck.
 
+<a id="version-042b"></a>
 ### Versão 0.42b:
 
   - Corrigido um erro com o tratamento da zona vermelha para 64- bits (oops!). Problema relatado por
@@ -3726,6 +3981,7 @@ Fiquem ligados!
   - Verificação melhorada para 64-bit compilação, além de várias verificações de sanidade
     in Makefile.
 
+<a id="version-041b"></a>
 ### Versão 0.41b:
 
   - Corrigido um bug servido fork para processos que chamam execve().
@@ -3746,6 +4002,7 @@ Fiquem ligados!
   - Foram adicionadas mensagens de erro muito melhores para falhas ao importar casos de teste
     or otherwise calibrating the binary.
 
+<a id="version-040b"></a>
 ### Versão 0, 40b:
 
   - Adicionado suporte para fuzzing paralelizado. Inspirado por patch anterior
@@ -3753,6 +4010,7 @@ Fiquem ligados!
 
   - Adicionado um exemplo em exemplos/distributed_fuzzing/.
 
+<a id="version-039b"></a>
 ### Versão 0, 39b:
 
   - Tela de status redesenhada, agora 90% mais elegante.
@@ -3772,6 +4030,7 @@ Fiquem ligados!
 
   - Adicionado performance_tips.txt.
 
+<a id="version-038b"></a>
 ### Versão 0, 38b:
 
   - Corrigido um vazamento de fd e +cov erro de rastreamento resultante de alterações em 0,37b.
@@ -3780,6 +4039,7 @@ Fiquem ligados!
 
   - Adicionado uma indicação visual ao executar em modo não-instrumentado.
 
+<a id="version-037b"></a>
 ### Versão 0, 37b:
 
   - Adicionado o rastreamento de estado do fuzz para uma retomada mais perfeita do abortado
@@ -3797,6 +4057,7 @@ Fiquem ligados!
   - Melhoria da instrumentação para cobrir explicitamente a outra parte de cada
     branch.
 
+<a id="version-036b"></a>
 ### Versão 0.36b:
 
   - Suporte ao servidor fork implementado para evitar a sobrecarga do execve(). A
@@ -3810,15 +4071,18 @@ Fiquem ligados!
   - Corrigido a forma como o IGNORE_FINDS funciona (foi um pouco quebrado após adicionar o splicing
     and path skip heuristics).
 
+<a id="version-035b"></a>
 ### Versão 0, 35b:
 
   - Instrumentação de 64 bits devidamente integrada em afl-as.
 
+<a id="version-034b"></a>
 ### Versão 0.34b:
 
   - Adicionado um novo classificador de contagem de executivos (a teoria de trabalho é que ele recebe
     meaningful coverage with fewer test cases spewed out).
 
+<a id="version-033b"></a>
 ### Versão 0.33b:
 
   - Mudou para uma nova instrumentação experimental que tenta
@@ -3828,23 +4092,28 @@ Fiquem ligados!
   - Fiz várias outras correções cosméticas e correções de digitação, graças a
     Jakub Wilk.
 
+<a id="version-032b"></a>
 ### Versão 0.32b:
 
   - Outra tomada na reparação da excepção C++, relatada por Jakub Wilk.
 
+<a id="version-031b"></a>
 ### Versão 0.31b:
 
   - Fez outra correção para afl-as para resolver um problema potencial com mais novos
     versions of GCC (introduced in 0.28b). Thanks to Jann Horn.
 
+<a id="version-030b"></a>
 ### Versão 0, 30b:
 
   - Adicionado mais detalhes sobre as operações subjacentes em nomes de arquivos.
 
+<a id="version-029b"></a>
 ### Versão 0.29b:
 
   - Fez algumas melhorias gerais para operações de blocos.
 
+<a id="version-028b"></a>
 ### Versão 0.28b:
 
   - Tratamento de exceções C++ corrigido em versões mais recentes do GCC. Problema diagnosticado
@@ -3853,6 +4122,7 @@ Fiquem ligados!
   - Corrigido o manuseio da bandeira de transbordamento. Mais uma vez, graças a
     Eberhard Mattes.
 
+<a id="version-027b"></a>
 ### Versão 0.27b:
 
   - Adicionada priorização de novos caminhos sobre os já fuzzed.
@@ -3866,6 +4136,7 @@ Fiquem ligados!
   - Alternado para melhores nomes de arquivos de saída, mantendo o controle do palco e splicing
     sources.
 
+<a id="version-026b"></a>
 ### Versão 0.26b:
 
   - Armazenamento renovado de casos de teste, - u opção removida,
@@ -3879,6 +4150,7 @@ Fiquem ligados!
 
   - Corrigido um erro na detecção de tempo- limite.
 
+<a id="version-025b"></a>
 ### Versão 0.25b:
 
   - Melhoria da instrumentação baseada na contagem.
@@ -3894,11 +4166,13 @@ Fiquem ligados!
 
   - Fez várias melhorias menores de UI e várias outras correções de bugs.
 
+<a id="version-024b"></a>
 ### Versão 0.24b:
 
   - Adicionado o nome do programa à tela de status, mais o parâmetro -T para ir com
     it.
 
+<a id="version-023b"></a>
 ### Versão 0.23b:
 
   - Melhorou a detecção de comportamentos variáveis.
@@ -3909,12 +4183,14 @@ Fiquem ligados!
 
   - Mudada para instrumentação tupla simplificada (baseada em XOR).
 
+<a id="version-022b"></a>
 ### Versão 0.22b:
 
   - Refactorou o manuseio de bitflips longos e algumas trocas.
 
   - Consertou o manuseio do tubo de gcc, graças ao repórter anônimo.
 
+<a id="version-021b-2013-11-12"></a>
 ### Versão 0.21b (2013-11-12):
 
   - Lançamento público inicial.
@@ -3927,6 +4203,6 @@ Fiquem ligados!
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/Changelog.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/Changelog.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

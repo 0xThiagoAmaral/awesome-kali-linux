@@ -32,6 +32,7 @@ Implementado por
 (<yakdan@code-intelligence.de>)
 - Módulo Python: Christian Holler do Mozilla (<choller@mozilla.com>)
 
+<a id="1-introduction"></a>
 ## 1) Introdução
 
 Mutantes personalizados podem ser passados para `afl-fuzz` para realizar mutações personalizadas no teste
@@ -135,6 +136,7 @@ def deinit():  # optional for Python
     pass
 ```
 
+<a id="custom-mutation"></a>
 ### Mutação Personalizada
 
 - `init` (opcional em Python):
@@ -242,6 +244,7 @@ def deinit():  # optional for Python
 Note que existem também três funções para aparar como descrito no próximo
 secção.
 
+<a id="trimming-support"></a>
 ### Suporte para aparar
 
 As rotinas genéricas de aparamento implementadas em AFL++ podem facilmente destruir o
@@ -295,6 +298,7 @@ depois de aparar, você deve chamá-lo você mesmo no final de seu sucesso
 Aparar!
 
 
+<a id="environment-variables"></a>
 ### Variáveis de Ambiente
 
 Opcionalmente, as seguintes variáveis de ambiente são suportadas:
@@ -316,8 +320,10 @@ Opcionalmente, as seguintes variáveis de ambiente são suportadas:
     additional messages about the performance and actions of your custom
     trimmer. Use this to see if it works :)
 
+<a id="3-usage"></a>
 ## 3) Uso
 
+<a id="prerequisite"></a>
 ### Pré-requisito
 
 Para os mutantes Python, é necessário o pacote de desenvolvimento python 3 ou 2.
@@ -337,6 +343,7 @@ Nota: para algumas distribuições, você também pode precisar do pacote `pytho
 Caso sua configuração seja diferente, defina as variáveis necessárias como esta:
 `PYTHON_INCLUDE=/path/to/python/include LDFLAGS=-L/path/to/python/lib make`.
 
+<a id="helpers"></a>
 ### Ajudantes
 
 Para os mutantes personalizados C/C++, você obtém um ponteiro para o `afl_state_t *afl` no
@@ -365,6 +372,7 @@ está vazio ou não contém `@@`, então o alvo recebe a entrada via
 assim, se `afl-fuzz` foi chamado com `-o out -S foobar`, então isso será definido como
 `out/foobar`.
 
+<a id="custom-mutator-preparation"></a>
 ### Preparação personalizada do mutante
 
 Para os mutadores C/C++, o código fonte deve ser compilado como um objeto compartilhado:
@@ -378,6 +386,7 @@ será chamado na ordem em que eles são especificados. Por exemplo, o primeiro
 A função `post_process` do `example_first.so` será chamada e então a de
 `example_second.so`.
 
+<a id="run"></a>
 ### Executar
 
 C/C++
@@ -395,11 +404,13 @@ export AFL_PYTHON_MODULE=example
 afl-fuzz /path/to/program
 ```
 
+<a id="4-example"></a>
 ## 4) Exemplo
 
 Ver [exemplo.c](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/custom_mutators/examples/example.c) e
 [exemplo.py](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/custom_mutators/examples/example.py).
 
+<a id="5-other-resources"></a>
 ## 5) Outros recursos
 
 - AFL libprotobuf mutator
@@ -413,6 +424,6 @@ Ver [exemplo.c](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/custom_mutators.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/custom_mutators.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

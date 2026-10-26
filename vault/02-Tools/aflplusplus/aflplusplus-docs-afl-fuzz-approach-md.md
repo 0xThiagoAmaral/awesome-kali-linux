@@ -58,6 +58,7 @@ Ferramentas.
 O fuzzer é cuidadosamente testado para fornecer desempenho fora da caixa de longe
 superior a fuzzing cego ou apenas ferramentas de cobertura.
 
+<a id="understanding-the-status-screen"></a>
 ## Compreender a tela de status
 
 Esta seção fornece uma visão geral da tela de status - mais dicas para
@@ -65,6 +66,7 @@ Resolução de problemas de avisos e texto vermelho mostrados na UI.
 
 Para o manual geral de instruções, consulte [README.md](aflplusplus-docs-readme-md.md).
 
+<a id="a-note-about-colors"></a>
 ### Uma nota sobre as cores
 
 A tela de status e as mensagens de erro usam cores para manter as coisas legíveis e
@@ -90,6 +92,7 @@ efeitos colaterais - desculpe por isso.
 
 Com isso fora do caminho, vamos falar sobre o que está realmente no tela...
 
+<a id="the-status-bar"></a>
 ### A barra de status
 
 ```text
@@ -103,6 +106,7 @@ mostrará o nome binário sendo fuzzed, ou o nome principal -M/-S/secundário
 para fuzzing paralelo. Segundo para o último é o modo de programação de energia a ser executado
 (padrão: rápido). Finalmente, o último item é o ID da CPU.
 
+<a id="process-timing"></a>
 ### Temporização do processo
 
 ```text
@@ -135,6 +139,7 @@ falhou uma verificação básica do cabeçalho.
 Se não houver novos caminhos aparecendo por um tempo, você vai eventualmente ver um grande
 alerta vermelho nesta seção, também :-)
 
+<a id="overall-results"></a>
 ### Resultados globais
 
 ```text
@@ -167,6 +172,7 @@ falhas únicas. Os casos de teste, quebras e travas podem ser explorados em temp
 navegando no diretório de saída, veja
 [#interpretação-saída](#interpretar-o-resultado).
 
+<a id="cycle-progress"></a>
 ### Progresso do ciclo
 
 ```text
@@ -183,6 +189,7 @@ inputs decidiu abandonar porque eles eram persistentemente timing out.
 O sufixo "*" às vezes mostrado na primeira linha significa que o
 o caminho processado não é "favorecido" (uma propriedade discutida mais tarde).
 
+<a id="map-coverage"></a>
 ### Cobertura do mapa
 
 ```text
@@ -224,6 +231,7 @@ Extremo.
 Em conjunto, os valores podem ser úteis para comparar a cobertura de vários
 diferentes tarefas fuzzing que dependem do mesmo binário instrumentado.
 
+<a id="stage-progress"></a>
 ### Progresso da fase
 
 ```text
@@ -281,6 +289,7 @@ O fuzzer irá avisá-lo explicitamente sobre alvos lentos, também. Se isto acon
 ver [best_práticas.md#melhorar a velocidade](aflplusplus-docs-best-practices-md.md#improving-speed)
 para ideias sobre como acelerar as coisas.
 
+<a id="findings-in-depth"></a>
 ### Resultados em profundidade
 
 ```text
@@ -303,6 +312,7 @@ Note que o contador de tempo- limite é um pouco diferente do contador de tempo-
 um inclui todos os casos de teste que excederam o tempo- limite, mesmo que não
 Exceda-a por uma margem suficiente para ser classificada como enforcamento.
 
+<a id="fuzzing-strategy-yields"></a>
 ### Rendimentos da estratégia fuzzing
 
 ```text
@@ -336,6 +346,7 @@ habilitar com -D)".
 
 Somente o que é ativado terá mostrado o contador.
 
+<a id="path-geometry"></a>
 ### Geometria do caminho
 
 ```text
@@ -404,6 +415,7 @@ pode significar que o código dentro de `__AFL_LOOP()` não está se comportando
 iterações subsequentes (por exemplo, devido a limpeza incompleta ou reinici
 o estado) e que a maioria do esforço fuzzing vai para o lixo.
 
+<a id="cpu-load"></a>
 ### Carregamento da CPU
 
 ```text
@@ -430,6 +442,7 @@ características de desempenho de cada um destes irá diferir bastante.
 Se você quiser uma medição mais precisa, você pode executar o utilitário `afl-gotcpu`
 da linha de comando.
 
+<a id="interpreting-output"></a>
 ## Interpretar o resultado
 
 Ver [# Entendendo-o-estrato-tela](#compreender-a-tela-de-status) para
@@ -469,6 +482,7 @@ no início do processo, mas isto deve diminuir rapidamente.
 Os nomes dos arquivos para falhas e falhas estão correlacionados com o pai,
 entradas de fila não- falhas. Isto deverá ajudar na depuração.
 
+<a id="visualizing"></a>
 ## Visualizando
 
 Se você tem gnuplot instalado, você também pode gerar alguns gráficos bonitos para qualquer
@@ -490,6 +504,7 @@ sudo make install
 Para saber mais sobre monitoramento remoto e visualização de métricas com o StatsD, consulte
 [rpc_statsd.md](aflplusplus-docs-rpc-statsd-md.md).
 
+<a id="addendum-status-and-plot-files"></a>
 ### Addendum: status e plot files
 
 Para a operação sem vigilância, algumas das informações da tela de status da chave também podem ser
@@ -578,6 +593,7 @@ e transforma-os em um veredicto de campanha, uma tendência, e classificação, 
 local ou sobre ssh. Veja
 [fuzzing_in_profundish.md](aflplusplus-docs-fuzzing-in-depth-md.md#e-the-status-of-the-fuzz-campaign).
 
+<a id="addendum-automatically-sending-metrics-with-statsd"></a>
 ### Addendum: enviando automaticamente as métricas com StatsD
 
 Em um ambiente CI ou ao executar vários fuzzers, pode ser tedioso registrar
@@ -606,6 +622,6 @@ progresso de cada estratégia...
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/afl-fuzz_approach.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/afl-fuzz_approach.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

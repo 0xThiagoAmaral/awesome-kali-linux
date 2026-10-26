@@ -21,12 +21,14 @@ source_scope: "Official English repository README/docs and available upstream Po
 
 [Go Report Card](https://goreportcard.com/report/github.com/OJ/gobuster/v3) [License](https://github.com/OJ/gobuster/blob/master/LICENSE) [Backers on Open Collective](https://opencollective.com/gobuster) [Sponsors on Open Collective](https://opencollective.com/gobuster)
 
+<a id="-introduction"></a>
 ## Introdução ao 💻
 
 > Uma ferramenta rápida e flexível de força bruta escrita em Go
 
 **Gobuster** é um diretório/arquivo de alto desempenho, DNS e ferramenta de força bruta de host virtual escrito em Go. Ele é projetado para ser rápido, confiável e fácil de usar para profissionais de segurança e testadores de penetração.
 
+<a id="-features"></a>
 ## □ Características
 
 - 🚀 **High Performance**: Digitalização multi-threadada com concurrência configurável
@@ -35,6 +37,7 @@ source_scope: "Official English repository README/docs and available upstream Po
 - 🐳 **Docker Support**: Disponível como um recipiente Docker
 - 🔧 **Extensible**: Digitalização baseada em padrões e listas de palavras personalizadas
 
+<a id="-what-can-gobuster-do"></a>
 ## 🎯 O que pode Gobuster fazer?
 
 - **Web Directory/File Enumeration**: Descubra diretórios e arquivos ocultos em servidores web
@@ -44,6 +47,7 @@ source_scope: "Official English repository README/docs and available upstream Po
 - Arquivo **TFTP Discovery**: Encontre arquivos em servidores TFTP
 - **Custom Fuzzing**: Flexível fuzzing com parâmetros personalizáveis
 
+<a id="-quick-start"></a>
 ## Início Rápido do 🚀
 
 ```bash
@@ -63,8 +67,10 @@ gobuster vhost -u https://example.com -w /path/to/wordlist.txt
 gobuster s3 -w /path/to/bucket-names.txt
 ```
 
+<a id="-installation"></a>
 ## Instalação do 📦
 
+<a id="quick-install-recommended"></a>
 ### Instalação Rápida (Recomendada)
 
 ```bash
@@ -73,12 +79,15 @@ go install github.com/OJ/gobuster/v3@latest
 
 **Requirements**: Go 1.24 ou superior
 
+<a id="alternative-installation-methods"></a>
 ### Métodos de instalação alternativos
 
+<a id="using-binary-releases"></a>
 #### Usando versões binárias
 
 Baixe binários pré-compilados do [página de lançamentos](https://github.com/OJ/gobuster/releases).
 
+<a id="using-docker"></a>
 #### Usar o Docker
 
 ```bash
@@ -89,6 +98,7 @@ docker pull ghcr.io/oj/gobuster:latest
 docker run --rm -it ghcr.io/oj/gobuster:latest dir -u https://example.com -w /usr/share/wordlists/dirb/common.txt
 ```
 
+<a id="building-from-source"></a>
 #### Compilando a partir do Código
 
 ```bash
@@ -98,6 +108,7 @@ go mod tidy
 go build
 ```
 
+<a id="troubleshooting-installation"></a>
 ### Solução de problemas de instalação
 
 Se você encontrar problemas:
@@ -106,6 +117,7 @@ Se você encontrar problemas:
 - Verifique suas variáveis de ambiente `$GOPATH` e `$GOBIN`
 - Verifique se o `$GOPATH/bin` está no seu `$PATH`
 
+<a id="-usage"></a>
 ## Uso do 🎯
 
 O Gobuster usa uma abordagem baseada no modo. Cada modo é projetado para tarefas específicas de enumeração:
@@ -114,6 +126,7 @@ O Gobuster usa uma abordagem baseada no modo. Cada modo é projetado para tarefa
 gobuster [mode] [options]
 ```
 
+<a id="getting-help"></a>
 ### Obter Ajuda
 
 ```bash
@@ -122,8 +135,10 @@ gobuster help [mode]            # Show help for specific mode
 gobuster [mode] --help          # Alternative help syntax
 ```
 
+<a id="-available-modes"></a>
 ### Modos disponíveis do 📊
 
+<a id="-directory-mode-dir"></a>
 #### Modo de diretório 🌐 (`dir`)
 
 Enumere diretórios e arquivos em servidores web.
@@ -150,6 +165,7 @@ gobuster dir -u https://example.com -w wordlist.txt -l
 gobuster dir -u https://example.com -w wordlist.txt -s 200,301,302
 ```
 
+<a id="-dns-mode-dns"></a>
 #### Modo 🔍 DNS (`dns`)
 
 Descubra subdomínios através da resolução DNS.
@@ -170,6 +186,7 @@ gobuster dns -do example.com -w wordlist.txt -r 8.8.8.8:53
 gobuster dns -do example.com -w wordlist.txt -t 50
 ```
 
+<a id="-virtual-host-mode-vhost"></a>
 #### Modo de máquina virtual 🏠 (`vhost`)
 
 Descubra hosts virtuais em servidores web.
@@ -180,6 +197,7 @@ Uso básico do **:**
 gobuster vhost -u https://example.com --append-domain -w wordlist.txt
 ```
 
+<a id="-s3-mode-s3"></a>
 #### Modo S3 (`s3`)
 
 Enumerar os baldes Amazon S3.
@@ -196,6 +214,7 @@ gobuster s3 -w bucket-names.txt
 gobuster s3 -w bucket-names.txt --debug
 ```
 
+<a id="-tftp-mode-tftp"></a>
 #### Modo 🖥 o TFTP (`tftp`)
 
 Enumere os arquivos nos servidores tftp.
@@ -206,6 +225,7 @@ Uso básico do **:**
 gobuster tftp -s 10.0.0.1 -w wordlist.txt
 ```
 
+<a id="-gcs-mode-gcs"></a>
 #### Modo GCS (`gcs`)
 
 Enumere os Baldes de Armazenamento da Google Cloud.
@@ -245,10 +265,12 @@ gobuster fuzz -u https://example.com -H "X-Custom-Header: FUZZ" -w wordlist.txt
 gobuster fuzz -u https://example.com -d "username=admin&password=FUZZ" -w passwords.txt
 ```
 
+<a id="-support"></a>
 ## Suporte ao 💰
 
 [Backers on Open Collective](https://opencollective.com/gobuster) [Sponsors on Open Collective](https://opencollective.com/gobuster)
 
+<a id="love-this-tool-back-it"></a>
 ### Adoras esta ferramenta?
 
 Se você já está nos apoiando, você rock. Se você não é, isso é legal também! Quer nos apoiar? [Tornar-se um financiador](https://opencollective.com/gobuster#backer)!
@@ -257,8 +279,10 @@ Se você já está nos apoiando, você rock. Se você não é, isso é legal tam
 
 Todos os fundos que são doados para este projeto serão doados para caridade. Um diário completo de doações de caridade estará disponível neste repositório à medida que forem processados.
 
+<a id="-common-use-cases"></a>
 ## 💡 Casos de Uso Comum
 
+<a id="web-application-security-testing"></a>
 ### Testes de segurança de aplicativos Web
 
 ```bash
@@ -272,6 +296,7 @@ gobuster dir -u https://api.target.com -w /usr/share/wordlists/dirb/common.txt -
 gobuster dir -u https://target.com -w admin-panels.txt -s 200,301,302,403
 ```
 
+<a id="dns-reconnaissance"></a>
 ### Reconhecimento DNS
 
 ```bash
@@ -279,6 +304,7 @@ gobuster dir -u https://target.com -w admin-panels.txt -s 200,301,302,403
 gobuster dns -do target.com -w /usr/share/wordlists/dnsrecon/subdomains-top1mil-5000.txt -t 50
 ```
 
+<a id="cloud-storage-assessment"></a>
 ### Avaliação do armazenamento em nuvem
 
 ```bash
@@ -289,37 +315,46 @@ gobuster s3 -w company-names.txt -v
 gobuster gcs -w company-names.txt -v
 ```
 
+<a id="-troubleshooting"></a>
 ## Resolução de Problemas do 🔧
 
+<a id="common-issues"></a>
 ### Questões Comuns
 
+<a id="permission-denied-or-access-denied"></a>
 #### "Permissão negada" ou "Acesso negado"
 
 - Tente reduzir a contagem de fios com a bandeira `-t`
 - Adicionar atrasos entre as solicitações com o `--delay`
 - Usar agente de usuário diferente com a bandeira `-a`
 
+<a id="connection-timeout"></a>
 #### Tempo limite de ligação
 
 - Aumentar o tempo- limite com a bandeira `--timeout`
 - Reduza a contagem de threads para alvos mais lentos
 - Verifique a sua ligação à Internet
 
+<a id="no-results-found"></a>
 #### "Nenhum resultado encontrado"
 
 - Verificar se o URL de destino está acessível
 - Tente diferentes listas de palavras
 - Verificar a filtragem do código de estado com a bandeira `-s`
 
+<a id="performance-issues"></a>
 ### Questões de desempenho
 
+<a id="slow-scanning"></a>
 #### Escaneamento lento
 
 - Aumentar a contagem de threads com a bandeira `-t` (mas tenha cuidado para não sobrecarregar o alvo)
 - Usar listas de palavras menores e mais direcionadas
 
+<a id="-best-practices"></a>
 ## Melhores práticas do 🎯
 
+<a id="security-testing-guidelines"></a>
 ### Orientações relativas aos testes de segurança
 
 1. **Sempre obter a autorização adequada** antes de testar qualquer alvo
@@ -328,6 +363,7 @@ gobuster gcs -w company-names.txt -v
 4. **Respect rate limits** e implementar atrasos se necessário
 5. **Monitor seu tráfego de rede** para evitar detecção
 
+<a id="wordlist-selection"></a>
 ### Selecção da Lista de Palavras
 
 - **Para aplicações web**: Use wordlists específicos para tecnologia (PHP, ASP.NET, etc.)
@@ -335,6 +371,7 @@ gobuster gcs -w company-names.txt -v
 - **For DNS**: Usar listas de palavras específicas para subdomínios com padrões comuns
 - **For cloud storage**: Use padrões específicos da empresa/marca
 
+<a id="output-management"></a>
 ### Gestão de Saídas
 
 ```bash
@@ -345,8 +382,10 @@ gobuster dir -u https://example.com -w wordlist.txt -o results.txt
 gobuster dir -u https://example.com -w wordlist.txt -q
 ```
 
+<a id="-additional-resources"></a>
 ## 📚 Recursos adicionais
 
+<a id="recommended-wordlists"></a>
 ### Listas de palavras recomendadas
 
 - **SecLists**: [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)

@@ -38,5 +38,85 @@
     "tool": "feroxbuster",
     "license": "MIT",
     "notices": 1
+  },
+  {
+    "tool": "above",
+    "license": "Apache-2.0",
+    "notices": 1
+  },
+  {
+    "tool": "adaptixc2",
+    "license": "GPL-3.0",
+    "notices": 1
+  },
+  {
+    "tool": "airgeddon",
+    "license": "GPL-3.0",
+    "notices": 1
+  },
+  {
+    "tool": "aflplusplus",
+    "license": "AGPL-3.0",
+    "notices": 3
+  },
+  {
+    "tool": "altdns",
+    "license": "Apache-2.0",
+    "notices": 1
+  },
+  {
+    "tool": "apple-bleee",
+    "license": "GPL-3.0",
+    "notices": 1
+  },
+  {
+    "tool": "arjun",
+    "license": "AGPL-3.0",
+    "notices": 1
+  },
+  {
+    "tool": "arp-scan",
+    "license": "GPL-3.0",
+    "notices": 1
+  },
+  {
+    "tool": "arsenal-ng",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "atomic-operator",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "autorecon",
+    "license": "GPL-3.0",
+    "notices": 1
+  },
+  {
+    "tool": "axel",
+    "license": "GPL-2.0",
+    "notices": 1
+  },
+  {
+    "tool": "azurehound",
+    "license": "GPL-3.0",
+    "notices": 2
+  },
+  {
+    "tool": "b374k",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "backdoor-factory",
+    "license": "BSD-3-Clause",
+    "notices": 2
+  },
+  {
+    "tool": "berate-ap",
+    "license": "BSD-2-Clause",
+    "notices": 1
   }
 ]

@@ -28,8 +28,8 @@ for tool,record in registry.items():
                 notices.append({'path':dest.relative_to(ROOT).as_posix(),'source_path':parts[0],
                                 'sha256':hashlib.sha256(data).hexdigest()})
     record['retained_notices']=notices
-    (cached/'source.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (cached/'source.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
     result.append({'tool':tool,'license':record['license_spdx'],'notices':len(notices)})
-(ROOT/'catalog/source-registry.json').write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(ROOT/'evidence/source-notices.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'catalog/source-registry.json').write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
+(ROOT/'evidence/source-notices.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
 print(json.dumps(result,ensure_ascii=False,indent=2))

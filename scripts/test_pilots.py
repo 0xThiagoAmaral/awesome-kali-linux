@@ -69,9 +69,9 @@ if 'temp' in locals():
 result=json.loads(normalized)
 out=ROOT/'evidence'
 out.mkdir(exist_ok=True)
-(out/'local-tests.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(out/'local-tests.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
 asset=ROOT/'vault/99-Assets/evidence'
 asset.mkdir(parents=True,exist_ok=True)
-(asset/'local-tests.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(asset/'local-tests.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
 print(json.dumps({'passed':passed,'checks':checks,'commands':len(records),'fixture_closed':True,'error':error},ensure_ascii=False,indent=2))
 raise SystemExit(0 if passed else 1)

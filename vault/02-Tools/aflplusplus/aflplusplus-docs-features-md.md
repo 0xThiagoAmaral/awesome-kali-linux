@@ -23,6 +23,7 @@ O AFL++ suporta o lvm do 3.8 até à versão 12, o fuzzing binário muito rápid
 QEMU 5.1 com laf-intel e Redqueen, modo FRIDA, modo unicórnio, plugin gcc, completo
 *BSD, Mac OS, Solaris e suporte Android e muito, muito, muito mais.
 
+<a id="features-and-instrumentation"></a>
 ## Características e instrumentação
 
 Note-se que o afl-gcc e o afl-clang foram removidos porque sua instrumentação está absolutamente desatualizada.
@@ -41,6 +42,7 @@ Note-se que o afl-gcc e o afl-clang foram removidos porque sua instrumentação 
 |Suporte a instantâneos [K]|(x)(8)|(x)(8)||(x)(5)||x||
 |Casos de teste de memória partilhada [L]|x|x|x86[_64]/arm64|x|x|x||
 
+<a id="more-information-about-features"></a>
 ## Mais informações sobre os recursos
 
 A. O padrão não é a cobertura thread-safe contra atualizações para melhor desempenho,
@@ -89,6 +91,7 @@ L. fuzzing mais rápido e menos syscall do kernel em cima pelo caso de fuzz na m
 entrega, ver
 [instrumentação/README.persistant_mode.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation/README.persistent_mode.md)
 
+<a id="more-information-about-instrumentation"></a>
 ## Mais informações sobre instrumentação
 
 1. Padrão para LLVM >= 9.0, variável de ambiente para versão mais antiga devido a uma
@@ -108,6 +111,7 @@ vindo muito rápido :-(
     extension
 12. O modo Nyx só é suportado no Linux e atualmente restrito ao x86_x64
 
+<a id="integrated-features-and-patches"></a>
 ## Características e patches integrados
 
 Entre outros, os seguintes recursos e patches foram integrados:
@@ -139,6 +143,6 @@ Então tudo em tudo isso é o melhor de AFL que está lá fora :-)
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/features.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/features.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

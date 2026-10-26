@@ -40,8 +40,10 @@ Isto é totalmente automático -- nenhuma especificação de formato, gramática
 
 * Detalhes e avaliações mais abrangentes em nosso trabalho de pesquisa: [FrameShift: Aprendendo a redimensionar entradas de fuzzer sem quebrá-los](https://arxiv.org/abs/2507.05421v1)
 
+<a id="how-it-works"></a>
 ## Como funciona
 
+<a id="discovery-the-frameshift-stage"></a>
 ### Descoberta (a etapa de mudança de quadro)
 
 Quando o afl- fuzz escolhe pela primeira vez um item de fila que ainda não foi analisado, ele é executado
@@ -76,6 +78,7 @@ Cada entrada analisada recebe uma `fs_meta_t` per-queue que armazena todas as de
 relações. Os campos já analisados estão marcados em um bitmap de pontos bloqueados para que eles
 não são re-testados.
 
+<a id="tracking-during-havoc"></a>
 ### Rastreamento (durante a destruição)
 
 Durante os estágios de destruição e splice, cada mutação de inserção e deleção é
@@ -88,6 +91,7 @@ que abrange a região afectada.
 Se uma mutação quebrar uma relação (por exemplo, inserir dentro de um campo rastreado),
 Essa relação está desactivada durante o resto da ronda de destruição actual.
 
+<a id="sanitization-before-execution"></a>
 ### Saneamento (antes da execução)
 
 Após todas as mutações numa única iteração de destruição, `fs_sanitize()`
@@ -98,6 +102,7 @@ aumentando drasticamente a chance de alcançar código de processamento profundo
 No início de cada nova iteração de estragos, os metadados da relação são restaurados para
 o seu estado original, para que as relações nunca se percam permanentemente.
 
+<a id="relation-model"></a>
 ## Modelo de relação
 
 Um campo de relação é descrito por quatro valores dinâmicos:
@@ -120,6 +125,7 @@ Quando os bytes são inseridos entre `anchor` e `insert`, o valor do campo é
 incrementado pelo tamanho da inserção. Quando os bytes são removidos daquela região, o
 O valor do campo é decrementado.
 
+<a id="environment-variables"></a>
 ## Variáveis de ambiente
 
 - **`AFL_FRAMESHIFT_DISABLE`** -- Definir para `1` para desativar o estágio de mudança de quadro e
@@ -137,6 +143,7 @@ crédito, de modo que uma única fatia não pode ultrapassar a sobrecarga config
 ultrapassada no início da campanha). Configure em `0.0` para desativar a análise, ou aumentar
 para `1.0` para análise completa ao custo de menos execuções de destruição.
 
+<a id="compile-time-constants"></a>
 ## Constantes de tempo de compilação
 
 As seguintes constantes são definidas em `src/afl-fuzz-frameshift.c` e podem ser
@@ -150,6 +157,7 @@ ajustado pela edição da fonte:
 |`FRAMESHIFT_TIME_BUDGET_MS`|2000|Difícil limite superior em uma única fatia de análise (ms); uma fatia admitida é tampado para o menor deste eo restante crédito de sobrecarga.|
 |`FRAMESHIFT_MIN_SLICE_MS`|200|A menor fatia que vale a pena admitir (ms); abaixo disso a entrada é deixada sem análise até que mais crédito overhead adquira.|
 
+<a id="when-to-use-frameshift"></a>
 ## Quando usar o FrameShift
 
 FrameShift é **enabled por padrão** e é mais eficaz para:
@@ -162,6 +170,7 @@ cedo porque um campo de tamanho ou offset já não corresponde.
 
 Overhead em alvos não estruturados é mínimo na prática, mas pode ser evitado completamente definindo `AFL_FRAMESHIFT_DISABLE=1`.
 
+<a id="source-files"></a>
 ## arquivos de código
 
 |arquivo|Sumário|
@@ -175,6 +184,6 @@ Overhead em alvos não estruturados é mínimo na prática, mas pode ser evitado
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/FrameShift.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/FrameShift.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

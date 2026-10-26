@@ -19,8 +19,10 @@ source_scope: "Repository root README and owned doc/docs/documentation Markdown 
 
 # Best practices
 
+<a id="contents"></a>
 ## Sumário
 
+<a id="targets"></a>
 ### Alvos
 
 * [Fuzzing de um alvo com código fonte disponível](#fuzzing-de-um-alvo-com-código-fonte-disponível)
@@ -29,18 +31,22 @@ source_scope: "Repository root README and owned doc/docs/documentation Markdown 
 * [Fuzzing um programa GUI](#fuzzing-um-programa-gui)
 * [Fuzzing de um serviço de rede](#fuzzing-de-um-serviço-de-rede)
 
+<a id="improvements"></a>
 ### Melhorias
 
 * [Melhorar a velocidade](#melhorar-a-velocidade)
 * [Melhorar a estabilidade](#melhorar-a-estabilidade)
 
+<a id="targets-1"></a>
 ## Alvos
 
+<a id="fuzzing-a-target-with-source-code-available"></a>
 ### Fuzzing de um alvo com código fonte disponível
 
 Para saber como furar um alvo se o código fonte estiver disponível, consulte
 [fuzzing_in_profundish.md](aflplusplus-docs-fuzzing-in-depth-md.md).
 
+<a id="fuzzing-a-target-with-dlopen-instrumented-libraries"></a>
 ### Fuzzing de um alvo com bibliotecas instrumentadas do dlopen
 
 Se um alvo fuzzing baseado em código fonte carrega bibliotecas instrumentadas com
@@ -60,11 +66,13 @@ Você vai ver muitos acidentes na UI.
 Note que este não é um problema se você usar o Inferno `afl-gcc-fast`
 instrumentação.
 
+<a id="fuzzing-a-binary-only-target"></a>
 ### Fuzzing de um alvo somente binário
 
 Para um guia abrangente, consulte
 [fuzzing_binary- only_targets. md](aflplusplus-docs-fuzzing-binary-only-targets-md.md).
 
+<a id="fuzzing-a-gui-program"></a>
 ### Fuzzing um programa GUI
 
 Para fuzzing o próprio *GUI*, ver [custom_mutators/guifuzz/README.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/custom_mutators/guifuzz/README.md).
@@ -80,6 +88,7 @@ fuzzing.
 Então, crie um novo `main()` que apenas lê o caso de teste e chama o
 funcionalidade para o processamento da entrada que o programa GUI está usando.
 
+<a id="fuzzing-a-network-service"></a>
 ### Fuzzing de um serviço de rede
 
 Fuzzing um serviço de rede não funciona "fora da caixa".
@@ -110,8 +119,10 @@ Mas desesperado:
 ([https://github.com/aflnet/aflnet](https://github.com/aflnet/aflnet))
 permite- lhe definir o estado da rede com diferentes tipos de pacotes de dados.
 
+<a id="improvements-1"></a>
 ## Melhorias
 
+<a id="improving-speed"></a>
 ### Melhorar a velocidade
 
 1. Utilizar [modo_ lvm](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation/README.llvm.md): afl-clang-lto (llvm >=
@@ -136,6 +147,7 @@ mais rápido do que em qualquer outro sistema de arquivos de diário.
 7. Use seus núcleos
 ([fuzzing_in_profund.md:3c) Usando vários núcleos](aflplusplus-docs-fuzzing-in-depth-md.md#c-using-multiple-cores))!
 
+<a id="improving-stability"></a>
 ### Melhorar a estabilidade
 
 Para fuzzing, um alvo 100% estável que cobre todas as bordas é o melhor caso.
@@ -228,6 +240,6 @@ Instrumentos `PCGUARD` e `afl-clang-lto` `LTO`.
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/best_practices.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/best_practices.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

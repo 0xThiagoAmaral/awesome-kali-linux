@@ -32,6 +32,7 @@ Alvo.
 3. Execute o fuzzing do alvo alterando aleatoriamente a entrada e avaliando se
 essa entrada foi processada em um novo caminho no binário alvo.
 
+<a id="0-common-sense-risks"></a>
 ## 0. Riscos de bom senso
 
 Por favor, tenha em mente que, semelhante a muitos outros computacionalmente-intensivos
@@ -69,8 +70,10 @@ exemplo, a seguinte linha executará um recipiente Docker com toda esta predefin
   # docker run -ti --mount type=tmpfs,destination=/ramdisk -e AFL_TMPDIR=/ramdisk aflplusplus/aflplusplus
   ```
 
+<a id="1-instrumenting-the-target"></a>
 ## 1. Instrumentação do alvo
 
+<a id="a-selecting-the-best-afl-compiler-for-instrumenting-the-target"></a>
 ### a) Selecionando o melhor compilador AFL++ para instrumentar o alvo
 
 AFL++ vem com um compilador central `afl-cc` que incorpora vários diferentes
@@ -134,6 +137,7 @@ Porque não são aceites opções de linha de comandos específicas do AFL++ (ao
 variáveis, que podem ser listadas com `afl-cc -hh` ou pesquisadas em
 [env_variables.md](aflplusplus-docs-env-variables-md.md).
 
+<a id="b-selecting-instrumentation-options"></a>
 ### b) Selecionando opções de instrumentação
 
 Se você instrumentar com o modo LTO (afl-clang-fast/afl-clang-lto), o seguinte
@@ -212,6 +216,7 @@ O AFL++ executa a contagem "nunca zero" no seu mapa de bits. Você pode ler mais
 Aqui:
 * [instrumentação/README.llvm.md#8-nunca zero-contadores](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation/README.llvm.md#8-neverzero-counters)
 
+<a id="c-selecting-sanitizers"></a>
 ### c) Selecionando higiénicos
 
 É possível usar higienizadores ao instrumentar alvos para fuzzing, que
@@ -276,6 +281,7 @@ os sanitizers estão habilitados. Se o alvo usar estes códigos de saída, poder
 positivos entre as falhas salvas. LSAN usa código de saída 23 e MSAN usa saída
 Código 86.
 
+<a id="d-modifying-the-target"></a>
 ### d) Modificação do alvo
 
 Se o alvo tiver funcionalidades que tornem o fuzzing mais difícil, por exemplo, somas de verificação,
@@ -293,6 +299,7 @@ produtos, eliminando estes controlos dentro destes blocos específicos AFL++:
 
 Todos os compiladores AFL++ definirão esta definição de pré-processador automaticamente.
 
+<a id="e-instrumenting-the-target"></a>
 ### e) Instrumentação do objectivo
 
 Nesta etapa, o código fonte alvo é compilado para que ele possa ser fuzzed.
@@ -325,6 +332,7 @@ aborta, então defina o `export AFL_NOOPT=1` que então se comportará como o
 compilador real e execute o passo de configuração separadamente. Para construir o alvo
 depois esta opção tem que ser desactivada novamente!
 
+<a id="configure"></a>
 #### configurar
 
 Para sistemas de compilação `configure`, isso geralmente é feito por:
@@ -349,6 +357,7 @@ Note que se você estiver usando o compilador afl-clang-lto (melhor) você tamb�
 definir AR para lvm-ar[-VERSION] e RANLIB para llvm-ranlib[-VERSION] - tal como é
 descrito em [instrumentação/README.lto.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation/README.lto.md).
 
+<a id="meson-build-system"></a>
 #### Sistema de Compilação de Mesão
 
 Para o Meson Build System, você tem que definir o compilador AFL++ com
@@ -358,6 +367,7 @@ Primeiro comando!
 CC=afl-cc CXX=afl-c++ meson
 ```
 
+<a id="other-build-systems-or-if-configurecmake-didnt-work"></a>
 #### Outros sistemas de compilação ou se configurar/cmake não funcionou
 
 Às vezes `cmake` e `configure` não captam o compilador AFL++ ou o
@@ -370,6 +380,7 @@ compilador (e/ou `RANLIB` e `AR`).
 Em complexos, estranhos, sistemas de construção alienígena você pode tentar este projeto puro:
 [https://github.com/fuzzah/exeptor](https://github.com/fuzzah/exeptor)
 
+<a id="linker-scripts"></a>
 #### Scripts do linker
 
 Se o projeto usar scripts do linker para ocultar os símbolos exportados pelo
@@ -388,6 +399,7 @@ A solução é modificar o script linker para adicionar:
 }
 ```
 
+<a id="f-better-instrumentation"></a>
 ### f) Melhor instrumentação
 
 Se você apenas fuzz um programa alvo como-is, você está desperdiçando uma grande oportunidade para
@@ -405,6 +417,7 @@ para mais pormenores.
 Basicamente, se você não fuzz um alvo em modo persistente, então você é apenas
 fazendo-o por um hobby e não profissionalmente :-).
 
+<a id="g-libfuzzer-fuzzer-harnesses-with-llvmfuzzertestoneinput"></a>
 ### g) Arreios libfuzzer fuzzer com LLVMFuzzerTestOneInput()
 
 libfuzzer `LLVMFuzzerTestOneInput()` arneses são o padrão defacto para
@@ -432,11 +445,13 @@ uma habilidade própria. Para uma caminhada prática do que faz um arnês
 eficaz - e os erros comuns que aleijam um - ver
 [https://srlabs.de/blog/unlocking-secrets-effective-fuzzing-harness](https://srlabs.de/blog/unlocking-secrets-effective-fuzzing-harness).
 
+<a id="2-preparing-the-fuzzing-campaign"></a>
 ## 2. Preparando a campanha fuzzing
 
 Como você fuzz o alvo com entrada mutada, tendo como entradas diversas para o
 O alvo, tanto quanto possível, melhora muito a eficiência.
 
+<a id="a-collecting-inputs"></a>
 ### a) Recolha de entradas
 
 Para funcionar corretamente, o fuzzer requer um ou mais arquivos iniciais que
@@ -454,6 +469,7 @@ dados normais que recebe e processa para um arquivo e usa estes.
 Você pode encontrar muitos bons exemplos de iniciar arquivos no
 Subdiretório [casos de ensaio/](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/testcases) que vem com esta ferramenta.
 
+<a id="b-making-the-input-corpus-unique"></a>
 ### b) Tornar o corpus de entrada único
 
 Use a ferramenta AFL++ `afl-cmin` para remover entradas do corpus que não
@@ -496,6 +512,7 @@ ser usado), e `-o` pode aparecer no início ou no fim:
 afl-merge CORPUS NEW_INPUTS1 NEW_INPUTS2 -- bin/target -someopt @@
 ```
 
+<a id="c-minimizing-all-corpus-files"></a>
 ### c) Minimizar todos os arquivos de corpus
 
 Quanto mais curtos os arquivos de entrada que ainda atravessam o mesmo caminho dentro do alvo,
@@ -514,6 +531,7 @@ Este passo também pode ser paralelizado, por exemplo, com `parallel`.
 
 Note que este passo é bastante opcional embora.
 
+<a id="done"></a>
 ### Feito!
 
 A pasta INPUTS_ UNIQUE/ do [passo b](#b-tornar-o-corpus-de-entrada-único) -
@@ -521,6 +539,7 @@ ou até melhor a entrada do diretório/ se você minimizou o corpus em
 [passo c](#c-minimizar-todos-os-arquivos-de-corpus) - é o corpus de entrada resultante
 diretório a ser usado em fuzzing! :-)
 
+<a id="3-fuzzing-the-target"></a>
 ## 3. Fuzzing o alvo
 
 Nesta etapa final, fuzz o alvo. Não há muitas opções importantes
@@ -530,6 +549,7 @@ fuzzing, que tornará o fuzzing muito mais útil.
 Se você apenas usar uma instância para fuzzing, então você é fuzzing apenas por diversão e
 não é grave :-)
 
+<a id="a-running-afl-fuzz"></a>
 ### a) Correndo afl-fuzz
 
 Antes mesmo de fazer uma execução de teste de afl-fuzz, execute o `sudo afl-system-config` (on
@@ -621,6 +641,7 @@ status é:
 Todos os rótulos são explicados em
 [afl-fuzz_approach.md#compreendendo-o-estado-tela](aflplusplus-docs-afl-fuzz-approach-md.md#understanding-the-status-screen).
 
+<a id="b-keeping-memory-use-and-timeouts-in-check"></a>
 ### b) Manter o uso da memória e os intervalos de tempo em cheque
 
 Os limites de memória não são aplicados pelo afl-fuzz por padrão e o sistema pode acabar
@@ -640,6 +661,7 @@ justo tempo alocando e inicializando megabytes de memória quando
 Os valores baixos de `-m` podem fazê-los desistir mais cedo
 e não perder tempo com a CPU.
 
+<a id="c-using-multiple-cores"></a>
 ### c) Usando múltiplos núcleos
 
 Se você quer seriamente fuzz, em seguida, use tantos núcleos / threads como possível para
@@ -721,6 +743,7 @@ diretório de um fuzzer diferente é, por exemplo, `-F /src/target/honggfuzz`. U
 honggfuzz (com `-n 1` ou `-n 2`) e libfuzzer em paralelo é altamente
 Recomendado!
 
+<a id="d-using-multiple-machines-for-fuzzing"></a>
 ### d) Usando várias máquinas para fuzzing
 
 Talvez você tenha mais de uma máquina que você quer fuzz o mesmo alvo em. Iniciar
@@ -766,6 +789,7 @@ Para fazer a sincronização imediatamente, envie-lhe um `SIGUSR2`, por exemplo.
 de todos os diretórios estrangeiros `-F` - é executado assim que a entrada da fila que
 está atualmente sendo fuzzed está feito, por isso ele não joga fora nenhum trabalho.
 
+<a id="e-the-status-of-the-fuzz-campaign"></a>
 ### e) O status da campanha de fuzz
 
 AFL++ vem com o script `afl-whatsup` para mostrar o status do fuzzing
@@ -822,6 +846,7 @@ afl-plot, que gera um arquivo index.html e gráficos que mostram como o
 A instância fuzzing está a executar. A sintaxe é `afl-plot instance_dir web_dir`,
 Por exemplo, `afl-plot out/default /srv/www/htdocs/plot`.
 
+<a id="f-stopping-fuzzing-restarting-fuzzing-adding-new-seeds"></a>
 ### f) Parar o fuzzing, reiniciar o fuzzing, adicionar novas sementes
 
 Para parar uma corrida afl-fuzz, pressione Control-C.
@@ -835,6 +860,7 @@ Se você quiser adicionar novas sementes a uma campanha fuzzing, você pode usar
 afl-addseeds -i newseeds-an-be-file-or-directory -o out-of-the-fuzzing-campaign
 ```
 
+<a id="g-checking-the-coverage-of-the-fuzzing"></a>
 ### g) Verificando a cobertura do fuzzing
 
 O valor `corpus count` é um indicador ruim para verificar quão boa a cobertura
@@ -889,6 +915,7 @@ campanhas individuais fuzzing cada com uma destas opções definidas. Por exempl
 fuzz uma biblioteca para converter formatos de imagem e seu alvo é o png para tiff API,
 então você não tocará em nenhuma das outras APIs e recursos da biblioteca.
 
+<a id="h-how-long-to-fuzz-a-target"></a>
 ### h) Quanto tempo demora a furar um alvo?
 
 Esta é uma pergunta difícil. Basicamente, se nenhum caminho novo é encontrado por um longo tempo
@@ -901,6 +928,7 @@ Manter a fila/ directório (para fuzzings futuros dos mesmos ou alvos semelhante
 e usá-los para semear outros bons fuzzers como libfuzzer com o interruptor -entrópico
 Ou Honggfuzz.
 
+<a id="i-improve-the-speed"></a>
 ### i) Melhorar a velocidade!
 
 * Usar o [modo persistente](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation/README.persistent_mode.md) (x2- x20
@@ -920,6 +948,7 @@ bit mais rápido do que em qualquer outro sistema de arquivos de diário.
 * Executar o `sudo afl-system-config` antes de iniciar a primeira instância afl-fuzz após
 uma reinicialização.
 
+<a id="j-going-beyond-crashes"></a>
 ### j) Indo além dos acidentes
 
 Fuzzing é uma técnica maravilhosa e subutilizada para descobrir não-crashing
@@ -944,6 +973,7 @@ condicional com `#ifdef FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION` (uma bandeira 
 compartilhado com libfuzzer e honggfuzz) ou `#ifdef __AFL_COMPILER` (este é
 apenas para AFL++).
 
+<a id="k-known-limitations--areas-for-improvement"></a>
 ### k) Limitações e áreas conhecidas para melhoria
 
 Aqui estão algumas das advertências mais importantes para AFL++:
@@ -986,6 +1016,7 @@ para você, por favor consulte
 
 Além disso, consulte [INSTALL. md](aflplusplus-docs-install-md.md) para dicas específicas da plataforma.
 
+<a id="4-triaging-crashes"></a>
 ## 4. Triaging quebras
 
 O agrupamento de falhas baseado em cobertura geralmente produz um pequeno conjunto de dados que
@@ -1038,6 +1069,7 @@ conter gravidade e outras informações.
 casr-afl -i /path/to/afl/out/dir -o /path/to/casr/out/dir
 ```
 
+<a id="if-crashes-do-not-reproduce"></a>
 ### Se as falhas não se reproduzirem
 
 Às vezes, os resultados do AFL++ não podem ser reproduzidos.
@@ -1101,6 +1133,7 @@ Como isso pode parecer pode, por exemplo, ser visto na configuração do AFL++ n
 e
 [clusterfuzz](https://github.com/google/clusterfuzz/blob/master/src/clusterfuzz/_internal/bot/fuzzers/afl/launcher.py).
 
+<a id="the-end"></a>
 ## Fim
 
 Confira o [Perguntas Frequentes](aflplusplus-docs-faq-md.md). Talvez ele responda à sua pergunta (que você pode não
@@ -1119,6 +1152,6 @@ Note que também existem muitas ferramentas lá fora que ajudam fuzzing com AFL+
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/fuzzing_in_depth.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/fuzzing_in_depth.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

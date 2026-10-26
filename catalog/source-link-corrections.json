@@ -1,0 +1,7 @@
+{
+  "arsenal-ng": {"#-cheat-file-format": "#cheat-file-format"},
+  "katana": {"#-output-template": "#output"},
+  "naabu": {"#cdn-waf-exclusion": "#cdnwaf-exclusion"},
+  "feroxbuster": {"#contributors-": "#contributors"},
+  "nuclei": {"#license": "@retained-license", "#licença": "@retained-license"}
+}

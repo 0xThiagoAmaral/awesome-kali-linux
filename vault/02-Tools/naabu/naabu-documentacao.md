@@ -32,14 +32,14 @@ source_scope: "Official English repository README/docs and available upstream Po
 </p>
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#installation-instructions">Installation</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#running-naabu">Running naabu</a> •
-  <a href="#configuration-file">Config</a> •
-  <a href="#nmap-integration">NMAP integration</a> •
-  <a href="#cdn-waf-exclusion">CDN/WAF Exclusion</a> •
-  <a href="https://discord.gg/projectdiscovery">Discord</a>
+<a href="#features">Características</a> •
+<a href="#installation-instructions">Instalação</a> •
+<a href="#usage">Usage</a> •
+<a href="#running-naabu">Running naabu</a> •
+<a href="#configuration-file">Config</a> •
+Integração <a href="#nmap-integration">NMAP</a> •
+<a href="#cdnwaf-exclusion">CDN/WAF Exclusão</a> •
+<a href="https://discord.gg/projectdiscovery">Discord</a>
 </p>
 
 Naabu é uma ferramenta de digitalização de portas escrita em Go que lhe permite enumerar portas válidas para máquinas de uma forma rápida e confiável. É uma ferramenta realmente simples que faz scans rápidas SYN/CONNECT/UDP na máquina/lista de máquinas e listas
@@ -197,6 +197,7 @@ Baixe o pronto para executar [binário](https://github.com/projectdiscovery/naab
 
 Em distribuições baseadas em musl, como Alpine, use o arquivo de lançamento `linux_<arch>_musl`.
 
+<a id="prerequisite"></a>
 ## Pré-requisito
 
 > **Note**: antes de instalar o naabu, certifique-se de instalar a biblioteca `libpcap` para captura de pacotes.
@@ -204,6 +205,7 @@ Em distribuições baseadas em musl, como Alpine, use o arquivo de lançamento `
 Para instalar o libpcap **Linux**: `sudo apt install -y libpcap-dev`, em **Alpino**: `apk add libpcap`, em **Mac**: `brew install libpcap`, em **Janelas**: instalar [Npcap](https://npcap.com/)
 
 
+<a id="installing-naabu"></a>
 ## Instalando o Naabu
 
 ```sh

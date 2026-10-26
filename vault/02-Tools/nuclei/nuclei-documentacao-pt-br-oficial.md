@@ -77,7 +77,7 @@ source_scope: "Official English repository README/docs and available upstream Po
 - [**`Templates do Nuclei, Comunidade e Recompensas`**](#templates-do-nuclei-comunidade-e-recompensas-) 💎
 - [**`Nossa Missão`**](#nossa-missão)
 - [**`Contribuidores`**](#contribuidores-heart) ❤
-- [**`Licença`**](#licença)
+- [**`Licença`**](../../99-Assets/upstream/nuclei/LICENSE.txt)
 
 <br>
 <br>

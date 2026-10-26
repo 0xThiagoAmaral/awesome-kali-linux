@@ -6,5 +6,17 @@
   "aflplusplus": {
     "error": "ValueError('Explicit documentation-compatible repository license not confirmed: AFLplusplus/AFLplusplus AGPL-3.0')",
     "resolution": "Confirm applicable source license or choose another official documentation source; do not silently mirror unlicensed content"
+  },
+  "amass": {
+    "error": "ValueError('Explicit documentation-compatible repository license not confirmed: OWASP/Amass NOASSERTION')",
+    "resolution": "Confirm applicable source license or choose another official documentation source; do not silently mirror unlicensed content"
+  },
+  "armitage": {
+    "error": "ValueError('No documentation acquired for armitage')",
+    "resolution": "Confirm applicable source license or choose another official documentation source; do not silently mirror unlicensed content"
+  },
+  "bettercap-ui": {
+    "error": "ValueError('Explicit documentation-compatible repository license not confirmed: bettercap/ui None')",
+    "resolution": "Confirm applicable source license or choose another official documentation source; do not silently mirror unlicensed content"
   }
 }

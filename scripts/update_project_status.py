@@ -11,6 +11,11 @@ subprocess.run([sys.executable,str(ROOT/'scripts/update_documentation_coverage.p
 imports=json.loads((ROOT/'catalog/imported-documentation.json').read_text(encoding='utf-8'))
 sources=json.loads((ROOT/'catalog/source-registry.json').read_text(encoding='utf-8'))
 coverage=json.loads((ROOT/'catalog/documentation-coverage.json').read_text(encoding='utf-8'))
+sheet_path=ROOT/'catalog/cheatsheet-provenance.json'
+sheets=json.loads(sheet_path.read_text(encoding='utf-8')) if sheet_path.exists() else {}
+pub_path=ROOT/'catalog/publication.json'
+publication=json.loads(pub_path.read_text(encoding='utf-8')) if pub_path.exists() else {}
+publication_status='[Publicado na branch main]('+publication['repository']+') — marco verificado em '+publication['verified_date'] if publication.get('published') else 'Pendente de autenticação e envio'
 documents=[d for x in imports.values() for d in x['documents']]
 native=sum(d.get('translation_method')=='upstream-portuguese' for d in documents)
 machine=len(documents)-native
@@ -86,13 +91,14 @@ lines=['---','title: "Documentação offline — acervo"','type: "moc"','status:
        '',
        'Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.',
        '',
-       '| Ferramenta | Documentos locais | Licença da fonte | Situação |','|---|---|---|---|']
+       '| Ferramenta | Documentos locais | Consulta rápida | Licença da fonte | Situação |','|---|---|---|---|---|']
 for tool,record in sorted(imports.items()):
     links=[]
     for doc in record['documents']:
         rel=pathlib.Path(doc['note']).relative_to('vault').as_posix()
         links.append('['+doc['source_path']+'](../'+rel+')')
-    lines.append('| '+tool+' | '+' · '.join(links)+' | '+record['license_spdx']+' | Revisão pendente |')
+    sheet='[Comandos essenciais](../'+pathlib.Path(sheets[tool]['note']).relative_to('vault').as_posix()+')' if tool in sheets else 'Pendente'
+    lines.append('| '+tool+' | '+' · '.join(links)+' | '+sheet+' | '+record['license_spdx']+' | Revisão pendente |')
 put(pathlib.Path('vault/01-Maps/documentacao-offline.md'),'\n'.join(lines))
 home=ROOT/'vault/00-Home.md'
 text=home.read_text(encoding='utf-8')
@@ -109,9 +115,10 @@ put(pathlib.Path('docs/COBERTURA.md'),f"""# Cobertura real
 | Traduções automáticas | {machine} documentos, ainda sem revisão humana integral |
 | Português oficial upstream | {native} documento(s) |
 | Blocos de código preservados | {blocks}, sujeitos à conferência de integridade atual |
+| Folhas de comandos upstream | {len(sheets)} folhas; {sum(len(x['recipes']) for x in sheets.values())} exemplos literais, não executados |
 | Ferramentas com documentação integral e revisão concluídas | 0 |
 | Todo o Kali full/everything concluído | Não |
-| Publicação GitHub | Pendente de autenticação e envio |
+| Publicação GitHub | {publication_status} |
 
 O acervo está em expansão. README, notas-piloto, links e pastas não são contados como manual completo.
 As pendências individuais e critérios de aceite estão em catalog/documentation-coverage.json.
@@ -128,6 +135,7 @@ text+=marker+f"""
 Já há **{len(documents)} documentos de {len(imports)} ferramentas** no
 [acervo offline](vault/01-Maps/documentacao-offline.md), com originais, licenças e hashes.
 São traduções automáticas ou português fornecido upstream, devidamente identificados.
+O acervo também inclui **{len(sheets)} folhas de comandos** com exemplos oficiais e procedência verificável.
 Isso **não** significa documentação integral das 820 ferramentas nem revisão humana concluída.
 
 [Cobertura por ferramenta](catalog/documentation-coverage.csv) ·
@@ -151,9 +159,11 @@ for value in ['*.tmp','evidence/*-job.json']:
 ignore.write_bytes(t.encode('utf-8'))
 attrs=ROOT/'.gitattributes'
 t=attrs.read_text(encoding='utf-8')
-for value in ['sources/upstream/** -text -diff','vault/02-Tools/*/*documentacao*.md -text whitespace=-blank-at-eol',
+for value in ['sources/upstream/** -text -diff','vault/02-Tools/*/*documentacao*.md -text whitespace=-blank-at-eol,-space-before-tab',
               '# Preserve literal upstream code whitespace and verbatim license endings.',
               'vault/02-Tools/*/*-docs-*.md -text whitespace=-blank-at-eol',
+              'vault/02-Tools/*/*-cheatsheet-upstream.md -text whitespace=-blank-at-eol',
+              'vault/99-Assets/upstream/** -text whitespace=-blank-at-eof',
               'LICENSE whitespace=-blank-at-eof','LICENSES/*.txt whitespace=-blank-at-eof']:
     if value not in t:
         t+='\n'+value+'\n'
@@ -162,6 +172,15 @@ workflow=ROOT/'.github/workflows/validate.yml'
 t=workflow.read_text(encoding='utf-8')
 if 'validate_documentation.py' not in t:
     t+='      - name: Validate imported documentation integrity\n        run: python3 scripts/validate_documentation.py\n'
+if 'validate_cheatsheets.py' not in t:
+    t+='      - name: Validate exact quick-reference examples\n        run: python3 scripts/validate_cheatsheets.py\n'
+if 'test_documentation_pipeline.py' not in t:
+    t+='      - name: Test documentation transformation fixtures\n        run: python3 scripts/test_documentation_pipeline.py\n'
+if 'audit_offline_anchors.py' not in t:
+    t+='      - name: Audit local document fragments\n        run: python3 scripts/audit_offline_anchors.py\n'
+if 'verify_release_manifest.py' not in t:
+    t=t.replace('      - name: Validate local notes and links',
+                '      - name: Verify byte-exact release files\n        run: python3 scripts/verify_release_manifest.py\n      - name: Validate local notes and links')
 workflow.write_bytes(t.encode('utf-8'))
 put(pathlib.Path('requirements-translation.txt'),'ctranslate2==4.8.4\nsentencepiece==0.2.1')
 print(json.dumps({'documents':len(documents),'tools':len(imports),'machine':machine,'official_portuguese':native,

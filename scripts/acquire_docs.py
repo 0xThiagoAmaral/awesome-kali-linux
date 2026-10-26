@@ -93,7 +93,7 @@ def acquire(tool,cache):
             'archive_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),
             'documents':documents,'assets':assets,'source_scope':'Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage',
             'kali_page_mirrored':False,'translation_status':'pending'}
-    lock.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    lock.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
     return record
 
 def main():
@@ -125,10 +125,10 @@ def main():
             if isinstance(e,urllib.error.HTTPError) and e.code in [403,429]:
                 blockers.pop(tool,None)
                 break
-        registry.write_text(json.dumps(current,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-        blockers_file.write_text(json.dumps(blockers,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        registry.write_text(json.dumps(current,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
+        blockers_file.write_text(json.dumps(blockers,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
     result={'acquired_tools':len(current),'documents':sum(len(x['documents']) for x in current.values()),'failures':failures}
-    (ROOT/'evidence/source-acquisition.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (ROOT/'evidence/source-acquisition.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
     print(json.dumps(result),flush=True)
     return 1 if failures else 0
 

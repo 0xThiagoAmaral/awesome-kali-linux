@@ -34,6 +34,7 @@ Uma web rápida fuzzer escrita em Go.
     - [Interactive mode](#modo-interativo)
 
 
+<a id="installation"></a>
 ## Instalação
 
 - [Transferir](https://github.com/ffuf/ffuf/releases/latest) um binário pré-construído do [página de lançamentos](https://github.com/ffuf/ffuf/releases/latest), desempacote e execute!
@@ -56,6 +57,7 @@ _or_
 1. Ffuf depende de Go 1.20 ou superior.
 2. Uma compilação ir de um checkout mostra `git-<date>-<commit>` em vez da tag. Uma compilação local não é uma versão oficial, mesmo quando você está sentado em uma tag, e informações de compilação incorporadas do Go nos dá o commit, mas não o nome da tag — então nós superficiemos o commit exato de que foi construído. Os binários versionados autoritários são os da página de lançamentos.
 
+<a id="example-usage"></a>
 ## Utilização do exemplo
 
 Os exemplos de uso abaixo mostram apenas as tarefas mais simples que você pode realizar usando `ffuf`.
@@ -69,6 +71,7 @@ Michael Skelton ([@ codingo](https://github.com/codingo)).
 
 Você também pode praticar suas varreduras ffuf contra um host ao vivo com diferentes lições e usar casos localmente usando o recipiente de docker https://github.com/adamtlangley/ffufme ou contra a versão hospedada ao vivo no http://ffuf.me criado por Adam Langley [@adamtlangley](https://twitter.com/adamtlangley).
 
+<a id="typical-directory-discovery"></a>
 ### Descoberta de diretórios típica
 
 [asciicast](https://asciinema.org/a/211350)
@@ -79,6 +82,7 @@ Usando a palavra- chave FUZZ no final do URL (`-u`):
 ffuf -w /path/to/wordlist -u https://target/FUZZ
 ```
 
+<a id="virtual-host-discovery-without-dns-records"></a>
 ### Descoberta virtual da máquina (sem registos DNS)
 
 [asciicast](https://asciinema.org/a/211360)
@@ -103,6 +107,7 @@ Se o nome do parâmetro for conhecido, os valores podem ser fuzzed da mesma form
 ffuf -w /path/to/values.txt -u https://target/script.php?valid_name=FUZZ -fc 401
 ```
 
+<a id="post-data-fuzzing"></a>
 ### Dados POST fuzzing
 
 Esta é uma operação muito simples, novamente usando a palavra-chave `FUZZ`. Este exemplo é fuzzing apenas parte da solicitação POST. Estamos novamente filtrando as respostas 401.
@@ -111,6 +116,7 @@ Esta é uma operação muito simples, novamente usando a palavra-chave `FUZZ`. E
 ffuf -w /path/to/postdata.txt -X POST -d "username=admin\&password=FUZZ" -u https://target/login.php -fc 401
 ```
 
+<a id="maximum-execution-time"></a>
 ### Tempo máximo de execução
 
 Se você não quiser que o ffuf seja executado indefinidamente, você pode usar o `-maxtime`. Isto para o __ todo o processo __ após um determinado tempo (em segundos).
@@ -127,6 +133,7 @@ ffuf -w /path/to/wordlist -u https://target/FUZZ -maxtime-job 60 -recursion -rec
 
 Também é possível combinar ambas as bandeiras limitando o tempo máximo de execução por tarefa, bem como o tempo total de execução. Se você não usar a recursão, então ambas as bandeiras se comportam igualmente.
 
+<a id="using-external-mutator-to-produce-test-cases"></a>
 ### Usando mutante externo para produzir casos de teste
 
 Para este exemplo, vamos fuzz JSON dados que é enviado sobre POST. [Radamsa](https://gitlab.com/akihe/radamsa) é usado como o mutador.
@@ -149,6 +156,7 @@ radamsa -n 1000 -o %n.txt example1.txt example2.txt
 ffuf --input-cmd 'cat $FFUF_NUM.txt' -H "Content-Type: application/json" -X POST -u https://ffuf.io.fi/ -mc all -fc 400
 ```
 
+<a id="configuration-files"></a>
 ### Arquivos de configuração
 
 Ao executar o ffuf, ele primeiro verifica se existe um arquivo de configuração padrão. O caminho padrão para um arquivo `ffufrc` é
@@ -171,6 +179,7 @@ parâmetro.
   <img width="250" src="../../99-Assets/upstream/ffuf/_img/ffuf_juggling_250.png">
 </p>
 
+<a id="usage"></a>
 ## Uso
 
 Para definir o caso de teste para ffuf, use a palavra-chave `FUZZ` em qualquer lugar na URL (`-u`), cabeçalhos (`-H`), ou dados POST (`-d`).
@@ -279,6 +288,7 @@ EXAMPLE USAGE:
   More information and examples: https://github.com/ffuf/ffuf
 ```
 
+<a id="interactive-mode"></a>
 ### Modo interativo
 
 Ao pressionar o `ENTER` durante a execução do ffuf, o processo é pausado e o usuário é descartado para um modo interativo semelhante ao shell:
@@ -326,6 +336,7 @@ trabalho desde o início.
   <img width="250" src="../../99-Assets/upstream/ffuf/_img/ffuf_waving_250.png">
 </p>
 
+<a id="contributing"></a>
 ## Contribuir
 
 Relatórios de erros, requisições de recursos e requisições são bem- vindos. Veja
@@ -333,6 +344,7 @@ Relatórios de erros, requisições de recursos e requisições são bem- vindos
 [Seção Contribuinte do wiki](https://github.com/ffuf/ffuf/wiki/Contributing) para
 A documentação da arquitectura e dos ensaios.
 
+<a id="license"></a>
 ## Licença
 
 ffuf é lançado sob licença do MIT. Veja [LICENÇA](https://github.com/ffuf/ffuf/blob/master/LICENSE).

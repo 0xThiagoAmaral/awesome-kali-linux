@@ -1,0 +1,179 @@
+[
+  {
+    "tool": "ffuf",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "gobuster",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "subfinder",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "nuclei",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "katana",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "naabu",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "assetfinder",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "feroxbuster",
+    "added_images": [
+      "img/demo.gif",
+      "img/logo/default-cropped.png"
+    ],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "above",
+    "added_images": [
+      "banner/banner.png"
+    ],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "adaptixc2",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "airgeddon",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "aflplusplus",
+    "added_images": [],
+    "license_scope_pending": [
+      {
+        "path": "docs/resources/0_fuzzing_process_overview.drawio.svg",
+        "nested_notices": [
+          "docs/COPYING"
+        ]
+      },
+      {
+        "path": "docs/resources/1_instrument_target.drawio.svg",
+        "nested_notices": [
+          "docs/COPYING"
+        ]
+      },
+      {
+        "path": "docs/resources/2_prepare_campaign.drawio.svg",
+        "nested_notices": [
+          "docs/COPYING"
+        ]
+      },
+      {
+        "path": "docs/resources/3_fuzz_target.drawio.svg",
+        "nested_notices": [
+          "docs/COPYING"
+        ]
+      },
+      {
+        "path": "docs/resources/4_manage_campaign.drawio.svg",
+        "nested_notices": [
+          "docs/COPYING"
+        ]
+      },
+      {
+        "path": "docs/resources/screenshot.png",
+        "nested_notices": [
+          "docs/COPYING"
+        ]
+      },
+      {
+        "path": "docs/resources/statsd-grafana.png",
+        "nested_notices": [
+          "docs/COPYING"
+        ]
+      }
+    ]
+  },
+  {
+    "tool": "altdns",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "apple-bleee",
+    "added_images": [
+      "img/dev_status.png",
+      "img/status_gif.gif",
+      "img/airdrop_gif.gif",
+      "img/share_wifi_pwd2_gif.gif",
+      "img/airpods_gif.gif",
+      "img/logo.jpg"
+    ],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "arjun",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "arp-scan",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "arsenal-ng",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "atomic-operator",
+    "added_images": [
+      "images/atomic-operator-logo.svg"
+    ],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "autorecon",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "axel",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "azurehound",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "b374k",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "backdoor-factory",
+    "added_images": [],
+    "license_scope_pending": []
+  },
+  {
+    "tool": "berate-ap",
+    "added_images": [],
+    "license_scope_pending": []
+  }
+]

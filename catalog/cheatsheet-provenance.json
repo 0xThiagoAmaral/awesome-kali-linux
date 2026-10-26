@@ -1,0 +1,312 @@
+{
+  "ffuf": {
+    "note": "vault/02-Tools/ffuf/ffuf-cheatsheet-upstream.md",
+    "original": "sources/upstream/ffuf/README.md.source",
+    "source_sha256": "2419b892f8a77ba3c5021300dcf5c37f2587ac9b7d579303c9add707fc0b93e4",
+    "note_sha256": "ba69207f81c78d29b5af2d420353d4e7ce3740109c0cd1625d2fe3d2d0528e22",
+    "recipes": [
+      {
+        "block": 0,
+        "title": "Descoberta de diretórios",
+        "sha256": "d383f32ba84492a70db08fe65a3ad0159cd952fecec065d243305920666f8a52"
+      },
+      {
+        "block": 1,
+        "title": "Virtual hosts",
+        "sha256": "94195cf4d03947fff59d5688fb36e139c63f95c986c7b081f548e030e8ef5cee"
+      },
+      {
+        "block": 2,
+        "title": "Parâmetros GET",
+        "sha256": "8c03f20a15279015d9354215704848cb28f5cc784556b7b6ac35250193025a09"
+      },
+      {
+        "block": 5,
+        "title": "Limite de duração",
+        "sha256": "6a012774435fbf255094f4c6f96bfa12b5181fd2557ba3ec8a75ac99b901a269"
+      },
+      {
+        "block": 6,
+        "title": "Recursão com limite",
+        "sha256": "a6ab817f0fbe05233f5a13b0d9679d53009cbcc40f496d3d9e36ca90e4d2b96b"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "gobuster": {
+    "note": "vault/02-Tools/gobuster/gobuster-cheatsheet-upstream.md",
+    "original": "sources/upstream/gobuster/README.md.source",
+    "source_sha256": "9c5b67cdd42cd59eb9d4c3c0ed9c90aae05fce56803ff92d81e8fd097a6fff0d",
+    "note_sha256": "90928cfc80d23ccc5f7f4401d2b40a08d9d724f79731dc6f6287cc4be761fddb",
+    "recipes": [
+      {
+        "block": 5,
+        "title": "Ajuda por modo",
+        "sha256": "449b3e8902383073fb26c1f7929ac46c97983e3121f159598995f2dc673823be"
+      },
+      {
+        "block": 6,
+        "title": "Diretórios",
+        "sha256": "c1fc6b9077367fa80e4edc504b5d53d45050cacdd953610aa41c33d14ac4da8e"
+      },
+      {
+        "block": 8,
+        "title": "Subdomínios DNS",
+        "sha256": "9a07f9dbf36c6a48de49d88a84b5dfb5680319c091a9ef67709fcf880aceae60"
+      },
+      {
+        "block": 10,
+        "title": "Virtual hosts",
+        "sha256": "d402be61a5605450b20be3490748284bd144ffc72e7aacf87050caa260db7804"
+      },
+      {
+        "block": 16,
+        "title": "Fuzzing de parâmetros",
+        "sha256": "18772d281bf387b1c5aa0ba770df16e229640794b1b1683d79013bf36099e4ad"
+      },
+      {
+        "block": 21,
+        "title": "Gravar resultados",
+        "sha256": "620456124ac40a056511d14a39f2f40ae69955c16433f336959f766fa3c29290"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "subfinder": {
+    "note": "vault/02-Tools/subfinder/subfinder-cheatsheet-upstream.md",
+    "original": "sources/upstream/subfinder/README.md.source",
+    "source_sha256": "38c2ad7da121806ed1594fbfb8a6f268eb213c337a90edc2c249fd6065c49fe0",
+    "note_sha256": "bdc362c0ae80cdcc3d4df6b010b03b95db56c27c7c333e61489c7764b7280e1f",
+    "recipes": [
+      {
+        "block": 0,
+        "title": "Consultar a ajuda",
+        "sha256": "27393f5def40d7c0069f753c09d142c621a4a12fa9c2695d459c265bf273ad30"
+      },
+      {
+        "block": 3,
+        "title": "Filtrar subdomínios por expressão regular",
+        "sha256": "d372de9f3a6d94e1aa8a13663871f3ce0e44d40e269521b17c56967687e2a98e"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "nuclei": {
+    "note": "vault/02-Tools/nuclei/nuclei-cheatsheet-upstream.md",
+    "original": "sources/upstream/nuclei/README.md.source",
+    "source_sha256": "d9fa7d06e5c6fc9734f84521c72b1959a27b0bc39752bf1c36f4fbfb321bde07",
+    "note_sha256": "0317a428fd2ac49e71ab81fe5e445b80b493c82186375527e2117356f9e51ec6",
+    "recipes": [
+      {
+        "block": 1,
+        "title": "Consultar as opções",
+        "sha256": "f1a1151eba02e771bc4ea35ff8889d2909a5586c7fa5d5bbbc1d26bb835ca531"
+      },
+      {
+        "block": 3,
+        "title": "Um endereço de entrada",
+        "sha256": "e96f27d3f964b2966670d54fe2851a570707728db8ec8cf68955f462c9e39193"
+      },
+      {
+        "block": 4,
+        "title": "Lista de endereços",
+        "sha256": "66d86d4c27efa077c73cb7f087be7f288f0b0eb159bea0a87adf50e1bed9d705"
+      },
+      {
+        "block": 6,
+        "title": "Template personalizado",
+        "sha256": "0e89e31f04a434152c1a7efe9f461e707c558d0ed126eea46b5400a3a4c440f5"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "katana": {
+    "note": "vault/02-Tools/katana/katana-cheatsheet-upstream.md",
+    "original": "sources/upstream/katana/README.md.source",
+    "source_sha256": "7f6cf81d98053ab01a802aecb0bf3f01fca797e7b0313b82f692625959188c5b",
+    "note_sha256": "73dfb945e7d8652b8ba4adc10fc05ad3ca57346e35c4f1129c9145fb2b59c491",
+    "recipes": [
+      {
+        "block": 6,
+        "title": "Consultar a ajuda",
+        "sha256": "1b4123a07a4db207f47116d6881c41669f203547244771f915f4a244b70ff078"
+      },
+      {
+        "block": 8,
+        "title": "Um endereço de entrada",
+        "sha256": "6b6a36cfe090b35c969d1fbbf0341a9dfc70ef98fd3ebbffdebe4485e6dd4bd8"
+      },
+      {
+        "block": 11,
+        "title": "Lista de endereços",
+        "sha256": "df4af3ec421a2fd73080c8600e515ef56ffbbabf4e6e79262f1535ad36cd230c"
+      },
+      {
+        "block": 37,
+        "title": "Profundidade de navegação",
+        "sha256": "8d339d7a33b1f9cefc6109669e7f7b3a71ff83a34a2aaa553234c162b47c3e7e"
+      },
+      {
+        "block": 38,
+        "title": "Análise de JavaScript",
+        "sha256": "86be30e1c4c8d4b1f720c57243caf25059151458da764064871b06651843938c"
+      },
+      {
+        "block": 80,
+        "title": "Limite de requisições",
+        "sha256": "1f0c9c34357be96fcf029cc1eaf2c900475ea0a1b75a6fb71909729cf48de07d"
+      },
+      {
+        "block": 85,
+        "title": "Salvar endereços",
+        "sha256": "0c4634a8c1303a508e8c63f5f000390cb58de9a556648042dea11aa11cdcfac3"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "naabu": {
+    "note": "vault/02-Tools/naabu/naabu-cheatsheet-upstream.md",
+    "original": "sources/upstream/naabu/README.md.source",
+    "source_sha256": "f61b2cfdd205798a236715d3a20ef54ffaa2e7ac7f5880b0f9170b1bfcb62180",
+    "note_sha256": "f7048ba38d81d3201e46bf5ff952e9b7486ea815833e7ba0419140dfb6bd96bf",
+    "recipes": [
+      {
+        "block": 0,
+        "title": "Consultar a ajuda",
+        "sha256": "b2b9b9b95ef04d1c92a12379d0373ed5405095248aff7a2b8ca29cd3dff7f3e8"
+      },
+      {
+        "block": 3,
+        "title": "Um host de entrada",
+        "sha256": "ccf350f04e219b0748ca422e65bbb6415c7182965b4d2fab248fa0b64da25291"
+      },
+      {
+        "block": 5,
+        "title": "Selecionar portas TCP e UDP",
+        "sha256": "4da58f41fbd80f1410c9973a58a0093f952b1b6faee24682bbd9613af7b42b62"
+      },
+      {
+        "block": 8,
+        "title": "Ler uma lista de hosts",
+        "sha256": "9f1c8525fcb37bd485fddba88b87a3747d93c285eb42273ec0239c6f8c150bd1"
+      },
+      {
+        "block": 16,
+        "title": "Identificar versões de serviços",
+        "sha256": "39a91a007822b75c1cebfb66723d61de81d51615de171d1442bfff38e4205343"
+      },
+      {
+        "block": 18,
+        "title": "Sondas de serviços UDP",
+        "sha256": "03e74b0b26ec9e7372c36346363ca432297c16176c0e0ba123ad253c6ba73fb9"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "assetfinder": {
+    "note": "vault/02-Tools/assetfinder/assetfinder-cheatsheet-upstream.md",
+    "original": "sources/upstream/assetfinder/README.md.source",
+    "source_sha256": "6a5f2f6b3beb4e8510d234392001dd8059b49dd334719203980f039a588cf063",
+    "note_sha256": "261a01b44aa2c9b31b2492396c8a358e08b1d7b8a72f98ff0553e7a69ef8d2a6",
+    "recipes": [
+      {
+        "block": 1,
+        "title": "Sintaxe de entrada e filtro de subdomínios",
+        "sha256": "495ccefe406fbe9a5f2ab2570ef9110705fc9d2f4beb1144040f320e772f80a4"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "feroxbuster": {
+    "note": "vault/02-Tools/feroxbuster/feroxbuster-cheatsheet-upstream.md",
+    "original": "sources/upstream/feroxbuster/README.md.source",
+    "source_sha256": "dd28579002e3cfb0753706423e15f1671cbd27f852494879efe3cc53671a5457",
+    "note_sha256": "f1d196dd0344f88988ce66d8060f630cdbafc0d88377783b29225b1bb723fb09",
+    "recipes": [
+      {
+        "block": 8,
+        "title": "Extensões de arquivo",
+        "sha256": "902c2d790df51853ae8c9edd4969e75281e5f72e6af2123b4d0ba27b49a05fe6"
+      },
+      {
+        "block": 9,
+        "title": "Cabeçalhos HTTP",
+        "sha256": "1e4a3357d4e9d21453de205a9a1f9f8a2edda524eaff7992cc5c3cb677b2674e"
+      },
+      {
+        "block": 10,
+        "title": "IPv6 sem recursão",
+        "sha256": "fd8ad2952297a02887a027570ca442f8e3be772a22eef8ffcd448c5eec4d40c4"
+      },
+      {
+        "block": 12,
+        "title": "Encaminhar tráfego ao proxy",
+        "sha256": "a347bfe45958929a58b7a7cc72ae4d33594f3a205029babefb5b642b54ceb33f"
+      },
+      {
+        "block": 14,
+        "title": "Parâmetro na URL",
+        "sha256": "d54d43c939a5c18e60c7f6c85fdede930b95fadce34bcb814305ac3c78a5d3ec"
+      },
+      {
+        "block": 15,
+        "title": "Corpo JSON ou formulário",
+        "sha256": "1a6fd37e25edc9fe253ad9d3e4d816e9c4f0bc49ab9f5fca399000dd4d9bd246"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "above": {
+    "note": "vault/02-Tools/above/above-cheatsheet-upstream.md",
+    "original": "sources/upstream/above/README.md.source",
+    "source_sha256": "7dec6e01263ed4064e2ba2428c1e6a011b0a17539db14b3c88da2df90d02633e",
+    "note_sha256": "8d9d8f8ece8dd607710036a7712401d0e8e5034a038c78cb6154e6fd1b571c8c",
+    "recipes": [
+      {
+        "block": 6,
+        "title": "Captura por interface e duração",
+        "sha256": "cbec13dd144767c9cf4546e9f06af6e77ae64ec2ec86ea0575fd62b6c7dafd7e"
+      },
+      {
+        "block": 8,
+        "title": "Gravar a captura",
+        "sha256": "aa06a87b8769c8e6f992893d486fcee9849f646a11be833bf055a8799cd04149"
+      },
+      {
+        "block": 9,
+        "title": "Analisar uma captura existente",
+        "sha256": "de82271160a74825ff0342db17f4e195ebba6df3506f9f933ba7c59b2e7c6d41"
+      },
+      {
+        "block": 14,
+        "title": "Identificar segmentos VLAN",
+        "sha256": "a469f0809b10b3cf2d957e5f69e3d99db395ff04b3fe1f781dbe67a7c02be0c9"
+      }
+    ],
+    "command_execution_tested": false
+  },
+  "aflplusplus": {
+    "note": "vault/02-Tools/aflplusplus/aflplusplus-cheatsheet-upstream.md",
+    "original": "sources/upstream/aflplusplus/README.md.source",
+    "source_sha256": "1e6bc1d9e5870d70052165fe1004345c56743851ad4b930cacc44a744d884866",
+    "note_sha256": "c0a71877c28394f347ee450befb112a060160b416cf31a0eeb9f8b88fce92f5b",
+    "recipes": [
+      {
+        "block": 1,
+        "title": "Compilar com instrumentação",
+        "sha256": "c148b59374c84bfa3638ce4d99ba3d6e13f022e56b4fb5b6da999c8cd550c086"
+      },
+      {
+        "block": 2,
+        "title": "Iniciar a sessão de fuzzing",
+        "sha256": "4db317665153da1c79554eba5dfa39ea9328c02fac05cb25d83494baa0d68c2d"
+      },
+      {
+        "block": 3,
+        "title": "Reproduzir uma entrada que causou falha",
+        "sha256": "ed883d77c62412f4e2eb85e50c21a62ca5f5ace01d85d62d5145ec4480134d85"
+      }
+    ],
+    "command_execution_tested": false
+  }
+}

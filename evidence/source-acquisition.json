@@ -1,5 +1,10 @@
 {
-  "acquired_tools": 12,
-  "documents": 13,
-  "failures": []
+  "acquired_tools": 24,
+  "documents": 44,
+  "failures": [
+    {
+      "tool": "bettercap-ui",
+      "error": "ValueError('Explicit documentation-compatible repository license not confirmed: bettercap/ui None')"
+    }
+  ]
 }

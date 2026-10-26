@@ -22,7 +22,7 @@ source_scope: "Official English repository README/docs and available upstream Po
   <br>
 </h1>
 
-<h4 align="center">A next-generation crawling and spidering framework</h4>
+<h4 align="center">A armação de rastejamento e aranha de próxima geração</h4>
 
 <p align="center">
 <a href="https://goreportcard.com/report/github.com/projectdiscovery/katana"></a>
@@ -33,13 +33,13 @@ source_scope: "Official English repository README/docs and available upstream Po
 </p>
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#instalação">Installation</a> •
-  <a href="#uso">Usage</a> •
-  <a href="#controlo-do-âmbito-de-aplicação">Scope</a> •
-  <a href="#configuração-do-crawler">Config</a> •
-  <a href="#filtros">Filters</a> •
-  <a href="https://discord.gg/projectdiscovery">Join Discord</a>
+<a href="#features">Características</a> •
+<a href="#instalação">Instalação</a> •
+<a href="#uso">Usage</a> •
+<a href="#controlo-do-âmbito-de-aplicação">Scope</a> •
+<a href="#configuração-do-crawler">Config</a> •
+<a href="#filtros">Filters</a> •
+<a href="https://discord.gg/projectdiscovery">Join Discord</a>
 </p>
 
 
@@ -58,6 +58,7 @@ source_scope: "Official English repository README/docs and available upstream Po
  - OutPUT - **STDOUT**, **FILE** e **SON**
 
 
+<a id="installation"></a>
 ## Instalação
 
 katana requer Go 1.26.10+ para instalar com sucesso. Se você encontrar qualquer problema de instalação, recomendamos tentar com a versão mais recente disponível do Go, uma vez que a versão mínima necessária pode ter mudado. Execute o comando abaixo ou baixe um binário pré-compilado do [página de lançamento](https://github.com/projectdiscovery/katana/releases).
@@ -69,7 +70,7 @@ CGO_ENABLED=1 go install github.com/projectdiscovery/katana/cmd/katana@latest
 **Mais opções para instalar/ executar o katana-**
 
 <details>
-  <summary>Docker</summary>
+    <summary>Acoplamento</summary>
 
 > Para instalar / atualizar docker para a última tag -
 
@@ -93,7 +94,7 @@ docker run projectdiscovery/katana:latest -u https://tesla.com -system-chrome -h
 </details>
 
 <details>
-  <summary>Ubuntu</summary>
+    <summary>Ubuntu</summary>
 
 > Recomenda-se instalar os seguintes pré-requisitos -
 
@@ -124,6 +125,7 @@ go install github.com/projectdiscovery/katana/cmd/katana@latest
 
 </details>
 
+<a id="usage"></a>
 ## Uso
 
 ```console
@@ -254,26 +256,31 @@ OUTPUT:
    -version                          display project version
 ```
 
+<a id="running-katana"></a>
 ## A executar o Katana
 
+<a id="input-for-katana"></a>
 ### Entrada para katana
 
 **katana** requer **url** ou **endpoint** para rastejar e aceita entradas únicas ou múltiplas.
 
 A URL de entrada pode ser fornecida usando a opção `-u`, e vários valores podem ser fornecidos usando a entrada separada por vírgulas, da mesma forma a entrada **file** é suportada usando a opção `-list` e adicionalmente a entrada (stdin) é suportada.
 
+<a id="url-input"></a>
 #### Entrada do URL
 
 ```sh
 katana -u https://tesla.com
 ```
 
+<a id="multiple-url-input-comma-separated"></a>
 #### Entrada de URL múltipla (separada por vírgulas)
 
 ```sh
 katana -u https://tesla.com,https://google.com
 ```
 
+<a id="list-input"></a>
 #### Input da Lista
 ```bash
 $ cat url_list.txt
@@ -286,6 +293,7 @@ https://google.com
 katana -list url_list.txt
 ```
 
+<a id="stdin-piped-input"></a>
 #### Entrada de DSTIN (piped)
 
 ```sh
@@ -296,6 +304,7 @@ echo https://tesla.com | katana
 cat domains | httpx | katana
 ```
 
+<a id="page-content-similarity"></a>
 ### Similaridade do Conteúdo da Página
 
 Filtragem opcional da camada-2 após o dedup de conteúdo MD5 exato.`nav`/`header`/`footer`/scripts), em seguida, um dos três modos decide se uma página é similar o suficiente para pular mais parse/enqueue (orçamento do cluster).`-fsu`) continua independente.
@@ -376,12 +385,15 @@ https://www.youtube.com/kids/
 ```
 
 
+<a id="crawling-mode"></a>
 ## Modo de Rastejamento
 
+<a id="standard-mode"></a>
 ### Modo Padrão
 
 A modalidade de rastreamento padrão usa a biblioteca padrão ir http sob o capô para lidar com solicitações/respostas do HTTP. Esta modalidade é muito mais rápida, uma vez que não tem a sobrecarga do navegador. Ainda assim, ele analisa o corpo de respostas do HTTP como é, sem qualquer renderização de javascript ou DOM, terminais potencialmente ausentes pós-dom-rendered ou chamadas de endpoint assíncronas que podem acontecer em aplicações web complexas, dependendo, por exemplo, de eventos específicos do navegador.
 
+<a id="headless-mode"></a>
 ### Modo sem cabeça
 
 O modo sem cabeça liga chamadas internas sem cabeça para lidar com pedidos/respostas HTTP diretamente dentro do contexto do navegador. Isso oferece duas vantagens:
@@ -415,6 +427,7 @@ HEADLESS:
    -rf, -recorded-flow string        chrome DevTools Recorder JSON (or explicit steps) to replay before crawl (headless only)
 ```
 
+<a id="interactive-ui-exploration"></a>
 ### Exploração interactiva de IU
 
 Use o `-interactive` para explorar estados clicáveis no navegador sem cabeça puro. Ele permite o modo sem cabeça, inicia na página de destino, clica primeiro na profundidade dos candidatos e restaura um estado pai antes de tentar o seu próximo controle. O `-interaction-depth` conta transições de estado bem- sucedidas, de modo que uma profundidade de 4 explora quatro cliques da página inicial. Este modo é mais lento do que o rastreamento sem cabeça normal porque uma ramificação pode precisar de ser reproduzida depois de um clique alterar a página.
@@ -492,6 +505,7 @@ katana -u https://tesla.com -headless -pls domcontentloaded -dwt 10
 ```
 
 
+<a id="captcha-solving"></a>
 ### Resolução do Captcha
 
 Katana suporta detecção e resolução de captchas automáticas durante o rastreamento sem cabeça. Quando uma página captcha é encontrada, o katana identifica o provedor captcha, resolve-o através de um serviço externo e continua rastejando.
@@ -520,6 +534,7 @@ export CAPTCHA_SOLVER_KEY=YOUR_API_KEY
 katana -u https://example.com -headless
 ```
 
+<a id="scope-control"></a>
 ## Controlo do âmbito de aplicação
 
 Crawling pode ser interminável se não escopo, como tal katana vem com suporte múltiplo para definir o escopo de rastreamento.
@@ -618,6 +633,7 @@ SCOPE:
 ```
 
 
+<a id="crawler-configuration"></a>
 ## Configuração do Crawler
 
 Katana vem com várias opções para configurar e controlar o rastreamento como queremos.
@@ -703,6 +719,7 @@ Opção para limitar o número de páginas rastejadas por domínio. Impede qualq
 katana -u https://tesla.com -mdp 100
 ```
 
+<a id="knowledge-base-classification"></a>
 ## Classificação da Base de Conhecimentos
 
 Katana pode enriquecer os resultados de rastreamento com uma base **knowledge** — classificação machine-learning de cada página rastreada alimentado por [dit](https://github.com/HappyHackingSpace/dit). Quando habilitado, cada resposta é classificada por **page tipo** (por exemplo, `login`, `error`, `captcha`, `parked`) e quaisquer formulários na página são identificados, com o resultado anexado ao campo `knowledgebase` da saída JSONL. Isto funciona através de **all motores** (padrão e sem cabeça).
@@ -759,10 +776,12 @@ Habilite o extrator de endpoints, que classifica as solicitações como REST, Gr
 katana -u https://example.com -kb-endpoints
 ```
 
+<a id="authenticated-crawling"></a>
 ## Rastejamento Autenticado
 
 Katana suporta rastreamento autenticado de várias maneiras: cabeçalhos estáticos/cookies, anexando a uma sessão Chrome já registrada, login de formulário automático (`-auto-login`), e **fluxos de navegador gravados** (`-recorded-flow`) para logins multi-passo / SPA / SSO-estilo.
 
+<a id="headers--cookies"></a>
 ### Cabeçalhos / cookies
 
 O rastreamento autenticado pode incluir cabeçalhos personalizados ou cookies em pedidos HTTP para acessar recursos protegidos. Você pode especificar cabeçalhos diretamente na linha de comando ou fornecê-los como um arquivo.
@@ -794,6 +813,7 @@ TOKEN=XX
 katana -u https://tesla.com -H cookie.txt
 ```
 
+<a id="automatic-login--auto-login"></a>
 ### Login automático (`-auto-login`)
 
 No modo sem cabeça puro, o katana pode detectar um formulário de login e enviar credenciais automaticamente:
@@ -804,6 +824,7 @@ katana -hl -u https://app.example.com -al 'user:password'
 
 Isto é melhor para formas simples de nome de usuário/senha. Para logins multi-passo, SPA ou SSO preferem um fluxo gravado.
 
+<a id="recorded-flow--recorded-flow"></a>
 ### Fluxo registado (`-recorded-flow`)
 
 Fluxos gravados permitem exportar um login de navegador real de **Chrome DevTools → Gravador** e reproduzi-lo uma vez ** antes do crawl starts**. Cookies de sessão e armazenamento web de origem mesma ficar no contexto do navegador sem cabeça para o resto do crawl.
@@ -883,6 +904,7 @@ CONFIGURATION:
    -mdp, -max-domain-pages int   maximum number of pages to crawl per domain (default unlimited)
 ```
 
+<a id="connecting-to-active-browser-session"></a>
 ### Conectando- se à Sessão de Navegador Activa
 
 O Katana também pode conectar- se à sessão ativa do navegador onde o usuário já está conectado e autenticado. e usá- lo para rastrear. O único requisito para isso é iniciar o navegador com a depuração remota habilitada.
@@ -918,13 +940,14 @@ katana -headless -u https://tesla.com -cwu ws://127.0.0.1:9222/devtools/browser/
 > **Note**: você pode usar `-cdd` opção para especificar diretório de dados cromo personalizado para armazenar dados do navegador e cookies, mas que não salva dados de sessão se o cookie está definido para `Session` apenas ou expira após determinado tempo.
 
 
+<a id="filters"></a>
 ## Filtros
 
 *`-field`*
 ----
 
 > [!WARNING]
-> Deprecado: use o [**`-output-template` **](#-output-template) em vez disso. A bandeira do campo ainda é suportada para compatibilidade com o backward.
+> Deprecado: use o [**`-output-template`**](#saída) em vez disso. A bandeira do campo ainda é suportada para compatibilidade com o backward.
 
 Katana vem com campos embutidos que podem ser usados para filtrar a saída para a informação desejada, `-f` opção pode ser usado para especificar qualquer um dos campos disponíveis.
 
@@ -967,6 +990,7 @@ https://www.tesla.com/about/legal?redirect=no
 https://www.tesla.com/findus/list?redirect=no
 ```
 
+<a id="custom-fields"></a>
 ### Campos Personalizados
 
 Você pode criar campos personalizados para extrair e armazenar informações específicas das respostas da página usando as regras de regex. Estes campos personalizados são definidos usando um arquivo de configuração YAML e são carregados a partir da localização padrão no `$HOME/.config/katana/field-config.yaml`. Em alternativa, você pode usar a opção `-flc` para carregar um arquivo de configuração de campo personalizado a partir de um local diferente.
@@ -1003,6 +1027,7 @@ Ao definir campos personalizados, são suportados os seguintes atributos:
 
 > Você pode usar este atributo para selecionar um grupo específico combinado no regex, por exemplo: `group: 1`
 
+<a id="running-katana-using-custom-field"></a>
 #### A executar o katana usando o campo personalizado:
 
 ```console
@@ -1033,6 +1058,7 @@ A opção `-store-field` pode ser útil para coletar informações para construi
 - Encontrando arquivos comumente usados
 - Identificando subdomínios relacionados ou desconhecidos
 
+<a id="katana-filters"></a>
 ### Filtros Katana
 
 *`-extension-match`*
@@ -1083,6 +1109,7 @@ A opção `-filter-regex` ou `-fr` permite- lhe filtrar URLs de saída usando ex
 katana -u https://tesla.com -fr 'https://www\.tesla\.com/*' -silent
 ```
 
+<a id="advance-filtering"></a>
 ### Filtragem avançada
 
 Katana suporta expressões baseadas em DSL para recursos avançados de correspondência e filtragem:
@@ -1125,6 +1152,7 @@ FILTER:
 ```
 
 
+<a id="rate-limit"></a>
 ## Limite de Taxa
 
 É fácil ficar bloqueado / banido ao rastejar se não seguir os limites de sites de destino, katana vem com várias opções para ajustar o rastreamento para ir o mais rápido / lento que queremos.
@@ -1203,6 +1231,7 @@ RATE-LIMIT:
    -hrlm, -host-rate-limit-minute int  maximum number of requests to send per minute per host
 ```
 
+<a id="output"></a>
 ## Saída
 
 Katana suporta tanto a saída de arquivo em formato de texto simples, bem como JSON que inclui informações adicionais como, `source`, `tag`, e `attribute` nome para co-relacionar o endpoint descoberto.
@@ -1334,6 +1363,7 @@ OUTPUT:
    -version                          display project version
 ```
 
+<a id="katana-as-a-library"></a>
 ## Katana como uma biblioteca
 `katana` pode ser usado como uma biblioteca criando uma instância da estrutura `Option` e povoando-a com as mesmas opções que seriam especificadas via CLI. Usando as opções que você pode criar `crawlerOptions` e assim padrão ou híbrido `crawler`.
 O método `crawler.Crawl` deve ser chamado para rastrear a entrada.
@@ -1383,6 +1413,7 @@ func main() {
 }
 ```
 
+<a id="reporting-issues--feature-requests"></a>
 ## Relatar questões e pedidos de recursos
 
 Para manter o rastreamento de problemas e melhorar a eficiência da triagem:

@@ -62,6 +62,7 @@ source_scope: "Official English repository README/docs and available upstream Po
 <br>
 <br>
 
+<a id="table-of-contents"></a>
 ## Sumário
 
 - [**`Começar`**](#começar)
@@ -77,11 +78,12 @@ source_scope: "Official English repository README/docs and available upstream Po
 - [**`Modelos Nuclei, Comunidade e Recompensas`**](#modelos-nuclei-comunidade-e-recompensas-)  💎
 - [**`Nossa Missão`**](#nossa-missão)
 - [**`Contribuidores`**](#contribuidores-coração)
-- [**`Licença`**](#license)
+- [**`Licença`**](../../99-Assets/upstream/nuclei/LICENSE.txt)
 
 <br>
 <br>
 
+<a id="get-started"></a>
 ## Começar
 
 ### **1. Nuclei CLI**
@@ -100,6 +102,7 @@ _Install Nuclei em sua máquina. Comece seguindo o guia de instalação [**`Aqui
 
 <br>
 
+<a id="2-pro-and-enterprise-editions"></a>
 ### **2. Edições Pro e Enterprise**
 
 _Para equipes de segurança e empresas, fornecemos um serviço hospedado na nuvem construído em cima do Nuclei OSS, aprimorado para ajudá-lo a executar continuamente varreduras de vulnerabilidade em escala com sua equipe e fluxos de trabalho existentes:_
@@ -118,6 +121,7 @@ _Para equipes de segurança e empresas, fornecemos um serviço hospedado na nuve
 <br>
 <br>
 
+<a id="documentation"></a>
 ## Documentação
 
 Navegue pelo Nuclei [**`documentação aqui`**](https://docs.projectdiscovery.io/tools/nuclei/running) completo. Se você é novo para Nuclei, confira nosso [**`série básica do YouTube`**](https://www.youtube.com/playlist?list=PLZRbR9aMzTTpItEdeNSulo8bYsvil80Rl).
@@ -130,6 +134,7 @@ Navegue pelo Nuclei [**`documentação aqui`**](https://docs.projectdiscovery.io
 
 <br>
 
+<a id="installation"></a>
 ### Instalação
 
 `nuclei` requer **go >= 1.27.3** para instalar com sucesso. Execute o seguinte comando para obter o repo:
@@ -140,6 +145,7 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 
 Para saber mais sobre como instalar núcleos, consulte `https://docs.projectdiscovery.io/tools/nuclei/install`.
 
+<a id="command-line-flags"></a>
 ### Bandeiras de Linha de Comando
 
 Para exibir todas as bandeiras para a ferramenta:
@@ -436,6 +442,7 @@ Documentação adicional está disponível em: [**`docs.projectdiscovery.io/gett
 
 </details>
 
+<a id="single-target-scan"></a>
 ### Escaneamento único do alvo
 
 Para realizar uma rápida varredura na aplicação web:
@@ -444,6 +451,7 @@ Para realizar uma rápida varredura na aplicação web:
 nuclei -target https://example.com
 ```
 
+<a id="scanning-multiple-targets"></a>
 ### Analisando múltiplos alvos
 
 O Nuclei pode lidar com a digitalização em massa fornecendo uma lista de alvos. Você pode usar um arquivo contendo várias URLs.
@@ -452,6 +460,7 @@ O Nuclei pode lidar com a digitalização em massa fornecendo uma lista de alvos
 nuclei -list urls.txt
 ```
 
+<a id="network-scan"></a>
 ### Varredura de rede
 
 Isto irá analisar toda a sub-rede para problemas relacionados à rede, tais como portas abertas ou serviços mal configurados.
@@ -460,6 +469,7 @@ Isto irá analisar toda a sub-rede para problemas relacionados à rede, tais com
 nuclei -target 192.168.1.0/24
 ```
 
+<a id="scanning-with-your-custom-template"></a>
 ### Analisando com seu modelo personalizado
 
 Para escrever e usar seu próprio modelo, crie um arquivo `.yaml` com regras específicas e, em seguida, use-o como segue.
@@ -468,6 +478,7 @@ Para escrever e usar seu próprio modelo, crie um arquivo `.yaml` com regras esp
 nuclei -u https://example.com -t /path/to/your-template.yaml
 ```
 
+<a id="connect-nuclei-to-projectdiscovery"></a>
 ### Conecte Nuclei ao ProjectDiscovery
 
 Você pode executar as varreduras em sua máquina e enviar os resultados para a plataforma de nuvem para posterior análise e remediação.
@@ -482,6 +493,7 @@ nuclei -target https://example.com -dashboard
 <br>
 <br>
 
+<a id="nuclei-templates-community-and-rewards-"></a>
 ## Modelos Nuclei, comunidade e recompensas 💎
 O [**Nuclei modelos**](https://github.com/projectdiscovery/nuclei-templates) baseia- se nos conceitos dos arquivos de modelos baseados no YAML que definem como as requisições serão enviadas e processadas. Isto permite capacidades de extensibilidade fáceis para os núcleos. Os modelos são escritos no YAML, que especifica um formato simples para leitura humana para definir rapidamente o processo de execução.
 
@@ -494,6 +506,7 @@ Nuclei Os modelos oferecem uma forma simplificada de identificar e comunicar vul
     <a href="/static/nuclei-templates-teamcity.png"  target="_blank"><img src="../../99-Assets/upstream/nuclei/static/nuclei-templates-teamcity.png" width="1200px" alt="Nuclei template example for detecting TeamCity misconfiguration" /></a>
 </p>
 
+<a id="examples"></a>
 #### Exemplos
 
 Visite [Documentação **our**](https://docs.projectdiscovery.io/templates/introduction) para casos de uso e ideias.
@@ -519,6 +532,7 @@ Visite [Documentação **our**](https://docs.projectdiscovery.io/templates/intro
 <br>
 <br>
 
+<a id="our-mission"></a>
 ## Nossa Missão
 
 Os scanners de vulnerabilidade tradicionais foram construídos décadas atrás. Eles são de código fechado, incrivelmente lentos e orientados por fornecedores. Os atacantes de hoje são em massa explorando CVEs recém-lançados na internet dentro de dias, ao contrário dos anos que ele costumava levar. Esta mudança requer uma abordagem completamente diferente para lidar com as façanhas de tendências na internet.
@@ -530,6 +544,7 @@ Você pode participar contribuindo para o nosso código, [**`biblioteca de model
 <br>
 <br>
 
+<a id="contributors-heart"></a>
 ## Contribuidores: coração:
 
 Graças a todo o incrível [**`contribuidores comunitários para o envio de PRs`**](https://github.com/projectdiscovery/nuclei/graphs/contributors) e manter este projeto atualizado. :heart:

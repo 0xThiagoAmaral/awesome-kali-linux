@@ -82,6 +82,6 @@ for pattern in [re.escape('C:'+chr(92)+'Users'+chr(92)),r'/mnt/[a-z]/Users/[^/\s
 result={'passed':not errors,'markdown_notes':len(notes),'local_links_checked':links_checked,'errors':errors,
         'limits':['Pattern checks are not a complete secret-scanning audit.','No external URL fetch or Obsidian visual test performed.']}
 (ROOT/'evidence').mkdir(exist_ok=True)
-(ROOT/'evidence/structure-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'evidence/structure-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
 print(json.dumps(result,ensure_ascii=False,indent=2))
 raise SystemExit(0 if not errors else 1)

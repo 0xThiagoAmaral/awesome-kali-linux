@@ -58,7 +58,7 @@ with zipfile.ZipFile(cache/(record['commit']+'.zip')) as z:
 record['nested_license_resolution']={'path':'docs/COPYING','sha256':hashlib.sha256(delegation).hexdigest(),
                                     'decision':'Explicit delegation to repository root and per-file SPDX retained'}
 registry['aflplusplus']=record
-(cache/'source.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(ROOT/'catalog/source-registry.json').write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(ROOT/'evidence/afl-documentation-license-scope.json').write_text(json.dumps(decisions,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(cache/'source.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
+(ROOT/'catalog/source-registry.json').write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
+(ROOT/'evidence/afl-documentation-license-scope.json').write_text(json.dumps(decisions,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
 print(json.dumps({'documents':len(record['documents']),'decisions':decisions},ensure_ascii=False,indent=2))

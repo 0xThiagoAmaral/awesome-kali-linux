@@ -10,12 +10,20 @@ from import_translate_docs import code_bodies,outside_code
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 manifest_path=ROOT/'catalog/imported-documentation.json'
 manifest=json.loads(manifest_path.read_text(encoding='utf-8')) if manifest_path.exists() else {}
+registry=json.loads((ROOT/'catalog/source-registry.json').read_text(encoding='utf-8'))
 checks=[]
 def add(label,passed,detail=None):
     checks.append({'check':label,'pass':bool(passed),'detail':detail})
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 for tool,record in manifest.items():
+    source_record=registry[tool]
+    asset_root=ROOT/'vault/99-Assets/upstream'/tool
+    license_file=asset_root/'LICENSE.txt'
+    add(tool+' retained source license hash',license_file.exists() and digest(license_file)==source_record['license_sha256'])
+    for asset in source_record['assets']:
+        path=asset_root/asset['path']
+        add(tool+' image hash: '+asset['path'],path.exists() and digest(path)==asset['sha256'])
     for doc in record['documents']:
         note=ROOT/doc['note']
         original=ROOT/doc['original']
@@ -60,6 +68,6 @@ result={'passed':all(x['pass'] for x in checks),'tools':len(manifest),
         'checks':checks,'goal_complete':False,
         'limits':['This checks source/literal integrity and assets, not semantic translation quality or complete tool-manual coverage.',
                   'Human technical review and full Kali corpus coverage remain separate acceptance gates.']}
-(ROOT/'evidence/documentation-integrity.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'evidence/documentation-integrity.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
 print(json.dumps({k:v for k,v in result.items() if k!='checks'}|{'failed':[x for x in checks if not x['pass']]},ensure_ascii=False,indent=2))
 raise SystemExit(0 if result['passed'] else 1)

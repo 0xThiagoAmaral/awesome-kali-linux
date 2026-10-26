@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/0xThiagoAmaral/awesome-kali-linux",
+  "branch": "main",
+  "published": true,
+  "verified_baseline_commit": "5428b066f4a73dbdb74300a32b7c60ed72087131",
+  "verified_baseline_ci": "https://github.com/0xThiagoAmaral/awesome-kali-linux/actions/runs/40391722121",
+  "baseline_ci_conclusion": "success",
+  "verified_date": "2026-10-26",
+  "scope": "Verified publication baseline, not a claim that all later work or the full corpus is complete"
+}

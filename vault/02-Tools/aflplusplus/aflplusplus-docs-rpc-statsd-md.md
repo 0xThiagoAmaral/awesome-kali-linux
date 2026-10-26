@@ -39,6 +39,7 @@ Então, sem entrar em cada instância individualmente.
 Esta é uma visualização de exemplo com Grafana. O painel pode ser importado
 com [Este modelo JSON](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/resources/grafana-afl++.json).
 
+<a id="afl-metrics-and-statsd"></a>
 ## métricas AFL++ e EstatísticasD
 
 StatsD permite que você receba e agregue métricas de uma ampla gama de
@@ -70,6 +71,7 @@ Dependendo de seu servidor StatsD, você será capaz de monitorar, ativar alerta
 executar ações baseadas nessas métricas (por exemplo: alerta em exec/s lentos para
 nova compilação, limiar de falhas, tempo desde o último acidente > X, e assim por diante).
 
+<a id="setting-environment-variables-in-afl"></a>
 ## Definir variáveis de ambiente em AFL++
 
 1. Para habilitar a coleção de métricas StatsD em suas instâncias fuzzer, defina o
@@ -98,6 +100,7 @@ padrão, nenhuma tag será adicionada às métricas.
 `AFL_STATSD_HOST` e `AFL_STATSD_PORT`. Os valores padrão são `localhost`
 e `8125`.
 
+<a id="installing-and-setting-up-statsd-prometheus-and-grafana"></a>
 ## Instalando e configurando StatsD, Prometeu e Grafana
 
 A maneira mais fácil de instalar e configurar a infra-estrutura é com Docker e
@@ -198,6 +201,7 @@ Para instalar e configurar Prometeu e Grafana:
 
 5. Executar `docker-compose up -d`.
 
+<a id="running-afl-with-statsd"></a>
 ## Executar AFL++ com StatsD
 
 Para executar suas instâncias fuzzing:
@@ -212,6 +216,6 @@ AFL_STATSD_TAGS_FLAVOR=dogstatsd AFL_STATSD=1 afl-fuzz -S test-fuzzer-2 -i i -o 
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/rpc_statsd.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/rpc_statsd.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

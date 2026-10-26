@@ -27,18 +27,21 @@ O Adaptix é um framework extensível de pós-exploração e emulação adversa 
 
 
 
+<a id="legal-warning"></a>
 ## Aviso Legal
 
 Esta ferramenta é projetada para testes de segurança AUTORIZADOS e operações de equipe vermelha SOMENTE. O uso não autorizado é estritamente proibido e pode violar as leis locais e internacionais. Use por sua conta e risco.
 
 
 
+<a id="getting-started"></a>
 ## Começar
 
 Por favor, verifique o [wiki](https://adaptix-framework.gitbook.io/adaptix-framework/adaptix-c2/getting-starting/installation).
 
 
 
+<a id="features"></a>
 ## Características
 * Arquitetura de servidor/cliente para suporte multiplayer
 * Cliente GUI de plataforma cruzada
@@ -59,6 +62,7 @@ Por favor, verifique o [wiki](https://adaptix-framework.gitbook.io/adaptix-frame
 * Suporte aos agentes Windows/Linux/MacOs
 
 
+<a id="current-extenders"></a>
 ## Extensores Atuais
 * Ouvinte de Beacon HTTP/S
 * Ouvinte de Beacon DNS/DoH
@@ -70,6 +74,7 @@ Por favor, verifique o [wiki](https://adaptix-framework.gitbook.io/adaptix-frame
 
 
 
+<a id="extension-kit"></a>
 ## Kit de Extensão
 
 [Kit de Extensão](https://github.com/Adaptix-Framework/Extension-Kit) oficial no GitHub

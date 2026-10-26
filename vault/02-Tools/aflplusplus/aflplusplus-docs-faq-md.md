@@ -22,6 +22,7 @@ source_scope: "Repository root README and owned doc/docs/documentation Markdown 
 Se você encontrar uma pergunta interessante ou importante faltando, submeta-a via
 [https://github.com/AFLplusplus/AFLplusplus/discussions](https://github.com/AFLplusplus/AFLplusplus/discussions).
 
+<a id="general"></a>
 ## Geral
 
 <details>
@@ -158,6 +159,7 @@ AFL++ ou libfuzzer.
 
 </p></details>
 
+<a id="targets"></a>
 ## Alvos
 
 <details>
@@ -192,6 +194,7 @@ Para mais informações sobre os programas GUI fuzzing, consulte
 [best_ practices.md#fuzzing-a-gui-program](aflplusplus-docs-best-practices-md.md#fuzzing-a-gui-program).
 </p></details>
 
+<a id="performance"></a>
 ## Desempenho
 
 <details>
@@ -266,6 +269,7 @@ raciocinando por trás de todas as agendas. Se você estiver interessado, leia a
 código e o papel AFLFast.
 </p></details>
 
+<a id="troubleshooting"></a>
 ## Resolução de Problemas
 
 <details>
@@ -391,6 +395,6 @@ após:
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/FAQ.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/FAQ.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

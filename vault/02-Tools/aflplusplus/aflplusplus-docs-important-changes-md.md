@@ -22,6 +22,7 @@ source_scope: "Repository root README and owned doc/docs/documentation Markdown 
 Este documento lista mudanças importantes em AFL++, por exemplo, comportamento principal
 alterações.
 
+<a id="from-version-300-onwards"></a>
 ## A partir da versão 3.00 em diante
 
 ### AFL++ 4.00
@@ -95,6 +96,6 @@ debug ou versões de lançamento.
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/important_changes.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/important_changes.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

@@ -19,6 +19,7 @@ source_scope: "Repository root README and owned doc/docs/documentation Markdown 
 
 # Building and installing AFL++
 
+<a id="linux-on-x86"></a>
 ## Linux em x86
 
 Uma maneira fácil de instalar AFL++ com tudo compilado está disponível via docker:
@@ -122,6 +123,7 @@ Estas opções de compilação existem:
 
 Por exemplo: `make LLVM_CONFIG=llvm-config-18`
 
+<a id="macos-on-x86_64-and-arm64"></a>
 ## macOS em x86_64 e arm64
 
 o macOS tem algumas gotchas devido às idiossincrasias da plataforma.
@@ -194,6 +196,7 @@ Modo de emulação do usuário de QEMU não parece ser suportado no macOS, entã
 O modo de instrumentação da caixa preta (`-Q`) não irá funcionar. Contudo, o modo FRIDA (`-O`)
 funciona em caixas de macOS x86 e arm64.
 
+<a id="ios-on-arm64-and-arm64e"></a>
 ## iOS no braço64 e arm64e
 
 **Opção 1: Compilação no iOS de cadeia quebrada (recomendado)**
@@ -243,6 +246,6 @@ Finalmente, transfira os binários para o dispositivo iOS.
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/INSTALL.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/INSTALL.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

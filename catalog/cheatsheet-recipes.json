@@ -1,0 +1,228 @@
+{
+  "ffuf": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 0,
+        "title": "Descoberta de diretórios"
+      },
+      {
+        "block": 1,
+        "title": "Virtual hosts"
+      },
+      {
+        "block": 2,
+        "title": "Parâmetros GET"
+      },
+      {
+        "block": 5,
+        "title": "Limite de duração"
+      },
+      {
+        "block": 6,
+        "title": "Recursão com limite"
+      }
+    ]
+  },
+  "gobuster": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 5,
+        "title": "Ajuda por modo"
+      },
+      {
+        "block": 6,
+        "title": "Diretórios"
+      },
+      {
+        "block": 8,
+        "title": "Subdomínios DNS"
+      },
+      {
+        "block": 10,
+        "title": "Virtual hosts"
+      },
+      {
+        "block": 16,
+        "title": "Fuzzing de parâmetros"
+      },
+      {
+        "block": 21,
+        "title": "Gravar resultados"
+      }
+    ]
+  },
+  "subfinder": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 0,
+        "title": "Consultar a ajuda"
+      },
+      {
+        "block": 3,
+        "title": "Filtrar subdomínios por expressão regular"
+      }
+    ]
+  },
+  "nuclei": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 1,
+        "title": "Consultar as opções"
+      },
+      {
+        "block": 3,
+        "title": "Um endereço de entrada"
+      },
+      {
+        "block": 4,
+        "title": "Lista de endereços"
+      },
+      {
+        "block": 6,
+        "title": "Template personalizado"
+      }
+    ]
+  },
+  "katana": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 6,
+        "title": "Consultar a ajuda"
+      },
+      {
+        "block": 8,
+        "title": "Um endereço de entrada"
+      },
+      {
+        "block": 11,
+        "title": "Lista de endereços"
+      },
+      {
+        "block": 37,
+        "title": "Profundidade de navegação"
+      },
+      {
+        "block": 38,
+        "title": "Análise de JavaScript"
+      },
+      {
+        "block": 80,
+        "title": "Limite de requisições"
+      },
+      {
+        "block": 85,
+        "title": "Salvar endereços"
+      }
+    ]
+  },
+  "naabu": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 0,
+        "title": "Consultar a ajuda"
+      },
+      {
+        "block": 3,
+        "title": "Um host de entrada"
+      },
+      {
+        "block": 5,
+        "title": "Selecionar portas TCP e UDP"
+      },
+      {
+        "block": 8,
+        "title": "Ler uma lista de hosts"
+      },
+      {
+        "block": 16,
+        "title": "Identificar versões de serviços"
+      },
+      {
+        "block": 18,
+        "title": "Sondas de serviços UDP"
+      }
+    ]
+  },
+  "assetfinder": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 1,
+        "title": "Sintaxe de entrada e filtro de subdomínios"
+      }
+    ]
+  },
+  "feroxbuster": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 8,
+        "title": "Extensões de arquivo"
+      },
+      {
+        "block": 9,
+        "title": "Cabeçalhos HTTP"
+      },
+      {
+        "block": 10,
+        "title": "IPv6 sem recursão"
+      },
+      {
+        "block": 12,
+        "title": "Encaminhar tráfego ao proxy"
+      },
+      {
+        "block": 14,
+        "title": "Parâmetro na URL"
+      },
+      {
+        "block": 15,
+        "title": "Corpo JSON ou formulário"
+      }
+    ]
+  },
+  "above": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 6,
+        "title": "Captura por interface e duração"
+      },
+      {
+        "block": 8,
+        "title": "Gravar a captura"
+      },
+      {
+        "block": 9,
+        "title": "Analisar uma captura existente"
+      },
+      {
+        "block": 14,
+        "title": "Identificar segmentos VLAN"
+      }
+    ]
+  },
+  "aflplusplus": {
+    "source_path": "README.md",
+    "recipes": [
+      {
+        "block": 1,
+        "title": "Compilar com instrumentação"
+      },
+      {
+        "block": 2,
+        "title": "Iniciar a sessão de fuzzing"
+      },
+      {
+        "block": 3,
+        "title": "Reproduzir uma entrada que causou falha"
+      }
+    ]
+  }
+}

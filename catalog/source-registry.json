@@ -395,7 +395,22 @@
         "language": "en"
       }
     ],
-    "assets": [],
+    "assets": [
+      {
+        "path": "img/demo.gif",
+        "bytes": 732642,
+        "sha256": "2b86c4a1db59766c78d9ddf3123c03882a7dd0e7eb07ddd6667c24f51a015a31",
+        "source_url": "https://github.com/epi052/feroxbuster/blob/b07a7662d588bd8e4371e9be4704a02d976c89bb/img/demo.gif",
+        "language": "not-applicable"
+      },
+      {
+        "path": "img/logo/default-cropped.png",
+        "bytes": 30391,
+        "sha256": "ab3c6b1fafa4f35b70a70101753725059a0bf7fba80f4849bf8a0f68239b2db7",
+        "source_url": "https://github.com/epi052/feroxbuster/blob/b07a7662d588bd8e4371e9be4704a02d976c89bb/img/logo/default-cropped.png",
+        "language": "not-applicable"
+      }
+    ],
     "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
     "kali_page_mirrored": false,
     "translation_status": "pending",
@@ -425,11 +440,26 @@
         "language": "en"
       }
     ],
-    "assets": [],
+    "assets": [
+      {
+        "path": "banner/banner.png",
+        "bytes": 8896,
+        "sha256": "d6bb83f32c13f48492782478bff51ef1f1a53cf63e8324c3b3badd4fe0fe7572",
+        "source_url": "https://github.com/caster0x00/Above/blob/313f550ebb87d815aeece6792104b8c3f2a9db8f/banner/banner.png",
+        "language": "not-applicable"
+      }
+    ],
     "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
     "kali_page_mirrored": false,
     "translation_status": "pending",
-    "excluded_non_target_languages": []
+    "excluded_non_target_languages": [],
+    "retained_notices": [
+      {
+        "path": "sources/upstream/above/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    ]
   },
   "adaptixc2": {
     "tool": "adaptixc2",
@@ -452,7 +482,14 @@
     "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
     "kali_page_mirrored": false,
     "translation_status": "pending",
-    "excluded_non_target_languages": []
+    "excluded_non_target_languages": [],
+    "retained_notices": [
+      {
+        "path": "sources/upstream/adaptixc2/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      }
+    ]
   },
   "airgeddon": {
     "tool": "airgeddon",
@@ -475,7 +512,14 @@
     "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
     "kali_page_mirrored": false,
     "translation_status": "pending",
-    "excluded_non_target_languages": []
+    "excluded_non_target_languages": [],
+    "retained_notices": [
+      {
+        "path": "sources/upstream/airgeddon/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      }
+    ]
   },
   "aflplusplus": {
     "tool": "aflplusplus",
@@ -673,6 +717,461 @@
       "path": "docs/COPYING",
       "sha256": "9c9f17d2f796e921d512067f4420653c711c7f32466918d3c4bf001c792efbcf",
       "decision": "Explicit delegation to repository root and per-file SPDX retained"
-    }
+    },
+    "retained_notices": [
+      {
+        "path": "sources/upstream/aflplusplus/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+      },
+      {
+        "path": "sources/upstream/aflplusplus/LICENSE.Apache-2.0.txt",
+        "source_path": "LICENSE.Apache-2.0",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "path": "sources/upstream/aflplusplus/LICENSE.COMMERCIAL.txt",
+        "source_path": "LICENSE.COMMERCIAL",
+        "sha256": "011bbda7f599c41b0e1c23a5d64165ff3a31acb72ed8f5b8651ee8fcec4e858b"
+      }
+    ]
+  },
+  "altdns": {
+    "tool": "altdns",
+    "repository": "https://github.com/infosec-au/altdns",
+    "commit": "6728272cbda8b8ceca4d59f4398e81df921853f2",
+    "license_spdx": "Apache-2.0",
+    "license_url": "https://github.com/infosec-au/altdns/blob/6728272cbda8b8ceca4d59f4398e81df921853f2/LICENSE",
+    "license_sha256": "8a9982ffe707408a9364148f8318ef453fe3b014459630aaa561c727d934ce7d",
+    "archive_sha256": "2d64eb815ba997e15d05f2e5641d8038f65ce4b07524dcce4e81c0c62fc6f709",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 2615,
+        "sha256": "7ffd79d4fa13dc984e937af9e4b65698c0b4e34e5db87951b07b8c0e49dd10c7",
+        "source_url": "https://github.com/infosec-au/altdns/blob/6728272cbda8b8ceca4d59f4398e81df921853f2/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/altdns/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "8a9982ffe707408a9364148f8318ef453fe3b014459630aaa561c727d934ce7d"
+      }
+    ]
+  },
+  "apple-bleee": {
+    "tool": "apple-bleee",
+    "repository": "https://github.com/hexway/apple_bleee",
+    "commit": "1f8022959be660b561e6004b808dd93fa252bc90",
+    "license_spdx": "GPL-3.0",
+    "license_url": "https://github.com/hexway/apple_bleee/blob/1f8022959be660b561e6004b808dd93fa252bc90/LICENSE",
+    "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "archive_sha256": "e174177f6000aa3d4a07dda3ae48ee07c8adbc3f355178f58e419daabf1cb764",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 6480,
+        "sha256": "3d7236036e3d6000b443ca9b1c95999ccd12aa7407b16fb08082ee89dfdacbf5",
+        "source_url": "https://github.com/hexway/apple_bleee/blob/1f8022959be660b561e6004b808dd93fa252bc90/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [
+      {
+        "path": "img/dev_status.png",
+        "bytes": 91473,
+        "sha256": "10596dc9eecf6459752807d5dca665a3a4b83373a35c52602863230808d95bfa",
+        "source_url": "https://github.com/hexway/apple_bleee/blob/1f8022959be660b561e6004b808dd93fa252bc90/img/dev_status.png",
+        "language": "not-applicable"
+      },
+      {
+        "path": "img/status_gif.gif",
+        "bytes": 6698751,
+        "sha256": "46f7352d1571e25e6d2eb5aa08a9bb49a09dd2324a7f82ba3dc4f27d64af1f90",
+        "source_url": "https://github.com/hexway/apple_bleee/blob/1f8022959be660b561e6004b808dd93fa252bc90/img/status_gif.gif",
+        "language": "not-applicable"
+      },
+      {
+        "path": "img/airdrop_gif.gif",
+        "bytes": 3620330,
+        "sha256": "c742b4d72d56a980534819ff91be4cc9a8551479998124f0ceb44e718c267ce4",
+        "source_url": "https://github.com/hexway/apple_bleee/blob/1f8022959be660b561e6004b808dd93fa252bc90/img/airdrop_gif.gif",
+        "language": "not-applicable"
+      },
+      {
+        "path": "img/share_wifi_pwd2_gif.gif",
+        "bytes": 5732921,
+        "sha256": "5307ecbfdffb8ec9482745c6913c23dbc50645a121b09cebe51b1751f6440125",
+        "source_url": "https://github.com/hexway/apple_bleee/blob/1f8022959be660b561e6004b808dd93fa252bc90/img/share_wifi_pwd2_gif.gif",
+        "language": "not-applicable"
+      },
+      {
+        "path": "img/airpods_gif.gif",
+        "bytes": 2182992,
+        "sha256": "8e84033bd43569395d4f737196a65fc8d8cf1ae69863936bda9d3d68fd88360d",
+        "source_url": "https://github.com/hexway/apple_bleee/blob/1f8022959be660b561e6004b808dd93fa252bc90/img/airpods_gif.gif",
+        "language": "not-applicable"
+      },
+      {
+        "path": "img/logo.jpg",
+        "bytes": 67802,
+        "sha256": "a8796a2594b578c2fbd4d34efba780da2c92a93b88ab515bce052b283216b55e",
+        "source_url": "https://github.com/hexway/apple_bleee/blob/1f8022959be660b561e6004b808dd93fa252bc90/img/logo.jpg",
+        "language": "not-applicable"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/apple-bleee/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      }
+    ]
+  },
+  "arjun": {
+    "tool": "arjun",
+    "repository": "https://github.com/s0md3v/Arjun",
+    "commit": "d1fb995cb1e064d4e171d83f19f6af79b0a3c5ce",
+    "license_spdx": "AGPL-3.0",
+    "license_url": "https://github.com/s0md3v/Arjun/blob/d1fb995cb1e064d4e171d83f19f6af79b0a3c5ce/LICENSE",
+    "license_sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "archive_sha256": "7ae46d2c53613c1bdf577f5e05a18081a9f34f90500855e0ad421ae63433b7fb",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 3205,
+        "sha256": "85840661f4beed51722b507a267d390f6a2938eb0dafd13d6a7ff5687b8ebdd3",
+        "source_url": "https://github.com/s0md3v/Arjun/blob/d1fb995cb1e064d4e171d83f19f6af79b0a3c5ce/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/arjun/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+      }
+    ]
+  },
+  "arp-scan": {
+    "tool": "arp-scan",
+    "repository": "https://github.com/royhills/arp-scan",
+    "commit": "a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5",
+    "license_spdx": "GPL-3.0",
+    "license_url": "https://github.com/royhills/arp-scan/blob/a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5/COPYING",
+    "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "archive_sha256": "c8f0a8dc952dabfcdece0e2c7ca91761a970e4a6dfb2bfd3750386d7afbfab69",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 6243,
+        "sha256": "a3a2c3d25999b32e06cfa8e6eab786fc3d84038b56d5e868310dbaa1ec094a58",
+        "source_url": "https://github.com/royhills/arp-scan/blob/a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/arp-scan/COPYING.txt",
+        "source_path": "COPYING",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      }
+    ]
+  },
+  "arsenal-ng": {
+    "tool": "arsenal-ng",
+    "repository": "https://github.com/halilkirazkaya/arsenal-ng",
+    "commit": "58e18e015eddf4d379aa49454fd13194fd5546db",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/halilkirazkaya/arsenal-ng/blob/58e18e015eddf4d379aa49454fd13194fd5546db/LICENSE",
+    "license_sha256": "48e84c60e5c48ee1386429aaf082d930889b4a0010213f8794f89cf68a9d1475",
+    "archive_sha256": "22726b48e7e3ee2b765152e0d1673e16b92608376fd962e17b2ab688632d3593",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 11275,
+        "sha256": "a7923931d363d28d4e69b27cbf96e9761d6afd55ff1d6fe68a39eded28e2c765",
+        "source_url": "https://github.com/halilkirazkaya/arsenal-ng/blob/58e18e015eddf4d379aa49454fd13194fd5546db/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [
+      {
+        "path": "assets/basic-search.gif",
+        "bytes": 6346656,
+        "sha256": "a2f0ff1591ab2aebfd23efa51c5cb48ae0af3f7dd94245937edca2ff9e6b5b51",
+        "source_url": "https://github.com/halilkirazkaya/arsenal-ng/blob/58e18e015eddf4d379aa49454fd13194fd5546db/assets/basic-search.gif",
+        "language": "en"
+      },
+      {
+        "path": "assets/help-screen.gif",
+        "bytes": 797420,
+        "sha256": "469b8d2e603d2327dfaa3c8d0fdfa4ff756da41cddd213bbf39ea40562759c57",
+        "source_url": "https://github.com/halilkirazkaya/arsenal-ng/blob/58e18e015eddf4d379aa49454fd13194fd5546db/assets/help-screen.gif",
+        "language": "en"
+      },
+      {
+        "path": "assets/tools-view.gif",
+        "bytes": 1260214,
+        "sha256": "3e89671029bdb26b87561c479f7a71f65fe4fd15b7c646d4ce603fed114bedf5",
+        "source_url": "https://github.com/halilkirazkaya/arsenal-ng/blob/58e18e015eddf4d379aa49454fd13194fd5546db/assets/tools-view.gif",
+        "language": "en"
+      },
+      {
+        "path": "assets/variables.gif",
+        "bytes": 3926569,
+        "sha256": "4d7d021dc700475066a2f370cfc295443b43e381a5e9be180cb8163c572c29d9",
+        "source_url": "https://github.com/halilkirazkaya/arsenal-ng/blob/58e18e015eddf4d379aa49454fd13194fd5546db/assets/variables.gif",
+        "language": "en"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/arsenal-ng/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "48e84c60e5c48ee1386429aaf082d930889b4a0010213f8794f89cf68a9d1475"
+      }
+    ]
+  },
+  "atomic-operator": {
+    "tool": "atomic-operator",
+    "repository": "https://github.com/swimlane/atomic-operator",
+    "commit": "9756e4835e47c81b08be0bac5f2adcc3e9ad99c5",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/swimlane/atomic-operator/blob/9756e4835e47c81b08be0bac5f2adcc3e9ad99c5/LICENSE.md",
+    "license_sha256": "d79d1e501c8a92a4027a4902ca450836045a8c80441b1628e2b488f0e6a76bda",
+    "archive_sha256": "7b714d162127c6abe403fb07da1e90b7fa7fef61e7f01547ef70b5b53f22b986",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 15716,
+        "sha256": "23d66084d9835ffa6ea2bef88c1b064e97d94d161e60ac14c1d7f295fa50ffeb",
+        "source_url": "https://github.com/swimlane/atomic-operator/blob/9756e4835e47c81b08be0bac5f2adcc3e9ad99c5/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [
+      {
+        "path": "images/atomic-operator-logo.svg",
+        "bytes": 8098,
+        "sha256": "f2fdfa76ab3963c56e4bb2c3a86d92c9e3387be08a498a89f4d3732ccee0ed11",
+        "source_url": "https://github.com/swimlane/atomic-operator/blob/9756e4835e47c81b08be0bac5f2adcc3e9ad99c5/images/atomic-operator-logo.svg",
+        "language": "not-applicable"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/atomic-operator/LICENSE.md.txt",
+        "source_path": "LICENSE.md",
+        "sha256": "d79d1e501c8a92a4027a4902ca450836045a8c80441b1628e2b488f0e6a76bda"
+      }
+    ]
+  },
+  "autorecon": {
+    "tool": "autorecon",
+    "repository": "https://github.com/Tib3rius/AutoRecon",
+    "commit": "e7e98f60bdc5fb1695159c1bbcdfdf2746d30fa6",
+    "license_spdx": "GPL-3.0",
+    "license_url": "https://github.com/AutoRecon/AutoRecon/blob/e7e98f60bdc5fb1695159c1bbcdfdf2746d30fa6/LICENSE",
+    "license_sha256": "4cfd9a4ac11c9e1dc79f6924de26a5766c22bf8c39ed1920e9ff3ff3ee293c17",
+    "archive_sha256": "aefcdaae2389dab5dac0616efaf21a4c2834104bb3af9db3596e4a103e88e9be",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 27190,
+        "sha256": "0a42ce23038d6c5b767861414e9589329876ac68231653da46993eec431ce342",
+        "source_url": "https://github.com/Tib3rius/AutoRecon/blob/e7e98f60bdc5fb1695159c1bbcdfdf2746d30fa6/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/autorecon/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "4cfd9a4ac11c9e1dc79f6924de26a5766c22bf8c39ed1920e9ff3ff3ee293c17"
+      }
+    ]
+  },
+  "axel": {
+    "tool": "axel",
+    "repository": "https://github.com/axel-download-accelerator/axel",
+    "commit": "dc10ba0c8f8d804c1568df5dba3cdd6fa89572b1",
+    "license_spdx": "GPL-2.0",
+    "license_url": "https://github.com/axel-download-accelerator/axel/blob/dc10ba0c8f8d804c1568df5dba3cdd6fa89572b1/COPYING",
+    "license_sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6",
+    "archive_sha256": "ca16068ef61a44c41a1f02077ef689ec5bdede3bbbaae142c125b2e3428e6680",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 3885,
+        "sha256": "bfb19b48b5d60fe43691c0d13fd930055be2afdc74923dd7b3a6e6235911c2d6",
+        "source_url": "https://github.com/axel-download-accelerator/axel/blob/dc10ba0c8f8d804c1568df5dba3cdd6fa89572b1/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/axel/COPYING.txt",
+        "source_path": "COPYING",
+        "sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6"
+      }
+    ]
+  },
+  "azurehound": {
+    "tool": "azurehound",
+    "repository": "https://github.com/SpecterOps/AzureHound",
+    "commit": "b02d4577731f69c729a53055a09c44673689eefd",
+    "license_spdx": "GPL-3.0",
+    "license_url": "https://github.com/SpecterOps/AzureHound/blob/b02d4577731f69c729a53055a09c44673689eefd/LICENSE.md",
+    "license_sha256": "01e2419d68912b7888cc2fd3889aba27b5291b693db4a42a1795428c925aba40",
+    "archive_sha256": "ebd5969817aa9a5c1558edc31b212acb089cfaaf6320be4954041c95d22ca404",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 4560,
+        "sha256": "3d8e4489006823a8e6bef6ac0cf3ad5d9f51a4abfcfb0bcd7af65a3e56f954c4",
+        "source_url": "https://github.com/SpecterOps/AzureHound/blob/b02d4577731f69c729a53055a09c44673689eefd/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/azurehound/LICENSE.md.txt",
+        "source_path": "LICENSE.md",
+        "sha256": "01e2419d68912b7888cc2fd3889aba27b5291b693db4a42a1795428c925aba40"
+      },
+      {
+        "path": "sources/upstream/azurehound/NOTICE.md.txt",
+        "source_path": "NOTICE.md",
+        "sha256": "503ffd9f1761a2a39afea63a4067439360f2cec0efd33f0826f32b1597f1da7d"
+      }
+    ]
+  },
+  "b374k": {
+    "tool": "b374k",
+    "repository": "https://github.com/b374k/b374k",
+    "commit": "3e456486c94582e2403f047c80500da3261694ab",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/b374k/b374k/blob/3e456486c94582e2403f047c80500da3261694ab/LICENSE.md",
+    "license_sha256": "6c3e9780673e2019031718cf4b1f91e3a3503fdc9e9f8df9c6b8cc3794cfdc20",
+    "archive_sha256": "49224cfe2419654396f718f3388994bd1cdcfe5743afeacbc31be16db6b17db8",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 2881,
+        "sha256": "ee9b184309c7d53f7b7cefff185e28be30470362ede3ffb79c8d4c21280d20e6",
+        "source_url": "https://github.com/b374k/b374k/blob/3e456486c94582e2403f047c80500da3261694ab/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/b374k/LICENSE.md.txt",
+        "source_path": "LICENSE.md",
+        "sha256": "6c3e9780673e2019031718cf4b1f91e3a3503fdc9e9f8df9c6b8cc3794cfdc20"
+      }
+    ]
+  },
+  "backdoor-factory": {
+    "tool": "backdoor-factory",
+    "repository": "https://github.com/secretsquirrel/the-backdoor-factory",
+    "commit": "0c53045cd67261437b09b3252b37e7861bd285db",
+    "license_spdx": "BSD-3-Clause",
+    "license_url": "https://github.com/secretsquirrel/the-backdoor-factory/blob/0c53045cd67261437b09b3252b37e7861bd285db/LICENSE.txt",
+    "license_sha256": "304d00a558835b2fbec161fc978cf6482737c05dcb90bdbd9a0b53695390e383",
+    "archive_sha256": "aad54e1e27055a9b872b0bb4529ba7c8eb160eb2171e761ea0ddbc1519657d98",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 15007,
+        "sha256": "2e867cd1d2747f15e89272e5c23a8366b91745fc2122d1105633c4304fec2851",
+        "source_url": "https://github.com/secretsquirrel/the-backdoor-factory/blob/0c53045cd67261437b09b3252b37e7861bd285db/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/backdoor-factory/COPYING.txt",
+        "source_path": "COPYING",
+        "sha256": "9a6eca77eae3e8f3d215d9489db1b5501ac6366d9d0f46c88e8cc52fd5d87525"
+      },
+      {
+        "path": "sources/upstream/backdoor-factory/LICENSE.txt.txt",
+        "source_path": "LICENSE.txt",
+        "sha256": "304d00a558835b2fbec161fc978cf6482737c05dcb90bdbd9a0b53695390e383"
+      }
+    ]
+  },
+  "berate-ap": {
+    "tool": "berate-ap",
+    "repository": "https://github.com/sensepost/berate_ap",
+    "commit": "ed4ba9b94ae901ea1112640ed1b6d4f4d5930c51",
+    "license_spdx": "BSD-2-Clause",
+    "license_url": "https://github.com/sensepost/berate_ap/blob/ed4ba9b94ae901ea1112640ed1b6d4f4d5930c51/LICENSE",
+    "license_sha256": "673622299a74de151b8e65b01a42c936a009875fb5ea2fa188a4b155bc553f6c",
+    "archive_sha256": "3adec26df2699a7b6afae9e05ed29c2cccb165718e4a7fa75297268773500d98",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 5811,
+        "sha256": "19288bc9dd4996d17c85b5528e7500be137f092825c322151b88aaa4ce2f7ee2",
+        "source_url": "https://github.com/sensepost/berate_ap/blob/ed4ba9b94ae901ea1112640ed1b6d4f4d5930c51/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/berate-ap/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "673622299a74de151b8e65b01a42c936a009875fb5ea2fa188a4b155bc553f6c"
+      }
+    ]
   }
 }

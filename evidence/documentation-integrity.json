@@ -1,9 +1,44 @@
 {
   "passed": true,
-  "tools": 12,
-  "documents": 32,
-  "code_blocks": 304,
+  "tools": 24,
+  "documents": 44,
+  "code_blocks": 377,
   "checks": [
+    {
+      "check": "ffuf retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf image hash: _img/ffuf_juggling_250.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf image hash: _img/ffuf_mascot_600.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf image hash: _img/ffuf_run_logo_600.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf image hash: _img/ffuf_running_250.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf image hash: _img/ffuf_waving_250.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf image hash: _img/offsec-logo.png",
+      "pass": true,
+      "detail": null
+    },
     {
       "check": "ffuf:README.md original hash",
       "pass": true,
@@ -39,6 +74,11 @@
     },
     {
       "check": "ffuf:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "gobuster retained source license hash",
       "pass": true,
       "detail": null
     },
@@ -81,6 +121,21 @@
       "detail": null
     },
     {
+      "check": "subfinder retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder image hash: static/subfinder-logo.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder image hash: static/subfinder-run.png",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "subfinder:README.md original hash",
       "pass": true,
       "detail": null
@@ -115,6 +170,11 @@
     },
     {
       "check": "subfinder:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "assetfinder retained source license hash",
       "pass": true,
       "detail": null
     },
@@ -157,6 +217,21 @@
       "detail": null
     },
     {
+      "check": "feroxbuster retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster image hash: img/demo.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster image hash: img/logo/default-cropped.png",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "feroxbuster:README.md original hash",
       "pass": true,
       "detail": null
@@ -191,6 +266,11 @@
     },
     {
       "check": "feroxbuster:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "katana retained source license hash",
       "pass": true,
       "detail": null
     },
@@ -233,6 +313,21 @@
       "detail": null
     },
     {
+      "check": "naabu retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu image hash: static/naabu-logo.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu image hash: static/naabu-run.png",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "naabu:README.md original hash",
       "pass": true,
       "detail": null
@@ -267,6 +362,16 @@
     },
     {
       "check": "naabu:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above image hash: banner/banner.png",
       "pass": true,
       "detail": null
     },
@@ -309,6 +414,11 @@
       "detail": null
     },
     {
+      "check": "adaptixc2 retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "adaptixc2:README.md original hash",
       "pass": true,
       "detail": null
@@ -347,6 +457,11 @@
       "detail": null
     },
     {
+      "check": "airgeddon retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "airgeddon:README.md original hash",
       "pass": true,
       "detail": null
@@ -381,6 +496,86 @@
     },
     {
       "check": "airgeddon:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/Join-Discord.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/check-nuclei-documentation.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/learn-more-button.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-cover-image.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-cover.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-flow.jpg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-getting-started.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-logo.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-template-example.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-templates-teamcity-example.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-templates-teamcity.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/nuclei-write-your-first-template.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/projectdiscovery-browse-results.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/regression-with-nuclei.jpg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei image hash: static/teamcity-example.png",
       "pass": true,
       "detail": null
     },
@@ -457,6 +652,11 @@
     },
     {
       "check": "nuclei:README_PT-BR.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus retained source license hash",
       "pass": true,
       "detail": null
     },
@@ -1217,6 +1417,577 @@
     },
     {
       "check": "aflplusplus:docs/Changelog.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "altdns retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "altdns:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "altdns:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "altdns:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "altdns:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 16,
+        "translation": 16
+      }
+    },
+    {
+      "check": "altdns:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "altdns:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "altdns:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee image hash: img/dev_status.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee image hash: img/status_gif.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee image hash: img/airdrop_gif.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee image hash: img/share_wifi_pwd2_gif.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee image hash: img/airpods_gif.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee image hash: img/logo.jpg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "check": "apple-bleee:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 10,
+        "translation": 10
+      }
+    },
+    {
+      "check": "apple-bleee:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "apple-bleee:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arjun retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arjun:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arjun:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arjun:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "arjun:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 7,
+        "translation": 7
+      }
+    },
+    {
+      "check": "arjun:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arjun:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "arjun:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "arp-scan:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 43,
+        "translation": 43
+      }
+    },
+    {
+      "check": "arp-scan:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "arp-scan:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng image hash: assets/basic-search.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng image hash: assets/help-screen.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng image hash: assets/tools-view.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng image hash: assets/variables.gif",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "check": "arsenal-ng:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 79,
+        "translation": 79
+      }
+    },
+    {
+      "check": "arsenal-ng:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "arsenal-ng:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator image hash: images/atomic-operator-logo.svg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "check": "atomic-operator:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 17,
+        "translation": 17
+      }
+    },
+    {
+      "check": "atomic-operator:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "atomic-operator:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "autorecon retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "autorecon:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "autorecon:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "autorecon:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "check": "autorecon:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 9,
+        "translation": 9
+      }
+    },
+    {
+      "check": "autorecon:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "autorecon:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "autorecon:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "axel:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 28,
+        "translation": 28
+      }
+    },
+    {
+      "check": "axel:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "axel:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "azurehound retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "azurehound:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "azurehound:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "azurehound:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "check": "azurehound:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 6,
+        "translation": 6
+      }
+    },
+    {
+      "check": "azurehound:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "azurehound:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "azurehound:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "b374k retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "b374k:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "b374k:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "b374k:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "check": "b374k:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 0,
+        "translation": 0
+      }
+    },
+    {
+      "check": "b374k:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "b374k:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "b374k:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "backdoor-factory retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "backdoor-factory:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "backdoor-factory:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "backdoor-factory:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "backdoor-factory:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 0,
+        "translation": 0
+      }
+    },
+    {
+      "check": "backdoor-factory:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "backdoor-factory:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "backdoor-factory:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "berate-ap retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "berate-ap:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "berate-ap:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "berate-ap:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "check": "berate-ap:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 8,
+        "translation": 8
+      }
+    },
+    {
+      "check": "berate-ap:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "berate-ap:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "berate-ap:README.md review status honest",
       "pass": true,
       "detail": null
     }

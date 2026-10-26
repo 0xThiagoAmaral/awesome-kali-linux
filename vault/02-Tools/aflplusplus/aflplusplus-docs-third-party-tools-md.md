@@ -19,21 +19,25 @@ source_scope: "Repository root README and owned doc/docs/documentation Markdown 
 
 # Tools that help fuzzing with AFL++
 
+<a id="afl-and-other-development-languages"></a>
 ## AFL++ e outras linguagens de desenvolvimento
 
 * [afl-rs](https://github.com/rust-fuzz/afl.rs) - AFL++ para RUST
 * [WASM](https://github.com/fgsect/WAFL) - AFL++ para WASM
 
+<a id="starting-multiple-afl-instances-in-parallel-with-recommended-settings"></a>
 ## Iniciando várias instâncias AFL++ em paralelo com as configurações recomendadas:
 * [https://github.com/0xricksanchez/AFL_Runner](https://github.com/0xricksanchez/AFL_Runner)
 * [https://github.com/MegaManSec/AFLplusplus-Parallel-Gen](https://github.com/MegaManSec/AFLplusplus-Parallel-Gen)
 
+<a id="speeding-up-fuzzing"></a>
 ## Acelerando fuzzing
 
 * [libfiowrapper](https://github.com/marekzmyslowski/libfiowrapper) - se o
 function you want to fuzz requires loading a file, this permits using the
 memória compartilhada recurso de teste de caso :-) - recomendado.
 
+<a id="coverage-and-reachability-analysis"></a>
 ## Análise da cobertura e da acessibilidade
 
 * [cov-análise](https://github.com/AFLplusplus/cov-analysis) - gera LLVM
@@ -46,6 +50,7 @@ lacunas de cobertura acionáveis, para além do código morto (alimente o seu re
 `cov-analysis --reachability`) e emite arquivos `AFL_LLVM_ALLOWLIST`/`DENYLIST`
 instrumentar apenas as partes alcançáveis de um alvo.
 
+<a id="minimization-of-test-cases"></a>
 ## Minimização dos casos de teste
 
 * [afl-pytmin](https://github.com/ilsani/afl-pytmin) - um invólucro para afl-tmin
@@ -56,6 +61,7 @@ variação de afl-tmin com base no algoritmo ddmin.
 * [semi- vazio](https://github.com/googleprojectzero/halfempty) - é um rápido
 utilitário para minimizar casos de teste por Tavis Ormandy baseado na paralelização.
 
+<a id="distributed-execution"></a>
 ## Execução distribuída
 
 * [disfuzz-afl](https://github.com/MartijnB/disfuzz-afl) - distribuído fuzzing
@@ -69,6 +75,7 @@ gerenciamento e execução de muitos fuzzers AFL sincronizados na nuvem AWS.
 * [afl-in-the-cloud](https://github.com/abhisek/afl-in-the-cloud) - outro
 script para executar AFL em AWS.
 
+<a id="deployment-management-monitoring-reporting"></a>
 ## Implantação, gestão, acompanhamento, comunicação de informações
 
 * [afl-utils](https://gitlab.com/rc0r/afl-utils) - um conjunto de utilitários para
@@ -88,6 +95,7 @@ gestão remota de instâncias AFL.
 * [afl-extras](https://github.com/fekir/afl-extras) - scripts de shell para
 paralelizar afl-tmin, inicialização e coleta de dados.
 
+<a id="crash-processing"></a>
 ## Processamento de falhas
 
 * [AFLTriage](https://github.com/quic/AFLTriage)
@@ -110,6 +118,6 @@ análise.
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/third_party_tools.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/third_party_tools.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

@@ -40,8 +40,10 @@ Preciso dela.
 
 Se o seu alvo não for linux, então use o modo unicórnio_.
 
+<a id="fuzzing-binary-only-targets-with-afl"></a>
 ## Alvos fuzzing apenas binários com AFL++
 
+<a id="qemu-mode"></a>
 ### Modo QEMU
 
 O modo QEMU é a solução "nativa" para o programa.
@@ -99,6 +101,7 @@ Se você gosta de codificar um fuzzer personalizado sem muito trabalho, recomend
 para verificar a nossa irmã projeto libafl que suporta QEMU, também:
 [https://github.com/AFLplusplus/LibAFL](https://github.com/AFLplusplus/LibAFL)
 
+<a id="wineqemu"></a>
 ### VINHO+QEMU
 
 Modo de vinho pode executar binários Win32 PE com a instrumentação QEMU.
@@ -109,6 +112,7 @@ Está incluído em AFL++.
 Para mais informações, consultar
 [qemu_mode/README.wine.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/qemu_mode/README.wine.md).
 
+<a id="frida-mode"></a>
 ### Modo FRIDA
 
 No modo FRIDA, você pode fuzz alvos apenas binários tão facilmente como com o modo QEMU.
@@ -141,6 +145,7 @@ para verificar a nossa irmã projeto libafl que suporta Frida, também:
 [https://github.com/AFLplusplus/LibAFL](https://github.com/AFLplusplus/LibAFL).
 Já existem exemplos de trabalho :-)
 
+<a id="nyx-mode"></a>
 ### Modo Nyx
 
 Nyx é uma emulação completa do sistema fuzzing ambiente com suporte instantâneo que é
@@ -151,6 +156,7 @@ Para fuzzing somente binário é necessário um kernel especial 5.10.
 
 Ver [nyx_mode/README.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/nyx_mode/README.md).
 
+<a id="unicorn"></a>
 ### Unicórnio
 
 O unicórnio é um garfo de QEMU. A instrumentação é, portanto, muito semelhante.
@@ -172,6 +178,7 @@ cd unicorn_mode
 Para mais informações, confira
 [unicórnio_modo/README.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/unicorn_mode/README.md).
 
+<a id="shared-libraries"></a>
 ### Bibliotecas compartilhadas
 
 Se o objetivo é fuzz uma biblioteca dinâmica, então há duas opções disponíveis.
@@ -195,6 +202,7 @@ no entanto, não pode ser executado em paralelo. Atualmente, apenas um processo 
 Para mais informações, consultar
 [coresight_mode/README.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/coresight_mode/README.md).
 
+<a id="binary-rewriters"></a>
 ## Reescritores binários
 
 Uma solução alternativa são reescritores binários. Eles são mais rápidos do que as soluções
@@ -254,6 +262,7 @@ lvm_mode para instrumentar o binário. Boa sorte com isso.
 
 [https://github.com/lifting-bits/mcsema](https://github.com/lifting-bits/mcsema)
 
+<a id="binary-tracers"></a>
 ## Marcadores binários
 
 ### Pintool & DynamoRIO
@@ -302,6 +311,7 @@ Note que há também hongggfuzz:
 [https://github.com/google/honggfuzz](https://github.com/google/honggfuzz).
 seu desempenho IPT é de apenas 6%!
 
+<a id="non-afl-solutions"></a>
 ## Soluções não-AFL++
 
 Existem muitos frameworks apenas para binários fuzzing. Alguns são ótimos para CTFs, mas não
@@ -319,6 +329,7 @@ Alguns são muito difíceis de montar...
 [https://github.com/googleprojectzero/TinyInst](https://github.com/googleprojectzero/TinyInst)
 *  Por favor, mande-me qualquer desaparecido que seja bom.
 
+<a id="closing-words"></a>
 ## Palavras finais
 
 É isso! Notícias, correções, atualizações? Envie um email para vh@thc.org.
@@ -328,6 +339,6 @@ Alguns são muito difíceis de montar...
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/fuzzing_binary-only_targets.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/fuzzing_binary-only_targets.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

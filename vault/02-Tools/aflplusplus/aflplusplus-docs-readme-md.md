@@ -27,6 +27,7 @@ Para informações gerais sobre AFL++, consulte
 Também dê uma olhada em nosso [FAQ.md](aflplusplus-docs-faq-md.md) e
 [best_ practices.md](aflplusplus-docs-best-practices-md.md).
 
+<a id="fuzzing-targets-with-the-source-code-available"></a>
 ## Alvos fuzzing com o código fonte disponível
 
 Você pode encontrar um start rápido para alvos fuzzing com o código fonte disponível em
@@ -41,30 +42,35 @@ imagem e selecione um passo.
 Para mais informações sobre instrumentação, consultar
 [READMEs na instrumentação/ pasta](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation).
 
+<a id="instrumenting-the-target"></a>
 ### Instrumentação do objectivo
 
 Para mais informações, clique na imagem a seguir e selecione um passo.
 
 [Imagem/recurso externo: Instrumenting the target](https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/1_instrument_target.drawio.svg "Instrumenting the target")
 
+<a id="preparing-the-fuzzing-campaign"></a>
 ### Preparação da campanha fuzzing
 
 Para mais informações, clique na imagem a seguir e selecione um passo.
 
 [Imagem/recurso externo: Preparing the fuzzing campaign](https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/2_prepare_campaign.drawio.svg "Preparing the fuzzing campaign")
 
+<a id="fuzzing-the-target"></a>
 ### Fuzzing o alvo
 
 Para mais informações, clique na imagem a seguir e selecione um passo.
 
 [Imagem/recurso externo: Fuzzing the target](https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/3_fuzz_target.drawio.svg "Fuzzing the target")
 
+<a id="managing-the-fuzzing-campaign"></a>
 ### Gerenciando a campanha fuzzing
 
 Para mais informações, clique na imagem a seguir e selecione um passo.
 
 [Imagem/recurso externo: Managing the fuzzing campaign](https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/4_manage_campaign.drawio.svg "Managing the fuzzing campaign")
 
+<a id="fuzzing-other-targets"></a>
 ## Fuzzing outros alvos
 
 Para saber mais sobre o fuzzing, consulte:
@@ -77,6 +83,7 @@ Para saber mais sobre o fuzzing, consulte:
 [best_ practices.md#fuzzing-a-network-service](aflplusplus-docs-best-practices-md.md#fuzzing-a-network-service)
 * Não- linux: [unicórnio_modo/README.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/unicorn_mode/README.md)
 
+<a id="additional-information"></a>
 ## Informações adicionais
 
 * Perfil de valor:
@@ -90,6 +97,6 @@ Para saber mais sobre o fuzzing, consulte:
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/README.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/README.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

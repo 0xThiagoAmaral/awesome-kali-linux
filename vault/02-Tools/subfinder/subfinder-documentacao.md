@@ -22,7 +22,7 @@ source_scope: "Official English repository README/docs and available upstream Po
   <br>
 </h1>
 
-<h4 align="center">Fast passive subdomain enumeration tool.</h4>
+<h4 align="center">Fast passivo subdomínio enumeration tool.</h4>
 
 
 <p align="center">
@@ -34,12 +34,12 @@ source_scope: "Official English repository README/docs and available upstream Po
 </p>
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#installation">Install</a> •
-  <a href="#a-executar-o-subfinder">Usage</a> •
-  <a href="#instruções-de-instalação-pós">API Setup</a> •
-  <a href="#biblioteca-subfinder-go">Library</a> •
-  <a href="https://discord.gg/projectdiscovery">Join Discord</a>
+<a href="#features">Características</a> •
+<a href="#installation">Install</a>
+<a href="#a-executar-o-subfinder">Usage</a> •
+<a href="#instruções-de-instalação-pós">API Configuração</a> •
+<a href="#biblioteca-subfinder-go">Library</a> •
+<a href="https://discord.gg/projectdiscovery">Join Discord</a>
 </p>
 
 ---
@@ -132,6 +132,7 @@ OPTIMIZATION:
   -rsr, -response-size-read int max response body size to read in bytes from passive sources (0 = unlimited)
 ```
 
+<a id="environment-variables"></a>
 ## Variáveis de Ambiente
 
 O Subfinder suporta variáveis de ambiente para especificar caminhos personalizados para arquivos de configuração:
@@ -149,14 +150,17 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
 Saiba mais sobre formas de instalar o subfinder aqui: https://docs.projectdiscovery.io/tools/subfinder/install.
 
+<a id="post-installation-instructions"></a>
 ## Instruções de instalação pós
 
 `subfinder` pode ser usado logo após a instalação, no entanto muitas fontes necessitaram de chaves API para funcionar. Saiba mais aqui: https://docs.projectdiscovery.io/tools/subfinder/install#post-install-configuration.
 
+<a id="running-subfinder"></a>
 ## A executar o Subfinder
 
 Saiba mais sobre como executar o Subfinder aqui: https://docs.projectdiscovery.io/tools/subfinder/running.
 
+<a id="filtering-results-with-regular-expressions"></a>
 ### Filtrar os resultados com expressões regulares
 
 `-match-regex` e `-filter-regex` tomam expressões regulares Go, repetidas ou de um arquivo (uma por linha), e combinam com `-match` e `-filter`:
@@ -165,6 +169,7 @@ Saiba mais sobre como executar o Subfinder aqui: https://docs.projectdiscovery.i
 subfinder -d example.com -match-regex '^(api|web)[0-9]{1,3}\.' -filter-regex '(^|\.)dev\.'
 ```
 
+<a id="subfinder-go-library"></a>
 ## Biblioteca Subfinder Go
 
 Subfinder também pode ser usado como biblioteca e um exemplo mínimo de usar o subfinder SDK está disponível [Aqui.](https://github.com/projectdiscovery/subfinder/blob/98ef8711acb91f52bc27a979e6c5320a6e1365ae/examples/main.go)
@@ -173,6 +178,7 @@ Subfinder também pode ser usado como biblioteca e um exemplo mínimo de usar o 
 </tr>
 </table>
 
+<a id="resources"></a>
 ### Recursos
 
 - [Recon comigo !!!](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)

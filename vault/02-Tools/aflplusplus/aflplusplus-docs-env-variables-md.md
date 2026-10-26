@@ -28,6 +28,7 @@ Nota: A maioria das ferramentas irá alertar sobre quaisquer variáveis de ambie
 exemplo, por causa de erros de digitação. Se você deseja desabilitar esta verificação, então defina o
 Variável de ambiente `AFL_IGNORE_UNKNOWN_ENVS`.
 
+<a id="1-settings-for-all-compilers"></a>
 ## 1) Configurações para todos os compiladores
 
 Começando com AFL++ 3.0, há apenas um compilador: afl-cc.
@@ -142,6 +143,7 @@ uso bastante amplo de variáveis de ambiente em vez disso:
     - [SAND](aflplusplus-docs-sand-md.md). In this case, the binaries built in this way will serve as extra oracles. Check the corresponding documents for details.
     - Compatible with LibAFL ForkserverExecutor implementation and thus faster to repeatedly run, compared to simple CommandExecutor.
 
+<a id="2-settings-for-llvm-and-lto-afl-clang-fast--afl-clang-fast--afl-clang-lto--afl-clang-lto"></a>
 ## 2) Configurações para LLVM e LTO: afl-clang-fast / afl-clang-fast++ / afl-clang-lto / afl-clang-lto++
 
 Os ajudantes nativos de instrumentação (instrumentação e gcc_plugin) aceitam
@@ -166,6 +168,7 @@ Subconjunto das configurações discutidas na seção 1, com exceção de:
 Em seguida, há algumas características específicas que só estão disponíveis em
 Modo de instrumentação:
 
+<a id="select-the-instrumentation-mode"></a>
 ### Selecione o modo de instrumentação
 
 `AFL_LLVM_INSTRUMENT` - isto configura o modo de instrumentação.
@@ -180,6 +183,7 @@ Opções disponíveis:
   - Native - instrumento original baseado em pcguard de clang
   - PCGUARD - nossa própria instrumentação baseada em pcguard (padrão)
 
+<a id="bug-pass-oracles"></a>
 #### Oráculos de passagem de bugs
 
 A configuração de qualquer variável `AFL_LLVM_BUG*` durante a compilação permite
@@ -374,6 +378,7 @@ adicionalmente combinado com o seu chamador.
 Para mais informações, consultar
 [instrumentação/README.lto.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation/README.lto.md).
 
+<a id="instrument-list-selectively-instrument-files-and-functions"></a>
 #### LISTA DE INSTRUMENTOs (arquivos e funções de instrumentos seletivos)
 
 Essa característica permite a instrumentação seletiva da fonte.
@@ -385,6 +390,7 @@ no arquivo especificado.
 Para mais informações, consultar
 [instrumentação/README.instrument_list.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation/README.instrument_list.md).
 
+<a id="injections"></a>
 #### INJECÇÕES
 
 Este recurso é capaz de encontrar vulnerabilidades de injeção simples em inseguro
@@ -460,6 +466,7 @@ combinado.
 Para mais informações, consultar
 [instrumentação/README.lto.md](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/instrumentation/README.lto.md).
 
+<a id="path-lto-and-pcguard"></a>
 #### PATH (LTO e PCGUARD)
 
 Configuração do `AFL_LLVM_PATH` (ou `AFL_LLVM_LTO_PATH` / `AFL_LLVM_PATH_MODE`)
@@ -504,6 +511,7 @@ para mais pormenores.
     If the target performs only a few loops, then this will give a small
     performance boost.
 
+<a id="dense-instrumentation-llvm-pcguard-and-lto-mode"></a>
 #### Instrumentação densa ( modo LLVM PCGUARD e LTO)
 
 Por padrão, a cobertura instrumentação ameixas blocos básicos cuja execução é
@@ -518,6 +526,7 @@ A maioria das entradas adicionadas não carregam nenhum sinal independente, por 
 botão: apenas útil se o seu alvo está muito abaixo do limite de tamanho do mapa e você tem
 mediu que a granularidade extra ajuda.
 
+<a id="clamp-instrumentation-llvm-pcguard-and-lto-mode"></a>
 #### Instrumentos de braçadeira ( modo LLVM PCGUARD e LTO)
 
 Em -O2 e acima do otimizador gira `MIN()`, `MAX()`, `LIM()` e planície
@@ -531,6 +540,7 @@ sites que compensam são o comprimento, contagem e índice guardas em analisador
 frio. Então isto vale a pena ligar para um analisador, e vale a pena medir primeiro para
 qualquer coisa a fazer pixels a granel ou sinalizar matemática.
 
+<a id="fused-condition-instrumentation-llvm-pcguard-and-lto-mode"></a>
 #### Instrumentos de medição de condições de fusão ( modo LLVM PCGUARD e LTO)
 
 `if (a && b)` com um segundo operando barato é especulado por SimplifyCFG em um
@@ -542,6 +552,7 @@ resolução de condições de multi-clausa.
 Na libraw isso adiciona entradas de mapa 7.5% para nenhum custo de transferência mensurável, e sua
 sites são principalmente em código parser, por isso é o mais barato destes três botões.
 
+<a id="vector-decision-instrumentation-llvm-pcguard-and-lto-mode"></a>
 #### Instrumentos de decisão vetorial ( modo LLVM PCGUARD e LTO)
 
 Scalar `select`s são instrumentados por padrão e escalar min/max com
@@ -561,12 +572,14 @@ atinge vetores que são explícitos na fonte (extensões do vetor, intrínsecas,
 instrumentos de modo LTO totalmente otimizado IR após o vectorizador e faz
 Meça antes de mantê-lo.
 
+<a id="thread-safe-instrumentation-counters-in-all-modes"></a>
 #### Contadores de instrumentação seguros de thread (em todos os modos)
 
 Setting `AFL_LLVM_THREADSAFE_INST` irá injetar código que implementa thread seguro
 contadores. A sobrecarga é um pouco maior em comparação com a não- rosca mais antiga
 caso seguro. Note que isto desactiva o Neverzero (ver NOT_ZERO).
 
+<a id="deny-exec-calls"></a>
 #### Negar chamadas exec*
 
 A configuração do `AFL_LLVM_DENY_EXEC=1` durante a compilação fará com que o instrumentado
@@ -576,6 +589,7 @@ funções, como o processo executivo herdará a instrumentação, mas não pode
 ser o alvo pretendido para o fuzzing. Só activar isto se o seu alvo nunca
 chamar funções executivas durante a operação normal.
 
+<a id="abort-on-entry-of-non-instrumented-functions"></a>
 #### Abortar a entrada de funções não instrumentadas
 
 Quando você constrói com um `AFL_LLVM_ALLOWLIST` ou `AFL_LLVM_DENYLIST` (ver INSTRUMENTO
@@ -596,6 +610,7 @@ através de chamadas diretas. Ele não tem efeito (e avisa) se nenhuma lista de 
 utilizar.
 
 
+<a id="3-settings-for-gcc_plugin-mode"></a>
 ## 3) Configurações para o modo GCC_ PLUGIN
 
 Existem algumas características específicas que só estão disponíveis no modo GCC_PLUGIN.
@@ -623,6 +638,7 @@ Existem algumas características específicas que só estão disponíveis no mod
     the target performs only a few loops, then this will give a small
     performance boost.
 
+<a id="4-runtime-settings"></a>
 ## 4) Configurações de tempo de execução
 
 As seguintes variáveis de ambiente são para um alvo compilado AFL++.
@@ -642,6 +658,7 @@ As seguintes variáveis de ambiente são para um alvo compilado AFL++.
   - A configuração do `AFL_DISABLE_LLVM_INSTRUMENTATION` irá desativar a recolha
     instrumentation. (More of an internal option.)
 
+<a id="5-settings-for-afl-fuzz"></a>
 ## 5) Configurações para afl-fuzz
 
 O principal binário fuzzer aceita várias opções que desativam um par de sanidade
@@ -1097,6 +1114,7 @@ verifica ou altera algumas das semânticas mais exóticas da ferramenta:
     crash is found. Setting `AFL_NO_CRASH_README` will prevent this. Useful when
     counting crashes based on a file count in that directory.
 
+<a id="6-settings-for-afl-qemu-trace"></a>
 ## 6) Configurações para afl-qemu-trace
 
 O wrapper QEMU usado para instrumentar código somente binário suporta várias configurações:
@@ -1178,6 +1196,7 @@ O wrapper QEMU usado para instrumentar código somente binário suporta várias 
     emulation" variables (e.g., `QEMU_STACK_SIZE`), but there should be no
     reason to touch them.
 
+<a id="7-settings-for-afl-frida-trace"></a>
 ## 7) Configurações para afl-frida-trace
 
 A embalagem FRIDA usada para instrumentar o código somente binário suporta muitos dos mesmos
@@ -1268,6 +1287,7 @@ descarte do núcleo do alvo instrumentado. Observe que para capturar o núcleo
 descarte você deve definir um tempo limite suficiente (usando `-t`) para evitar `afl-fuzz`
 matar o processo enquanto está a ser despejado.
 
+<a id="8-settings-for-afl-cmin-and-afl-merge"></a>
 ## 8) Configurações para afl-cmin e afl-merge
 
 `afl-cmin` (e sua ligação simbólica `afl-merge`) oferece muito pouca personalização:
@@ -1296,6 +1316,7 @@ As variantes do script (`afl-cmin.py`, `afl-cmin.bash`) coletam cobertura com
 (deixando `<out_dir>/.traces/` no lugar) e `AFL_CMIN_ALLOW_ANY`, mais cada
 Variável `afl-showmap`, como `AFL_PRINT_FILENAMES`.
 
+<a id="9-settings-for-afl-tmin"></a>
 ## 9) Configurações para afl-tmin
 
 Praticamente nada para jogar. Bem, no modo QEMU (`-Q`), `AFL_PATH` será
@@ -1307,11 +1328,13 @@ para corresponder ao minimizar falhas. Isto tornará a minimização menos útil
 pode impedir que a ferramenta de "jumping" de uma condição de colisão para outra em
 software muito buggy. Você provavelmente quer combiná-lo com a bandeira `-e`.
 
+<a id="10-settings-for-afl-analyze"></a>
 ## 10) Configurações para afl-analyze
 
 Você pode definir `AFL_ANALYZE_HEX` para obter deslocamentos de arquivos impressos como hexadecimal em vez
 decimal.
 
+<a id="11-settings-for-libdislocator"></a>
 ## 11) Configuração do libdislocator
 
 A biblioteca honra estas variáveis de ambiente:
@@ -1334,11 +1357,13 @@ A biblioteca honra estas variáveis de ambiente:
   - `AFL_LD_VERBOSE` faz com que a biblioteca para produzir algumas mensagens de diagnóstico que
     may be useful for pinpointing the cause of any observed issues.
 
+<a id="12-settings-for-libtokencap"></a>
 ## 12) Configuração da libtokencap
 
 Esta biblioteca aceita `AFL_TOKEN_FILE` para indicar a localização para a qual o
 Os símbolos descobertos devem ser escritos.
 
+<a id="13-third-party-variables-set-by-afl-fuzz--other-tools"></a>
 ## 13) Variáveis de terceiros definidas por afl-fuzz & outras ferramentas
 
 Várias variáveis não são interpretadas diretamente pelo afl-fuzz, mas são definidas para
@@ -1391,6 +1416,6 @@ valores óptimos, se já não estiverem presentes no ambiente:
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/env_variables.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/env_variables.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

@@ -68,6 +68,7 @@ estrutura é), estes links têm você coberto (alguns estão desatualizados thou
 Para uma explicação muito aprofundada sobre como funciona o AFL++, confira:
 [https://blog.ritsec.club/posts/afl-under-hood/](https://blog.ritsec.club/posts/afl-under-hood/)
 
+<a id="video-tutorials"></a>
 ## Tutoriais de Vídeo
 
 * [Instalar o Ubuntu AFL++](https://www.youtube.com/watch?v=5dCvhkbi3RA)
@@ -85,6 +86,6 @@ Se você encontrar outros bons, por favor, envie-os para nós :-)
 
 ## Procedência desta tradução
 
-Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/tutorials.md). Licença: [AGPL-3.0](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
+Fonte: [https://github.com/AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/tutorials.md). Licença: [AGPL-3.0-or-later](../../99-Assets/upstream/aflplusplus/LICENSE.txt). Commit: d0070729206a80a9af297b2341edd63f68fdac35.
 
 O original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.

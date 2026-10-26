@@ -101,7 +101,7 @@ class LocalTranslator:
             parts.append(lead+self.raw(chunk.strip())+trail)
         return ''.join(parts)
     def flush(self):
-        self.cache_file.write_text(json.dumps(self.cache,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        self.cache_file.write_text(json.dumps(self.cache,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
     def provenance(self):
         model=json.loads((self.runtime/'model-provenance.json').read_text(encoding='utf-8'))
         return {'engine':'Argos EN-PT model through CTranslate2','model_sha256':model['model_sha256'],

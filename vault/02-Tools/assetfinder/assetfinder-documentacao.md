@@ -22,6 +22,7 @@ source_scope: "Official English repository README/docs and available upstream Po
 Encontre domínios e subdomínios potencialmente relacionados a um dado domínio.
 
 
+<a id="install"></a>
 ## Instalar
 
 Se tiver o Go instalado e configurado (ou seja, com o `$GOPATH/bin` no seu `$PATH`):
@@ -33,16 +34,19 @@ go get -u github.com/tomnomnom/assetfinder
 Caso contrário, [baixar um lançamento para sua plataforma](https://github.com/tomnomnom/assetfinder/releases).
 Para facilitar a execução, você pode colocar o binário no seu `$PATH`.
 
+<a id="usage"></a>
 ## Uso
 
 ```text
 assetfinder [--subs-only] <domain>
 ```
 
+<a id="sources"></a>
 ## Fontes
 
 Por favor, sinta-se livre para emitir pedidos com novas fontes! :)
 
+<a id="implemented"></a>
 ### Implementação
 * crt.sh
 * certspotter
@@ -58,6 +62,7 @@ Por favor, sinta-se livre para emitir pedidos com novas fontes! :)
 * findsubdomínios
     * Needs `SPYSE_API_TOKEN` environment variable set (the free version always gives the first response page, and you also get "25 unlimited requests") — (https://spyse.com/apidocs)
 
+<a id="sources-to-be-implemented"></a>
 ### Fontes a implementar
 * http://api.passivetotal.org/api/docs/
 * https://community.riskiq.com/ (?)

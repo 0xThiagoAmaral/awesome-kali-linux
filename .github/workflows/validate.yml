@@ -8,9 +8,17 @@ jobs:
     steps:
       - name: Checkout pinned source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Verify byte-exact release files
+        run: python3 scripts/verify_release_manifest.py
       - name: Validate local notes and links
         run: python3 scripts/validate_vault.py
       - name: Validate Awesome README
         run: python3 scripts/check_readme_contract.py README.md
       - name: Validate imported documentation integrity
         run: python3 scripts/validate_documentation.py
+      - name: Validate exact quick-reference examples
+        run: python3 scripts/validate_cheatsheets.py
+      - name: Test documentation transformation fixtures
+        run: python3 scripts/test_documentation_pipeline.py
+      - name: Audit local document fragments
+        run: python3 scripts/audit_offline_anchors.py

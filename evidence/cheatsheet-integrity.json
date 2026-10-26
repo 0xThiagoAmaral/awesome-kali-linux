@@ -1,0 +1,261 @@
+{
+  "passed": true,
+  "cheatsheets": 10,
+  "source_examples": 44,
+  "examples_executed": false,
+  "checks": [
+    {
+      "tool": "ffuf",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "ffuf",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "ffuf",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "ffuf",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "ffuf",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "gobuster",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "gobuster",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "gobuster",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "gobuster",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "gobuster",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "subfinder",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "subfinder",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "subfinder",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "subfinder",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "subfinder",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "nuclei",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "nuclei",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "nuclei",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "nuclei",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "nuclei",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "katana",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "katana",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "katana",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "katana",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "katana",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "naabu",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "naabu",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "naabu",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "naabu",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "naabu",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "assetfinder",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "assetfinder",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "assetfinder",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "assetfinder",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "assetfinder",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "feroxbuster",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "feroxbuster",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "feroxbuster",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "feroxbuster",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "feroxbuster",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "above",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "above",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "above",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "above",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "above",
+      "check": "test status honest",
+      "passed": true
+    },
+    {
+      "tool": "aflplusplus",
+      "check": "original hash",
+      "passed": true
+    },
+    {
+      "tool": "aflplusplus",
+      "check": "note hash",
+      "passed": true
+    },
+    {
+      "tool": "aflplusplus",
+      "check": "exact examples",
+      "passed": true
+    },
+    {
+      "tool": "aflplusplus",
+      "check": "example hashes",
+      "passed": true
+    },
+    {
+      "tool": "aflplusplus",
+      "check": "test status honest",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Provenance and literal integrity do not prove command compatibility with every installed Kali version."
+  ]
+}

@@ -9,10 +9,11 @@
         "note": "vault/02-Tools/ffuf/ffuf-documentacao.md",
         "original": "sources/upstream/ffuf/README.md.source",
         "source_sha256": "2419b892f8a77ba3c5021300dcf5c37f2587ac9b7d579303c9add707fc0b93e4",
-        "translation_sha256": "407379107522f1a78d50f95886a8eee2940a7a0ef89c7a3ea693ecb3b595df48",
+        "translation_sha256": "93735c048f1f5822b842053dc52a0fa76a2c289c5cb1fa216d137c606ac1f16f",
         "source_fenced_blocks": 11,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-image-to-reference-link",
@@ -21,6 +22,54 @@
           {
             "kind": "remote-image-to-reference-link",
             "url": "https://asciinema.org/a/211360.png"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "example-usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "typical-directory-discovery"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "virtual-host-discovery-without-dns-records"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "post-data-fuzzing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "maximum-execution-time"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "using-external-mutator-to-produce-test-cases"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "configuration-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "interactive-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "contributing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "license"
           },
           {
             "kind": "unacquired-relative-reference-pinned-online",
@@ -61,10 +110,11 @@
         "note": "vault/02-Tools/gobuster/gobuster-documentacao.md",
         "original": "sources/upstream/gobuster/README.md.source",
         "source_sha256": "9c5b67cdd42cd59eb9d4c3c0ed9c90aae05fce56803ff92d81e8fd097a6fff0d",
-        "translation_sha256": "dd20816d4961ed32cbf5c4cddb850d0c7a8a295f5e4f2a841c00e6a1a631bae3",
+        "translation_sha256": "7f0920295e15490e905b7a142b20213feeba65f8f7690e246877cf42207ab27f",
         "source_fenced_blocks": 22,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-image-to-reference-link",
@@ -93,6 +143,162 @@
           {
             "kind": "remote-image-to-reference-link",
             "url": "https://opencollective.com/gobuster/backers.svg?width=890"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-introduction"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-features"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-what-can-gobuster-do"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-quick-start"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "quick-install-recommended"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "alternative-installation-methods"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "using-binary-releases"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "using-docker"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "building-from-source"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "troubleshooting-installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "getting-help"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-available-modes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-directory-mode-dir"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-dns-mode-dns"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-virtual-host-mode-vhost"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-s3-mode-s3"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-tftp-mode-tftp"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-gcs-mode-gcs"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-support"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "love-this-tool-back-it"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-common-use-cases"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "web-application-security-testing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "dns-reconnaissance"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "cloud-storage-assessment"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-troubleshooting"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "common-issues"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "permission-denied-or-access-denied"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "connection-timeout"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "no-results-found"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "performance-issues"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "slow-scanning"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-best-practices"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "security-testing-guidelines"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "wordlist-selection"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "output-management"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-additional-resources"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "recommended-wordlists"
           }
         ],
         "human_review": "pending"
@@ -129,10 +335,11 @@
         "note": "vault/02-Tools/subfinder/subfinder-documentacao.md",
         "original": "sources/upstream/subfinder/README.md.source",
         "source_sha256": "38c2ad7da121806ed1594fbfb8a6f268eb213c337a90edc2c249fd6065c49fe0",
-        "translation_sha256": "b3be4f8fb8f1724454e52037cbdfe76f4b6740ce6bbe69a4f4f493f2bee8e996",
+        "translation_sha256": "032320b4f0f06d174ca9d920431dd73290ac500692d922ae09a767d3a6dc00b3",
         "source_fenced_blocks": 4,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-html-image-removed",
@@ -153,6 +360,30 @@
           {
             "kind": "remote-html-image-removed",
             "url": "https://img.shields.io/discord/695645237418131507.svg?logo=discord"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "environment-variables"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "post-installation-instructions"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "running-subfinder"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "filtering-results-with-regular-expressions"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "subfinder-go-library"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "resources"
           },
           {
             "kind": "unacquired-relative-reference-pinned-online",
@@ -193,11 +424,33 @@
         "note": "vault/02-Tools/assetfinder/assetfinder-documentacao.md",
         "original": "sources/upstream/assetfinder/README.md.source",
         "source_sha256": "6a5f2f6b3beb4e8510d234392001dd8059b49dd334719203980f039a588cf063",
-        "translation_sha256": "6c6c12406c6e24d0e28c89246f3008e1150507fe71b979f87b3eadec39d22ddc",
+        "translation_sha256": "0bf73de3c365930ba2be4501e1a2c90ec3e8d7553bb5dfd45326b4e4b01c7aab",
         "source_fenced_blocks": 2,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "presentation_changes": [],
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "install"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "sources"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "implemented"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "sources-to-be-implemented"
+          }
+        ],
         "human_review": "pending"
       }
     ],
@@ -232,22 +485,15 @@
         "note": "vault/02-Tools/feroxbuster/feroxbuster-documentacao.md",
         "original": "sources/upstream/feroxbuster/README.md.source",
         "source_sha256": "dd28579002e3cfb0753706423e15f1671cbd27f852494879efe3cc53671a5457",
-        "translation_sha256": "a2bc31a7c1dbbf521566f0e7a82606e96d4bbe42b4098be723c8e9b7c63412bd",
+        "translation_sha256": "bde1ddfb09ed045936dee79e0fb72ec9edd9759b9a6131e846bbfd1b33ffaa6d",
         "source_fenced_blocks": 16,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-image-to-reference-link",
             "url": "https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square"
-          },
-          {
-            "kind": "remote-image-to-reference-link",
-            "url": "img/demo.gif"
-          },
-          {
-            "kind": "remote-html-image-removed",
-            "url": "img/logo/default-cropped.png"
           },
           {
             "kind": "remote-html-image-removed",
@@ -754,8 +1000,419 @@
             "url": "https://avatars.githubusercontent.com/u/218396309?v=4?s=100"
           },
           {
-            "kind": "unacquired-relative-reference-pinned-online",
-            "source_path": "img/demo.gif"
+            "kind": "original-heading-id-preserved",
+            "anchor": "what-the-heck-is-a-ferox-anyway"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "whats-it-do-tho"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "quick-start"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "linux-32-and-64-bit--macos"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "windows-x86_64"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "windows-via-winget"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "windows-via-chocolatey"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "all-others"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "updating-feroxbuster-new-in-v291"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "example-usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "multiple-values"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "include-headers"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "ipv6-non-recursive-scan-with-info-level-logging-enabled"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "read-urls-from-stdin-pipe-only-resulting-urls-out-to-another-tool"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "proxy-traffic-through-burp"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "proxy-traffic-through-a-socks-proxy-including-dns-lookups"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "pass-auth-token-via-query-parameter"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "set-the-content-type-of-the-body-automatically-with---data-json---data-urlencoded"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "contributors"
+          },
+          {
+            "kind": "source-link-correction",
+            "from": "#contributors-",
+            "to": "#contributors"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-jsav0",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-TGotwig",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-spikecodes",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-mzpqnxow",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-noraj",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-craig",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-EONRaider",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-wtwver",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-Tib3rius",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-sbrun",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-black-A",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-dinosn",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-N0ur5",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-dnaka91",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-dsaxton",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-n0kovo",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-justinsteven",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-unkn0wnsyst3m",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-its0x08",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-MD-Levitan",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-godylockz",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-0dayCTF",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-ippsec",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-jhaddix",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-0xdf223",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-Flangyver",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-DonatoReis",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-postmodern",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-hakdogpinas",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-duokebei",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-aidanhall34",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-joaociocca",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-pich4ya",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-xaeroborg",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-Luoooio",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-aancw",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-aancw",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-aroly",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-lavafroth",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-AkechiShiro",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-sectroyer",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-ocervell",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-RavySena",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-Mister7F",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-FieldOfRice",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-NotoriousRebel",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-rew1nter",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-deadloot",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-Spidle",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-JulianGR",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-JulianGR",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-sitiom",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-wikamp-collaborator",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "infra-wikamp-collaborator",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-L1-0",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-sa7mon",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-swordfish0x0",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-libklein",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-Raymond-JV",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-zar3bski",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-h121h",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-s0i37",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-0x7274",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-4FunAndProfit",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-lidorelias3",
+            "destination": "matching contributor table cell"
+          },
+          {
+            "kind": "contributor-badge-anchor-preserved",
+            "anchor": "ideas-ChrisJr404",
+            "destination": "matching contributor table cell"
           }
         ],
         "human_review": "pending"
@@ -792,10 +1449,11 @@
         "note": "vault/02-Tools/katana/katana-documentacao.md",
         "original": "sources/upstream/katana/README.md.source",
         "source_sha256": "7f6cf81d98053ab01a802aecb0bf3f01fca797e7b0313b82f692625959188c5b",
-        "translation_sha256": "f0ebb47b4a4fa88a880b225abb718fa3b2a571cca9564bcb8b7814995398e2e0",
+        "translation_sha256": "ce0d28010c01a9e4543167dc454341fe5b7f8f50bdf604320ec89fd9bf5b4135",
         "source_fenced_blocks": 95,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-image-to-reference-link",
@@ -828,6 +1486,135 @@
           {
             "kind": "remote-html-image-removed",
             "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-burp-plugin/main/static/join-discord.png"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "running-katana"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "input-for-katana"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "url-input"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "multiple-url-input-comma-separated"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "list-input"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "stdin-piped-input"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "page-content-similarity"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "crawling-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "standard-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "headless-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "interactive-ui-exploration"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "captcha-solving"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "scope-control"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "crawler-configuration"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "knowledge-base-classification"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "authenticated-crawling"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "headers--cookies"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "automatic-login--auto-login"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "recorded-flow--recorded-flow"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "connecting-to-active-browser-session"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "filters"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "custom-fields"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "running-katana-using-custom-field"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "katana-filters"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "advance-filtering"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "rate-limit"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "output"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "katana-as-a-library"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "reporting-issues--feature-requests"
+          },
+          {
+            "kind": "source-link-correction",
+            "from": "#-output-template",
+            "to": "#output"
           }
         ],
         "human_review": "pending"
@@ -864,10 +1651,11 @@
         "note": "vault/02-Tools/naabu/naabu-documentacao.md",
         "original": "sources/upstream/naabu/README.md.source",
         "source_sha256": "f61b2cfdd205798a236715d3a20ef54ffaa2e7ac7f5880b0f9170b1bfcb62180",
-        "translation_sha256": "4cbdfc1128b90045e3269a4bdf2e6808be8dd2e7f77de8372798dcc520ca5f7a",
+        "translation_sha256": "f873f8fbf0416242ae4a1564d8f6f40eda017062f62dc3c5575ec2de9f3bcfaf",
         "source_fenced_blocks": 20,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-html-image-removed",
@@ -896,6 +1684,19 @@
           {
             "kind": "remote-html-image-removed",
             "url": "https://user-images.githubusercontent.com/8293321/180417395-25b1b990-c032-4b5c-9b66-03b58db0789a.png"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "prerequisite"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installing-naabu"
+          },
+          {
+            "kind": "source-html-link-correction",
+            "from": "#cdn-waf-exclusion",
+            "to": "#cdnwaf-exclusion"
           }
         ],
         "human_review": "pending"
@@ -932,18 +1733,35 @@
         "note": "vault/02-Tools/above/above-documentacao.md",
         "original": "sources/upstream/above/README.md.source",
         "source_sha256": "7dec6e01263ed4064e2ba2428c1e6a011b0a17539db14b3c88da2df90d02633e",
-        "translation_sha256": "d815a7c51c01ed157d6b5515a57a9f007e4ce03adc5ba6ed7f07479961c214bc",
+        "translation_sha256": "9864add724c3164ed2726870fec7427ed51bda1e2254d7b6c5c3d33b2ff3f4ba",
         "source_fenced_blocks": 17,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
-            "kind": "remote-image-to-reference-link",
-            "url": "/banner/banner.png"
+            "kind": "original-heading-id-preserved",
+            "anchor": "supported-protocols"
           },
           {
-            "kind": "unacquired-relative-reference-pinned-online",
-            "source_path": "/banner/banner.png"
+            "kind": "original-heading-id-preserved",
+            "anchor": "operating-mechanism"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "information-about-protocols"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "settings--network--firewall"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "hot-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "cold-mode"
           }
         ],
         "human_review": "pending"
@@ -980,10 +1798,11 @@
         "note": "vault/02-Tools/adaptixc2/adaptixc2-documentacao.md",
         "original": "sources/upstream/adaptixc2/README.md.source",
         "source_sha256": "2982dc32a5c17ae2f06998614bd9bbda02d46fe1d65faad15d780b1d66c78aa1",
-        "translation_sha256": "5ab1d5f5d7f7a4bfa835f1ea671ae9951708cf8b1185bb98525fac823ee9f53f",
+        "translation_sha256": "c388037c2ec00f59cbbbcd0860c849ad85dd2eb8d0faf8527e3674835432fdef",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-image-to-reference-link",
@@ -1000,6 +1819,26 @@
           {
             "kind": "remote-image-to-reference-link",
             "url": "https://adaptix-framework.gitbook.io/adaptix-framework/~gitbook/image?url=https%3A%2F%2F2104178602-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FS8p8XLFtLmf0NkofQvoa%252Fuploads%252Fxxn9BnUfG0byuRamOy4y%252FScreenshot_20260129_233957.png%3Falt%3Dmedia%26token%3D053c7d47-39af-433b-a2d2-87a1b8dec7bb&width=768&dpr=3&quality=100&sign=f1581010&sv=2"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "legal-warning"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "getting-started"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "features"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "current-extenders"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "extension-kit"
           }
         ],
         "human_review": "pending"
@@ -1040,6 +1879,7 @@
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [],
         "human_review": "pending"
       }
@@ -1075,11 +1915,11 @@
         "note": "vault/02-Tools/nuclei/nuclei-documentacao.md",
         "original": "sources/upstream/nuclei/README.md.source",
         "source_sha256": "d9fa7d06e5c6fc9734f84521c72b1959a27b0bc39752bf1c36f4fbfb321bde07",
-        "translation_sha256": "a885210362efa7244004e0e71debe41771f644715206d034665fda96de2bb1d8",
+        "translation_sha256": "49a20b9d71b3d7d9a279251345aee121bb3988dc9726c86808559dccb8ad1b18",
         "source_fenced_blocks": 8,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-html-image-removed",
@@ -1744,6 +2584,71 @@
           {
             "kind": "remote-html-image-removed",
             "url": "https://avatars.githubusercontent.com/u/162917546?v=4"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "table-of-contents"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "get-started"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "2-pro-and-enterprise-editions"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "documentation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "command-line-flags"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "single-target-scan"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "scanning-multiple-targets"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "network-scan"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "scanning-with-your-custom-template"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "connect-nuclei-to-projectdiscovery"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "nuclei-templates-community-and-rewards-"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "our-mission"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "contributors-heart"
+          },
+          {
+            "kind": "source-link-correction",
+            "from": "#license",
+            "to": "@retained-license"
           }
         ],
         "human_review": "pending"
@@ -1753,11 +2658,11 @@
         "note": "vault/02-Tools/nuclei/nuclei-documentacao-pt-br-oficial.md",
         "original": "sources/upstream/nuclei/README_PT-BR.md.source",
         "source_sha256": "8e6c3576463a43d3cc780c64d6f9e0354114ce87bf6919ec63bdd175b950c96f",
-        "translation_sha256": "40782f4045ebbba01210f16f1e1cb0a99a39b7898d8058a5ea2eca85b577c611",
+        "translation_sha256": "d73b0d47b1f5f95159dbdbe5378c519e8667dd263afb80b676d83aaacc175641",
         "source_fenced_blocks": 8,
         "code_blocks_equal": true,
         "translation_method": "upstream-portuguese",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-html-image-removed",
@@ -2422,6 +3327,11 @@
           {
             "kind": "remote-html-image-removed",
             "url": "https://avatars.githubusercontent.com/u/162917546?v=4"
+          },
+          {
+            "kind": "source-link-correction",
+            "from": "#licença",
+            "to": "@retained-license"
           }
         ],
         "human_review": "pending"
@@ -2458,11 +3368,11 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-documentacao.md",
         "original": "sources/upstream/aflplusplus/README.md.source",
         "source_sha256": "1e6bc1d9e5870d70052165fe1004345c56743851ad4b930cacc44a744d884866",
-        "translation_sha256": "74f3ad3d7052aa986f0b994262513a1c1c2be286bc4129d6d3e926b21c90dd46",
+        "translation_sha256": "827b37570adf1eb6a461bab06510819cd5225b2adbcbc8b576f1570b77b37646",
         "source_fenced_blocks": 6,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-html-image-removed",
@@ -2475,6 +3385,38 @@
           {
             "kind": "remote-image-to-reference-link",
             "url": "https://deepwiki.com/badge.svg"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "getting-started"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "building-and-installing-afl"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "quick-start-fuzzing-with-afl"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "contact"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "branches"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "help-wanted"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "special-thanks"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "license"
           },
           {
             "kind": "unacquired-relative-reference-pinned-online",
@@ -2500,11 +3442,11 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-readme-md.md",
         "original": "sources/upstream/aflplusplus/docs/README.md.source",
         "source_sha256": "ab7474ae77f5168ff21fc851e4c14fb7c752d8baf6564212b8df065cb0af91ee",
-        "translation_sha256": "7365a6aab24e9af2479070da5a74d34df71855482e150dd53f4a9f9710acd9c8",
+        "translation_sha256": "4eebf6ed53f6271c999d7e79969ae34665597a7bd8b0ba44e058fc41951f113f",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-image-to-reference-link",
@@ -2527,6 +3469,34 @@
             "url": "https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/4_manage_campaign.drawio.svg \"Managing the fuzzing campaign\""
           },
           {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-targets-with-the-source-code-available"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "instrumenting-the-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "preparing-the-fuzzing-campaign"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-the-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "managing-the-fuzzing-campaign"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-other-targets"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "additional-information"
+          },
+          {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "instrumentation"
           },
@@ -2546,12 +3516,24 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-install-md.md",
         "original": "sources/upstream/aflplusplus/docs/INSTALL.md.source",
         "source_sha256": "4cac783c3be5777aa10051066ad05c593a22f1db30f3439d91acb43a1123b4f9",
-        "translation_sha256": "7058c99e40bdf9abb1b76760711b908c4b0cbd7a58d47215fb072990930bbfba",
+        "translation_sha256": "54b5e8f9f56fe2bc6ec5245fec01e04f1facbc4f4338af3b8639a06dfca35611",
         "source_fenced_blocks": 14,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "linux-on-x86"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "macos-on-x86_64-and-arm64"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "ios-on-arm64-and-arm64e"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "Dockerfile"
@@ -2568,12 +3550,29 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-faq-md.md",
         "original": "sources/upstream/aflplusplus/docs/FAQ.md.source",
         "source_sha256": "18c61dafbfe58555c0e28cd022865534a6217805dc8fbcc1b35f71c4f8ac0c96",
-        "translation_sha256": "e254ef0dd5acc00edce11d67db07768ebe60a7a72fe5648197bebc126d3dec26",
+        "translation_sha256": "8b6849facfb41b5101ab64429a92edbde95a76606051851f5289b742f25172cb",
         "source_fenced_blocks": 9,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
-        "presentation_changes": [],
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "general"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "targets"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "performance"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "troubleshooting"
+          }
+        ],
         "human_review": "pending"
       },
       {
@@ -2581,12 +3580,28 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-features-md.md",
         "original": "sources/upstream/aflplusplus/docs/features.md.source",
         "source_sha256": "782c30afb7b85e7a3ad9b51e3ef277bc2202b7d268d1570243d1377e2d3b8ae0",
-        "translation_sha256": "fce0bf8f2a303591ed099f5c875340f4aa4b4e0a2c30875e1341b6fe38af4506",
+        "translation_sha256": "751d306f8df140378ed2eca67b3e25e83bdd7e049a212aacd6fa6f3c8f4d1fe6",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "features-and-instrumentation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "more-information-about-features"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "more-information-about-instrumentation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "integrated-features-and-patches"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "instrumentation/README.llvm.md"
@@ -2639,12 +3654,49 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-frameshift-md.md",
         "original": "sources/upstream/aflplusplus/docs/FrameShift.md.source",
         "source_sha256": "3da15c4dc3621b7c3843cc6b7880d9db7ffec7860444d0c5a0cfd60fc482fdab",
-        "translation_sha256": "5212f3a406263b8ced052eb13d16a6d3337f8b45b7e174932614fab57c37154b",
+        "translation_sha256": "de57bcc29801787d9a3bfde1bac9ebe3f8496bee41537fb490b14ffb1d0a4a15",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
-        "presentation_changes": [],
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "how-it-works"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "discovery-the-frameshift-stage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "tracking-during-havoc"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "sanitization-before-execution"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "relation-model"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "environment-variables"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "compile-time-constants"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "when-to-use-frameshift"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "source-files"
+          }
+        ],
         "human_review": "pending"
       },
       {
@@ -2652,12 +3704,104 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-ijon-md.md",
         "original": "sources/upstream/aflplusplus/docs/IJON.md.source",
         "source_sha256": "7f7fa00f996c32b0e3be6bdeb7d5a4506aac29fe334201e0bd4bd13aa1c3ab3e",
-        "translation_sha256": "189a933bc23b6ddfbc28cf4ba2f44285427da80433a3beabf6643b95740d4d2b",
+        "translation_sha256": "3773e8c9a01bb2feb22b0f845802f6dfc2cfd26df90463de45a04999984ee475",
         "source_fenced_blocks": 13,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "important-linker-parameters"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "ijon-api-reference"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "core-value-tracking-macros"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "state-management-macros"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "distance-and-comparison-macros"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "stack-aware-macros"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "example-usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "maze-example"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "protocol-example"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "retiring-completed-max-targets"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage-instructions"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "building-afl-with-ijon"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "ijon-mode-debug-build-for-afl-fuzz"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "compiling-target-programs"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-configuration"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "basic-fuzzing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "for-large-targets-bitmap--65k"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "environment-variables"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "performance-super-mario-bros-level-11-ijon_maxpos_y16-world_pos"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "performance-maze-ijon_setijon_hashintx-y"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "implementation-details"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "memory-layout"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "the-other-tools"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "qemu_mode/README.md"
@@ -2670,12 +3814,44 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-sand-md.md",
         "original": "sources/upstream/aflplusplus/docs/SAND.md.source",
         "source_sha256": "160b79c13dc735589666c56ecaae0a538e399d12a03b2c34d22fbcb99a107f52",
-        "translation_sha256": "64e4cbe83495f282166a6a540a124f5df240fc81e86fec65e59a014f57f9f611",
+        "translation_sha256": "e0bc4b790de9769d986b2eb65cb0d1622aa9e56cae92ada7ef57d6a18300fb86",
         "source_fenced_blocks": 3,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "motivation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "example-workflow"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "tips"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "alternative-execution-patterns"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "run-as-many-sanitizers-as-possible"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "bugs-types"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "my-throughput-is-greatly-impacted"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "test-instr.c"
@@ -2688,12 +3864,76 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-afl-fuzz-approach-md.md",
         "original": "sources/upstream/aflplusplus/docs/afl-fuzz_approach.md.source",
         "source_sha256": "ae8fd56c1e27c993be8ff88e412871e6881e91709bc64f8f19097fe81028eb10",
-        "translation_sha256": "eb847e4d63c2375118b18accdfa0c6a9744f5112bffb04108bad966e44e65b1e",
+        "translation_sha256": "aa77cd09239e6e5c89258e44ab8c0ebd6ea2350aba847f38d85377f285beaa42",
         "source_fenced_blocks": 11,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "understanding-the-status-screen"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "a-note-about-colors"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "the-status-bar"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "process-timing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "overall-results"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "cycle-progress"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "map-coverage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "stage-progress"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "findings-in-depth"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-strategy-yields"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "path-geometry"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "cpu-load"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "interpreting-output"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "visualizing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "addendum-status-and-plot-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "addendum-automatically-sending-metrics-with-statsd"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "instrumentation"
@@ -2706,12 +3946,60 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-best-practices-md.md",
         "original": "sources/upstream/aflplusplus/docs/best_practices.md.source",
         "source_sha256": "0697a453310aeb9b7c47179a437d3dd333bc035453486cb79165c10a8db9f8b5",
-        "translation_sha256": "baa7f9c0ec85735d605351948fb657c2e4d457748ae8eca0f6cc7bef80321513",
+        "translation_sha256": "ce10fa7428e85bbd5f9b98ac6b746121222e7efcdb07c991bf60c60c095fcde4",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "contents"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "targets"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "improvements"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "targets-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-a-target-with-source-code-available"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-a-target-with-dlopen-instrumented-libraries"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-a-binary-only-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-a-gui-program"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-a-network-service"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "improvements-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "improving-speed"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "improving-stability"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "custom_mutators/guifuzz/README.md"
@@ -2748,12 +4036,56 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-custom-mutators-md.md",
         "original": "sources/upstream/aflplusplus/docs/custom_mutators.md.source",
         "source_sha256": "85ac8b5f64f0e584cb348326d1b2d0b21cdd2cd4f384bb7c1f72fdac4cd4cc06",
-        "translation_sha256": "4b97ab172cdf75417c0032cdc2abffe6f1020ecd9733ae3113d355a13dac1ef3",
+        "translation_sha256": "5ac77d596ab47163f35bedc47963dfe4e12d6951b8e2e9b3914d21b3542ceab2",
         "source_fenced_blocks": 7,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "1-introduction"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "custom-mutation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "trimming-support"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "environment-variables"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "3-usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "prerequisite"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "helpers"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "custom-mutator-preparation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "run"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "4-example"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "5-other-resources"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "custom_mutators/examples/custom_send.c"
@@ -2774,12 +4106,112 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-env-variables-md.md",
         "original": "sources/upstream/aflplusplus/docs/env_variables.md.source",
         "source_sha256": "349eff538b1b7b515c726f2e418680911acbb2b8c04b48f3bc8a3d0d60153c47",
-        "translation_sha256": "88b60a2689b188710f8d28505c8e459cb57f679a7f74016277a2586f076e2cb5",
+        "translation_sha256": "929bdd64a4c14b454e020d5b903877236c9977d69ad04624f3a8a8067de721b4",
         "source_fenced_blocks": 5,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "1-settings-for-all-compilers"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "2-settings-for-llvm-and-lto-afl-clang-fast--afl-clang-fast--afl-clang-lto--afl-clang-lto"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "select-the-instrumentation-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "bug-pass-oracles"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "instrument-list-selectively-instrument-files-and-functions"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "injections"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "path-lto-and-pcguard"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "dense-instrumentation-llvm-pcguard-and-lto-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "clamp-instrumentation-llvm-pcguard-and-lto-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fused-condition-instrumentation-llvm-pcguard-and-lto-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "vector-decision-instrumentation-llvm-pcguard-and-lto-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "thread-safe-instrumentation-counters-in-all-modes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "deny-exec-calls"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "abort-on-entry-of-non-instrumented-functions"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "3-settings-for-gcc_plugin-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "4-runtime-settings"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "5-settings-for-afl-fuzz"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "6-settings-for-afl-qemu-trace"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "7-settings-for-afl-frida-trace"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "8-settings-for-afl-cmin-and-afl-merge"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "9-settings-for-afl-tmin"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "10-settings-for-afl-analyze"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "11-settings-for-libdislocator"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "12-settings-for-libtokencap"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "13-third-party-variables-set-by-afl-fuzz--other-tools"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "instrumentation/README.cmplog.md"
@@ -2848,12 +4280,56 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-fuzzing-binary-only-targets-md.md",
         "original": "sources/upstream/aflplusplus/docs/fuzzing_binary-only_targets.md.source",
         "source_sha256": "b3517d0e5191dd5facd31ec53ae4a0968805353365a69046b79308055cebf428",
-        "translation_sha256": "31bde2975e988254745bb3249f1c2ed7939653466a107bf8885c4f62ce8bb8df",
+        "translation_sha256": "c34e6e5e95b632b1421b27f0f0568fecb9fb25af16d53ff11d4c750458087868",
         "source_fenced_blocks": 3,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "fuzzing-binary-only-targets-with-afl"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "qemu-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "wineqemu"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "frida-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "nyx-mode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "unicorn"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "shared-libraries"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "binary-rewriters"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "binary-tracers"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "non-afl-solutions"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "closing-words"
+          },
           {
             "kind": "unacquired-relative-reference-pinned-online",
             "source_path": "qemu_mode/README.persistent.md"
@@ -2902,15 +4378,147 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-fuzzing-in-depth-md.md",
         "original": "sources/upstream/aflplusplus/docs/fuzzing_in_depth.md.source",
         "source_sha256": "52dc5a3ae5119d7b8584c2bf0bfb0504e2a41129d6b30b0020e42bb54a1459c1",
-        "translation_sha256": "c9020d272b8469615dcb49de793999b3ceb93ec59b65d7d236c3c78e14d3e6e8",
+        "translation_sha256": "1186d77af5f09754df4a27a7bd0fa957f3b74e4a8c2032d2e8b4e0b9c945e267",
         "source_fenced_blocks": 25,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-image-to-reference-link",
             "url": "resources/screenshot.png"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "0-common-sense-risks"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "1-instrumenting-the-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "a-selecting-the-best-afl-compiler-for-instrumenting-the-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "b-selecting-instrumentation-options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "c-selecting-sanitizers"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "d-modifying-the-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "e-instrumenting-the-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "configure"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "meson-build-system"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "other-build-systems-or-if-configurecmake-didnt-work"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "linker-scripts"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "f-better-instrumentation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "g-libfuzzer-fuzzer-harnesses-with-llvmfuzzertestoneinput"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "2-preparing-the-fuzzing-campaign"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "a-collecting-inputs"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "b-making-the-input-corpus-unique"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "c-minimizing-all-corpus-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "done"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "3-fuzzing-the-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "a-running-afl-fuzz"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "b-keeping-memory-use-and-timeouts-in-check"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "c-using-multiple-cores"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "d-using-multiple-machines-for-fuzzing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "e-the-status-of-the-fuzz-campaign"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "f-stopping-fuzzing-restarting-fuzzing-adding-new-seeds"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "g-checking-the-coverage-of-the-fuzzing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "h-how-long-to-fuzz-a-target"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "i-improve-the-speed"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "j-going-beyond-crashes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "k-known-limitations--areas-for-improvement"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "4-triaging-crashes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "if-crashes-do-not-reproduce"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "the-end"
           },
           {
             "kind": "unacquired-relative-reference-pinned-online",
@@ -3008,12 +4616,17 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-important-changes-md.md",
         "original": "sources/upstream/aflplusplus/docs/important_changes.md.source",
         "source_sha256": "4293f8c719197eb8c9d574bf4c3f481b559531cac6826620d7750e2158b78f2e",
-        "translation_sha256": "8b4b84dbcc99100e91b47f52a3f058a20a1954a91f23b9578d7a1556d35f48c1",
+        "translation_sha256": "f3fa1a7905b2aa1d2ce37efa3628ac722d4db9031a783dc80159f66b08c56a53",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
-        "presentation_changes": [],
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "from-version-300-onwards"
+          }
+        ],
         "human_review": "pending"
       },
       {
@@ -3021,15 +4634,31 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-rpc-statsd-md.md",
         "original": "sources/upstream/aflplusplus/docs/rpc_statsd.md.source",
         "source_sha256": "2728f461a25974b04ee1840ebb646575132184fcf6f43926554c22079aec8738",
-        "translation_sha256": "c8208f729b366cf451aeacbbda840fa57de2e3e047957cbfae2778eb25ba755b",
+        "translation_sha256": "a2f8bf9e7cf3d661dd16fb1573b45a4b6a1662f84f69eda95210e5105c072298",
         "source_fenced_blocks": 5,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
         "presentation_changes": [
           {
             "kind": "remote-image-to-reference-link",
             "url": "resources/statsd-grafana.png"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "afl-metrics-and-statsd"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "setting-environment-variables-in-afl"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installing-and-setting-up-statsd-prometheus-and-grafana"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "running-afl-with-statsd"
           },
           {
             "kind": "unacquired-relative-reference-pinned-online",
@@ -3047,12 +4676,45 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-third-party-tools-md.md",
         "original": "sources/upstream/aflplusplus/docs/third_party_tools.md.source",
         "source_sha256": "990a648dae247ecf5ae9e8f9af30062ce8257e994330222d7bf0a9c0e958e41b",
-        "translation_sha256": "904c5da12765d8204f84b13d6592dd1ec4822ad09c6c22070853da128425b260",
+        "translation_sha256": "e81dbf99f7964108038f4f901118d7be65657dab4a67d10ed32123b84c0e987c",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
-        "presentation_changes": [],
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "afl-and-other-development-languages"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "starting-multiple-afl-instances-in-parallel-with-recommended-settings"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "speeding-up-fuzzing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "coverage-and-reachability-analysis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "minimization-of-test-cases"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "distributed-execution"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "deployment-management-monitoring-reporting"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "crash-processing"
+          }
+        ],
         "human_review": "pending"
       },
       {
@@ -3060,12 +4722,17 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-tutorials-md.md",
         "original": "sources/upstream/aflplusplus/docs/tutorials.md.source",
         "source_sha256": "6fed8eb785b45b37bf433fee65c39261465be61a9417632098a672abbb2da972",
-        "translation_sha256": "b190f99de8b0013025b44091475b7204ab42138c6303a9dc109efbadbfe1a3cc",
+        "translation_sha256": "6c0a796a9e864792fb1e9c3f10b4d49953360baa59ab564bc9b4dcbfa5a7fbb2",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
-        "presentation_changes": [],
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "video-tutorials"
+          }
+        ],
         "human_review": "pending"
       },
       {
@@ -3073,12 +4740,41 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-value-profiling-md.md",
         "original": "sources/upstream/aflplusplus/docs/value_profiling.md.source",
         "source_sha256": "d202c8c5edb2488da7dd8db6b2c97403d8535a04d70f2a0690c09f9ca2f0291b",
-        "translation_sha256": "c1c4875d82bdde2baeba1112b3d40e2cacfc9548f981086757a4037d10f27e08",
+        "translation_sha256": "d3a615ef7f0420341a0a045015100d2f4389814ffc8a2b720a055f0512120ef1",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
-        "presentation_changes": [],
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "activation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "frontier"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "focus-set"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "site-retirement"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "instrumented-compares"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "stats"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "mutation-scope"
+          }
+        ],
         "human_review": "pending"
       },
       {
@@ -3086,12 +4782,2438 @@
         "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-changelog-md.md",
         "original": "sources/upstream/aflplusplus/docs/Changelog.md.source",
         "source_sha256": "2b8190c09159c7fefb1ae01c0fa525343fc27e588b104dd08dfe9638058a42fc",
-        "translation_sha256": "892abdc2520175f6c24d0974b8c8ae3a916d41b9d53f42f27d71332833f86e55",
+        "translation_sha256": "8e8d4ac33ad55933158a112b1b24afa47e4c4312f3651864322c0d8db4521470",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
-        "pipeline_version": "0.3-source-language-and-literal-integrity",
-        "presentation_changes": [],
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-504a-dev"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-503c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-502c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-501c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-500c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-440c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-435c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-434c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-433c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-432c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-431c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-430c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-421c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-420c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-410c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-409c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-408c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-407c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-406c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-405c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-404c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-403c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-402c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-401c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-400c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-314c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-313c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-312c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-311c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-310c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-300c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-268c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-267c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-266c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-265c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-264c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-263c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-262c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-261c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-260c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-259c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-258c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-254d-257c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-254c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-253c-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-252c-2019-06-05"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-252b-2017-11-04"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-251b-2017-08-30"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-250b-2017-08-19"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-249b-2017-07-18"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-248b-2017-07-17"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-247b-2017-07-14"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-246b-2017-07-10"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-245b-2017-07-04"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-244b-2017-06-28"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-243b-2017-06-16"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-242b-2017-06-02"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-241b-2017-04-12"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-240b-2017-04-02"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-239b-2017-02-02"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-238b-2017-01-22"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-237b-2017-01-22"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-236b-2017-01-14"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-235b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-234b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-233b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-232b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-231b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-230b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-229b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-228b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-227b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-226b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-225b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-224b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-223b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-222b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-221b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-220b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-219b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-218b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-217b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-216b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-215b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-214b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-213b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-212b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-211b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-210b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-209b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-208b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-207b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-206b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-205b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-204b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-203b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-202b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-201b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-200b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-199b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-198b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-197b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-196b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-195b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-194b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-193b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-192b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-191b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-190b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-189b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-188b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-187b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-186b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-185b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-184b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-183b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-182b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-181b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-180b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-179b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-178b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-177b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-176b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-175b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-174b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-173b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-172b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-171b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-170b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-169b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-168b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-167b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-166b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-165b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-164b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-163b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-162b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-161b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-160b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-159b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-158b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-157b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-156b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-155b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-154b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-153b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-152b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-151b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-150b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-149b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-148b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-147b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-146b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-145b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-144b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-141b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-140b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-139b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-138b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-137b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-136b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-135b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-134b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-133b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-132b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-131b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-130b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-129b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-128b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-127b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-126b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-125b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-124b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-123b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-122b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-121b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-120b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-119b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-118b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-117b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-116b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-115b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-114b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-113b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-112b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-111b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-110b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-109b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-108b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-107b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-106b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-105b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-104b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-103b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-102b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-101b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-100b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-099b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-098b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-097b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-096b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-095b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-094b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-093b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-092b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-091b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-090b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-089b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-088b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-087b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-086b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-085b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-084b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-083b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-082b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-081b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-080b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-079b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-078b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-077b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-076b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-075b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-074b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-073b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-072b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-071b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-070b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-069b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-068b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-067b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-066b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-065b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-064b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-063b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-062b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-061b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-060b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-059b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-058b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-057b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-056b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-055b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-054b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-053b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-052b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-051b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-050b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-049b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-048b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-047b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-046b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-045b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-044b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-043b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-042b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-041b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-040b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-039b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-038b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-037b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-036b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-035b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-034b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-033b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-032b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-031b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-030b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-029b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-028b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-027b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-026b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-025b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-024b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-023b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-022b"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "version-021b-2013-11-12"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "altdns": {
+    "repository": "https://github.com/infosec-au/altdns",
+    "commit": "6728272cbda8b8ceca4d59f4398e81df921853f2",
+    "license_spdx": "Apache-2.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/altdns/altdns-documentacao.md",
+        "original": "sources/upstream/altdns/README.md.source",
+        "source_sha256": "7ffd79d4fa13dc984e937af9e4b65698c0b4e34e5db87951b07b8c0e49dd10c7",
+        "translation_sha256": "43dd153efbd5056e945960a74a4ed3b258270643e3061efbe1dd5fc21ad5ba5d",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://i.imgur.com/fkfZqkl.png"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://i.imgur.com/Jyfue26.png"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "apple-bleee": {
+    "repository": "https://github.com/hexway/apple_bleee",
+    "commit": "1f8022959be660b561e6004b808dd93fa252bc90",
+    "license_spdx": "GPL-3.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/apple-bleee/apple-bleee-documentacao.md",
+        "original": "sources/upstream/apple-bleee/README.md.source",
+        "source_sha256": "3d7236036e3d6000b443ca9b1c95999ccd12aa7407b16fb08082ee89dfdacbf5",
+        "translation_sha256": "e26efc1184f95ad524cb29d80c0c9877039369060487b2f3f5581d8882b10dfd",
+        "source_fenced_blocks": 12,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "disclaimer"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "requirements"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "how-to-use"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "script-ble_read_statepy"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "script-airdrop_leakpy"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "script-adv_wifipy"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "script-adv_airpodspy"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "script-hash2phone"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "contacts"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "/hash2phone"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "arjun": {
+    "repository": "https://github.com/s0md3v/Arjun",
+    "commit": "d1fb995cb1e064d4e171d83f19f6af79b0a3c5ce",
+    "license_spdx": "AGPL-3.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/arjun/arjun-documentacao.md",
+        "original": "sources/upstream/arjun/README.md.source",
+        "source_sha256": "85840661f4beed51722b507a267d390f6a2938eb0dafd13d6a7ff5687b8ebdd3",
+        "translation_sha256": "6e10225ebbef893f57ce3f1145ad662311b020bba1c9f146f45f0a403f2cc7f8",
+        "source_fenced_blocks": 1,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://i.ibb.co/p3VKSRJ/arjun-demo.png"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://image.ibb.co/c618nq/arjun.png"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/release/s0md3v/Arjun.svg"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/pypi/v/arjun.svg"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/issues-closed-raw/s0md3v/Arjun?color=dark-green&label=issues%20fixed"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/travis/com/s0md3v/Arjun.svg?color=dark-green&label=tests"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "whats-arjun"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "why-arjun"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installing-arjun"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "how-to-use-arjun"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "credits"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "arp-scan": {
+    "repository": "https://github.com/royhills/arp-scan",
+    "commit": "a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5",
+    "license_spdx": "GPL-3.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/arp-scan/arp-scan-documentacao.md",
+        "original": "sources/upstream/arp-scan/README.md.source",
+        "source_sha256": "a3a2c3d25999b32e06cfa8e6eab786fc3d84038b56d5e868310dbaa1ec094a58",
+        "translation_sha256": "8c59507dbe41f906318dba3de6f4e928a5de599a6071912f6e42e324c700a278",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://github.com/royhills/arp-scan/actions/workflows/c-cpp.yml/badge.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://coveralls.io/repos/github/royhills/arp-scan/badge.svg?branch=master"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://github.com/royhills/arp-scan/actions/workflows/codeql.yml/badge.svg"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "building-and-installing-from-source"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installing-from-a-binary-package"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installing-from-a-bsd-port"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "NEWS.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "ChangeLog"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "CONTRIBUTING.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "SECURITY.md"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "arsenal-ng": {
+    "repository": "https://github.com/halilkirazkaya/arsenal-ng",
+    "commit": "58e18e015eddf4d379aa49454fd13194fd5546db",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/arsenal-ng/arsenal-ng-documentacao.md",
+        "original": "sources/upstream/arsenal-ng/README.md.source",
+        "source_sha256": "a7923931d363d28d4e69b27cbf96e9761d6afd55ff1d6fe68a39eded28e2c765",
+        "translation_sha256": "a6b546469c782864f625be46c84f68a89bd88ab75d9171f2888403435e9e1d29",
+        "source_fenced_blocks": 14,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Go-1.24.0+-00ADD8?style=flat&logo=go"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-lightgrey"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/license/halilkirazkaya/arsenal-ng?color=yellow"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Tools-248-blueviolet?style=flat&logo=linux&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Commands-2940-ff69b4?style=flat&logo=gnubash&logoColor=white"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "option-1-go-install"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "option-2-kali-linux-apt"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "option-3-build-from-source-code"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "alias-optional"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "platform-support"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "linux-configuration"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "terminal-prefill-not-working-linux-kernel-62"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "option-1-enable-tiocsti-globally"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "option-2-grant-cap_sys_admin-capability"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "features"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "quick-start"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "basic-workflow"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "example-session"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "keyboard-shortcuts"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "main-search-view"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "argument-input-view"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "tools-view"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "help-views"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "global-variables"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "special-commands"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "how-it-works"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "example-workflow"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "common-variables"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "cheat-file-format"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "argument-syntax"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "file-structure"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "tips"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "development"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "prerequisites"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "building-from-source"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "adding-new-tools"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "testing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "contributing-guidelines"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "features-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "how-to-contribute"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "adding-cheat-sheets"
+          },
+          {
+            "kind": "source-link-correction",
+            "from": "#-cheat-file-format",
+            "to": "#cheat-file-format"
+          },
+          {
+            "kind": "source-link-correction",
+            "from": "#-cheat-file-format",
+            "to": "#cheat-file-format"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "atomic-operator": {
+    "repository": "https://github.com/swimlane/atomic-operator",
+    "commit": "9756e4835e47c81b08be0bac5f2adcc3e9ad99c5",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/atomic-operator/atomic-operator-documentacao.md",
+        "original": "sources/upstream/atomic-operator/README.md.source",
+        "source_sha256": "23d66084d9835ffa6ea2bef88c1b064e97d94d161e60ac14c1d7f295fa50ffeb",
+        "translation_sha256": "6389f1c4f38eba9d623e910e276a17c08c684ed8ceb732e53a2e194d6dd3bc7a",
+        "source_fenced_blocks": 16,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/pypi/v/atomic-operator.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/pypi/status/atomic-operator.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/pypi/pyversions/atomic-operator"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/pypi/l/atomic-operator"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/readthedocs/czds/latest.svg?label=Read%20the%20Docs"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://github.com/Swimlane/atomic-operator/actions/workflows/quality.yml/badge.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/badge/code%20style-black-000000.svg"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "why"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "features"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "getting-started"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "prerequisites"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "macos-linux-and-windows"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "macos-using-m1-processor"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installing-from-source"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage-example-command-line"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "retrieving-atomic-tests"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "running-tests-locally"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "running-tests-remotely"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "additional-parameters"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "running-atomic-operator-using-a-config_file"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage-example-scripts"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "getting-help"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "built-with"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "contributing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "versioning"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "authors"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "license"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "shoutout"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "CHANGELOG.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs/atomics.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs/atomic-operator.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs/running-tests-command-line.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs/running-tests-script.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "atomic-operator-config.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs/windows-remote.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "CONTRIBUTING.md"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "autorecon": {
+    "repository": "https://github.com/Tib3rius/AutoRecon",
+    "commit": "e7e98f60bdc5fb1695159c1bbcdfdf2746d30fa6",
+    "license_spdx": "GPL-3.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/autorecon/autorecon-documentacao.md",
+        "original": "sources/upstream/autorecon/README.md.source",
+        "source_sha256": "0a42ce23038d6c5b767861414e9589329876ac68231653da46993eec431ce342",
+        "translation_sha256": "e742bae3c8ec561929abf6f7eff46764ef1a166a0777c37ae653a7f12a079ec2",
+        "source_fenced_blocks": 16,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "origin"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "features"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "supporting-packages"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation-method-1-pipx-recommended"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation-method-2-pip"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation-method-3-manually"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "upgrading"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "manually"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "plugins"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "verbosity"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "results"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "testimonials"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "axel": {
+    "repository": "https://github.com/axel-download-accelerator/axel",
+    "commit": "dc10ba0c8f8d804c1568df5dba3cdd6fa89572b1",
+    "license_spdx": "GPL-2.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/axel/axel-documentacao.md",
+        "original": "sources/upstream/axel/README.md.source",
+        "source_sha256": "bfb19b48b5d60fe43691c0d13fd930055be2afdc74923dd7b3a6e6235911c2d6",
+        "translation_sha256": "95d1b32c6ac912bff3fa752bd33afab25ab6a24daa8934a9e137b1f946a67802",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "about"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "how-to-help"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installing-from-binaries"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "building-from-source"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "dependencies"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "extra-dependencies-for-building-from-snapshots"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "packages-on-debian-based-systems"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "packages-on-mac-os-x-homebrew"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "building-on-mac-os-x-homebrew"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "related-projects-"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "license-"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "CONTRIBUTING.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "INSTALL"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "azurehound": {
+    "repository": "https://github.com/SpecterOps/AzureHound",
+    "commit": "b02d4577731f69c729a53055a09c44673689eefd",
+    "license_spdx": "GPL-3.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/azurehound/azurehound-documentacao.md",
+        "original": "sources/upstream/azurehound/README.md.source",
+        "source_sha256": "3d8e4489006823a8e6bef6ac0cf3ad5d9f51a4abfcfb0bcd7af65a3e56f954c4",
+        "translation_sha256": "8606e91eb6f9c946eaa55d8d000e1593fbb757f71e2932dcb23480816d5bfea7",
+        "source_fenced_blocks": 6,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/github/actions/workflow/status/SpecterOps/AzureHound/build.yml"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/github/v/release/SpecterOps/AzureHound"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/github/downloads/SpecterOps/AzureHound/total"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/static/v1?label=&message=documentation&color=blue"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "get-azurehound"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "release-binaries"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "rolling-release"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "compiling"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "prerequisites"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "documentation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "quickstart"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "log-file-management"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "b374k": {
+    "repository": "https://github.com/b374k/b374k",
+    "commit": "3e456486c94582e2403f047c80500da3261694ab",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/b374k/b374k-documentacao.md",
+        "original": "sources/upstream/b374k/README.md.source",
+        "source_sha256": "ee9b184309c7d53f7b7cefff185e28be30470362ede3ffb79c8d4c21280d20e6",
+        "translation_sha256": "6ce0206784316447d4bbf905051e22a6b388b51285894d0f96670f655dd5ac9b",
+        "source_fenced_blocks": 2,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "requirements-"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation-"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "customize-"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "documentation-"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "old-version-"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "backdoor-factory": {
+    "repository": "https://github.com/secretsquirrel/the-backdoor-factory",
+    "commit": "0c53045cd67261437b09b3252b37e7861bd285db",
+    "license_spdx": "BSD-3-Clause",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/backdoor-factory/backdoor-factory-documentacao.md",
+        "original": "sources/upstream/backdoor-factory/README.md.source",
+        "source_sha256": "2e867cd1d2747f15e89272e5c23a8366b91745fc2122d1105633c4304fec2851",
+        "translation_sha256": "24d8b74d7448bb525063e546ed56976a5cc2f2202bb56176dc48efe2aca211fc",
+        "source_fenced_blocks": 1,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://badges.gitter.im/secretsquirrel/the-backdoor-factory.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://www.toolswatch.org/badges/arsenal/2015.svg"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "the-backdoor-factory-bdf"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "old-school"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "dependences"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "features"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "pe-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "elf-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "mach-o-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "overall"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "patch-an-exedll-using-an-existing-code-cave"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "patch-an-exedll-by-adding-a-code-section"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "patch-a-directory-of-exes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "user-supplied-shellcode"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "pecodesigning"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "hunt-and-backdoor-injector--windows-only"
+          },
+          {
+            "kind": "legacy-markdown-heading-spacing-normalized"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "berate-ap": {
+    "repository": "https://github.com/sensepost/berate_ap",
+    "commit": "ed4ba9b94ae901ea1112640ed1b6d4f4d5930c51",
+    "license_spdx": "BSD-2-Clause",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/berate-ap/berate-ap-documentacao.md",
+        "original": "sources/upstream/berate-ap/README.md.source",
+        "source_sha256": "19288bc9dd4996d17c85b5528e7500be137f092825c322151b88aaa4ce2f7ee2",
+        "translation_sha256": "cf55847570e084b4f5ec1d214e6f401dd387dabe88dccfe853147a780f7695a2",
+        "source_fenced_blocks": 5,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "setup"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "attacks"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "more-convincing-certificate"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "features"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "dependencies"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "general"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "for-nated-or-none-internet-sharing-method"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "installation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "generic"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "no-passphrase-open-network"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "wpa--wpa2-passphrase"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "ap-without-internet-sharing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "bridged-internet-sharing"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "bridged-internet-sharing-pre-configured-bridge-interface"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "internet-sharing-from-the-same-wifi-interface"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "choose-a-different-wifi-adapter-driver"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "no-passphrase-open-network-using-pipe"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "wpa--wpa2-passphrase-using-pipe"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "enable-ieee-80211n"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "client-isolation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "enterprise-network-built-in-radius"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "enterprise-network-remote-radius"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "systemd-service"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "start-service-immediately"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "start-on-boot"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "license"
+          }
+        ],
         "human_review": "pending"
       }
     ],

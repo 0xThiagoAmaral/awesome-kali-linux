@@ -19,7 +19,7 @@ license_spdx: "LicenseRef-Tcpdump-Manpage"
 
 [Manual integral em português](tcpdump-tcpdump-8.md) · [PCAP sintético de exemplo](../../99-Assets/fixtures/tcpdump-demo.pcap) · [Evidência literal dos testes](../../99-Assets/evidence/tcpdump-local-tests.json).
 
-O manual completo inclui protocolos e exemplos; sua primeira tradução é **automática local, ainda sem revisão editorial integral**. Esta folha complementar foi confrontada com os comandos do teste offline. Não confunda esse teste limitado com validação de todas as opções.
+O manual completo inclui protocolos e exemplos; a tradução em português passou por **comparação editorial assistida dos 364 trechos com a fonte integral**, com revisão humana independente ainda pendente. Esta folha complementar foi confrontada com os comandos do teste offline. Não confunda esse teste limitado com validação de todas as opções.
 
 ## Ler sem abrir uma interface
 

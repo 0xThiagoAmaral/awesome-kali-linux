@@ -4613,6 +4613,26 @@
       "detail": null
     },
     {
+      "check": "tcpdump:tcpdump.8 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "tcpdump:tcpdump.8 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "tcpdump:tcpdump.8 recorded runtime evidence hash",
       "pass": true,
       "detail": null
@@ -4637,7 +4657,7 @@
       "pass": true,
       "detail": {
         "source": 430,
-        "translation": 435
+        "translation": 433
       }
     },
     {

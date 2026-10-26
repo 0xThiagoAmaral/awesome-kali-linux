@@ -11847,10 +11847,10 @@
         "original": "sources/upstream/tcpdump/tcpdump.8.source",
         "source_sha256": "a683c08e923292a49006a2efe59eddddb64616bf684c55f56eb5c1a4c0bd3a91",
         "license_spdx": "LicenseRef-Tcpdump-Manpage",
-        "translation_sha256": "c0d2562f3ec0dc594a86d56668f4c6e877841fef96145fa9c6e0b889b5f4f86d",
+        "translation_sha256": "c3aed31129929ecd0527603b95d9d0fd86daa5368183ddb584e20a29a709a2cc",
         "source_fenced_blocks": 41,
         "code_blocks_equal": true,
-        "translation_method": "machine-local",
+        "translation_method": "assistant-translated",
         "pipeline_version": "0.7-truthful-native-package-sources",
         "presentation_changes": [
           {
@@ -11908,6 +11908,10 @@
           {
             "kind": "original-heading-id-preserved",
             "anchor": "output-format"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "timestamps"
           },
           {
             "kind": "original-heading-id-preserved",
@@ -11976,10 +11980,6 @@
           {
             "kind": "original-heading-id-preserved",
             "anchor": "authors"
-          },
-          {
-            "kind": "original-heading-id-preserved",
-            "anchor": "bugs"
           },
           {
             "kind": "plain-text-manual-to-markdown",
@@ -13940,6 +13940,17 @@
             "NBP Packets",
             "ATP Packets"
           ]
+        },
+        "editorial_translation": {
+          "source_sha256": "a683c08e923292a49006a2efe59eddddb64616bf684c55f56eb5c1a4c0bd3a91",
+          "translation_file": "translations/pt-BR/tcpdump/tcpdump.8.md",
+          "translation_sha256": "7d09a15ffcce10b099240e5f64303ca09503eb3b313b3e76b559c90585c59135",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "LicenseRef-Tcpdump-Manpage",
+          "segment_file": "catalog/editorial-segments/tcpdump.pt-br.json",
+          "segment_sha256": "9abef6b9c37cc93ed1136304571a3bcdd216a471f8f33c9a79e2456551212d0e",
+          "review_scope": "All 364 source-bound segments; 10 sections and 84 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
         },
         "runtime_compatibility": {
           "evidence": "evidence/tcpdump-local-tests.json",

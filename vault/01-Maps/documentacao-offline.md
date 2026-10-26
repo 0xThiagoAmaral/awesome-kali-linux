@@ -9,7 +9,7 @@ tags: ["documentation", "offline"]
 # Documentação offline — acervo
 
 **32 ferramentas com notas importadas; 57 documentos disponíveis.**
-44 traduções automáticas, 12 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
+43 traduções automáticas, 13 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
 
 Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.
 

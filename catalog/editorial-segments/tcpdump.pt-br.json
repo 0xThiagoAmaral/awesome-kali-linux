@@ -1,0 +1,1829 @@
+{
+  "source_sha256": "a683c08e923292a49006a2efe59eddddb64616bf684c55f56eb5c1a4c0bd3a91",
+  "prepared_sha256": "63cd5459211f81ba240b84c0c24301adebe9550594f739f7b47078c1ed5eead7",
+  "license_spdx": "LicenseRef-Tcpdump-Manpage",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "tcpdump - dump traffic on a network",
+      "translation": "tcpdump - exibe o tráfego de uma rede"
+    },
+    {
+      "id": 2,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 3,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 4,
+      "source": "`tcpdump` prints out a description of the contents of packets on a network interface that match the Boolean `expression` (see `pcap-filter`(7) for the `expression` syntax); the description is preceded by a time stamp, printed, by default, as hours, minutes, seconds, and fractions of a second since midnight.  It can also be run with the `-w` flag, which causes it to save the packet data to a file for later analysis, and/or with the `-r` flag, which causes it to read from a saved packet file rather than to read packets from a network interface.  It can also be run with the `-V` flag, which causes it to read a list of saved packet files. In all cases, only packets that match `expression` will be processed by `tcpdump`.",
+      "translation": "`tcpdump` imprime uma descrição do conteúdo dos pacotes de uma interface de rede que correspondem à expressão booleana `expression` (veja a sintaxe de `expression` em `pcap-filter`(7)); essa descrição é precedida por uma marca temporal, exibida por padrão como horas, minutos, segundos e frações de segundo desde a meia-noite. Também pode ser executado com a opção `-w`, que salva os dados dos pacotes em um arquivo para análise posterior, e/ou com `-r`, que lê um arquivo de pacotes salvo em vez de ler de uma interface de rede. A opção `-V` permite ler uma lista de arquivos de pacotes salvos. Em todos os casos, o `tcpdump` processa apenas os pacotes que correspondem a `expression`."
+    },
+    {
+      "id": 5,
+      "source": "`tcpdump` will, if not run with the `-c` flag, continue capturing packets until it is interrupted by a SIGINT signal (generated, for example, by typing your interrupt character, typically control-C) or a SIGTERM signal (typically generated with the `kill`(1) command); if run with the `-c` flag, it will capture packets until it is interrupted by a SIGINT or SIGTERM signal or the specified number of packets have been processed.",
+      "translation": "Se executado sem a opção `-c`, o `tcpdump` continua capturando pacotes até ser interrompido por um sinal SIGINT (gerado, por exemplo, pelo caractere de interrupção, normalmente Ctrl-C) ou SIGTERM (normalmente gerado pelo comando `kill`(1)). Com `-c`, captura até receber SIGINT ou SIGTERM, ou até processar o número especificado de pacotes."
+    },
+    {
+      "id": 6,
+      "source": "When `tcpdump` finishes capturing packets, it will report counts of:",
+      "translation": "Ao terminar a captura, o `tcpdump` informa as contagens de:"
+    },
+    {
+      "id": 7,
+      "source": "packets “captured” (this is the number of packets that `tcpdump` has received and processed);",
+      "translation": "pacotes “capturados”: o número de pacotes recebidos e processados pelo `tcpdump`;"
+    },
+    {
+      "id": 8,
+      "source": "packets “received by filter” (the meaning of this depends on the OS on which you're running `tcpdump`, and possibly on the way the OS was configured - if a filter was specified on the command line, on some OSes it counts packets regardless of whether they were matched by the filter expression and, even if they were matched by the filter expression, regardless of whether `tcpdump` has read and processed them yet, on other OSes it counts only packets that were matched by the filter expression regardless of whether `tcpdump` has read and processed them yet, and on other OSes it counts only packets that were matched by the filter expression and were processed by `tcpdump`);",
+      "translation": "pacotes “recebidos pelo filtro”: o significado depende do sistema operacional em que o `tcpdump` é executado e, possivelmente, de sua configuração. Quando há um filtro na linha de comando, alguns sistemas contam os pacotes independentemente de corresponderem à expressão e, mesmo quando correspondem, independentemente de o `tcpdump` já os ter lido e processado; outros contam apenas os que correspondem à expressão, independentemente de já terem sido lidos e processados; outros contam somente os que correspondem à expressão e foram processados pelo `tcpdump`;"
+    },
+    {
+      "id": 9,
+      "source": "packets “dropped by kernel” (this is the number of packets that were dropped, due to a lack of buffer space, by the packet capture mechanism in the OS on which `tcpdump` is running, if the OS reports that information to applications; if not, it will be reported as 0).",
+      "translation": "pacotes “descartados pelo kernel”: o número de pacotes descartados, por falta de espaço em buffer, pelo mecanismo de captura do sistema operacional em que o `tcpdump` é executado, quando o sistema informa esse dado aos aplicativos. Caso contrário, a contagem informada é 0."
+    },
+    {
+      "id": 10,
+      "source": "On platforms that support the SIGINFO signal, such as most BSDs (including macOS) and Digital/Tru64 UNIX, it will report those counts when it receives a SIGINFO signal (generated, for example, by typing your “status” character, typically control-T, although on some platforms, such as macOS, the “status” character is not set by default, so you must set it with `stty`(1) in order to use it) and will continue capturing packets. On platforms that do not support the SIGINFO signal, the same can be achieved by using the SIGUSR1 signal.",
+      "translation": "Em plataformas com suporte a SIGINFO, como a maioria dos BSDs (incluindo macOS) e Digital/Tru64 UNIX, essas contagens são informadas ao receber esse sinal, e a captura continua. O sinal pode ser gerado pelo caractere de “status”, normalmente Ctrl-T; em algumas plataformas, como macOS, esse caractere não é definido por padrão e precisa ser configurado com `stty`(1). Em plataformas sem SIGINFO, pode-se obter o mesmo resultado usando SIGUSR1."
+    },
+    {
+      "id": 11,
+      "source": "Using the SIGUSR2 signal along with the `-w` flag will forcibly flush the packet buffer into the output file.",
+      "translation": "Usar SIGUSR2 junto com a opção `-w` força a gravação do conteúdo do buffer de pacotes no arquivo de saída."
+    },
+    {
+      "id": 12,
+      "source": "Reading packets from a network interface may require that you have special privileges; see the `pcap`(3PCAP) man page for details.  Reading a saved packet file doesn't require special privileges.",
+      "translation": "Ler pacotes de uma interface de rede pode exigir privilégios especiais; consulte `pcap`(3PCAP) para detalhes. Ler um arquivo de pacotes salvo não exige privilégios especiais."
+    },
+    {
+      "id": 13,
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": 14,
+      "source": "`-A`",
+      "translation": "`-A`"
+    },
+    {
+      "id": 15,
+      "source": "Print each packet (minus its link level header) in ASCII.  Handy for capturing web pages. No effect when `-x[x]` or `-X[X]` options are used.",
+      "translation": "Imprime cada pacote em ASCII, sem o cabeçalho da camada de enlace. Útil para capturar páginas web. Não tem efeito quando são usadas as opções `-x[x]` ou `-X[X]`."
+    },
+    {
+      "id": 16,
+      "source": "`-b`",
+      "translation": "`-b`"
+    },
+    {
+      "id": 17,
+      "source": "Print the AS number in BGP packets in ASDOT notation rather than ASPLAIN notation.",
+      "translation": "Imprime o número AS dos pacotes BGP na notação ASDOT em vez de ASPLAIN."
+    },
+    {
+      "id": 18,
+      "source": "`-B buffer_size`",
+      "translation": "`-B buffer_size`"
+    },
+    {
+      "id": 19,
+      "source": "`--buffer-size=buffer_size`",
+      "translation": "`--buffer-size=buffer_size`"
+    },
+    {
+      "id": 20,
+      "source": "Set the operating system capture buffer size to `buffer_size`, in units of KiB (1024 bytes).",
+      "translation": "Define o tamanho do buffer de captura do sistema operacional como `buffer_size`, em KiB (1024 bytes)."
+    },
+    {
+      "id": 21,
+      "source": "`-c count`",
+      "translation": "`-c count`"
+    },
+    {
+      "id": 22,
+      "source": "Exit after receiving `count` packets.",
+      "translation": "Encerra após receber `count` pacotes."
+    },
+    {
+      "id": 23,
+      "source": "`--count`",
+      "translation": "`--count`"
+    },
+    {
+      "id": 24,
+      "source": "Print only on stdout the packet count when reading capture file(s) instead of parsing/printing the packets. If a filter is specified on the command line, `tcpdump` counts only packets that were matched by the filter expression.",
+      "translation": "Ao ler arquivos de captura, imprime em stdout apenas a contagem de pacotes, em vez de analisar/imprimir os pacotes. Se houver um filtro na linha de comando, o `tcpdump` conta somente os pacotes que correspondem à expressão."
+    },
+    {
+      "id": 25,
+      "source": "`-C file_size`",
+      "translation": "`-C file_size`"
+    },
+    {
+      "id": 26,
+      "source": "Before writing a raw packet to a savefile, check whether the file is currently larger than `file_size` and, if so, close the current savefile and open a new one.  Savefiles after the first savefile will have the name specified with the `-w` flag, with a number after it, starting at 1 and continuing upward. The default unit of `file_size` is millions of bytes (1,000,000 bytes, not 1,048,576 bytes).",
+      "translation": "Antes de gravar um pacote bruto em um arquivo de captura, verifica se o arquivo já é maior que `file_size`; nesse caso, fecha o arquivo atual e abre outro. Os arquivos após o primeiro recebem o nome especificado por `-w` acrescido de um número, começando em 1 e aumentando a cada arquivo. A unidade padrão de `file_size` é um milhão de bytes (1.000.000, não 1.048.576 bytes)."
+    },
+    {
+      "id": 27,
+      "source": "By adding a suffix of k/K, m/M or g/G to the value, the unit can be changed to 1,024 (KiB), 1,048,576 (MiB), or 1,073,741,824 (GiB) respectively.",
+      "translation": "Acrescentar os sufixos k/K, m/M ou g/G ao valor muda a unidade para 1.024 bytes (KiB), 1.048.576 bytes (MiB) ou 1.073.741.824 bytes (GiB), respectivamente."
+    },
+    {
+      "id": 28,
+      "source": "Note that when used with `-Z` option (enabled by default), privileges are dropped before opening the first savefile.",
+      "translation": "Quando usada com `-Z` (ativada por padrão), a redução de privilégios ocorre antes da abertura do primeiro arquivo de captura."
+    },
+    {
+      "id": 29,
+      "source": "`-d`",
+      "translation": "`-d`"
+    },
+    {
+      "id": 30,
+      "source": "Dump the compiled packet-matching code in a human readable form to standard output and stop.",
+      "translation": "Exibe o código compilado de correspondência de pacotes em formato legível na saída padrão e encerra."
+    },
+    {
+      "id": 31,
+      "source": "Please mind that although code compilation is always DLT-specific, typically it is impossible (and unnecessary) to specify which DLT to use for the dump because `tcpdump` uses either the DLT of the input pcap file specified with `-r`, or the default DLT of the network interface specified with `-i`, or the particular DLT of the network interface specified with `-y` and `-i` respectively. In these cases the dump shows the same exact code that would filter the input file or the network interface without `-d`.",
+      "translation": "Embora a compilação do código seja sempre específica de um DLT, normalmente é impossível e desnecessário especificar qual DLT usar nessa exibição: o `tcpdump` utiliza o DLT do arquivo pcap indicado por `-r`, o DLT padrão da interface indicada por `-i` ou o DLT específico indicado por `-y` e `-i`, respectivamente. Nesses casos, a saída mostra exatamente o código que filtraria o arquivo ou a interface sem `-d`."
+    },
+    {
+      "id": 32,
+      "source": "However, when neither `-r` nor `-i` is specified, specifying `-d` prevents `tcpdump` from guessing a suitable network interface (see `-i`). In this case the DLT defaults to EN10MB and can be set to another valid value manually with `-y`.",
+      "translation": "Quando nem `-r` nem `-i` são especificadas, porém, `-d` impede que o `tcpdump` tente selecionar automaticamente uma interface adequada (veja `-i`). Nesse caso, o DLT padrão é EN10MB e pode ser alterado manualmente para outro valor válido com `-y`."
+    },
+    {
+      "id": 33,
+      "source": "`-dd`",
+      "translation": "`-dd`"
+    },
+    {
+      "id": 34,
+      "source": "Dump packet-matching code as a `C` program fragment.",
+      "translation": "Exibe o código de correspondência de pacotes como um fragmento de programa em `C`."
+    },
+    {
+      "id": 35,
+      "source": "`-ddd`",
+      "translation": "`-ddd`"
+    },
+    {
+      "id": 36,
+      "source": "Dump packet-matching code as decimal numbers (preceded with a count).",
+      "translation": "Exibe o código de correspondência de pacotes como números decimais, precedidos por uma contagem."
+    },
+    {
+      "id": 37,
+      "source": "`-D`",
+      "translation": "`-D`"
+    },
+    {
+      "id": 38,
+      "source": "`--list-interfaces`",
+      "translation": "`--list-interfaces`"
+    },
+    {
+      "id": 39,
+      "source": "Print the list of the network interfaces available on the system and on which `tcpdump` can capture packets.  For each network interface, a number and an interface name, possibly followed by a text description of the interface, are printed.  The interface name or the number can be supplied to the `-i` flag to specify an interface on which to capture.",
+      "translation": "Imprime a lista das interfaces de rede disponíveis no sistema nas quais o `tcpdump` pode capturar. Para cada interface, imprime um número e um nome, possivelmente seguidos por uma descrição textual. O nome ou o número pode ser fornecido à opção `-i` para selecionar a interface de captura."
+    },
+    {
+      "id": 40,
+      "source": "This can be useful on systems that don't have a command to list them (e.g., Windows systems, or UNIX systems lacking `ifconfig -a`); the number can be useful on Windows 2000 and later systems, where the interface name is a somewhat complex string.",
+      "translation": "Isso pode ser útil em sistemas sem um comando para listar interfaces, como sistemas Windows ou UNIX sem `ifconfig -a`. O número pode ser útil no Windows 2000 e posteriores, em que o nome da interface é uma string relativamente complexa."
+    },
+    {
+      "id": 41,
+      "source": "The `-D` flag will not be supported if `tcpdump` was built with an older version of `libpcap` that lacks the `pcap_findalldevs`(3PCAP) function.",
+      "translation": "A opção `-D` não será compatível se o `tcpdump` tiver sido compilado com uma versão antiga da `libpcap` que não contenha a função `pcap_findalldevs`(3PCAP)."
+    },
+    {
+      "id": 42,
+      "source": "`-e`",
+      "translation": "`-e`"
+    },
+    {
+      "id": 43,
+      "source": "Print the link-level header on each dump line.  This can be used, for example, to print MAC layer addresses for protocols such as Ethernet and IEEE 802.11.",
+      "translation": "Imprime o cabeçalho da camada de enlace em cada linha de saída. Isso permite mostrar, por exemplo, endereços da camada MAC em protocolos como Ethernet e IEEE 802.11."
+    },
+    {
+      "id": 44,
+      "source": "`-E`",
+      "translation": "`-E`"
+    },
+    {
+      "id": 45,
+      "source": "Use `spi@ipaddr algo:secret` for decrypting IPsec ESP packets that are addressed to `addr` and contain Security Parameter Index value `spi`. This combination may be repeated with comma or newline separation.",
+      "translation": "Usa `spi@ipaddr algo:secret` para descriptografar pacotes IPsec ESP destinados a `addr` que contenham o valor `spi` no Security Parameter Index. Essa combinação pode ser repetida com separação por vírgulas ou quebras de linha."
+    },
+    {
+      "id": 46,
+      "source": "Note that setting the secret for IPv4 ESP packets is supported at this time.",
+      "translation": "No momento descrito pela fonte, há suporte à definição do segredo para pacotes ESP IPv4."
+    },
+    {
+      "id": 47,
+      "source": "Algorithms may be `des-cbc`, `3des-cbc`, `blowfish-cbc`, `rc3-cbc`, `cast128-cbc`, or `none`. The default is `des-cbc`. The ability to decrypt packets is only present if `tcpdump` was compiled with cryptography enabled.",
+      "translation": "Os algoritmos podem ser `des-cbc`, `3des-cbc`, `blowfish-cbc`, `rc3-cbc`, `cast128-cbc` ou `none`. O padrão é `des-cbc`. A capacidade de descriptografar pacotes só está disponível quando o `tcpdump` é compilado com suporte a criptografia."
+    },
+    {
+      "id": 48,
+      "source": "`secret` is the ASCII text for ESP secret key. If preceded by 0x, then a hex value will be read.",
+      "translation": "`secret` é o texto ASCII da chave secreta ESP. Se for precedido por 0x, será lido como um valor hexadecimal."
+    },
+    {
+      "id": 49,
+      "source": "The option assumes RFC 2406 ESP, not RFC 1827 ESP. The option is only for debugging purposes, and the use of this option with a true ‘secret’ key is discouraged. By presenting IPsec secret key onto command line you make it visible to others, via `ps`(1) and other occasions.",
+      "translation": "A opção pressupõe ESP da RFC 2406, não da RFC 1827. Destina-se somente à depuração, e seu uso com uma chave secreta real é desaconselhado. Informar a chave secreta IPsec na linha de comando a torna visível a outras pessoas, por meio de `ps`(1) e em outras situações."
+    },
+    {
+      "id": 50,
+      "source": "In addition to the above syntax, the syntax `file name` may be used to have tcpdump read the provided file in. The file is opened upon receiving the first ESP packet, so any special permissions that tcpdump may have been given should already have been given up.",
+      "translation": "Além da sintaxe acima, pode-se usar `file name` para fazer o tcpdump ler o arquivo fornecido. O arquivo é aberto quando chega o primeiro pacote ESP; nesse momento, quaisquer permissões especiais concedidas ao tcpdump já deverão ter sido abandonadas."
+    },
+    {
+      "id": 51,
+      "source": "`-f`",
+      "translation": "`-f`"
+    },
+    {
+      "id": 52,
+      "source": "Print ‘foreign’ IPv4 addresses numerically rather than symbolically (this option is intended to get around serious brain damage in Sun's NIS server — usually it hangs forever translating non-local internet numbers).",
+      "translation": "Imprime os endereços IPv4 “externos” numericamente em vez de simbolicamente. Essa opção contorna falhas graves do servidor NIS da Sun, que normalmente fica travado indefinidamente ao tentar traduzir endereços de redes não locais."
+    },
+    {
+      "id": 53,
+      "source": "The test for ‘foreign’ IPv4 addresses is done using the IPv4 address and netmask of the interface on that capture is being done.  If that address or netmask are not available, either because the interface on that capture is being done has no address or netmask or because it is the \"any\" pseudo-interface (see the `-i` flag below), this option will not work correctly.",
+      "translation": "A identificação de endereços IPv4 “externos” usa o endereço IPv4 e a máscara de rede da interface em que a captura ocorre. Se esses dados não estiverem disponíveis — porque a interface não tem endereço ou máscara, ou porque é a pseudointerface “any” (veja `-i` abaixo) — a opção não funcionará corretamente."
+    },
+    {
+      "id": 54,
+      "source": "`-F file`",
+      "translation": "`-F file`"
+    },
+    {
+      "id": 55,
+      "source": "Use `file` as input for the filter expression. An additional expression given on the command line is ignored.",
+      "translation": "Usa `file` como entrada para a expressão do filtro. Uma expressão adicional fornecida na linha de comando é ignorada."
+    },
+    {
+      "id": 56,
+      "source": "`-g`",
+      "translation": "`-g`"
+    },
+    {
+      "id": 57,
+      "source": "`--ip-oneline`",
+      "translation": "`--ip-oneline`"
+    },
+    {
+      "id": 58,
+      "source": "Do not insert a line break after the IP header in verbose mode.",
+      "translation": "Não insere uma quebra de linha após o cabeçalho IP no modo detalhado."
+    },
+    {
+      "id": 59,
+      "source": "`-G rotate_seconds`",
+      "translation": "`-G rotate_seconds`"
+    },
+    {
+      "id": 60,
+      "source": "If specified, rotates the dump file specified with the `-w` option every `rotate_seconds` seconds. Savefiles will have the name specified by `-w` which should include a time format as defined by `strftime`(3). If no time format is specified, each new file will overwrite the previous. Whenever a generated filename is not unique, tcpdump will overwrite the preexisting data; providing a time specification that is coarser than the capture period is therefore not advised.",
+      "translation": "Rotaciona o arquivo de captura indicado por `-w` a cada `rotate_seconds` segundos. Os arquivos recebem o nome especificado por `-w`, que deve incluir um formato de data/hora definido por `strftime`(3). Sem esse formato, cada arquivo novo sobrescreve o anterior. Sempre que o nome gerado não é único, o tcpdump sobrescreve os dados existentes; por isso, não se recomenda uma especificação temporal mais grosseira que o período da captura."
+    },
+    {
+      "id": 61,
+      "source": "If used in conjunction with the `-C` option, filenames will take the form of ‘`file`<count>’.",
+      "translation": "Quando usada com `-C`, os nomes dos arquivos assumem a forma ‘`file`<count>’."
+    },
+    {
+      "id": 62,
+      "source": "`-h`",
+      "translation": "`-h`"
+    },
+    {
+      "id": 63,
+      "source": "`--help`",
+      "translation": "`--help`"
+    },
+    {
+      "id": 64,
+      "source": "Print the tcpdump and libpcap version strings, print a usage message, and exit.",
+      "translation": "Imprime as strings de versão de tcpdump e libpcap, mostra uma mensagem de uso e encerra."
+    },
+    {
+      "id": 65,
+      "source": "`--version`",
+      "translation": "`--version`"
+    },
+    {
+      "id": 66,
+      "source": "Print the tcpdump and libpcap version strings and exit.",
+      "translation": "Imprime as strings de versão de tcpdump e libpcap e encerra."
+    },
+    {
+      "id": 67,
+      "source": "`-H`",
+      "translation": "`-H`"
+    },
+    {
+      "id": 68,
+      "source": "Attempt to detect 802.11s draft mesh headers.",
+      "translation": "Tenta detectar cabeçalhos de malha do rascunho 802.11s."
+    },
+    {
+      "id": 69,
+      "source": "`-i interface`",
+      "translation": "`-i interface`"
+    },
+    {
+      "id": 70,
+      "source": "`--interface=interface`",
+      "translation": "`--interface=interface`"
+    },
+    {
+      "id": 71,
+      "source": "Listen, report the list of link-layer types, report the list of time stamp types, or report the results of compiling a filter expression on `interface`.  If unspecified and if the `-d` flag is not given, `tcpdump` searches the system interface list for the lowest numbered, configured up interface (excluding loopback), which may turn out to be, for example, “eth0”.",
+      "translation": "Escuta em `interface`, informa os tipos de camada de enlace ou de marcas temporais disponíveis, ou mostra o resultado da compilação de um filtro nessa interface. Se ela não for especificada e `-d` não for usada, o `tcpdump` procura na lista do sistema a interface de menor número que esteja configurada como ativa, excluindo loopback; ela pode ser, por exemplo, “eth0”."
+    },
+    {
+      "id": 72,
+      "source": "On all supported Linux systems, as well as on recent versions of macOS and Solaris, an `interface` argument of “any” means a special pseudo-interface, which captures packets from all regular network interfaces of the OS.  What is considered a regular network interface is an implementation detail of the OS (for example, on Linux this includes SocketCAN devices), so packets captured on the “any” pseudo-interface may represent more different network protocols than expected. Also all regular network interfaces are a subset of all available capture devices as printed by the `-D` flag.  The latter may also include capture devices that libpcap implements by means other than the OS network stack: Bluetooth, DAG, D-Bus, SNF and USB. Note that captures on the “any” pseudo-interface will not be done in promiscuous mode.",
+      "translation": "Em todos os sistemas Linux compatíveis e nas versões recentes de macOS e Solaris descritas pela fonte, o argumento “any” de `interface` indica uma pseudointerface especial que captura de todas as interfaces de rede regulares do sistema. O que conta como interface regular é um detalhe de implementação do sistema operacional; no Linux, por exemplo, isso inclui dispositivos SocketCAN. Assim, pacotes capturados em “any” podem representar mais protocolos do que o esperado. As interfaces regulares também são apenas um subconjunto de todos os dispositivos de captura listados por `-D`. Essa lista pode incluir dispositivos implementados pela libpcap fora da pilha de rede do sistema: Bluetooth, DAG, D-Bus, SNF e USB. Capturas em “any” não são feitas em modo promíscuo."
+    },
+    {
+      "id": 73,
+      "source": "If the `-D` flag is supported, an interface number as printed by that flag can be used as the `interface` argument, if no interface on the system has that number as a name.",
+      "translation": "Se houver suporte a `-D`, um número de interface exibido por essa opção pode ser usado como argumento `interface`, desde que nenhuma interface do sistema tenha esse número como nome."
+    },
+    {
+      "id": 74,
+      "source": "`-I`",
+      "translation": "`-I`"
+    },
+    {
+      "id": 75,
+      "source": "`--monitor-mode`",
+      "translation": "`--monitor-mode`"
+    },
+    {
+      "id": 76,
+      "source": "Put the interface in \"monitor mode\"; this is supported only on IEEE 802.11 Wi-Fi interfaces, and supported only on some operating systems.",
+      "translation": "Coloca a interface em “modo monitor”; isso só é compatível com interfaces Wi-Fi IEEE 802.11 e apenas em alguns sistemas operacionais."
+    },
+    {
+      "id": 77,
+      "source": "Note that in monitor mode the adapter might disassociate from the network with which it's associated, so that you will not be able to use any wireless networks with that adapter.  This could prevent accessing files on a network server, or resolving host names or network addresses, if you are capturing in monitor mode and are not connected to another network with another adapter.",
+      "translation": "No modo monitor, o adaptador pode se desassociar da rede à qual está conectado, impedindo o uso de redes sem fio por esse adaptador. Se você não estiver conectado a outra rede por outro adaptador, isso pode impedir o acesso a arquivos de um servidor de rede ou a resolução de nomes de hosts e endereços de rede."
+    },
+    {
+      "id": 78,
+      "source": "This flag will affect the output of the `-L` flag.  If `-I` isn't specified, only those link-layer types available when not in monitor mode will be shown; if `-I` is specified, only those link-layer types available when in monitor mode will be shown.",
+      "translation": "Esta opção afeta a saída de `-L`. Sem `-I`, são mostrados apenas os tipos de camada de enlace disponíveis fora do modo monitor; com `-I`, apenas os disponíveis nesse modo."
+    },
+    {
+      "id": 79,
+      "source": "`--immediate-mode`",
+      "translation": "`--immediate-mode`"
+    },
+    {
+      "id": 80,
+      "source": "Capture in \"immediate mode\".  In this mode, packets are delivered to tcpdump as soon as they arrive, rather than being buffered for efficiency.  This is the default when printing packets rather than saving packets to a “savefile” if the packets are being printed to a terminal rather than to a file or pipe.",
+      "translation": "Captura em “modo imediato”. Nele, os pacotes são entregues ao tcpdump assim que chegam, em vez de ficarem em buffer para melhorar a eficiência. Esse é o padrão ao imprimir pacotes em um terminal, em vez de salvá-los em um arquivo de captura ou imprimi-los em um arquivo ou pipe."
+    },
+    {
+      "id": 81,
+      "source": "`-j tstamp_type`",
+      "translation": "`-j tstamp_type`"
+    },
+    {
+      "id": 82,
+      "source": "`--time-stamp-type=tstamp_type`",
+      "translation": "`--time-stamp-type=tstamp_type`"
+    },
+    {
+      "id": 83,
+      "source": "Set the time stamp type for the capture to `tstamp_type`.  The names to use for the time stamp types are given in `pcap-tstamp`(7); not all the types listed there will necessarily be valid for any given interface.",
+      "translation": "Define o tipo de marca temporal da captura como `tstamp_type`. Os nomes dos tipos estão em `pcap-tstamp`(7); nem todos os tipos listados necessariamente são válidos para uma dada interface."
+    },
+    {
+      "id": 84,
+      "source": "`-J`",
+      "translation": "`-J`"
+    },
+    {
+      "id": 85,
+      "source": "`--list-time-stamp-types`",
+      "translation": "`--list-time-stamp-types`"
+    },
+    {
+      "id": 86,
+      "source": "List the supported time stamp types for the interface and exit.  If the time stamp type cannot be set for the interface, no time stamp types are listed.",
+      "translation": "Lista os tipos de marcas temporais compatíveis com a interface e encerra. Se o tipo não puder ser definido para a interface, nenhum será listado."
+    },
+    {
+      "id": 87,
+      "source": "`--time-stamp-precision=tstamp_precision`",
+      "translation": "`--time-stamp-precision=tstamp_precision`"
+    },
+    {
+      "id": 88,
+      "source": "When capturing, set the time stamp precision for the capture to `tstamp_precision`.  Note that availability of high precision time stamps (nanoseconds) and their actual accuracy is platform and hardware dependent.  Also note that when writing captures made with nanosecond accuracy to a savefile, the time stamps are written with nanosecond resolution, and the file is written with a different magic number, to indicate that the time stamps are in seconds and nanoseconds; not all programs that read pcap savefiles will be able to read those captures.",
+      "translation": "Durante a captura, define a precisão das marcas temporais como `tstamp_precision`. A disponibilidade de marcas de alta precisão (nanossegundos) e sua exatidão real dependem da plataforma e do hardware. Ao gravar capturas com precisão de nanossegundos em um arquivo, as marcas são salvas com resolução de nanossegundos e o arquivo recebe um magic number diferente, indicando segundos e nanossegundos. Nem todo programa leitor de pcap consegue ler esses arquivos."
+    },
+    {
+      "id": 89,
+      "source": "When reading a savefile, convert time stamps to the precision specified by `timestamp_precision`, and display them with that resolution.  If the precision specified is less than the precision of time stamps in the file, the conversion will lose precision.",
+      "translation": "Ao ler um arquivo de captura, converte as marcas temporais para a precisão indicada por `timestamp_precision` e as exibe nessa resolução. Se a precisão pedida for menor que a das marcas no arquivo, haverá perda de precisão."
+    },
+    {
+      "id": 90,
+      "source": "The supported values for `timestamp_precision` are `micro` for microsecond resolution and `nano` for nanosecond resolution.  The default is microsecond resolution.",
+      "translation": "Os valores compatíveis de `timestamp_precision` são `micro`, para resolução de microssegundos, e `nano`, para nanossegundos. O padrão é microssegundos."
+    },
+    {
+      "id": 91,
+      "source": "`--micro`",
+      "translation": "`--micro`"
+    },
+    {
+      "id": 92,
+      "source": "`--nano`",
+      "translation": "`--nano`"
+    },
+    {
+      "id": 93,
+      "source": "Shorthands for `--time-stamp-precision=micro` or `--time-stamp-precision=nano`, adjusting the time stamp precision accordingly.  When reading packets from a savefile, using `--micro` truncates time stamps if the savefile was created with nanosecond precision.  In contrast, a savefile created with microsecond precision will have trailing zeroes added to the time stamp when `--nano` is used.",
+      "translation": "Atalhos para `--time-stamp-precision=micro` ou `--time-stamp-precision=nano`, ajustando a precisão das marcas temporais. Ao ler um arquivo criado com precisão de nanossegundos, `--micro` trunca as marcas. Já em um arquivo com precisão de microssegundos, `--nano` acrescenta zeros à direita das marcas temporais."
+    },
+    {
+      "id": 94,
+      "source": "`-K`",
+      "translation": "`-K`"
+    },
+    {
+      "id": 95,
+      "source": "`--dont-verify-checksums`",
+      "translation": "`--dont-verify-checksums`"
+    },
+    {
+      "id": 96,
+      "source": "Don't attempt to verify IP, TCP, or UDP checksums.  This is useful for interfaces that perform some or all of those checksum calculation in hardware; otherwise, all outgoing TCP checksums will be flagged as bad.",
+      "translation": "Não tenta verificar os checksums de IP, TCP ou UDP. É útil em interfaces que calculam alguns ou todos esses checksums por hardware; caso contrário, todos os checksums TCP de saída serão sinalizados como incorretos."
+    },
+    {
+      "id": 97,
+      "source": "`-l`",
+      "translation": "`-l`"
+    },
+    {
+      "id": 98,
+      "source": "Make stdout line buffered. Useful if you want to see the data while capturing it. E.g.,",
+      "translation": "Ativa o armazenamento de stdout em buffer por linha. Útil para acompanhar os dados durante a captura. Por exemplo:"
+    },
+    {
+      "id": 99,
+      "source": "or",
+      "translation": "ou"
+    },
+    {
+      "id": 100,
+      "source": "Note that on Windows,“line buffered” means “unbuffered”, so that WinDump will write each character individually if `-l` is specified.",
+      "translation": "No Windows, “buffer por linha” significa “sem buffer”; portanto, o WinDump grava cada caractere individualmente quando `-l` é especificada."
+    },
+    {
+      "id": 101,
+      "source": "`-U` is similar to `-l` in its behavior, but it will cause output to be “packet-buffered”, so that the output is written to stdout at the end of each packet rather than at the end of each line; this is buffered on all platforms, including Windows.",
+      "translation": "`-U` é semelhante a `-l`, mas usa buffer por pacote: a saída é gravada em stdout ao final de cada pacote, em vez de ao final de cada linha. Esse comportamento com buffer vale para todas as plataformas, inclusive Windows."
+    },
+    {
+      "id": 102,
+      "source": "`-L`",
+      "translation": "`-L`"
+    },
+    {
+      "id": 103,
+      "source": "`--list-data-link-types`",
+      "translation": "`--list-data-link-types`"
+    },
+    {
+      "id": 104,
+      "source": "List the known data link types for the interface, in the specified mode, and exit.  The list of known data link types may be dependent on the specified mode; for example, on some platforms, a Wi-Fi interface might support one set of data link types when not in monitor mode (for example, it might support only fake Ethernet headers, or might support 802.11 headers but not support 802.11 headers with radio information) and another set of data link types when in monitor mode (for example, it might support 802.11 headers, or 802.11 headers with radio information, only in monitor mode).",
+      "translation": "Lista os tipos de enlace de dados conhecidos para a interface no modo especificado e encerra. A lista pode depender do modo: em algumas plataformas, por exemplo, uma interface Wi-Fi oferece certos tipos fora do modo monitor (como somente cabeçalhos Ethernet simulados, ou cabeçalhos 802.11 sem informações de rádio) e outro conjunto no modo monitor (como cabeçalhos 802.11, com ou sem informações de rádio, disponíveis somente nesse modo)."
+    },
+    {
+      "id": 105,
+      "source": "`-m module`",
+      "translation": "`-m module`"
+    },
+    {
+      "id": 106,
+      "source": "Load SMI MIB module definitions from file `module`. This option can be used several times to load several MIB modules into `tcpdump`.",
+      "translation": "Carrega do arquivo `module` as definições de um módulo MIB SMI. A opção pode ser repetida para carregar vários módulos MIB no `tcpdump`."
+    },
+    {
+      "id": 107,
+      "source": "`-M secret`",
+      "translation": "`-M secret`"
+    },
+    {
+      "id": 108,
+      "source": "Use `secret` as a shared secret for validating the digests found in TCP segments with the TCP-MD5 option (RFC 2385), if present.",
+      "translation": "Usa `secret` como segredo compartilhado para validar os digests dos segmentos TCP que tenham a opção TCP-MD5 (RFC 2385)."
+    },
+    {
+      "id": 109,
+      "source": "`-n`",
+      "translation": "`-n`"
+    },
+    {
+      "id": 110,
+      "source": "Don't convert addresses (i.e., host addresses, port numbers, etc.) to names.",
+      "translation": "Não converte endereços — como endereços de hosts e números de portas — em nomes."
+    },
+    {
+      "id": 111,
+      "source": "`-N`",
+      "translation": "`-N`"
+    },
+    {
+      "id": 112,
+      "source": "Don't print domain name qualification of host names. E.g., if you give this flag then `tcpdump` will print “nic” instead of “nic.ddn.mil”.",
+      "translation": "Não imprime a qualificação de domínio dos nomes de hosts. Por exemplo, com esta opção, o `tcpdump` imprime “nic” em vez de “nic.ddn.mil”."
+    },
+    {
+      "id": 113,
+      "source": "`-#`",
+      "translation": "`-#`"
+    },
+    {
+      "id": 114,
+      "source": "`--number`",
+      "translation": "`--number`"
+    },
+    {
+      "id": 115,
+      "source": "Print a packet number at the beginning of the line.",
+      "translation": "Imprime um número de pacote no início da linha."
+    },
+    {
+      "id": 116,
+      "source": "`-O`",
+      "translation": "`-O`"
+    },
+    {
+      "id": 117,
+      "source": "`--no-optimize`",
+      "translation": "`--no-optimize`"
+    },
+    {
+      "id": 118,
+      "source": "Do not run the packet-matching code optimizer. This is useful only if you suspect a bug in the optimizer.",
+      "translation": "Não executa o otimizador do código de correspondência de pacotes. Só é útil se houver suspeita de um defeito no otimizador."
+    },
+    {
+      "id": 119,
+      "source": "`-p`",
+      "translation": "`-p`"
+    },
+    {
+      "id": 120,
+      "source": "`--no-promiscuous-mode`",
+      "translation": "`--no-promiscuous-mode`"
+    },
+    {
+      "id": 121,
+      "source": "`Don't` put the interface into promiscuous mode. Note that the interface might be in promiscuous mode for some other reason; hence, ‘-p’ cannot be used as an abbreviation for ‘ether host {local-hw-addr} or ether broadcast’.",
+      "translation": "Não coloca a interface em modo promíscuo (ênfase original: `Don't`). A interface pode já estar nesse modo por outro motivo; portanto, ‘-p’ não pode ser usada como abreviação de ‘ether host {local-hw-addr} or ether broadcast’."
+    },
+    {
+      "id": 122,
+      "source": "`--print`",
+      "translation": "`--print`"
+    },
+    {
+      "id": 123,
+      "source": "Print parsed packet output, even if the raw packets are being saved to a file with the `-w` flag.",
+      "translation": "Imprime a análise dos pacotes mesmo quando os pacotes brutos estão sendo salvos com `-w`."
+    },
+    {
+      "id": 124,
+      "source": "`-Q direction`",
+      "translation": "`-Q direction`"
+    },
+    {
+      "id": 125,
+      "source": "`--direction=direction`",
+      "translation": "`--direction=direction`"
+    },
+    {
+      "id": 126,
+      "source": "Choose send/receive direction `direction` for which packets should be captured. Possible values are ‘in’, ‘out’ and ‘inout’. Not available on all platforms.",
+      "translation": "Escolhe a direção de envio/recebimento `direction` dos pacotes a capturar. Os valores possíveis são ‘in’, ‘out’ e ‘inout’. Não está disponível em todas as plataformas."
+    },
+    {
+      "id": 127,
+      "source": "`-q`",
+      "translation": "`-q`"
+    },
+    {
+      "id": 128,
+      "source": "Quick (quiet?) output. Print less protocol information so output lines are shorter.",
+      "translation": "Saída rápida (silenciosa?): imprime menos informações de protocolo para encurtar as linhas."
+    },
+    {
+      "id": 129,
+      "source": "`-r file`",
+      "translation": "`-r file`"
+    },
+    {
+      "id": 130,
+      "source": "Read packets from `file` (which was created with the `-w` option or by other tools that write pcap or pcapng files). Standard input is used if `file` is “-”.",
+      "translation": "Lê os pacotes de `file`, criado com `-w` ou por outra ferramenta que grave pcap/pcapng. Se `file` for “-”, usa a entrada padrão."
+    },
+    {
+      "id": 131,
+      "source": "`-S`",
+      "translation": "`-S`"
+    },
+    {
+      "id": 132,
+      "source": "`--absolute-tcp-sequence-numbers`",
+      "translation": "`--absolute-tcp-sequence-numbers`"
+    },
+    {
+      "id": 133,
+      "source": "Print absolute, rather than relative, TCP sequence numbers.",
+      "translation": "Imprime números de sequência TCP absolutos em vez de relativos."
+    },
+    {
+      "id": 134,
+      "source": "`-s snaplen`",
+      "translation": "`-s snaplen`"
+    },
+    {
+      "id": 135,
+      "source": "`--snapshot-length=snaplen`",
+      "translation": "`--snapshot-length=snaplen`"
+    },
+    {
+      "id": 136,
+      "source": "Snarf `snaplen` bytes of data from each packet rather than the default of 262144 bytes. Packets truncated because of a limited snapshot are indicated in the output with “[|`proto`]”, where `proto` is the name of the protocol level at which the truncation has occurred.",
+      "translation": "Captura `snaplen` bytes de dados de cada pacote em vez do padrão de 262144 bytes. Pacotes truncados pelo limite de captura são indicados na saída por “[|`proto`]”, em que `proto` é o protocolo no nível em que ocorreu o truncamento."
+    },
+    {
+      "id": 137,
+      "source": "Note that taking larger snapshots both increases the amount of time it takes to process packets and, effectively, decreases the amount of packet buffering. This may cause packets to be lost. Note also that taking smaller snapshots will discard data from protocols above the transport layer, which loses information that may be important.  NFS and AFS requests and replies, for example, are very large, and much of the detail won't be available if a too-short snapshot length is selected.",
+      "translation": "Capturas com snapshots maiores aumentam o tempo de processamento e reduzem, na prática, a quantidade de pacotes que cabe no buffer, podendo causar perdas. Snapshots menores descartam dados de protocolos acima da camada de transporte e podem eliminar informações importantes. Solicitações e respostas NFS e AFS, por exemplo, são muito grandes, e muitos detalhes ficam indisponíveis quando o tamanho capturado é curto demais."
+    },
+    {
+      "id": 138,
+      "source": "If you need to reduce the snapshot size below the default, you should limit `snaplen` to the smallest number that will capture the protocol information you're interested in.  Setting `snaplen` to 0 sets it to the default of 262144, for backwards compatibility with recent older versions of `tcpdump`.",
+      "translation": "Se for necessário reduzir o tamanho de captura abaixo do padrão, limite `snaplen` ao menor valor que preserve as informações de protocolo desejadas. Definir `snaplen` como 0 seleciona o padrão de 262144, por compatibilidade com versões anteriores recentes do `tcpdump`."
+    },
+    {
+      "id": 139,
+      "source": "`-T type`",
+      "translation": "`-T type`"
+    },
+    {
+      "id": 140,
+      "source": "Force packets selected by \"`expression`\" to be interpreted the specified `type`. Currently known types are `aodv` (Ad-hoc On-demand Distance Vector protocol), `carp` (Common Address Redundancy Protocol), `cnfp` (Cisco NetFlow protocol), `domain` (Domain Name System), `lmp` (Link Management Protocol), `pgm` (Pragmatic General Multicast), `pgm_zmtp1` (ZMTP/1.0 inside PGM/EPGM), `ptp` (Precision Time Protocol), `radius` (RADIUS), `resp` (REdis Serialization Protocol), `rpc` (Remote Procedure Call), `rtcp` (Real-Time Applications control protocol), `rtp` (Real-Time Applications protocol), `snmp` (Simple Network Management Protocol), `someip` (SOME/IP), `tftp` (Trivial File Transfer Protocol), `vat` (Visual Audio Tool), `vxlan` (Virtual eXtensible Local Area Network), `wb` (distributed White Board) and `zmtp1` (ZeroMQ Message Transport Protocol 1.0).",
+      "translation": "Força a interpretação dos pacotes selecionados por “`expression`” como o `type` especificado. Os tipos conhecidos são `aodv` (Ad-hoc On-demand Distance Vector), `carp` (Common Address Redundancy Protocol), `cnfp` (Cisco NetFlow), `domain` (Domain Name System), `lmp` (Link Management Protocol), `pgm` (Pragmatic General Multicast), `pgm_zmtp1` (ZMTP/1.0 dentro de PGM/EPGM), `ptp` (Precision Time Protocol), `radius` (RADIUS), `resp` (REdis Serialization Protocol), `rpc` (Remote Procedure Call), `rtcp` (protocolo de controle de aplicações em tempo real), `rtp` (protocolo de aplicações em tempo real), `snmp` (Simple Network Management Protocol), `someip` (SOME/IP), `tftp` (Trivial File Transfer Protocol), `vat` (Visual Audio Tool), `vxlan` (Virtual eXtensible Local Area Network), `wb` (White Board distribuído) e `zmtp1` (ZeroMQ Message Transport Protocol 1.0)."
+    },
+    {
+      "id": 141,
+      "source": "Note that the `pgm` type above affects UDP interpretation only, the native PGM is always recognised as IP protocol 113 regardless. UDP-encapsulated PGM is often called \"EPGM\" or \"PGM/UDP\".",
+      "translation": "O tipo `pgm` acima só afeta a interpretação de UDP; PGM nativo é sempre reconhecido como protocolo IP 113. PGM encapsulado em UDP costuma ser chamado de “EPGM” ou “PGM/UDP”."
+    },
+    {
+      "id": 142,
+      "source": "Note that the `pgm_zmtp1` type above affects interpretation of both native PGM and UDP at once. During the native PGM decoding the application data of an ODATA/RDATA packet would be decoded as a ZeroMQ datagram with ZMTP/1.0 frames. During the UDP decoding in addition to that any UDP packet would be treated as an encapsulated PGM packet.",
+      "translation": "O tipo `pgm_zmtp1` afeta simultaneamente a interpretação de PGM nativo e UDP. Na decodificação de PGM nativo, os dados da aplicação de um pacote ODATA/RDATA são decodificados como um datagrama ZeroMQ com quadros ZMTP/1.0. Na decodificação de UDP, além disso, qualquer pacote UDP é tratado como um pacote PGM encapsulado."
+    },
+    {
+      "id": 143,
+      "source": "`-t`",
+      "translation": "`-t`"
+    },
+    {
+      "id": 144,
+      "source": "`Don't` print a timestamp on each dump line.",
+      "translation": "Não imprime uma marca temporal em cada linha de saída (ênfase original: `Don't`)."
+    },
+    {
+      "id": 145,
+      "source": "`-tt`",
+      "translation": "`-tt`"
+    },
+    {
+      "id": 146,
+      "source": "Print the timestamp, as seconds since January 1, 1970, 00:00:00, UTC, and fractions of a second since that time, on each dump line.",
+      "translation": "Imprime em cada linha a marca temporal em segundos desde 1º de janeiro de 1970, 00:00:00 UTC, com suas frações de segundo."
+    },
+    {
+      "id": 147,
+      "source": "`-ttt`",
+      "translation": "`-ttt`"
+    },
+    {
+      "id": 148,
+      "source": "Print a delta (microsecond or nanosecond resolution depending on the `--time-stamp-precision` option) between current and previous line on each dump line. The default is microsecond resolution.",
+      "translation": "Imprime em cada linha a diferença entre a linha atual e a anterior, com resolução de microssegundos ou nanossegundos conforme `--time-stamp-precision`. O padrão é microssegundos."
+    },
+    {
+      "id": 149,
+      "source": "`-tttt`",
+      "translation": "`-tttt`"
+    },
+    {
+      "id": 150,
+      "source": "Print a timestamp, as hours, minutes, seconds, and fractions of a second since midnight, preceded by the date, on each dump line.",
+      "translation": "Imprime em cada linha uma marca temporal com horas, minutos, segundos e frações de segundo desde a meia-noite, precedida pela data."
+    },
+    {
+      "id": 151,
+      "source": "`-ttttt`",
+      "translation": "`-ttttt`"
+    },
+    {
+      "id": 152,
+      "source": "Print a delta (microsecond or nanosecond resolution depending on the `--time-stamp-precision` option) between current and first line on each dump line. The default is microsecond resolution.",
+      "translation": "Imprime, em cada linha da saída, a diferença entre a marca temporal atual e a da primeira linha, com resolução de microssegundos ou nanossegundos conforme a opção `--time-stamp-precision`. A resolução padrão é de microssegundos."
+    },
+    {
+      "id": 153,
+      "source": "`-u`",
+      "translation": "`-u`"
+    },
+    {
+      "id": 154,
+      "source": "Print undecoded NFS handles.",
+      "translation": "Imprime os identificadores de arquivo (handles) NFS sem decodificá-los."
+    },
+    {
+      "id": 155,
+      "source": "`-U`",
+      "translation": "`-U`"
+    },
+    {
+      "id": 156,
+      "source": "`--packet-buffered`",
+      "translation": "`--packet-buffered`"
+    },
+    {
+      "id": 157,
+      "source": "If the `-w` option is not specified, or if it is specified but the `--print` flag is also specified, make the printed packet output “packet-buffered”; i.e., as the description of the contents of each packet is printed, it will be written to the standard output, rather than, when not writing to a terminal, being written only when the output buffer fills.",
+      "translation": "Se a opção `-w` não for especificada, ou se for especificada junto com a opção `--print`, usa buffer por pacote na saída impressa: à medida que a descrição do conteúdo de cada pacote é impressa, ela é enviada à saída padrão, em vez de, quando a saída não é um terminal, aguardar o preenchimento do buffer de saída."
+    },
+    {
+      "id": 158,
+      "source": "If the `-w` option is specified, make the saved raw packet output “packet-buffered”; i.e., as each packet is saved, it will be written to the output file, rather than being written only when the output buffer fills.",
+      "translation": "Se a opção `-w` for especificada, usa buffer por pacote na saída de pacotes brutos salva: cada pacote é escrito no arquivo de saída assim que é salvo, em vez de aguardar o preenchimento do buffer de saída."
+    },
+    {
+      "id": 159,
+      "source": "The `-U` flag will not be supported if `tcpdump` was built with an older version of `libpcap` that lacks the `pcap_dump_flush`(3PCAP) function.",
+      "translation": "A opção `-U` não é suportada se o `tcpdump` tiver sido compilado com uma versão antiga da `libpcap` que não disponha da função `pcap_dump_flush`(3PCAP)."
+    },
+    {
+      "id": 160,
+      "source": "`-v`",
+      "translation": "`-v`"
+    },
+    {
+      "id": 161,
+      "source": "When parsing and printing, produce (slightly more) verbose output. For example, the time to live, identification, total length and options in an IP packet are printed. Also enables additional packet integrity checks such as verifying the IP and ICMP header checksum.",
+      "translation": "Ao analisar e imprimir, produz uma saída um pouco mais detalhada. Por exemplo, imprime o tempo de vida, a identificação, o comprimento total e as opções de um pacote IP. Também ativa verificações adicionais de integridade dos pacotes, como a conferência das somas de verificação dos cabeçalhos IP e ICMP."
+    },
+    {
+      "id": 162,
+      "source": "When writing to a file with the `-w` option and at the same time not reading from a file with the `-r` option, report to stderr, once per second, the number of packets captured. In Solaris, FreeBSD and possibly other operating systems this periodic update currently can cause loss of captured packets on their way from the kernel to tcpdump.",
+      "translation": "Ao escrever em um arquivo com a opção `-w` sem, ao mesmo tempo, ler de um arquivo com a opção `-r`, informa na saída de erro padrão (stderr), uma vez por segundo, o número de pacotes capturados. No Solaris, no FreeBSD e possivelmente em outros sistemas operacionais, essa atualização periódica pode atualmente causar perda de pacotes capturados no trajeto do kernel até o tcpdump."
+    },
+    {
+      "id": 163,
+      "source": "`-vv`",
+      "translation": "`-vv`"
+    },
+    {
+      "id": 164,
+      "source": "Even more verbose output. For example, additional fields are printed from NFS reply packets, and SMB packets are fully decoded.",
+      "translation": "Produz uma saída ainda mais detalhada. Por exemplo, imprime campos adicionais dos pacotes de resposta NFS e decodifica completamente os pacotes SMB."
+    },
+    {
+      "id": 165,
+      "source": "`-vvv`",
+      "translation": "`-vvv`"
+    },
+    {
+      "id": 166,
+      "source": "Even more verbose output. For example, telnet `SB` ... `SE` options are printed in full. With `-X` Telnet options are printed in hex as well.",
+      "translation": "Produz uma saída ainda mais detalhada. Por exemplo, imprime integralmente as opções telnet `SB` ... `SE`. Com `-X`, as opções Telnet também são impressas em hexadecimal."
+    },
+    {
+      "id": 167,
+      "source": "`-V file`",
+      "translation": "`-V file`"
+    },
+    {
+      "id": 168,
+      "source": "Read a list of filenames from `file`. Standard input is used if `file` is “-”.",
+      "translation": "Lê uma lista de nomes de arquivos de `file`. Usa a entrada padrão se `file` for “-”."
+    },
+    {
+      "id": 169,
+      "source": "`-w file`",
+      "translation": "`-w file`"
+    },
+    {
+      "id": 170,
+      "source": "Write the raw packets to `file` rather than parsing and printing them out. They can later be printed with the -r option. Standard output is used if `file` is “-”.",
+      "translation": "Escreve os pacotes brutos em `file`, em vez de analisá-los e imprimi-los. Eles podem ser impressos posteriormente com a opção -r. Usa a saída padrão se `file` for “-”."
+    },
+    {
+      "id": 171,
+      "source": "This output will be buffered if written to a file or pipe, so a program reading from the file or pipe may not see packets for an arbitrary amount of time after they are received.  Use the `-U` flag to cause packets to be written as soon as they are received.",
+      "translation": "Essa saída usa buffer quando é escrita em um arquivo ou pipe; portanto, um programa que leia desse arquivo ou pipe pode não receber os pacotes durante um intervalo arbitrário após sua recepção. Use a opção `-U` para que os pacotes sejam escritos assim que forem recebidos."
+    },
+    {
+      "id": 172,
+      "source": "The MIME type `application/vnd.tcpdump.pcap` has been registered with IANA for `pcap` files. The filename extension `.pcap` appears to be the most commonly used along with `.cap` and `.dmp`. `tcpdump` itself doesn't check the extension when reading capture files and doesn't add an extension when writing them (it uses magic numbers in the file header instead). However, many operating systems and applications will use the extension if it is present and adding one (e.g. .pcap) is recommended.",
+      "translation": "O tipo MIME `application/vnd.tcpdump.pcap` foi registrado na IANA para arquivos `pcap`. A extensão de nome de arquivo `.pcap` parece ser a mais usada, junto com `.cap` e `.dmp`. O próprio `tcpdump` não verifica a extensão ao ler arquivos de captura nem acrescenta uma extensão ao escrevê-los: usa, em seu lugar, números mágicos no cabeçalho do arquivo. Muitos sistemas operacionais e aplicativos, porém, usam a extensão quando ela está presente; recomenda-se acrescentar uma, como .pcap."
+    },
+    {
+      "id": 173,
+      "source": "See `pcap-savefile`(5) for a description of the file format.",
+      "translation": "Consulte `pcap-savefile`(5) para obter uma descrição do formato do arquivo."
+    },
+    {
+      "id": 174,
+      "source": "`-W filecount`",
+      "translation": "`-W filecount`"
+    },
+    {
+      "id": 175,
+      "source": "Used in conjunction with the `-C` option, this will limit the number of files created to the specified number, and begin overwriting files from the beginning, thus creating a 'rotating' buffer. In addition, it will name the files with enough leading 0s to support the maximum number of files, allowing them to sort correctly.",
+      "translation": "Em conjunto com a opção `-C`, limita a quantidade de arquivos criados ao número especificado e passa a sobrescrevê-los a partir do primeiro, criando assim um buffer circular. Além disso, os nomes dos arquivos recebem zeros à esquerda em quantidade suficiente para acomodar o número máximo de arquivos, permitindo sua ordenação correta."
+    },
+    {
+      "id": 176,
+      "source": "Used in conjunction with the `-G` option, this will limit the number of rotated dump files that get created, exiting with status 0 when reaching the limit.",
+      "translation": "Em conjunto com a opção `-G`, limita o número de arquivos de captura criados pela rotação e encerra com status 0 ao atingir esse limite."
+    },
+    {
+      "id": 177,
+      "source": "If used in conjunction with both `-C` and `-G,` the `-W` option will currently be ignored, and will only affect the file name.",
+      "translation": "Se for usada em conjunto com `-C` e `-G,` a opção `-W` é atualmente ignorada e afeta apenas o nome do arquivo."
+    },
+    {
+      "id": 178,
+      "source": "`-x`",
+      "translation": "`-x`"
+    },
+    {
+      "id": 179,
+      "source": "When parsing and printing, in addition to printing the headers of each packet, print the data of each packet (minus its link level header) in hex. The smaller of the entire packet or `snaplen` bytes will be printed.  Note that this is the entire link-layer packet, so for link layers that pad (e.g. Ethernet), the padding bytes will also be printed when the higher layer packet is shorter than the required padding. In the current implementation this flag may have the same effect as `-xx` if the packet is truncated. No effect when `-X[X]` option is used.",
+      "translation": "Ao analisar e imprimir, além dos cabeçalhos de cada pacote, imprime seus dados em hexadecimal, sem o cabeçalho da camada de enlace. Imprime o menor entre o pacote inteiro e `snaplen` bytes. Trata-se do pacote completo da camada de enlace; portanto, em camadas que acrescentam preenchimento, como Ethernet, os bytes de preenchimento também são impressos quando o pacote da camada superior é menor que o tamanho exigido pelo preenchimento. Na implementação atual, essa opção pode ter o mesmo efeito de `-xx` se o pacote estiver truncado. Não tem efeito quando a opção `-X[X]` é usada."
+    },
+    {
+      "id": 180,
+      "source": "`-xx`",
+      "translation": "`-xx`"
+    },
+    {
+      "id": 181,
+      "source": "When parsing and printing, in addition to printing the headers of each packet, print the data of each packet, `including` its link level header, in hex. No effect when `-X[X]` option is used.",
+      "translation": "Ao analisar e imprimir, além dos cabeçalhos de cada pacote, imprime seus dados em hexadecimal, incluindo o cabeçalho da camada de enlace (ênfase original: `including`). Não tem efeito quando a opção `-X[X]` é usada."
+    },
+    {
+      "id": 182,
+      "source": "`-X`",
+      "translation": "`-X`"
+    },
+    {
+      "id": 183,
+      "source": "When parsing and printing, in addition to printing the headers of each packet, print the data of each packet (minus its link level header) in hex and ASCII. This is very handy for analysing new protocols. In the current implementation this flag may have the same effect as `-XX` if the packet is truncated.",
+      "translation": "Ao analisar e imprimir, além dos cabeçalhos de cada pacote, imprime seus dados em hexadecimal e ASCII, sem o cabeçalho da camada de enlace. Isso é muito útil para analisar novos protocolos. Na implementação atual, essa opção pode ter o mesmo efeito de `-XX` se o pacote estiver truncado."
+    },
+    {
+      "id": 184,
+      "source": "`-XX`",
+      "translation": "`-XX`"
+    },
+    {
+      "id": 185,
+      "source": "When parsing and printing, in addition to printing the headers of each packet, print the data of each packet, `including` its link level header, in hex and ASCII.",
+      "translation": "Ao analisar e imprimir, além dos cabeçalhos de cada pacote, imprime seus dados em hexadecimal e ASCII, incluindo o cabeçalho da camada de enlace (ênfase original: `including`)."
+    },
+    {
+      "id": 186,
+      "source": "`-y datalinktype`",
+      "translation": "`-y datalinktype`"
+    },
+    {
+      "id": 187,
+      "source": "`--linktype=datalinktype`",
+      "translation": "`--linktype=datalinktype`"
+    },
+    {
+      "id": 188,
+      "source": "Set the data link type to use while capturing packets (see `-L`) or just compiling and dumping packet-matching code (see `-d`) to `datalinktype`.",
+      "translation": "Define como `datalinktype` o tipo de enlace de dados usado na captura de pacotes (consulte `-L`) ou apenas na compilação e exibição do código de correspondência de pacotes (consulte `-d`)."
+    },
+    {
+      "id": 189,
+      "source": "`-z postrotate-command`",
+      "translation": "`-z postrotate-command`"
+    },
+    {
+      "id": 190,
+      "source": "Used in conjunction with the `-C` or `-G` options, this will make `tcpdump` run \" `postrotate-command file` \" where `file` is the savefile being closed after each rotation. For example, specifying `-z gzip` or `-z bzip2` will compress each savefile using gzip or bzip2.",
+      "translation": "Em conjunto com as opções `-C` ou `-G`, faz o `tcpdump` executar “ `postrotate-command file` ”, em que `file` é o arquivo de captura que está sendo fechado após cada rotação. Por exemplo, especificar `-z gzip` ou `-z bzip2` comprime cada arquivo de captura com gzip ou bzip2."
+    },
+    {
+      "id": 191,
+      "source": "This option can only be used if fork subprocess is implemented (e.g. not on Windows systems).",
+      "translation": "Essa opção só pode ser usada se houver implementação de criação de subprocessos por fork; por exemplo, não pode ser usada em sistemas Windows."
+    },
+    {
+      "id": 192,
+      "source": "Note that tcpdump will run the command in parallel to the capture, using the lowest priority so that this doesn't disturb the capture process.",
+      "translation": "O tcpdump executa o comando em paralelo à captura, com a menor prioridade, para não perturbar o processo de captura."
+    },
+    {
+      "id": 193,
+      "source": "And in case you would like to use a command that itself takes flags or different arguments, you can always write a shell script that will take the savefile name as the only argument, make the flags & arguments arrangements and execute the command that you want.",
+      "translation": "Para usar um comando que receba suas próprias opções ou argumentos diferentes, escreva um script de shell que receba o nome do arquivo de captura como único argumento, organize as opções e os argumentos e execute o comando desejado."
+    },
+    {
+      "id": 194,
+      "source": "`-Z user`",
+      "translation": "`-Z user`"
+    },
+    {
+      "id": 195,
+      "source": "`--relinquish-privileges=user`",
+      "translation": "`--relinquish-privileges=user`"
+    },
+    {
+      "id": 196,
+      "source": "If `tcpdump` is running as root, after opening the capture device or input savefile, but before opening any savefiles for output, change the user ID to `user` and the group ID to the primary group of `user`.",
+      "translation": "Se o `tcpdump` estiver sendo executado como root, depois de abrir o dispositivo de captura ou o arquivo de captura de entrada, mas antes de abrir qualquer arquivo de captura de saída, altera o ID de usuário para `user` e o ID de grupo para o grupo primário de `user`."
+    },
+    {
+      "id": 197,
+      "source": "This behavior is enabled by default (`-Z tcpdump`), and can be disabled by `-Z root`.",
+      "translation": "Esse comportamento é ativado por padrão (`-Z tcpdump`) e pode ser desativado com `-Z root`."
+    },
+    {
+      "id": 198,
+      "source": "` expression`",
+      "translation": "` expression`"
+    },
+    {
+      "id": 199,
+      "source": "selects which packets will be dumped. If no `expression` is given, all packets on the net will be dumped. Otherwise, only packets for which `expression` is ‘true’ will be dumped.",
+      "translation": "Seleciona os pacotes que serão apresentados na saída. Se nenhuma `expression` for fornecida, todos os pacotes da rede serão apresentados. Caso contrário, somente os pacotes para os quais `expression` seja verdadeira serão apresentados."
+    },
+    {
+      "id": 200,
+      "source": "For the `expression` syntax, see `pcap-filter`(7).",
+      "translation": "Para a sintaxe de `expression`, consulte `pcap-filter`(7)."
+    },
+    {
+      "id": 201,
+      "source": "The `expression` argument can be passed to `tcpdump` as either a single Shell argument, or as multiple Shell arguments, whichever is more convenient. Generally, if the expression contains Shell metacharacters, such as backslashes used to escape protocol names, it is easier to pass it as a single, quoted argument rather than to escape the Shell metacharacters. Multiple arguments are concatenated with spaces before being parsed.",
+      "translation": "O argumento `expression` pode ser passado ao `tcpdump` como um único argumento do shell ou como vários argumentos, conforme for mais conveniente. Se a expressão contiver metacaracteres do shell, como barras invertidas usadas para escapar nomes de protocolos, costuma ser mais fácil passá-la como um único argumento entre aspas do que escapar os metacaracteres do shell. Vários argumentos são concatenados com espaços antes da análise."
+    },
+    {
+      "id": 202,
+      "source": "EXAMPLES",
+      "translation": "EXEMPLOS"
+    },
+    {
+      "id": 203,
+      "source": "To print all packets arriving at or departing from `sundown`:",
+      "translation": "Para imprimir todos os pacotes que chegam a `sundown` ou saem dele:"
+    },
+    {
+      "id": 204,
+      "source": "To print traffic between `helios` and either `hot` or `ace`:",
+      "translation": "Para imprimir o tráfego entre `helios` e `hot` ou `ace`:"
+    },
+    {
+      "id": 205,
+      "source": "To print all IP packets between `ace` and any host except `helios`:",
+      "translation": "Para imprimir todos os pacotes IP entre `ace` e qualquer host, exceto `helios`:"
+    },
+    {
+      "id": 206,
+      "source": "To print all traffic between local hosts and hosts at Berkeley:",
+      "translation": "Para imprimir todo o tráfego entre hosts locais e hosts em Berkeley:"
+    },
+    {
+      "id": 207,
+      "source": "To print all ftp traffic through internet gateway `snup`: (note that the expression is quoted to prevent the shell from (mis-)interpreting the parentheses):",
+      "translation": "Para imprimir todo o tráfego ftp que passa pelo gateway de internet `snup`: a expressão está entre aspas para impedir que o shell interprete incorretamente os parênteses."
+    },
+    {
+      "id": 208,
+      "source": "To print traffic neither sourced from nor destined for local hosts (if you gateway to one other net, this stuff should never make it onto your local net).",
+      "translation": "Para imprimir o tráfego que não tem hosts locais como origem nem como destino: se você usa um gateway para outra rede, esse tráfego nunca deveria chegar à sua rede local."
+    },
+    {
+      "id": 209,
+      "source": "To print the start and end packets (the SYN and FIN packets) of each TCP conversation that involves a non-local host.",
+      "translation": "Para imprimir os pacotes de início e término, SYN e FIN, de cada comunicação TCP que envolva um host não local."
+    },
+    {
+      "id": 210,
+      "source": "To print the TCP packets with flags RST and ACK both set. (i.e. select only the RST and ACK flags in the flags field, and if the result is \"RST and ACK both set\", match)",
+      "translation": "Para imprimir os pacotes TCP com os bits RST e ACK ativados simultaneamente: seleciona somente esses dois bits no campo de flags e considera que há correspondência se ambos estiverem ativados."
+    },
+    {
+      "id": 211,
+      "source": "To print all IPv4 HTTP packets to and from port 80, i.e. print only packets that contain data, not, for example, SYN and FIN packets and ACK-only packets.  (IPv6 is left as an exercise for the reader.)",
+      "translation": "Para imprimir todos os pacotes HTTP IPv4 de ou para a porta 80, ou seja, somente pacotes que contenham dados, excluindo, por exemplo, pacotes SYN e FIN e pacotes que contenham apenas ACK. A versão IPv6 fica como exercício para o leitor."
+    },
+    {
+      "id": 212,
+      "source": "To print IP packets longer than 576 bytes sent through gateway `snup`:",
+      "translation": "Para imprimir pacotes IP maiores que 576 bytes enviados pelo gateway `snup`:"
+    },
+    {
+      "id": 213,
+      "source": "To print IP broadcast or multicast packets that were `not` sent via Ethernet broadcast or multicast:",
+      "translation": "Para imprimir pacotes IP de broadcast ou multicast que não tenham sido enviados por broadcast ou multicast Ethernet (ênfase original da negação: `not`):"
+    },
+    {
+      "id": 214,
+      "source": "To print all ICMP packets that are not echo requests/replies (i.e., not ping packets):",
+      "translation": "Para imprimir todos os pacotes ICMP que não sejam solicitações ou respostas de eco, isto é, que não sejam pacotes de ping:"
+    },
+    {
+      "id": 215,
+      "source": "OUTPUT FORMAT",
+      "translation": "FORMATO DA SAÍDA"
+    },
+    {
+      "id": 216,
+      "source": "The output of `tcpdump` is protocol dependent. The following gives a brief description and examples of most of the formats.",
+      "translation": "A saída do `tcpdump` depende do protocolo. A seguir, são apresentadas uma breve descrição e exemplos da maioria dos formatos."
+    },
+    {
+      "id": 217,
+      "source": "Timestamps",
+      "translation": "Marcas temporais"
+    },
+    {
+      "id": 218,
+      "source": "By default, all output lines are preceded by a timestamp. The timestamp is the current clock time in the form",
+      "translation": "Por padrão, todas as linhas da saída são precedidas por uma marca temporal. Ela representa o horário atual do relógio no formato"
+    },
+    {
+      "id": 219,
+      "source": "and is as accurate as the kernel's clock. The timestamp reflects the time the kernel applied a time stamp to the packet. No attempt is made to account for the time lag between when the network interface finished receiving the packet from the network and when the kernel applied a time stamp to the packet; that time lag could include a delay between the time when the network interface finished receiving a packet from the network and the time when an interrupt was delivered to the kernel to get it to read the packet and a delay between the time when the kernel serviced the ‘new packet’ interrupt and the time when it applied a time stamp to the packet.",
+      "translation": "e tem a mesma precisão do relógio do kernel. A marca temporal reflete o instante em que o kernel a atribuiu ao pacote. Não se tenta compensar o intervalo entre o término da recepção do pacote pela interface de rede e a atribuição da marca temporal pelo kernel. Esse intervalo pode incluir tanto o atraso entre o término da recepção e a entrega ao kernel de uma interrupção para que ele leia o pacote quanto o atraso entre o atendimento da interrupção de “novo pacote” pelo kernel e a atribuição da marca temporal."
+    },
+    {
+      "id": 220,
+      "source": "Interface",
+      "translation": "Interface"
+    },
+    {
+      "id": 221,
+      "source": "When the `any` interface is selected on capture or when a link-type `LINUX_SLL2` capture file is read the interface name is printed after the timestamp. This is followed by the packet type with `In` and `Out` denoting a packet destined for this host or originating from this host respectively. Other possible values are `B` for broadcast packets, `M` for multicast packets, and `P` for packets destined for other hosts.",
+      "translation": "Quando a interface `any` é selecionada para a captura, ou quando é lido um arquivo de captura com tipo de enlace `LINUX_SLL2`, o nome da interface é impresso após a marca temporal. Em seguida vem o tipo do pacote: `In` indica um pacote destinado a este host e `Out`, um pacote originado nele. Outros valores possíveis são `B` para pacotes de broadcast, `M` para pacotes multicast e `P` para pacotes destinados a outros hosts."
+    },
+    {
+      "id": 222,
+      "source": "Link Level Headers",
+      "translation": "Cabeçalhos da camada de enlace"
+    },
+    {
+      "id": 223,
+      "source": "If the '-e' option is given, the link level header is printed out. On Ethernets, the source and destination addresses, protocol, and packet length are printed.",
+      "translation": "Se a opção '-e' for fornecida, imprime o cabeçalho da camada de enlace. Em redes Ethernet, imprime os endereços de origem e destino, o protocolo e o comprimento do pacote."
+    },
+    {
+      "id": 224,
+      "source": "On FDDI networks, the  '-e' option causes `tcpdump` to print the ‘frame control’ field,  the source and destination addresses, and the packet length. (The ‘frame control’ field governs the interpretation of the rest of the packet. Normal packets (such as those containing IP datagrams) are ‘async’ packets, with a priority value between 0 and 7; for example, ‘`async4`’. Such packets are assumed to contain an 802.2 Logical Link Control (LLC) packet; the LLC header is printed if it is `not` an ISO datagram or a so-called SNAP packet.",
+      "translation": "Em redes FDDI, a opção '-e' faz o `tcpdump` imprimir o campo de controle de quadro, os endereços de origem e destino e o comprimento do pacote. O campo de controle de quadro determina como interpretar o restante do pacote. Pacotes normais, como os que contêm datagramas IP, são pacotes assíncronos, com um valor de prioridade entre 0 e 7; por exemplo, `async4`. Presume-se que esses pacotes contenham um pacote 802.2 Logical Link Control (LLC); o cabeçalho LLC é impresso se não se tratar de um datagrama ISO nem de um pacote chamado SNAP (ênfase original da negação: `not`)."
+    },
+    {
+      "id": 225,
+      "source": "On Token Ring networks, the '-e' option causes `tcpdump` to print the ‘access control’ and ‘frame control’ fields, the source and destination addresses, and the packet length. As on FDDI networks, packets are assumed to contain an LLC packet. Regardless of whether the '-e' option is specified or not, the source routing information is printed for source-routed packets.",
+      "translation": "Em redes Token Ring, a opção '-e' faz o `tcpdump` imprimir os campos de controle de acesso e de controle de quadro, os endereços de origem e destino e o comprimento do pacote. Assim como em redes FDDI, presume-se que os pacotes contenham um pacote LLC. Para pacotes com roteamento pela origem, as informações desse roteamento são impressas independentemente de a opção '-e' ter sido especificada."
+    },
+    {
+      "id": 226,
+      "source": "On 802.11 networks, the '-e' option causes `tcpdump` to print the ‘frame control’ fields, all of the addresses in the 802.11 header, and the packet length. As on FDDI networks, packets are assumed to contain an LLC packet.",
+      "translation": "Em redes 802.11, a opção '-e' faz o `tcpdump` imprimir os campos de controle de quadro, todos os endereços do cabeçalho 802.11 e o comprimento do pacote. Assim como em redes FDDI, presume-se que os pacotes contenham um pacote LLC."
+    },
+    {
+      "id": 227,
+      "source": "(N.B.: The following description assumes familiarity with the SLIP compression algorithm described in RFC 1144.)",
+      "translation": "A descrição a seguir pressupõe familiaridade com o algoritmo de compressão SLIP descrito na RFC 1144."
+    },
+    {
+      "id": 228,
+      "source": "On SLIP links, a direction indicator (“I” for inbound, “O” for outbound), packet type, and compression information are printed out. The packet type is printed first. The three types are `ip`, `utcp`, and `ctcp`. No further link information is printed for `ip` packets. For TCP packets, the connection identifier is printed following the type. If the packet is compressed, its encoded header is printed out. The special cases are printed out as `*S+n` and `*SA+n`, where `n` is the amount by which the sequence number (or sequence number and ack) has changed. If it is not a special case, zero or more changes are printed. A change is indicated by U (urgent pointer), W (window), A (ack), S (sequence number), and I (packet ID), followed by a delta (+n or -n), or a new value (=n). Finally, the amount of data in the packet and compressed header length are printed.",
+      "translation": "Em enlaces SLIP, imprime um indicador de direção (“I” para entrada e “O” para saída), o tipo do pacote e informações de compressão. O tipo do pacote é impresso primeiro. Os três tipos são `ip`, `utcp` e `ctcp`. Para pacotes `ip`, não imprime outras informações do enlace. Para pacotes TCP, imprime o identificador da conexão após o tipo. Se o pacote estiver comprimido, imprime seu cabeçalho codificado. Os casos especiais são impressos como `*S+n` e `*SA+n`, em que `n` é a variação do número de sequência, ou do número de sequência e do ACK. Se não for um caso especial, imprime zero ou mais alterações. Cada alteração é indicada por U (ponteiro de urgência), W (janela), A (ACK), S (número de sequência) ou I (ID do pacote), seguido de uma diferença (+n ou -n) ou de um novo valor (=n). Por fim, imprime a quantidade de dados do pacote e o comprimento do cabeçalho comprimido."
+    },
+    {
+      "id": 229,
+      "source": "For example, the following line shows an outbound compressed TCP packet, with an implicit connection identifier; the ack has changed by 6, the sequence number by 49, and the packet ID by 6; there are 3 bytes of data and 6 bytes of compressed header:",
+      "translation": "Por exemplo, a linha a seguir mostra um pacote TCP comprimido de saída com um identificador de conexão implícito: o ACK variou em 6, o número de sequência em 49 e o ID do pacote em 6. Há 3 bytes de dados e 6 bytes de cabeçalho comprimido:"
+    },
+    {
+      "id": 230,
+      "source": "ARP/RARP Packets",
+      "translation": "Pacotes ARP/RARP"
+    },
+    {
+      "id": 231,
+      "source": "ARP/RARP output shows the type of request and its arguments. The format is intended to be self explanatory. Here is a short sample taken from the start of an ‘rlogin’ from host `rtsg` to host `csam`:",
+      "translation": "A saída ARP/RARP mostra o tipo de solicitação e seus argumentos. O formato pretende ser autoexplicativo. A seguir, uma pequena amostra do início de um ‘rlogin’ do host `rtsg` para o host `csam`:"
+    },
+    {
+      "id": 232,
+      "source": "The first line says that rtsg sent an ARP packet asking for the Ethernet address of internet host csam. Csam replies with its Ethernet address (in this example, Ethernet addresses are in caps and internet addresses in lower case).",
+      "translation": "A primeira linha informa que rtsg enviou um pacote ARP solicitando o endereço Ethernet do host de internet csam. Csam responde com seu endereço Ethernet. Neste exemplo, os endereços Ethernet estão em maiúsculas e os endereços de internet, em minúsculas."
+    },
+    {
+      "id": 233,
+      "source": "This would look less redundant if we had done `tcpdump -n`:",
+      "translation": "A saída pareceria menos redundante se tivéssemos usado `tcpdump -n`:"
+    },
+    {
+      "id": 234,
+      "source": "If we had done `tcpdump -e`, the fact that the first packet is broadcast and the second is point-to-point would be visible:",
+      "translation": "Se tivéssemos usado `tcpdump -e`, ficaria visível que o primeiro pacote é de broadcast e o segundo é ponto a ponto:"
+    },
+    {
+      "id": 235,
+      "source": "For the first packet this says the Ethernet source address is RTSG, the destination is the Ethernet broadcast address, the type field contained hex 0806 (type ETHER_ARP) and the total length was 64 bytes.",
+      "translation": "Para o primeiro pacote, a saída informa que o endereço Ethernet de origem é RTSG, o destino é o endereço de broadcast Ethernet, o campo de tipo contém o valor hexadecimal 0806 (tipo ETHER_ARP) e o comprimento total é de 64 bytes."
+    },
+    {
+      "id": 236,
+      "source": "IPv4 Packets",
+      "translation": "Pacotes IPv4"
+    },
+    {
+      "id": 237,
+      "source": "If the link-layer header is not being printed, for IPv4 packets, `IP` is printed after the time stamp.",
+      "translation": "Se o cabeçalho da camada de enlace não estiver sendo impresso, imprime `IP` após a marca temporal para pacotes IPv4."
+    },
+    {
+      "id": 238,
+      "source": "If the `-v` flag is specified, information from the IPv4 header is shown in parentheses after the `IP` or the link-layer header. The general format of this information is:",
+      "translation": "Se a opção `-v` for especificada, exibe informações do cabeçalho IPv4 entre parênteses após `IP` ou após o cabeçalho da camada de enlace. O formato geral dessas informações é:"
+    },
+    {
+      "id": 239,
+      "source": "`tos` is the type of service field; if the ECN bits are non-zero, those are reported as `ECT(1)`, `ECT(0)`, or `CE`. `ttl` is the time-to-live; it is not reported if it is zero. `id` is the IP identification field. `offset` is the fragment offset field; it is printed whether this is part of a fragmented datagram or not. `flags` are the MF and DF flags; `+` is reported if MF is set, and `DF` is reported if F is set.  If neither are set, `.` is reported. `proto` is the protocol ID field. `length` is the total length field; if the packet is a presumed TSO (TCP Segmentation Offload) send, [was 0, presumed TSO] is reported. `options` are the IP options, if any.",
+      "translation": "`tos` é o campo de tipo de serviço; se os bits ECN não forem zero, são apresentados como `ECT(1)`, `ECT(0)` ou `CE`. `ttl` é o tempo de vida e não é apresentado se for zero. `id` é o campo de identificação IP. `offset` é o campo de deslocamento do fragmento e é impresso independentemente de o pacote fazer parte de um datagrama fragmentado. `flags` representa os bits MF e DF: imprime `+` se MF estiver ativado e `DF` se F estiver ativado, conforme o texto original. Se nenhum deles estiver ativado, imprime `.`. `proto` é o campo de identificação do protocolo. `length` é o campo de comprimento total; se o pacote for considerado um envio com TSO (TCP Segmentation Offload), imprime [was 0, presumed TSO]. `options` representa as opções IP, se houver."
+    },
+    {
+      "id": 240,
+      "source": "Next, for TCP and UDP packets, the source and destination IP addresses and TCP or UDP ports, with a dot between each IP address and its corresponding port, will be printed, with a > separating the source and destination.  For other protocols, the addresses will be printed, with a > separating the source and destination.  Higher level protocol information, if any, will be printed after that.",
+      "translation": "Em seguida, para pacotes TCP e UDP, imprime os endereços IP de origem e destino e as portas TCP ou UDP, com um ponto entre cada endereço IP e sua porta correspondente e um > separando origem e destino. Para outros protocolos, imprime os endereços, com um > separando origem e destino. Depois disso, imprime as informações do protocolo de nível superior, se houver."
+    },
+    {
+      "id": 241,
+      "source": "For fragmented IP datagrams, the first fragment contains the higher level protocol header; fragments after the first contain no higher level protocol header.  Fragmentation information will be printed only with the `-v` flag, in the IP header information, as described above.",
+      "translation": "Em datagramas IP fragmentados, o primeiro fragmento contém o cabeçalho do protocolo de nível superior; os fragmentos seguintes não contêm esse cabeçalho. As informações de fragmentação só são impressas com a opção `-v`, nas informações do cabeçalho IP, conforme descrito acima."
+    },
+    {
+      "id": 242,
+      "source": "TCP Packets",
+      "translation": "Pacotes TCP"
+    },
+    {
+      "id": 243,
+      "source": "(N.B.:The following description assumes familiarity with the TCP protocol described in RFC 793. If you are not familiar with the protocol, this description will not be of much use to you.)",
+      "translation": "A descrição a seguir pressupõe familiaridade com o protocolo TCP descrito na RFC 793. Sem essa familiaridade, a descrição não será muito útil."
+    },
+    {
+      "id": 244,
+      "source": "The general format of a TCP protocol line is:",
+      "translation": "O formato geral de uma linha do protocolo TCP é:"
+    },
+    {
+      "id": 245,
+      "source": "`Src` and `dst` are the source and destination IP addresses and ports. `Tcpflags` are some combination of S (SYN), F (FIN), P (PSH), R (RST), U (URG), W (CWR), E (ECE) or ‘.’ (ACK), or ‘none’ if no flags are set. `Data-seqno` describes the portion of sequence space covered by the data in this packet (see example below). `Ackno` is sequence number of the next data expected the other direction on this connection. `Window` is the number of bytes of receive buffer space available the other direction on this connection. `Urg` indicates there is ‘urgent’ data in the packet. `Opts` are TCP options (e.g., mss 1024). `Len` is the length of payload data.",
+      "translation": "`Src` e `dst` são os endereços IP e as portas de origem e destino. `Tcpflags` é uma combinação de S (SYN), F (FIN), P (PSH), R (RST), U (URG), W (CWR), E (ECE) ou ‘.’ (ACK), ou ‘none’ se nenhum bit de controle estiver ativado. `Data-seqno` descreve a parte do espaço de sequência coberta pelos dados deste pacote; veja o exemplo abaixo. `Ackno` é o número de sequência dos próximos dados esperados no sentido oposto desta conexão. `Window` é a quantidade de bytes disponíveis no buffer de recepção no sentido oposto desta conexão. `Urg` indica que há dados urgentes no pacote. `Opts` são as opções TCP, como mss 1024. `Len` é o comprimento dos dados da carga útil."
+    },
+    {
+      "id": 246,
+      "source": "`Iptype`, `Src`, `dst`, and `flags` are always present. The other fields depend on the contents of the packet's TCP protocol header and are output only if appropriate.",
+      "translation": "`Iptype`, `Src`, `dst` e `flags` estão sempre presentes. Os demais campos dependem do conteúdo do cabeçalho TCP do pacote e só são apresentados quando apropriado."
+    },
+    {
+      "id": 247,
+      "source": "Here is the opening portion of an rlogin from host `rtsg` to host `csam`.",
+      "translation": "A seguir está o início de um rlogin do host `rtsg` para o host `csam`."
+    },
+    {
+      "id": 248,
+      "source": "The first line says that TCP port 1023 on rtsg sent a packet to port `login` on csam. The `S` indicates that the `SYN` flag was set. The packet sequence number was 768512 and it contained no data. (The notation is ‘first:last’ which means `sequence numbers `first` up to but not including `last`'.) There was no piggy-backed ACK, the available receive window was 4096 bytes and there was a max-segment-size option requesting an MSS of 1024 bytes.",
+      "translation": "A primeira linha informa que a porta TCP 1023 de rtsg enviou um pacote à porta `login` de csam. O `S` indica que o bit `SYN` estava ativado. O número de sequência do pacote era 768512 e ele não continha dados. A notação ‘first:last’ significa números de sequência de first até last, sem incluir last; a formulação original é `sequence numbers `first` up to but not including `last`'. Não havia ACK transportado junto ao pacote; a janela de recepção disponível era de 4096 bytes e havia uma opção de tamanho máximo de segmento solicitando um MSS de 1024 bytes."
+    },
+    {
+      "id": 249,
+      "source": "Csam replies with a similar packet except it includes a piggy-backed ACK for rtsg's SYN. Rtsg then ACKs csam's SYN. The ‘.’ means the ACK flag was set. The packet contained no data so there is no data sequence number or length. Note that the ACK sequence number is a small integer (1). The first time `tcpdump` sees a TCP ‘conversation’, it prints the sequence number from the packet. On subsequent packets of the conversation, the difference between the current packet's sequence number and this initial sequence number is printed. This means that sequence numbers after the first can be interpreted as relative byte positions in the conversation's data stream (with the first data byte each direction being ‘1’). ‘-S’ will override this feature, causing the original sequence numbers to be output.",
+      "translation": "Csam responde com um pacote semelhante, mas inclui nele um ACK para o SYN de rtsg. Rtsg então confirma o SYN de csam com um ACK. O ‘.’ significa que o bit ACK estava ativado. O pacote não continha dados, portanto não há número de sequência nem comprimento de dados. O número de sequência do ACK é um inteiro pequeno, 1. Quando o `tcpdump` vê uma comunicação TCP pela primeira vez, imprime o número de sequência do pacote. Nos pacotes seguintes da comunicação, imprime a diferença entre o número de sequência do pacote atual e esse número inicial. Assim, após o primeiro, os números de sequência podem ser interpretados como posições relativas de bytes no fluxo de dados da comunicação, sendo ‘1’ o primeiro byte de dados em cada sentido. A opção ‘-S’ desativa esse recurso e faz com que os números de sequência originais sejam apresentados."
+    },
+    {
+      "id": 250,
+      "source": "On the 6th line, rtsg sends csam 19 bytes of data (bytes 2 through 20 in the rtsg → csam side of the conversation). The PSH flag is set in the packet. On the 7th line, csam says it's received data sent by rtsg up to but not including byte 21. Most of this data is apparently sitting in the socket buffer since csam's receive window has gotten 19 bytes smaller. Csam also sends one byte of data to rtsg in this packet. On the 8th and 9th lines, csam sends two bytes of urgent, pushed data to rtsg.",
+      "translation": "Na 6ª linha, rtsg envia a csam 19 bytes de dados: os bytes de 2 a 20 no sentido rtsg → csam da comunicação. O bit PSH está ativado no pacote. Na 7ª linha, csam informa que recebeu os dados enviados por rtsg até o byte 21, sem incluí-lo. A maior parte desses dados aparentemente ainda está no buffer do socket, pois a janela de recepção de csam diminuiu 19 bytes. Nesse pacote, csam também envia um byte de dados a rtsg. Na 8ª e na 9ª linha, csam envia a rtsg dois bytes de dados urgentes com solicitação de entrega imediata (push)."
+    },
+    {
+      "id": 251,
+      "source": "If the snapshot was small enough that `tcpdump` didn't capture the full TCP header, it interprets as much of the header as it can and then reports “[|`tcp`]” to indicate the remainder could not be interpreted. If the header contains a bogus option (one with a length that's either too small or beyond the end of the header), `tcpdump` reports it as “[`bad opt`]” and does not interpret any further options (since it's impossible to tell where they start). If the header length indicates options are present but the IP datagram length is not long enough for the options to actually be there, `tcpdump` reports it as “[`bad hdr length`]”.",
+      "translation": "Se o tamanho de captura por pacote for pequeno a ponto de o `tcpdump` não capturar o cabeçalho TCP completo, ele interpreta o máximo possível do cabeçalho e apresenta “[|`tcp`]” para indicar que o restante não pôde ser interpretado. Se o cabeçalho contiver uma opção inválida, cujo comprimento seja pequeno demais ou ultrapasse o final do cabeçalho, o `tcpdump` apresenta “[`bad opt`]” e não interpreta outras opções, pois é impossível saber onde começam. Se o comprimento do cabeçalho indicar a presença de opções, mas o comprimento do datagrama IP for insuficiente para contê-las, o `tcpdump` apresenta “[`bad hdr length`]”."
+    },
+    {
+      "id": 252,
+      "source": "Particular TCP Flag Combinations (SYN-ACK, URG-ACK, etc.)",
+      "translation": "Combinações específicas de bits de controle TCP (SYN-ACK, URG-ACK etc.)"
+    },
+    {
+      "id": 253,
+      "source": "There are 8 bits in the control bits section of the TCP header:",
+      "translation": "Há 8 bits na seção de bits de controle do cabeçalho TCP:"
+    },
+    {
+      "id": 254,
+      "source": "`CWR | ECE | URG | ACK | PSH | RST | SYN | FIN`",
+      "translation": "`CWR | ECE | URG | ACK | PSH | RST | SYN | FIN`"
+    },
+    {
+      "id": 255,
+      "source": "Let's assume that we want to watch packets used in establishing a TCP connection. Recall that TCP uses a 3-way handshake protocol when it initializes a new connection; the connection sequence with regard to the TCP control bits is",
+      "translation": "Suponha que queiramos observar os pacotes usados para estabelecer uma conexão TCP. O TCP usa uma negociação de três etapas, ou three-way handshake, ao iniciar uma nova conexão. A sequência de conexão, em relação aos bits de controle TCP, é"
+    },
+    {
+      "id": 256,
+      "source": "1) Caller sends SYN 2) Recipient responds with SYN, ACK 3) Caller sends ACK",
+      "translation": "1) O iniciador envia SYN 2) O destinatário responde com SYN, ACK 3) O iniciador envia ACK"
+    },
+    {
+      "id": 257,
+      "source": "Now we're interested in capturing packets that have only the SYN bit set (Step 1). Note that we don't want packets from step 2 (SYN-ACK), just a plain initial SYN. What we need is a correct filter expression for `tcpdump`.",
+      "translation": "Agora queremos capturar pacotes que tenham somente o bit SYN ativado, como na etapa 1. Não queremos os pacotes da etapa 2, SYN-ACK, mas apenas um SYN inicial simples. Precisamos de uma expressão de filtro correta para o `tcpdump`."
+    },
+    {
+      "id": 258,
+      "source": "Recall the structure of a TCP header without options:",
+      "translation": "Relembre a estrutura de um cabeçalho TCP sem opções:"
+    },
+    {
+      "id": 259,
+      "source": "A TCP header usually holds 20 octets of data, unless options are present. The first line of the graph contains octets 0 - 3, the second line shows octets 4 - 7 etc.",
+      "translation": "Um cabeçalho TCP normalmente contém 20 octetos de dados, a menos que haja opções. A primeira linha do diagrama contém os octetos de 0 a 3; a segunda mostra os octetos de 4 a 7, e assim por diante."
+    },
+    {
+      "id": 260,
+      "source": "Starting to count with 0, the relevant TCP control bits are contained in octet 13:",
+      "translation": "Contando a partir de 0, os bits de controle TCP relevantes estão no octeto 13:"
+    },
+    {
+      "id": 261,
+      "source": "Let's have a closer look at octet no. 13:",
+      "translation": "Examinemos mais de perto o octeto de número 13:"
+    },
+    {
+      "id": 262,
+      "source": "These are the TCP control bits we are interested in. We have numbered the bits in this octet from 0 to 7, right to left, so the PSH bit is bit number 3, while the URG bit is number 5.",
+      "translation": "Esses são os bits de controle TCP que nos interessam. Numeramos os bits desse octeto de 0 a 7, da direita para a esquerda; portanto, PSH é o bit número 3 e URG é o bit número 5."
+    },
+    {
+      "id": 263,
+      "source": "Recall that we want to capture packets with only SYN set. Let's see what happens to octet 13 if a TCP datagram arrives with the SYN bit set in its header:",
+      "translation": "Queremos capturar pacotes em que apenas SYN esteja ativado. Vejamos o que acontece com o octeto 13 quando chega um datagrama TCP com o bit SYN ativado no cabeçalho:"
+    },
+    {
+      "id": 264,
+      "source": "Looking at the control bits section we see that only bit number 1 (SYN) is set.",
+      "translation": "Ao examinar a seção de bits de controle, vemos que somente o bit número 1, SYN, está ativado."
+    },
+    {
+      "id": 265,
+      "source": "Assuming that octet number 13 is an 8-bit unsigned integer in network byte order, the binary value of this octet is",
+      "translation": "Considerando o octeto de número 13 como um inteiro de 8 bits sem sinal na ordem de bytes da rede, seu valor binário é"
+    },
+    {
+      "id": 266,
+      "source": "00000010",
+      "translation": "00000010"
+    },
+    {
+      "id": 267,
+      "source": "and its decimal representation is",
+      "translation": "e sua representação decimal é"
+    },
+    {
+      "id": 268,
+      "source": "We're almost done, because now we know that if only SYN is set, the value of the 13th octet in the TCP header, when interpreted as a 8-bit unsigned integer in network byte order, must be exactly 2.",
+      "translation": "Estamos quase terminando: agora sabemos que, se somente SYN estiver ativado, o valor do octeto de índice 13 do cabeçalho TCP, interpretado como um inteiro de 8 bits sem sinal na ordem de bytes da rede, deve ser exatamente 2."
+    },
+    {
+      "id": 269,
+      "source": "This relationship can be expressed as",
+      "translation": "Essa relação pode ser expressa como"
+    },
+    {
+      "id": 270,
+      "source": "tcp[13] == 2",
+      "translation": "tcp[13] == 2"
+    },
+    {
+      "id": 271,
+      "source": "We can use this expression as the filter for `tcpdump` in order to watch packets which have only SYN set:",
+      "translation": "Podemos usar essa expressão como filtro do `tcpdump` para observar pacotes em que somente SYN esteja ativado:"
+    },
+    {
+      "id": 272,
+      "source": "tcpdump -i xl0 'tcp[13] == 2'",
+      "translation": "tcpdump -i xl0 'tcp[13] == 2'"
+    },
+    {
+      "id": 273,
+      "source": "The expression says \"let the 13th octet of a TCP datagram have the decimal value 2\", which is exactly what we want.",
+      "translation": "A expressão exige que o octeto de índice 13 de um datagrama TCP tenha o valor decimal 2, exatamente o que queremos."
+    },
+    {
+      "id": 274,
+      "source": "Now, let's assume that we need to capture SYN packets, but we don't care if ACK or any other TCP control bit is set at the same time. Let's see what happens to octet 13 when a TCP datagram with SYN-ACK set arrives:",
+      "translation": "Agora suponha que precisemos capturar pacotes SYN, independentemente de ACK ou qualquer outro bit de controle TCP estar ativado ao mesmo tempo. Vejamos o que acontece com o octeto 13 quando chega um datagrama TCP com SYN e ACK ativados:"
+    },
+    {
+      "id": 275,
+      "source": "Now bits 1 and 4 are set in the 13th octet. The binary value of octet 13 is",
+      "translation": "Agora os bits 1 e 4 estão ativados no octeto de índice 13. O valor binário do octeto 13 é"
+    },
+    {
+      "id": 276,
+      "source": "00010010",
+      "translation": "00010010"
+    },
+    {
+      "id": 277,
+      "source": "which translates to decimal",
+      "translation": "que corresponde ao valor decimal"
+    },
+    {
+      "id": 278,
+      "source": "Now we can't just use 'tcp[13] == 18' in the `tcpdump` filter expression, because that would select only those packets that have SYN-ACK set, but not those with only SYN set. Remember that we don't care if ACK or any other control bit is set as long as SYN is set.",
+      "translation": "Agora não basta usar 'tcp[13] == 18' na expressão de filtro do `tcpdump`, pois isso selecionaria somente pacotes com SYN e ACK ativados, mas não aqueles em que apenas SYN está ativado. Não importa se ACK ou qualquer outro bit de controle estiver ativado, desde que SYN esteja ativado."
+    },
+    {
+      "id": 279,
+      "source": "In order to achieve our goal, we need to logically AND the binary value of octet 13 with some other value to preserve the SYN bit. We know that we want SYN to be set in any case, so we'll logically AND the value in the 13th octet with the binary value of a SYN:",
+      "translation": "Para atingir nosso objetivo, precisamos aplicar a operação lógica AND entre o valor binário do octeto 13 e outro valor que preserve o bit SYN. Queremos que SYN esteja ativado em qualquer caso; por isso, aplicamos AND entre o valor do octeto de índice 13 e o valor binário de SYN:"
+    },
+    {
+      "id": 280,
+      "source": "We see that this AND operation delivers the same result regardless whether ACK or another TCP control bit is set. The decimal representation of the AND value as well as the result of this operation is 2 (binary 00000010), so we know that for packets with SYN set the following relation must hold true:",
+      "translation": "Vemos que essa operação AND produz o mesmo resultado independentemente de ACK ou de outro bit de controle TCP estar ativado. A representação decimal da máscara usada no AND e do resultado da operação é 2, ou 00000010 em binário. Portanto, para pacotes com SYN ativado, a relação a seguir deve ser verdadeira:"
+    },
+    {
+      "id": 281,
+      "source": "( ( value of octet 13 ) AND ( 2 ) ) == ( 2 )",
+      "translation": "( ( valor do octeto 13 ) AND ( 2 ) ) == ( 2 )"
+    },
+    {
+      "id": 282,
+      "source": "This points us to the `tcpdump` filter expression",
+      "translation": "Isso nos leva à expressão de filtro do `tcpdump`"
+    },
+    {
+      "id": 283,
+      "source": "tcpdump -i xl0 'tcp[13] & 2 == 2'",
+      "translation": "tcpdump -i xl0 'tcp[13] & 2 == 2'"
+    },
+    {
+      "id": 284,
+      "source": "Some offsets and field values may be expressed as names rather than as numeric values. For example tcp[13] may be replaced with tcp[tcpflags]. The following TCP flag field values are also available: tcp-fin, tcp-syn, tcp-rst, tcp-push, tcp-ack, tcp-urg, tcp-ece and tcp-cwr.",
+      "translation": "Alguns deslocamentos e valores de campos podem ser expressos por nomes em vez de valores numéricos. Por exemplo, tcp[13] pode ser substituído por tcp[tcpflags]. Também estão disponíveis os seguintes valores para o campo de bits de controle TCP: tcp-fin, tcp-syn, tcp-rst, tcp-push, tcp-ack, tcp-urg, tcp-ece e tcp-cwr."
+    },
+    {
+      "id": 285,
+      "source": "This can be demonstrated as:",
+      "translation": "Isso pode ser demonstrado assim:"
+    },
+    {
+      "id": 286,
+      "source": "tcpdump -i xl0 'tcp[tcpflags] & tcp-push != 0'",
+      "translation": "tcpdump -i xl0 'tcp[tcpflags] & tcp-push != 0'"
+    },
+    {
+      "id": 287,
+      "source": "Note that you should use single quotes or a backslash in the expression to hide the AND ('&') special character from the shell.",
+      "translation": "Use aspas simples ou uma barra invertida na expressão para proteger do shell o caractere especial AND ('&')."
+    },
+    {
+      "id": 288,
+      "source": "UDP Packets",
+      "translation": "Pacotes UDP"
+    },
+    {
+      "id": 289,
+      "source": "UDP format is illustrated by this rwho packet:",
+      "translation": "Este pacote rwho ilustra o formato UDP:"
+    },
+    {
+      "id": 290,
+      "source": "This says that port `who` on host `actinide` sent a UDP datagram to port `who` on host `broadcast`, the Internet broadcast address. The packet contained 84 bytes of user data.",
+      "translation": "Isso informa que a porta `who` do host `actinide` enviou um datagrama UDP à porta `who` do host `broadcast`, o endereço de broadcast da Internet. O pacote continha 84 bytes de dados do usuário."
+    },
+    {
+      "id": 291,
+      "source": "Some UDP services are recognized (from the source or destination port number) and the higher level protocol information printed. In particular, Domain Name service requests (RFC 1034/1035) and Sun RPC calls (RFC 1050) to NFS.",
+      "translation": "Alguns serviços UDP são reconhecidos pelo número da porta de origem ou destino, e as informações do protocolo de nível superior são impressas. Em particular, são reconhecidas as solicitações ao serviço de nomes de domínio (RFC 1034/1035) e as chamadas Sun RPC (RFC 1050) para NFS."
+    },
+    {
+      "id": 292,
+      "source": "TCP or UDP Name Server Requests",
+      "translation": "Solicitações a servidores de nomes por TCP ou UDP"
+    },
+    {
+      "id": 293,
+      "source": "(N.B.:The following description assumes familiarity with the Domain Service protocol described in RFC 1035. If you are not familiar with the protocol, the following description will appear to be written in Greek.)",
+      "translation": "A descrição a seguir pressupõe familiaridade com o protocolo de serviço de domínios descrito na RFC 1035. Sem essa familiaridade, a descrição parecerá escrita em grego."
+    },
+    {
+      "id": 294,
+      "source": "Name server requests are formatted as",
+      "translation": "As solicitações a servidores de nomes são formatadas assim:"
+    },
+    {
+      "id": 295,
+      "source": "Host `h2opolo` asked the domain server on `helios` for an address record (qtype=A) associated with the name `ucbvax.berkeley.edu.` The query id was ‘3’. The ‘+’ indicates the `recursion desired` flag was set. The query length was 37 bytes, excluding the TCP or UDP and IP protocol headers. The query operation was the normal one, `Query`, so the op field was omitted. If the op had been anything else, it would have been printed between the ‘3’ and the ‘+’. Similarly, the qclass was the normal one, `C_IN`, and omitted. Any other qclass would have been printed immediately after the ‘A’.",
+      "translation": "O host `h2opolo` solicitou ao servidor de domínios em `helios` um registro de endereço (qtype=A) associado ao nome `ucbvax.berkeley.edu.`. O ID da consulta era ‘3’. O ‘+’ indica que o bit `recursion desired` estava ativado. O comprimento da consulta era de 37 bytes, excluindo os cabeçalhos TCP ou UDP e IP. A operação da consulta era a habitual, `Query`; por isso, o campo op foi omitido. Se op tivesse outro valor, seria impresso entre ‘3’ e ‘+’. Da mesma forma, qclass era a habitual, `C_IN`, e foi omitida. Qualquer outra qclass seria impressa imediatamente após ‘A’."
+    },
+    {
+      "id": 296,
+      "source": "A few anomalies are checked and may result in extra fields enclosed in square brackets:  If a query contains an answer, authority records or additional records section, `ancount`, `nscount`, or `arcount` are printed as ‘[`n`a]’, ‘[`n`n]’ or  ‘[`n`au]’ where `n` is the appropriate count. If any of the response bits are set (AA, RA or rcode) or any of the ‘must be zero’ bits are set in bytes two and three, ‘[b2&3=`x`]’ is printed, where `x` is the hex value of header bytes two and three.",
+      "translation": "Algumas anomalias são verificadas e podem gerar campos adicionais entre colchetes. Se uma consulta contiver uma seção de respostas, de registros de autoridade ou de registros adicionais, `ancount`, `nscount` ou `arcount` são impressos como ‘[`n`a]’, ‘[`n`n]’ ou ‘[`n`au]’, em que `n` é a contagem correspondente. Se algum dos bits de resposta estiver ativado (AA, RA ou rcode), ou se algum dos bits que devem ser zero estiver ativado nos bytes dois e três, imprime ‘[b2&3=`x`]’, em que `x` é o valor hexadecimal dos bytes dois e três do cabeçalho."
+    },
+    {
+      "id": 297,
+      "source": "TCP or UDP Name Server Responses",
+      "translation": "Respostas de servidores de nomes por TCP ou UDP"
+    },
+    {
+      "id": 298,
+      "source": "Name server responses are formatted as",
+      "translation": "As respostas de servidores de nomes são formatadas assim:"
+    },
+    {
+      "id": 299,
+      "source": "In the first example, `helios` responds to query id 3 from `h2opolo` with 3 answer records, 3 name server records and 7 additional records. The first answer record is type A (address) and its data is internet address 128.32.137.3. The total size of the response was 273 bytes, excluding TCP or UDP and IP headers. The op (Query) and response code (NoError) were omitted, as was the class (C_IN) of the A record.",
+      "translation": "No primeiro exemplo, `helios` responde à consulta de ID 3 de `h2opolo` com 3 registros de resposta, 3 registros de servidores de nomes e 7 registros adicionais. O primeiro registro de resposta é do tipo A (endereço), e seus dados são o endereço de internet 128.32.137.3. O tamanho total da resposta era de 273 bytes, excluindo os cabeçalhos TCP ou UDP e IP. A operação (Query) e o código de resposta (NoError) foram omitidos, assim como a classe (C_IN) do registro A."
+    },
+    {
+      "id": 300,
+      "source": "In the second example, `helios` responds to query 2 with a response code of nonexistent domain (NXDomain) with no answers, one name server and no authority records. The ‘*’ indicates that the `authoritative answer` bit was set. Since there were no answers, no type, class or data were printed.",
+      "translation": "No segundo exemplo, `helios` responde à consulta 2 com um código de domínio inexistente (NXDomain), sem respostas, com um servidor de nomes e sem registros de autoridade. O ‘*’ indica que o bit `authoritative answer` estava ativado. Como não havia respostas, não foram impressos tipo, classe nem dados."
+    },
+    {
+      "id": 301,
+      "source": "Other flag characters that might appear are ‘-’ (recursion available, RA, `not` set) and ‘|’ (truncated message, TC, set). If the ‘question’ section doesn't contain exactly one entry, ‘[`n`q]’ is printed.",
+      "translation": "Outros caracteres indicadores que podem aparecer são ‘-’, que indica que RA (recursão disponível) não está ativado (ênfase original da negação: `not`), e ‘|’, que indica que TC (mensagem truncada) está ativado. Se a seção de perguntas não contiver exatamente uma entrada, imprime ‘[`n`q]’."
+    },
+    {
+      "id": 302,
+      "source": "SMB/CIFS Decoding",
+      "translation": "Decodificação SMB/CIFS"
+    },
+    {
+      "id": 303,
+      "source": "`tcpdump` now includes fairly extensive SMB/CIFS/NBT decoding for data on UDP/137, UDP/138 and TCP/139. Some primitive decoding of IPX and NetBEUI SMB data is also done.",
+      "translation": "O `tcpdump` agora inclui uma decodificação bastante abrangente de SMB/CIFS/NBT para dados em UDP/137, UDP/138 e TCP/139. Também realiza uma decodificação básica de dados SMB sobre IPX e NetBEUI."
+    },
+    {
+      "id": 304,
+      "source": "By default a fairly minimal decode is done, with a much more detailed decode done if -v is used. Be warned that with -v a single SMB packet may take up a page or more, so only use -v if you really want all the gory details.",
+      "translation": "Por padrão, realiza uma decodificação bastante reduzida; com -v, ela é muito mais detalhada. Com -v, um único pacote SMB pode ocupar uma página ou mais, portanto use essa opção somente se quiser todos os detalhes minuciosos."
+    },
+    {
+      "id": 305,
+      "source": "For information on SMB packet formats and what all the fields mean see https://download.samba.org/pub/samba/specs/ and other online resources. The SMB patches were written by Andrew Tridgell (tridge@samba.org).",
+      "translation": "Para obter informações sobre os formatos dos pacotes SMB e o significado de todos os campos, consulte https://download.samba.org/pub/samba/specs/ e outros recursos online. Os patches SMB foram escritos por Andrew Tridgell (tridge@samba.org)."
+    },
+    {
+      "id": 306,
+      "source": "NFS Requests and Replies",
+      "translation": "Solicitações e respostas NFS"
+    },
+    {
+      "id": 307,
+      "source": "Sun NFS (Network File System) requests and replies are printed as:",
+      "translation": "As solicitações e respostas Sun NFS (Network File System) são impressas assim:"
+    },
+    {
+      "id": 308,
+      "source": "In the first line, host `sushi` sends a transaction with id `26377` to `wrl`. The request was 112 bytes, excluding the UDP and IP headers. The operation was a `readlink` (read symbolic link) on file handle (`fh`) 21,24/10.731657119. (If one is lucky, as in this case, the file handle can be interpreted as a major,minor device number pair, followed by the inode number and generation number.) In the second line, `wrl` replies ‘ok’ with the same transaction id and the contents of the link.",
+      "translation": "Na primeira linha, o host `sushi` envia a `wrl` uma transação com ID `26377`. A solicitação tinha 112 bytes, excluindo os cabeçalhos UDP e IP. A operação era `readlink`, leitura de link simbólico, no identificador de arquivo (`fh`) 21,24/10.731657119. Com sorte, como neste caso, o identificador de arquivo pode ser interpretado como um par de números de dispositivo major e minor, seguido do número do inode e do número de geração. Na segunda linha, `wrl` responde ‘ok’ com o mesmo ID de transação e o conteúdo do link."
+    },
+    {
+      "id": 309,
+      "source": "In the third line, `sushi` asks (using a new transaction id) `wrl` to lookup the name ‘`xcolors`’ in directory file 9,74/4096.6878. In the fourth line, `wrl` sends a reply with the respective transaction id.",
+      "translation": "Na terceira linha, `sushi` solicita a `wrl`, usando um novo ID de transação, que procure o nome ‘`xcolors`’ no arquivo de diretório 9,74/4096.6878. Na quarta linha, `wrl` envia uma resposta com o respectivo ID de transação."
+    },
+    {
+      "id": 310,
+      "source": "Note that the data printed depends on the operation type. The format is intended to be self explanatory if read in conjunction with an NFS protocol spec. Also note that older versions of tcpdump printed NFS packets in a slightly different format: the transaction id (xid) would be printed instead of the non-NFS port number of the packet.",
+      "translation": "Os dados impressos dependem do tipo de operação. O formato pretende ser autoexplicativo quando lido junto de uma especificação do protocolo NFS. Versões antigas do tcpdump imprimiam os pacotes NFS em um formato ligeiramente diferente: o ID de transação (xid) era impresso no lugar do número da porta não NFS do pacote."
+    },
+    {
+      "id": 311,
+      "source": "If the -v (verbose) flag is given, additional information is printed. For example:",
+      "translation": "Se a opção -v, de saída detalhada, for fornecida, imprime informações adicionais. Por exemplo:"
+    },
+    {
+      "id": 312,
+      "source": "(-v also prints the IP header TTL, ID, length, and fragmentation fields, which have been omitted from this example.)  In the first line, `sushi` asks `wrl` to read 8192 bytes from file 21,11/12.195, at byte offset 24576. `Wrl` replies ‘ok’; the packet shown on the second line is the first fragment of the reply, and hence is only 1472 bytes long (the other bytes will follow in subsequent fragments, but these fragments do not have NFS or even UDP headers and so might not be printed, depending on the filter expression used). Because the -v flag is given, some of the file attributes (which are returned in addition to the file data) are printed: the file type (“REG”, for regular file), the file mode (in octal), the UID and GID, and the file size.",
+      "translation": "A opção -v também imprime os campos TTL, ID, comprimento e fragmentação do cabeçalho IP, omitidos deste exemplo. Na primeira linha, `sushi` solicita a `wrl` a leitura de 8192 bytes do arquivo 21,11/12.195, a partir do deslocamento de byte 24576. `Wrl` responde ‘ok’. O pacote mostrado na segunda linha é o primeiro fragmento da resposta e, por isso, tem apenas 1472 bytes. Os demais bytes vêm nos fragmentos seguintes, mas eles não têm cabeçalhos NFS nem mesmo UDP e, dependendo da expressão de filtro usada, podem não ser impressos. Como a opção -v foi fornecida, alguns atributos do arquivo, retornados além dos dados do arquivo, são impressos: o tipo de arquivo (“REG”, para arquivo regular), o modo do arquivo em octal, o UID, o GID e o tamanho do arquivo."
+    },
+    {
+      "id": 313,
+      "source": "If the -v flag is given more than once, even more details are printed.",
+      "translation": "Se a opção -v for fornecida mais de uma vez, imprime ainda mais detalhes."
+    },
+    {
+      "id": 314,
+      "source": "NFS reply packets do not explicitly identify the RPC operation. Instead, `tcpdump` keeps track of “recent” requests, and matches them to the replies using the transaction ID. If a reply does not closely follow the corresponding request, it might not be parsable.",
+      "translation": "Os pacotes de resposta NFS não identificam explicitamente a operação RPC. Em vez disso, o `tcpdump` acompanha as solicitações recentes e as associa às respostas pelo ID de transação. Se uma resposta não vier logo após a solicitação correspondente, talvez não seja possível analisá-la."
+    },
+    {
+      "id": 315,
+      "source": "AFS Requests and Replies",
+      "translation": "Solicitações e respostas AFS"
+    },
+    {
+      "id": 316,
+      "source": "Transarc AFS (Andrew File System) requests and replies are printed as:",
+      "translation": "As solicitações e respostas Transarc AFS (Andrew File System) são impressas assim:"
+    },
+    {
+      "id": 317,
+      "source": "In the first line, host elvis sends a RX packet to pike. This was a RX data packet to the fs (fileserver) service, and is the start of an RPC call. The RPC call was a rename, with the old directory file id of 536876964/1/1 and an old filename of ‘.newsrc.new’, and a new directory file id of 536876964/1/1 and a new filename of ‘.newsrc’. The host pike responds with a RPC reply to the rename call (which was successful, because it was a data packet and not an abort packet).",
+      "translation": "Na primeira linha, o host elvis envia um pacote RX a pike. Trata-se de um pacote de dados RX para o serviço fs (fileserver), que inicia uma chamada RPC. A chamada RPC era uma renomeação: o ID do arquivo do diretório antigo era 536876964/1/1 e o nome de arquivo antigo era ‘.newsrc.new’; o ID do arquivo do novo diretório era 536876964/1/1 e o novo nome de arquivo era ‘.newsrc’. O host pike responde à chamada de renomeação com uma resposta RPC. A operação foi bem-sucedida, pois a resposta era um pacote de dados, e não um pacote de abortamento."
+    },
+    {
+      "id": 318,
+      "source": "In general, all AFS RPCs are decoded at least by RPC call name. Most AFS RPCs have at least some of the arguments decoded (generally only the ‘interesting’ arguments, for some definition of interesting).",
+      "translation": "Em geral, todas as RPCs AFS são decodificadas ao menos quanto ao nome da chamada RPC. Na maioria delas, pelo menos alguns argumentos são decodificados: normalmente apenas os considerados interessantes, conforme o critério adotado."
+    },
+    {
+      "id": 319,
+      "source": "The format is intended to be self-describing, but it will probably not be useful to people who are not familiar with the workings of AFS and RX.",
+      "translation": "O formato pretende ser autoexplicativo, mas provavelmente não será útil para quem não conhece o funcionamento de AFS e RX."
+    },
+    {
+      "id": 320,
+      "source": "If the -v (verbose) flag is given twice, acknowledgement packets and additional header information is printed, such as the RX call ID, call number, sequence number, serial number, and the RX packet flags.",
+      "translation": "Se a opção -v, de saída detalhada, for fornecida duas vezes, imprime pacotes de confirmação e informações adicionais do cabeçalho, como o ID de chamada RX, o número da chamada, o número de sequência, o número de série e os bits de controle do pacote RX."
+    },
+    {
+      "id": 321,
+      "source": "If the -v flag is given twice, additional information is printed, such as the RX call ID, serial number, and the RX packet flags. The MTU negotiation information is also printed from RX ack packets.",
+      "translation": "Se a opção -v for fornecida duas vezes, imprime informações adicionais, como o ID de chamada RX, o número de série e os bits de controle do pacote RX. Também imprime as informações de negociação de MTU dos pacotes de confirmação RX."
+    },
+    {
+      "id": 322,
+      "source": "If the -v flag is given three times, the security index and service id are printed.",
+      "translation": "Se a opção -v for fornecida três vezes, imprime o índice de segurança e o ID do serviço."
+    },
+    {
+      "id": 323,
+      "source": "Error codes are printed for abort packets, with the exception of Ubik beacon packets (because abort packets are used to signify a yes vote for the Ubik protocol).",
+      "translation": "Imprime códigos de erro para pacotes de abortamento, exceto para os pacotes de sinalização periódica (beacon) Ubik, pois o protocolo Ubik usa pacotes de abortamento para indicar um voto afirmativo."
+    },
+    {
+      "id": 324,
+      "source": "AFS reply packets do not explicitly identify the RPC operation. Instead, `tcpdump` keeps track of “recent” requests, and matches them to the replies using the call number and service ID. If a reply does not closely follow the corresponding request, it might not be parsable.",
+      "translation": "Os pacotes de resposta AFS não identificam explicitamente a operação RPC. Em vez disso, o `tcpdump` acompanha as solicitações recentes e as associa às respostas pelo número da chamada e pelo ID do serviço. Se uma resposta não vier logo após a solicitação correspondente, talvez não seja possível analisá-la."
+    },
+    {
+      "id": 325,
+      "source": "KIP AppleTalk (DDP in UDP)",
+      "translation": "KIP AppleTalk (DDP em UDP)"
+    },
+    {
+      "id": 326,
+      "source": "AppleTalk DDP packets encapsulated in UDP datagrams are de-encapsulated and dumped as DDP packets (i.e., all the UDP header information is discarded). The file `/etc/atalk.names` is used to translate AppleTalk net and node numbers to names. Lines in this file have the form",
+      "translation": "Os pacotes AppleTalk DDP encapsulados em datagramas UDP são desencapsulados e apresentados como pacotes DDP, descartando todas as informações do cabeçalho UDP. O arquivo `/etc/atalk.names` é usado para converter números de rede e de nó AppleTalk em nomes. As linhas desse arquivo têm o formato"
+    },
+    {
+      "id": 327,
+      "source": "The first two lines give the names of AppleTalk networks. The third line gives the name of a particular host (a host is distinguished from a net by the 3rd octet in the number - a net number `must` have two octets and a host number `must` have three octets.)  The number and name should be separated by whitespace (blanks or tabs). The `/etc/atalk.names` file may contain blank lines or comment lines (lines starting with a ‘#’).",
+      "translation": "As duas primeiras linhas fornecem os nomes de redes AppleTalk. A terceira fornece o nome de um host específico. Um host se distingue de uma rede pelo terceiro octeto do número: um número de rede deve ter dois octetos e um número de host deve ter três octetos (ênfase original da obrigatoriedade: `must`). O número e o nome devem ser separados por espaços em branco, como espaços ou tabulações. O arquivo `/etc/atalk.names` pode conter linhas em branco ou de comentário, iniciadas por ‘#’."
+    },
+    {
+      "id": 328,
+      "source": "AppleTalk addresses are printed in the form",
+      "translation": "Os endereços AppleTalk são impressos no formato"
+    },
+    {
+      "id": 329,
+      "source": "(If the `/etc/atalk.names` doesn't exist or doesn't contain an entry for some AppleTalk host/net number, addresses are printed in numeric form.) In the first example, NBP (DDP port 2) on net 144.1 node 209 is sending to whatever is listening on port 220 of net icsd node 112. The second line is the same except the full name of the source node is known (‘office’). The third line is a send from port 235 on net jssmag node 149 to broadcast on the icsd-net NBP port (note that the broadcast address (255) is indicated by a net name with no host number - for this reason it's a good idea to keep node names and net names distinct in /etc/atalk.names).",
+      "translation": "Se `/etc/atalk.names` não existir ou não contiver uma entrada para algum número de host ou rede AppleTalk, os endereços são impressos em formato numérico. No primeiro exemplo, NBP, na porta DDP 2 do nó 209 da rede 144.1, envia para quem estiver escutando na porta 220 do nó 112 da rede icsd. A segunda linha é igual, exceto por ser conhecido o nome completo do nó de origem, ‘office’. A terceira linha é um envio da porta 235 do nó 149 da rede jssmag para o endereço de broadcast na porta NBP de icsd-net. O endereço de broadcast, 255, é indicado por um nome de rede sem número de host; por isso, convém manter distintos os nomes de nós e os nomes de redes em /etc/atalk.names."
+    },
+    {
+      "id": 330,
+      "source": "NBP (name binding protocol) and ATP (AppleTalk transaction protocol) packets have their contents interpreted. Other protocols just dump the protocol name (or number if no name is registered for the protocol) and packet size.",
+      "translation": "O conteúdo dos pacotes NBP (Name Binding Protocol) e ATP (AppleTalk Transaction Protocol) é interpretado. Para outros protocolos, imprime somente o nome do protocolo, ou seu número se não houver nome registrado, e o tamanho do pacote."
+    },
+    {
+      "id": 331,
+      "source": "NBP Packets",
+      "translation": "Pacotes NBP"
+    },
+    {
+      "id": 332,
+      "source": "NBP packets are formatted like the following examples:",
+      "translation": "Os pacotes NBP são formatados como nos exemplos a seguir:"
+    },
+    {
+      "id": 333,
+      "source": "The first line is a name lookup request for laserwriters sent by net icsd host 112 and broadcast on net jssmag. The nbp id for the lookup is 190. The second line shows a reply for this request (note that it has the same id) from host jssmag.209 saying that it has a laserwriter resource named \"RM1140\" registered on port 250. The third line is another reply to the same request saying host techpit has laserwriter \"techpit\" registered on port 186.",
+      "translation": "A primeira linha é uma solicitação de busca de nomes para laserwriters, enviada pelo host 112 da rede icsd e difundida por broadcast na rede jssmag. O ID NBP da busca é 190. A segunda linha mostra uma resposta a essa solicitação, com o mesmo ID, enviada pelo host jssmag.209, informando que ele tem um recurso laserwriter chamado “RM1140” registrado na porta 250. A terceira linha é outra resposta à mesma solicitação e informa que o host techpit tem um laserwriter chamado “techpit” registrado na porta 186."
+    },
+    {
+      "id": 334,
+      "source": "ATP Packets",
+      "translation": "Pacotes ATP"
+    },
+    {
+      "id": 335,
+      "source": "ATP packet formatting is demonstrated by the following example:",
+      "translation": "O exemplo a seguir demonstra a formatação dos pacotes ATP:"
+    },
+    {
+      "id": 336,
+      "source": "Jssmag.209 initiates transaction id 12266 with host helios by requesting up to 8 packets (the ‘<0-7>’). The hex number at the end of the line is the value of the ‘userdata’ field in the request.",
+      "translation": "Jssmag.209 inicia a transação de ID 12266 com o host helios solicitando até 8 pacotes, indicados por ‘<0-7>’. O número hexadecimal no final da linha é o valor do campo ‘userdata’ da solicitação."
+    },
+    {
+      "id": 337,
+      "source": "Helios responds with 8 512-byte packets. The ‘:digit’ following the transaction id gives the packet sequence number in the transaction and the number in parens is the amount of data in the packet, excluding the ATP header. The ‘*’ on packet 7 indicates that the EOM bit was set.",
+      "translation": "Helios responde com 8 pacotes de 512 bytes. O ‘:digit’ após o ID da transação indica o número de sequência do pacote na transação; o número entre parênteses é a quantidade de dados do pacote, excluindo o cabeçalho ATP. O ‘*’ no pacote 7 indica que o bit EOM estava ativado."
+    },
+    {
+      "id": 338,
+      "source": "Jssmag.209 then requests that packets 3 & 5 be retransmitted. Helios resends them then jssmag.209 releases the transaction. Finally, jssmag.209 initiates the next request. The ‘*’ on the request indicates that XO (‘exactly once’) was `not` set.",
+      "translation": "Jssmag.209 solicita então a retransmissão dos pacotes 3 e 5. Helios os reenvia e, em seguida, jssmag.209 libera a transação. Por fim, jssmag.209 inicia a próxima solicitação. O ‘*’ na solicitação indica que XO, de ‘exactly once’ ou ‘exatamente uma vez’, não estava ativado (ênfase original da negação: `not`)."
+    },
+    {
+      "id": 339,
+      "source": "BACKWARD COMPATIBILITY",
+      "translation": "COMPATIBILIDADE COM VERSÕES ANTERIORES"
+    },
+    {
+      "id": 340,
+      "source": "The TCP flag names `tcp-ece` and `tcp-cwr` became available when linking with libpcap 1.9.0 or later.",
+      "translation": "Os nomes de bits de controle TCP `tcp-ece` e `tcp-cwr` passaram a estar disponíveis ao vincular o programa à libpcap 1.9.0 ou posterior."
+    },
+    {
+      "id": 341,
+      "source": "SEE ALSO",
+      "translation": "CONSULTE TAMBÉM"
+    },
+    {
+      "id": 342,
+      "source": "`stty`(1), `pcap`(3PCAP), `bpf`(4), `nit`(4P), `pcap-savefile`(5), `pcap-filter`(7), `pcap-tstamp`(7)",
+      "translation": "`stty`(1), `pcap`(3PCAP), `bpf`(4), `nit`(4P), `pcap-savefile`(5), `pcap-filter`(7), `pcap-tstamp`(7)"
+    },
+    {
+      "id": 343,
+      "source": "`https://www.iana.org/assignments/media-types/application/vnd.tcpdump.pcap`",
+      "translation": "`https://www.iana.org/assignments/media-types/application/vnd.tcpdump.pcap`"
+    },
+    {
+      "id": 344,
+      "source": "AUTHORS",
+      "translation": "AUTORES"
+    },
+    {
+      "id": 345,
+      "source": "The original authors are:",
+      "translation": "Os autores originais são:"
+    },
+    {
+      "id": 346,
+      "source": "Van Jacobson, Craig Leres and Steven McCanne, all of the Lawrence Berkeley National Laboratory, University of California, Berkeley, CA.",
+      "translation": "Van Jacobson, Craig Leres e Steven McCanne, todos do Lawrence Berkeley National Laboratory, Universidade da Califórnia, Berkeley, CA."
+    },
+    {
+      "id": 347,
+      "source": "It is currently maintained by The Tcpdump Group.",
+      "translation": "Atualmente, o programa é mantido pelo The Tcpdump Group."
+    },
+    {
+      "id": 348,
+      "source": "The current version is available via HTTPS:",
+      "translation": "A versão atual está disponível via HTTPS:"
+    },
+    {
+      "id": 349,
+      "source": "`https://www.tcpdump.org/`",
+      "translation": "`https://www.tcpdump.org/`"
+    },
+    {
+      "id": 350,
+      "source": "The original distribution is available via anonymous ftp:",
+      "translation": "A distribuição original está disponível via FTP anônimo:"
+    },
+    {
+      "id": 351,
+      "source": "`ftp://ftp.ee.lbl.gov/old/tcpdump.tar.Z`",
+      "translation": "`ftp://ftp.ee.lbl.gov/old/tcpdump.tar.Z`"
+    },
+    {
+      "id": 352,
+      "source": "IPv6/IPsec support is added by WIDE/KAME project. This program uses OpenSSL/LibreSSL, under specific configurations.",
+      "translation": "O suporte a IPv6/IPsec foi acrescentado pelo projeto WIDE/KAME. Este programa usa OpenSSL/LibreSSL em configurações específicas."
+    },
+    {
+      "id": 353,
+      "source": "BUGS",
+      "translation": "BUGS"
+    },
+    {
+      "id": 354,
+      "source": "To report a security issue please send an e-mail to security@tcpdump.org.",
+      "translation": "Para relatar um problema de segurança, envie um e-mail para security@tcpdump.org."
+    },
+    {
+      "id": 355,
+      "source": "To report bugs and other problems, contribute patches, request a feature, provide generic feedback etc. please see the file `CONTRIBUTING.md` in the tcpdump source tree root.",
+      "translation": "Para relatar bugs e outros problemas, contribuir com patches, solicitar funcionalidades, fornecer comentários gerais etc., consulte o arquivo `CONTRIBUTING.md` na raiz da árvore de código-fonte do tcpdump."
+    },
+    {
+      "id": 356,
+      "source": "NIT doesn't let you watch your own outbound traffic, BPF will. We recommend that you use the latter.",
+      "translation": "NIT não permite observar seu próprio tráfego de saída; BPF permite. Recomendamos usar BPF."
+    },
+    {
+      "id": 357,
+      "source": "Some attempt should be made to reassemble IP fragments or, at least to compute the right length for the higher level protocol.",
+      "translation": "Deveria haver uma tentativa de remontar os fragmentos IP ou, ao menos, de calcular o comprimento correto para o protocolo de nível superior."
+    },
+    {
+      "id": 358,
+      "source": "Name server inverse queries are not dumped correctly: the (empty) question section is printed rather than real query in the answer section. Some believe that inverse queries are themselves a bug and prefer to fix the program generating them rather than `tcpdump`.",
+      "translation": "As consultas inversas a servidores de nomes não são apresentadas corretamente: imprime a seção de perguntas, vazia, em vez da consulta real na seção de respostas. Alguns consideram que as próprias consultas inversas são um bug e preferem corrigir o programa que as gera em vez do `tcpdump`."
+    },
+    {
+      "id": 359,
+      "source": "A packet trace that crosses a daylight savings time change will give skewed time stamps (the time change is ignored).",
+      "translation": "Um rastreamento de pacotes que atravesse uma mudança de horário de verão apresentará marcas temporais incorretas, pois a mudança de horário é ignorada."
+    },
+    {
+      "id": 360,
+      "source": "Filter expressions on fields other than those in Token Ring headers will not correctly handle source-routed Token Ring packets.",
+      "translation": "Expressões de filtro sobre campos que não pertençam aos cabeçalhos Token Ring não tratam corretamente pacotes Token Ring com roteamento pela origem."
+    },
+    {
+      "id": 361,
+      "source": "Filter expressions on fields other than those in 802.11 headers will not correctly handle 802.11 data packets with both To DS and From DS set.",
+      "translation": "Expressões de filtro sobre campos que não pertençam aos cabeçalhos 802.11 não tratam corretamente pacotes de dados 802.11 com To DS e From DS ativados simultaneamente."
+    },
+    {
+      "id": 362,
+      "source": "`ip6 proto` should chase header chain, but at this moment it does not. `ip6 protochain` is supplied for this behavior.",
+      "translation": "`ip6 proto` deveria percorrer a cadeia de cabeçalhos, mas atualmente não o faz. Para esse comportamento, está disponível `ip6 protochain`."
+    },
+    {
+      "id": 363,
+      "source": "Arithmetic expression against transport layer headers, like `tcp[0]`, does not work against IPv6 packets. It only looks at IPv4 packets.",
+      "translation": "Expressões aritméticas sobre cabeçalhos da camada de transporte, como `tcp[0]`, não funcionam com pacotes IPv6. Elas examinam somente pacotes IPv4."
+    }
+  ]
+}

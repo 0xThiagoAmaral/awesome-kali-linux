@@ -5,8 +5,8 @@
 | Catálogo oficial | 820 registros; 806 com metadado everything |
 | Fontes upstream licenciadas adquiridas | 32 ferramentas |
 | Notas de documentação disponíveis | 57 documentos em 32 ferramentas |
-| Traduções automáticas | 44 documentos, ainda sem revisão humana integral |
-| Traduções editoriais por assistente de IA | 12, conferidas contra a fonte; revisão humana independente pendente |
+| Traduções automáticas | 43 documentos, ainda sem revisão humana integral |
+| Traduções editoriais por assistente de IA | 13, conferidas contra a fonte; revisão humana independente pendente |
 | Português oficial upstream | 1 documento(s) |
 | Blocos de código preservados | 473, sujeitos à conferência de integridade atual |
 | Folhas de comandos upstream | 10 folhas; 44 exemplos literais, não executados |

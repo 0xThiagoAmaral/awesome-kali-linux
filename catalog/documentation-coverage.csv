@@ -21,7 +21,7 @@ apktool,True,not-verified,0,0,False,False,False,identify-licensed-official-docum
 apple-bleee,True,GPL-3.0,1,1,True,False,False,review-source-coverage-and-translation
 arjun,True,AGPL-3.0,1,1,True,False,False,review-source-coverage-and-translation
 armitage,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
-arp-scan,True,GPL-3.0,1,1,True,False,False,review-source-coverage-and-translation
+arp-scan,True,GPL-3.0,2,2,True,False,False,review-source-coverage-and-translation
 arping,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 arpwatch,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 arsenal-ng,True,MIT,1,1,True,False,False,review-source-coverage-and-translation

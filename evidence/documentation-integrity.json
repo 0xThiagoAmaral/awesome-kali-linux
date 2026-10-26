@@ -1,8 +1,8 @@
 {
   "passed": true,
   "tools": 24,
-  "documents": 45,
-  "code_blocks": 382,
+  "documents": 46,
+  "code_blocks": 386,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -10,32 +10,32 @@
       "detail": null
     },
     {
-      "check": "ffuf image hash: _img/ffuf_juggling_250.png",
+      "check": "ffuf retained asset hash: _img/ffuf_juggling_250.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "ffuf image hash: _img/ffuf_mascot_600.png",
+      "check": "ffuf retained asset hash: _img/ffuf_mascot_600.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "ffuf image hash: _img/ffuf_run_logo_600.png",
+      "check": "ffuf retained asset hash: _img/ffuf_run_logo_600.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "ffuf image hash: _img/ffuf_running_250.png",
+      "check": "ffuf retained asset hash: _img/ffuf_running_250.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "ffuf image hash: _img/ffuf_waving_250.png",
+      "check": "ffuf retained asset hash: _img/ffuf_waving_250.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "ffuf image hash: _img/offsec-logo.png",
+      "check": "ffuf retained asset hash: _img/offsec-logo.png",
       "pass": true,
       "detail": null
     },
@@ -46,6 +46,21 @@
     },
     {
       "check": "ffuf:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -93,6 +108,21 @@
       "detail": null
     },
     {
+      "check": "gobuster:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "gobuster:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "gobuster:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "gobuster:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 22
@@ -126,12 +156,12 @@
       "detail": null
     },
     {
-      "check": "subfinder image hash: static/subfinder-logo.png",
+      "check": "subfinder retained asset hash: static/subfinder-logo.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "subfinder image hash: static/subfinder-run.png",
+      "check": "subfinder retained asset hash: static/subfinder-run.png",
       "pass": true,
       "detail": null
     },
@@ -142,6 +172,21 @@
     },
     {
       "check": "subfinder:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -189,6 +234,21 @@
       "detail": null
     },
     {
+      "check": "assetfinder:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "assetfinder:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "assetfinder:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "assetfinder:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 2
@@ -222,12 +282,12 @@
       "detail": null
     },
     {
-      "check": "feroxbuster image hash: img/demo.gif",
+      "check": "feroxbuster retained asset hash: img/demo.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "feroxbuster image hash: img/logo/default-cropped.png",
+      "check": "feroxbuster retained asset hash: img/logo/default-cropped.png",
       "pass": true,
       "detail": null
     },
@@ -238,6 +298,21 @@
     },
     {
       "check": "feroxbuster:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -285,6 +360,21 @@
       "detail": null
     },
     {
+      "check": "katana:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "katana:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "katana:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "katana:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 95
@@ -318,12 +408,12 @@
       "detail": null
     },
     {
-      "check": "naabu image hash: static/naabu-logo.png",
+      "check": "naabu retained asset hash: static/naabu-logo.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "naabu image hash: static/naabu-run.png",
+      "check": "naabu retained asset hash: static/naabu-run.png",
       "pass": true,
       "detail": null
     },
@@ -334,6 +424,21 @@
     },
     {
       "check": "naabu:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -371,7 +476,7 @@
       "detail": null
     },
     {
-      "check": "above image hash: banner/banner.png",
+      "check": "above retained asset hash: banner/banner.png",
       "pass": true,
       "detail": null
     },
@@ -382,6 +487,21 @@
     },
     {
       "check": "above:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -429,6 +549,21 @@
       "detail": null
     },
     {
+      "check": "adaptixc2:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "adaptixc2:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "adaptixc2:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "adaptixc2:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 0
@@ -472,6 +607,21 @@
       "detail": null
     },
     {
+      "check": "airgeddon:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "airgeddon:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "airgeddon:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "airgeddon:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 0
@@ -505,77 +655,77 @@
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/Join-Discord.png",
+      "check": "nuclei retained asset hash: static/Join-Discord.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/check-nuclei-documentation.png",
+      "check": "nuclei retained asset hash: static/check-nuclei-documentation.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/learn-more-button.png",
+      "check": "nuclei retained asset hash: static/learn-more-button.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-cover-image.png",
+      "check": "nuclei retained asset hash: static/nuclei-cover-image.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-cover.png",
+      "check": "nuclei retained asset hash: static/nuclei-cover.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-flow.jpg",
+      "check": "nuclei retained asset hash: static/nuclei-flow.jpg",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-getting-started.png",
+      "check": "nuclei retained asset hash: static/nuclei-getting-started.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-logo.png",
+      "check": "nuclei retained asset hash: static/nuclei-logo.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-template-example.png",
+      "check": "nuclei retained asset hash: static/nuclei-template-example.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-templates-teamcity-example.png",
+      "check": "nuclei retained asset hash: static/nuclei-templates-teamcity-example.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-templates-teamcity.png",
+      "check": "nuclei retained asset hash: static/nuclei-templates-teamcity.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/nuclei-write-your-first-template.png",
+      "check": "nuclei retained asset hash: static/nuclei-write-your-first-template.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/projectdiscovery-browse-results.gif",
+      "check": "nuclei retained asset hash: static/projectdiscovery-browse-results.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/regression-with-nuclei.jpg",
+      "check": "nuclei retained asset hash: static/regression-with-nuclei.jpg",
       "pass": true,
       "detail": null
     },
     {
-      "check": "nuclei image hash: static/teamcity-example.png",
+      "check": "nuclei retained asset hash: static/teamcity-example.png",
       "pass": true,
       "detail": null
     },
@@ -586,6 +736,21 @@
     },
     {
       "check": "nuclei:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -624,6 +789,21 @@
     },
     {
       "check": "nuclei:README_PT-BR.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README_PT-BR.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README_PT-BR.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README_PT-BR.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -671,6 +851,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 6
@@ -705,6 +900,21 @@
     },
     {
       "check": "aflplusplus:docs/README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -747,6 +957,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/INSTALL.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/INSTALL.md exact fenced-code bodies",
       "pass": true,
       "detail": 14
@@ -781,6 +1006,21 @@
     },
     {
       "check": "aflplusplus:docs/FAQ.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -823,6 +1063,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/features.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/features.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/features.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/features.md exact fenced-code bodies",
       "pass": true,
       "detail": 0
@@ -857,6 +1112,21 @@
     },
     {
       "check": "aflplusplus:docs/FrameShift.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -899,6 +1169,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/IJON.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/IJON.md exact fenced-code bodies",
       "pass": true,
       "detail": 13
@@ -933,6 +1218,21 @@
     },
     {
       "check": "aflplusplus:docs/SAND.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -975,6 +1275,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/afl-fuzz_approach.md exact fenced-code bodies",
       "pass": true,
       "detail": 11
@@ -1009,6 +1324,21 @@
     },
     {
       "check": "aflplusplus:docs/best_practices.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1051,6 +1381,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/custom_mutators.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/custom_mutators.md exact fenced-code bodies",
       "pass": true,
       "detail": 7
@@ -1085,6 +1430,21 @@
     },
     {
       "check": "aflplusplus:docs/env_variables.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1127,6 +1487,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/fuzzing_binary-only_targets.md exact fenced-code bodies",
       "pass": true,
       "detail": 3
@@ -1161,6 +1536,21 @@
     },
     {
       "check": "aflplusplus:docs/fuzzing_in_depth.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1203,6 +1593,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/important_changes.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/important_changes.md exact fenced-code bodies",
       "pass": true,
       "detail": 0
@@ -1237,6 +1642,21 @@
     },
     {
       "check": "aflplusplus:docs/rpc_statsd.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1279,6 +1699,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/third_party_tools.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/third_party_tools.md exact fenced-code bodies",
       "pass": true,
       "detail": 0
@@ -1313,6 +1748,21 @@
     },
     {
       "check": "aflplusplus:docs/tutorials.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1355,6 +1805,21 @@
       "detail": null
     },
     {
+      "check": "aflplusplus:docs/value_profiling.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "aflplusplus:docs/value_profiling.md exact fenced-code bodies",
       "pass": true,
       "detail": 0
@@ -1389,6 +1854,21 @@
     },
     {
       "check": "aflplusplus:docs/Changelog.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1436,6 +1916,21 @@
       "detail": null
     },
     {
+      "check": "altdns:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "altdns:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "altdns:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "altdns:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 0
@@ -1469,32 +1964,32 @@
       "detail": null
     },
     {
-      "check": "apple-bleee image hash: img/dev_status.png",
+      "check": "apple-bleee retained asset hash: img/dev_status.png",
       "pass": true,
       "detail": null
     },
     {
-      "check": "apple-bleee image hash: img/status_gif.gif",
+      "check": "apple-bleee retained asset hash: img/status_gif.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "apple-bleee image hash: img/airdrop_gif.gif",
+      "check": "apple-bleee retained asset hash: img/airdrop_gif.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "apple-bleee image hash: img/share_wifi_pwd2_gif.gif",
+      "check": "apple-bleee retained asset hash: img/share_wifi_pwd2_gif.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "apple-bleee image hash: img/airpods_gif.gif",
+      "check": "apple-bleee retained asset hash: img/airpods_gif.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "apple-bleee image hash: img/logo.jpg",
+      "check": "apple-bleee retained asset hash: img/logo.jpg",
       "pass": true,
       "detail": null
     },
@@ -1505,6 +2000,21 @@
     },
     {
       "check": "apple-bleee:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "apple-bleee:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1552,6 +2062,21 @@
       "detail": null
     },
     {
+      "check": "arjun:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arjun:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arjun:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "arjun:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 1
@@ -1585,12 +2110,32 @@
       "detail": null
     },
     {
+      "check": "arp-scan retained asset hash: LICENSE.arp-fingerprint-manpage.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "arp-scan:README.md original hash",
       "pass": true,
       "detail": null
     },
     {
       "check": "arp-scan:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1623,27 +2168,135 @@
       "detail": null
     },
     {
+      "check": "arp-scan:arp-fingerprint.1 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 exact original file-specific notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 exact fenced-code bodies",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 23,
+        "translation": 23
+      }
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "arp-scan:arp-fingerprint.1 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "arsenal-ng retained source license hash",
       "pass": true,
       "detail": null
     },
     {
-      "check": "arsenal-ng image hash: assets/basic-search.gif",
+      "check": "arsenal-ng retained asset hash: assets/basic-search.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "arsenal-ng image hash: assets/help-screen.gif",
+      "check": "arsenal-ng retained asset hash: assets/help-screen.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "arsenal-ng image hash: assets/tools-view.gif",
+      "check": "arsenal-ng retained asset hash: assets/tools-view.gif",
       "pass": true,
       "detail": null
     },
     {
-      "check": "arsenal-ng image hash: assets/variables.gif",
+      "check": "arsenal-ng retained asset hash: assets/variables.gif",
       "pass": true,
       "detail": null
     },
@@ -1654,6 +2307,21 @@
     },
     {
       "check": "arsenal-ng:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arsenal-ng:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1691,7 +2359,7 @@
       "detail": null
     },
     {
-      "check": "atomic-operator image hash: images/atomic-operator-logo.svg",
+      "check": "atomic-operator retained asset hash: images/atomic-operator-logo.svg",
       "pass": true,
       "detail": null
     },
@@ -1702,6 +2370,21 @@
     },
     {
       "check": "atomic-operator:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "atomic-operator:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1749,6 +2432,21 @@
       "detail": null
     },
     {
+      "check": "autorecon:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "autorecon:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "autorecon:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "autorecon:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 16
@@ -1792,6 +2490,21 @@
       "detail": null
     },
     {
+      "check": "axel:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "axel:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 0
@@ -1830,6 +2543,11 @@
       "detail": null
     },
     {
+      "check": "axel:doc/axel.txt source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "axel:doc/axel.txt prepared-source hash",
       "pass": true,
       "detail": null
@@ -1846,6 +2564,16 @@
     },
     {
       "check": "axel:doc/axel.txt manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axel:doc/axel.txt document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -1923,6 +2651,21 @@
       "detail": null
     },
     {
+      "check": "azurehound:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "azurehound:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "azurehound:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "azurehound:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 6
@@ -1962,6 +2705,21 @@
     },
     {
       "check": "b374k:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "b374k:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "b374k:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "b374k:README.md document-specific license link",
       "pass": true,
       "detail": null
     },
@@ -2009,6 +2767,21 @@
       "detail": null
     },
     {
+      "check": "backdoor-factory:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "backdoor-factory:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "backdoor-factory:README.md document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "backdoor-factory:README.md exact fenced-code bodies",
       "pass": true,
       "detail": 1
@@ -2048,6 +2821,21 @@
     },
     {
       "check": "berate-ap:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "berate-ap:README.md source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "berate-ap:README.md document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "berate-ap:README.md document-specific license link",
       "pass": true,
       "detail": null
     },

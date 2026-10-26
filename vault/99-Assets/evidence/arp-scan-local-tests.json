@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "binary": "arp-fingerprint",
+  "installed_version": "arp-scan 1.10.0",
+  "version_scope": "Version of the arp-scan package binary; arp-fingerprint help does not report its own version",
+  "test_status": "help-only",
+  "commands": [
+    {
+      "argv": [
+        "arp-fingerprint",
+        "-h"
+      ],
+      "stdout": "Usage: arp-fingerprint [options] <target>\nFingerprint the target system using arp-scan.\n\n'options' is one or more of:\n        -h Display this usage message.\n        -v Give verbose progress messages.\n\t-o <option-string> Pass specified options to arp-scan\n\t-l Fingerprint all targets in the local net.\n\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "arp-scan",
+        "--version"
+      ],
+      "stdout": "arp-scan 1.10.0\n\nCopyright (C) 2005-2022 Roy Hills\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nlibpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)\nBuilt with libcap POSIX.1e capability support.\n",
+      "stderr": "",
+      "exit_status": 0
+    }
+  ],
+  "manual_options": [
+    "-h",
+    "-l",
+    "-m",
+    "-o",
+    "-v"
+  ],
+  "installed_help_options": [
+    "-h",
+    "-l",
+    "-o",
+    "-v"
+  ],
+  "manual_options_not_listed_by_installed_help": [
+    "-m"
+  ],
+  "installed_help_options_not_in_manual": [],
+  "source_manual_sha256": "2025a1f2ac8280a267f215816f9a9eac8ddb9698871f73d2fbd61ce40c6d5916",
+  "test_script": "scripts/test_arp_fingerprint_help.py",
+  "test_script_sha256": "265a9eb17a3b8ce2c022c38f080b235d05396f9561c4cc311a204cf51e578e8c",
+  "verification_scope_pt": "Conferidas somente a ajuda do arp-fingerprint e a versão do pacote arp-scan; nenhum alvo foi informado e a opção -l não foi executada.",
+  "network_target_passed": false,
+  "local_discovery_requested": false,
+  "limits": [
+    "Help/version only; does not validate live fingerprint results, interfaces, privileges or every option."
+  ]
+}

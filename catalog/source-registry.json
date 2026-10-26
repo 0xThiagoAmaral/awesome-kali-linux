@@ -881,10 +881,29 @@
         "sha256": "a3a2c3d25999b32e06cfa8e6eab786fc3d84038b56d5e868310dbaa1ec094a58",
         "source_url": "https://github.com/royhills/arp-scan/blob/a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5/README.md",
         "language": "en"
+      },
+      {
+        "path": "arp-fingerprint.1",
+        "bytes": 4267,
+        "sha256": "2025a1f2ac8280a267f215816f9a9eac8ddb9698871f73d2fbd61ce40c6d5916",
+        "source_url": "https://github.com/royhills/arp-scan/blob/a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5/arp-fingerprint.1",
+        "language": "en",
+        "source_format": "man-roff-v1",
+        "license_spdx": "LicenseRef-ARP-Fingerprint-Manpage",
+        "license_asset": "LICENSE.arp-fingerprint-manpage.txt"
       }
     ],
-    "assets": [],
-    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "assets": [
+      {
+        "path": "LICENSE.arp-fingerprint-manpage.txt",
+        "bytes": 222,
+        "sha256": "cb2c6c6b314821eaaea8572a82117988985e2ef2656bc67da154e6a7d14af609",
+        "source_url": "https://github.com/royhills/arp-scan/blob/a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5/arp-fingerprint.1",
+        "language": "en",
+        "role": "file-specific-copyright-and-copying-notice"
+      }
+    ],
+    "source_scope": "Pinned README and full arp-fingerprint.1 manual; manpage has its own preserved copying notice, not the repository GPL notice. Wiki and main arp-scan reference coverage remain pending.",
     "kali_page_mirrored": false,
     "translation_status": "pending",
     "retained_notices": [

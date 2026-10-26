@@ -105,7 +105,9 @@ for tool,record in sorted(imports.items()):
     if tool in local_sheets:
         sheet_links.append('[Cheatsheet local](../'+pathlib.Path(local_sheets[tool]).relative_to('vault').as_posix()+')')
     sheet=' · '.join(sheet_links) or 'Pendente'
-    lines.append('| '+tool+' | '+' · '.join(links)+' | '+sheet+' | '+record['license_spdx']+' | Revisão pendente |')
+    source_docs={d['path']:d for d in sources[tool]['documents']}
+    licenses=sorted({source_docs[d['source_path']].get('license_spdx',record['license_spdx']) for d in record['documents']})
+    lines.append('| '+tool+' | '+' · '.join(links)+' | '+sheet+' | '+'; '.join(licenses)+' | Revisão pendente |')
 put(pathlib.Path('vault/01-Maps/documentacao-offline.md'),'\n'.join(lines))
 home=ROOT/'vault/00-Home.md'
 text=home.read_text(encoding='utf-8')
@@ -176,6 +178,7 @@ for value in ['sources/upstream/** -text -diff','vault/02-Tools/*/*documentacao*
               'vault/02-Tools/*/*-cheatsheet-upstream.md -text whitespace=-blank-at-eol',
               'vault/99-Assets/upstream/** -text whitespace=-blank-at-eof',
               'translations/** -text whitespace=-blank-at-eol',
+              'LICENSES/LicenseRef-*.txt -text',
               'LICENSE whitespace=-blank-at-eof','LICENSES/*.txt whitespace=-blank-at-eof']:
     if value not in t:
         t+='\n'+value+'\n'
@@ -195,6 +198,8 @@ if 'verify_release_manifest.py' not in t:
                 '      - name: Verify byte-exact release files\n        run: python3 scripts/verify_release_manifest.py\n      - name: Validate local notes and links')
 if 'test_plain_manual.py' not in t:
     t+='      - name: Test plain-text manual conversion\n        run: python3 scripts/test_plain_manual.py\n'
+if 'test_roff_manual.py' not in t:
+    t+='      - name: Test non-executing roff conversion\n        run: python3 scripts/test_roff_manual.py\n'
 workflow.write_bytes(t.encode('utf-8'))
 put(pathlib.Path('requirements-translation.txt'),'ctranslate2==4.8.4\nsentencepiece==0.2.1')
 print(json.dumps({'documents':len(documents),'tools':len(imports),'machine':machine,'assistant_translated':assistant,'official_portuguese':native,

@@ -9,5 +9,16 @@
       "human_review": "pending",
       "license_spdx": "GPL-2.0"
     }
+  },
+  "arp-scan": {
+    "arp-fingerprint.1": {
+      "source_sha256": "2025a1f2ac8280a267f215816f9a9eac8ddb9698871f73d2fbd61ce40c6d5916",
+      "translation_file": "translations/pt-BR/arp-scan/arp-fingerprint-1.md",
+      "translation_sha256": "f1eca6eded92d5e747d6c1f828182fe357bffe5a6424378059ebf2496da2640b",
+      "translation_method": "assistant-translated",
+      "review_scope": "AI-assisted full translation of all seven source sections and five options; exact example output and file-specific original license preserved; independent human review pending",
+      "human_review": "pending",
+      "license_spdx": "LicenseRef-ARP-Fingerprint-Manpage"
+    }
   }
 }

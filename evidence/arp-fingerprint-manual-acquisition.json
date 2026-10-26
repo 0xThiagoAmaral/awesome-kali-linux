@@ -1,0 +1,26 @@
+{
+  "commit": "a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5",
+  "source_sha256": "2025a1f2ac8280a267f215816f9a9eac8ddb9698871f73d2fbd61ce40c6d5916",
+  "license_spdx": "LicenseRef-ARP-Fingerprint-Manpage",
+  "license_notice_sha256": "cb2c6c6b314821eaaea8572a82117988985e2ef2656bc67da154e6a7d14af609",
+  "license_notice_asset": "LICENSE.arp-fingerprint-manpage.txt",
+  "sections": [
+    "NAME",
+    "SYNOPSIS",
+    "DESCRIPTION",
+    "OPTIONS",
+    "EXAMPLES",
+    "NOTES",
+    "SEE ALSO"
+  ],
+  "options": [
+    "-h",
+    "-v",
+    "-o <option-string>",
+    "-l",
+    "-m"
+  ],
+  "literal_blocks": 4,
+  "roff_executed": false,
+  "all_source_text_accounted": true
+}

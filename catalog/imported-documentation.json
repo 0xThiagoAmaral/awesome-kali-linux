@@ -6146,7 +6146,8 @@
         "note": "vault/02-Tools/arp-scan/arp-scan-documentacao.md",
         "original": "sources/upstream/arp-scan/README.md.source",
         "source_sha256": "a3a2c3d25999b32e06cfa8e6eab786fc3d84038b56d5e868310dbaa1ec094a58",
-        "translation_sha256": "8c59507dbe41f906318dba3de6f4e928a5de599a6071912f6e42e324c700a278",
+        "license_spdx": "GPL-3.0",
+        "translation_sha256": "724e1b1515286db1183436f38e30fa3915dc76fdc3d1a4a78399149aca3bc1be",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
@@ -6194,9 +6195,137 @@
           }
         ],
         "human_review": "pending"
+      },
+      {
+        "source_path": "arp-fingerprint.1",
+        "note": "vault/02-Tools/arp-scan/arp-scan-arp-fingerprint-1.md",
+        "original": "sources/upstream/arp-scan/arp-fingerprint.1.source",
+        "source_sha256": "2025a1f2ac8280a267f215816f9a9eac8ddb9698871f73d2fbd61ce40c6d5916",
+        "license_spdx": "LicenseRef-ARP-Fingerprint-Manpage",
+        "translation_sha256": "ad7c7fe934c7613dd841b09dd4e920f1d670a4c0ea46887e1bcc0e56f1e5948b",
+        "source_fenced_blocks": 4,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "notes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "see-also"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "original-license-notice"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Roff requests parsed without executing a formatter or shell",
+              "Formatting requests mapped to Markdown, with paragraphs joined",
+              "Synopsis rendered from original B/RI/I tokens",
+              "Exact .nf examples, output and original license notice fenced unchanged"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "man-roff-v1",
+        "prepared_source": "sources/upstream/arp-scan/arp-fingerprint.1.presentation.md.source",
+        "prepared_source_sha256": "fcea108cdb71d24ead997b98dd6384b1a177526998fcfd9fbd521b0e5d1265d8",
+        "manual_structure": {
+          "format": "man-roff-v1",
+          "source_lines": 118,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "EXAMPLES",
+            "NOTES",
+            "SEE ALSO"
+          ],
+          "option_syntax": [
+            "-h",
+            "-v",
+            "-o <option-string>",
+            "-l",
+            "-m"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 12,
+              "body": "arp-fingerprint [options] target\n",
+              "origin": "rendered roff synopsis"
+            },
+            {
+              "first_line": 100,
+              "body": "$ arp-fingerprint 192.168.0.1\n192.168.0.1   01000100000     Linux 2.2, 2.4, 2.6\n",
+              "origin": "exact .nf body"
+            },
+            {
+              "first_line": 105,
+              "body": "$ arp-fingerprint -o \"-N -I eth1\" 192.168.0.202\n192.168.0.202 11110100000     FreeBSD 5.3, Win98, WinME, NT4, 2000, XP, 2003\n",
+              "origin": "exact .nf body"
+            },
+            {
+              "first_line": 1,
+              "body": ".\\\" Copyright (C) Roy Hills\n.\\\"\n.\\\" Copying and distribution of this file, with or without modification,\n.\\\" are permitted in any medium without royalty provided the copyright\n.\\\" notice and this notice are preserved.\n.\\\"\n",
+              "origin": "exact original copyright and copying notice"
+            }
+          ],
+          "title": [
+            "ARP-FINGERPRINT",
+            "1",
+            "January 07, 2023"
+          ],
+          "license_notice": ".\\\" Copyright (C) Roy Hills\n.\\\"\n.\\\" Copying and distribution of this file, with or without modification,\n.\\\" are permitted in any medium without royalty provided the copyright\n.\\\" notice and this notice are preserved.\n.\\\"\n",
+          "presentation_changes": [
+            "Roff requests parsed without executing a formatter or shell",
+            "Formatting requests mapped to Markdown, with paragraphs joined",
+            "Synopsis rendered from original B/RI/I tokens",
+            "Exact .nf examples, output and original license notice fenced unchanged"
+          ]
+        },
+        "editorial_translation": {
+          "source_sha256": "2025a1f2ac8280a267f215816f9a9eac8ddb9698871f73d2fbd61ce40c6d5916",
+          "translation_file": "translations/pt-BR/arp-scan/arp-fingerprint-1.md",
+          "translation_sha256": "f1eca6eded92d5e747d6c1f828182fe357bffe5a6424378059ebf2496da2640b",
+          "translation_method": "assistant-translated",
+          "review_scope": "AI-assisted full translation of all seven source sections and five options; exact example output and file-specific original license preserved; independent human review pending",
+          "human_review": "pending",
+          "license_spdx": "LicenseRef-ARP-Fingerprint-Manpage"
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/arp-scan-local-tests.json",
+          "sha256": "e95fd627b26271d40747ebdba4f04ddc944eb5a11e6912d172822ef0a03ff446",
+          "test_script": "scripts/test_arp_fingerprint_help.py"
+        }
       }
     ],
-    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "source_scope": "Pinned README and full arp-fingerprint.1 manual; manpage has its own preserved copying notice, not the repository GPL notice. Wiki and main arp-scan reference coverage remain pending.",
     "kali_official_page_complete": false,
     "translation_complete_for_acquired_documents": true,
     "human_review_complete": false,

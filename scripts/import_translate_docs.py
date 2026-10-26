@@ -15,6 +15,7 @@ import urllib.parse
 from translation_engine import LocalTranslator
 from enrich_local_assets import resolve_reference
 from plain_manual import prepare_manual
+from roff_manual import prepare_roff_manual
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 BT=chr(96)
@@ -330,8 +331,9 @@ def main():
             source=data.decode('utf-8')
             format_info={}
             manual_changes=[]
-            if doc.get('source_format')=='sectioned-plain-text-v1':
-                source,manual_evidence=prepare_manual(source,tool)
+            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1'}:
+                prepare=prepare_roff_manual if doc['source_format']=='man-roff-v1' else prepare_manual
+                source,manual_evidence=prepare(source,tool)
                 prepared=originals/(doc['path']+'.presentation.md.source')
                 prepared.write_bytes(source.encode('utf-8'))
                 format_info={'source_format':doc['source_format'],
@@ -376,24 +378,34 @@ def main():
                    'source_url':doc['source_url'],'source_commit':record['commit'],
                    'source_sha256':doc['sha256'],'license_spdx':doc.get('license_spdx',record['license_spdx']),
                    'human_review':'pending','source_scope':record['source_scope']}
+            if doc.get('source_format')=='man-roff-v1':
+                props['title']=manual_evidence['title'][0].lower()+' — manual de referência'
+                props['binary']=manual_evidence['title'][0].lower()
+                props['source_manual_date']=manual_evidence['title'][2]
+                props['manual_section']=manual_evidence['title'][1]
             compatibility_notice=''
             runtime_path=ROOT/'evidence'/(tool+'-local-tests.json')
-            if doc.get('source_format')=='sectioned-plain-text-v1' and runtime_path.exists():
+            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1'} and runtime_path.exists():
                 runtime=json.loads(runtime_path.read_text(encoding='utf-8'))
                 if runtime.get('source_manual_sha256')==doc['sha256'] and runtime.get('passed'):
                     evidence_rel='../../99-Assets/evidence/'+runtime_path.name
                     missing=', '.join(BT+x+BT for x in runtime['manual_options_not_listed_by_installed_help'])
                     extra=', '.join(BT+x+BT for x in runtime['installed_help_options_not_in_manual'])
-                    compatibility_notice='> **Compatibilidade observada:** '+runtime['installed_version']+'. A ajuda dessa instalação não lista '+missing+'. Ela lista '+extra+', ausente deste manual. A fonte fixada foi mantida sem trocar opções silenciosamente. [Evidência e limites do teste]('+evidence_rel+').\n\n'
-                    props['test_status']='partial-local'
+                    compatibility_notice='> **Compatibilidade observada:** '+runtime['installed_version']+'. '
+                    compatibility_notice+=('A ajuda dessa instalação não lista '+missing+'. ') if missing else 'As opções do manual foram encontradas na ajuda instalada. '
+                    if extra:
+                        compatibility_notice+='Ela lista '+extra+', ausente deste manual. '
+                    compatibility_notice+='A fonte fixada foi mantida sem trocar opções silenciosamente. '+runtime.get('verification_scope_pt','')+' [Evidência e limites do teste]('+evidence_rel+').\n\n'
+                    props['test_status']=runtime.get('test_status','partial-local')
                     props['tested_version']=runtime['installed_version']
-                    format_info['runtime_compatibility']={'evidence':'evidence/'+runtime_path.name,'sha256':sha(runtime_path.read_bytes())}
+                    format_info['runtime_compatibility']={'evidence':'evidence/'+runtime_path.name,'sha256':sha(runtime_path.read_bytes()),
+                                                          'test_script':runtime.get('test_script','scripts/test_'+tool+'.py')}
             fm='---\n'+'\n'.join(k+': '+json.dumps(v,ensure_ascii=False) for k,v in props.items())+'\n---\n\n'
             notice=('> Texto em português fornecido pelo próprio projeto upstream e preservado nesta importação. Links e imagens receberam adaptações para navegação local; isso não comprova revisão técnica por este repositório.\n\n' if native_portuguese else '> Tradução automática local para português, ainda sem revisão humana integral. Estrutura e blocos de código preservados; referências externas não significam conteúdo espelhado.\n\n')
             if editorial:
                 notice='> Tradução para português produzida por assistente de IA e conferida seção por seção contra a fonte. Revisão humana independente: pendente. Opções e exemplos originais foram preservados; nenhum exemplo foi executado automaticamente.\n\n'
             notice+=compatibility_notice
-            license_link=pathlib.Path(os.path.relpath(assets/'LICENSE.txt',note.parent)).as_posix()
+            license_link=pathlib.Path(os.path.relpath(assets/doc.get('license_asset','LICENSE.txt'),note.parent)).as_posix()
             attribution='\n\n---\n\n## Procedência desta tradução\n\nFonte: ['+record['repository']+']('+doc['source_url']+'). Licença: ['+doc.get('license_spdx',record['license_spdx'])+']('+license_link+'). Commit: '+record['commit']+'.\n\nO original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.\n'
             final=fm+notice+translated+attribution
             temp_note=note.with_suffix('.md.tmp')
@@ -401,6 +413,7 @@ def main():
             temp_note.replace(note)
             documents.append({'source_path':doc['path'],'note':note.relative_to(ROOT).as_posix(),
                               'original':raw.relative_to(ROOT).as_posix(),'source_sha256':sha(data),
+                              'license_spdx':doc.get('license_spdx',record['license_spdx']),
                               'translation_sha256':sha(final.encode('utf-8')),
                               'source_fenced_blocks':len(code_bodies(source)),
                               'code_blocks_equal':code_bodies(translated)==code_bodies(source),

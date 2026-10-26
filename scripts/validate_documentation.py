@@ -4,9 +4,11 @@
 import hashlib
 import json
 import pathlib
+import os
 import re
 from import_translate_docs import code_bodies,outside_code
 from plain_manual import prepare_manual
+from roff_manual import prepare_roff_manual
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 manifest_path=ROOT/'catalog/imported-documentation.json'
@@ -24,7 +26,7 @@ for tool,record in manifest.items():
     add(tool+' retained source license hash',license_file.exists() and digest(license_file)==source_record['license_sha256'])
     for asset in source_record['assets']:
         path=asset_root/asset['path']
-        add(tool+' image hash: '+asset['path'],path.exists() and digest(path)==asset['sha256'])
+        add(tool+' retained asset hash: '+asset['path'],path.exists() and digest(path)==asset['sha256'])
     for doc in record['documents']:
         note=ROOT/doc['note']
         original=ROOT/doc['original']
@@ -34,14 +36,24 @@ for tool,record in manifest.items():
         if not note.exists() or not original.exists():
             continue
         source=original.read_bytes().decode('utf-8')
-        if doc.get('source_format')=='sectioned-plain-text-v1':
-            source,manual=prepare_manual(source,tool)
+        source_row=next(x for x in source_record['documents'] if x['path']==doc['source_path'])
+        add(label+' source-registry binding',source_row['sha256']==doc['source_sha256'])
+        if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1'}:
+            prepare=prepare_roff_manual if doc['source_format']=='man-roff-v1' else prepare_manual
+            source,manual=prepare(original.read_bytes().decode('utf-8'),tool)
             prepared=ROOT/doc['prepared_source']
             add(label+' prepared-source hash',prepared.exists() and digest(prepared)==doc['prepared_source_sha256'])
             add(label+' deterministic format conversion',prepared.exists() and prepared.read_bytes()==source.encode('utf-8'))
             add(label+' all original manual text accounted',manual['all_source_text_accounted'])
             add(label+' manual-structure manifest',manual==doc['manual_structure'])
         translated=note.read_bytes().decode('utf-8')
+        expected_license=source_row.get('license_spdx',source_record['license_spdx'])
+        add(label+' document-specific license field','license_spdx: '+json.dumps(expected_license) in translated)
+        license_path=asset_root/source_row.get('license_asset','LICENSE.txt')
+        license_link=pathlib.Path(os.path.relpath(license_path,note.parent)).as_posix()
+        add(label+' document-specific license link',license_path.exists() and ']('+license_link+')' in translated)
+        if doc.get('source_format')=='man-roff-v1':
+            add(label+' exact original file-specific notice',license_path.read_bytes()==manual['license_notice'].encode('utf-8'))
         if doc.get('editorial_translation'):
             editorial=doc['editorial_translation']
             p=ROOT/editorial['translation_file']
@@ -55,8 +67,8 @@ for tool,record in manifest.items():
             if path.exists():
                 runtime=json.loads(path.read_text(encoding='utf-8'))
                 add(label+' runtime evidence source binding',runtime['source_manual_sha256']==doc['source_sha256'])
-                script=ROOT/'scripts'/('test_'+tool+'.py')
-                add(label+' runtime evidence script hash',script.exists() and digest(script)==runtime['test_script_sha256'])
+                script=(ROOT/compatibility.get('test_script','scripts/test_'+tool+'.py')).resolve()
+                add(label+' runtime evidence script hash',script.is_relative_to(ROOT) and script.exists() and digest(script)==runtime['test_script_sha256'])
         add(label+' exact fenced-code bodies',code_bodies(source)==code_bodies(translated),len(code_bodies(source)))
         source_inline=[]
         translated_inline=[]

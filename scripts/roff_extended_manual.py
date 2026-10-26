@@ -37,6 +37,9 @@ def plain_macro(unit):
 def style_macro(unit):
     if unit['kind'] in {'B','I'}:
         value=' '.join(unit['args'])
+        punctuation=re.fullmatch(r'(.+\w)([.,;:])',value)
+        if punctuation and not value.startswith(('https://','http://')):
+            return BT+punctuation.group(1)+BT+punctuation.group(2)
         return '['+value+']('+value+')' if value.startswith(('https://','http://')) else BT+value+BT
     return ''.join(BT+v+BT if i%2==0 and re.search(r'\w',v) else v for i,v in enumerate(unit['args']))
 
@@ -70,6 +73,12 @@ def table_markdown(unit,number):
         body='\t'.join(rows[0])+'\n'
         result.append(BT*3+'text\n'+body+BT*3+'\n\n')
         literal.append({'body':body,'origin':'original output pattern from tbl','first_line':unit['first_line']})
+    elif widths=={3} and all(row[0] in {'MA-L','MA-M','MA-S','IAB'} for row in rows):
+        mode='ieee-registry-definitions'
+        result.append('| Registry | Prefix size | Description |\n|---|---|---|\n')
+        for registry,bits,description in rows:
+            result.append('| '+code(registry)+' | '+code(bits)+' | '+decode(description)+' |\n')
+        result.append('\n')
     elif 4 in widths and widths.issubset({1,4}):
         mode='packet-fields'
         if len(rows[0])==1:

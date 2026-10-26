@@ -16,6 +16,17 @@ class ExtendedRoffTests(unittest.TestCase):
     def test_whitespace_only_segments_are_not_duplicated(self):
         self.assertEqual(decode(' '),' ')
 
+    def test_three_column_registry_table_preserves_each_registry(self):
+        body='L L L .\nMA-L\t24-bit\tOriginal registry\nIAB\t36-bit\tClosed registry\n'
+        md,e,_=table_markdown({'body':body,'first_line':1},1)
+        self.assertIn('MA-L',md); self.assertIn('24-bit',md); self.assertIn('Closed registry',md)
+        self.assertEqual(e['rendering'],'ieee-registry-definitions')
+        self.assertEqual(e['raw_body'],body)
+
+    def test_prose_punctuation_is_not_part_of_a_filename_literal(self):
+        from roff_extended_manual import style_macro
+        self.assertEqual(style_macro({'kind':'I','args':['ieee-oui.txt.']}),chr(96)+'ieee-oui.txt'+chr(96)+'.')
+
     def test_ip_argument_type_and_subsection_are_retained(self):
         source=BASE+'.SH OPTIONS\n.IP '+r'\fB<s>\fP'+'\nCharacter string.\n.SS "General Options"\n'
         md,e=prepare_extended_roff(source,'tool')

@@ -1,8 +1,8 @@
 {
   "passed": true,
   "tools": 24,
-  "documents": 47,
-  "code_blocks": 394,
+  "documents": 48,
+  "code_blocks": 397,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -2120,6 +2120,11 @@
       "detail": null
     },
     {
+      "check": "arp-scan retained asset hash: LICENSE.get-oui-manpage.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "arp-scan:README.md original hash",
       "pass": true,
       "detail": null
@@ -2390,6 +2395,114 @@
     },
     {
       "check": "arp-scan:arp-scan.1.dist review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist exact original file-specific notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist exact fenced-code bodies",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 33,
+        "translation": 33
+      }
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "arp-scan:get-oui.1.dist review status honest",
       "pass": true,
       "detail": null
     },

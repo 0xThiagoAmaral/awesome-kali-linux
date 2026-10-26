@@ -902,6 +902,17 @@
         "license_spdx": "LicenseRef-ARP-Scan-Manpage",
         "license_asset": "LICENSE.arp-scan-manpage.txt",
         "runtime_evidence_file": "arp-scan-main-tests.json"
+      },
+      {
+        "path": "get-oui.1.dist",
+        "bytes": 3227,
+        "sha256": "88cd4df36ba67aadfe42d7b2774aeada2b5984c763372f5aa71987bd02c776a7",
+        "source_url": "https://github.com/royhills/arp-scan/blob/a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5/get-oui.1.dist",
+        "language": "en",
+        "source_format": "man-roff-extended-v1",
+        "license_spdx": "LicenseRef-Get-OUI-Manpage",
+        "license_asset": "LICENSE.get-oui-manpage.txt",
+        "runtime_evidence_file": "get-oui-help-tests.json"
       }
     ],
     "assets": [
@@ -920,9 +931,17 @@
         "source_url": "https://github.com/royhills/arp-scan/blob/a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5/arp-scan.1.dist",
         "language": "en",
         "role": "file-specific-copyright-and-copying-notice"
+      },
+      {
+        "path": "LICENSE.get-oui-manpage.txt",
+        "bytes": 222,
+        "sha256": "cb2c6c6b314821eaaea8572a82117988985e2ef2656bc67da154e6a7d14af609",
+        "source_url": "https://github.com/royhills/arp-scan/blob/a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5/get-oui.1.dist",
+        "language": "en",
+        "role": "file-specific-copyright-and-copying-notice"
       }
     ],
-    "source_scope": "Pinned README plus complete arp-fingerprint.1 and main arp-scan.1.dist manuals, each with its own preserved copying notice. Wiki, additional utilities and remaining sources still require coverage review.",
+    "source_scope": "Pinned README plus full arp-scan, arp-fingerprint and get-oui manpages, with individual copying notices. Wiki and other sources remain a separate coverage review; IEEE data files are not mirrored by this acquisition.",
     "kali_page_mirrored": false,
     "translation_status": "pending",
     "retained_notices": [

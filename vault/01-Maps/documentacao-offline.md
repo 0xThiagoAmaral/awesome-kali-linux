@@ -8,8 +8,8 @@ tags: ["documentation", "offline"]
 
 # Documentação offline — acervo
 
-**24 ferramentas com notas importadas; 47 documentos disponíveis.**
-43 traduções automáticas, 3 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
+**24 ferramentas com notas importadas; 48 documentos disponíveis.**
+43 traduções automáticas, 4 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
 
 Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.
 
@@ -22,7 +22,7 @@ Estas páginas preservam a documentação adquirida, não substituem manuais nã
 | altdns | [README.md](../02-Tools/altdns/altdns-documentacao.md) | Pendente | Apache-2.0 | Revisão pendente |
 | apple-bleee | [README.md](../02-Tools/apple-bleee/apple-bleee-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
 | arjun | [README.md](../02-Tools/arjun/arjun-documentacao.md) | Pendente | AGPL-3.0 | Revisão pendente |
-| arp-scan | [README.md](../02-Tools/arp-scan/arp-scan-documentacao.md) · [arp-fingerprint.1](../02-Tools/arp-scan/arp-scan-arp-fingerprint-1.md) · [arp-scan.1.dist](../02-Tools/arp-scan/arp-scan-arp-scan-1-dist.md) | [arp-fingerprint — cheatsheet](../02-Tools/arp-scan/arp-fingerprint-cheatsheet.md) · [arp-scan — cheatsheet](../02-Tools/arp-scan/arp-scan-cheatsheet.md) | GPL-3.0; LicenseRef-ARP-Fingerprint-Manpage; LicenseRef-ARP-Scan-Manpage | Revisão pendente |
+| arp-scan | [README.md](../02-Tools/arp-scan/arp-scan-documentacao.md) · [arp-fingerprint.1](../02-Tools/arp-scan/arp-scan-arp-fingerprint-1.md) · [arp-scan.1.dist](../02-Tools/arp-scan/arp-scan-arp-scan-1-dist.md) · [get-oui.1.dist](../02-Tools/arp-scan/arp-scan-get-oui-1-dist.md) | [arp-fingerprint — cheatsheet](../02-Tools/arp-scan/arp-fingerprint-cheatsheet.md) · [arp-scan — cheatsheet](../02-Tools/arp-scan/arp-scan-cheatsheet.md) · [get-oui — cheatsheet](../02-Tools/arp-scan/get-oui-cheatsheet.md) | GPL-3.0; LicenseRef-ARP-Fingerprint-Manpage; LicenseRef-ARP-Scan-Manpage; LicenseRef-Get-OUI-Manpage | Revisão pendente |
 | arsenal-ng | [README.md](../02-Tools/arsenal-ng/arsenal-ng-documentacao.md) | Pendente | MIT | Revisão pendente |
 | assetfinder | [README.md](../02-Tools/assetfinder/assetfinder-documentacao.md) | [Exemplos upstream](../02-Tools/assetfinder/assetfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | atomic-operator | [README.md](../02-Tools/atomic-operator/atomic-operator-documentacao.md) | Pendente | MIT | Revisão pendente |

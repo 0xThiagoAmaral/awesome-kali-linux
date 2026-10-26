@@ -6147,7 +6147,7 @@
         "original": "sources/upstream/arp-scan/README.md.source",
         "source_sha256": "a3a2c3d25999b32e06cfa8e6eab786fc3d84038b56d5e868310dbaa1ec094a58",
         "license_spdx": "GPL-3.0",
-        "translation_sha256": "c67b13c07801ab2a53e043dfb5d7014122685212055ae04d4c4476e688d08e99",
+        "translation_sha256": "047b1961c21eb80fa4683e6ded572ba271ae3a1a90b655bb8021c0612e29c417",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
@@ -6202,7 +6202,7 @@
         "original": "sources/upstream/arp-scan/arp-fingerprint.1.source",
         "source_sha256": "2025a1f2ac8280a267f215816f9a9eac8ddb9698871f73d2fbd61ce40c6d5916",
         "license_spdx": "LicenseRef-ARP-Fingerprint-Manpage",
-        "translation_sha256": "b289ac7fb3dfd6cbb8fa08fa9b07a58868d6f424bb2ce9c0c00a0d40933cee1a",
+        "translation_sha256": "e6dfb0a7fa6f7e3f5144642ef2ddff73ac4d5afec6c030fb4952e01fa84b5611",
         "source_fenced_blocks": 4,
         "code_blocks_equal": true,
         "translation_method": "assistant-translated",
@@ -6330,7 +6330,7 @@
         "original": "sources/upstream/arp-scan/arp-scan.1.dist.source",
         "source_sha256": "ee5259c0ab80d97d54229f119d7532916bafece5f06cabbd3638cbede14ee6bd",
         "license_spdx": "LicenseRef-ARP-Scan-Manpage",
-        "translation_sha256": "88b843117ca9b65d0e0b114f53e9b2c7f2d5582ae1f52f0b625b2eb237730dc5",
+        "translation_sha256": "c75cdc984955ab2efb59dc126967f0bb6967b48b787ee0ff03ef44e2554d1767",
         "source_fenced_blocks": 8,
         "code_blocks_equal": true,
         "translation_method": "assistant-translated",
@@ -6845,9 +6845,173 @@
           "sha256": "ff2d865d2da6ff4ba6bda49e513df12296d11e3dac29bd620c8f49681a64e7eb",
           "test_script": "scripts/test_arp_scan_help.py"
         }
+      },
+      {
+        "source_path": "get-oui.1.dist",
+        "note": "vault/02-Tools/arp-scan/arp-scan-get-oui-1-dist.md",
+        "original": "sources/upstream/arp-scan/get-oui.1.dist.source",
+        "source_sha256": "88cd4df36ba67aadfe42d7b2774aeada2b5984c763372f5aa71987bd02c776a7",
+        "license_spdx": "LicenseRef-Get-OUI-Manpage",
+        "translation_sha256": "b9bf257501225b637634cde8e07b727c0b80032b4a4dea45c966f4d2b49bc3be",
+        "source_fenced_blocks": 3,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "notes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "see-also"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "original-license-notice"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Non-executing parsing of man/tbl/eqn requests",
+              "Tables rendered with all data cells retained; source tbl structures recorded",
+              "Ambiguous tbl command examples kept in exact original source notation",
+              "Original eqn formula retained with equivalent multiplication notation",
+              "Literal command transcripts and original copying notice preserved"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "man-roff-extended-v1",
+        "prepared_source": "sources/upstream/arp-scan/get-oui.1.dist.presentation.md.source",
+        "prepared_source_sha256": "d9018f6b229d81766dc4e216b1ab97cb3fd87766983550870fd4ee73c3c31a0c",
+        "manual_structure": {
+          "format": "man-roff-extended-v1",
+          "source_lines": 114,
+          "all_source_text_accounted": true,
+          "title": [
+            "GET-OUI",
+            "1",
+            "October 28, 2022"
+          ],
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "FILES",
+            "EXAMPLES",
+            "NOTES",
+            "SEE ALSO"
+          ],
+          "subsections": [],
+          "option_syntax": [
+            "-h",
+            "-f <fn>",
+            "-v"
+          ],
+          "argument_types": [],
+          "literal_blocks": [
+            {
+              "body": "get-oui [options]\n",
+              "first_line": 12,
+              "origin": "rendered roff synopsis"
+            },
+            {
+              "body": "$ ./get-oui -v\nRenaming ieee-oui.txt to ieee-oui.txt.bak\nOpening ieee-oui.txt for output\nProcessing IEEE IAB registry data from https://standards-oui.ieee.org/iab/iab.csv\n        Downloaded 381454 bytes\n        4575 IAB entries written to ieee-oui.txt\nProcessing IEEE MAM registry data from https://standards-oui.ieee.org/oui28/mam.csv\n        Downloaded 492756 bytes\n        4477 MAM entries written to ieee-oui.txt\nProcessing IEEE OUI registry data from https://standards-oui.ieee.org/oui/oui.csv\n        Downloaded 3051812 bytes\n        32845 OUI entries written to ieee-oui.txt\nProcessing IEEE OUI36 registry data from https://standards-oui.ieee.org/oui36/oui36.csv\n        Downloaded 466151 bytes\n        5131 OUI36 entries written to ieee-oui.txt\n\nTotal of 47028 MAC/Vendor mappings written to ieee-oui.txt\n",
+              "first_line": 70,
+              "origin": "exact literal-block body"
+            },
+            {
+              "body": ".\\\" Copyright (C) Roy Hills\n.\\\"\n.\\\" Copying and distribution of this file, with or without modification,\n.\\\" are permitted in any medium without royalty provided the copyright\n.\\\" notice and this notice are preserved.\n.\\\"\n",
+              "first_line": 2,
+              "origin": "exact original copying notice"
+            }
+          ],
+          "tables": [
+            {
+              "number": 1,
+              "first_line": 20,
+              "raw_body": "L L L .\nMA-L\t24-bit\tThe original OUI registry\nMA-M\t28-bit\tMedium address block registry\nMA-S\t36-bit\tSmall address block registry (OUI-36)\nIAB\t36-bit\tThe IAB registry (closed for new applications)\n",
+              "layout": [
+                "L L L ."
+              ],
+              "rows": [
+                [
+                  "MA-L",
+                  "24-bit",
+                  "The original OUI registry"
+                ],
+                [
+                  "MA-M",
+                  "28-bit",
+                  "Medium address block registry"
+                ],
+                [
+                  "MA-S",
+                  "36-bit",
+                  "Small address block registry (OUI-36)"
+                ],
+                [
+                  "IAB",
+                  "36-bit",
+                  "The IAB registry (closed for new applications)"
+                ]
+              ],
+              "rendering": "ieee-registry-definitions"
+            }
+          ],
+          "equations": [],
+          "license_notice": ".\\\" Copyright (C) Roy Hills\n.\\\"\n.\\\" Copying and distribution of this file, with or without modification,\n.\\\" are permitted in any medium without royalty provided the copyright\n.\\\" notice and this notice are preserved.\n.\\\"\n",
+          "presentation_changes": [
+            "Non-executing parsing of man/tbl/eqn requests",
+            "Tables rendered with all data cells retained; source tbl structures recorded",
+            "Ambiguous tbl command examples kept in exact original source notation",
+            "Original eqn formula retained with equivalent multiplication notation",
+            "Literal command transcripts and original copying notice preserved"
+          ]
+        },
+        "editorial_translation": {
+          "source_sha256": "88cd4df36ba67aadfe42d7b2774aeada2b5984c763372f5aa71987bd02c776a7",
+          "translation_file": "translations/pt-BR/arp-scan/get-oui-1-dist.md",
+          "translation_sha256": "c307b5fed39c32084c8b990d33e7102041bdd3738d0de03bdb2440a6ca6130cb",
+          "translation_method": "assistant-translated",
+          "review_scope": "All 8 sections, 3 options and 4 registry rows translated; complete historical example and original notice preserved; independent human review pending",
+          "human_review": "pending",
+          "license_spdx": "LicenseRef-Get-OUI-Manpage"
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/get-oui-help-tests.json",
+          "sha256": "146ae6d50b9dfde93f480767e54ff4404bbb657da2dca5cbded0244cf4afd042",
+          "test_script": "scripts/test_get_oui_help.py"
+        }
       }
     ],
-    "source_scope": "Pinned README plus complete arp-fingerprint.1 and main arp-scan.1.dist manuals, each with its own preserved copying notice. Wiki, additional utilities and remaining sources still require coverage review.",
+    "source_scope": "Pinned README plus full arp-scan, arp-fingerprint and get-oui manpages, with individual copying notices. Wiki and other sources remain a separate coverage review; IEEE data files are not mirrored by this acquisition.",
     "kali_official_page_complete": false,
     "translation_complete_for_acquired_documents": true,
     "human_review_complete": false,

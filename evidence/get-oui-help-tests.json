@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "binary": "get-oui",
+  "installed_version": "arp-scan 1.10.0",
+  "version_scope": "Version of the arp-scan package binary; get-oui help does not report its own version",
+  "test_status": "help-only",
+  "commands": [
+    {
+      "argv": [
+        "get-oui",
+        "-h"
+      ],
+      "stdout": "Usage: get-oui [options]\nFetch the Ethernet MAC-Vendor registry data from the IEEE website\nand save it in the format used by arp-scan.\n\n'options' is one or more of:\n        -h Display this usage message.\n        -f FILE Specify the output file. Default=/usr/share/arp-scan/ieee-oui.txt\n        -v Give verbose progress messages.\n\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "arp-scan",
+        "--version"
+      ],
+      "stdout": "arp-scan 1.10.0\n\nCopyright (C) 2005-2022 Roy Hills\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nlibpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)\nBuilt with libcap POSIX.1e capability support.\n",
+      "stderr": "",
+      "exit_status": 0
+    }
+  ],
+  "manual_options": [
+    "-f",
+    "-h",
+    "-v"
+  ],
+  "installed_help_options": [
+    "-f",
+    "-h",
+    "-v"
+  ],
+  "manual_options_not_listed_by_installed_help": [],
+  "installed_help_options_not_in_manual": [],
+  "source_manual_sha256": "88cd4df36ba67aadfe42d7b2774aeada2b5984c763372f5aa71987bd02c776a7",
+  "test_script": "scripts/test_get_oui_help.py",
+  "test_script_sha256": "e71baaf1aaa0c605240360891d496103df04af5c4ba3c2e1eaf59433e11b30dc",
+  "verification_scope_pt": "Conferidas somente get-oui -h e a versão do pacote arp-scan; nenhuma atualização IEEE foi solicitada.",
+  "download_operation_requested": false,
+  "temporary_directory_empty": true,
+  "system_data_before_sha256": {
+    "/usr/share/arp-scan/ieee-oui.txt": "415caf69518d6a70a5ed457451bec6b029c26566dd51f2e77e48fc60620a06dc",
+    "/etc/arp-scan/mac-vendor.txt": "c1c73454141816b693143718a0cd308962f2f6fdd3162a675bc5a92cdf5a511b"
+  },
+  "system_data_after_sha256": {
+    "/usr/share/arp-scan/ieee-oui.txt": "415caf69518d6a70a5ed457451bec6b029c26566dd51f2e77e48fc60620a06dc",
+    "/etc/arp-scan/mac-vendor.txt": "c1c73454141816b693143718a0cd308962f2f6fdd3162a675bc5a92cdf5a511b"
+  },
+  "system_data_unchanged": true,
+  "limits": [
+    "Help/version only; registry download, backup and conversion operations were not exercised."
+  ]
+}

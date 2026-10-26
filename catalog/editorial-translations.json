@@ -30,6 +30,15 @@
       "license_spdx": "LicenseRef-ARP-Scan-Manpage",
       "segment_file": "catalog/editorial-segments/arp-scan-main.pt-br.json",
       "segment_sha256": "fd5c09cba0dbad023cbd00ec19dc54372087c5e349749da3780edd161198bafe"
+    },
+    "get-oui.1.dist": {
+      "source_sha256": "88cd4df36ba67aadfe42d7b2774aeada2b5984c763372f5aa71987bd02c776a7",
+      "translation_file": "translations/pt-BR/arp-scan/get-oui-1-dist.md",
+      "translation_sha256": "c307b5fed39c32084c8b990d33e7102041bdd3738d0de03bdb2440a6ca6130cb",
+      "translation_method": "assistant-translated",
+      "review_scope": "All 8 sections, 3 options and 4 registry rows translated; complete historical example and original notice preserved; independent human review pending",
+      "human_review": "pending",
+      "license_spdx": "LicenseRef-Get-OUI-Manpage"
     }
   }
 }

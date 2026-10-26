@@ -1,0 +1,24 @@
+{
+  "source_sha256": "88cd4df36ba67aadfe42d7b2774aeada2b5984c763372f5aa71987bd02c776a7",
+  "commit": "a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5",
+  "license_spdx": "LicenseRef-Get-OUI-Manpage",
+  "sections": [
+    "NAME",
+    "SYNOPSIS",
+    "DESCRIPTION",
+    "OPTIONS",
+    "FILES",
+    "EXAMPLES",
+    "NOTES",
+    "SEE ALSO"
+  ],
+  "options": [
+    "-h",
+    "-f <fn>",
+    "-v"
+  ],
+  "tables": 1,
+  "literal_blocks": 3,
+  "all_source_text_accounted": true,
+  "ieee_data_fetched": false
+}

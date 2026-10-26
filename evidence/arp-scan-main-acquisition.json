@@ -1,0 +1,22 @@
+{
+  "source_sha256": "ee5259c0ab80d97d54229f119d7532916bafece5f06cabbd3638cbede14ee6bd",
+  "commit": "a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5",
+  "license_spdx": "LicenseRef-ARP-Scan-Manpage",
+  "sections": [
+    "NAME",
+    "SYNOPSIS",
+    "DESCRIPTION",
+    "OPTIONS",
+    "EXIT STATUS",
+    "FILES",
+    "EXAMPLES",
+    "SEE ALSO"
+  ],
+  "options": 42,
+  "subsections": 13,
+  "tables": 6,
+  "equations": 1,
+  "literal_blocks": 8,
+  "all_source_text_accounted": true,
+  "roff_tbl_eqn_executed": false
+}

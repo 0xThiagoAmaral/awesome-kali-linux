@@ -1,8 +1,8 @@
 {
   "passed": true,
   "tools": 24,
-  "documents": 46,
-  "code_blocks": 386,
+  "documents": 47,
+  "code_blocks": 394,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -2115,6 +2115,11 @@
       "detail": null
     },
     {
+      "check": "arp-scan retained asset hash: LICENSE.arp-scan-manpage.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
       "check": "arp-scan:README.md original hash",
       "pass": true,
       "detail": null
@@ -2272,6 +2277,119 @@
     },
     {
       "check": "arp-scan:arp-fingerprint.1 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist exact original file-specific notice",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist exact fenced-code bodies",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 234,
+        "translation": 234
+      }
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "arp-scan:arp-scan.1.dist review status honest",
       "pass": true,
       "detail": null
     },

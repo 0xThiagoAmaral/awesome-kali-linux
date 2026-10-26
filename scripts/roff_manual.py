@@ -5,7 +5,7 @@ import re
 import shlex
 
 BT=chr(96)
-REQUESTS={'TH','SH','PP','TP','B','I','RI','BR','IR','nf','fi'}
+REQUESTS={'TH','SH','SS','PP','TP','IP','sp','B','I','RI','BR','IR','nf','fi','EQ','EN','TS','TE'}
 
 def parse_roff(source):
     lines=source.splitlines(keepends=True)
@@ -14,31 +14,33 @@ def parse_roff(source):
     while index<len(lines):
         line=lines[index]
         first=index+1
-        if line.startswith('.\\"'):
+        if line.startswith(('.\\"',"'\\\"")):
             units.append({'kind':'comment','raw':line,'first_line':first})
         elif line.startswith('.'):
             match=re.fullmatch(r'\.([A-Za-z]+)(?:[ \t]+(.*))?\r?\n?',line)
             if not match or match.group(1) not in REQUESTS:
                 raise ValueError('Unsupported roff request at line '+str(first))
             request,args=match.group(1),match.group(2) or ''
-            if '\\' in args:
+            if '\\' in args and request!='IP':
                 raise ValueError('Unsupported escape in roff macro arguments at line '+str(first))
-            if request=='nf':
+            if request in {'nf','EQ','TS'}:
+                closing={'nf':'fi','EQ':'EN','TS':'TE'}[request]
                 body=[]
                 raw=[line]
                 index+=1
-                while index<len(lines) and lines[index].strip()!='.fi':
+                while index<len(lines) and lines[index].strip()!='.'+closing:
                     if lines[index].startswith('.'):
                         raise ValueError('Unexpected request inside literal block at line '+str(index+1))
                     body.append(lines[index]); raw.append(lines[index]); index+=1
                 if index==len(lines):
-                    raise ValueError('Unclosed .nf block')
+                    raise ValueError('Unclosed .'+request+' block')
                 raw.append(lines[index])
-                units.append({'kind':'literal-block','body':''.join(body),'raw':''.join(raw),'first_line':first})
-            elif request=='fi':
-                raise ValueError('Unexpected .fi without .nf')
+                units.append({'kind':{'nf':'literal-block','EQ':'equation','TS':'table'}[request],
+                              'body':''.join(body),'raw':''.join(raw),'first_line':first})
+            elif request in {'fi','EN','TE'}:
+                raise ValueError('Unexpected closing roff request: .'+request)
             else:
-                units.append({'kind':request,'args':shlex.split(args),'raw':line,'first_line':first})
+                units.append({'kind':request,'args':[args] if request=='IP' else shlex.split(args),'raw':line,'first_line':first})
         elif line.startswith("'"):
             raise ValueError('Unsupported alternate roff control line at '+str(first))
         else:

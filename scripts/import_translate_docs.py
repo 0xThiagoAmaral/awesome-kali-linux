@@ -16,6 +16,7 @@ from translation_engine import LocalTranslator
 from enrich_local_assets import resolve_reference
 from plain_manual import prepare_manual
 from roff_manual import prepare_roff_manual
+from roff_extended_manual import prepare_extended_roff
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 BT=chr(96)
@@ -52,6 +53,7 @@ def code_bodies(text):
     return out
 
 def slug(value):
+    value=re.sub(BT+r'+([^'+BT+r']+)'+BT+r'+',lambda m:m.group(1).replace('<','').replace('>',''),value)
     value=re.sub(r'<[^>]*>','',value).replace(BT,'').strip().lower()
     value=re.sub(r'!?\[([^\]]+)\]\([^)]+\)',r'\1',value)
     value=re.sub(r'[^\w -]','',value,flags=re.U)
@@ -331,8 +333,9 @@ def main():
             source=data.decode('utf-8')
             format_info={}
             manual_changes=[]
-            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1'}:
-                prepare=prepare_roff_manual if doc['source_format']=='man-roff-v1' else prepare_manual
+            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1'}:
+                prepare={'sectioned-plain-text-v1':prepare_manual,'man-roff-v1':prepare_roff_manual,
+                         'man-roff-extended-v1':prepare_extended_roff}[doc['source_format']]
                 source,manual_evidence=prepare(source,tool)
                 prepared=originals/(doc['path']+'.presentation.md.source')
                 prepared.write_bytes(source.encode('utf-8'))
@@ -378,14 +381,14 @@ def main():
                    'source_url':doc['source_url'],'source_commit':record['commit'],
                    'source_sha256':doc['sha256'],'license_spdx':doc.get('license_spdx',record['license_spdx']),
                    'human_review':'pending','source_scope':record['source_scope']}
-            if doc.get('source_format')=='man-roff-v1':
+            if doc.get('source_format') in {'man-roff-v1','man-roff-extended-v1'}:
                 props['title']=manual_evidence['title'][0].lower()+' — manual de referência'
                 props['binary']=manual_evidence['title'][0].lower()
                 props['source_manual_date']=manual_evidence['title'][2]
                 props['manual_section']=manual_evidence['title'][1]
             compatibility_notice=''
-            runtime_path=ROOT/'evidence'/(tool+'-local-tests.json')
-            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1'} and runtime_path.exists():
+            runtime_path=ROOT/'evidence'/doc.get('runtime_evidence_file',tool+'-local-tests.json')
+            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1'} and runtime_path.exists():
                 runtime=json.loads(runtime_path.read_text(encoding='utf-8'))
                 if runtime.get('source_manual_sha256')==doc['sha256'] and runtime.get('passed'):
                     evidence_rel='../../99-Assets/evidence/'+runtime_path.name

@@ -9,6 +9,7 @@ import re
 from import_translate_docs import code_bodies,outside_code
 from plain_manual import prepare_manual
 from roff_manual import prepare_roff_manual
+from roff_extended_manual import prepare_extended_roff
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 manifest_path=ROOT/'catalog/imported-documentation.json'
@@ -38,8 +39,9 @@ for tool,record in manifest.items():
         source=original.read_bytes().decode('utf-8')
         source_row=next(x for x in source_record['documents'] if x['path']==doc['source_path'])
         add(label+' source-registry binding',source_row['sha256']==doc['source_sha256'])
-        if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1'}:
-            prepare=prepare_roff_manual if doc['source_format']=='man-roff-v1' else prepare_manual
+        if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1'}:
+            prepare={'sectioned-plain-text-v1':prepare_manual,'man-roff-v1':prepare_roff_manual,
+                     'man-roff-extended-v1':prepare_extended_roff}[doc['source_format']]
             source,manual=prepare(original.read_bytes().decode('utf-8'),tool)
             prepared=ROOT/doc['prepared_source']
             add(label+' prepared-source hash',prepared.exists() and digest(prepared)==doc['prepared_source_sha256'])
@@ -52,7 +54,7 @@ for tool,record in manifest.items():
         license_path=asset_root/source_row.get('license_asset','LICENSE.txt')
         license_link=pathlib.Path(os.path.relpath(license_path,note.parent)).as_posix()
         add(label+' document-specific license link',license_path.exists() and ']('+license_link+')' in translated)
-        if doc.get('source_format')=='man-roff-v1':
+        if doc.get('source_format') in {'man-roff-v1','man-roff-extended-v1'}:
             add(label+' exact original file-specific notice',license_path.read_bytes()==manual['license_notice'].encode('utf-8'))
         if doc.get('editorial_translation'):
             editorial=doc['editorial_translation']
@@ -60,6 +62,9 @@ for tool,record in manifest.items():
             add(label+' editorial translation hash',p.exists() and digest(p)==editorial['translation_sha256'])
             add(label+' editorial source binding',editorial['source_sha256']==doc['source_sha256'])
             add(label+' editorial not mislabeled human-reviewed',editorial['human_review']=='pending' and doc['translation_method']=='assistant-translated')
+            if editorial.get('segment_file'):
+                segment_file=ROOT/editorial['segment_file']
+                add(label+' editorial segment file hash',segment_file.exists() and digest(segment_file)==editorial['segment_sha256'])
         if doc.get('runtime_compatibility'):
             compatibility=doc['runtime_compatibility']
             path=ROOT/compatibility['evidence']

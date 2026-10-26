@@ -13,7 +13,10 @@ sources=json.loads((ROOT/'catalog/source-registry.json').read_text(encoding='utf
 coverage=json.loads((ROOT/'catalog/documentation-coverage.json').read_text(encoding='utf-8'))
 sheet_path=ROOT/'catalog/cheatsheet-provenance.json'
 sheets=json.loads(sheet_path.read_text(encoding='utf-8')) if sheet_path.exists() else {}
-local_sheets={p.parent.name:p.relative_to(ROOT).as_posix() for p in (ROOT/'vault/02-Tools').glob('*/*-cheatsheet.md')}
+local_sheets={}
+for p in sorted((ROOT/'vault/02-Tools').glob('*/*-cheatsheet.md')):
+    local_sheets.setdefault(p.parent.name,[]).append(p.relative_to(ROOT).as_posix())
+local_sheet_count=sum(len(paths) for paths in local_sheets.values())
 pub_path=ROOT/'catalog/publication.json'
 publication=json.loads(pub_path.read_text(encoding='utf-8')) if pub_path.exists() else {}
 publication_status='[Publicado na branch main]('+publication['repository']+') — marco verificado em '+publication['verified_date'] if publication.get('published') else 'Pendente de autenticação e envio'
@@ -103,7 +106,9 @@ for tool,record in sorted(imports.items()):
     if tool in sheets:
         sheet_links.append('[Exemplos upstream](../'+pathlib.Path(sheets[tool]['note']).relative_to('vault').as_posix()+')')
     if tool in local_sheets:
-        sheet_links.append('[Cheatsheet local](../'+pathlib.Path(local_sheets[tool]).relative_to('vault').as_posix()+')')
+        for sheet_path in local_sheets[tool]:
+            label=pathlib.PurePosixPath(sheet_path).name.removesuffix('-cheatsheet.md')
+            sheet_links.append('['+label+' — cheatsheet](../'+pathlib.Path(sheet_path).relative_to('vault').as_posix()+')')
     sheet=' · '.join(sheet_links) or 'Pendente'
     source_docs={d['path']:d for d in sources[tool]['documents']}
     licenses=sorted({source_docs[d['source_path']].get('license_spdx',record['license_spdx']) for d in record['documents']})
@@ -126,7 +131,7 @@ put(pathlib.Path('docs/COBERTURA.md'),f"""# Cobertura real
 | Português oficial upstream | {native} documento(s) |
 | Blocos de código preservados | {blocks}, sujeitos à conferência de integridade atual |
 | Folhas de comandos upstream | {len(sheets)} folhas; {sum(len(x['recipes']) for x in sheets.values())} exemplos literais, não executados |
-| Cheatsheets autorais complementares | {len(local_sheets)} folhas, com escopo de teste indicado em cada nota |
+| Cheatsheets autorais complementares | {local_sheet_count} folhas, com escopo de teste indicado em cada nota |
 | Ferramentas com documentação integral e revisão concluídas | 0 |
 | Todo o Kali full/everything concluído | Não |
 | Publicação GitHub | {publication_status} |
@@ -147,7 +152,7 @@ Já há **{len(documents)} documentos de {len(imports)} ferramentas** no
 [acervo offline](vault/01-Maps/documentacao-offline.md), com originais, licenças e hashes.
 São traduções automáticas, traduções editoriais por assistente de IA ou português fornecido upstream, devidamente identificados.
 O acervo também inclui **{len(sheets)} folhas de comandos** com exemplos oficiais e procedência verificável.
-Há ainda **{len(local_sheets)} cheatsheets autorais complementares**, com limites de validação explícitos.
+Há ainda **{local_sheet_count} cheatsheets autorais complementares**, com limites de validação explícitos.
 Isso **não** significa documentação integral das 820 ferramentas nem revisão humana concluída.
 
 [Cobertura por ferramenta](catalog/documentation-coverage.csv) ·
@@ -200,6 +205,10 @@ if 'test_plain_manual.py' not in t:
     t+='      - name: Test plain-text manual conversion\n        run: python3 scripts/test_plain_manual.py\n'
 if 'test_roff_manual.py' not in t:
     t+='      - name: Test non-executing roff conversion\n        run: python3 scripts/test_roff_manual.py\n'
+if 'test_roff_extended.py' not in t:
+    t+='      - name: Test complete roff tables and equations\n        run: python3 scripts/test_roff_extended.py\n'
+if 'build_arp_scan_editorial.py --check' not in t:
+    t+='      - name: Verify all source-bound editorial segments\n        run: python3 scripts/build_arp_scan_editorial.py --check\n'
 workflow.write_bytes(t.encode('utf-8'))
 put(pathlib.Path('requirements-translation.txt'),'ctranslate2==4.8.4\nsentencepiece==0.2.1')
 print(json.dumps({'documents':len(documents),'tools':len(imports),'machine':machine,'assistant_translated':assistant,'official_portuguese':native,

@@ -12,7 +12,7 @@ source_commit: "a0466d5fc7fa8a1e5625b7aae568ffb384e3f5a5"
 source_sha256: "a3a2c3d25999b32e06cfa8e6eab786fc3d84038b56d5e868310dbaa1ec094a58"
 license_spdx: "GPL-3.0"
 human_review: "pending"
-source_scope: "Pinned README and full arp-fingerprint.1 manual; manpage has its own preserved copying notice, not the repository GPL notice. Wiki and main arp-scan reference coverage remain pending."
+source_scope: "Pinned README plus complete arp-fingerprint.1 and main arp-scan.1.dist manuals, each with its own preserved copying notice. Wiki, additional utilities and remaining sources still require coverage review."
 ---
 
 > Tradução automática local para português, ainda sem revisão humana integral. Estrutura e blocos de código preservados; referências externas não significam conteúdo espelhado.

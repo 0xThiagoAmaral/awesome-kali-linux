@@ -26,3 +26,7 @@ jobs:
         run: python3 scripts/test_plain_manual.py
       - name: Test non-executing roff conversion
         run: python3 scripts/test_roff_manual.py
+      - name: Test complete roff tables and equations
+        run: python3 scripts/test_roff_extended.py
+      - name: Verify all source-bound editorial segments
+        run: python3 scripts/build_arp_scan_editorial.py --check

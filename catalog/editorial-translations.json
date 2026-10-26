@@ -19,6 +19,17 @@
       "review_scope": "AI-assisted full translation of all seven source sections and five options; exact example output and file-specific original license preserved; independent human review pending",
       "human_review": "pending",
       "license_spdx": "LicenseRef-ARP-Fingerprint-Manpage"
+    },
+    "arp-scan.1.dist": {
+      "source_sha256": "ee5259c0ab80d97d54229f119d7532916bafece5f06cabbd3638cbede14ee6bd",
+      "translation_file": "translations/pt-BR/arp-scan/arp-scan-1-dist.md",
+      "translation_sha256": "4d619fc81cf86b947354e7159d4eb5aea40ca6ce3e60270cde82a9cdbb4d40c3",
+      "translation_method": "assistant-translated",
+      "review_scope": "All 143 translatable segments; 8 sections, 42 options, 13 subsections, 6 tables and formula represented; original literals preserved",
+      "human_review": "pending",
+      "license_spdx": "LicenseRef-ARP-Scan-Manpage",
+      "segment_file": "catalog/editorial-segments/arp-scan-main.pt-br.json",
+      "segment_sha256": "fd5c09cba0dbad023cbd00ec19dc54372087c5e349749da3780edd161198bafe"
     }
   }
 }

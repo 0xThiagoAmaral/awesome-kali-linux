@@ -6147,7 +6147,7 @@
         "original": "sources/upstream/arp-scan/README.md.source",
         "source_sha256": "a3a2c3d25999b32e06cfa8e6eab786fc3d84038b56d5e868310dbaa1ec094a58",
         "license_spdx": "GPL-3.0",
-        "translation_sha256": "724e1b1515286db1183436f38e30fa3915dc76fdc3d1a4a78399149aca3bc1be",
+        "translation_sha256": "c67b13c07801ab2a53e043dfb5d7014122685212055ae04d4c4476e688d08e99",
         "source_fenced_blocks": 0,
         "code_blocks_equal": true,
         "translation_method": "machine-local",
@@ -6202,7 +6202,7 @@
         "original": "sources/upstream/arp-scan/arp-fingerprint.1.source",
         "source_sha256": "2025a1f2ac8280a267f215816f9a9eac8ddb9698871f73d2fbd61ce40c6d5916",
         "license_spdx": "LicenseRef-ARP-Fingerprint-Manpage",
-        "translation_sha256": "ad7c7fe934c7613dd841b09dd4e920f1d670a4c0ea46887e1bcc0e56f1e5948b",
+        "translation_sha256": "b289ac7fb3dfd6cbb8fa08fa9b07a58868d6f424bb2ce9c0c00a0d40933cee1a",
         "source_fenced_blocks": 4,
         "code_blocks_equal": true,
         "translation_method": "assistant-translated",
@@ -6323,9 +6323,531 @@
           "sha256": "e95fd627b26271d40747ebdba4f04ddc944eb5a11e6912d172822ef0a03ff446",
           "test_script": "scripts/test_arp_fingerprint_help.py"
         }
+      },
+      {
+        "source_path": "arp-scan.1.dist",
+        "note": "vault/02-Tools/arp-scan/arp-scan-arp-scan-1-dist.md",
+        "original": "sources/upstream/arp-scan/arp-scan.1.dist.source",
+        "source_sha256": "ee5259c0ab80d97d54229f119d7532916bafece5f06cabbd3638cbede14ee6bd",
+        "license_spdx": "LicenseRef-ARP-Scan-Manpage",
+        "translation_sha256": "88b843117ca9b65d0e0b114f53e9b2c7f2d5582ae1f52f0b625b2eb237730dc5",
+        "source_fenced_blocks": 8,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.6-tables-images-and-source-link-corrections",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "linux-with-posix1e-capabilities-support-using-libcap"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "bsd-and-macos"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "any-operating-system"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "general-options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "host-selection"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "macvendor-mapping-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "output-format-control"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "host-list-randomisation"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "output-timing-and-retry"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "dns-resolution"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "output-arp-packet"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "output-ethernet-header"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "misc-options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "exit-status"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "simple-scan"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "output-formatting"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "csv-output"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "see-also"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "original-license-notice"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Non-executing parsing of man/tbl/eqn requests",
+              "Tables rendered with all data cells retained; source tbl structures recorded",
+              "Ambiguous tbl command examples kept in exact original source notation",
+              "Original eqn formula retained with equivalent multiplication notation",
+              "Literal command transcripts and original copying notice preserved"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "man-roff-extended-v1",
+        "prepared_source": "sources/upstream/arp-scan/arp-scan.1.dist.presentation.md.source",
+        "prepared_source_sha256": "b5a06d848bdcbe8ad8d00635b020fe27bd18dd6abed329d98c05c1b4bf88453d",
+        "manual_structure": {
+          "format": "man-roff-extended-v1",
+          "source_lines": 570,
+          "all_source_text_accounted": true,
+          "title": [
+            "ARP-SCAN",
+            "1",
+            "February 12, 2025"
+          ],
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "EXIT STATUS",
+            "FILES",
+            "EXAMPLES",
+            "SEE ALSO"
+          ],
+          "subsections": [
+            "General Options",
+            "Host Selection",
+            "MAC/Vendor Mapping Files",
+            "Output Format Control",
+            "Host List Randomisation",
+            "Output Timing and Retry",
+            "DNS Resolution",
+            "Output ARP Packet",
+            "Output Ethernet Header",
+            "Misc Options",
+            "Simple Scan",
+            "Output Formatting",
+            "CSV Output"
+          ],
+          "option_syntax": [
+            "--help or -h",
+            "--verbose or -v",
+            "--version or -V",
+            "--interface=<s> or -I <s>",
+            "--file=<s> or -f <s>",
+            "--localnet or -l",
+            "--exclude-broadcast",
+            "--ouifile=<s> or -O <s>",
+            "--macfile=<s> or -m <s>",
+            "--quiet or -q",
+            "--plain or -x",
+            "--ignoredups or -g",
+            "--rtt or -D",
+            "--format=<s> or -F <s>",
+            "--random or -R",
+            "--randomseed=<i>",
+            "--retry=<i> or -r <i>",
+            "--backoff=<f> or -b <f>",
+            "--timeout=<i> or -t <i>",
+            "--interval=<x> or -i <x>",
+            "--bandwidth=<x> or -B <x>",
+            "--numeric or -N",
+            "--resolve or -d",
+            "--arpsha=<m> or -u <m>",
+            "--arptha=<m> or -w <m>",
+            "--arphrd=<i> or -H <i>",
+            "--arppro=<i> or -p <i>",
+            "--arphln=<i> or -a <i>",
+            "--arppln=<i> or -P <i>",
+            "--arpop=<i> or -o <i>",
+            "--arpspa=<a> or -s <a>",
+            "--srcaddr=<m> or -S <m>",
+            "--destaddr=<m> or -T <m>",
+            "--prototype=<i> or -y <i>",
+            "--llc or -L",
+            "--vlan=<i> or -Q <i>",
+            "--limit=<i> or -M <i>",
+            "--pcapsavefile=<s> or -W <s>",
+            "--snap=<i> or -n <i>",
+            "--retry-send=<i> or -Y <i>",
+            "--retry-send-interval=<i> or -E <i>",
+            "--padding=<h> or -A <h>"
+          ],
+          "argument_types": [
+            "<s>",
+            "<i>",
+            "<f>",
+            "<m>",
+            "<a>",
+            "<h>",
+            "<x>"
+          ],
+          "literal_blocks": [
+            {
+              "body": "arp-scan [options] [hosts...]\n",
+              "first_line": 13,
+              "origin": "rendered roff synopsis"
+            },
+            {
+              "body": "time = n times i + t + o\n",
+              "first_line": 67,
+              "origin": "exact equation body"
+            },
+            {
+              "body": "<IPv4 Address>\t<MAC Address>\t<Vendor Details>\n",
+              "origin": "original output pattern from tbl",
+              "first_line": 135
+            },
+            {
+              "body": "--format='${ip}\\\\t${mac}\\\\t${vendor}'\\n\n--resolve --format='${ip}\\\\t${mac}\\\\t${name;20}\\\\t${vendor}'\n",
+              "origin": "exact original tbl command notation",
+              "first_line": 299
+            },
+            {
+              "body": "$ arp-scan --localnet\nInterface: eth0, type: EN10MB, MAC: 50:65:f3:f0:6d:7c, IPv4: 10.0.0.106\nStarting arp-scan 1.9.9 with 256 hosts (https://github.com/royhills/arp-scan)\n10.0.0.14       a4:1f:72:7f:25:bb       Dell Inc.\n10.0.0.22       10:60:4b:73:43:de       Hewlett Packard\n10.0.0.74       00:0c:29:90:07:e9       VMware, Inc.\n10.0.0.75       00:0c:29:66:9e:c2       VMware, Inc.\n10.0.0.76       00:0c:29:d0:e1:ea       VMware, Inc.\n10.0.0.82       9c:b6:54:bb:f3:ec       Hewlett Packard\n10.0.0.84       00:21:9b:fd:b9:b3       Dell Inc.\n10.0.0.85       00:02:b3:eb:5a:f8       Intel Corporation\n10.0.0.91       00:9c:02:a5:7b:29       Hewlett Packard\n10.0.0.92       d4:ae:52:d0:07:6f       Dell Inc.\n10.0.0.93       d4:ae:52:d0:04:9b       Dell Inc.\n10.0.0.96       9c:b6:54:bb:f5:35       Hewlett Packard\n10.0.0.97       00:0c:29:0e:95:20       VMware, Inc.\n10.0.0.104      50:65:f3:f0:70:a4       Hewlett Packard\n\n15 packets received by filter, 0 packets dropped by kernel\nEnding arp-scan 1.9.9: 256 hosts scanned in 1.532 seconds (167.10 hosts/sec). 14 responded\n",
+              "first_line": 494,
+              "origin": "exact literal-block body"
+            },
+            {
+              "body": "$ arp-scan -I eth0 --rtt --format='|${ip;-15}|${mac}|${rtt;8}|' 10.0.0.0/24\nInterface: eth0, type: EN10MB, MAC: 50:65:f3:f0:6d:7c, IPv4: 10.0.0.106\nStarting arp-scan 1.9.9 with 256 hosts (https://github.com/royhills/arp-scan)\n|10.0.0.14      |a4:1f:72:7f:25:bb|   0.280|\n|10.0.0.22      |10:60:4b:73:43:de|   0.293|\n|10.0.0.74      |00:0c:29:90:07:e9|   0.380|\n|10.0.0.75      |00:0c:29:66:9e:c2|   0.311|\n|10.0.0.76      |00:0c:29:d0:e1:ea|   0.326|\n|10.0.0.82      |9c:b6:54:bb:f3:ec|   0.216|\n|10.0.0.84      |00:21:9b:fd:b9:b3|   0.244|\n|10.0.0.85      |00:02:b3:eb:5a:f8|   0.244|\n|10.0.0.91      |00:9c:02:a5:7b:29|   0.209|\n|10.0.0.92      |d4:ae:52:d0:07:6f|   0.289|\n|10.0.0.93      |d4:ae:52:d0:04:9b|   0.278|\n|10.0.0.96      |9c:b6:54:bb:f5:35|   0.255|\n|10.0.0.97      |00:0c:29:0e:95:20|   0.288|\n|10.0.0.104     |50:65:f3:f0:70:a4|   0.263|\n\n14 packets received by filter, 0 packets dropped by kernel\nEnding arp-scan 1.9.9: 256 hosts scanned in 2.032 seconds (125.98 hosts/sec). 14 responded\n",
+              "first_line": 519,
+              "origin": "exact literal-block body"
+            },
+            {
+              "body": "$ arp-scan -I eth0 --plain --format='${ip},${mac},\"${vendor}\"' 10.0.0.0/24\n10.0.0.14,a4:1f:72:7f:25:bb,\"Dell Inc.\"\n10.0.0.22,10:60:4b:73:43:de,\"Hewlett Packard\"\n10.0.0.74,00:0c:29:90:07:e9,\"VMware, Inc.\"\n10.0.0.75,00:0c:29:66:9e:c2,\"VMware, Inc.\"\n10.0.0.76,00:0c:29:d0:e1:ea,\"VMware, Inc.\"\n10.0.0.82,9c:b6:54:bb:f3:ec,\"Hewlett Packard\"\n10.0.0.84,00:21:9b:fd:b9:b3,\"Dell Inc.\"\n10.0.0.85,00:02:b3:eb:5a:f8,\"Intel Corporation\"\n10.0.0.91,00:9c:02:a5:7b:29,\"Hewlett Packard\"\n10.0.0.92,d4:ae:52:d0:07:6f,\"Dell Inc.\"\n10.0.0.93,d4:ae:52:d0:04:9b,\"Dell Inc.\"\n10.0.0.96,9c:b6:54:bb:f5:35,\"Hewlett Packard\"\n10.0.0.97,00:0c:29:0e:95:20,\"VMware, Inc.\"\n10.0.0.104,50:65:f3:f0:70:a4,\"Hewlett Packard\"\n",
+              "first_line": 544,
+              "origin": "exact literal-block body"
+            },
+            {
+              "body": ".\\\" Copyright (C) Roy Hills\n.\\\"\n.\\\" Copying and distribution of this file, with or without modification,\n.\\\" are permitted in any medium without royalty provided the copyright\n.\\\" notice and this notice are preserved.\n.\\\"\n",
+              "first_line": 2,
+              "origin": "exact original copying notice"
+            }
+          ],
+          "tables": [
+            {
+              "number": 1,
+              "first_line": 83,
+              "raw_body": "box;\ncB S S S\nLB | LB | LB | LB\nL | L | L | L.\nARP Request Packet Options\n=\nField\tBits\tOption\tDefault\n=\nar$hrd\t16\t--arphrd\t1 (ARPHRD_ETHER)\nar$pro\t16\t--arppro\t0x0800\nar$hln\t8\t--arphln\t6 (ETH_ALEN)\nar$pln\t8\t--arppln\t4 (IPv4)\nar$op\t16\t--arpop\t1 (ARPOP_REQUEST)\nar$sha\t48\t--arpsha\tinterface h/w address\nar$spa\t32\t--arpspa\tinterface IPv4 address\nar$tha\t48\t--arptha\t00:00:00:00:00:00\nar$tpa\t32\tNone\ttarget host IPv4 address\n",
+              "layout": [
+                "box;",
+                "cB S S S",
+                "LB | LB | LB | LB",
+                "L | L | L | L."
+              ],
+              "rows": [
+                [
+                  "Field",
+                  "Bits",
+                  "Option",
+                  "Default"
+                ],
+                [
+                  "ar$hrd",
+                  "16",
+                  "--arphrd",
+                  "1 (ARPHRD_ETHER)"
+                ],
+                [
+                  "ar$pro",
+                  "16",
+                  "--arppro",
+                  "0x0800"
+                ],
+                [
+                  "ar$hln",
+                  "8",
+                  "--arphln",
+                  "6 (ETH_ALEN)"
+                ],
+                [
+                  "ar$pln",
+                  "8",
+                  "--arppln",
+                  "4 (IPv4)"
+                ],
+                [
+                  "ar$op",
+                  "16",
+                  "--arpop",
+                  "1 (ARPOP_REQUEST)"
+                ],
+                [
+                  "ar$sha",
+                  "48",
+                  "--arpsha",
+                  "interface h/w address"
+                ],
+                [
+                  "ar$spa",
+                  "32",
+                  "--arpspa",
+                  "interface IPv4 address"
+                ],
+                [
+                  "ar$tha",
+                  "48",
+                  "--arptha",
+                  "00:00:00:00:00:00"
+                ],
+                [
+                  "ar$tpa",
+                  "32",
+                  "None",
+                  "target host IPv4 address"
+                ]
+              ],
+              "rendering": "packet-fields"
+            },
+            {
+              "number": 2,
+              "first_line": 115,
+              "raw_body": "box;\ncB S S S\nLB | LB | LB | LB\nL | L | L | L.\nEthernet Header Options\n=\nField\tBits\tOption\tDefault\n=\nDest Address\t48\t--destaddr\tff:ff:ff:ff:ff:ff\nSource Address\t48\t--srcaddr\tinterface address\nProtocol Type\t16\t--prototype\t0x0806 (ARP)\n",
+              "layout": [
+                "box;",
+                "cB S S S",
+                "LB | LB | LB | LB",
+                "L | L | L | L."
+              ],
+              "rows": [
+                [
+                  "Field",
+                  "Bits",
+                  "Option",
+                  "Default"
+                ],
+                [
+                  "Dest Address",
+                  "48",
+                  "--destaddr",
+                  "ff:ff:ff:ff:ff:ff"
+                ],
+                [
+                  "Source Address",
+                  "48",
+                  "--srcaddr",
+                  "interface address"
+                ],
+                [
+                  "Protocol Type",
+                  "16",
+                  "--prototype",
+                  "0x0806 (ARP)"
+                ]
+              ],
+              "rendering": "packet-fields"
+            },
+            {
+              "number": 3,
+              "first_line": 135,
+              "raw_body": ";\nL L L.\n<IPv4 Address>\t<MAC Address>\t<Vendor Details>\n",
+              "layout": [
+                ";",
+                "L L L."
+              ],
+              "rows": [
+                [
+                  "<IPv4 Address>",
+                  "<MAC Address>",
+                  "<Vendor Details>"
+                ]
+              ],
+              "rendering": "literal-output-pattern"
+            },
+            {
+              "number": 4,
+              "first_line": 264,
+              "raw_body": "L L .\nIP\tHost IPv4 address in dotted quad format\nName\tHost name if \\fB--resolve\\fP option given\nMAC\tHost MAC address xx:xx:xx:xx:xx:xx\nHdrMAC\tEthernet source addr if different\nVendor\tVendor details string\nPadding\tPadding after ARP packet in hex if nonzero\nFraming\tFraming type if not Ethernet_II\nVLAN\t802.1Q VLAN ID if present\nProto\tARP protocol if not 0x0800\nDUP\tPacket number for duplicate packets (>1)\nRTT\tRound trip time if \\fB--rtt\\fP option given\nIPnum\tHost IPv4 address as a 32-bit integer\n",
+              "layout": [
+                "L L ."
+              ],
+              "rows": [
+                [
+                  "IP",
+                  "Host IPv4 address in dotted quad format"
+                ],
+                [
+                  "Name",
+                  "Host name if \\fB--resolve\\fP option given"
+                ],
+                [
+                  "MAC",
+                  "Host MAC address xx:xx:xx:xx:xx:xx"
+                ],
+                [
+                  "HdrMAC",
+                  "Ethernet source addr if different"
+                ],
+                [
+                  "Vendor",
+                  "Vendor details string"
+                ],
+                [
+                  "Padding",
+                  "Padding after ARP packet in hex if nonzero"
+                ],
+                [
+                  "Framing",
+                  "Framing type if not Ethernet_II"
+                ],
+                [
+                  "VLAN",
+                  "802.1Q VLAN ID if present"
+                ],
+                [
+                  "Proto",
+                  "ARP protocol if not 0x0800"
+                ],
+                [
+                  "DUP",
+                  "Packet number for duplicate packets (>1)"
+                ],
+                [
+                  "RTT",
+                  "Round trip time if \\fB--rtt\\fP option given"
+                ],
+                [
+                  "IPnum",
+                  "Host IPv4 address as a 32-bit integer"
+                ]
+              ],
+              "rendering": "field-definitions"
+            },
+            {
+              "number": 5,
+              "first_line": 286,
+              "raw_body": "L L .\n\\\\n\tnewline\n\\\\r\tcarriage return\n\\\\t\ttab\n\\\\\tsuppress special meaning for following character\n",
+              "layout": [
+                "L L ."
+              ],
+              "rows": [
+                [
+                  "\\\\n",
+                  "newline"
+                ],
+                [
+                  "\\\\r",
+                  "carriage return"
+                ],
+                [
+                  "\\\\t",
+                  "tab"
+                ],
+                [
+                  "\\\\",
+                  "suppress special meaning for following character"
+                ]
+              ],
+              "rendering": "escape-definitions"
+            },
+            {
+              "number": 6,
+              "first_line": 299,
+              "raw_body": "L .\n--format='${ip}\\\\t${mac}\\\\t${vendor}'\\n\n--resolve --format='${ip}\\\\t${mac}\\\\t${name;20}\\\\t${vendor}'\n",
+              "layout": [
+                "L ."
+              ],
+              "rows": [
+                [
+                  "--format='${ip}\\\\t${mac}\\\\t${vendor}'\\n"
+                ],
+                [
+                  "--resolve --format='${ip}\\\\t${mac}\\\\t${name;20}\\\\t${vendor}'"
+                ]
+              ],
+              "rendering": "source-command-notation"
+            }
+          ],
+          "equations": [
+            {
+              "raw_body": "time = n times i + t + o\n",
+              "first_line": 67
+            }
+          ],
+          "license_notice": ".\\\" Copyright (C) Roy Hills\n.\\\"\n.\\\" Copying and distribution of this file, with or without modification,\n.\\\" are permitted in any medium without royalty provided the copyright\n.\\\" notice and this notice are preserved.\n.\\\"\n",
+          "presentation_changes": [
+            "Non-executing parsing of man/tbl/eqn requests",
+            "Tables rendered with all data cells retained; source tbl structures recorded",
+            "Ambiguous tbl command examples kept in exact original source notation",
+            "Original eqn formula retained with equivalent multiplication notation",
+            "Literal command transcripts and original copying notice preserved"
+          ]
+        },
+        "editorial_translation": {
+          "source_sha256": "ee5259c0ab80d97d54229f119d7532916bafece5f06cabbd3638cbede14ee6bd",
+          "translation_file": "translations/pt-BR/arp-scan/arp-scan-1-dist.md",
+          "translation_sha256": "4d619fc81cf86b947354e7159d4eb5aea40ca6ce3e60270cde82a9cdbb4d40c3",
+          "translation_method": "assistant-translated",
+          "review_scope": "All 143 translatable segments; 8 sections, 42 options, 13 subsections, 6 tables and formula represented; original literals preserved",
+          "human_review": "pending",
+          "license_spdx": "LicenseRef-ARP-Scan-Manpage",
+          "segment_file": "catalog/editorial-segments/arp-scan-main.pt-br.json",
+          "segment_sha256": "fd5c09cba0dbad023cbd00ec19dc54372087c5e349749da3780edd161198bafe"
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/arp-scan-main-tests.json",
+          "sha256": "ff2d865d2da6ff4ba6bda49e513df12296d11e3dac29bd620c8f49681a64e7eb",
+          "test_script": "scripts/test_arp_scan_help.py"
+        }
       }
     ],
-    "source_scope": "Pinned README and full arp-fingerprint.1 manual; manpage has its own preserved copying notice, not the repository GPL notice. Wiki and main arp-scan reference coverage remain pending.",
+    "source_scope": "Pinned README plus complete arp-fingerprint.1 and main arp-scan.1.dist manuals, each with its own preserved copying notice. Wiki, additional utilities and remaining sources still require coverage review.",
     "kali_official_page_complete": false,
     "translation_complete_for_acquired_documents": true,
     "human_review_complete": false,

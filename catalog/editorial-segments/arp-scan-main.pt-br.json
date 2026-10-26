@@ -1,0 +1,727 @@
+{
+  "source_sha256": "ee5259c0ab80d97d54229f119d7532916bafece5f06cabbd3638cbede14ee6bd",
+  "prepared_sha256": "b5a06d848bdcbe8ad8d00635b020fe27bd18dd6abed329d98c05c1b4bf88453d",
+  "language": "pt-BR",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "license_spdx": "LicenseRef-ARP-Scan-Manpage",
+  "segments": [
+    {
+      "id": "s001",
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": "s002",
+      "source": "arp-scan - Send ARP requests to target hosts and display responses",
+      "translation": "arp-scan — envia requisições ARP aos hosts de destino e exibe as respostas."
+    },
+    {
+      "id": "s003",
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": "s004",
+      "source": "Target hosts must be specified on the command line unless the `--file` or `--localnet` option is used.",
+      "translation": "Os hosts de destino devem ser informados na linha de comando, exceto quando se usa a opção `--file` ou `--localnet`."
+    },
+    {
+      "id": "s005",
+      "source": "Targets can be IPv4 addresses or hostnames. You can also use CIDR notation (e.g. 10.0.0.0/24), network:mask notation (e.g. 10.0.0.0:255.255.255.0) and IP ranges (e.g. 10.0.0.1-10.0.0.10). CIDR and network:netmask notation include the IP network and broadcast addresses by default unless the --exclude-broadcast option is specified.",
+      "translation": "Os alvos podem ser endereços IPv4 ou nomes de host. Também são aceitas a notação CIDR, como 10.0.0.0/24, a notação rede:máscara, como 10.0.0.0:255.255.255.0, e intervalos de IPs, como 10.0.0.1-10.0.0.10. Por padrão, as notações CIDR e rede:máscara incluem os endereços de rede e de broadcast, a menos que --exclude-broadcast seja especificada."
+    },
+    {
+      "id": "s006",
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": "s007",
+      "source": "`arp-scan` sends ARP request packets to the specified hosts and displays any responses received. The network interface can be specified with the `--interface` option. If no interface is specified, `arp-scan` will pick the lowest numbered, configured up interface (excluding loopback).",
+      "translation": "O `arp-scan` envia pacotes de requisição ARP aos hosts especificados e exibe as respostas recebidas. A interface de rede pode ser escolhida com `--interface`. Se nenhuma interface for informada, o `arp-scan` selecionará a interface ativa e configurada de menor número, excluindo loopback."
+    },
+    {
+      "id": "s008",
+      "source": "`arp-scan` uses raw sockets, which requires privileges on some systems:",
+      "translation": "O `arp-scan` usa sockets brutos, o que exige privilégios em alguns sistemas:"
+    },
+    {
+      "id": "s009",
+      "source": "Linux with POSIX.1e capabilities support using libcap:",
+      "translation": "Linux com suporte a capabilities POSIX.1e por meio da libcap:"
+    },
+    {
+      "id": "s010",
+      "source": "`arp-scan` is capabilities aware. It requires `CAP_NET_RAW` in the permitted set and only enables that capability for the required functions. use `setcap cap_net_raw+p /path/to/arp-scan` to add CAP_NET_RAW to the permitted set of the arp-scan executable. Capabilities support also makes SUID root much safer because `arp-scan` will drop all capabilities except CAP_NET_RAW and will not run with full root privileges.",
+      "translation": "O `arp-scan` reconhece capabilities. Ele exige `CAP_NET_RAW` no conjunto de capabilities permitidas e só a habilita nas funções que precisam dela. Use `setcap cap_net_raw+p /path/to/arp-scan` para acrescentar CAP_NET_RAW ao conjunto permitido do executável. Esse suporte também torna o uso de SUID root muito mais seguro, pois o `arp-scan` descarta todas as capabilities exceto CAP_NET_RAW e não executa com privilégios completos de root."
+    },
+    {
+      "id": "s011",
+      "source": "BSD and macOS:",
+      "translation": "BSD e macOS:"
+    },
+    {
+      "id": "s012",
+      "source": "You need read/write access to `/dev/bpf*`",
+      "translation": "É necessário ter acesso de leitura e escrita a `/dev/bpf*`."
+    },
+    {
+      "id": "s013",
+      "source": "Any operating system:",
+      "translation": "Qualquer sistema operacional:"
+    },
+    {
+      "id": "s014",
+      "source": "Running as root or SUID root will work on any OS but other methods are preferable where possible.",
+      "translation": "Executar como root ou com SUID root funciona em qualquer sistema operacional, mas outros métodos são preferíveis quando disponíveis."
+    },
+    {
+      "id": "s015",
+      "source": "ARP only operates on the local network, and cannot be routed. Although the ARP protocol uses IPv4 addresses, it is not an IP protocol and `arp-scan` can be used on interfaces without an IPv4 address.",
+      "translation": "ARP funciona somente na rede local e não pode ser roteado. Embora use endereços IPv4, não é um protocolo IP, e o `arp-scan` pode ser usado em interfaces sem endereço IPv4."
+    },
+    {
+      "id": "s016",
+      "source": "One ARP request is sent for each target. If a host does not respond, the request will be re-sent once more. The number of retries can be changed with the `--retry` option. Reducing the number of retries will reduce the scanning time at the risk of missing some results due to packet loss.",
+      "translation": "É enviada uma requisição ARP para cada alvo. Se um host não responder, a requisição será reenviada mais uma vez. O número de tentativas pode ser alterado com `--retry`. Reduzir esse número diminui o tempo de varredura, mas aumenta o risco de perder resultados devido à perda de pacotes."
+    },
+    {
+      "id": "s017",
+      "source": "You can specify the bandwidth that `arp-scan` will use with the `--bandwidth` option. The default is 256000 bits per second. Increasing the bandwidth will reduce scanning time, but setting the bandwidth too high may cause a high broadcast packet rate. Another way to specify the packet rate is with the `--interval` option.",
+      "translation": "A largura de banda usada pelo `arp-scan` pode ser definida com `--bandwidth`. O padrão é 256000 bits por segundo. Aumentá-la reduz o tempo da varredura, mas um valor excessivo pode gerar uma taxa elevada de pacotes de broadcast. Outra forma de definir a taxa de envio é usar `--interval`."
+    },
+    {
+      "id": "s018",
+      "source": "The time for a single-pass scan (i.e. with `--retry`=1) is:",
+      "translation": "O tempo de uma varredura de passagem única, isto é, com `--retry`=1, é:"
+    },
+    {
+      "id": "s019",
+      "source": "Equivalent mathematical notation: `time = n × i + t + o`.",
+      "translation": "Notação matemática equivalente: `time = n × i + t + o`."
+    },
+    {
+      "id": "s020",
+      "source": "Where `n` is the number of hosts, `i` is the interval (given with `--interval` or calculated from `--bandwidth`), `t` is the timeout (specified with `--timeout`) and `o` is the overhead time taken to load the target list and read the MAC/Vendor mapping files. The overhead is normally negligible (typically around 100ms) but can be reduced further by the `--quiet` option. For small lists of hosts, the timeout value will dominate, but for large lists the packet interval is the most important value.",
+      "translation": "Nessa expressão, `n` é o número de hosts; `i` é o intervalo entre pacotes, informado por `--interval` ou calculado a partir de `--bandwidth`; `t` é o tempo limite, definido por `--timeout`; e `o` é o tempo adicional necessário para carregar a lista de alvos e ler os arquivos de associação MAC/fabricante. Esse tempo adicional costuma ser desprezível, em torno de 100 ms, mas pode ser reduzido com `--quiet`. Em listas pequenas, o tempo limite é o fator predominante; em listas grandes, o intervalo entre pacotes é mais importante."
+    },
+    {
+      "id": "s021",
+      "source": "Any part of the ARP request may be modified through the use of the `--arpXXX` options as shown in the table below:",
+      "translation": "Qualquer parte da requisição ARP pode ser modificada com as opções `--arpXXX`, conforme a tabela:"
+    },
+    {
+      "id": "s022",
+      "source": "ARP Request Packet Options",
+      "translation": "Opções do pacote de requisição ARP"
+    },
+    {
+      "id": "s023",
+      "source": "Field",
+      "translation": "Campo"
+    },
+    {
+      "id": "s024",
+      "source": "Bits",
+      "translation": "Bits"
+    },
+    {
+      "id": "s025",
+      "source": "Option",
+      "translation": "Opção"
+    },
+    {
+      "id": "s026",
+      "source": "Default",
+      "translation": "Padrão"
+    },
+    {
+      "id": "s027",
+      "source": "interface h/w address",
+      "translation": "endereço de hardware da interface"
+    },
+    {
+      "id": "s028",
+      "source": "interface IPv4 address",
+      "translation": "endereço IPv4 da interface"
+    },
+    {
+      "id": "s029",
+      "source": "None",
+      "translation": "Nenhuma"
+    },
+    {
+      "id": "s030",
+      "source": "target host IPv4 address",
+      "translation": "endereço IPv4 do host de destino"
+    },
+    {
+      "id": "s031",
+      "source": "The most common option is `--arpspa`, which sets the source IPv4 address in the ARP request, allowing the ARP request to use a different source address from the interface address. This allows the use of `arp-scan` on interfaces with no IPv4 address. Note: Setting `ar$spa` to the target's IP address causes some operating systems to report an address clash when they receive an ARP request for their own address.",
+      "translation": "A opção mais comum é `--arpspa`, que define o endereço IPv4 de origem na requisição ARP. Ela permite usar um endereço de origem diferente daquele atribuído à interface e possibilita executar o `arp-scan` em interfaces sem endereço IPv4. Definir `ar$spa` como o IP do alvo faz alguns sistemas operacionais informarem um conflito de endereços quando recebem uma requisição ARP para seu próprio endereço."
+    },
+    {
+      "id": "s032",
+      "source": "You can also change the values in the Ethernet frame header as shown below:",
+      "translation": "Os valores do cabeçalho do quadro Ethernet também podem ser alterados:"
+    },
+    {
+      "id": "s033",
+      "source": "Ethernet Header Options",
+      "translation": "Opções do cabeçalho Ethernet"
+    },
+    {
+      "id": "s034",
+      "source": "Dest Address",
+      "translation": "Endereço de destino"
+    },
+    {
+      "id": "s035",
+      "source": "Source Address",
+      "translation": "Endereço de origem"
+    },
+    {
+      "id": "s036",
+      "source": "interface address",
+      "translation": "endereço da interface"
+    },
+    {
+      "id": "s037",
+      "source": "Protocol Type",
+      "translation": "Tipo de protocolo"
+    },
+    {
+      "id": "s038",
+      "source": "The `--destaddr` option which sets the destination Ethernet address is the only one that is commonly used.",
+      "translation": "A opção `--destaddr`, que define o endereço Ethernet de destino, é a única desse grupo usada com frequência."
+    },
+    {
+      "id": "s039",
+      "source": "By default, ARP responses are displayed in the following format:",
+      "translation": "Por padrão, as respostas ARP são exibidas no seguinte formato:"
+    },
+    {
+      "id": "s040",
+      "source": "Where `IPv4 Address` is the IP address of the responding target, `MAC Address` is its link-layer address and `Vendor Details` are the vendor details decoded from the hardware address. The output fields are separated by a single tab character. You can change the output format with the `--format` option.",
+      "translation": "Nesse formato, `IPv4 Address` é o endereço IP do alvo que respondeu; `MAC Address` é seu endereço de camada de enlace; e `Vendor Details` são os dados do fabricante obtidos a partir do endereço de hardware. Os campos são separados por um único caractere de tabulação. O formato de saída pode ser alterado com `--format`."
+    },
+    {
+      "id": "s041",
+      "source": "The responses are displayed in the order they are received, which can be different from the order the requests were sent because some hosts may respond quicker than others.",
+      "translation": "As respostas são exibidas na ordem de recebimento. Essa ordem pode ser diferente daquela em que as requisições foram enviadas, pois alguns hosts respondem mais rapidamente que outros."
+    },
+    {
+      "id": "s042",
+      "source": "The vendor decoding uses the files `ieee-oui.txt` and `mac-vendor.txt`. `ieee-oui.txt` is generated from the IEEE `MA-L` (OUI), `MA-M`, `MA-S` (OUI36) and `IAB` registries. `mac-vendor.txt` contains additional MAC to Vendor mappings, and can be used to add custom mappings. `get-oui` can be used to update `ieee-oui.txt` with the latest data from the IEEE registries.",
+      "translation": "A identificação do fabricante usa os arquivos `ieee-oui.txt` e `mac-vendor.txt`. O primeiro é gerado a partir dos registros IEEE `MA-L` (OUI), `MA-M`, `MA-S` (OUI36) e `IAB`. O arquivo `mac-vendor.txt` contém associações adicionais entre endereços MAC e fabricantes e permite incluir associações personalizadas. O `get-oui` atualiza `ieee-oui.txt` com os dados mais recentes dos registros IEEE."
+    },
+    {
+      "id": "s043",
+      "source": "All IPv4 hosts should respond to ARP request packets, including hosts with packet filtering such as firewalls. This makes `arp-scan` a useful tool to discover all active IPv4 hosts on the local network.",
+      "translation": "Todos os hosts IPv4 devem responder a requisições ARP, inclusive aqueles com filtragem de pacotes, como firewalls. Isso torna o `arp-scan` útil para descobrir hosts IPv4 ativos na rede local."
+    },
+    {
+      "id": "s044",
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": "s045",
+      "source": "Where an option takes a value, that value is specified as a letter in angle brackets. The letter indicates the type of data that is expected:",
+      "translation": "Quando uma opção recebe um valor, seu tipo é indicado por uma letra entre sinais de menor e maior. Essa letra representa o tipo de dado esperado:"
+    },
+    {
+      "id": "s046",
+      "source": "Character string.",
+      "translation": "Cadeia de caracteres."
+    },
+    {
+      "id": "s047",
+      "source": "Decimal integer, or hex if preceeded by 0x e.g. 2048 or 0x800.",
+      "translation": "Número inteiro decimal ou hexadecimal, se precedido por 0x; por exemplo, 2048 ou 0x800."
+    },
+    {
+      "id": "s048",
+      "source": "Floating point decimal number.",
+      "translation": "Número decimal de ponto flutuante."
+    },
+    {
+      "id": "s049",
+      "source": "MAC address, e.g. 01:23:45:67:89:ab or 01-23-45-67-89-ab (case insensitive)",
+      "translation": "Endereço MAC, como 01:23:45:67:89:ab ou 01-23-45-67-89-ab, sem distinção entre maiúsculas e minúsculas."
+    },
+    {
+      "id": "s050",
+      "source": "IPv4 address e.g. 10.0.0.1",
+      "translation": "Endereço IPv4, como 10.0.0.1."
+    },
+    {
+      "id": "s051",
+      "source": "Hex encoded binary data. No leading 0x. (case insensitive).",
+      "translation": "Dados binários codificados em hexadecimal, sem o prefixo 0x e sem distinção entre maiúsculas e minúsculas."
+    },
+    {
+      "id": "s052",
+      "source": "Something else - see option description.",
+      "translation": "Outro tipo; consulte a descrição da opção."
+    },
+    {
+      "id": "s053",
+      "source": "General Options",
+      "translation": "Opções gerais"
+    },
+    {
+      "id": "s054",
+      "source": "Display this usage message and exit.",
+      "translation": "Exibe a mensagem de uso e encerra."
+    },
+    {
+      "id": "s055",
+      "source": "Display verbose progress messages. Can be used than once to increase verbosity. Max=3.",
+      "translation": "Exibe mensagens detalhadas de progresso. A opção pode ser repetida para aumentar o nível de detalhe, até o máximo de 3."
+    },
+    {
+      "id": "s056",
+      "source": "Display program version and exit. Displays the version, license details, libpcap version, and whether POSIX.1e capability support is included.",
+      "translation": "Exibe a versão do programa e encerra. Inclui detalhes da licença, a versão da libpcap e a indicação de suporte a capabilities POSIX.1e."
+    },
+    {
+      "id": "s057",
+      "source": "Use network interface `<s>`. If this option is not specified, arp-scan will search the system interface list for the lowest numbered, configured up interface (excluding loopback).",
+      "translation": "Usa a interface de rede `<s>`. Se ela não for especificada, o arp-scan procurará, na lista de interfaces do sistema, a interface ativa e configurada de menor número, excluindo loopback."
+    },
+    {
+      "id": "s058",
+      "source": "Host Selection",
+      "translation": "Seleção de hosts"
+    },
+    {
+      "id": "s059",
+      "source": "Read hostnames or addresses from the specified file. One name or address pattern per line. Use \"-\" for stdin.",
+      "translation": "Lê nomes de host ou endereços do arquivo especificado, com um nome ou padrão de endereços por linha. Use \"-\" para ler da entrada padrão, stdin."
+    },
+    {
+      "id": "s060",
+      "source": "Generate addresses from interface configuration. Generates list from interface address and netmask (network and broadcast included unless the --exclude-broadcast option is specified). You cannot use the `--file` option or give targets on the command line with this option. Use `--interface` to specify the interface if you are not using the first adapter.",
+      "translation": "Gera endereços a partir da configuração da interface. A lista é formada pelo endereço e pela máscara de rede da interface, incluindo rede e broadcast, salvo quando --exclude-broadcast é usada. Essa opção não pode ser combinada com `--file` nem com alvos informados na linha de comando. Use `--interface` para escolher outro adaptador que não seja o primeiro."
+    },
+    {
+      "id": "s061",
+      "source": "Exclude the IP network and broadcast addresses from ranges generated with network/bits and network:netmask address patterns as well as the range generated from the interface configuration with the --localnet option.",
+      "translation": "Exclui os endereços de rede e de broadcast dos intervalos gerados pelas notações rede/bits e rede:máscara e do intervalo obtido da configuração da interface com --localnet."
+    },
+    {
+      "id": "s062",
+      "source": "MAC/Vendor Mapping Files",
+      "translation": "Arquivos de associação MAC/fabricante"
+    },
+    {
+      "id": "s063",
+      "source": "Use IEEE registry vendor mapping file `<s>`. Default is `ieee-oui.txt` in the current directory. If that is not found or cannot be opened `@PKGDATADIR@/ieee-oui.txt` is used.",
+      "translation": "Usa o arquivo `<s>` de associações entre registros IEEE e fabricantes. O padrão é `ieee-oui.txt` no diretório atual. Se ele não for encontrado ou não puder ser aberto, será usado `@PKGDATADIR@/ieee-oui.txt`."
+    },
+    {
+      "id": "s064",
+      "source": "Use custom vendor mapping file `<s>`. Default is `mac-vendor.txt` in the current directory. If that is not found or cannot be opened `@PKGSYSCONFDIR@/mac-vendor.txt` is used.",
+      "translation": "Usa o arquivo personalizado `<s>` de associações de fabricantes. O padrão é `mac-vendor.txt` no diretório atual. Se ele não for encontrado ou não puder ser aberto, será usado `@PKGSYSCONFDIR@/mac-vendor.txt`."
+    },
+    {
+      "id": "s065",
+      "source": "Output Format Control",
+      "translation": "Controle do formato de saída"
+    },
+    {
+      "id": "s066",
+      "source": "Display minimal output for each responding host. Only the IP address and MAC address are displayed. Reduces memory usage by about 5MB because the vendor mapping files are not used. Only the `${ip}` and `${mac}` fields are available for the `--format` option if `--quiet` is specified.",
+      "translation": "Exibe uma saída mínima para cada host que respondeu, mostrando apenas os endereços IP e MAC. Reduz o consumo de memória em cerca de 5 MB, pois os arquivos de fabricantes não são usados. Quando `--quiet` é especificada, somente os campos `${ip}` e `${mac}` ficam disponíveis para `--format`."
+    },
+    {
+      "id": "s067",
+      "source": "Supress header and footer text.  Only display the responding host details. Useful if the output will be parsed by a script.",
+      "translation": "Suprime os textos de cabeçalho e rodapé, exibindo apenas os detalhes dos hosts que responderam. É útil quando a saída será processada por um script."
+    },
+    {
+      "id": "s068",
+      "source": "Don't display duplicate packets. By default duplicate packets are flagged with `(DUP: n)` where `n` is the number of times this host has responded.",
+      "translation": "Não exibe pacotes duplicados. Por padrão, eles são marcados com `(DUP: n)`, em que `n` é o número de respostas recebidas desse host."
+    },
+    {
+      "id": "s069",
+      "source": "Calculate and display the packet round-trip time. The time is displayed in milliseconds and fractional microseconds. Makes the `${rtt}` field available for `--format`.",
+      "translation": "Calcula e exibe o tempo de ida e volta dos pacotes, em milissegundos e frações de microssegundo. Disponibiliza o campo `${rtt}` para `--format`."
+    },
+    {
+      "id": "s070",
+      "source": "Specify the output format string. The format is a string that will be output for each responding host. Host details can be included by inserting references to fields using the syntax \"`${field[;width]}`\". Fields are displayed right- aligned unless the width is negative in which case left alignment will be used. The following case- insensitive field names are recognised:",
+      "translation": "Define a cadeia de formato emitida para cada host que respondeu. Os dados do host podem ser incluídos por referências a campos com a sintaxe \"`${field[;width]}`\". Os campos são alinhados à direita, exceto quando a largura é negativa; nesse caso, são alinhados à esquerda. Os nomes de campo abaixo não diferenciam maiúsculas e minúsculas:"
+    },
+    {
+      "id": "s071",
+      "source": "Description",
+      "translation": "Descrição"
+    },
+    {
+      "id": "s072",
+      "source": "Host IPv4 address in dotted quad format",
+      "translation": "Endereço IPv4 do host em notação decimal pontuada"
+    },
+    {
+      "id": "s073",
+      "source": "Host name if `--resolve` option given",
+      "translation": "Nome do host, quando `--resolve` é usada"
+    },
+    {
+      "id": "s074",
+      "source": "Host MAC address xx:xx:xx:xx:xx:xx",
+      "translation": "Endereço MAC do host, no formato xx:xx:xx:xx:xx:xx"
+    },
+    {
+      "id": "s075",
+      "source": "Ethernet source addr if different",
+      "translation": "Endereço Ethernet de origem, quando diferente"
+    },
+    {
+      "id": "s076",
+      "source": "Vendor details string",
+      "translation": "Texto com os dados do fabricante"
+    },
+    {
+      "id": "s077",
+      "source": "Padding after ARP packet in hex if nonzero",
+      "translation": "Preenchimento após o pacote ARP, em hexadecimal, quando diferente de zero"
+    },
+    {
+      "id": "s078",
+      "source": "Framing type if not Ethernet_II",
+      "translation": "Tipo de enquadramento, quando diferente de Ethernet_II"
+    },
+    {
+      "id": "s079",
+      "source": "802.1Q VLAN ID if present",
+      "translation": "Identificador de VLAN 802.1Q, quando presente"
+    },
+    {
+      "id": "s080",
+      "source": "ARP protocol if not 0x0800",
+      "translation": "Protocolo ARP, quando diferente de 0x0800"
+    },
+    {
+      "id": "s081",
+      "source": "Packet number for duplicate packets (>1)",
+      "translation": "Número do pacote para respostas duplicadas, maior que 1"
+    },
+    {
+      "id": "s082",
+      "source": "Round trip time if `--rtt` option given",
+      "translation": "Tempo de ida e volta, quando `--rtt` é usada"
+    },
+    {
+      "id": "s083",
+      "source": "Host IPv4 address as a 32-bit integer",
+      "translation": "Endereço IPv4 do host como inteiro de 32 bits"
+    },
+    {
+      "id": "s084",
+      "source": "Only the `${ip}` and `${mac}` fields are available if the `--quiet` option is specified.",
+      "translation": "Somente os campos `${ip}` e `${mac}` ficam disponíveis quando `--quiet` é especificada."
+    },
+    {
+      "id": "s085",
+      "source": "Any characters that are not fields are output verbatim. \"\\\" introduces escapes:",
+      "translation": "Os caracteres que não representam campos são emitidos literalmente. A barra invertida \"\\\" introduz sequências de escape:"
+    },
+    {
+      "id": "s086",
+      "source": "newline",
+      "translation": "nova linha"
+    },
+    {
+      "id": "s087",
+      "source": "carriage return",
+      "translation": "retorno de carro"
+    },
+    {
+      "id": "s088",
+      "source": "tab",
+      "translation": "tabulação"
+    },
+    {
+      "id": "s089",
+      "source": "suppress special meaning for following character",
+      "translation": "suprimir o significado especial do caractere seguinte"
+    },
+    {
+      "id": "s090",
+      "source": "You should enclose the `--format` argument in 'single quotes' to protect special characters from the shell.",
+      "translation": "Coloque o argumento de `--format` entre aspas simples para proteger os caracteres especiais da interpretação pelo shell."
+    },
+    {
+      "id": "s091",
+      "source": "Examples:",
+      "translation": "Exemplos:"
+    },
+    {
+      "id": "s092",
+      "source": "Original tbl format examples (source notation)",
+      "translation": "Exemplos originais de formatação em notação da fonte tbl; os escapes foram preservados, sem tratá-los como uma receita de shell pronta para execução:"
+    },
+    {
+      "id": "s093",
+      "source": "Host List Randomisation",
+      "translation": "Embaralhamento da lista de hosts"
+    },
+    {
+      "id": "s094",
+      "source": "Randomise the target host list.",
+      "translation": "Embaralha a lista de hosts de destino."
+    },
+    {
+      "id": "s095",
+      "source": "Seed the pseudo random number generator. Useful if you want a reproducible `--random` order.",
+      "translation": "Define a semente do gerador de números pseudoaleatórios. É útil quando se deseja uma ordem reproduzível com `--random`."
+    },
+    {
+      "id": "s096",
+      "source": "Output Timing and Retry",
+      "translation": "Temporização de saída e novas tentativas"
+    },
+    {
+      "id": "s097",
+      "source": "Set total number of attempts per host to `<i>`, default=2.",
+      "translation": "Define o número total de tentativas por host como `<i>`. O padrão é 2."
+    },
+    {
+      "id": "s098",
+      "source": "Set backoff factor to `<f>`, default=1.50. Multiplies timeout by `<f>` for each pass.",
+      "translation": "Define o fator de recuo como `<f>`, com padrão 1.50. O tempo limite é multiplicado por `<f>` a cada passagem."
+    },
+    {
+      "id": "s099",
+      "source": "Set initial per host timeout to `<i>` ms, default=500. This timeout is for the first packet sent to each host. subsequent timeouts are multiplied by the backoff factor which is set with `--backoff`.",
+      "translation": "Define o tempo limite inicial de cada host como `<i>` milissegundos, com padrão 500. Esse valor vale para o primeiro pacote enviado a cada host. Os tempos seguintes são multiplicados pelo fator definido em `--backoff`."
+    },
+    {
+      "id": "s100",
+      "source": "Set minimum packet interval to `<x>`. This controls the outgoing bandwidth usage by limiting the packet rate. If you want to use up to a given bandwidth it is easier to use the --bandwidth option instead. The interval is in milliseconds, or microseconds if \"u\" is appended.",
+      "translation": "Define o intervalo mínimo entre pacotes como `<x>`. Isso controla a largura de banda de saída por meio da taxa de envio. Para estabelecer diretamente uma largura de banda máxima, é mais simples usar --bandwidth. O intervalo é dado em milissegundos ou, se houver o sufixo \"u\", em microssegundos."
+    },
+    {
+      "id": "s101",
+      "source": "Set outbound bandwidth to `<x>`, default=256000. The value is in bits per second. Append `K` for kilobits or `M` for megabits (decimal multiples). You cannot specify both `--interval` and `--bandwidth`.",
+      "translation": "Define a largura de banda de saída como `<x>`, com padrão 256000 bits por segundo. Acrescente `K` para quilobits ou `M` para megabits, usando múltiplos decimais. Não é possível especificar `--interval` e `--bandwidth` simultaneamente."
+    },
+    {
+      "id": "s102",
+      "source": "DNS Resolution",
+      "translation": "Resolução DNS"
+    },
+    {
+      "id": "s103",
+      "source": "Targets must be IP addresses, not hostnames. Can reduce startup time for large target lists.",
+      "translation": "Exige que os alvos sejam endereços IP, não nomes de host. Pode reduzir o tempo de inicialização de listas extensas."
+    },
+    {
+      "id": "s104",
+      "source": "Resolve responding addresses to hostnames. The default output format will display the hostname instead of the IPv4 address. This option makes the `${name}` field available for the `--format` option.",
+      "translation": "Resolve os endereços que responderam para nomes de host. O formato padrão passa a exibir o nome em vez do endereço IPv4. Essa opção disponibiliza o campo `${name}` para `--format`."
+    },
+    {
+      "id": "s105",
+      "source": "Output ARP Packet",
+      "translation": "Pacote ARP de saída"
+    },
+    {
+      "id": "s106",
+      "source": "Set the ARP source Ethernet address. Sets the 48-bit `ar$sha` field but does not change the hardware address in the frame header, see `--srcaddr` for how to change that address. Default is the Ethernet address of the outgoing interface.",
+      "translation": "Define o endereço Ethernet de origem do ARP, no campo `ar$sha` de 48 bits, sem modificar o endereço de hardware do cabeçalho do quadro. Para alterar esse outro endereço, use `--srcaddr`. O padrão é o endereço Ethernet da interface de saída."
+    },
+    {
+      "id": "s107",
+      "source": "Set the ARP target Ethernet address. Sets the 48-bit `ar$tha` field. The default is zero, because this field is not used for ARP request packets.",
+      "translation": "Define o endereço Ethernet de destino do ARP, no campo `ar$tha` de 48 bits. O padrão é zero, pois esse campo não é usado em requisições ARP."
+    },
+    {
+      "id": "s108",
+      "source": "Set the ARP hardware type, default=`1`. Sets the 16-bit `ar$hrd` field. The default is `1` (`ARPHRD_ETHER`). Many operating systems also respond to `6` (`ARPHRD_IEEE802`).",
+      "translation": "Define o tipo de hardware do ARP, com padrão `1`, no campo `ar$hrd` de 16 bits. O valor padrão é `1` (`ARPHRD_ETHER`); muitos sistemas operacionais também respondem a `6` (`ARPHRD_IEEE802`)."
+    },
+    {
+      "id": "s109",
+      "source": "Set the ARP protocol type, default=`0x0800`. Sets the 16-bit `ar$pro` field. Most operating systems only respond to `0x0800` (IPv4).",
+      "translation": "Define o tipo de protocolo do ARP, com padrão `0x0800`, no campo `ar$pro` de 16 bits. A maioria dos sistemas operacionais responde somente a `0x0800`, correspondente a IPv4."
+    },
+    {
+      "id": "s110",
+      "source": "Set the hardware address length, default=`6`. Sets the 8-bit `ar$hln` field. The lengths of the `ar$sha` and `ar$tha` fields are not changed by this option; it only changes the `ar$hln` field.",
+      "translation": "Define o comprimento do endereço de hardware, com padrão `6`, no campo `ar$hln` de 8 bits. Os comprimentos dos campos `ar$sha` e `ar$tha` não são alterados; somente `ar$hln` é modificado."
+    },
+    {
+      "id": "s111",
+      "source": "Set the protocol address length, default=`4`. Sets the 8-bit `ar$pln` field. The lengths of the `ar$spa` and `ar$tpa` fields are not changed by this option; it only changes the `ar$pln` field.",
+      "translation": "Define o comprimento do endereço de protocolo, com padrão `4`, no campo `ar$pln` de 8 bits. Os comprimentos dos campos `ar$spa` e `ar$tpa` não são alterados; somente `ar$pln` é modificado."
+    },
+    {
+      "id": "s112",
+      "source": "Specify the ARP operation, default=`1`. Sets the 16-bit `ar$op` field. Most operating systems only respond to the value 1 (ARPOP_REQUEST).",
+      "translation": "Define a operação ARP, com padrão `1`, no campo `ar$op` de 16 bits. A maioria dos sistemas operacionais responde somente ao valor 1, ARPOP_REQUEST."
+    },
+    {
+      "id": "s113",
+      "source": "Set the source IPv4 address. The address should be in dotted quad format, or the string \"`dest`\" which sets the source address to the target host address. The default is the outgoing interface address. Sets the 32-bit `ar$spa` field. Some operating systems only respond if the source address is within the network of the receiving interface. Setting `ar$spa` to the destination IP address can cause some operating systems to report an address clash.",
+      "translation": "Define o endereço IPv4 de origem em notação decimal pontuada. O valor também pode ser a cadeia \"`dest`\", que usa o endereço do host de destino como origem. O padrão é o endereço da interface de saída. A opção modifica `ar$spa`, de 32 bits. Alguns sistemas só respondem se a origem pertencer à rede da interface receptora. Definir `ar$spa` como o IP de destino pode provocar a indicação de conflito de endereços em alguns sistemas."
+    },
+    {
+      "id": "s114",
+      "source": "Output Ethernet Header",
+      "translation": "Cabeçalho Ethernet de saída"
+    },
+    {
+      "id": "s115",
+      "source": "Set the source Ethernet MAC address. Default is the interface MAC address. This sets the address in the Ethernet header. It does not change the address in the ARP packet: use `--arpsha` to change that address.",
+      "translation": "Define o endereço MAC Ethernet de origem, cujo padrão é o MAC da interface. Modifica o cabeçalho Ethernet, não o endereço dentro do pacote ARP; para este último, use `--arpsha`."
+    },
+    {
+      "id": "s116",
+      "source": "Set the destination MAC address. Sets the destination address in the Ethernet header. Default is `ff:ff:ff:ff:ff:ff` (broadcast) Hosts also respond if the request is sent to their unicast address, or to a multicast address they are listening on.",
+      "translation": "Define o endereço MAC de destino no cabeçalho Ethernet. O padrão é `ff:ff:ff:ff:ff:ff`, broadcast. Os hosts também respondem a requisições destinadas ao seu endereço unicast ou a um endereço multicast que estejam escutando."
+    },
+    {
+      "id": "s117",
+      "source": "Sets the Ethernet protocol type, default=`0x0806`. This sets the protocol type field in the Ethernet header.",
+      "translation": "Define o tipo de protocolo no cabeçalho Ethernet, com padrão `0x0806`."
+    },
+    {
+      "id": "s118",
+      "source": "Use RFC 1042 LLC/SNAP encapsulation for 802.2 networks. `arp-scan` will decode and display ARP responses in both Ethernet-II and IEEE 802.2 formats irrespective of this option.",
+      "translation": "Usa o encapsulamento LLC/SNAP da RFC 1042 para redes 802.2. Independentemente dessa opção, o `arp-scan` decodifica e exibe respostas ARP em Ethernet-II e IEEE 802.2."
+    },
+    {
+      "id": "s119",
+      "source": "Use 802.1Q tagging with VLAN id `<i>`. The id should be in the range 0 to 4095. arp-scan will decode and display ARP responses in 802.1Q format irrespective of this option.",
+      "translation": "Usa marcação 802.1Q com o identificador de VLAN `<i>`, que deve estar entre 0 e 4095. O arp-scan decodifica e exibe respostas ARP em 802.1Q independentemente dessa opção."
+    },
+    {
+      "id": "s120",
+      "source": "Misc Options",
+      "translation": "Opções diversas"
+    },
+    {
+      "id": "s121",
+      "source": "Exit after the specified number of hosts have responded. `arp-scan` will exit with status 1 if the number of responding hosts is less than the limit. Can be used in scripts to check if fewer hosts respond without having to parse the output.",
+      "translation": "Encerra após o número especificado de hosts responder. O `arp-scan` retorna código 1 se a quantidade de respostas for menor que o limite. Isso permite verificar essa condição em scripts sem analisar a saída."
+    },
+    {
+      "id": "s122",
+      "source": "Write received packets to pcap savefile `<s>`. ARP responses will be written to the specified file as well as being decoded and displayed.",
+      "translation": "Grava os pacotes recebidos no arquivo pcap `<s>`. As respostas ARP são salvas nesse arquivo, além de serem decodificadas e exibidas."
+    },
+    {
+      "id": "s123",
+      "source": "Set the pcap snap length to `<i>`. Default=64. Specifies the frame capture length, including the Ethernet header. The default is normally sufficient.",
+      "translation": "Define o tamanho de captura pcap, snap length, como `<i>`, com padrão 64. O tamanho inclui o cabeçalho Ethernet, e o padrão normalmente é suficiente."
+    },
+    {
+      "id": "s124",
+      "source": "Set number of send attempts, default=20.",
+      "translation": "Define o número de tentativas de envio, com padrão 20."
+    },
+    {
+      "id": "s125",
+      "source": "Set interval between send attempts. Interval is in milliseconds or microseconds if \"u\" is appended. default=5.",
+      "translation": "Define o intervalo entre tentativas de envio, em milissegundos ou em microssegundos se houver o sufixo \"u\". O padrão é 5."
+    },
+    {
+      "id": "s126",
+      "source": "Specify padding after packet data. Set padding after the ARP request to hex value <h>.",
+      "translation": "Define um preenchimento após os dados do pacote. Acrescenta ao final da requisição ARP o valor hexadecimal <h>."
+    },
+    {
+      "id": "s127",
+      "source": "EXIT STATUS",
+      "translation": "CÓDIGO DE SAÍDA"
+    },
+    {
+      "id": "s128",
+      "source": "`arp-scan` will exit with 0 on successful completion or >0 if an error was encountered.",
+      "translation": "O `arp-scan` retorna 0 quando termina com sucesso e um valor maior que 0 quando ocorre um erro."
+    },
+    {
+      "id": "s129",
+      "source": "If the `--limit` option is specified, `arp-scan` will also exit with a non-zero exit code if the number of responding hosts is less than the specified limit.",
+      "translation": "Quando `--limit` é especificada, o `arp-scan` também retorna um código diferente de zero se a quantidade de hosts que responderam for menor que o limite."
+    },
+    {
+      "id": "s130",
+      "source": "FILES",
+      "translation": "ARQUIVOS"
+    },
+    {
+      "id": "s131",
+      "source": "List of IEEE OUI (Organisationally Unique Identifier) to vendor mappings.",
+      "translation": "Lista de associações entre identificadores OUI da IEEE, Organisationally Unique Identifier, e fabricantes."
+    },
+    {
+      "id": "s132",
+      "source": "List of other Ethernet MAC to vendor mappings, including local additions.",
+      "translation": "Lista de outras associações entre endereços MAC Ethernet e fabricantes, incluindo acréscimos locais."
+    },
+    {
+      "id": "s133",
+      "source": "EXAMPLES",
+      "translation": "EXEMPLOS"
+    },
+    {
+      "id": "s134",
+      "source": "Simple Scan",
+      "translation": "Varredura simples"
+    },
+    {
+      "id": "s135",
+      "source": "Scan the default network using the interface IPv4 configuration to generate the list of hosts to scan.",
+      "translation": "Varre a rede padrão, usando a configuração IPv4 da interface para gerar a lista de hosts."
+    },
+    {
+      "id": "s136",
+      "source": "Output Formatting",
+      "translation": "Formatação de saída"
+    },
+    {
+      "id": "s137",
+      "source": "Scan all hosts in `10.0.0.0/24` using interface `eth0`. Calculate round-trip time and display in aligned columns using a custom format.",
+      "translation": "Varre todos os hosts de `10.0.0.0/24` pela interface `eth0`, calcula o tempo de ida e volta e exibe colunas alinhadas com um formato personalizado."
+    },
+    {
+      "id": "s138",
+      "source": "CSV Output",
+      "translation": "Saída CSV"
+    },
+    {
+      "id": "s139",
+      "source": "`--plain` removes extraneous output.",
+      "translation": "`--plain` remove a saída adicional."
+    },
+    {
+      "id": "s140",
+      "source": "SEE ALSO",
+      "translation": "VEJA TAMBÉM"
+    },
+    {
+      "id": "s141",
+      "source": "[https://github.com/royhills/arp-scan/wiki](https://github.com/royhills/arp-scan/wiki) The arp-scan wiki page.",
+      "translation": "[https://github.com/royhills/arp-scan/wiki](https://github.com/royhills/arp-scan/wiki) — wiki do arp-scan."
+    },
+    {
+      "id": "s142",
+      "source": "[https://github.com/royhills/arp-scan](https://github.com/royhills/arp-scan) The arp-scan homepage.",
+      "translation": "[https://github.com/royhills/arp-scan](https://github.com/royhills/arp-scan) — página do projeto arp-scan."
+    },
+    {
+      "id": "s143",
+      "source": "Original license notice",
+      "translation": "Aviso de licença original"
+    }
+  ],
+  "copyright_notice": ".\\\" Copyright (C) Roy Hills\n.\\\"\n.\\\" Copying and distribution of this file, with or without modification,\n.\\\" are permitted in any medium without royalty provided the copyright\n.\\\" notice and this notice are preserved.\n.\\\"\n",
+  "license_file": "LICENSES/LicenseRef-ARP-Scan-Manpage.txt"
+}

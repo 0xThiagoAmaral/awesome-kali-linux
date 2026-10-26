@@ -8,8 +8,8 @@ tags: ["documentation", "offline"]
 
 # Documentação offline — acervo
 
-**24 ferramentas com notas importadas; 46 documentos disponíveis.**
-43 traduções automáticas, 2 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
+**24 ferramentas com notas importadas; 47 documentos disponíveis.**
+43 traduções automáticas, 3 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
 
 Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.
 
@@ -22,18 +22,18 @@ Estas páginas preservam a documentação adquirida, não substituem manuais nã
 | altdns | [README.md](../02-Tools/altdns/altdns-documentacao.md) | Pendente | Apache-2.0 | Revisão pendente |
 | apple-bleee | [README.md](../02-Tools/apple-bleee/apple-bleee-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
 | arjun | [README.md](../02-Tools/arjun/arjun-documentacao.md) | Pendente | AGPL-3.0 | Revisão pendente |
-| arp-scan | [README.md](../02-Tools/arp-scan/arp-scan-documentacao.md) · [arp-fingerprint.1](../02-Tools/arp-scan/arp-scan-arp-fingerprint-1.md) | [Cheatsheet local](../02-Tools/arp-scan/arp-fingerprint-cheatsheet.md) | GPL-3.0; LicenseRef-ARP-Fingerprint-Manpage | Revisão pendente |
+| arp-scan | [README.md](../02-Tools/arp-scan/arp-scan-documentacao.md) · [arp-fingerprint.1](../02-Tools/arp-scan/arp-scan-arp-fingerprint-1.md) · [arp-scan.1.dist](../02-Tools/arp-scan/arp-scan-arp-scan-1-dist.md) | [arp-fingerprint — cheatsheet](../02-Tools/arp-scan/arp-fingerprint-cheatsheet.md) · [arp-scan — cheatsheet](../02-Tools/arp-scan/arp-scan-cheatsheet.md) | GPL-3.0; LicenseRef-ARP-Fingerprint-Manpage; LicenseRef-ARP-Scan-Manpage | Revisão pendente |
 | arsenal-ng | [README.md](../02-Tools/arsenal-ng/arsenal-ng-documentacao.md) | Pendente | MIT | Revisão pendente |
 | assetfinder | [README.md](../02-Tools/assetfinder/assetfinder-documentacao.md) | [Exemplos upstream](../02-Tools/assetfinder/assetfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | atomic-operator | [README.md](../02-Tools/atomic-operator/atomic-operator-documentacao.md) | Pendente | MIT | Revisão pendente |
 | autorecon | [README.md](../02-Tools/autorecon/autorecon-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
-| axel | [README.md](../02-Tools/axel/axel-documentacao.md) · [doc/axel.txt](../02-Tools/axel/axel-doc-axel-txt.md) | [Cheatsheet local](../02-Tools/axel/axel-cheatsheet.md) | GPL-2.0 | Revisão pendente |
+| axel | [README.md](../02-Tools/axel/axel-documentacao.md) · [doc/axel.txt](../02-Tools/axel/axel-doc-axel-txt.md) | [axel — cheatsheet](../02-Tools/axel/axel-cheatsheet.md) | GPL-2.0 | Revisão pendente |
 | azurehound | [README.md](../02-Tools/azurehound/azurehound-documentacao.md) | Pendente | GPL-3.0 | Revisão pendente |
 | b374k | [README.md](../02-Tools/b374k/b374k-documentacao.md) | Pendente | MIT | Revisão pendente |
 | backdoor-factory | [README.md](../02-Tools/backdoor-factory/backdoor-factory-documentacao.md) | Pendente | BSD-3-Clause | Revisão pendente |
 | berate-ap | [README.md](../02-Tools/berate-ap/berate-ap-documentacao.md) | Pendente | BSD-2-Clause | Revisão pendente |
 | feroxbuster | [README.md](../02-Tools/feroxbuster/feroxbuster-documentacao.md) | [Exemplos upstream](../02-Tools/feroxbuster/feroxbuster-cheatsheet-upstream.md) | MIT | Revisão pendente |
-| ffuf | [README.md](../02-Tools/ffuf/ffuf-documentacao.md) | [Exemplos upstream](../02-Tools/ffuf/ffuf-cheatsheet-upstream.md) · [Cheatsheet local](../02-Tools/ffuf/ffuf-cheatsheet.md) | MIT | Revisão pendente |
+| ffuf | [README.md](../02-Tools/ffuf/ffuf-documentacao.md) | [Exemplos upstream](../02-Tools/ffuf/ffuf-cheatsheet-upstream.md) · [ffuf — cheatsheet](../02-Tools/ffuf/ffuf-cheatsheet.md) | MIT | Revisão pendente |
 | gobuster | [README.md](../02-Tools/gobuster/gobuster-documentacao.md) | [Exemplos upstream](../02-Tools/gobuster/gobuster-cheatsheet-upstream.md) | Apache-2.0 | Revisão pendente |
 | katana | [README.md](../02-Tools/katana/katana-documentacao.md) | [Exemplos upstream](../02-Tools/katana/katana-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | naabu | [README.md](../02-Tools/naabu/naabu-documentacao.md) | [Exemplos upstream](../02-Tools/naabu/naabu-cheatsheet-upstream.md) | MIT | Revisão pendente |

@@ -10,6 +10,11 @@ BT=chr(96)
 F=BT*3
 
 class DocumentationPipelineTests(unittest.TestCase):
+    def test_heading_slug_preserves_code_metavariable_text(self):
+        from import_translate_docs import slug
+        self.assertEqual(slug(BT+'<s>'+BT),'s')
+        self.assertEqual(slug('<span>Title</span>'),'title')
+
     def test_shell_comments_are_not_document_headings(self):
         source=F+'bash\n# apt update\nprintf ok\n'+F+'\n'
         self.assertEqual(markdown_headings(source),[])

@@ -1,0 +1,46 @@
+{
+  "source_kind": "installed-kali-package",
+  "package": "arping",
+  "binary_version": "2.28-1",
+  "source_package": "arping",
+  "source_version": "2.28-1",
+  "license_review": {
+    "basis": "The package DEP5 Files: * covers the selected arping manual as GPL-2+ (version 2 or later); the Debian subtree is also GPL-2+. No conflicting per-file license notice is present in the selected manual. Entire package copyright and GPL-2 text retained.",
+    "review_method": "assistant-source-inspection",
+    "independent_legal_review": false,
+    "selected_document_sha256": "de74f6c4e808c9fb7003e4ad03c1fa0df98cf4c677b9cd4aeb647a3316f444d8",
+    "package_copyright_sha256": "70646c8d34b3c7c1616b95b5b1726eda542aa4525fb248b60003f85b7e276c24"
+  },
+  "documents": [
+    {
+      "path": "arping.8",
+      "installed_path": "/usr/share/man/man8/arping.8.gz",
+      "sha256": "de74f6c4e808c9fb7003e4ad03c1fa0df98cf4c677b9cd4aeb647a3316f444d8",
+      "compressed_sha256": "872e704775f42258df83bc5ba66180eda2c1976c50fed4fd58357d307ab83247",
+      "bytes": 6861,
+      "language": "en",
+      "source_format": "packaged-man-roff-v1",
+      "source_url": "https://www.habets.pp.se/synscan/programs.php?prog=arping",
+      "source_url_role": "project-reference-not-exact-file",
+      "compressed_asset": "originals/arping.8.gz",
+      "runtime_evidence_file": "arping-help-tests.json"
+    }
+  ],
+  "retained_files": [
+    {
+      "path": "COPYRIGHT.package.txt",
+      "bytes": 1124,
+      "sha256": "70646c8d34b3c7c1616b95b5b1726eda542aa4525fb248b60003f85b7e276c24"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 17984,
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    {
+      "path": "originals/arping.8.gz",
+      "bytes": 2714,
+      "sha256": "872e704775f42258df83bc5ba66180eda2c1976c50fed4fd58357d307ab83247"
+    }
+  ]
+}

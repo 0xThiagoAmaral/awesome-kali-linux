@@ -3,10 +3,11 @@
 """Non-executing man(7) subset for package sources. Unknown syntax fails closed."""
 import re
 import shlex
+from package_layout_repairs import repair_arping_layout
 
 BT=chr(96)
 STYLES={'B','I','BR','BI','RB','RI','IR','IB'}
-ALLOWED=STYLES|{'TH','SH','SS','P','PP','TP','IP','nf','fi','fam','in','sp'}
+ALLOWED=STYLES|{'TH','SH','SS','P','PP','TP','IP','nf','fi','fam','in','sp','RS'}
 
 def arguments(value):
     lexer=shlex.shlex(value,posix=True)
@@ -16,11 +17,13 @@ def arguments(value):
     return list(lexer)
 
 def decode(value):
-    value=value.replace(r'\-', '-').replace(r'\&','').replace(r'\~',' ').replace(r'\:','').replace(r'\(cq',"'")
+    if '\ue000' in value: raise ValueError('Reserved decoder sentinel in source')
+    value=value.replace(r'\\','\ue000').replace(r'\.','.')
+    value=value.replace(r'\-', '-').replace(r'\&','').replace(r'\~',' ').replace(r'\:','').replace(r'\(cq',"'").replace(r'\(dq','"')
     value=re.sub(r'\\f(?:[BIRP]|\([A-Z]{2})','',value)
     if '\\' in value:
         raise ValueError('Unknown package-manual escape: '+value)
-    return value
+    return value.replace('\ue000','\\')
 
 def styled(kind,args,literal=False):
     values=[decode(x) for x in args]
@@ -33,6 +36,17 @@ def styled(kind,args,literal=False):
     return plain if re.fullmatch(r'<https?://[^ >]+>',plain) else result.replace(BT*2,'')
 
 def prepare_packaged_manual(source,tool):
+    if tool=='arping':
+        original=source
+        source,repairs=repair_arping_layout(source)
+        rendered,evidence=_prepare_packaged_manual(source,tool)
+        evidence.update(source_lines=len(original.splitlines()),layout_adjusted_lines=len(source.splitlines()),
+            layout_repairs=repairs,line_number_basis='Layout-adjusted source; exact original is retained separately')
+        evidence['presentation_changes'].append('Six exact-source-bound layout repairs recorded explicitly; all non-request text lines unchanged')
+        return rendered,evidence
+    return _prepare_packaged_manual(source,tool)
+
+def _prepare_packaged_manual(source,tool):
     units=[]
     for number,line in enumerate(source.splitlines(keepends=True),1):
         unit={'raw':line,'first_line':number}
@@ -56,7 +70,7 @@ def prepare_packaged_manual(source,tool):
     if title[0].lower()!=tool:
         raise ValueError('Package/manual name mismatch')
     out=['# '+tool+'\n\n']
-    paragraph=[]; term=[]; literal=[]; blocks=[]; sections=[]; options=[]; layouts=[]
+    paragraph=[]; term=[]; literal=[]; blocks=[]; sections=[]; options=[]; layouts=[]; tables=[]
     section=None; nofill=False; in_term=False; first_literal=None
     def flush():
         if paragraph:
@@ -77,8 +91,18 @@ def prepare_packaged_manual(source,tool):
             if section=='SYNOPSIS' and not nofill:
                 body='\n\n'.join(' '.join(p.splitlines()) for p in body.strip().split('\n\n'))+'\n'
             if BT*3 in body: raise ValueError('Fence collision')
-            out.append(BT*3+'text\n'+body+BT*3+'\n\n')
-            blocks.append({'first_line':first_literal,'body':body,'origin':'decoded non-executing roff presentation'})
+            if tool=='nbtscan' and section=='NETBIOS SUFFIXES':
+                rows=[re.split(r'\s{2,}',line.strip()) for line in body.splitlines() if line.strip() and not re.fullmatch(r'[-\s]+',line)]
+                assert rows[0]==['Name','Number(h)','Type','Usage'],'Unreviewed NetBIOS reference-table header'
+                assert all(len(row)==4 for row in rows),'Unreviewed NetBIOS reference-table columns'
+                out.append('| '+' | '.join(rows[0])+' |\n|---|---|---|---|\n')
+                for row in rows[1:]:
+                    out.append('| '+' | '.join([BT+x+BT for x in row[:3]]+[row[3]])+' |\n')
+                out.append('\n')
+                tables.append({'first_line':first_literal,'decoded_original_body':body,'rows':rows,'presentation':'First three identifier columns literal; service usage descriptions translatable'})
+            else:
+                out.append(BT*3+'text\n'+body+BT*3+'\n\n')
+                blocks.append({'first_line':first_literal,'body':body,'origin':'decoded non-executing roff presentation'})
             literal.clear()
         first_literal=None
     for unit in units:
@@ -98,7 +122,7 @@ def prepare_packaged_manual(source,tool):
             elif kind=='IP':
                 term.append(BT+decode(args[0])+BT if args else '')
                 flush_term()
-        elif kind in {'nf','fi','fam','in','sp'}:
+        elif kind in {'nf','fi','fam','in','sp','RS'}:
             layouts.append({'first_line':unit['first_line'],'request':kind,'args':args})
             if kind=='nf':
                 flush_term(); flush(); nofill=True
@@ -113,7 +137,11 @@ def prepare_packaged_manual(source,tool):
             if is_literal:
                 if first_literal is None: first_literal=unit['first_line']
                 literal.append(value)
-            elif in_term and kind in STYLES: term.append(value)
+            elif in_term and kind in STYLES:
+                if value: term.append(value)
+            elif in_term and not term:
+                term.append(BT+value+BT)
+                flush_term()
             else:
                 flush_term()
                 if value.strip(): paragraph.append(value.strip())
@@ -125,6 +153,7 @@ def prepare_packaged_manual(source,tool):
         'source_lines':len(source.splitlines()),'all_source_text_accounted':True,
         'sections':sections,'option_syntax':options,'literal_blocks':blocks,
         'layout_requests':layouts,
+        **({'reference_tables':tables} if tables else {}),
         'source_comments':[x for x in units if x['kind']=='comment'],
         'presentation_changes':[
             'Strict man requests interpreted as data; no external formatter, includes or shell executed',

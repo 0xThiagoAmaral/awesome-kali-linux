@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "tools": 25,
-  "documents": 49,
-  "code_blocks": 398,
+  "tools": 27,
+  "documents": 51,
+  "code_blocks": 413,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -3268,6 +3268,352 @@
     },
     {
       "check": "whois:whois.1 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping retained asset hash: COPYRIGHT.package.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping retained asset hash: originals/arping.8.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping retained asset hash: PACKAGE-SNAPSHOT.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping native source snapshot, gzip, notice and version binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 exact fenced-code bodies",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "check": "arping:arping.8 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 34,
+        "translation": 69
+      }
+    },
+    {
+      "check": "arping:arping.8 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "arping:arping.8 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "arping:arping.8 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan retained asset hash: COPYRIGHT.package.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan retained asset hash: originals/nbtscan.1.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan retained asset hash: PACKAGE-SNAPSHOT.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan native source snapshot, gzip, notice and version binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 exact fenced-code bodies",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "check": "nbtscan:nbtscan.1 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 107,
+        "translation": 131
+      }
+    },
+    {
+      "check": "nbtscan:nbtscan.1 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nbtscan:nbtscan.1 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "nbtscan:nbtscan.1 review status honest",
       "pass": true,
       "detail": null
     }

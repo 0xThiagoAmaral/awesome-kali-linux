@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "binary": "arping",
+  "installed_version": "arping 2.28-1",
+  "test_status": "help-only",
+  "commands": [
+    {
+      "argv": [
+        "arping",
+        "--help"
+      ],
+      "stdout": "ARPing 2.28, by Thomas Habets <thomas@habets.se>\nusage: arping [ -0aAbdDeFpPqrRuUvzZ ] [ -w <sec> ] [ -W <sec> ] [ -S <host/ip> ]\n              [ -T <host/ip ] [ -s <MAC> ] [ -t <MAC> ] [ -c <count> ]\n              [ -C <count> ] [ -i <interface> ] [ -m <type> ] [ -g <group> ]\n              [ -V <vlan> ] [ -Q <priority> ] <host/ip/MAC | -B>\n\nOptions:\n\n    -0     Use this option to ping with source IP address 0.0.0.0. Use this\n           when you haven't configured your interface yet.  Note that  this\n           may  get  the  MAC-ping  unanswered.   This  is  an alias for -S\n           0.0.0.0.\n    -a     Audiable ping.\n    -A     Only count addresses matching  requested  address  (This  *WILL*\n           break  most things you do. Only useful if you are arpinging many\n           hosts at once. See arping-scan-net.sh for an example).\n    -b     Like -0 but source broadcast source  address  (255.255.255.255).\n           Note that this may get the arping unanswered since it's not nor-\n           mal behavior for a host.\n    -B     Use instead of host if you want to address 255.255.255.255.\n    -c count\n           Only send count requests.\n    -C count\n           Only wait for this many replies, regardless of -c and -w.\n    -d     Find duplicate replies. Exit with 1 if there are answers from\n           two different MAC addresses.\n    -D     Display answers as exclamation points and missing packets as dots.\n    -e     Like -a but beep when there is no reply.\n    -F     Don't try to be smart about the interface name.  (even  if  this\n           switch is not given, -i overrides smartness)\n    -g group\n           setgid() to this group instead of the nobody group.\n    -h     Displays a help message and exits.\n    -i interface\n           Use the specified interface.\n    -m type\n           Type of timestamp to use for incoming packets. Use -vv when\n           pinging to list available ones.\n    -q     Does not display messages, except error messages.\n    -Q pri 802.1p priority to set. Should be used with 802.1Q (-V).\n           Defaults to 0.\n    -r     Raw output: only the MAC/IP address is displayed for each reply.\n    -R     Raw output: Like -r but shows \"the other one\", can  be  combined\n           with -r.\n    -s MAC Set source MAC address. You may need to use -p with this.\n    -S IP  Like  -b and -0 but with set source address.  Note that this may\n           get the arping unanswered if the target does not have routing to\n           the  IP.  If you don't own the IP you are using, you may need to\n           turn on promiscious mode on the interface (with -p).  With  this\n           switch  you can find out what IP-address a host has without tak-\n           ing an IP-address yourself.\n    -t MAC Set target MAC address to use when pinging IP address.\n    -T IP  Use -T as target address when pinging MACs that won't respond to\n           a broadcast ping but perhaps to a directed broadcast.\n           Example:\n           To check the address of MAC-A, use knowledge of MAC-B and  IP-B.\n           $ arping -S <IP-B> -s <MAC-B> -p <MAC-A>\n    -p     Turn  on  promiscious  mode  on interface, use this if you don't\n           \"own\" the MAC address you are using.\n    -P     Send ARP replies instead of requests. Useful with -U.\n    -u     Show index=received/sent instead  of  just  index=received  when\n           pinging MACs.\n    -U     Send unsolicited ARP.\n    -v     Verbose output. Use twice for more messages.\n    -V num 802.1Q tag to add. Defaults to no VLAN tag.\n    -w sec Specify a timeout before ping exits regardless of how many\n           packets have been sent or received.\n    -W sec Time to wait between pings.\n    -z     Enable seccomp\n    -Z     Disable seccomp (default)\nReport bugs to: thomas@habets.se\nArping home page: <http://www.habets.pp.se/synscan/>\nDevelopment repo: http://github.com/ThomasHabets/arping\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "arping",
+        "-h"
+      ],
+      "stdout": "ARPing 2.28, by Thomas Habets <thomas@habets.se>\nusage: arping [ -0aAbdDeFpPqrRuUvzZ ] [ -w <sec> ] [ -W <sec> ] [ -S <host/ip> ]\n              [ -T <host/ip ] [ -s <MAC> ] [ -t <MAC> ] [ -c <count> ]\n              [ -C <count> ] [ -i <interface> ] [ -m <type> ] [ -g <group> ]\n              [ -V <vlan> ] [ -Q <priority> ] <host/ip/MAC | -B>\nFor complete usage info, use --help or check the manpage.\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "dpkg-query",
+        "-W",
+        "-f=${Version}",
+        "arping"
+      ],
+      "stdout": "2.28-1",
+      "stderr": "",
+      "exit_status": 0
+    }
+  ],
+  "manual_options": [
+    "--help",
+    "-0",
+    "-A",
+    "-B",
+    "-C",
+    "-D",
+    "-F",
+    "-P",
+    "-Q",
+    "-R",
+    "-S",
+    "-T",
+    "-U",
+    "-V",
+    "-W",
+    "-Z",
+    "-a",
+    "-b",
+    "-c",
+    "-d",
+    "-e",
+    "-g",
+    "-h",
+    "-i",
+    "-m",
+    "-p",
+    "-q",
+    "-r",
+    "-s",
+    "-t",
+    "-u",
+    "-v",
+    "-w",
+    "-z"
+  ],
+  "installed_help_options": [
+    "-0",
+    "-A",
+    "-B",
+    "-C",
+    "-D",
+    "-F",
+    "-P",
+    "-Q",
+    "-R",
+    "-S",
+    "-T",
+    "-U",
+    "-V",
+    "-W",
+    "-Z",
+    "-a",
+    "-b",
+    "-c",
+    "-d",
+    "-e",
+    "-g",
+    "-h",
+    "-i",
+    "-m",
+    "-p",
+    "-q",
+    "-r",
+    "-s",
+    "-t",
+    "-u",
+    "-v",
+    "-w",
+    "-z"
+  ],
+  "manual_options_not_listed_by_installed_help": [
+    "--help"
+  ],
+  "installed_help_options_not_in_manual": [],
+  "source_manual_sha256": "de74f6c4e808c9fb7003e4ad03c1fa0df98cf4c677b9cd4aeb647a3316f444d8",
+  "test_script": "scripts/test_arping_help.py",
+  "test_script_sha256": "8d93158a20526cfe127db6909774d7537b7a4e24bd9d29f990e9fc07d0689c85",
+  "temporary_directory_empty": true,
+  "installed_manual_before_sha256": "872e704775f42258df83bc5ba66180eda2c1976c50fed4fd58357d307ab83247",
+  "installed_manual_after_sha256": "872e704775f42258df83bc5ba66180eda2c1976c50fed4fd58357d307ab83247",
+  "installed_manual_unchanged": true,
+  "network_query_requested": false,
+  "packet_send_operation_requested": false,
+  "manual_options_executed_successfully": [
+    "--help",
+    "-h"
+  ],
+  "verification_scope_pt": "Conferidas somente arping --help, arping -h e a versão dpkg. Embora não liste --help, a ajuda estendida foi obtida com essa opção e código 0. Nenhum endereço, interface ou alvo foi fornecido, e nenhuma operação de envio ARP/ICMP foi solicitada.",
+  "limits": [
+    "This checks help/version and local source identity, not remote service behavior or query results."
+  ]
+}

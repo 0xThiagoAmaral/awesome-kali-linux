@@ -34,3 +34,5 @@ jobs:
         run: python3 scripts/test_packaged_manual.py
       - name: Reproduce complete whois editorial translation
         run: python3 scripts/build_package_editorial.py --tool whois --check
+      - name: Reproduce all native package translations
+        run: python3 scripts/check_package_editorials.py

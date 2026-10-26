@@ -8416,5 +8416,1005 @@
         "Limited PT-BR terminology glossary; commands and URLs protected"
       ]
     }
+  },
+  "arping": {
+    "repository": "https://www.habets.pp.se/synscan/programs.php?prog=arping",
+    "commit": null,
+    "source_kind": "installed-kali-package",
+    "package": "arping",
+    "binary_version": "2.28-1",
+    "source_package": "arping",
+    "source_version": "2.28-1",
+    "source_snapshot_sha256": "72e48dfb57a7a8f401a408124ca0295cae8f32eda0d4efb879735e99dc7ae71b",
+    "license_spdx": "GPL-2.0-or-later",
+    "documents": [
+      {
+        "source_path": "arping.8",
+        "note": "vault/02-Tools/arping/arping-arping-8.md",
+        "original": "sources/upstream/arping/arping.8.source",
+        "source_sha256": "de74f6c4e808c9fb7003e4ad03c1fa0df98cf4c677b9cd4aeb647a3316f444d8",
+        "license_spdx": "GPL-2.0-or-later",
+        "translation_sha256": "e7646087ac2ac1133a18ab5d625ad6babbbdb35b5faecafda7dfef25c44b52a8",
+        "source_fenced_blocks": 6,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.7-truthful-native-package-sources",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-a-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-b-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-c-count-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-d-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-p-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-r-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-u-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-w-sec-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-z-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "see-also"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "author"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+              "Paragraph lines joined; style macros mapped to inline code",
+              "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+              "Raw source bytes retained separately; non-content layout requests recorded",
+              "Historical statements translated from dated source, not independently retested claims",
+              "Six exact-source-bound layout repairs recorded explicitly; all non-request text lines unchanged"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "packaged-man-roff-v1",
+        "prepared_source": "sources/upstream/arping/arping.8.presentation.md.source",
+        "prepared_source_sha256": "21d7e0d5550601737d9bf91895593b85ac87a8c0849159a3535db812566aeba4",
+        "manual_structure": {
+          "format": "packaged-man-roff-v1",
+          "title": [
+            "arping",
+            "8",
+            "21th June, 2003",
+            "arping",
+            ""
+          ],
+          "source_lines": 190,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "EXAMPLES",
+            "BUGS",
+            "SEE ALSO",
+            "AUTHOR"
+          ],
+          "option_syntax": [
+            "--help",
+            "-0",
+            "-a",
+            "-A",
+            "-b",
+            "-B",
+            "-c count",
+            "-C count",
+            "-d",
+            "-D",
+            "-e",
+            "-F",
+            "-g group",
+            "-h",
+            "-i interface",
+            "-m type",
+            "-p",
+            "-P",
+            "-q",
+            "-Q priority",
+            "-r",
+            "-R",
+            "-s MAC",
+            "-S IP",
+            "-t MAC",
+            "-T IP",
+            "-u",
+            "-U",
+            "-v",
+            "-V vlan",
+            "-w sec",
+            "-W sec",
+            "-z",
+            "-Z"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 8,
+              "body": "arping [-0aAbBdDeFhpqrRuUv] [-S host/ip] [-T host/ip] [-s MAC]    [-t MAC] [-c count] [-i interface] [ -w seconds ] [ -W seconds ] [ -V vlan ] [ -Q priority ] [ -g group ] <host | -B>\n\narping --help\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 31,
+              "body": "# nice -n -15 arping foobar\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 119,
+              "body": "$ arping -S <IP-B> -s <MAC-B> -p <MAC-A>\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 132,
+              "body": "$ arping -i <interface> -U <interface IP>\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 150,
+              "body": "# arping -c 3 88.1.180.225\nARPING 88.1.180.225\n60 bytes from 00:11:85:4c:01:01 (88.1.180.225): index=0 time=13.910 msec\n60 bytes from 00:11:85:4c:01:01 (88.1.180.225): index=1 time=13.935 msec\n60 bytes from 00:11:85:4c:01:01 (88.1.180.225): index=2 time=13.944 msec\n\n--- 88.1.180.225 statistics ---\n3 packets transmitted, 3 packets received,   0% unanswered\n\n# arping -c 3 00:11:85:4c:01:01\nARPING 00:11:85:4c:01:01\n60 bytes from 88.1.180.225 (00:11:85:4c:01:01): icmp_seq=0 time=13.367 msec\n60 bytes from 88.1.180.225 (00:11:85:4c:01:01): icmp_seq=1 time=13.929 msec\n60 bytes from 88.1.180.225 (00:11:85:4c:01:01): icmp_seq=2 time=13.929 msec\n\n--- 00:11:85:4c:01:01 statistics ---\n3 packets transmitted, 3 packets received,   0% unanswered\n\n# arping -C 2 -c 10 -r 88.1.180.225\n00:11:85:4c:01:01\n00:11:85:4c:01:01\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 194,
+              "body": "git clone http://github.com/ThomasHabets/arping.git\n",
+              "origin": "decoded non-executing roff presentation"
+            }
+          ],
+          "layout_requests": [
+            {
+              "first_line": 30,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 32,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 118,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 120,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 130,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 131,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 133,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 148,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 149,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 172,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 173,
+              "request": "in",
+              "args": []
+            },
+            {
+              "first_line": 193,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 195,
+              "request": "fi",
+              "args": []
+            }
+          ],
+          "source_comments": [],
+          "presentation_changes": [
+            "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+            "Paragraph lines joined; style macros mapped to inline code",
+            "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+            "Raw source bytes retained separately; non-content layout requests recorded",
+            "Historical statements translated from dated source, not independently retested claims",
+            "Six exact-source-bound layout repairs recorded explicitly; all non-request text lines unchanged"
+          ],
+          "layout_adjusted_lines": 195,
+          "layout_repairs": [
+            {
+              "before": ".nf\n.sp\nTo check the address",
+              "after": "To check the address",
+              "occurrences": 1
+            },
+            {
+              "before": ".PP \n$ arping \\-S",
+              "after": ".PP \n.nf\n$ arping \\-S",
+              "occurrences": 1
+            },
+            {
+              "before": ".IP \"\\-u\"",
+              "after": ".fi\n.IP \"\\-u\"",
+              "occurrences": 1
+            },
+            {
+              "before": ".IP \"\\-v\"",
+              "after": ".fi\n.IP \"\\-v\"",
+              "occurrences": 1
+            },
+            {
+              "before": "# nice \\-n \\-15 arping foobar\n",
+              "after": ".nf\n# nice \\-n \\-15 arping foobar\n.fi\n",
+              "occurrences": 1
+            },
+            {
+              "before": "git clone http://github\\&.com/ThomasHabets/arping\\&.git\n",
+              "after": ".nf\ngit clone http://github\\&.com/ThomasHabets/arping\\&.git\n.fi\n",
+              "occurrences": 1
+            }
+          ],
+          "line_number_basis": "Layout-adjusted source; exact original is retained separately"
+        },
+        "editorial_translation": {
+          "source_sha256": "de74f6c4e808c9fb7003e4ad03c1fa0df98cf4c677b9cd4aeb647a3316f444d8",
+          "translation_file": "translations/pt-BR/arping/arping.8.md",
+          "translation_sha256": "da8e4cc2b6bf3b67459e73a3544c406039c323353113f7d406cf6b5aad8347aa",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "GPL-2.0-or-later",
+          "segment_file": "catalog/editorial-segments/arping.pt-br.json",
+          "segment_sha256": "d6e1a97c965b42211aeac368019d43e0cbfa4f22707c3e2ab345de1e4ee9debb",
+          "review_scope": "All 90 source-bound segments; 8 sections and 34 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/arping-help-tests.json",
+          "sha256": "17f1036e29a8a1744c838d6d4885792ef73d5e310c6e8632e9bbf6ff845d579e",
+          "test_script": "scripts/test_arping_help.py"
+        }
+      }
+    ],
+    "source_scope": "Complete English installed arping(8) manual only; upstream README, FAQ, scripts and additional website coverage remain pending",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "nbtscan": {
+    "repository": "https://github.com/resurrecting-open-source-projects/nbtscan",
+    "commit": null,
+    "source_kind": "installed-kali-package",
+    "package": "nbtscan",
+    "binary_version": "1.7.2-3",
+    "source_package": "nbtscan",
+    "source_version": "1.7.2-3",
+    "source_snapshot_sha256": "5d0690f9b6e12b9c0b1411486ca9cce62417ee78b43ecb57442c18cfd9a59f96",
+    "license_spdx": "GPL-2.0-or-later",
+    "documents": [
+      {
+        "source_path": "nbtscan.1",
+        "note": "vault/02-Tools/nbtscan/nbtscan-nbtscan-1.md",
+        "original": "sources/upstream/nbtscan/nbtscan.1.source",
+        "source_sha256": "5a2e2690923164f8a7667f871ed6f476139aff943659b82a8e854afbcaa65f78",
+        "license_spdx": "GPL-2.0-or-later",
+        "translation_sha256": "962e80d977130a7df411c3572603768399047069703ffb8b07bba5f5f71c90ee",
+        "source_fenced_blocks": 9,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.7-truthful-native-package-sources",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "netbios-suffixes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "faq"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "author"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+              "Paragraph lines joined; style macros mapped to inline code",
+              "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+              "Raw source bytes retained separately; non-content layout requests recorded",
+              "Historical statements translated from dated source, not independently retested claims"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "packaged-man-roff-v1",
+        "prepared_source": "sources/upstream/nbtscan/nbtscan.1.presentation.md.source",
+        "prepared_source_sha256": "ff3b19f21ad78a12869d689b0788218c6efd23546a4587e9aed1faecd76c9f2f",
+        "manual_structure": {
+          "format": "packaged-man-roff-v1",
+          "title": [
+            "nbtscan",
+            "1",
+            "13 Jan 2022",
+            "nbtscan-1.7.2",
+            "scan networks searching for NetBIOS information"
+          ],
+          "source_lines": 271,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "EXAMPLES",
+            "NETBIOS SUFFIXES",
+            "FAQ",
+            "AUTHOR"
+          ],
+          "option_syntax": [
+            "-v",
+            "-d",
+            "-e",
+            "-l",
+            "-t <timeout>",
+            "-b <bandwidth>",
+            "-r",
+            "-q",
+            "-s <separator>",
+            "-h",
+            "-m <retransmits>",
+            "-f <filename>",
+            "target",
+            "xxx.xxx.xxx.xxx",
+            "xxx.xxx.xxx.xxx/xx",
+            "xxx.xxx.xxx.xxx-xxx"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 9,
+              "body": "nbtscan [-v] [-d] [-e] [-l] [-t timeout] [-b bandwidth] [-r] [-q]\n        [-s separator] [-h] [-m retransmits] [-f filename | target]\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 26,
+              "body": "    IP address     NetBIOS Name  Server    User           MAC address\n    -----------------------------------------------------------------------\n    192.168.1.2    MYCOMPUTER              JDOE           00-a0-c9-12-34-56\n    192.168.1.5    WIN98COMP     <server>  RROE           00-a0-c9-78-90-00\n    192.168.1.123  DPTSERVER     <server>  ADMINISTRATOR  08-00-09-12-34-56\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 48,
+              "body": "    NetBIOS Name Table for Host 192.168.1.123:\n\n    Name             Service          Type\n    ----------------------------------------\n    DPTSERVER        <00>             UNIQUE\n    DPTSERVER        <20>             UNIQUE\n    DEPARTMENT       <00>             GROUP\n    DEPARTMENT       <1c>             GROUP\n    DEPARTMENT       <1b>             UNIQUE\n    DEPARTMENT       <1e>             GROUP\n    DPTSERVER        <03>             UNIQUE\n    DEPARTMENT       <1d>             UNIQUE\n    ??__MSBROWSE__?  <01>             GROUP\n    INet~Services    <1c>             GROUP\n    IS~DPTSERVER     <00>             UNIQUE\n    DPTSERVER        <01>             UNIQUE\n\n    Adapter address: 00-a0-c9-12-34-56\n    ----------------------------------------\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 150,
+              "body": "    nbtscan 192.168.1.0/24\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 158,
+              "body": "    nbtscan -r 192.168.1.0/24\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 166,
+              "body": "    nbtscan 192.168.1.25-137\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 175,
+              "body": "    nbtscan -v -s : 192.168.1.0/24\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 183,
+              "body": "    192.168.0.1:NT_SERVER:00U\n    192.168.0.1:MY_DOMAIN:00G\n    192.168.0.1:ADMINISTRATOR:03U\n    192.168.0.2:OTHER_BOX:00U\n    ...\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 195,
+              "body": "    nbtscan -f iplist\n",
+              "origin": "decoded non-executing roff presentation"
+            }
+          ],
+          "layout_requests": [
+            {
+              "first_line": 7,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 8,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 12,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 13,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 14,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 15,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 24,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 25,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 32,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 33,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 46,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 47,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 68,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 69,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 131,
+              "request": "RS",
+              "args": []
+            },
+            {
+              "first_line": 148,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 149,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 152,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 153,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 156,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 157,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 160,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 161,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 164,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 165,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 168,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 169,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 173,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 174,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 177,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 178,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 181,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 182,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 189,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 190,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 193,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 194,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 197,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 198,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 203,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 204,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 238,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 239,
+              "request": "fi",
+              "args": []
+            }
+          ],
+          "reference_tables": [
+            {
+              "first_line": 205,
+              "decoded_original_body": "    Name                Number(h)  Type  Usage\n    --------------------------------------------------------------------------\n\n    <computername>         00       U    Workstation Service\n    <computername>         01       U    Messenger Service\n    <\\--__MSBROWSE__>      01       G    Master Browser\n    <computername>         03       U    Messenger Service\n    <computername>         06       U    RAS Server Service\n    <computername>         1F       U    NetDDE Service\n    <computername>         20       U    File Server Service\n    <computername>         21       U    RAS Client Service\n    <computername>         22       U    Exchange Interchange(MSMail Connector)\n    <computername>         23       U    Exchange Store\n    <computername>         24       U    Exchange Directory\n    <computername>         30       U    Modem Sharing Server Service\n    <computername>         31       U    Modem Sharing Client Service\n    <computername>         43       U    SMS Clients Remote Control\n    <computername>         44       U    SMS Administrators Remote Control Tool\n    <computername>         45       U    SMS Clients Remote Chat\n    <computername>         46       U    SMS Clients Remote Transfer\n    <computername>         87       U    Microsoft Exchange MTA\n    <computername>         6A       U    Microsoft Exchange IMC\n    <computername>         BE       U    Network Monitor Agent\n    <computername>         BF       U    Network Monitor Application\n    <username>             03       U    Messenger Service\n    <domain>               00       G    Domain Name\n    <domain>               1B       U    Domain Master Browser\n    <domain>               1C       G    Domain Controllers\n    <domain>               1D       U    Master Browser\n    <domain>               1E       G    Browser Service Elections\n    <INet~Services>        1C       G    IIS\n    <IS~computer name>     00       U    IIS\n",
+              "rows": [
+                [
+                  "Name",
+                  "Number(h)",
+                  "Type",
+                  "Usage"
+                ],
+                [
+                  "<computername>",
+                  "00",
+                  "U",
+                  "Workstation Service"
+                ],
+                [
+                  "<computername>",
+                  "01",
+                  "U",
+                  "Messenger Service"
+                ],
+                [
+                  "<\\--__MSBROWSE__>",
+                  "01",
+                  "G",
+                  "Master Browser"
+                ],
+                [
+                  "<computername>",
+                  "03",
+                  "U",
+                  "Messenger Service"
+                ],
+                [
+                  "<computername>",
+                  "06",
+                  "U",
+                  "RAS Server Service"
+                ],
+                [
+                  "<computername>",
+                  "1F",
+                  "U",
+                  "NetDDE Service"
+                ],
+                [
+                  "<computername>",
+                  "20",
+                  "U",
+                  "File Server Service"
+                ],
+                [
+                  "<computername>",
+                  "21",
+                  "U",
+                  "RAS Client Service"
+                ],
+                [
+                  "<computername>",
+                  "22",
+                  "U",
+                  "Exchange Interchange(MSMail Connector)"
+                ],
+                [
+                  "<computername>",
+                  "23",
+                  "U",
+                  "Exchange Store"
+                ],
+                [
+                  "<computername>",
+                  "24",
+                  "U",
+                  "Exchange Directory"
+                ],
+                [
+                  "<computername>",
+                  "30",
+                  "U",
+                  "Modem Sharing Server Service"
+                ],
+                [
+                  "<computername>",
+                  "31",
+                  "U",
+                  "Modem Sharing Client Service"
+                ],
+                [
+                  "<computername>",
+                  "43",
+                  "U",
+                  "SMS Clients Remote Control"
+                ],
+                [
+                  "<computername>",
+                  "44",
+                  "U",
+                  "SMS Administrators Remote Control Tool"
+                ],
+                [
+                  "<computername>",
+                  "45",
+                  "U",
+                  "SMS Clients Remote Chat"
+                ],
+                [
+                  "<computername>",
+                  "46",
+                  "U",
+                  "SMS Clients Remote Transfer"
+                ],
+                [
+                  "<computername>",
+                  "87",
+                  "U",
+                  "Microsoft Exchange MTA"
+                ],
+                [
+                  "<computername>",
+                  "6A",
+                  "U",
+                  "Microsoft Exchange IMC"
+                ],
+                [
+                  "<computername>",
+                  "BE",
+                  "U",
+                  "Network Monitor Agent"
+                ],
+                [
+                  "<computername>",
+                  "BF",
+                  "U",
+                  "Network Monitor Application"
+                ],
+                [
+                  "<username>",
+                  "03",
+                  "U",
+                  "Messenger Service"
+                ],
+                [
+                  "<domain>",
+                  "00",
+                  "G",
+                  "Domain Name"
+                ],
+                [
+                  "<domain>",
+                  "1B",
+                  "U",
+                  "Domain Master Browser"
+                ],
+                [
+                  "<domain>",
+                  "1C",
+                  "G",
+                  "Domain Controllers"
+                ],
+                [
+                  "<domain>",
+                  "1D",
+                  "U",
+                  "Master Browser"
+                ],
+                [
+                  "<domain>",
+                  "1E",
+                  "G",
+                  "Browser Service Elections"
+                ],
+                [
+                  "<INet~Services>",
+                  "1C",
+                  "G",
+                  "IIS"
+                ],
+                [
+                  "<IS~computer name>",
+                  "00",
+                  "U",
+                  "IIS"
+                ]
+              ],
+              "presentation": "First three identifier columns literal; service usage descriptions translatable"
+            }
+          ],
+          "source_comments": [
+            {
+              "raw": ".\\\" Text automatically generated by txt2man\n",
+              "first_line": 1,
+              "kind": "comment"
+            }
+          ],
+          "presentation_changes": [
+            "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+            "Paragraph lines joined; style macros mapped to inline code",
+            "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+            "Raw source bytes retained separately; non-content layout requests recorded",
+            "Historical statements translated from dated source, not independently retested claims"
+          ]
+        },
+        "editorial_translation": {
+          "source_sha256": "5a2e2690923164f8a7667f871ed6f476139aff943659b82a8e854afbcaa65f78",
+          "translation_file": "translations/pt-BR/nbtscan/nbtscan.1.md",
+          "translation_sha256": "44e12678e32d55ac5f00824465a280d9190c9e6ebb5ea97beabe5465ac60398a",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "GPL-2.0-or-later",
+          "segment_file": "catalog/editorial-segments/nbtscan.pt-br.json",
+          "segment_sha256": "fb250298fa3be5af7dc6a992681481fa883126f82d5662d1c9d9806d722a675f",
+          "review_scope": "All 128 source-bound segments; 8 sections and 16 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/nbtscan-help-tests.json",
+          "sha256": "4d0d1479e5b1870082789348ff1cbfb2287b6a70d41dae8667a33181a9224978",
+          "test_script": "scripts/test_nbtscan_usage.py"
+        }
+      }
+    ],
+    "source_scope": "Complete English installed nbtscan(1) manual only; upstream README, FAQ, scripts and additional website coverage remain pending",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
   }
 }

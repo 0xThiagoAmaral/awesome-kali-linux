@@ -22,7 +22,7 @@ apple-bleee,True,GPL-3.0,1,1,True,False,False,review-source-coverage-and-transla
 arjun,True,AGPL-3.0,1,1,True,False,False,review-source-coverage-and-translation
 armitage,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 arp-scan,True,GPL-3.0,4,4,True,False,False,review-source-coverage-and-translation
-arping,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
+arping,True,GPL-2.0-or-later,1,1,True,False,False,review-source-coverage-and-translation
 arpwatch,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 arsenal-ng,True,MIT,1,1,True,False,False,review-source-coverage-and-translation
 asleap,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
@@ -432,7 +432,7 @@ naabu,True,MIT,1,1,True,False,False,review-source-coverage-and-translation
 name-that-hash,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 nasm,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 nasty,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
-nbtscan,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
+nbtscan,True,GPL-2.0-or-later,1,1,True,False,False,review-source-coverage-and-translation
 nbtscan-unixwiz,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 ncat-w32,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 ncrack,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation

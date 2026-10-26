@@ -53,5 +53,31 @@
       "segment_sha256": "01c35fa99e30144eeb276cd81d327d86384b5311fbab1f53787b79cfa427a588",
       "review_scope": "All 95 source-bound segments; 11 sections and 29 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
     }
+  },
+  "arping": {
+    "arping.8": {
+      "source_sha256": "de74f6c4e808c9fb7003e4ad03c1fa0df98cf4c677b9cd4aeb647a3316f444d8",
+      "translation_file": "translations/pt-BR/arping/arping.8.md",
+      "translation_sha256": "da8e4cc2b6bf3b67459e73a3544c406039c323353113f7d406cf6b5aad8347aa",
+      "translation_method": "assistant-translated",
+      "human_review": "pending",
+      "license_spdx": "GPL-2.0-or-later",
+      "segment_file": "catalog/editorial-segments/arping.pt-br.json",
+      "segment_sha256": "d6e1a97c965b42211aeac368019d43e0cbfa4f22707c3e2ab345de1e4ee9debb",
+      "review_scope": "All 90 source-bound segments; 8 sections and 34 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+    }
+  },
+  "nbtscan": {
+    "nbtscan.1": {
+      "source_sha256": "5a2e2690923164f8a7667f871ed6f476139aff943659b82a8e854afbcaa65f78",
+      "translation_file": "translations/pt-BR/nbtscan/nbtscan.1.md",
+      "translation_sha256": "44e12678e32d55ac5f00824465a280d9190c9e6ebb5ea97beabe5465ac60398a",
+      "translation_method": "assistant-translated",
+      "human_review": "pending",
+      "license_spdx": "GPL-2.0-or-later",
+      "segment_file": "catalog/editorial-segments/nbtscan.pt-br.json",
+      "segment_sha256": "fb250298fa3be5af7dc6a992681481fa883126f82d5662d1c9d9806d722a675f",
+      "review_scope": "All 128 source-bound segments; 8 sections and 16 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+    }
   }
 }

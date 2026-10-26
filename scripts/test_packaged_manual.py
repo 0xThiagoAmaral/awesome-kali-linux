@@ -8,6 +8,9 @@ import pathlib
 import shutil
 import tempfile
 from package_source import validate_package_source,package_fields
+from package_layout_repairs import repair_arping_layout,ARPING_SHA
+from import_translate_docs import code_bodies
+import hashlib
 from packaged_manual import prepare_packaged_manual,arguments,decode
 
 HEADER='.TH "WHOIS" "1" "2019-12-30"\n'
@@ -69,5 +72,66 @@ class NativeSourceTests(unittest.TestCase):
     def test_gzip_tamper_rejected(self):
         (self.assets/'originals/whois.1.gz').write_bytes(b'changed')
         with self.assertRaises(AssertionError): validate_package_source(self.record,self.assets)
+
+class ArpingLayoutTests(unittest.TestCase):
+    def setUp(self):
+        self.root=pathlib.Path(__file__).resolve().parents[1]
+        self.raw=(self.root/'sources/upstream/arping/arping.8.source').read_bytes()
+        self.source=self.raw.decode('utf-8')
+    def test_source_identity_and_no_text_edits(self):
+        self.assertEqual(hashlib.sha256(self.raw).hexdigest(),ARPING_SHA)
+        adjusted,repairs=repair_arping_layout(self.source)
+        self.assertEqual(len(repairs),6)
+        lines=lambda text:[x for x in text.splitlines(keepends=True) if not x.startswith('.')]
+        self.assertEqual(lines(adjusted),lines(self.source))
+    def test_changed_source_requires_new_review(self):
+        with self.assertRaises(ValueError): repair_arping_layout(self.source+'\n')
+    def test_options_do_not_disappear_into_unclosed_nf(self):
+        rendered,info=prepare_packaged_manual(self.source,'arping')
+        self.assertEqual(len(info['sections']),8)
+        self.assertEqual(len(info['option_syntax']),34)
+        self.assertIn('-u',info['option_syntax'])
+        self.assertIn('-Z',info['option_syntax'])
+        self.assertEqual(len(code_bodies(rendered)),6)
+        self.assertNotIn('Show index',''.join(code_bodies(rendered)))
+        self.assertIn('Example: To check the address of MAC-A',rendered)
+    def test_transcript_glyphs_and_commands_preserved(self):
+        rendered,_=prepare_packaged_manual(self.source,'arping')
+        self.assertIn('60 bytes from 00:11:85:4c:01:01 (88.1.180.225): index=0 time=13.910 msec',rendered)
+        self.assertIn('$ arping -S <IP-B> -s <MAC-B> -p <MAC-A>',rendered)
+        self.assertIn('git clone http://github.com/ThomasHabets/arping.git',rendered)
+    def test_native_snapshot(self):
+        record=json.loads((self.root/'catalog/source-registry.json').read_text(encoding='utf-8'))['arping']
+        self.assertTrue(validate_package_source(record,self.root/'vault/99-Assets/upstream/arping'))
+
+class NbtscanManualTests(unittest.TestCase):
+    def setUp(self):
+        self.root=pathlib.Path(__file__).resolve().parents[1]
+        self.source=(self.root/'sources/upstream/nbtscan/nbtscan.1.source').read_text(encoding='utf-8')
+        self.rendered,self.info=prepare_packaged_manual(self.source,'nbtscan')
+    def test_all_sections_and_argument_forms(self):
+        self.assertEqual(len(self.info['sections']),8)
+        self.assertEqual(len(self.info['option_syntax']),16)
+        self.assertIn('-h',self.info['option_syntax'])
+        self.assertIn('xxx.xxx.xxx.xxx-xxx',self.info['option_syntax'])
+    def test_reference_table_all_rows(self):
+        table=self.info['reference_tables'][0]
+        self.assertEqual(len(table['rows'])-1,29)
+        self.assertEqual(table['rows'][-1],['<IS~computer name>','00','U','IIS'])
+        self.assertIn('<\\--__MSBROWSE__>',self.rendered)
+    def test_literal_output_stays_original(self):
+        bodies=code_bodies(self.rendered)
+        self.assertEqual(len(bodies),9)
+        self.assertIn('192.168.0.1:NT_SERVER:00U',''.join(bodies))
+        self.assertIn('INet~Services',''.join(bodies))
+        self.assertIn('nbtscan -v -s : 192.168.1.0/24',''.join(bodies))
+    def test_timeout_source_not_silently_corrected(self):
+        self.assertIn('Wait timeout seconds for response. Default 1.',self.rendered)
+    def test_known_escapes(self):
+        self.assertEqual(decode(r'\.\.\.'),'...')
+        self.assertEqual(decode(r'\\--__MSBROWSE__'),r'\--__MSBROWSE__')
+    def test_native_snapshot(self):
+        record=json.loads((self.root/'catalog/source-registry.json').read_text(encoding='utf-8'))['nbtscan']
+        self.assertTrue(validate_package_source(record,self.root/'vault/99-Assets/upstream/nbtscan'))
 if __name__=='__main__':
     unittest.main()

@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "binary": "nbtscan",
+  "installed_version": "nbtscan 1.7.2-3",
+  "test_status": "usage-only",
+  "commands": [
+    {
+      "argv": [
+        "nbtscan"
+      ],
+      "stdout": "\nNBTscan version 1.7.2.\nThis is a free software and it comes with absolutely no warranty.\nYou can use, distribute and modify it under terms of GNU GPL 2+.\n\n\nUsage:\nnbtscan [-v] [-d] [-e] [-l] [-t timeout] [-b bandwidth] [-r] [-q] [-s separator] [-m retransmits] (-f filename)|(<scan_range>) \n\t-v\t\tverbose output. Print all names received\n\t\t\tfrom each host\n\t-d\t\tdump packets. Print whole packet contents.\n\t-e\t\tFormat output in /etc/hosts format.\n\t-l\t\tFormat output in lmhosts format.\n\t\t\tCannot be used with -v, -s or -h options.\n\t-t timeout\twait timeout milliseconds for response.\n\t\t\tDefault 1000.\n\t-b bandwidth\tOutput throttling. Slow down output\n\t\t\tso that it uses no more that bandwidth bps.\n\t\t\tUseful on slow links, so that ougoing queries\n\t\t\tdon't get dropped.\n\t-r\t\tuse local port 137 for scans. Win95 boxes\n\t\t\trespond to this only.\n\t\t\tYou need to be root to use this option on Unix.\n\t-q\t\tSuppress banners and error messages,\n\t-s separator\tScript-friendly output. Don't print\n\t\t\tcolumn and record headers, separate fields with separator.\n\t-h\t\tPrint human-readable names for services.\n\t\t\tCan only be used with -v option.\n\t-m retransmits\tNumber of retransmits. Default 0.\n\t-f filename\tTake IP addresses to scan from file filename.\n\t\t\t-f - makes nbtscan take IP addresses from stdin.\n\t<scan_range>\twhat to scan. Can either be single IP\n\t\t\tlike 192.168.1.1 or\n\t\t\trange of addresses in one of two forms: \n\t\t\txxx.xxx.xxx.xxx/xx or xxx.xxx.xxx.xxx-xxx.\nExamples:\n\tnbtscan -r 192.168.1.0/24\n\t\tScans the whole C-class network.\n\tnbtscan 192.168.1.25-137\n\t\tScans a range from 192.168.1.25 to 192.168.1.137\n\tnbtscan -v -s : 192.168.1.0/24\n\t\tScans C-class network. Prints results in script-friendly\n\t\tformat using colon as field separator.\n\t\tProduces output like that:\n\t\t192.168.0.1:NT_SERVER:00U\n\t\t192.168.0.1:MY_DOMAIN:00G\n\t\t192.168.0.1:ADMINISTRATOR:03U\n\t\t192.168.0.2:OTHER_BOX:00U\n\t\t...\n\tnbtscan -f iplist\n\t\tScans IP addresses specified in file iplist.\n",
+      "stderr": "",
+      "exit_status": 2,
+      "expected_exit_status": 2
+    },
+    {
+      "argv": [
+        "dpkg-query",
+        "-W",
+        "-f=${Version}",
+        "nbtscan"
+      ],
+      "stdout": "1.7.2-3",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    }
+  ],
+  "manual_options": [
+    "-b",
+    "-d",
+    "-e",
+    "-f",
+    "-h",
+    "-l",
+    "-m",
+    "-q",
+    "-r",
+    "-s",
+    "-t",
+    "-v"
+  ],
+  "installed_help_options": [
+    "-b",
+    "-d",
+    "-e",
+    "-f",
+    "-h",
+    "-l",
+    "-m",
+    "-q",
+    "-r",
+    "-s",
+    "-t",
+    "-v"
+  ],
+  "manual_options_not_listed_by_installed_help": [],
+  "installed_help_options_not_in_manual": [],
+  "source_manual_sha256": "5a2e2690923164f8a7667f871ed6f476139aff943659b82a8e854afbcaa65f78",
+  "test_script": "scripts/test_nbtscan_usage.py",
+  "test_script_sha256": "dc3eda710ba2291538753e41957d7ba9096e3f6bfecc818e6ca6ae5fcd7fcbed",
+  "temporary_directory_empty": true,
+  "installed_manual_before_sha256": "6ee80b61205491077638136a7d7b97b8bdb14eb4ce5b03938d2d4c693eb3a828",
+  "installed_manual_after_sha256": "6ee80b61205491077638136a7d7b97b8bdb14eb4ce5b03938d2d4c693eb3a828",
+  "installed_manual_unchanged": true,
+  "packet_send_operation_requested": false,
+  "scan_target_supplied": false,
+  "timeout_documentation_discrepancy": {
+    "manual_unit": "seconds",
+    "manual_default": 1,
+    "installed_usage_unit": "milliseconds",
+    "installed_usage_default": 1000,
+    "observed_in_usage": true,
+    "network_behavior_tested": false
+  },
+  "verification_scope_pt": "Executado nbtscan sem argumentos: código 2 de uso capturado pelo subprocesso, sem alvo; -h significa nomes de serviços, não ajuda. Há divergência em -t: o manual diz segundos/padrão 1; a mensagem instalada diz milissegundos/padrão 1000. A tradução preserva o manual e registra a divergência; nenhum envio ou tempo de resposta de rede foi testado.",
+  "limits": [
+    "Usage/version metadata only; no scan, no target, no remote queries; timeout unit compared between documentation texts, not measured."
+  ]
+}

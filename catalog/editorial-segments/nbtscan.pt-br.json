@@ -1,0 +1,652 @@
+{
+  "source_sha256": "5a2e2690923164f8a7667f871ed6f476139aff943659b82a8e854afbcaa65f78",
+  "prepared_sha256": "ff3b19f21ad78a12869d689b0788218c6efd23546a4587e9aed1faecd76c9f2f",
+  "license_spdx": "GPL-2.0-or-later",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "editorial_notes": [
+    "Source repeats third column for User; translated faithfully with an explicitly labelled note distinguishing fourth displayed column."
+  ],
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "nbtscan - scan networks for NetBIOS name information",
+      "translation": "nbtscan - varre redes em busca de informações de nomes NetBIOS"
+    },
+    {
+      "id": 2,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 3,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 4,
+      "source": "NBTscan is a program for scanning IP networks for NetBIOS name information. It sends NetBIOS status query to each address in supplied range and lists received information in human readable form. For each responded host it lists IP address, NetBIOS computer name, logged-in user name and MAC address (such as Ethernet).",
+      "translation": "NBTscan é um programa para varrer redes IP em busca de informações de nomes NetBIOS. Ele envia uma consulta de status NetBIOS a cada endereço do intervalo fornecido e lista as informações recebidas em formato legível. Para cada host que responde, lista o endereço IP, o nome NetBIOS do computador, o nome do usuário conectado e o endereço MAC (como o Ethernet)."
+    },
+    {
+      "id": 5,
+      "source": "NBTscan produces a report like that:",
+      "translation": "NBTscan produz um relatório como este:"
+    },
+    {
+      "id": 6,
+      "source": "First column lists IP address of responded host. Second column is computer name. Third column indicates if this computer shares or is able to share files or printers. For NT machine it means that Server Service is running on this computer. For Windows 95 it means that \"I want to be able to give others access to my files\" or \"I want to be able to allow others to print on my printer(s)\" checkbox is ticked (in Control Panel/Network/File and Print Sharing). Most often it means that this computer shares files. Third column shows user name. If no one is logged on from this computer it is same as computer name. Last column shows adapter MAC address.",
+      "translation": "A primeira coluna lista o endereço IP do host que respondeu. A segunda coluna é o nome do computador. A terceira coluna indica se esse computador compartilha ou pode compartilhar arquivos ou impressoras. Em uma máquina NT, isso significa que o Serviço de Servidor está em execução. No Windows 95, significa que a caixa \"Quero poder permitir que outras pessoas acessem meus arquivos\" ou \"Quero poder permitir que outras pessoas imprimam em minha(s) impressora(s)\" está marcada (em Painel de Controle/Rede/Compartilhamento de Arquivos e Impressoras). Na maioria das vezes, significa que esse computador compartilha arquivos. A terceira coluna mostra o nome do usuário. Se ninguém estiver conectado a partir desse computador, ele será igual ao nome do computador. A última coluna mostra o endereço MAC do adaptador.\n\n> **Nota editorial:** o original repete \"terceira coluna\" ao descrever o usuário. No relatório reproduzido acima, `User` é a quarta coluna. A redação original foi traduzida sem corrigir essa divergência silenciosamente."
+    },
+    {
+      "id": 7,
+      "source": "If run with -v switch NBTscan lists whole NetBIOS name table for each responded address. The output looks like that:",
+      "translation": "Se executado com a opção `-v`, o NBTscan lista a tabela inteira de nomes NetBIOS de cada endereço que respondeu. A saída tem este aspecto:"
+    },
+    {
+      "id": 8,
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": 9,
+      "source": "A summary of options is included below.",
+      "translation": "Um resumo das opções está incluído abaixo."
+    },
+    {
+      "id": 10,
+      "source": "`-v`",
+      "translation": "`-v`"
+    },
+    {
+      "id": 11,
+      "source": "Verbose output. Print all names received from each host.",
+      "translation": "Saída detalhada. Imprime todos os nomes recebidos de cada host."
+    },
+    {
+      "id": 12,
+      "source": "`-d`",
+      "translation": "`-d`"
+    },
+    {
+      "id": 13,
+      "source": "Dump packets. Print whole packet contents. Cannot be used with -v, -s or -h options.",
+      "translation": "Despeja os pacotes. Imprime todo o conteúdo dos pacotes. Não pode ser usado com as opções `-v`, `-s` ou `-h`."
+    },
+    {
+      "id": 14,
+      "source": "`-e`",
+      "translation": "`-e`"
+    },
+    {
+      "id": 15,
+      "source": "Format output in /etc/hosts format.",
+      "translation": "Formata a saída no formato de `/etc/hosts`."
+    },
+    {
+      "id": 16,
+      "source": "`-l`",
+      "translation": "`-l`"
+    },
+    {
+      "id": 17,
+      "source": "Format output in lmhosts format.",
+      "translation": "Formata a saída no formato lmhosts."
+    },
+    {
+      "id": 18,
+      "source": "`-t <timeout>`",
+      "translation": "`-t <timeout>`"
+    },
+    {
+      "id": 19,
+      "source": "Wait timeout seconds for response. Default 1.",
+      "translation": "Aguarda `timeout` segundos por uma resposta. O padrão é 1."
+    },
+    {
+      "id": 20,
+      "source": "`-b <bandwidth>`",
+      "translation": "`-b <bandwidth>`"
+    },
+    {
+      "id": 21,
+      "source": "Output  throttling. Slow down output so that it uses no more that bandwidth bps. Useful on slow links, so that outgoing queries don't get dropped.",
+      "translation": "Limitação da saída. Reduz a velocidade da saída para que não use mais que `bandwidth` bps. Útil em conexões lentas, para evitar o descarte das consultas enviadas."
+    },
+    {
+      "id": 22,
+      "source": "`-r`",
+      "translation": "`-r`"
+    },
+    {
+      "id": 23,
+      "source": "Use local port 137 for scans. Win95 boxes respond to this only. You need to be root to use this option.",
+      "translation": "Usa a porta local 137 para as varreduras. Máquinas Win95 só respondem a essa porta. É necessário ser root para usar esta opção."
+    },
+    {
+      "id": 24,
+      "source": "`-q`",
+      "translation": "`-q`"
+    },
+    {
+      "id": 25,
+      "source": "Suppress banners and error messages.",
+      "translation": "Suprime banners e mensagens de erro."
+    },
+    {
+      "id": 26,
+      "source": "`-s <separator>`",
+      "translation": "`-s <separator>`"
+    },
+    {
+      "id": 27,
+      "source": "Script-friendly output. Don't print column and record headers, separate fields with separator.",
+      "translation": "Saída adequada para scripts. Não imprime cabeçalhos de colunas nem de registros; separa os campos com `separator`."
+    },
+    {
+      "id": 28,
+      "source": "`-h`",
+      "translation": "`-h`"
+    },
+    {
+      "id": 29,
+      "source": "Print human-readable names for services. Can only be used with -v option.",
+      "translation": "Imprime nomes legíveis para os serviços. Só pode ser usada com a opção `-v`."
+    },
+    {
+      "id": 30,
+      "source": "`-m <retransmits>`",
+      "translation": "`-m <retransmits>`"
+    },
+    {
+      "id": 31,
+      "source": "Number of retransmits. Default 0.",
+      "translation": "Número de retransmissões (`retransmits`). O padrão é 0."
+    },
+    {
+      "id": 32,
+      "source": "`-f <filename>`",
+      "translation": "`-f <filename>`"
+    },
+    {
+      "id": 33,
+      "source": "Take IP addresses to scan from file \"filename\"",
+      "translation": "Obtém do arquivo \"`filename`\" os endereços IP a varrer."
+    },
+    {
+      "id": 34,
+      "source": "`target`",
+      "translation": "`target`"
+    },
+    {
+      "id": 35,
+      "source": "NBTscan is a command-line tool. You have to supply at least one argument, the address range, in one of three forms:",
+      "translation": "NBTscan é uma ferramenta de linha de comando. É necessário fornecer pelo menos um argumento: o intervalo de endereços, em uma destas três formas:"
+    },
+    {
+      "id": 36,
+      "source": "`xxx.xxx.xxx.xxx`",
+      "translation": "`xxx.xxx.xxx.xxx`"
+    },
+    {
+      "id": 37,
+      "source": "Single IP in dotted-decimal notation. Example: 192.168.1.1",
+      "translation": "IP único em notação decimal com pontos. Exemplo: `192.168.1.1`."
+    },
+    {
+      "id": 38,
+      "source": "`xxx.xxx.xxx.xxx/xx`",
+      "translation": "`xxx.xxx.xxx.xxx/xx`"
+    },
+    {
+      "id": 39,
+      "source": "Net address and subnet mask. Example: 192.168.1.0/24",
+      "translation": "Endereço de rede e máscara de sub-rede. Exemplo: `192.168.1.0/24`."
+    },
+    {
+      "id": 40,
+      "source": "`xxx.xxx.xxx.xxx-xxx`",
+      "translation": "`xxx.xxx.xxx.xxx-xxx`"
+    },
+    {
+      "id": 41,
+      "source": "Address range. Example: 192.168.1.1-127. This will scan all addresses from 192.168.1.1 to 192.168.1.127",
+      "translation": "Intervalo de endereços. Exemplo: `192.168.1.1-127`. Isso varre todos os endereços de `192.168.1.1` a `192.168.1.127`."
+    },
+    {
+      "id": 42,
+      "source": "EXAMPLES",
+      "translation": "EXEMPLOS"
+    },
+    {
+      "id": 43,
+      "source": "Scans the whole C-class network:",
+      "translation": "Varre toda a rede de classe C:"
+    },
+    {
+      "id": 44,
+      "source": "Scans the whole C-class network, using port 137:",
+      "translation": "Varre toda a rede de classe C usando a porta 137:"
+    },
+    {
+      "id": 45,
+      "source": "Scans a range from 192.168.1.25 to 192.168.1.137:",
+      "translation": "Varre um intervalo de `192.168.1.25` a `192.168.1.137`:"
+    },
+    {
+      "id": 46,
+      "source": "Scans C-class network. Prints results in script-friendly format using colon as field separator:",
+      "translation": "Varre uma rede de classe C. Imprime os resultados em formato adequado para scripts, usando dois-pontos como separador de campos:"
+    },
+    {
+      "id": 47,
+      "source": "The last command produces output like that:",
+      "translation": "O último comando produz uma saída como esta:"
+    },
+    {
+      "id": 48,
+      "source": "Scans IP addresses specified in file iplist:",
+      "translation": "Varre os endereços IP especificados no arquivo iplist:"
+    },
+    {
+      "id": 49,
+      "source": "NETBIOS SUFFIXES",
+      "translation": "SUFIXOS NETBIOS"
+    },
+    {
+      "id": 50,
+      "source": "NetBIOS Suffix, aka NetBIOS End Character (endchar), indicates service type for the registered name. The most known codes are listed below. (U = Unique Name, G = Group Name)",
+      "translation": "O sufixo NetBIOS, também conhecido como caractere final NetBIOS (endchar), indica o tipo de serviço do nome registrado. Os códigos mais conhecidos estão listados abaixo. (U = nome único, G = nome de grupo.)"
+    },
+    {
+      "id": 51,
+      "source": "Name",
+      "translation": "Nome"
+    },
+    {
+      "id": 52,
+      "source": "Number(h)",
+      "translation": "Número (hex.)"
+    },
+    {
+      "id": 53,
+      "source": "Type",
+      "translation": "Tipo"
+    },
+    {
+      "id": 54,
+      "source": "Usage",
+      "translation": "Uso"
+    },
+    {
+      "id": 55,
+      "source": "`<computername>`",
+      "translation": "`<computername>`"
+    },
+    {
+      "id": 56,
+      "source": "`00`",
+      "translation": "`00`"
+    },
+    {
+      "id": 57,
+      "source": "`U`",
+      "translation": "`U`"
+    },
+    {
+      "id": 58,
+      "source": "Workstation Service",
+      "translation": "Serviço de estação de trabalho"
+    },
+    {
+      "id": 59,
+      "source": "`01`",
+      "translation": "`01`"
+    },
+    {
+      "id": 60,
+      "source": "Messenger Service",
+      "translation": "Serviço de mensagens"
+    },
+    {
+      "id": 61,
+      "source": "`<\\--__MSBROWSE__>`",
+      "translation": "`<\\--__MSBROWSE__>`"
+    },
+    {
+      "id": 62,
+      "source": "`G`",
+      "translation": "`G`"
+    },
+    {
+      "id": 63,
+      "source": "Master Browser",
+      "translation": "Navegador mestre"
+    },
+    {
+      "id": 64,
+      "source": "`03`",
+      "translation": "`03`"
+    },
+    {
+      "id": 65,
+      "source": "`06`",
+      "translation": "`06`"
+    },
+    {
+      "id": 66,
+      "source": "RAS Server Service",
+      "translation": "Serviço de servidor RAS"
+    },
+    {
+      "id": 67,
+      "source": "`1F`",
+      "translation": "`1F`"
+    },
+    {
+      "id": 68,
+      "source": "NetDDE Service",
+      "translation": "Serviço NetDDE"
+    },
+    {
+      "id": 69,
+      "source": "`20`",
+      "translation": "`20`"
+    },
+    {
+      "id": 70,
+      "source": "File Server Service",
+      "translation": "Serviço de servidor de arquivos"
+    },
+    {
+      "id": 71,
+      "source": "`21`",
+      "translation": "`21`"
+    },
+    {
+      "id": 72,
+      "source": "RAS Client Service",
+      "translation": "Serviço de cliente RAS"
+    },
+    {
+      "id": 73,
+      "source": "`22`",
+      "translation": "`22`"
+    },
+    {
+      "id": 74,
+      "source": "Exchange Interchange(MSMail Connector)",
+      "translation": "Intercâmbio do Exchange (conector MSMail)"
+    },
+    {
+      "id": 75,
+      "source": "`23`",
+      "translation": "`23`"
+    },
+    {
+      "id": 76,
+      "source": "Exchange Store",
+      "translation": "Armazenamento do Exchange"
+    },
+    {
+      "id": 77,
+      "source": "`24`",
+      "translation": "`24`"
+    },
+    {
+      "id": 78,
+      "source": "Exchange Directory",
+      "translation": "Diretório do Exchange"
+    },
+    {
+      "id": 79,
+      "source": "`30`",
+      "translation": "`30`"
+    },
+    {
+      "id": 80,
+      "source": "Modem Sharing Server Service",
+      "translation": "Serviço de servidor de compartilhamento de modem"
+    },
+    {
+      "id": 81,
+      "source": "`31`",
+      "translation": "`31`"
+    },
+    {
+      "id": 82,
+      "source": "Modem Sharing Client Service",
+      "translation": "Serviço de cliente de compartilhamento de modem"
+    },
+    {
+      "id": 83,
+      "source": "`43`",
+      "translation": "`43`"
+    },
+    {
+      "id": 84,
+      "source": "SMS Clients Remote Control",
+      "translation": "Controle remoto de clientes SMS"
+    },
+    {
+      "id": 85,
+      "source": "`44`",
+      "translation": "`44`"
+    },
+    {
+      "id": 86,
+      "source": "SMS Administrators Remote Control Tool",
+      "translation": "Ferramenta de controle remoto dos administradores SMS"
+    },
+    {
+      "id": 87,
+      "source": "`45`",
+      "translation": "`45`"
+    },
+    {
+      "id": 88,
+      "source": "SMS Clients Remote Chat",
+      "translation": "Chat remoto dos clientes SMS"
+    },
+    {
+      "id": 89,
+      "source": "`46`",
+      "translation": "`46`"
+    },
+    {
+      "id": 90,
+      "source": "SMS Clients Remote Transfer",
+      "translation": "Transferência remota dos clientes SMS"
+    },
+    {
+      "id": 91,
+      "source": "`87`",
+      "translation": "`87`"
+    },
+    {
+      "id": 92,
+      "source": "Microsoft Exchange MTA",
+      "translation": "Microsoft Exchange MTA"
+    },
+    {
+      "id": 93,
+      "source": "`6A`",
+      "translation": "`6A`"
+    },
+    {
+      "id": 94,
+      "source": "Microsoft Exchange IMC",
+      "translation": "Microsoft Exchange IMC"
+    },
+    {
+      "id": 95,
+      "source": "`BE`",
+      "translation": "`BE`"
+    },
+    {
+      "id": 96,
+      "source": "Network Monitor Agent",
+      "translation": "Agente do Monitor de Rede"
+    },
+    {
+      "id": 97,
+      "source": "`BF`",
+      "translation": "`BF`"
+    },
+    {
+      "id": 98,
+      "source": "Network Monitor Application",
+      "translation": "Aplicativo Monitor de Rede"
+    },
+    {
+      "id": 99,
+      "source": "`<username>`",
+      "translation": "`<username>`"
+    },
+    {
+      "id": 100,
+      "source": "`<domain>`",
+      "translation": "`<domain>`"
+    },
+    {
+      "id": 101,
+      "source": "Domain Name",
+      "translation": "Nome de domínio"
+    },
+    {
+      "id": 102,
+      "source": "`1B`",
+      "translation": "`1B`"
+    },
+    {
+      "id": 103,
+      "source": "Domain Master Browser",
+      "translation": "Navegador mestre de domínio"
+    },
+    {
+      "id": 104,
+      "source": "`1C`",
+      "translation": "`1C`"
+    },
+    {
+      "id": 105,
+      "source": "Domain Controllers",
+      "translation": "Controladores de domínio"
+    },
+    {
+      "id": 106,
+      "source": "`1D`",
+      "translation": "`1D`"
+    },
+    {
+      "id": 107,
+      "source": "`1E`",
+      "translation": "`1E`"
+    },
+    {
+      "id": 108,
+      "source": "Browser Service Elections",
+      "translation": "Eleições do serviço de navegação"
+    },
+    {
+      "id": 109,
+      "source": "`<INet~Services>`",
+      "translation": "`<INet~Services>`"
+    },
+    {
+      "id": 110,
+      "source": "IIS",
+      "translation": "IIS"
+    },
+    {
+      "id": 111,
+      "source": "`<IS~computer name>`",
+      "translation": "`<IS~computer name>`"
+    },
+    {
+      "id": 112,
+      "source": "FAQ",
+      "translation": "PERGUNTAS FREQUENTES"
+    },
+    {
+      "id": 113,
+      "source": "`1.`",
+      "translation": "`1.`"
+    },
+    {
+      "id": 114,
+      "source": "NBTscan lists my Windows boxes just fine but does not list my Unixes or routers. Why?",
+      "translation": "NBTscan lista minhas máquinas Windows normalmente, mas não lista meus sistemas Unix nem roteadores. Por quê?"
+    },
+    {
+      "id": 115,
+      "source": "R: That is the way it is supposed to work. NBTscan uses NetBIOS for scanning and NetBIOS is only implemented by Windows (and some software on Unix such as Samba).",
+      "translation": "R: É assim que ele deve funcionar. NBTscan usa NetBIOS para a varredura, e NetBIOS só é implementado pelo Windows (e por alguns programas em Unix, como o Samba)."
+    },
+    {
+      "id": 116,
+      "source": "`2.`",
+      "translation": "`2.`"
+    },
+    {
+      "id": 117,
+      "source": "Why do I get \"Connection reset by peer\" errors on Windows 2000?",
+      "translation": "Por que recebo erros \"Connection reset by peer\" no Windows 2000?"
+    },
+    {
+      "id": 118,
+      "source": "R: NBTscan uses port 137 UDP for sending queries. If the port is closed on destination host destination will reply with ICMP \"Port unreachable\" message. Most operating system will ignore this message. Windows 2000 reports it to the application as \"Connection reset by peer\" error. Just ignore it.",
+      "translation": "R: NBTscan usa a porta UDP 137 para enviar consultas. Se a porta estiver fechada no host de destino, ele responderá com uma mensagem ICMP \"Port unreachable\". A maioria dos sistemas operacionais ignora essa mensagem. O Windows 2000 a informa ao aplicativo como erro \"Connection reset by peer\". Basta ignorá-lo."
+    },
+    {
+      "id": 119,
+      "source": "`3.`",
+      "translation": "`3.`"
+    },
+    {
+      "id": 120,
+      "source": "Why NBTscan doesn't scan for shares? Are you going to add share scanning to NBTscan?",
+      "translation": "Por que o NBTscan não procura compartilhamentos? Vocês vão adicionar essa função ao NBTscan?"
+    },
+    {
+      "id": 121,
+      "source": "R: No. NBTscan uses UDP for what it does. That makes it very fast. Share scanning requires TCP. For one thing, it will make nbtscan more slow. Also adding share scanning means adding a lot of new code to nbtscan. There is a lot of good share scanners around, so there is no reason to duplicate that work.",
+      "translation": "R: Não. NBTscan usa UDP para suas operações, o que o torna muito rápido. A busca por compartilhamentos exige TCP. Em primeiro lugar, isso tornaria o nbtscan mais lento. Além disso, adicionar essa busca significa acrescentar muito código novo ao nbtscan. Existem muitos bons scanners de compartilhamentos, portanto não há motivo para duplicar esse trabalho."
+    },
+    {
+      "id": 122,
+      "source": "`4.`",
+      "translation": "`4.`"
+    },
+    {
+      "id": 123,
+      "source": "Why do I get 00-00-00-00-00-00 instead of MAC address when I scan a Samba box?",
+      "translation": "Por que recebo 00-00-00-00-00-00 em vez de um endereço MAC quando varro uma máquina Samba?"
+    },
+    {
+      "id": 124,
+      "source": "R: Because that's what Samba send in response to the query. Nbtscan just prints out what it gets.",
+      "translation": "R: Porque é isso que o Samba envia em resposta à consulta. Nbtscan apenas imprime o que recebe."
+    },
+    {
+      "id": 125,
+      "source": "AUTHOR",
+      "translation": "AUTOR"
+    },
+    {
+      "id": 126,
+      "source": "NBTscan was created by Alla Bezroutchko <alla@inetcat.org>. Currently is maintained by some volunteers at https://github.com/resurrecting-open-source-projects/nbtscan",
+      "translation": "NBTscan foi criado por Alla Bezroutchko <alla@inetcat.org>. Atualmente é mantido por alguns voluntários em https://github.com/resurrecting-open-source-projects/nbtscan"
+    },
+    {
+      "id": 127,
+      "source": "This manual page was written for the first time by Ryszard Lach <rla@debian.org> and rewritten, from scratch, by Joao Eriberto Mota Filho <eriberto@debian.org> for the Debian GNU/Linux system (but may be used by others).",
+      "translation": "Esta página de manual foi escrita inicialmente por Ryszard Lach <rla@debian.org> e reescrita do zero por Joao Eriberto Mota Filho <eriberto@debian.org> para o sistema Debian GNU/Linux (mas pode ser usada por outros)."
+    }
+  ]
+}

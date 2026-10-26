@@ -1,0 +1,459 @@
+{
+  "source_sha256": "de74f6c4e808c9fb7003e4ad03c1fa0df98cf4c677b9cd4aeb647a3316f444d8",
+  "prepared_sha256": "21d7e0d5550601737d9bf91895593b85ac87a8c0849159a3535db812566aeba4",
+  "license_spdx": "GPL-2.0-or-later",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "arping - sends arp and/or ip pings to a given host",
+      "translation": "arping - envia pings ARP e/ou IP a um host especificado"
+    },
+    {
+      "id": 2,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 3,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 4,
+      "source": "The arping utility sends ARP and/or ICMP requests to the specified host and displays the replies. The host may be specified by its hostname, its IP address, or its MAC address.",
+      "translation": "O utilitário arping envia solicitações ARP e/ou ICMP ao host especificado e exibe as respostas. O host pode ser especificado pelo nome, pelo endereço IP ou pelo endereço MAC."
+    },
+    {
+      "id": 5,
+      "source": "One request is sent each second.",
+      "translation": "Uma solicitação é enviada a cada segundo."
+    },
+    {
+      "id": 6,
+      "source": "When pinging an IP an ARP who-has query is sent. When pinging a MAC address a directed broadcast ICMP Echo request is sent. For more technical explanation and an FAQ, see the README file.",
+      "translation": "Ao enviar ping a um IP, é enviada uma consulta ARP who-has. Ao enviar ping a um endereço MAC, é enviada uma solicitação ICMP Echo de broadcast direcionado. Para uma explicação mais técnica e perguntas frequentes, consulte o arquivo README."
+    },
+    {
+      "id": 7,
+      "source": "Note on timing",
+      "translation": "Nota sobre temporização"
+    },
+    {
+      "id": 8,
+      "source": "ARP packets are usually replied to (on a LAN) so fast that the OS task scheduler can't keep up to get exact enough timing. On an idle system the roundtrip times will be pretty much accurate, but with more load the timing gets less exact.",
+      "translation": "Em uma LAN, os pacotes ARP normalmente recebem respostas tão rápidas que o escalonador de tarefas do sistema operacional não consegue acompanhá-las para obter uma temporização suficientemente exata. Em um sistema ocioso, os tempos de ida e volta serão bastante precisos, mas, com mais carga, a temporização perde exatidão."
+    },
+    {
+      "id": 9,
+      "source": "To get more exact timing on a non-idle system, re-nice arping to -15 or so.",
+      "translation": "Para obter uma temporização mais exata em um sistema que não esteja ocioso, ajuste a prioridade nice do arping para aproximadamente `-15`."
+    },
+    {
+      "id": 10,
+      "source": "This is not just an issue with arping, it is with normal ping also (at least it is on my system). But it doesn't show up as much with ping since arping packets (when pinging IP) doesn't traverse the IP stack when received and are therefore replied to faster.",
+      "translation": "Isso não é um problema apenas do arping; também ocorre com o ping normal (pelo menos no meu sistema). Mas não fica tão evidente com o ping, pois os pacotes do arping, ao consultar IPs, não atravessam a pilha IP ao serem recebidos e, por isso, recebem respostas mais rapidamente."
+    },
+    {
+      "id": 11,
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": 12,
+      "source": "`--help`",
+      "translation": "`--help`"
+    },
+    {
+      "id": 13,
+      "source": "Show extended help. Not quite as extensive as this manpage, but more than -h.",
+      "translation": "Mostra a ajuda estendida. Não é tão extensa quanto esta página de manual, mas contém mais informações que `-h`."
+    },
+    {
+      "id": 14,
+      "source": "`-0`",
+      "translation": "`-0`"
+    },
+    {
+      "id": 15,
+      "source": "Use this option to ping with source IP address 0.0.0.0. Use this when you haven't configured your interface yet. Note that this may get the MAC-ping unanswered. This is an alias for -S 0.0.0.0.",
+      "translation": "Use esta opção para enviar ping com endereço IP de origem `0.0.0.0`. Use-a quando ainda não tiver configurado sua interface. Isso pode fazer com que o ping por MAC fique sem resposta. É um alias de `-S 0.0.0.0`."
+    },
+    {
+      "id": 16,
+      "source": "`-a`",
+      "translation": "`-a`"
+    },
+    {
+      "id": 17,
+      "source": "Audible ping.",
+      "translation": "Ping audível."
+    },
+    {
+      "id": 18,
+      "source": "`-A`",
+      "translation": "`-A`"
+    },
+    {
+      "id": 19,
+      "source": "Only count addresses matching requested address (This *WILL* break most things you do. Only useful if you are arpinging many hosts at once. See arping-scan-net.sh for an example).",
+      "translation": "Conta apenas os endereços que correspondem ao endereço solicitado (isso *VAI* prejudicar a maioria das operações. Só é útil ao usar arping em vários hosts ao mesmo tempo. Veja um exemplo em `arping-scan-net.sh`)."
+    },
+    {
+      "id": 20,
+      "source": "`-b`",
+      "translation": "`-b`"
+    },
+    {
+      "id": 21,
+      "source": "Like -0 but source broadcast source address (255.255.255.255). Note that this may get the arping unanswered since it's not normal behavior for a host.",
+      "translation": "Como `-0`, mas com endereço de origem de broadcast (`255.255.255.255`). Isso pode deixar o arping sem resposta, pois não é um comportamento normal para um host."
+    },
+    {
+      "id": 22,
+      "source": "`-B`",
+      "translation": "`-B`"
+    },
+    {
+      "id": 23,
+      "source": "Use instead of host if you want to address 255.255.255.255.",
+      "translation": "Use no lugar do host se quiser endereçar `255.255.255.255`."
+    },
+    {
+      "id": 24,
+      "source": "`-c count`",
+      "translation": "`-c count`"
+    },
+    {
+      "id": 25,
+      "source": "Only send count requests.",
+      "translation": "Envia apenas `count` solicitações."
+    },
+    {
+      "id": 26,
+      "source": "`-C count`",
+      "translation": "`-C count`"
+    },
+    {
+      "id": 27,
+      "source": "Only wait for count replies, regardless of -c and -w.",
+      "translation": "Aguarda apenas `count` respostas, independentemente de `-c` e `-w`."
+    },
+    {
+      "id": 28,
+      "source": "`-d`",
+      "translation": "`-d`"
+    },
+    {
+      "id": 29,
+      "source": "Find duplicate replies. Exit with 1 if there are answers from two different MAC addresses.",
+      "translation": "Encontra respostas duplicadas. Encerra com código 1 se houver respostas de dois endereços MAC diferentes."
+    },
+    {
+      "id": 30,
+      "source": "`-D`",
+      "translation": "`-D`"
+    },
+    {
+      "id": 31,
+      "source": "Display answers as exclamation points and missing packets as dots. Like flood ping on a Cisco.",
+      "translation": "Exibe respostas como pontos de exclamação e pacotes ausentes como pontos. Como o flood ping de um equipamento Cisco."
+    },
+    {
+      "id": 32,
+      "source": "`-e`",
+      "translation": "`-e`"
+    },
+    {
+      "id": 33,
+      "source": "Like -a but beep when there is no reply.",
+      "translation": "Como `-a`, mas emite um sinal sonoro quando não há resposta."
+    },
+    {
+      "id": 34,
+      "source": "`-F`",
+      "translation": "`-F`"
+    },
+    {
+      "id": 35,
+      "source": "Don't try to be smart about the interface name. Even if this switch is not given, -i disables this smartness.",
+      "translation": "Não tenta determinar automaticamente o nome da interface. Mesmo sem este sinalizador, `-i` desativa essa determinação automática."
+    },
+    {
+      "id": 36,
+      "source": "`-g group`",
+      "translation": "`-g group`"
+    },
+    {
+      "id": 37,
+      "source": "setgid() to this group instead of the nobody group.",
+      "translation": "Executa `setgid()` para este grupo em vez do grupo nobody."
+    },
+    {
+      "id": 38,
+      "source": "`-h`",
+      "translation": "`-h`"
+    },
+    {
+      "id": 39,
+      "source": "Displays a help message and exits.",
+      "translation": "Exibe uma mensagem de ajuda e encerra."
+    },
+    {
+      "id": 40,
+      "source": "`-i interface`",
+      "translation": "`-i interface`"
+    },
+    {
+      "id": 41,
+      "source": "Don't guess, use the specified interface.",
+      "translation": "Não tenta adivinhar: usa a interface especificada."
+    },
+    {
+      "id": 42,
+      "source": "`-m type`",
+      "translation": "`-m type`"
+    },
+    {
+      "id": 43,
+      "source": "Type of timestamp to use for incoming packets. Use -vv when pinging to list available ones.",
+      "translation": "Tipo de marca temporal a usar nos pacotes recebidos. Use `-vv` ao enviar ping para listar os tipos disponíveis."
+    },
+    {
+      "id": 44,
+      "source": "`-p`",
+      "translation": "`-p`"
+    },
+    {
+      "id": 45,
+      "source": "Turn on promiscious mode on interface, use this if you don't \"own\" the MAC address you are using.",
+      "translation": "Ativa o modo promíscuo na interface; use se você não \"possuir\" o endereço MAC que está usando."
+    },
+    {
+      "id": 46,
+      "source": "`-P`",
+      "translation": "`-P`"
+    },
+    {
+      "id": 47,
+      "source": "Send ARP replies instead of requests. Useful with -U.",
+      "translation": "Envia respostas ARP em vez de solicitações. Útil com `-U`."
+    },
+    {
+      "id": 48,
+      "source": "`-q`",
+      "translation": "`-q`"
+    },
+    {
+      "id": 49,
+      "source": "Does not display messages, except error messages.",
+      "translation": "Não exibe mensagens, exceto mensagens de erro."
+    },
+    {
+      "id": 50,
+      "source": "`-Q priority`",
+      "translation": "`-Q priority`"
+    },
+    {
+      "id": 51,
+      "source": "802.1p priority to set. Should be used with 802.1Q tag (-V). Defaults to 0.",
+      "translation": "Prioridade 802.1p a definir. Deve ser usada com uma tag 802.1Q (`-V`). O padrão é 0."
+    },
+    {
+      "id": 52,
+      "source": "`-r`",
+      "translation": "`-r`"
+    },
+    {
+      "id": 53,
+      "source": "Raw output: only the MAC/IP address is displayed for each reply.",
+      "translation": "Saída bruta: exibe apenas o endereço MAC/IP de cada resposta."
+    },
+    {
+      "id": 54,
+      "source": "`-R`",
+      "translation": "`-R`"
+    },
+    {
+      "id": 55,
+      "source": "Raw output: Like -r but shows \"the other one\", can be combined with -r.",
+      "translation": "Saída bruta: como `-r`, mas mostra \"o outro\" endereço; pode ser combinada com `-r`."
+    },
+    {
+      "id": 56,
+      "source": "`-s MAC`",
+      "translation": "`-s MAC`"
+    },
+    {
+      "id": 57,
+      "source": "Set source MAC address. You may need to use -p with this.",
+      "translation": "Define o endereço MAC de origem. Talvez seja necessário usar `-p` com esta opção."
+    },
+    {
+      "id": 58,
+      "source": "`-S IP`",
+      "translation": "`-S IP`"
+    },
+    {
+      "id": 59,
+      "source": "Like -b and -0 but with set source address. Note that this may get the arping unanswered if the target does not have routing to the IP. If you don't own the IP you are using, you may need to turn on promiscious mode on the interface (with -p). With this switch you can find out what IP-address a host has without taking an IP-address yourself.",
+      "translation": "Como `-b` e `-0`, mas com um endereço de origem definido. Isso pode deixar o arping sem resposta se o alvo não tiver uma rota para esse IP. Se você não possuir o IP que está usando, talvez precise ativar o modo promíscuo na interface (com `-p`). Com esta opção, é possível descobrir o endereço IP de um host sem atribuir a si próprio um endereço IP."
+    },
+    {
+      "id": 60,
+      "source": "`-t MAC`",
+      "translation": "`-t MAC`"
+    },
+    {
+      "id": 61,
+      "source": "Set target MAC address to use when pinging IP address.",
+      "translation": "Define o endereço MAC de destino a usar ao enviar ping a um endereço IP."
+    },
+    {
+      "id": 62,
+      "source": "`-T IP`",
+      "translation": "`-T IP`"
+    },
+    {
+      "id": 63,
+      "source": "Use -T as target address when pinging MACs that won't respond to a broadcast ping but perhaps to a directed broadcast.",
+      "translation": "Usa `-T` como endereço de destino ao enviar ping a MACs que não respondam a um ping de broadcast, mas talvez respondam a um broadcast direcionado."
+    },
+    {
+      "id": 64,
+      "source": "Example: To check the address of MAC-A, use knowledge of MAC-B and IP-B.",
+      "translation": "Exemplo: para verificar o endereço de MAC-A, use informações conhecidas sobre MAC-B e IP-B."
+    },
+    {
+      "id": 65,
+      "source": "`-u`",
+      "translation": "`-u`"
+    },
+    {
+      "id": 66,
+      "source": "Show index=received/sent instead of just index=received when pinging MACs.",
+      "translation": "Mostra index=received/sent em vez de apenas index=received ao enviar ping a MACs."
+    },
+    {
+      "id": 67,
+      "source": "`-U`",
+      "translation": "`-U`"
+    },
+    {
+      "id": 68,
+      "source": "Send unsolicited ARP. This sets the destination MAC address in the ARP frame to the broadcast address. Unsolicited ARP is used to update the neighbours' ARP caches.",
+      "translation": "Envia ARP não solicitado. Isso define como broadcast o endereço MAC de destino no quadro ARP. O ARP não solicitado é usado para atualizar os caches ARP dos vizinhos."
+    },
+    {
+      "id": 69,
+      "source": "Example:",
+      "translation": "Exemplo:"
+    },
+    {
+      "id": 70,
+      "source": "`-v`",
+      "translation": "`-v`"
+    },
+    {
+      "id": 71,
+      "source": "Verbose output. Use twice for more messages.",
+      "translation": "Saída detalhada. Use duas vezes para obter mais mensagens."
+    },
+    {
+      "id": 72,
+      "source": "`-V vlan`",
+      "translation": "`-V vlan`"
+    },
+    {
+      "id": 73,
+      "source": "VLAN tag to set. Defaults to no VLAN tag.",
+      "translation": "Tag VLAN a definir. O padrão é não usar tag VLAN."
+    },
+    {
+      "id": 74,
+      "source": "`-w sec`",
+      "translation": "`-w sec`"
+    },
+    {
+      "id": 75,
+      "source": "Specify a timeout before ping exits regardless of how many packets have been sent or received.",
+      "translation": "Especifica um tempo limite para o encerramento do ping, independentemente de quantos pacotes tenham sido enviados ou recebidos."
+    },
+    {
+      "id": 76,
+      "source": "`-W sec`",
+      "translation": "`-W sec`"
+    },
+    {
+      "id": 77,
+      "source": "Time to wait between pings.",
+      "translation": "Tempo de espera entre os pings."
+    },
+    {
+      "id": 78,
+      "source": "`-z`",
+      "translation": "`-z`"
+    },
+    {
+      "id": 79,
+      "source": "Enable seccomp (default seccomp state depends on compile options)",
+      "translation": "Ativa o seccomp (o estado padrão do seccomp depende das opções de compilação)."
+    },
+    {
+      "id": 80,
+      "source": "`-Z`",
+      "translation": "`-Z`"
+    },
+    {
+      "id": 81,
+      "source": "Disable seccomp (default seccomp state depends on compile options)",
+      "translation": "Desativa o seccomp (o estado padrão do seccomp depende das opções de compilação)."
+    },
+    {
+      "id": 82,
+      "source": "EXAMPLES",
+      "translation": "EXEMPLOS"
+    },
+    {
+      "id": 83,
+      "source": "BUGS",
+      "translation": "BUGS"
+    },
+    {
+      "id": 84,
+      "source": "You have to use -B instead of arpinging 255.255.255.255, and -b instead of -S 255.255.255.255. This is libnets fault.",
+      "translation": "É necessário usar `-B` em vez de executar arping para `255.255.255.255`, e `-b` em vez de `-S 255.255.255.255`. Isso é uma falha da libnet."
+    },
+    {
+      "id": 85,
+      "source": "SEE ALSO",
+      "translation": "VEJA TAMBÉM"
+    },
+    {
+      "id": 86,
+      "source": "ping(8), arp(8), rarp(8)",
+      "translation": "ping(8), arp(8), rarp(8)"
+    },
+    {
+      "id": 87,
+      "source": "AUTHOR",
+      "translation": "AUTOR"
+    },
+    {
+      "id": 88,
+      "source": "Arping was written by Thomas Habets <thomas@habets.se>.",
+      "translation": "O Arping foi escrito por Thomas Habets <thomas@habets.se>."
+    },
+    {
+      "id": 89,
+      "source": "http://www.habets.pp.se/synscan/",
+      "translation": "http://www.habets.pp.se/synscan/"
+    }
+  ]
+}

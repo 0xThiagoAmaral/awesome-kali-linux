@@ -214,6 +214,8 @@ if 'test_packaged_manual.py' not in t:
     t+='      - name: Test non-executing native package manuals\n        run: python3 scripts/test_packaged_manual.py\n'
 if 'build_package_editorial.py --tool whois --check' not in t:
     t+='      - name: Reproduce complete whois editorial translation\n        run: python3 scripts/build_package_editorial.py --tool whois --check\n'
+if 'check_package_editorials.py' not in t:
+    t+='      - name: Reproduce all native package translations\n        run: python3 scripts/check_package_editorials.py\n'
 workflow.write_bytes(t.encode('utf-8'))
 put(pathlib.Path('requirements-translation.txt'),'ctranslate2==4.8.4\nsentencepiece==0.2.1')
 print(json.dumps({'documents':len(documents),'tools':len(imports),'machine':machine,'assistant_translated':assistant,'official_portuguese':native,

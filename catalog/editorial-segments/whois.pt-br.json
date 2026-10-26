@@ -1,0 +1,484 @@
+{
+  "source_sha256": "74ff8b3ae7c59193d366d679aad9d328c2917a38399bb7d73a39264604d038fc",
+  "prepared_sha256": "a5dc78419971f563cf74f55566b0e26a353713f3aaf6238bc01e6dc9d90c5564",
+  "license_spdx": "GPL-2.0-or-later",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "whois - client for the whois directory service",
+      "translation": "whois - cliente para o serviço de diretório whois"
+    },
+    {
+      "id": 2,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 3,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 4,
+      "source": "`whois` searches for an object in a `RFC 3912` database.",
+      "translation": "`whois` procura um objeto em um banco de dados `RFC 3912`."
+    },
+    {
+      "id": 5,
+      "source": "This version of the whois client tries to guess the right server to ask for the specified object. If no guess can be made it will connect to `whois.networksolutions.com` for NIC handles or `whois.arin.net` for IPv4 addresses and network names.",
+      "translation": "Esta versão do cliente whois tenta determinar o servidor correto para consultar o objeto especificado. Se não conseguir determiná-lo, conectará a `whois.networksolutions.com` para identificadores NIC ou a `whois.arin.net` para endereços IPv4 e nomes de redes."
+    },
+    {
+      "id": 6,
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": 7,
+      "source": "`-h` `HOST`, `--host=HOST`",
+      "translation": "`-h` `HOST`, `--host=HOST`"
+    },
+    {
+      "id": 8,
+      "source": "Connect to `HOST`.",
+      "translation": "Conecta a `HOST`."
+    },
+    {
+      "id": 9,
+      "source": "`-H`",
+      "translation": "`-H`"
+    },
+    {
+      "id": 10,
+      "source": "Do not display the legal disclaimers that some registries like to show you.",
+      "translation": "Não exibe os avisos legais que alguns registros costumam mostrar."
+    },
+    {
+      "id": 11,
+      "source": "`-p` `PORT`, `--port=PORT`",
+      "translation": "`-p` `PORT`, `--port=PORT`"
+    },
+    {
+      "id": 12,
+      "source": "Connect to `PORT`.",
+      "translation": "Conecta à porta `PORT`."
+    },
+    {
+      "id": 13,
+      "source": "`-I`",
+      "translation": "`-I`"
+    },
+    {
+      "id": 14,
+      "source": "First query `whois.iana.org` and then follow its referral to the whois server authoritative for that request. This works for IP addresses, AS numbers and domains. `BEWARE`: this implies that the IANA server will receive your complete query.",
+      "translation": "Primeiro consulta `whois.iana.org` e depois segue seu encaminhamento ao servidor whois autoritativo para essa solicitação. Isso funciona para endereços IP, números AS e domínios. `BEWARE` (atenção): isso implica que o servidor IANA receberá sua consulta completa."
+    },
+    {
+      "id": 15,
+      "source": "`--no-recursion`",
+      "translation": "`--no-recursion`"
+    },
+    {
+      "id": 16,
+      "source": "Disable recursion from registry to registrar servers.",
+      "translation": "Desativa a recursão dos servidores de registro para os servidores dos registradores."
+    },
+    {
+      "id": 17,
+      "source": "`--verbose`",
+      "translation": "`--verbose`"
+    },
+    {
+      "id": 18,
+      "source": "Be verbose.",
+      "translation": "Exibe informações detalhadas."
+    },
+    {
+      "id": 19,
+      "source": "`--help`",
+      "translation": "`--help`"
+    },
+    {
+      "id": 20,
+      "source": "Display online help.",
+      "translation": "Exibe a ajuda do programa."
+    },
+    {
+      "id": 21,
+      "source": "`--version`",
+      "translation": "`--version`"
+    },
+    {
+      "id": 22,
+      "source": "Display the program version.",
+      "translation": "Exibe a versão do programa."
+    },
+    {
+      "id": 23,
+      "source": "Other options are flags understood by `whois.ripe.net` and some other RIPE-like servers:",
+      "translation": "As outras opções são sinalizadores reconhecidos por `whois.ripe.net` e por alguns outros servidores semelhantes ao RIPE:"
+    },
+    {
+      "id": 24,
+      "source": "`-a`",
+      "translation": "`-a`"
+    },
+    {
+      "id": 25,
+      "source": "Also search all the mirrored databases.",
+      "translation": "Também pesquisa em todos os bancos de dados espelhados."
+    },
+    {
+      "id": 26,
+      "source": "`-b`",
+      "translation": "`-b`"
+    },
+    {
+      "id": 27,
+      "source": "Return brief IP address ranges with abuse contact.",
+      "translation": "Retorna intervalos resumidos de endereços IP com contato para denúncias de abuso."
+    },
+    {
+      "id": 28,
+      "source": "`-B`",
+      "translation": "`-B`"
+    },
+    {
+      "id": 29,
+      "source": "Disable objects filtering. (Show the e-mail addresses.)",
+      "translation": "Desativa a filtragem de objetos. (Mostra os endereços de e-mail.)"
+    },
+    {
+      "id": 30,
+      "source": "`-c`",
+      "translation": "`-c`"
+    },
+    {
+      "id": 31,
+      "source": "Return the smallest IP address range with a reference to an irt object.",
+      "translation": "Retorna o menor intervalo de endereços IP com uma referência a um objeto irt."
+    },
+    {
+      "id": 32,
+      "source": "`-d`",
+      "translation": "`-d`"
+    },
+    {
+      "id": 33,
+      "source": "Return the reverse DNS delegation object too.",
+      "translation": "Retorna também o objeto de delegação de DNS reverso."
+    },
+    {
+      "id": 34,
+      "source": "`-g` `SOURCE:FIRST-LAST`",
+      "translation": "`-g` `SOURCE:FIRST-LAST`"
+    },
+    {
+      "id": 35,
+      "source": "Search updates from `SOURCE` database between `FIRST` and `LAST` update serial number. It is useful to obtain Near Real Time Mirroring stream.",
+      "translation": "Pesquisa atualizações no banco de dados `SOURCE` entre os números de série de atualização `FIRST` e `LAST`. É útil para obter o fluxo de espelhamento quase em tempo real (Near Real Time Mirroring)."
+    },
+    {
+      "id": 36,
+      "source": "`-G`",
+      "translation": "`-G`"
+    },
+    {
+      "id": 37,
+      "source": "Disable grouping of associated objects.",
+      "translation": "Desativa o agrupamento de objetos associados."
+    },
+    {
+      "id": 38,
+      "source": "`-i` `ATTR`[,`ATTR`]...",
+      "translation": "`-i` `ATTR`[,`ATTR`]..."
+    },
+    {
+      "id": 39,
+      "source": "Inverse-search objects having associated attributes. `ATTR` is the attribute name, while the positional `OBJECT` argument is the attribute value.",
+      "translation": "Faz uma pesquisa inversa de objetos que tenham os atributos associados. `ATTR` é o nome do atributo, enquanto o argumento posicional `OBJECT` é o valor do atributo."
+    },
+    {
+      "id": 40,
+      "source": "`-K`",
+      "translation": "`-K`"
+    },
+    {
+      "id": 41,
+      "source": "Return primary key attributes only. An exception is the `members` attribute of `set` objects, which is always returned. Another exception are all attributes of the objects `organisation`, `person` and `role`, that are never returned.",
+      "translation": "Retorna apenas atributos de chave primária. Uma exceção é o atributo `members` dos objetos `set`, que sempre é retornado. Outra exceção são todos os atributos dos objetos `organisation`, `person` e `role`, que nunca são retornados."
+    },
+    {
+      "id": 42,
+      "source": "`-l`",
+      "translation": "`-l`"
+    },
+    {
+      "id": 43,
+      "source": "Return the one level less specific object.",
+      "translation": "Retorna o objeto um nível menos específico."
+    },
+    {
+      "id": 44,
+      "source": "`-L`",
+      "translation": "`-L`"
+    },
+    {
+      "id": 45,
+      "source": "Return all levels of less specific objects.",
+      "translation": "Retorna todos os níveis de objetos menos específicos."
+    },
+    {
+      "id": 46,
+      "source": "`-m`",
+      "translation": "`-m`"
+    },
+    {
+      "id": 47,
+      "source": "Return all one level more specific objects.",
+      "translation": "Retorna todos os objetos um nível mais específicos."
+    },
+    {
+      "id": 48,
+      "source": "`-M`",
+      "translation": "`-M`"
+    },
+    {
+      "id": 49,
+      "source": "Return all levels of more specific objects.",
+      "translation": "Retorna todos os níveis de objetos mais específicos."
+    },
+    {
+      "id": 50,
+      "source": "`-q` `KEYWORD`",
+      "translation": "`-q` `KEYWORD`"
+    },
+    {
+      "id": 51,
+      "source": "Return information about the server. `KEYWORD` can be `version` for the server version, `sources` for the list of database sources or `types` for the list of supported object types.",
+      "translation": "Retorna informações sobre o servidor. `KEYWORD` pode ser `version` para a versão do servidor, `sources` para a lista de fontes de bancos de dados ou `types` para a lista de tipos de objetos compatíveis."
+    },
+    {
+      "id": 52,
+      "source": "`-r`",
+      "translation": "`-r`"
+    },
+    {
+      "id": 53,
+      "source": "Disable recursive lookups for contact information.",
+      "translation": "Desativa as consultas recursivas de informações de contato."
+    },
+    {
+      "id": 54,
+      "source": "`-R`",
+      "translation": "`-R`"
+    },
+    {
+      "id": 55,
+      "source": "Disable following referrals and force showing the object from the local copy in the server.",
+      "translation": "Desativa o acompanhamento de encaminhamentos e força a exibição do objeto da cópia local no servidor."
+    },
+    {
+      "id": 56,
+      "source": "`-s` `SOURCE`[,`SOURCE`]...",
+      "translation": "`-s` `SOURCE`[,`SOURCE`]..."
+    },
+    {
+      "id": 57,
+      "source": "Request the server to search for objects mirrored from `SOURCE`. Sources are delimited by comma, and the order is significant. Use the `-q sources` parameter to obtain a list of valid sources.",
+      "translation": "Solicita ao servidor que pesquise objetos espelhados de `SOURCE`. As fontes são separadas por vírgula, e a ordem é significativa. Use o parâmetro `-q sources` para obter uma lista de fontes válidas."
+    },
+    {
+      "id": 58,
+      "source": "`-t` `TYPE`",
+      "translation": "`-t` `TYPE`"
+    },
+    {
+      "id": 59,
+      "source": "Return the template for a object of `TYPE`.",
+      "translation": "Retorna o modelo para um objeto do tipo `TYPE`."
+    },
+    {
+      "id": 60,
+      "source": "`-T` `TYPE`[,`TYPE`]...",
+      "translation": "`-T` `TYPE`[,`TYPE`]..."
+    },
+    {
+      "id": 61,
+      "source": "Restrict the search to objects of `TYPE`. Multiple types are separated by a comma.",
+      "translation": "Restringe a pesquisa a objetos do tipo `TYPE`. Vários tipos são separados por vírgula."
+    },
+    {
+      "id": 62,
+      "source": "`-v` `TYPE`",
+      "translation": "`-v` `TYPE`"
+    },
+    {
+      "id": 63,
+      "source": "Return the verbose template for a object of `TYPE`.",
+      "translation": "Retorna o modelo detalhado para um objeto do tipo `TYPE`."
+    },
+    {
+      "id": 64,
+      "source": "`-x`",
+      "translation": "`-x`"
+    },
+    {
+      "id": 65,
+      "source": "Search for only exact match on network address prefix.",
+      "translation": "Pesquisa apenas correspondências exatas do prefixo de endereço de rede."
+    },
+    {
+      "id": 66,
+      "source": "NOTES",
+      "translation": "NOTAS"
+    },
+    {
+      "id": 67,
+      "source": "When querying the Verisign gTLDs (e.g. .com, .net...) thin registry servers for a domain, the program will automatically prepend the `domain` keyword to only show domain records.  The `nameserver` or `registrar` keywords must be used to show other kinds of records.",
+      "translation": "Ao consultar os servidores thin registry de gTLDs da Verisign (por exemplo, .com, .net...) sobre um domínio, o programa acrescentará automaticamente a palavra-chave `domain` no início para mostrar apenas registros de domínio. As palavras-chave `nameserver` ou `registrar` devem ser usadas para mostrar outros tipos de registros."
+    },
+    {
+      "id": 68,
+      "source": "When querying `whois.arin.net` for IPv4 or IPv6 networks, the CIDR netmask length will be automatically removed from the query string.",
+      "translation": "Ao consultar `whois.arin.net` sobre redes IPv4 ou IPv6, o comprimento da máscara de rede CIDR será removido automaticamente da string de consulta."
+    },
+    {
+      "id": 69,
+      "source": "When querying `whois.nic.ad.jp` for AS numbers, the program will automatically convert the request in the appropriate format, inserting a space after the string `AS`.",
+      "translation": "Ao consultar `whois.nic.ad.jp` sobre números AS, o programa converterá automaticamente a solicitação para o formato apropriado, inserindo um espaço após a string `AS`."
+    },
+    {
+      "id": 70,
+      "source": "When querying `whois.denic.de` for domain names and no other flags have been specified, the program will automatically add the flag `-T dn`.",
+      "translation": "Ao consultar `whois.denic.de` sobre nomes de domínio sem especificar outros sinalizadores, o programa acrescentará automaticamente o sinalizador `-T dn`."
+    },
+    {
+      "id": 71,
+      "source": "When querying `whois.dk-hostmaster.dk` for domain names and no other flags have been specified, the program will automatically add the flag `--show-handles`.",
+      "translation": "Ao consultar `whois.dk-hostmaster.dk` sobre nomes de domínio sem especificar outros sinalizadores, o programa acrescentará automaticamente o sinalizador `--show-handles`."
+    },
+    {
+      "id": 72,
+      "source": "RIPE-specific command line options are ignored when querying non-RIPE servers. This may or may not be the behaviour intended by the user. When using non-standard query parameters then the command line options which are not to be interpreted by the client must follow the `--` separator (which marks the beginning of the query string).",
+      "translation": "As opções de linha de comando específicas do RIPE são ignoradas ao consultar servidores que não são RIPE. Esse comportamento pode ou não corresponder ao pretendido pelo usuário. Ao usar parâmetros de consulta não padronizados, as opções de linha de comando que não devem ser interpretadas pelo cliente precisam vir após o separador `--` (que marca o início da string de consulta)."
+    },
+    {
+      "id": 73,
+      "source": "If the `/etc/whois.conf` configuration file exists, it will be consulted to find a server before applying the normal rules. Each line of the file should contain a regular expression to be matched against the query text and the whois server to use, separated by white space. IDN domains must use the ACE format.",
+      "translation": "Se o arquivo de configuração `/etc/whois.conf` existir, ele será consultado para encontrar um servidor antes da aplicação das regras normais. Cada linha do arquivo deve conter uma expressão regular a ser comparada com o texto da consulta e o servidor whois a utilizar, separados por espaço em branco. Domínios IDN devem usar o formato ACE."
+    },
+    {
+      "id": 74,
+      "source": "The whois protocol does not specify an encoding for characters which cannot be represented by ASCII and implementations vary wildly. If the program knows that a specific server uses a certain encoding, if needed it will transcode the server output to the encoding specified by the current system locale.",
+      "translation": "O protocolo whois não especifica uma codificação para caracteres que não podem ser representados em ASCII, e as implementações variam muito. Se o programa souber que determinado servidor usa uma certa codificação, quando necessário transcodificará a saída do servidor para a codificação especificada pela configuração regional atual do sistema."
+    },
+    {
+      "id": 75,
+      "source": "Command line arguments will always be interpreted accordingly to the current system locale and converted to the IDN ASCII Compatible Encoding.",
+      "translation": "Os argumentos de linha de comando sempre serão interpretados de acordo com a configuração regional atual do sistema e convertidos para a codificação compatível com ASCII dos IDNs."
+    },
+    {
+      "id": 76,
+      "source": "FILES",
+      "translation": "ARQUIVOS"
+    },
+    {
+      "id": 77,
+      "source": "/etc/whois.conf",
+      "translation": "/etc/whois.conf"
+    },
+    {
+      "id": 78,
+      "source": "ENVIRONMENT",
+      "translation": "AMBIENTE"
+    },
+    {
+      "id": 79,
+      "source": "`LANG`",
+      "translation": "`LANG`"
+    },
+    {
+      "id": 80,
+      "source": "When querying `whois.nic.ad.jp` and `whois.jprs.jp` English text is requested unless the `LANG` or `LC_MESSAGES` environment variables specify a Japanese locale.",
+      "translation": "Ao consultar `whois.nic.ad.jp` e `whois.jprs.jp`, solicita-se texto em inglês, a menos que as variáveis de ambiente `LANG` ou `LC_MESSAGES` especifiquem uma configuração regional japonesa."
+    },
+    {
+      "id": 81,
+      "source": "`WHOIS_OPTIONS`",
+      "translation": "`WHOIS_OPTIONS`"
+    },
+    {
+      "id": 82,
+      "source": "A list of options which will be evaluated before the ones specified on the command line.",
+      "translation": "Uma lista de opções que serão avaliadas antes das especificadas na linha de comando."
+    },
+    {
+      "id": 83,
+      "source": "`WHOIS_SERVER`",
+      "translation": "`WHOIS_SERVER`"
+    },
+    {
+      "id": 84,
+      "source": "This server will be queried if the program cannot guess where some kind of objects are located. If the variable does not exist then `whois.arin.net` will be queried.",
+      "translation": "Este servidor será consultado se o programa não conseguir determinar onde está localizado algum tipo de objeto. Se a variável não existir, `whois.arin.net` será consultado."
+    },
+    {
+      "id": 85,
+      "source": "SEE ALSO",
+      "translation": "VEJA TAMBÉM"
+    },
+    {
+      "id": 86,
+      "source": "`whois.conf`(5).",
+      "translation": "`whois.conf`(5)."
+    },
+    {
+      "id": 87,
+      "source": "`RFC 3912`: WHOIS Protocol Specification.",
+      "translation": "`RFC 3912`: especificação do protocolo WHOIS."
+    },
+    {
+      "id": 88,
+      "source": "`RIPE Database Query Reference Manual`: <https://www.ripe.net/data-tools/support/documentation/ripe-database-query-reference-manual>",
+      "translation": "`RIPE Database Query Reference Manual`: <https://www.ripe.net/data-tools/support/documentation/ripe-database-query-reference-manual>"
+    },
+    {
+      "id": 89,
+      "source": "BUGS",
+      "translation": "BUGS"
+    },
+    {
+      "id": 90,
+      "source": "The program may have buffer overflows in the command line parser: be sure to not pass untrusted data to it. It should be rewritten to use a dynamic strings library.",
+      "translation": "O programa pode apresentar estouros de buffer no analisador de linha de comando: certifique-se de não passar dados não confiáveis a ele. Ele deveria ser reescrito para usar uma biblioteca de strings dinâmicas."
+    },
+    {
+      "id": 91,
+      "source": "HISTORY",
+      "translation": "HISTÓRICO"
+    },
+    {
+      "id": 92,
+      "source": "This program closely tracks the user interface of the whois client developed at RIPE by Ambrose Magee and others on the base of the original BSD client.",
+      "translation": "Este programa acompanha de perto a interface de usuário do cliente whois desenvolvido no RIPE por Ambrose Magee e outros, com base no cliente BSD original."
+    },
+    {
+      "id": 93,
+      "source": "AUTHOR",
+      "translation": "AUTOR"
+    },
+    {
+      "id": 94,
+      "source": "`Whois` and this man page were written by Marco d'Itri <`md@linux.it`> and are licensed under the terms of the GNU General Public License, version 2 or later.",
+      "translation": "`Whois` e esta página de manual foram escritos por Marco d'Itri <`md@linux.it`> e são licenciados sob os termos da GNU General Public License, versão 2 ou posterior."
+    }
+  ]
+}

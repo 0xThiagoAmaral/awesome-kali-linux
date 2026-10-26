@@ -39,6 +39,8 @@ def main():
     registry=json.loads(registry_path.read_text(encoding='utf-8'))
     results=[]
     for tool,record in registry.items():
+        if record.get('source_kind')=='installed-kali-package':
+            continue  # Native package notices/assets are verified by package_source.py.
         cache=args.cache/tool
         archive=cache/(record['commit']+'.zip')
         assert hashlib.sha256(archive.read_bytes()).hexdigest()==record['archive_sha256']

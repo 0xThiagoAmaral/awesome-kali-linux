@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "tools": 24,
-  "documents": 48,
-  "code_blocks": 397,
+  "tools": 25,
+  "documents": 49,
+  "code_blocks": 398,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -3095,6 +3095,179 @@
     },
     {
       "check": "berate-ap:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois retained asset hash: COPYRIGHT.package.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois retained asset hash: originals/whois.1.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois retained asset hash: PACKAGE-SNAPSHOT.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois native source snapshot, gzip, notice and version binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 exact fenced-code bodies",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "whois:whois.1 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 96,
+        "translation": 101
+      }
+    },
+    {
+      "check": "whois:whois.1 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "whois:whois.1 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "whois:whois.1 review status honest",
       "pass": true,
       "detail": null
     }

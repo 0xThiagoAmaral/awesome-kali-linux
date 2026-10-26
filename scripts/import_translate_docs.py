@@ -17,11 +17,13 @@ from enrich_local_assets import resolve_reference
 from plain_manual import prepare_manual
 from roff_manual import prepare_roff_manual
 from roff_extended_manual import prepare_extended_roff
+from packaged_manual import prepare_packaged_manual
+from package_source import validate_package_source, package_fields
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 BT=chr(96)
 FENCE=re.compile(r'^(\s*)('+BT+r'{3,}|~{3,})(.*)$')
-PIPELINE_VERSION='0.6-tables-images-and-source-link-corrections'
+PIPELINE_VERSION='0.7-truthful-native-package-sources'
 
 def save_json(path,value):
     temp=path.with_suffix(path.suffix+'.tmp')
@@ -233,6 +235,8 @@ def resolve_relative_links(text,record,doc_path,note,asset_root,heading_map):
             if parsed.fragment:
                 target+='#'+parsed.fragment
             return '['+label+']('+target+')'
+        if record.get('source_kind')=='installed-kali-package':
+            raise ValueError('Unacquired relative reference in package manual: '+joined)
         target=record['repository']+'/blob/'+record['commit']+'/'+joined
         if parsed.fragment:
             target+='#'+parsed.fragment
@@ -314,6 +318,8 @@ def main():
             target=assets/asset['path']
             target.parent.mkdir(parents=True,exist_ok=True)
             shutil.copyfile(src,target)
+        if record.get('source_kind')=='installed-kali-package':
+            validate_package_source(record,assets)
         old_documents={x['source_path']:x for x in report.get(tool,{}).get('documents',[])}
         documents=[]
         priority={'README.md':0,'docs/README.md':1,'docs/INSTALL.md':2,'docs/FAQ.md':3,'docs/features.md':4,'docs/Changelog.md':99}
@@ -333,9 +339,9 @@ def main():
             source=data.decode('utf-8')
             format_info={}
             manual_changes=[]
-            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1'}:
+            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1','packaged-man-roff-v1'}:
                 prepare={'sectioned-plain-text-v1':prepare_manual,'man-roff-v1':prepare_roff_manual,
-                         'man-roff-extended-v1':prepare_extended_roff}[doc['source_format']]
+                         'man-roff-extended-v1':prepare_extended_roff,'packaged-man-roff-v1':prepare_packaged_manual}[doc['source_format']]
                 source,manual_evidence=prepare(source,tool)
                 prepared=originals/(doc['path']+'.presentation.md.source')
                 prepared.write_bytes(source.encode('utf-8'))
@@ -378,17 +384,17 @@ def main():
             props={'title':tool+' — documentação oficial','type':'official-documentation','tool':tool,
                    'status':'official-translation' if native_portuguese else 'source-checked' if editorial else 'translated-machine','reviewed':'2026-10-26','language':doc.get('language') if native_portuguese else 'pt-BR',
                    'tags':['documentation','tool/'+tool],'cssclasses':['fieldbook'],
-                   'source_url':doc['source_url'],'source_commit':record['commit'],
+                   'source_url':doc['source_url'],**package_fields(record),
                    'source_sha256':doc['sha256'],'license_spdx':doc.get('license_spdx',record['license_spdx']),
                    'human_review':'pending','source_scope':record['source_scope']}
-            if doc.get('source_format') in {'man-roff-v1','man-roff-extended-v1'}:
+            if doc.get('source_format') in {'man-roff-v1','man-roff-extended-v1','packaged-man-roff-v1'}:
                 props['title']=manual_evidence['title'][0].lower()+' — manual de referência'
                 props['binary']=manual_evidence['title'][0].lower()
                 props['source_manual_date']=manual_evidence['title'][2]
                 props['manual_section']=manual_evidence['title'][1]
             compatibility_notice=''
             runtime_path=ROOT/'evidence'/doc.get('runtime_evidence_file',tool+'-local-tests.json')
-            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1'} and runtime_path.exists():
+            if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1','packaged-man-roff-v1'} and runtime_path.exists():
                 runtime=json.loads(runtime_path.read_text(encoding='utf-8'))
                 if runtime.get('source_manual_sha256')==doc['sha256'] and runtime.get('passed'):
                     evidence_rel='../../99-Assets/evidence/'+runtime_path.name
@@ -409,7 +415,19 @@ def main():
                 notice='> Tradução para português produzida por assistente de IA e conferida seção por seção contra a fonte. Revisão humana independente: pendente. Opções e exemplos originais foram preservados; nenhum exemplo foi executado automaticamente.\n\n'
             notice+=compatibility_notice
             license_link=pathlib.Path(os.path.relpath(assets/doc.get('license_asset','LICENSE.txt'),note.parent)).as_posix()
-            attribution='\n\n---\n\n## Procedência desta tradução\n\nFonte: ['+record['repository']+']('+doc['source_url']+'). Licença: ['+doc.get('license_spdx',record['license_spdx'])+']('+license_link+'). Commit: '+record['commit']+'.\n\nO original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.\n'
+            attribution='\n\n---\n\n## Procedência desta tradução\n\nFonte: ['+record['repository']+']('+doc['source_url']+'). Licença: ['+doc.get('license_spdx',record['license_spdx'])+']('+license_link+'). Commit: '+str(record.get('commit') or '')+'.\n\nO original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.\n'
+            if record.get('source_kind')=='installed-kali-package':
+                props.update(package_fields(record))
+                fm='---\n'+'\n'.join(k+': '+json.dumps(v,ensure_ascii=False) for k,v in props.items())+'\n---\n\n'
+                raw_link=pathlib.Path(os.path.relpath(raw,note.parent)).as_posix()
+                copyright_link=pathlib.Path(os.path.relpath(assets/'COPYRIGHT.package.txt',note.parent)).as_posix()
+                attribution='\n\n---\n\n## Procedência desta tradução\n\n'
+                attribution+='Fonte primária: [manual preservado]('+raw_link+'), extraído de '+BT+doc['installed_path']+BT+'. '
+                attribution+='Pacote '+BT+record['package']+BT+', versão '+BT+record['binary_version']+BT+'; pacote-fonte '+BT+record['source_package']+BT+', versão '+BT+record['source_version']+BT+'. '
+                attribution+='Aquisição de pacote instalado, sem atribuição de commit Git.\n\n'
+                attribution+='Licença: ['+record['license_spdx']+']('+license_link+'); [copyright e condições do pacote]('+copyright_link+'). '
+                attribution+='[Página de referência do pacote, não a origem exata do arquivo]('+doc['source_url']+'). '
+                attribution+='Hashes do original, gzip e avisos no registro de fontes. A data do manual é histórica; não implica que todos os serviços externos mantenham esse comportamento.\n'
             final=fm+notice+translated+attribution
             temp_note=note.with_suffix('.md.tmp')
             temp_note.write_bytes(final.encode('utf-8'))
@@ -424,7 +442,7 @@ def main():
                               'pipeline_version':PIPELINE_VERSION,
                               'presentation_changes':changes,'human_review':'pending'})
             documents[-1].update(format_info)
-            report[tool]={'repository':record['repository'],'commit':record['commit'],'license_spdx':record['license_spdx'],
+            report[tool]={'repository':record['repository'],'commit':record.get('commit'),**package_fields(record),'license_spdx':record['license_spdx'],
                           'documents':list(documents),'source_scope':record['source_scope'],'kali_official_page_complete':False,
                           'translation_complete_for_acquired_documents':len(documents)==len(selected_docs),
                           'human_review_complete':False,'model':tr.provenance()}
@@ -434,7 +452,7 @@ def main():
             save_json(job_file,job)
             tr.flush()
             print(json.dumps({'tool':tool,'note':note.name,'code_blocks_preserved':len(code_bodies(source))}),flush=True)
-        report[tool]={'repository':record['repository'],'commit':record['commit'],'license_spdx':record['license_spdx'],
+        report[tool]={'repository':record['repository'],'commit':record.get('commit'),**package_fields(record),'license_spdx':record['license_spdx'],
                       'documents':documents,'source_scope':record['source_scope'],
                       'kali_official_page_complete':False,'translation_complete_for_acquired_documents':True,
                       'human_review_complete':False,'model':tr.provenance()}

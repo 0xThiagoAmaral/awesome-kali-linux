@@ -14,6 +14,8 @@ args=parser.parse_args()
 registry=json.loads((ROOT/'catalog/source-registry.json').read_text(encoding='utf-8'))
 result=[]
 for tool,record in registry.items():
+    if record.get('source_kind')=='installed-kali-package':
+        continue  # Native package notices/assets are verified by package_source.py.
     cached=args.cache/tool
     archive=cached/(record['commit']+'.zip')
     notices=[]

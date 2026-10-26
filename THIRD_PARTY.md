@@ -1,7 +1,7 @@
 # Fontes e atribuições
 
 O repositório contém notas autorais e documentação upstream licenciada. Cada importação registra
-repositório, commit, URL, hash de origem, licença, método de tradução e modificações de apresentação.
+repositório e commit quando a fonte é Git; pacote e versão quando é manual instalado; URL, hash de origem, licença, método de tradução e modificações de apresentação.
 Original e tradução são arquivos distintos; código e saídas literais não são traduzidos silenciosamente.
 
 - catalog/source-registry.json: direitos e arquivos adquiridos.

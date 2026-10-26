@@ -3,8 +3,8 @@
   "scope": "Entire pinned Kali tools catalog, with everything membership reported separately",
   "total_tools": 820,
   "everything_tools": 806,
-  "tools_with_acquired_upstream_docs": 24,
-  "tools_with_machine_translated_docs": 24,
+  "tools_with_acquired_upstream_docs": 25,
+  "tools_with_machine_translated_docs": 25,
   "complete_tools": 0,
   "goal_complete": false,
   "gates": [
@@ -11724,14 +11724,14 @@
       "official_kali_url": "https://www.kali.org/tools/whois/",
       "official_kali_page_mirrored": false,
       "official_kali_page_translated": false,
-      "upstream_repository": null,
-      "license_status": "not-verified",
-      "upstream_acquired_documents": 0,
-      "upstream_translated_documents": 0,
-      "code_integrity_verified": false,
+      "upstream_repository": "https://www.kali.org/tools/whois/",
+      "license_status": "GPL-2.0-or-later",
+      "upstream_acquired_documents": 1,
+      "upstream_translated_documents": 1,
+      "code_integrity_verified": true,
       "human_review_complete": false,
       "full_tool_documentation_complete": false,
-      "next_action": "identify-licensed-official-documentation"
+      "next_action": "review-source-coverage-and-translation"
     },
     {
       "tool": "wifi-honey",

@@ -40,5 +40,18 @@
       "human_review": "pending",
       "license_spdx": "LicenseRef-Get-OUI-Manpage"
     }
+  },
+  "whois": {
+    "whois.1": {
+      "source_sha256": "74ff8b3ae7c59193d366d679aad9d328c2917a38399bb7d73a39264604d038fc",
+      "translation_file": "translations/pt-BR/whois/whois.1.md",
+      "translation_sha256": "f3725f014b7138f8c5881218976317c703a83d67455a82b2c2412af043470c01",
+      "translation_method": "assistant-translated",
+      "human_review": "pending",
+      "license_spdx": "GPL-2.0-or-later",
+      "segment_file": "catalog/editorial-segments/whois.pt-br.json",
+      "segment_sha256": "01c35fa99e30144eeb276cd81d327d86384b5311fbab1f53787b79cfa427a588",
+      "review_scope": "All 95 source-bound segments; 11 sections and 29 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+    }
   }
 }

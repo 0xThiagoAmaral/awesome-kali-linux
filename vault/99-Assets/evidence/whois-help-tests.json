@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "binary": "whois",
+  "installed_version": "whois 5.6.6",
+  "test_status": "help-only",
+  "commands": [
+    {
+      "argv": [
+        "whois",
+        "--help"
+      ],
+      "stdout": "Usage: whois [OPTION]... OBJECT...\n\n-h HOST, --host HOST   connect to server HOST\n-p PORT, --port PORT   connect to PORT\n-I                     query whois.iana.org and follow its referral\n-H                     hide legal disclaimers\n      --verbose        explain what is being done\n      --no-recursion   disable recursion from registry to registrar servers\n      --help           display this help and exit\n      --version        output version information and exit\n\nThese flags are supported by whois.ripe.net and some RIPE-like servers:\n-l                     find the one level less specific match\n-L                     find all levels less specific matches\n-m                     find all one level more specific matches\n-M                     find all levels of more specific matches\n-c                     find the smallest match containing a mnt-irt attribute\n-x                     exact match\n-b                     return brief IP address ranges with abuse contact\n-B                     turn off object filtering (show email addresses)\n-G                     turn off grouping of associated objects\n-d                     return DNS reverse delegation objects too\n-i ATTR[,ATTR]...      do an inverse look-up for specified ATTRibutes\n-T TYPE[,TYPE]...      only look for objects of TYPE\n-K                     only primary keys are returned\n-r                     turn off recursive look-ups for contact information\n-R                     force to show local copy of the domain object even\n                       if it contains referral\n-a                     also search all the mirrored databases\n-s SOURCE[,SOURCE]...  search the database mirrored from SOURCE\n-g SOURCE:FIRST-LAST   find updates from SOURCE from serial FIRST to LAST\n-t TYPE                request template for object of TYPE\n-v TYPE                request verbose template for object of TYPE\n-q [version|sources|types]  query specified server info\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "whois",
+        "--version"
+      ],
+      "stdout": "Version 5.6.6.\n\nReport bugs to <md+whois@linux.it>.\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "dpkg-query",
+        "-W",
+        "-f=${Version}",
+        "whois"
+      ],
+      "stdout": "5.6.6",
+      "stderr": "",
+      "exit_status": 0
+    }
+  ],
+  "manual_options": [
+    "--help",
+    "--host",
+    "--no-recursion",
+    "--port",
+    "--verbose",
+    "--version",
+    "-B",
+    "-G",
+    "-H",
+    "-I",
+    "-K",
+    "-L",
+    "-M",
+    "-R",
+    "-T",
+    "-a",
+    "-b",
+    "-c",
+    "-d",
+    "-g",
+    "-h",
+    "-i",
+    "-l",
+    "-m",
+    "-p",
+    "-q",
+    "-r",
+    "-s",
+    "-t",
+    "-v",
+    "-x"
+  ],
+  "installed_help_options": [
+    "--help",
+    "--host",
+    "--no-recursion",
+    "--port",
+    "--verbose",
+    "--version",
+    "-B",
+    "-G",
+    "-H",
+    "-I",
+    "-K",
+    "-L",
+    "-M",
+    "-R",
+    "-T",
+    "-a",
+    "-b",
+    "-c",
+    "-d",
+    "-g",
+    "-h",
+    "-i",
+    "-l",
+    "-m",
+    "-p",
+    "-q",
+    "-r",
+    "-s",
+    "-t",
+    "-v",
+    "-x"
+  ],
+  "manual_options_not_listed_by_installed_help": [],
+  "installed_help_options_not_in_manual": [],
+  "source_manual_sha256": "74ff8b3ae7c59193d366d679aad9d328c2917a38399bb7d73a39264604d038fc",
+  "test_script": "scripts/test_whois_help.py",
+  "test_script_sha256": "df7779eac227e9c831cfd79a01aeec9decdb148b3e3ce6ef3a39d540115f629f",
+  "temporary_directory_empty": true,
+  "installed_manual_before_sha256": "aa185745b9f06de0bc2744f86963d07ddec2741dee2a1d8ead0aeac40eb120d6",
+  "installed_manual_after_sha256": "aa185745b9f06de0bc2744f86963d07ddec2741dee2a1d8ead0aeac40eb120d6",
+  "installed_manual_unchanged": true,
+  "network_query_requested": false,
+  "verification_scope_pt": "Conferidas somente whois --help, whois --version e a versão dpkg; nenhum domínio, IP, servidor ou objeto foi consultado.",
+  "limits": [
+    "This checks help/version and local source identity, not remote service behavior or query results."
+  ]
+}

@@ -74,7 +74,7 @@ sob uma licença inventada. O registro source-registry documenta somente fontes 
 put(pathlib.Path('THIRD_PARTY.md'),"""# Fontes e atribuições
 
 O repositório contém notas autorais e documentação upstream licenciada. Cada importação registra
-repositório, commit, URL, hash de origem, licença, método de tradução e modificações de apresentação.
+repositório e commit quando a fonte é Git; pacote e versão quando é manual instalado; URL, hash de origem, licença, método de tradução e modificações de apresentação.
 Original e tradução são arquivos distintos; código e saídas literais não são traduzidos silenciosamente.
 
 - catalog/source-registry.json: direitos e arquivos adquiridos.
@@ -183,6 +183,7 @@ for value in ['sources/upstream/** -text -diff','vault/02-Tools/*/*documentacao*
               'vault/02-Tools/*/*-cheatsheet-upstream.md -text whitespace=-blank-at-eol',
               'vault/99-Assets/upstream/** -text whitespace=-blank-at-eof',
               'translations/** -text whitespace=-blank-at-eol',
+              'vault/02-Tools/*/*-[1-9].md -text whitespace=-blank-at-eol',
               'LICENSES/LicenseRef-*.txt -text',
               'LICENSE whitespace=-blank-at-eof','LICENSES/*.txt whitespace=-blank-at-eof']:
     if value not in t:
@@ -209,6 +210,10 @@ if 'test_roff_extended.py' not in t:
     t+='      - name: Test complete roff tables and equations\n        run: python3 scripts/test_roff_extended.py\n'
 if 'build_arp_scan_editorial.py --check' not in t:
     t+='      - name: Verify all source-bound editorial segments\n        run: python3 scripts/build_arp_scan_editorial.py --check\n'
+if 'test_packaged_manual.py' not in t:
+    t+='      - name: Test non-executing native package manuals\n        run: python3 scripts/test_packaged_manual.py\n'
+if 'build_package_editorial.py --tool whois --check' not in t:
+    t+='      - name: Reproduce complete whois editorial translation\n        run: python3 scripts/build_package_editorial.py --tool whois --check\n'
 workflow.write_bytes(t.encode('utf-8'))
 put(pathlib.Path('requirements-translation.txt'),'ctranslate2==4.8.4\nsentencepiece==0.2.1')
 print(json.dumps({'documents':len(documents),'tools':len(imports),'machine':machine,'assistant_translated':assistant,'official_portuguese':native,

@@ -779,7 +779,7 @@ wgetpaste,True,not-verified,0,0,False,False,False,identify-licensed-official-doc
 what-is-python,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 whatmask,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 whatweb,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
-whois,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
+whois,True,GPL-2.0-or-later,1,1,True,False,False,review-source-coverage-and-translation
 wifi-honey,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 wifiphisher,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 wifipumpkin3,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation

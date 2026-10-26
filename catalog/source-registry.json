@@ -1239,5 +1239,63 @@
         "sha256": "673622299a74de151b8e65b01a42c936a009875fb5ea2fa188a4b155bc553f6c"
       }
     ]
+  },
+  "whois": {
+    "source_kind": "installed-kali-package",
+    "package": "whois",
+    "binary_version": "5.6.6",
+    "source_package": "whois",
+    "source_version": "5.6.6",
+    "copyright_sha256": "8de310a28eb62420fddf909fa0c80f05ec94001442724522309a2729699719fc",
+    "tool": "whois",
+    "repository": "https://www.kali.org/tools/whois/",
+    "commit": null,
+    "git_commit": null,
+    "license_spdx": "GPL-2.0-or-later",
+    "license_url": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+    "license_sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+    "license_review_status": "verified-selected-manual",
+    "source_scope": "Complete English whois(1) installed package manual only; whois.conf(5), mkpasswd(1), websites and other package documentation remain separate pending scope",
+    "license_review": {
+      "basis": "The selected whois.1 AUTHOR section explicitly licenses this man page under GPL version 2 or later; its SPDX line confirms GPL-2.0-or-later. Package copyright and complete GPL-2 legal text retained.",
+      "review_method": "assistant-source-inspection",
+      "independent_legal_review": false,
+      "selected_document_sha256": "74ff8b3ae7c59193d366d679aad9d328c2917a38399bb7d73a39264604d038fc",
+      "package_copyright_sha256": "8de310a28eb62420fddf909fa0c80f05ec94001442724522309a2729699719fc"
+    },
+    "documents": [
+      {
+        "path": "whois.1",
+        "installed_path": "/usr/share/man/man1/whois.1.gz",
+        "sha256": "74ff8b3ae7c59193d366d679aad9d328c2917a38399bb7d73a39264604d038fc",
+        "compressed_sha256": "aa185745b9f06de0bc2744f86963d07ddec2741dee2a1d8ead0aeac40eb120d6",
+        "bytes": 7237,
+        "language": "en",
+        "source_format": "packaged-man-roff-v1",
+        "source_url": "https://www.kali.org/tools/whois/",
+        "source_url_role": "package-reference-not-exact-file",
+        "compressed_asset": "originals/whois.1.gz",
+        "runtime_evidence_file": "whois-help-tests.json"
+      }
+    ],
+    "source_snapshot_asset": "PACKAGE-SNAPSHOT.json",
+    "source_snapshot_sha256": "ecc5633af88fe2bb018cb587dc33832de15ec8060854de17806a008202eac19e",
+    "assets": [
+      {
+        "path": "COPYRIGHT.package.txt",
+        "bytes": 206,
+        "sha256": "8de310a28eb62420fddf909fa0c80f05ec94001442724522309a2729699719fc"
+      },
+      {
+        "path": "originals/whois.1.gz",
+        "bytes": 3037,
+        "sha256": "aa185745b9f06de0bc2744f86963d07ddec2741dee2a1d8ead0aeac40eb120d6"
+      },
+      {
+        "path": "PACKAGE-SNAPSHOT.json",
+        "bytes": 1781,
+        "sha256": "ecc5633af88fe2bb018cb587dc33832de15ec8060854de17806a008202eac19e"
+      }
+    ]
   }
 }

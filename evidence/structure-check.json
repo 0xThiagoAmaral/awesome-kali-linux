@@ -1,7 +1,7 @@
 {
   "passed": true,
-  "markdown_notes": 81,
-  "local_links_checked": 296,
+  "markdown_notes": 83,
+  "local_links_checked": 307,
   "errors": [],
   "limits": [
     "Pattern checks are not a complete secret-scanning audit.",

@@ -30,3 +30,7 @@ jobs:
         run: python3 scripts/test_roff_extended.py
       - name: Verify all source-bound editorial segments
         run: python3 scripts/build_arp_scan_editorial.py --check
+      - name: Test non-executing native package manuals
+        run: python3 scripts/test_packaged_manual.py
+      - name: Reproduce complete whois editorial translation
+        run: python3 scripts/build_package_editorial.py --tool whois --check

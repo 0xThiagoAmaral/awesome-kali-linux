@@ -119,11 +119,11 @@ Curadoria e notas autorais: CC BY-SA 4.0; scripts: MIT. Conteúdos upstream mant
 ## Documentação offline — andamento
 
 
-Já há **48 documentos de 24 ferramentas** no
+Já há **49 documentos de 25 ferramentas** no
 [acervo offline](vault/01-Maps/documentacao-offline.md), com originais, licenças e hashes.
 São traduções automáticas, traduções editoriais por assistente de IA ou português fornecido upstream, devidamente identificados.
 O acervo também inclui **10 folhas de comandos** com exemplos oficiais e procedência verificável.
-Há ainda **6 cheatsheets autorais complementares**, com limites de validação explícitos.
+Há ainda **7 cheatsheets autorais complementares**, com limites de validação explícitos.
 Isso **não** significa documentação integral das 820 ferramentas nem revisão humana concluída.
 
 [Cobertura por ferramenta](catalog/documentation-coverage.csv) ·

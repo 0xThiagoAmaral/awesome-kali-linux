@@ -8205,5 +8205,216 @@
         "Limited PT-BR terminology glossary; commands and URLs protected"
       ]
     }
+  },
+  "whois": {
+    "repository": "https://www.kali.org/tools/whois/",
+    "commit": null,
+    "source_kind": "installed-kali-package",
+    "package": "whois",
+    "binary_version": "5.6.6",
+    "source_package": "whois",
+    "source_version": "5.6.6",
+    "source_snapshot_sha256": "ecc5633af88fe2bb018cb587dc33832de15ec8060854de17806a008202eac19e",
+    "license_spdx": "GPL-2.0-or-later",
+    "documents": [
+      {
+        "source_path": "whois.1",
+        "note": "vault/02-Tools/whois/whois-whois-1.md",
+        "original": "sources/upstream/whois/whois.1.source",
+        "source_sha256": "74ff8b3ae7c59193d366d679aad9d328c2917a38399bb7d73a39264604d038fc",
+        "license_spdx": "GPL-2.0-or-later",
+        "translation_sha256": "d02b5ff97a5e12769ff373267d7e0c20ea4480af9bcf651ece83175c2741ff69",
+        "source_fenced_blocks": 1,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.7-truthful-native-package-sources",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-b-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-l-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-m-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-r-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "notes"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "environment"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "see-also"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "history"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "author"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+              "Paragraph lines joined; style macros mapped to inline code",
+              "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+              "Raw source bytes retained separately; non-content layout requests recorded",
+              "Historical statements translated from dated source, not independently retested claims"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "packaged-man-roff-v1",
+        "prepared_source": "sources/upstream/whois/whois.1.presentation.md.source",
+        "prepared_source_sha256": "a5dc78419971f563cf74f55566b0e26a353713f3aaf6238bc01e6dc9d90c5564",
+        "manual_structure": {
+          "format": "packaged-man-roff-v1",
+          "title": [
+            "WHOIS",
+            "1",
+            "2019-12-30",
+            "Marco d'Itri",
+            "Debian GNU/Linux"
+          ],
+          "source_lines": 315,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "NOTES",
+            "FILES",
+            "ENVIRONMENT",
+            "SEE ALSO",
+            "BUGS",
+            "HISTORY",
+            "AUTHOR"
+          ],
+          "option_syntax": [
+            "-h HOST, --host=HOST",
+            "-H",
+            "-p PORT, --port=PORT",
+            "-I",
+            "--no-recursion",
+            "--verbose",
+            "--help",
+            "--version",
+            "-a",
+            "-b",
+            "-B",
+            "-c",
+            "-d",
+            "-g SOURCE:FIRST-LAST",
+            "-G",
+            "-i ATTR[,ATTR]...",
+            "-K",
+            "-l",
+            "-L",
+            "-m",
+            "-M",
+            "-q KEYWORD",
+            "-r",
+            "-R",
+            "-s SOURCE[,SOURCE]...",
+            "-t TYPE",
+            "-T TYPE[,TYPE]...",
+            "-v TYPE",
+            "-x"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 5,
+              "body": "whois [ { -h | --host } HOST ] [ { -p | --port } PORT ] [ -abBcdGHIKlLmMrRx ] [ -g SOURCE:FIRST-LAST ] [ -i ATTR[,ATTR]... ] [ -s SOURCE[,SOURCE]... ] [ -T TYPE[,TYPE]... ] [ --verbose ] [ --no-recursion ] OBJECT\n\nwhois -q KEYWORD\n\nwhois -t TYPE\n\nwhois -v TYPE\n\nwhois --help\n\nwhois --version\n",
+              "origin": "decoded non-executing roff presentation"
+            }
+          ],
+          "layout_requests": [],
+          "source_comments": [
+            {
+              "raw": ".\\\" SPDX-License-Identifier: GPL-2.0-or-later\n",
+              "first_line": 315,
+              "kind": "comment"
+            }
+          ],
+          "presentation_changes": [
+            "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+            "Paragraph lines joined; style macros mapped to inline code",
+            "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+            "Raw source bytes retained separately; non-content layout requests recorded",
+            "Historical statements translated from dated source, not independently retested claims"
+          ]
+        },
+        "editorial_translation": {
+          "source_sha256": "74ff8b3ae7c59193d366d679aad9d328c2917a38399bb7d73a39264604d038fc",
+          "translation_file": "translations/pt-BR/whois/whois.1.md",
+          "translation_sha256": "f3725f014b7138f8c5881218976317c703a83d67455a82b2c2412af043470c01",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "GPL-2.0-or-later",
+          "segment_file": "catalog/editorial-segments/whois.pt-br.json",
+          "segment_sha256": "01c35fa99e30144eeb276cd81d327d86384b5311fbab1f53787b79cfa427a588",
+          "review_scope": "All 95 source-bound segments; 11 sections and 29 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/whois-help-tests.json",
+          "sha256": "08560792984dd08e7f9cc054261c997231c6cecf9bcaa747fc000cabf9c7194e",
+          "test_script": "scripts/test_whois_help.py"
+        }
+      }
+    ],
+    "source_scope": "Complete English whois(1) installed package manual only; whois.conf(5), mkpasswd(1), websites and other package documentation remain separate pending scope",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
   }
 }

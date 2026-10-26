@@ -8,8 +8,8 @@ tags: ["documentation", "offline"]
 
 # Documentação offline — acervo
 
-**24 ferramentas com notas importadas; 48 documentos disponíveis.**
-43 traduções automáticas, 4 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
+**25 ferramentas com notas importadas; 49 documentos disponíveis.**
+43 traduções automáticas, 5 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
 
 Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.
 
@@ -39,3 +39,4 @@ Estas páginas preservam a documentação adquirida, não substituem manuais nã
 | naabu | [README.md](../02-Tools/naabu/naabu-documentacao.md) | [Exemplos upstream](../02-Tools/naabu/naabu-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | nuclei | [README.md](../02-Tools/nuclei/nuclei-documentacao.md) · [README_PT-BR.md](../02-Tools/nuclei/nuclei-documentacao-pt-br-oficial.md) | [Exemplos upstream](../02-Tools/nuclei/nuclei-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | subfinder | [README.md](../02-Tools/subfinder/subfinder-documentacao.md) | [Exemplos upstream](../02-Tools/subfinder/subfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |
+| whois | [whois.1](../02-Tools/whois/whois-whois-1.md) | [whois — cheatsheet](../02-Tools/whois/whois-cheatsheet.md) | GPL-2.0-or-later | Revisão pendente |

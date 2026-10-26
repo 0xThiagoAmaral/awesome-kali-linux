@@ -10,6 +10,8 @@ from import_translate_docs import code_bodies,outside_code
 from plain_manual import prepare_manual
 from roff_manual import prepare_roff_manual
 from roff_extended_manual import prepare_extended_roff
+from packaged_manual import prepare_packaged_manual
+from package_source import validate_package_source, package_fields
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 manifest_path=ROOT/'catalog/imported-documentation.json'
@@ -28,6 +30,12 @@ for tool,record in manifest.items():
     for asset in source_record['assets']:
         path=asset_root/asset['path']
         add(tool+' retained asset hash: '+asset['path'],path.exists() and digest(path)==asset['sha256'])
+    if source_record.get('source_kind')=='installed-kali-package':
+        try:
+            validate_package_source(source_record,asset_root)
+            add(tool+' native source snapshot, gzip, notice and version binding',True)
+        except (AssertionError,ValueError,KeyError,OSError) as exc:
+            add(tool+' native source snapshot, gzip, notice and version binding',False,str(exc))
     for doc in record['documents']:
         note=ROOT/doc['note']
         original=ROOT/doc['original']
@@ -39,9 +47,9 @@ for tool,record in manifest.items():
         source=original.read_bytes().decode('utf-8')
         source_row=next(x for x in source_record['documents'] if x['path']==doc['source_path'])
         add(label+' source-registry binding',source_row['sha256']==doc['source_sha256'])
-        if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1'}:
+        if doc.get('source_format') in {'sectioned-plain-text-v1','man-roff-v1','man-roff-extended-v1','packaged-man-roff-v1'}:
             prepare={'sectioned-plain-text-v1':prepare_manual,'man-roff-v1':prepare_roff_manual,
-                     'man-roff-extended-v1':prepare_extended_roff}[doc['source_format']]
+                     'man-roff-extended-v1':prepare_extended_roff,'packaged-man-roff-v1':prepare_packaged_manual}[doc['source_format']]
             source,manual=prepare(original.read_bytes().decode('utf-8'),tool)
             prepared=ROOT/doc['prepared_source']
             add(label+' prepared-source hash',prepared.exists() and digest(prepared)==doc['prepared_source_sha256'])
@@ -49,6 +57,11 @@ for tool,record in manifest.items():
             add(label+' all original manual text accounted',manual['all_source_text_accounted'])
             add(label+' manual-structure manifest',manual==doc['manual_structure'])
         translated=note.read_bytes().decode('utf-8')
+        if source_record.get('source_kind')=='installed-kali-package':
+            for key,value in package_fields(source_record).items():
+                add(label+' native provenance field '+key,key+': '+json.dumps(value,ensure_ascii=False) in translated)
+            add(label+' native original bound to gzip',original.read_bytes()==__import__('gzip').decompress((asset_root/source_row['compressed_asset']).read_bytes()))
+            add(label+' no fabricated commit','source_commit:' not in translated and 'Commit:' not in translated)
         expected_license=source_row.get('license_spdx',source_record['license_spdx'])
         add(label+' document-specific license field','license_spdx: '+json.dumps(expected_license) in translated)
         license_path=asset_root/source_row.get('license_asset','LICENSE.txt')

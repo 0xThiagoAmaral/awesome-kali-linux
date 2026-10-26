@@ -27,6 +27,9 @@ for tool,record in manifest.items():
     asset_root=ROOT/'vault/99-Assets/upstream'/tool
     license_file=asset_root/'LICENSE.txt'
     add(tool+' retained source license hash',license_file.exists() and digest(license_file)==source_record['license_sha256'])
+    if source_record.get('license_reference_file'):
+        reference=ROOT/source_record['license_reference_file']
+        add(tool+' exact named license variant retained',reference.exists() and digest(reference)==source_record['license_sha256'])
     for asset in source_record['assets']:
         path=asset_root/asset['path']
         add(tool+' retained asset hash: '+asset['path'],path.exists() and digest(path)==asset['sha256'])
@@ -57,6 +60,10 @@ for tool,record in manifest.items():
             add(label+' all original manual text accounted',manual['all_source_text_accounted'])
             add(label+' manual-structure manifest',manual==doc['manual_structure'])
         translated=note.read_bytes().decode('utf-8')
+        if source_record.get('required_acknowledgement'):
+            acknowledgement=source_record['required_acknowledgement']
+            add(label+' required source acknowledgement',acknowledgement in translated)
+            add(tool+' acknowledgement in third-party record',acknowledgement in (ROOT/'THIRD_PARTY.md').read_text(encoding='utf-8'))
         if source_record.get('source_kind')=='installed-kali-package':
             for key,value in package_fields(source_record).items():
                 add(label+' native provenance field '+key,key+': '+json.dumps(value,ensure_ascii=False) in translated)

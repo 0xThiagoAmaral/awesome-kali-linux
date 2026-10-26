@@ -1,0 +1,26 @@
+# fping6
+
+## NAME
+
+fping6 - backwards compatibility with fping below version 4.0
+
+## SYNOPSIS
+
+```text
+fping6 [ options ] [ systems... ]
+```
+
+## DESCRIPTION
+
+fping6 is a backwards-compatibility symbolic link to fping solely for the purpose to be able to specify Smokeping remote configurations which work on systems with fping ≥ 4.0 as well as on systems with fping < 4.0.
+
+Please do not use fping in in scripts or configurations which don't require it for backwards-compatibility with older fping versions. It will vanish as soon as it's no more required in setups as mentioned above.
+
+## SEE ALSO
+
+fping(8)
+
+## AUTHOR
+
+This man page was written by Axel Beckert <abe@debian.org> for the Debian Project, but may be used by others.
+

@@ -3,11 +3,11 @@
 """Non-executing man(7) subset for package sources. Unknown syntax fails closed."""
 import re
 import shlex
-from package_layout_repairs import repair_arping_layout,prepare_dns_package_layout
+from package_layout_repairs import repair_arping_layout,prepare_dns_package_layout,prepare_fping_layout
 
 BT=chr(96)
 STYLES={'B','I','BR','BI','RB','RI','IR','IB'}
-ALLOWED=STYLES|{'TH','SH','SS','P','PP','TP','IP','nf','fi','fam','in','sp','RS','RE','IX'}
+ALLOWED=STYLES|{'TH','SH','SS','P','PP','TP','IP','nf','fi','fam','in','sp','RS','RE','IX','Vb','Ve'}
 
 def arguments(value):
     lexer=shlex.shlex(value,posix=True)
@@ -18,7 +18,9 @@ def arguments(value):
 
 def decode(value):
     if '\ue000' in value: raise ValueError('Reserved decoder sentinel in source')
-    value=value.replace(r'\\','\ue000').replace(r'\.','.')
+    value=value.replace(r'\\','\ue000').replace(r'\e','\ue000').replace(r'\.','.')
+    value=re.sub(r'\\s(?:[-+]\d+|\d)','',value)
+    value=value.replace(r'\*(L"','"').replace(r'\*(R"','"').replace(r'\*(C'+chr(96),BT).replace(r"\*(C'",BT)
     value=value.replace(r'\-', '-').replace(r'\&','').replace(r'\~',' ').replace(r'\:','').replace(r'\(cq',"'").replace(r'\(dq','"').replace(r'\(bu','•')
     value=re.sub(r'\\f(?:[BIRP]|\([A-Z]{2})','',value)
     if '\\' in value:
@@ -36,6 +38,14 @@ def styled(kind,args,literal=False):
     return plain if re.fullmatch(r'<https?://[^ >]+>',plain) else result.replace(BT*2,'')
 
 def prepare_packaged_manual(source,tool):
+    if tool=='fping':
+        original=source
+        source,binary,provenance=prepare_fping_layout(source)
+        rendered,evidence=_prepare_packaged_manual(source,binary)
+        evidence.update(source_lines=len(original.splitlines()),layout_adjusted_lines=len(source.splitlines()),
+            source_layout_adapter=provenance,line_number_basis='Layout-adjusted source; exact original retained')
+        evidence['presentation_changes']+=provenance['changes']
+        return rendered,evidence
     if tool in {'dnsenum','dnsrecon'}:
         original=source
         source,provenance=prepare_dns_package_layout(source,tool)
@@ -101,7 +111,20 @@ def _prepare_packaged_manual(source,tool):
             if section=='SYNOPSIS' and not nofill:
                 body='\n\n'.join(' '.join(p.splitlines()) for p in body.strip().split('\n\n'))+'\n'
             if BT*3 in body: raise ValueError('Fence collision')
-            if tool=='nbtscan' and section=='NETBIOS SUFFIXES':
+            if tool=='netdiscover' and section=='USAGE':
+                rows=[]
+                for line in body.splitlines():
+                    if not line.strip(): continue
+                    match=re.fullmatch(r'\s+([hjk.,qaru])\s{2,}(.+)',line)
+                    assert match,'Unreviewed netdiscover key-reference row'
+                    rows.append(list(match.groups()))
+                assert [row[0] for row in rows] in [list('hjk.,q'),list('aru')],'Unreviewed key set'
+                out.append('| Key | Action |\n|---|---|\n')
+                for key,action in rows:out.append('| '+BT+key+BT+' | '+action+' |\n')
+                out.append('\n')
+                tables.append({'first_line':first_literal,'decoded_original_body':body,'rows':rows,
+                    'presentation':'Literal keyboard keys; translatable action descriptions'})
+            elif tool=='nbtscan' and section=='NETBIOS SUFFIXES':
                 rows=[re.split(r'\s{2,}',line.strip()) for line in body.splitlines() if line.strip() and not re.fullmatch(r'[-\s]+',line)]
                 assert rows[0]==['Name','Number(h)','Type','Usage'],'Unreviewed NetBIOS reference-table header'
                 assert all(len(row)==4 for row in rows),'Unreviewed NetBIOS reference-table columns'
@@ -134,11 +157,11 @@ def _prepare_packaged_manual(source,tool):
                 elif args:
                     term.append(BT+decode(args[0])+BT)
                     flush_term()
-        elif kind in {'nf','fi','fam','in','sp','RS','RE','IX'}:
+        elif kind in {'nf','fi','fam','in','sp','RS','RE','IX','Vb','Ve'}:
             layouts.append({'first_line':unit['first_line'],'request':kind,'args':args})
-            if kind=='nf':
+            if kind in {'nf','Vb'}:
                 flush_term(); flush(); nofill=True
-            elif kind=='fi':
+            elif kind in {'fi','Ve'}:
                 flush_literal(); nofill=False
             elif kind=='sp':
                 if nofill: literal.append('')

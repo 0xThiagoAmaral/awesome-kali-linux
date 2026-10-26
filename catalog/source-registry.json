@@ -1529,5 +1529,152 @@
         "sha256": "a7fbb986c2276a7e8503fa5a804c20ccf2b13619b29b942442ebda75cfcbf625"
       }
     ]
+  },
+  "netdiscover": {
+    "source_kind": "installed-kali-package",
+    "package": "netdiscover",
+    "binary_version": "0.21-1",
+    "source_package": "netdiscover",
+    "source_version": "0.21-1",
+    "copyright_sha256": "768a5704e100cae4c01d8a22dd84b16418efb9c75abd78dd157fcff07fe34ea0",
+    "tool": "netdiscover",
+    "repository": "https://github.com/netdiscover-scanner/netdiscover",
+    "commit": null,
+    "git_commit": null,
+    "license_spdx": "GPL-3.0-or-later",
+    "license_url": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "license_url_role": "legal-text-reference",
+    "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_review_status": "verified-selected-manual",
+    "source_scope": "Complete selected installed English manual netdiscover(8); upstream README, websites and other documentation remain pending coverage",
+    "license_review": {
+      "basis": "Package Files: * and debian/* grant GPL-3+. The BSD-3-Clause exception names only doc/create-man.sh; GPL-2+ names update-oui-database.sh, not the selected manual. Full mixed-license copyright and complete GPL-3 legal text retained.",
+      "review_method": "assistant-source-inspection",
+      "independent_legal_review": false,
+      "package_copyright_sha256": "768a5704e100cae4c01d8a22dd84b16418efb9c75abd78dd157fcff07fe34ea0",
+      "selected_document_sha256": [
+        "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82"
+      ]
+    },
+    "documents": [
+      {
+        "path": "netdiscover.8",
+        "installed_path": "/usr/share/man/man8/netdiscover.8.gz",
+        "sha256": "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82",
+        "compressed_sha256": "f902f3f1c74bdab108902b24e86b6f73de442289cf9181d79e5b1d05807017cc",
+        "bytes": 6395,
+        "language": "en",
+        "source_format": "packaged-man-roff-v1",
+        "source_url": "https://github.com/netdiscover-scanner/netdiscover",
+        "source_url_role": "project-reference-not-exact-file",
+        "compressed_asset": "originals/netdiscover.8.gz",
+        "runtime_evidence_file": "netdiscover-help-tests.json"
+      }
+    ],
+    "source_snapshot_asset": "PACKAGE-SNAPSHOT.json",
+    "source_snapshot_sha256": "9f683de948f8a332ad88282e445f640b44277fa7f895a3f3ca39f1ff49ede37c",
+    "assets": [
+      {
+        "path": "COPYRIGHT.package.txt",
+        "bytes": 4686,
+        "sha256": "768a5704e100cae4c01d8a22dd84b16418efb9c75abd78dd157fcff07fe34ea0"
+      },
+      {
+        "path": "originals/netdiscover.8.gz",
+        "bytes": 2503,
+        "sha256": "f902f3f1c74bdab108902b24e86b6f73de442289cf9181d79e5b1d05807017cc"
+      },
+      {
+        "path": "PACKAGE-SNAPSHOT.json",
+        "bytes": 1928,
+        "sha256": "9f683de948f8a332ad88282e445f640b44277fa7f895a3f3ca39f1ff49ede37c"
+      }
+    ]
+  },
+  "fping": {
+    "source_kind": "installed-kali-package",
+    "package": "fping",
+    "binary_version": "5.1-1",
+    "source_package": "fping",
+    "source_version": "5.1-1",
+    "copyright_sha256": "bdf7995d4d3f4c92eb94e8f066e6b7ac48237433b04207e31d0031bb91e696d2",
+    "required_acknowledgement": "This software was developed by Stanford University.",
+    "license_reference_file": "LICENSES/LicenseRef-Fping-Stanford-Variant.txt",
+    "tool": "fping",
+    "repository": "https://www.fping.org/",
+    "commit": null,
+    "git_commit": null,
+    "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+    "license_url": "https://www.fping.org/",
+    "license_url_role": "project-reference; exact variant retained locally",
+    "license_sha256": "bdf7995d4d3f4c92eb94e8f066e6b7ac48237433b04207e31d0031bb91e696d2",
+    "license_review_status": "verified-selected-manual",
+    "source_scope": "Complete selected installed English manuals fping(8) and fping6(8); upstream README, websites and other documentation remain pending coverage",
+    "license_review": {
+      "basis": "Package Files: * and debian/* declare the specifically worded Stanford variant, not standard SPDX BSD-3-Clause. Full copyright/conditions retained verbatim, including Stanford acknowledgement and no-endorsement condition. src/optparse.* Unlicense exception is not attributed to these manuals. fping6.8 is a separate compatibility page authored for Debian, not a man include alias.",
+      "review_method": "assistant-source-inspection",
+      "independent_legal_review": false,
+      "package_copyright_sha256": "bdf7995d4d3f4c92eb94e8f066e6b7ac48237433b04207e31d0031bb91e696d2",
+      "selected_document_sha256": [
+        "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+        "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271"
+      ]
+    },
+    "documents": [
+      {
+        "path": "fping.8",
+        "installed_path": "/usr/share/man/man8/fping.8.gz",
+        "sha256": "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+        "compressed_sha256": "a5e5e43142fe86c6e67b1e0a6fecdb6187ac2a458f95567c0fae8de1580de609",
+        "bytes": 14441,
+        "language": "en",
+        "source_format": "packaged-man-roff-v1",
+        "source_url": "https://www.fping.org/",
+        "source_url_role": "project-reference-not-exact-file",
+        "compressed_asset": "originals/fping.8.gz",
+        "runtime_evidence_file": "fping-help-tests.json",
+        "binary": "fping",
+        "editorial_segment_file": "catalog/editorial-segments/fping-8.pt-br.json"
+      },
+      {
+        "path": "fping6.8",
+        "installed_path": "/usr/share/man/man8/fping6.8.gz",
+        "sha256": "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271",
+        "compressed_sha256": "d8cafccfc215f54eea3136635625d2cfb21c9031e7174ffad964e6a2a50df500",
+        "bytes": 3027,
+        "language": "en",
+        "source_format": "packaged-man-roff-v1",
+        "source_url": "https://www.fping.org/",
+        "source_url_role": "project-reference-not-exact-file",
+        "compressed_asset": "originals/fping6.8.gz",
+        "runtime_evidence_file": "fping6-help-tests.json",
+        "binary": "fping6",
+        "editorial_segment_file": "catalog/editorial-segments/fping6-8.pt-br.json"
+      }
+    ],
+    "source_snapshot_asset": "PACKAGE-SNAPSHOT.json",
+    "source_snapshot_sha256": "2089b46418648044247b1d5e894c5c7d99fd81fdcdffe2872948dab74ef6da57",
+    "assets": [
+      {
+        "path": "COPYRIGHT.package.txt",
+        "bytes": 3445,
+        "sha256": "bdf7995d4d3f4c92eb94e8f066e6b7ac48237433b04207e31d0031bb91e696d2"
+      },
+      {
+        "path": "originals/fping.8.gz",
+        "bytes": 5811,
+        "sha256": "a5e5e43142fe86c6e67b1e0a6fecdb6187ac2a458f95567c0fae8de1580de609"
+      },
+      {
+        "path": "originals/fping6.8.gz",
+        "bytes": 1510,
+        "sha256": "d8cafccfc215f54eea3136635625d2cfb21c9031e7174ffad964e6a2a50df500"
+      },
+      {
+        "path": "PACKAGE-SNAPSHOT.json",
+        "bytes": 3134,
+        "sha256": "2089b46418648044247b1d5e894c5c7d99fd81fdcdffe2872948dab74ef6da57"
+      }
+    ]
   }
 }

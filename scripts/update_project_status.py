@@ -88,6 +88,10 @@ A existência de README adquirido não comprova cobertura integral de wiki, manu
 
 Dependências e modelo de tradução ficam fora do repositório publicável. Nenhum executável das
 ferramentas Kali ou modelo de tradução é redistribuído neste pacote.""")
+acknowledgements=sorted({r['required_acknowledgement'] for r in sources.values() if r.get('required_acknowledgement')})
+if acknowledgements:
+    third=ROOT/'THIRD_PARTY.md'
+    third.write_bytes((third.read_text(encoding='utf-8').rstrip()+'\n\n## Reconhecimentos exigidos pelas fontes\n\n'+'\n\n'.join(acknowledgements)+'\n').encode('utf-8'))
 lines=['---','title: "Documentação offline — acervo"','type: "moc"','status: "source-checked"',
        'reviewed: "2026-10-26"','tags: ["documentation", "offline"]','---','',
        '# Documentação offline — acervo','',
@@ -158,6 +162,8 @@ Isso **não** significa documentação integral das 820 ferramentas nem revisão
 [Cobertura por ferramenta](catalog/documentation-coverage.csv) ·
 [Metodologia e direitos](THIRD_PARTY.md) · [Licenças](LICENSE-POLICY.md).
 """
+if acknowledgements:
+    text+='\n### Reconhecimentos das fontes\n\n'+'\n\n'.join(acknowledgements)+'\n'
 readme.write_bytes((text.rstrip()+'\n').encode('utf-8'))
 for p in (ROOT/'scripts').glob('*.py'):
     t=p.read_text(encoding='utf-8')

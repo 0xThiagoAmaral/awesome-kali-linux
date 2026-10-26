@@ -105,5 +105,42 @@
       "segment_sha256": "d21cbf2f02748a13a8d7c8d320d7cc31f6e69f6ee5b1a9d319c4334d7d404074",
       "review_scope": "All 71 source-bound segments; 5 sections and 26 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
     }
+  },
+  "netdiscover": {
+    "netdiscover.8": {
+      "source_sha256": "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82",
+      "translation_file": "translations/pt-BR/netdiscover/netdiscover.8.md",
+      "translation_sha256": "df4d9aa7517c29d57a86b031ca6ac62e7db4fad8821a76a5da2c3c2b1d32920a",
+      "translation_method": "assistant-translated",
+      "human_review": "pending",
+      "license_spdx": "GPL-3.0-or-later",
+      "segment_file": "catalog/editorial-segments/netdiscover.pt-br.json",
+      "segment_sha256": "ce252eb77c638790bd14abbffbb6886379ceb3b96683cd5dda9c49b1cc2eeb57",
+      "review_scope": "All 81 source-bound segments; 8 sections and 16 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+    }
+  },
+  "fping": {
+    "fping.8": {
+      "source_sha256": "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+      "translation_file": "translations/pt-BR/fping/fping.8.md",
+      "translation_sha256": "12b7d960b1a67e7fde1cb110cb24bcf1b03672b26fcb8e6c7928a1bba3bc326d",
+      "translation_method": "assistant-translated",
+      "human_review": "pending",
+      "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+      "segment_file": "catalog/editorial-segments/fping-8.pt-br.json",
+      "segment_sha256": "805259510b14eb0ba0aab6a170028bfbca874294b00302a30d9414dcb0fe3dea",
+      "review_scope": "All 98 source-bound segments; 9 sections and 36 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+    },
+    "fping6.8": {
+      "source_sha256": "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271",
+      "translation_file": "translations/pt-BR/fping/fping6.8.md",
+      "translation_sha256": "9acb94ac8470140736998fab339997a8630c972ced9a1abe9f8c310294f9235b",
+      "translation_method": "assistant-translated",
+      "human_review": "pending",
+      "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+      "segment_file": "catalog/editorial-segments/fping6-8.pt-br.json",
+      "segment_sha256": "b7c43e7795e5b20b077acf3e3b82404efbaa12a8a8416269172ace77f8e7fb7e",
+      "review_scope": "All 10 source-bound segments; 5 sections and 0 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+    }
   }
 }

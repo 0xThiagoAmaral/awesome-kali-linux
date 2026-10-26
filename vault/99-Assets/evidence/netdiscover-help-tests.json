@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "binary": "netdiscover",
+  "installed_version": "netdiscover; pacote netdiscover 0.21-1",
+  "test_status": "help-only",
+  "commands": [
+    {
+      "argv": [
+        "netdiscover",
+        "-h"
+      ],
+      "stdout": "Netdiscover 0.21 [Active/passive ARP reconnaissance tool]\nWritten by: Jaime Penalba <jpenalbae@gmail.com>\n\nUsage: netdiscover [-i device] [-r range | -l file | -p] [-m file] [-F filter] [-s time] [-c count] [-n node] [-dfPLNS]\n  -i device: your network device\n  -r range: scan a given range instead of auto scan. 192.168.6.0/24,/16,/8\n  -l file: scan the list of ranges contained into the given file\n  -p passive mode: do not send anything, only sniff\n  -m file: scan a list of known MACs and host names\n  -F filter: customize pcap filter expression (default: \"arp\")\n  -s time: time to sleep between each ARP request (milliseconds)\n  -c count: number of times to send each ARP request (for nets with packet loss)\n  -n node: last source IP octet used for scanning (from 2 to 253)\n  -d ignore home config files for autoscan and fast mode\n  -R assume user is root or has the required capabilities without running any checks\n  -f enable fastmode scan, saves a lot of time, recommended for auto\n  -P print results in a format suitable for parsing by another program and stop after active scan\n  -L similar to -P but continue listening after the active scan is completed\n  -N Do not print header. Only valid when -P or -L is enabled.\n  -S enable sleep time suppression between each request (hardcore mode)\n\nIf -r, -l or -p are not enabled, netdiscover will scan for common LAN addresses.\n",
+      "stderr": "",
+      "exit_status": 1,
+      "expected_exit_status": 1
+    },
+    {
+      "argv": [
+        "dpkg-query",
+        "-W",
+        "-f=${Version}",
+        "netdiscover"
+      ],
+      "stdout": "0.21-1",
+      "stderr": "",
+      "exit_status": 0,
+      "expected_exit_status": 0
+    }
+  ],
+  "manual_options": [
+    "-F",
+    "-L",
+    "-N",
+    "-P",
+    "-R",
+    "-S",
+    "-c",
+    "-d",
+    "-f",
+    "-i",
+    "-l",
+    "-m",
+    "-n",
+    "-p",
+    "-r",
+    "-s"
+  ],
+  "installed_help_options": [
+    "-F",
+    "-L",
+    "-N",
+    "-P",
+    "-R",
+    "-S",
+    "-c",
+    "-d",
+    "-f",
+    "-i",
+    "-l",
+    "-m",
+    "-n",
+    "-p",
+    "-r",
+    "-s"
+  ],
+  "manual_options_not_listed_by_installed_help": [],
+  "installed_help_options_not_in_manual": [],
+  "source_manual_sha256": "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82",
+  "test_script": "scripts/test_network_help.py",
+  "test_script_sha256": "d4ce6f4018bf4c0842622cbdeb8f3efb73e4aac9100e9565f8e145edc2a0f577",
+  "temporary_directory_empty": true,
+  "temporary_home_used": true,
+  "installed_manual_before_sha256": "f902f3f1c74bdab108902b24e86b6f73de442289cf9181d79e5b1d05807017cc",
+  "installed_manual_after_sha256": "f902f3f1c74bdab108902b24e86b6f73de442289cf9181d79e5b1d05807017cc",
+  "installed_manual_unchanged": true,
+  "target_supplied": false,
+  "packet_send_operation_requested": false,
+  "packet_capture_requested": false,
+  "verification_scope_pt": "Conferida somente a ajuda -h (código 1 observado) e a versão dpkg. HOME temporário, nenhum alvo ou interface fornecido; nenhuma operação de envio, varredura ou captura foi solicitada. Ausência de uma opção na ajuda não demonstra sua rejeição pelo programa.",
+  "limits": [
+    "Help/version and file identity only, no ICMP/ARP traffic or capture behavior tested.",
+    "Historical manual options/defaults preserved even when help differs."
+  ]
+}

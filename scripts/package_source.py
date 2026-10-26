@@ -24,6 +24,9 @@ def validate_package_source(record,assets):
     data=path.read_bytes()
     assert sha(data)==record['source_snapshot_sha256'],'Snapshot hash'
     snapshot=json.loads(data)
+    if 'license_spdx' in snapshot:
+        assert snapshot['license_spdx']==record['license_spdx'],'License choice differs from snapshot'
+    assert snapshot.get('required_acknowledgement')==record.get('required_acknowledgement'),'Required acknowledgement binding'
     for field in FIELDS[:-1]:
         assert snapshot[field]==record[field],field
     assert snapshot['documents']==record['documents'],'Document provenance differs from snapshot'

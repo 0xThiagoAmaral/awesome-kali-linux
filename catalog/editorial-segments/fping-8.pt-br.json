@@ -1,0 +1,499 @@
+{
+  "source_sha256": "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+  "prepared_sha256": "0662415c463f43481bdc3c45cbac3d71065db82127981b5ffd1758aff624ecf1",
+  "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "fping - send ICMP ECHO_REQUEST packets to network hosts",
+      "translation": "fping - envia pacotes ICMP ECHO_REQUEST a hosts de rede"
+    },
+    {
+      "id": 2,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 3,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 4,
+      "source": "fping is a program like ping which uses the Internet Control Message Protocol (ICMP) echo request to determine if a target host is responding. fping differs from ping in that you can specify any number of targets on the command line, or specify a file containing the lists of targets to ping. Instead of sending to one target until it times out or replies, fping will send out a ping packet and move on to the next target in a round-robin fashion. In the default mode, if a target replies, it is noted and removed from the list of targets to check; if a target does not respond within a certain time limit and/or retry limit it is designated as unreachable. fping also supports sending a specified number of pings to a target, or looping indefinitely (as in ping ). Unlike ping, fping is meant to be used in scripts, so its output is designed to be easy to parse.  Current statistics can be obtained without termination of process with signal SIGQUIT (^\\ from the keyboard on most systems).",
+      "translation": "fping é um programa semelhante ao ping que usa solicitações echo do Internet Control Message Protocol (ICMP) para determinar se um host-alvo está respondendo. Ele difere do ping por permitir qualquer quantidade de alvos na linha de comando ou um arquivo com listas de alvos. Em vez de enviar a um alvo até ele responder ou esgotar o tempo, o fping envia um pacote e passa ao próximo alvo, em rodízio (round-robin). No modo padrão, se um alvo responde, isso é registrado e ele é removido da lista a verificar; se não responde dentro dos limites de tempo e/ou tentativas, é marcado como inacessível. fping também permite enviar um número especificado de pings a um alvo ou repetir indefinidamente, como o ping. Diferentemente do ping, destina-se ao uso em scripts, por isso sua saída é projetada para facilitar a análise. Estatísticas atuais podem ser obtidas sem encerrar o processo, usando o sinal `SIGQUIT` (`^\\` no teclado da maioria dos sistemas)."
+    },
+    {
+      "id": 5,
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": 6,
+      "source": "`-4, --ipv4`",
+      "translation": "`-4, --ipv4`"
+    },
+    {
+      "id": 7,
+      "source": "Restrict name resolution and IPs to IPv4 addresses.",
+      "translation": "Restringe a resolução de nomes e os IPs a endereços IPv4."
+    },
+    {
+      "id": 8,
+      "source": "`-6, --ipv6`",
+      "translation": "`-6, --ipv6`"
+    },
+    {
+      "id": 9,
+      "source": "Restrict name resolution and IPs to IPv6 addresses.",
+      "translation": "Restringe a resolução de nomes e os IPs a endereços IPv6."
+    },
+    {
+      "id": 10,
+      "source": "`-a, --alive`",
+      "translation": "`-a, --alive`"
+    },
+    {
+      "id": 11,
+      "source": "Show systems that are alive.",
+      "translation": "Mostra os sistemas que estão ativos."
+    },
+    {
+      "id": 12,
+      "source": "`-A, --addr`",
+      "translation": "`-A, --addr`"
+    },
+    {
+      "id": 13,
+      "source": "Display targets by address rather than DNS name. Combined with -d, the output will be both the ip and (if available) the hostname.",
+      "translation": "Exibe os alvos por endereço em vez do nome DNS. Combinada com `-d`, a saída conterá o IP e, quando disponível, o nome do host."
+    },
+    {
+      "id": 14,
+      "source": "`-b, --size=BYTES`",
+      "translation": "`-b, --size=BYTES`"
+    },
+    {
+      "id": 15,
+      "source": "Number of bytes of ping data to send.  The minimum size (normally 12) allows room for the data that fping needs to do its work (sequence number, timestamp).  The reported received data size includes the IP header (normally 20 bytes) and ICMP header (8 bytes), so the minimum total size is 40 bytes. Default is 56, as in ping. Maximum is the theoretical maximum IP datagram size (64K), though most systems limit this to a smaller, system-dependent number.",
+      "translation": "Número de bytes de dados do ping a enviar. O tamanho mínimo (normalmente 12) reserva espaço para o que o fping precisa para funcionar: número de sequência e marca temporal. O tamanho de dados recebidos informado inclui o cabeçalho IP (normalmente 20 bytes) e o cabeçalho ICMP (8 bytes), portanto o tamanho total mínimo é 40 bytes. O padrão é 56, como no ping. O máximo é o tamanho máximo teórico de um datagrama IP (64K), embora a maioria dos sistemas limite isso a um número menor, dependente do sistema."
+    },
+    {
+      "id": 16,
+      "source": "`-B, --backoff=N`",
+      "translation": "`-B, --backoff=N`"
+    },
+    {
+      "id": 17,
+      "source": "Backoff factor. In the default mode, fping sends several requests to a target before giving up, waiting longer for a reply on each successive request. This parameter is the value by which the wait time (-t) is multiplied on each successive request; it must be entered as a floating-point number (x.y). The default is 1.5.",
+      "translation": "Fator de backoff. No modo padrão, o fping envia várias solicitações a um alvo antes de desistir, aguardando mais tempo pela resposta a cada nova solicitação. Este parâmetro é o valor pelo qual o tempo de espera (`-t`) é multiplicado em cada solicitação sucessiva; deve ser informado como número de ponto flutuante (x.y). O padrão é 1.5."
+    },
+    {
+      "id": 18,
+      "source": "`-c, --count=N`",
+      "translation": "`-c, --count=N`"
+    },
+    {
+      "id": 19,
+      "source": "Number of request packets to send to each target.  In this mode, a line is displayed for each received response (this can suppressed with -q or -Q). Also, statistics about responses for each target are displayed when all requests have been sent (or when interrupted).",
+      "translation": "Número de pacotes de solicitação a enviar para cada alvo. Neste modo, é exibida uma linha para cada resposta recebida (isso pode ser suprimido com `-q` ou `-Q`). As estatísticas de respostas de cada alvo também são exibidas quando todas as solicitações foram enviadas ou quando a execução é interrompida."
+    },
+    {
+      "id": 20,
+      "source": "`-C, --vcount=N`",
+      "translation": "`-C, --vcount=N`"
+    },
+    {
+      "id": 21,
+      "source": "Similar to -c, but the per-target statistics are displayed in a format designed for automated response-time statistics gathering. For example:",
+      "translation": "Semelhante a `-c`, mas as estatísticas de cada alvo são exibidas em um formato destinado à coleta automatizada de tempos de resposta. Por exemplo:"
+    },
+    {
+      "id": 22,
+      "source": "shows the response time in milliseconds for each of the five requests, with the `-` indicating that no response was received to the fourth request.",
+      "translation": "Mostra o tempo de resposta em milissegundos de cada uma das cinco solicitações; o `-` indica que a quarta solicitação não recebeu resposta."
+    },
+    {
+      "id": 23,
+      "source": "`-d, --rdns`",
+      "translation": "`-d, --rdns`"
+    },
+    {
+      "id": 24,
+      "source": "Use DNS to lookup address of ping target. This allows you to give fping a list of IP addresses as input and print hostnames in the output. This is similar to option -n/--name, but will force a reverse-DNS lookup even if you give hostnames as target (NAME->IP->NAME).",
+      "translation": "Usa DNS para resolver o endereço do alvo de ping. Isso permite fornecer ao fping uma lista de IPs e imprimir nomes de hosts na saída. É semelhante a `-n`/`--name`, mas força uma consulta DNS reversa mesmo quando o alvo é fornecido como nome de host (`NAME->IP->NAME`)."
+    },
+    {
+      "id": 25,
+      "source": "`-D, --timestamp`",
+      "translation": "`-D, --timestamp`"
+    },
+    {
+      "id": 26,
+      "source": "Add Unix timestamps in front of output lines generated with in looping or counting modes (-l, -c, or -C).",
+      "translation": "Acrescenta marcas temporais Unix no início das linhas de saída geradas nos modos de repetição ou contagem (`-l`, `-c` ou `-C`)."
+    },
+    {
+      "id": 27,
+      "source": "`-e, --elapsed`",
+      "translation": "`-e, --elapsed`"
+    },
+    {
+      "id": 28,
+      "source": "Show elapsed (round-trip) time of packets.",
+      "translation": "Mostra o tempo decorrido (ida e volta) dos pacotes."
+    },
+    {
+      "id": 29,
+      "source": "`-f, --file`",
+      "translation": "`-f, --file`"
+    },
+    {
+      "id": 30,
+      "source": "Read list of targets from a file.  This option can only be used by the root user. Regular users should pipe in the file via stdin:",
+      "translation": "Lê uma lista de alvos de um arquivo. Esta opção só pode ser usada pelo usuário root. Usuários comuns devem fornecer o arquivo pela entrada padrão, usando redirecionamento:"
+    },
+    {
+      "id": 31,
+      "source": "`-g, --generate addr/mask`",
+      "translation": "`-g, --generate addr/mask`"
+    },
+    {
+      "id": 32,
+      "source": "Generate a target list from a supplied IP netmask, or a starting and ending IP. Specify the netmask or start/end in the targets portion of the command line. If a network with netmask is given, the network and broadcast addresses will be excluded. ex. To ping the network 192.168.1.0/24, the specified command line could look like either:",
+      "translation": "Gera uma lista de alvos a partir de uma máscara de rede IP ou de um IP inicial e final. Especifique a máscara ou o início/fim na parte de alvos da linha de comando. Se for fornecida uma rede com máscara, os endereços de rede e broadcast serão excluídos. Por exemplo, para enviar ping à rede 192.168.1.0/24, a linha de comando pode ter uma destas formas:"
+    },
+    {
+      "id": 33,
+      "source": "or",
+      "translation": "ou"
+    },
+    {
+      "id": 34,
+      "source": "`-h, --help`",
+      "translation": "`-h, --help`"
+    },
+    {
+      "id": 35,
+      "source": "Print usage message.",
+      "translation": "Imprime a mensagem de uso."
+    },
+    {
+      "id": 36,
+      "source": "`-H, --ttl=N`",
+      "translation": "`-H, --ttl=N`"
+    },
+    {
+      "id": 37,
+      "source": "Set the IP TTL field (time to live hops).",
+      "translation": "Define o campo TTL do IP (tempo de vida em saltos)."
+    },
+    {
+      "id": 38,
+      "source": "`-i, --interval=MSEC`",
+      "translation": "`-i, --interval=MSEC`"
+    },
+    {
+      "id": 39,
+      "source": "The minimum amount of time (in milliseconds) between sending a ping packet to any target (default is 10, minimum is 1).",
+      "translation": "Tempo mínimo, em milissegundos, entre o envio de um pacote de ping e o seguinte para qualquer alvo (padrão: 10; mínimo: 1)."
+    },
+    {
+      "id": 40,
+      "source": "`-I, --iface=IFACE`",
+      "translation": "`-I, --iface=IFACE`"
+    },
+    {
+      "id": 41,
+      "source": "Set the interface (requires SO_BINDTODEVICE support).",
+      "translation": "Define a interface (requer suporte a `SO_BINDTODEVICE`)."
+    },
+    {
+      "id": 42,
+      "source": "`-l, --loop`",
+      "translation": "`-l, --loop`"
+    },
+    {
+      "id": 43,
+      "source": "Loop sending packets to each target indefinitely. Can be interrupted with Ctrl-C; statistics about responses for each target are then displayed.",
+      "translation": "Repete indefinidamente o envio de pacotes a cada alvo. Pode ser interrompido com Ctrl-C; as estatísticas de respostas de cada alvo são então exibidas."
+    },
+    {
+      "id": 44,
+      "source": "`-m, --all`",
+      "translation": "`-m, --all`"
+    },
+    {
+      "id": 45,
+      "source": "Send pings to each of a target host's multiple IP addresses (use of option '-A' is recommended).",
+      "translation": "Envia pings a cada um dos vários endereços IP de um host-alvo (recomenda-se usar `-A`)."
+    },
+    {
+      "id": 46,
+      "source": "`-M, --dontfrag`",
+      "translation": "`-M, --dontfrag`"
+    },
+    {
+      "id": 47,
+      "source": "Set the \"Don't Fragment\" bit in the IP header (used to determine/test the MTU).",
+      "translation": "Define o bit \"Don't Fragment\" no cabeçalho IP (usado para determinar/testar a MTU)."
+    },
+    {
+      "id": 48,
+      "source": "`-n, --name`",
+      "translation": "`-n, --name`"
+    },
+    {
+      "id": 49,
+      "source": "If targets are specified as IP addresses, do a reverse-DNS lookup on them to print hostnames in the output.",
+      "translation": "Se os alvos forem especificados como IPs, faz consultas DNS reversas para imprimir seus nomes na saída."
+    },
+    {
+      "id": 50,
+      "source": "`-N, --netdata`",
+      "translation": "`-N, --netdata`"
+    },
+    {
+      "id": 51,
+      "source": "Format output for netdata (-l -Q are required). See: <http://my-netdata.io/>",
+      "translation": "Formata a saída para netdata (requer `-l -Q`). Veja: <http://my-netdata.io/>"
+    },
+    {
+      "id": 52,
+      "source": "`-o, --outage`",
+      "translation": "`-o, --outage`"
+    },
+    {
+      "id": 53,
+      "source": "Calculate \"outage time\" based on the number of lost pings and the interval used (useful for network convergence tests).",
+      "translation": "Calcula o tempo de indisponibilidade (\"outage time\") com base no número de pings perdidos e no intervalo usado (útil em testes de convergência de rede)."
+    },
+    {
+      "id": 54,
+      "source": "`-O, --tos=N`",
+      "translation": "`-O, --tos=N`"
+    },
+    {
+      "id": 55,
+      "source": "Set the typ of service flag (TOS). N can be either decimal or hexadecimal (0xh) format.",
+      "translation": "Define o sinalizador de tipo de serviço (TOS). `N` pode estar no formato decimal ou hexadecimal (0xh)."
+    },
+    {
+      "id": 56,
+      "source": "`-p, --period=MSEC`",
+      "translation": "`-p, --period=MSEC`"
+    },
+    {
+      "id": 57,
+      "source": "In looping or counting modes (-l, -c, or -C), this parameter sets the time in milliseconds that fping waits between successive packets to an individual target. Default is 1000 and minimum is 10.",
+      "translation": "Nos modos de repetição ou contagem (`-l`, `-c` ou `-C`), define o tempo, em milissegundos, que o fping aguarda entre pacotes sucessivos para um mesmo alvo. O padrão é 1000 e o mínimo é 10."
+    },
+    {
+      "id": 58,
+      "source": "`-q, --quiet`",
+      "translation": "`-q, --quiet`"
+    },
+    {
+      "id": 59,
+      "source": "Quiet. Don't show per-probe results, but only the final summary. Also don't show ICMP error messages.",
+      "translation": "Silencioso. Não mostra resultados de cada tentativa, apenas o resumo final. Também não mostra mensagens de erro ICMP."
+    },
+    {
+      "id": 60,
+      "source": "`-Q, --squiet=SECS`",
+      "translation": "`-Q, --squiet=SECS`"
+    },
+    {
+      "id": 61,
+      "source": "Like -q, but additionally show interval summary results every SECS seconds.",
+      "translation": "Como `-q`, mas também mostra resumos de resultados a cada `SECS` segundos."
+    },
+    {
+      "id": 62,
+      "source": "`-r, --retry=N`",
+      "translation": "`-r, --retry=N`"
+    },
+    {
+      "id": 63,
+      "source": "Retry limit (default 3). This is the number of times an attempt at pinging a target will be made, not including the first try.",
+      "translation": "Limite de novas tentativas (padrão: 3). É o número de novas tentativas de ping a um alvo, sem incluir a primeira."
+    },
+    {
+      "id": 64,
+      "source": "`-R, --random`",
+      "translation": "`-R, --random`"
+    },
+    {
+      "id": 65,
+      "source": "Instead of using all-zeros as the packet data, generate random bytes. Use to defeat, e.g., link data compression.",
+      "translation": "Gera bytes aleatórios em vez de usar dados de pacote inteiramente zerados. Pode ser usado para impedir, por exemplo, a compressão de dados no enlace."
+    },
+    {
+      "id": 66,
+      "source": "`-s, --stats`",
+      "translation": "`-s, --stats`"
+    },
+    {
+      "id": 67,
+      "source": "Print cumulative statistics upon exit.",
+      "translation": "Imprime estatísticas acumuladas ao encerrar."
+    },
+    {
+      "id": 68,
+      "source": "`-S, --src=addr`",
+      "translation": "`-S, --src=addr`"
+    },
+    {
+      "id": 69,
+      "source": "Set source address.",
+      "translation": "Define o endereço de origem."
+    },
+    {
+      "id": 70,
+      "source": "`-t, --timeout=MSEC`",
+      "translation": "`-t, --timeout=MSEC`"
+    },
+    {
+      "id": 71,
+      "source": "Initial target timeout in milliseconds. In the default, non-loop mode, the default timeout is 500ms, and it represents the amount of time that fping waits for a response to its first request. Successive timeouts are multiplied by the backoff factor specified with -B.",
+      "translation": "Timeout inicial do alvo em milissegundos. No modo padrão, sem repetição contínua, o timeout padrão é 500 ms e representa quanto o fping aguarda pela resposta à primeira solicitação. Os timeouts seguintes são multiplicados pelo fator de backoff especificado em `-B`."
+    },
+    {
+      "id": 72,
+      "source": "In loop/count mode, the default timeout is automatically adjusted to match the \"period\" value (but not more than 2000ms). You can still adjust the timeout value with this option, if you wish to, but note that setting a value larger than \"period\" produces inconsistent results, because the timeout value can be respected only for the last ping.",
+      "translation": "No modo de repetição/contagem, o timeout padrão é ajustado automaticamente ao valor de \"period\" (mas limitado a 2000 ms). Ainda é possível ajustá-lo com esta opção, mas definir um valor maior que \"period\" produz resultados inconsistentes, pois o timeout só pode ser respeitado para o último ping."
+    },
+    {
+      "id": 73,
+      "source": "Also note that any received replies that are larger than the timeout value, will be discarded.",
+      "translation": "Respostas recebidas com tempo maior que o timeout serão descartadas."
+    },
+    {
+      "id": 74,
+      "source": "`-T n`",
+      "translation": "`-T n`"
+    },
+    {
+      "id": 75,
+      "source": "Ignored (for compatibility with fping 2.4).",
+      "translation": "Ignorada (para compatibilidade com fping 2.4)."
+    },
+    {
+      "id": 76,
+      "source": "`-u, --unreach`",
+      "translation": "`-u, --unreach`"
+    },
+    {
+      "id": 77,
+      "source": "Show targets that are unreachable.",
+      "translation": "Mostra os alvos inacessíveis."
+    },
+    {
+      "id": 78,
+      "source": "`-v, --version`",
+      "translation": "`-v, --version`"
+    },
+    {
+      "id": 79,
+      "source": "Print fping version information.",
+      "translation": "Imprime as informações de versão do fping."
+    },
+    {
+      "id": 80,
+      "source": "`-x, --reachable=N`",
+      "translation": "`-x, --reachable=N`"
+    },
+    {
+      "id": 81,
+      "source": "Given a list of hosts, this mode checks if number of reachable hosts is >= N and exits true in that case.",
+      "translation": "Com uma lista de hosts, verifica se o número de hosts acessíveis é >= N e, nesse caso, encerra com resultado verdadeiro."
+    },
+    {
+      "id": 82,
+      "source": "EXAMPLES",
+      "translation": "EXEMPLOS"
+    },
+    {
+      "id": 83,
+      "source": "Generate 20 pings to two hosts in ca. 1 second (i.e. one ping every 50 ms to each host), and report every ping RTT at the end:",
+      "translation": "Gera 20 pings para dois hosts em aproximadamente 1 segundo (um ping a cada 50 ms para cada host) e informa todos os RTTs ao final:"
+    },
+    {
+      "id": 84,
+      "source": "AUTHORS",
+      "translation": "AUTORES"
+    },
+    {
+      "id": 85,
+      "source": "Roland J. Schemers III, Stanford University, concept and versions 1.x",
+      "translation": "Roland J. Schemers III, Stanford University, conceito e versões 1.x"
+    },
+    {
+      "id": 86,
+      "source": "RL \"Bob\" Morgan, Stanford University, versions 2.x",
+      "translation": "RL \"Bob\" Morgan, Stanford University, versões 2.x"
+    },
+    {
+      "id": 87,
+      "source": "David Papp, versions 2.3x and up",
+      "translation": "David Papp, versões 2.3x e posteriores"
+    },
+    {
+      "id": 88,
+      "source": "David Schweikert, versions 3.0 and up",
+      "translation": "David Schweikert, versões 3.0 e posteriores"
+    },
+    {
+      "id": 89,
+      "source": "fping website: <http://www.fping.org>",
+      "translation": "Site do fping: <http://www.fping.org>"
+    },
+    {
+      "id": 90,
+      "source": "DIAGNOSTICS",
+      "translation": "DIAGNÓSTICOS"
+    },
+    {
+      "id": 91,
+      "source": "Exit status is 0 if all the hosts are reachable, 1 if some hosts were unreachable, 2 if any IP addresses were not found, 3 for invalid command line arguments, and 4 for a system call failure.",
+      "translation": "O código de saída é 0 se todos os hosts forem acessíveis, 1 se alguns forem inacessíveis, 2 se algum endereço IP não for encontrado, 3 para argumentos inválidos de linha de comando e 4 para falha em uma chamada de sistema."
+    },
+    {
+      "id": 92,
+      "source": "RESTRICTIONS",
+      "translation": "RESTRIÇÕES"
+    },
+    {
+      "id": 93,
+      "source": "If fping was configured with `--enable-safe-limits`, the following values are not allowed for non-root users:",
+      "translation": "Se o fping tiver sido configurado com `--enable-safe-limits`, os seguintes valores não são permitidos a usuários que não sejam root:"
+    },
+    {
+      "id": 94,
+      "source": "-i n, where n < 1 msec",
+      "translation": "`-i n`, em que `n` < 1 ms"
+    },
+    {
+      "id": 95,
+      "source": "-p n, where n < 10 msec",
+      "translation": "`-p n`, em que `n` < 10 ms"
+    },
+    {
+      "id": 96,
+      "source": "SEE ALSO",
+      "translation": "VEJA TAMBÉM"
+    },
+    {
+      "id": 97,
+      "source": "ping(8)",
+      "translation": "ping(8)"
+    }
+  ]
+}

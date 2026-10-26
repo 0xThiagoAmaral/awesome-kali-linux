@@ -53,3 +53,23 @@ def prepare_dns_package_layout(source,tool):
         'Example prose made translatable instead of treating its bold explanatory sentence as an option identifier',
         'Exact example command fenced; no command executed; missing manual date remains null'],
         'replacement':{'before':before,'after':after,'occurrences':1}}
+
+FPING_SHA='3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995'
+FPING6_SHA='51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271'
+def prepare_fping_layout(source):
+    digest=hashlib.sha256(source.encode()).hexdigest()
+    names={FPING_SHA:'fping',FPING6_SHA:'fping6'}
+    if digest not in names:
+        raise ValueError('Unreviewed fping package manual; source-specific Pod layout review required')
+    binary=names[digest]
+    marker='.TH '+binary.upper()+' 8 '
+    assert source.count(marker)==1
+    offset=source.index(marker)
+    preamble=source[:offset];body=source[offset:]
+    assert body.count('.if n .ad l\n')==1 and body.count('.nh\n')==1
+    body=body.replace('.if n .ad l\n','').replace('.nh\n','').replace('.Sp\n','.sp\n')
+    return body,binary,{'source_sha256':digest,'original_preamble':preamble,
+        'preamble_sha256':hashlib.sha256(preamble.encode()).hexdigest(),
+        'changes':['Exact generated Pod::Man preamble retained as data, never executed',
+                   'Only exact source-bound justification/hyphenation/Sp layout mappings applied',
+                   'Vb/Ve verbatim blocks and known font/size/quote escapes rendered without macro execution']}

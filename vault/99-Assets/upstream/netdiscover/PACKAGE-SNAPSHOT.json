@@ -1,0 +1,49 @@
+{
+  "source_kind": "installed-kali-package",
+  "package": "netdiscover",
+  "binary_version": "0.21-1",
+  "source_package": "netdiscover",
+  "source_version": "0.21-1",
+  "license_review": {
+    "basis": "Package Files: * and debian/* grant GPL-3+. The BSD-3-Clause exception names only doc/create-man.sh; GPL-2+ names update-oui-database.sh, not the selected manual. Full mixed-license copyright and complete GPL-3 legal text retained.",
+    "review_method": "assistant-source-inspection",
+    "independent_legal_review": false,
+    "package_copyright_sha256": "768a5704e100cae4c01d8a22dd84b16418efb9c75abd78dd157fcff07fe34ea0",
+    "selected_document_sha256": [
+      "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82"
+    ]
+  },
+  "documents": [
+    {
+      "path": "netdiscover.8",
+      "installed_path": "/usr/share/man/man8/netdiscover.8.gz",
+      "sha256": "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82",
+      "compressed_sha256": "f902f3f1c74bdab108902b24e86b6f73de442289cf9181d79e5b1d05807017cc",
+      "bytes": 6395,
+      "language": "en",
+      "source_format": "packaged-man-roff-v1",
+      "source_url": "https://github.com/netdiscover-scanner/netdiscover",
+      "source_url_role": "project-reference-not-exact-file",
+      "compressed_asset": "originals/netdiscover.8.gz",
+      "runtime_evidence_file": "netdiscover-help-tests.json"
+    }
+  ],
+  "license_spdx": "GPL-3.0-or-later",
+  "retained_files": [
+    {
+      "path": "COPYRIGHT.package.txt",
+      "bytes": 4686,
+      "sha256": "768a5704e100cae4c01d8a22dd84b16418efb9c75abd78dd157fcff07fe34ea0"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "originals/netdiscover.8.gz",
+      "bytes": 2503,
+      "sha256": "f902f3f1c74bdab108902b24e86b6f73de442289cf9181d79e5b1d05807017cc"
+    }
+  ]
+}

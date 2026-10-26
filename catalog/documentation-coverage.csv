@@ -226,7 +226,7 @@ fluxion,True,not-verified,0,0,False,False,False,identify-licensed-official-docum
 foremost,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 forensic-artifacts,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 forensics-colorize,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
-fping,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
+fping,True,LicenseRef-Fping-Stanford-Variant,2,2,True,False,False,review-source-coverage-and-translation
 fragrouter,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 framework2,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 freeradius,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
@@ -441,7 +441,7 @@ net-snmp,True,not-verified,0,0,False,False,False,identify-licensed-official-docu
 net-tools,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 netbase,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 netcat,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
-netdiscover,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
+netdiscover,True,GPL-3.0-or-later,1,1,True,False,False,review-source-coverage-and-translation
 netexec,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 netkit-ftp,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation
 netkit-telnet,True,not-verified,0,0,False,False,False,identify-licensed-official-documentation

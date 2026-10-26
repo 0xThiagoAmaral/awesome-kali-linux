@@ -10426,5 +10426,1408 @@
         "Limited PT-BR terminology glossary; commands and URLs protected"
       ]
     }
+  },
+  "netdiscover": {
+    "repository": "https://github.com/netdiscover-scanner/netdiscover",
+    "commit": null,
+    "source_kind": "installed-kali-package",
+    "package": "netdiscover",
+    "binary_version": "0.21-1",
+    "source_package": "netdiscover",
+    "source_version": "0.21-1",
+    "source_snapshot_sha256": "9f683de948f8a332ad88282e445f640b44277fa7f895a3f3ca39f1ff49ede37c",
+    "license_spdx": "GPL-3.0-or-later",
+    "documents": [
+      {
+        "source_path": "netdiscover.8",
+        "note": "vault/02-Tools/netdiscover/netdiscover-netdiscover-8.md",
+        "original": "sources/upstream/netdiscover/netdiscover.8.source",
+        "source_sha256": "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82",
+        "license_spdx": "GPL-3.0-or-later",
+        "translation_sha256": "e661c11f6147c052d5a886362b4e43a0d4e9fdd0d739ad029cd993a23724ffb2",
+        "source_fenced_blocks": 9,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.7-truthful-native-package-sources",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "-p-1"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "config-files"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "usage-examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "author"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+              "Paragraph lines joined; style macros mapped to inline code",
+              "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+              "Raw source bytes retained separately; non-content layout requests recorded",
+              "Historical statements translated from dated source, not independently retested claims"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "packaged-man-roff-v1",
+        "prepared_source": "sources/upstream/netdiscover/netdiscover.8.presentation.md.source",
+        "prepared_source_sha256": "f802b9392f05988cc077b8b9e84885cb1dc19764fdfc704199f4eafbab307f41",
+        "manual_structure": {
+          "format": "packaged-man-roff-v1",
+          "title": [
+            "netdiscover",
+            "8",
+            "14 Aug 2025",
+            "netdiscover-0.21",
+            "active/passive ARP reconnaissance tool"
+          ],
+          "source_lines": 239,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "USAGE",
+            "CONFIG FILES",
+            "USAGE EXAMPLES",
+            "AUTHOR"
+          ],
+          "option_syntax": [
+            "-i device",
+            "-r range",
+            "-l file",
+            "-p",
+            "-m file",
+            "-F filter",
+            "-s time",
+            "-c count",
+            "-n node",
+            "-d",
+            "-R",
+            "-f",
+            "-P",
+            "-L",
+            "-N",
+            "-S"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 9,
+              "body": "netdiscover [-i device] [-r range | -l file | -p] [-m file] [-F filter]\n            [-s time] [-c count] [-n node] [-dfPLNS]\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 161,
+              "body": "    192.168.21.0/24\n    172.24.0.0/14\n    10.0.0.0/12\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 178,
+              "body": "    # netdiscover -i eth0\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 186,
+              "body": "    # netdiscover -i eth0 -f\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 194,
+              "body": "    # netdiscover -i eth0 -r 172.26.0.0/24\n    # netdiscover -r 192.168.0.0/16\n    # netdiscover -r 10.0.0.0/8\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 205,
+              "body": "    # netdiscover -s 0.5\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 214,
+              "body": "    # netdiscover -r 192.168.0.0/16 -f -s 0.5\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 222,
+              "body": "    # netdiscover -r 10.1.0.0/16 -n 101\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 230,
+              "body": "    # netdiscover -p\n",
+              "origin": "decoded non-executing roff presentation"
+            }
+          ],
+          "layout_requests": [
+            {
+              "first_line": 7,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 8,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 12,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 13,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 14,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 15,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 125,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 126,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 134,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 135,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 138,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 139,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 144,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 145,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 159,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 160,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 165,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 166,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 176,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 177,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 180,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 181,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 184,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 185,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 188,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 189,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 192,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 193,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 198,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 199,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 203,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 204,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 207,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 208,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 212,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 213,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 216,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 217,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 220,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 221,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 224,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 225,
+              "request": "fi",
+              "args": []
+            },
+            {
+              "first_line": 228,
+              "request": "nf",
+              "args": []
+            },
+            {
+              "first_line": 229,
+              "request": "fam",
+              "args": [
+                "C"
+              ]
+            },
+            {
+              "first_line": 232,
+              "request": "fam",
+              "args": [
+                "T"
+              ]
+            },
+            {
+              "first_line": 233,
+              "request": "fi",
+              "args": []
+            }
+          ],
+          "reference_tables": [
+            {
+              "first_line": 127,
+              "decoded_original_body": "    h  Show help screen.\n    j  Scroll down (or down arrow).\n    k  Scroll up (or up arrow).\n    .  Scroll page up.\n    ,  Scroll page down.\n    q  Close help screen or end application.\n",
+              "rows": [
+                [
+                  "h",
+                  "Show help screen."
+                ],
+                [
+                  "j",
+                  "Scroll down (or down arrow)."
+                ],
+                [
+                  "k",
+                  "Scroll up (or up arrow)."
+                ],
+                [
+                  ".",
+                  "Scroll page up."
+                ],
+                [
+                  ",",
+                  "Scroll page down."
+                ],
+                [
+                  "q",
+                  "Close help screen or end application."
+                ]
+              ],
+              "presentation": "Literal keyboard keys; translatable action descriptions"
+            },
+            {
+              "first_line": 140,
+              "decoded_original_body": "    a  Show ARP replies list.\n    r  Show ARP requests list.\n    u  Show unique hosts detected.\n",
+              "rows": [
+                [
+                  "a",
+                  "Show ARP replies list."
+                ],
+                [
+                  "r",
+                  "Show ARP requests list."
+                ],
+                [
+                  "u",
+                  "Show unique hosts detected."
+                ]
+              ],
+              "presentation": "Literal keyboard keys; translatable action descriptions"
+            }
+          ],
+          "source_comments": [
+            {
+              "raw": ".\\\" Text automatically generated by txt2man\n",
+              "first_line": 1,
+              "kind": "comment"
+            }
+          ],
+          "presentation_changes": [
+            "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+            "Paragraph lines joined; style macros mapped to inline code",
+            "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+            "Raw source bytes retained separately; non-content layout requests recorded",
+            "Historical statements translated from dated source, not independently retested claims"
+          ]
+        },
+        "editorial_translation": {
+          "source_sha256": "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82",
+          "translation_file": "translations/pt-BR/netdiscover/netdiscover.8.md",
+          "translation_sha256": "df4d9aa7517c29d57a86b031ca6ac62e7db4fad8821a76a5da2c3c2b1d32920a",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "GPL-3.0-or-later",
+          "segment_file": "catalog/editorial-segments/netdiscover.pt-br.json",
+          "segment_sha256": "ce252eb77c638790bd14abbffbb6886379ceb3b96683cd5dda9c49b1cc2eeb57",
+          "review_scope": "All 81 source-bound segments; 8 sections and 16 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/netdiscover-help-tests.json",
+          "sha256": "66d6145f18f6c56ad37ad8eff5ccbb2c321f6f033d3753990fb0513468ea947a",
+          "test_script": "scripts/test_network_help.py"
+        }
+      }
+    ],
+    "source_scope": "Complete selected installed English manual netdiscover(8); upstream README, websites and other documentation remain pending coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "fping": {
+    "repository": "https://www.fping.org/",
+    "commit": null,
+    "source_kind": "installed-kali-package",
+    "package": "fping",
+    "binary_version": "5.1-1",
+    "source_package": "fping",
+    "source_version": "5.1-1",
+    "source_snapshot_sha256": "2089b46418648044247b1d5e894c5c7d99fd81fdcdffe2872948dab74ef6da57",
+    "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+    "documents": [
+      {
+        "source_path": "fping.8",
+        "note": "vault/02-Tools/fping/fping-fping-8.md",
+        "original": "sources/upstream/fping/fping.8.source",
+        "source_sha256": "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+        "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+        "translation_sha256": "c358ab5d4dbebb9f889fccbd2594201b5d68118e11cb8e634436d04357b72baf",
+        "source_fenced_blocks": 6,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.7-truthful-native-package-sources",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "options"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "examples"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "authors"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "diagnostics"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "restrictions"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "see-also"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+              "Paragraph lines joined; style macros mapped to inline code",
+              "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+              "Raw source bytes retained separately; non-content layout requests recorded",
+              "Historical statements translated from dated source, not independently retested claims",
+              "Exact generated Pod::Man preamble retained as data, never executed",
+              "Only exact source-bound justification/hyphenation/Sp layout mappings applied",
+              "Vb/Ve verbatim blocks and known font/size/quote escapes rendered without macro execution"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "packaged-man-roff-v1",
+        "prepared_source": "sources/upstream/fping/fping.8.presentation.md.source",
+        "prepared_source_sha256": "0662415c463f43481bdc3c45cbac3d71065db82127981b5ffd1758aff624ecf1",
+        "manual_structure": {
+          "format": "packaged-man-roff-v1",
+          "title": [
+            "FPING",
+            "8",
+            "2022-02-06",
+            "fping",
+            ""
+          ],
+          "source_lines": 376,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "OPTIONS",
+            "EXAMPLES",
+            "AUTHORS",
+            "DIAGNOSTICS",
+            "RESTRICTIONS",
+            "SEE ALSO"
+          ],
+          "option_syntax": [
+            "-4, --ipv4",
+            "-6, --ipv6",
+            "-a, --alive",
+            "-A, --addr",
+            "-b, --size=BYTES",
+            "-B, --backoff=N",
+            "-c, --count=N",
+            "-C, --vcount=N",
+            "-d, --rdns",
+            "-D, --timestamp",
+            "-e, --elapsed",
+            "-f, --file",
+            "-g, --generate addr/mask",
+            "-h, --help",
+            "-H, --ttl=N",
+            "-i, --interval=MSEC",
+            "-I, --iface=IFACE",
+            "-l, --loop",
+            "-m, --all",
+            "-M, --dontfrag",
+            "-n, --name",
+            "-N, --netdata",
+            "-o, --outage",
+            "-O, --tos=N",
+            "-p, --period=MSEC",
+            "-q, --quiet",
+            "-Q, --squiet=SECS",
+            "-r, --retry=N",
+            "-R, --random",
+            "-s, --stats",
+            "-S, --src=addr",
+            "-t, --timeout=MSEC",
+            "-T n",
+            "-u, --unreach",
+            "-v, --version",
+            "-x, --reachable=N"
+          ],
+          "literal_blocks": [
+            {
+              "first_line": 8,
+              "body": "fping [ options ] [ systems... ]\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 67,
+              "body": " $ fping -C 5 -q somehost\n somehost : 91.7 37.0 29.2 - 36.8\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 92,
+              "body": " $ fping < targets_file\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 103,
+              "body": " $ fping -g 192.168.1.0/24\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 109,
+              "body": " $ fping -g 192.168.1.1 192.168.1.254\n",
+              "origin": "decoded non-executing roff presentation"
+            },
+            {
+              "first_line": 210,
+              "body": " $ fping --quiet --interval=1 --vcount=20 --period=50 127.0.0.1 127.0.0.2\n",
+              "origin": "decoded non-executing roff presentation"
+            }
+          ],
+          "layout_requests": [
+            {
+              "first_line": 7,
+              "request": "IX",
+              "args": [
+                "Header",
+                "SYNOPSIS"
+              ]
+            },
+            {
+              "first_line": 10,
+              "request": "IX",
+              "args": [
+                "Header",
+                "DESCRIPTION"
+              ]
+            },
+            {
+              "first_line": 25,
+              "request": "IX",
+              "args": [
+                "Header",
+                "OPTIONS"
+              ]
+            },
+            {
+              "first_line": 27,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-4, --ipv4"
+              ]
+            },
+            {
+              "first_line": 30,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-6, --ipv6"
+              ]
+            },
+            {
+              "first_line": 33,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-a, --alive"
+              ]
+            },
+            {
+              "first_line": 36,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-A, --addr"
+              ]
+            },
+            {
+              "first_line": 40,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-b, --size=BYTES"
+              ]
+            },
+            {
+              "first_line": 49,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-B, --backoff=N"
+              ]
+            },
+            {
+              "first_line": 56,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-c, --count=N"
+              ]
+            },
+            {
+              "first_line": 62,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-C, --vcount=N"
+              ]
+            },
+            {
+              "first_line": 65,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 66,
+              "request": "Vb",
+              "args": [
+                "2"
+              ]
+            },
+            {
+              "first_line": 69,
+              "request": "Ve",
+              "args": []
+            },
+            {
+              "first_line": 70,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 74,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-d, --rdns"
+              ]
+            },
+            {
+              "first_line": 80,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-D, --timestamp"
+              ]
+            },
+            {
+              "first_line": 84,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-e, --elapsed"
+              ]
+            },
+            {
+              "first_line": 87,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-f, --file"
+              ]
+            },
+            {
+              "first_line": 90,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 91,
+              "request": "Vb",
+              "args": [
+                "1"
+              ]
+            },
+            {
+              "first_line": 93,
+              "request": "Ve",
+              "args": []
+            },
+            {
+              "first_line": 95,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-g, --generate addr/mask"
+              ]
+            },
+            {
+              "first_line": 101,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 102,
+              "request": "Vb",
+              "args": [
+                "1"
+              ]
+            },
+            {
+              "first_line": 104,
+              "request": "Ve",
+              "args": []
+            },
+            {
+              "first_line": 105,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 107,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 108,
+              "request": "Vb",
+              "args": [
+                "1"
+              ]
+            },
+            {
+              "first_line": 110,
+              "request": "Ve",
+              "args": []
+            },
+            {
+              "first_line": 112,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-h, --help"
+              ]
+            },
+            {
+              "first_line": 115,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-H, --ttl=N"
+              ]
+            },
+            {
+              "first_line": 118,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-i, --interval=MSEC"
+              ]
+            },
+            {
+              "first_line": 122,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-I, --iface=IFACE"
+              ]
+            },
+            {
+              "first_line": 125,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-l, --loop"
+              ]
+            },
+            {
+              "first_line": 129,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-m, --all"
+              ]
+            },
+            {
+              "first_line": 133,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-M, --dontfrag"
+              ]
+            },
+            {
+              "first_line": 136,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-n, --name"
+              ]
+            },
+            {
+              "first_line": 140,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-N, --netdata"
+              ]
+            },
+            {
+              "first_line": 143,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-o, --outage"
+              ]
+            },
+            {
+              "first_line": 146,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-O, --tos=N"
+              ]
+            },
+            {
+              "first_line": 150,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-p, --period=MSEC"
+              ]
+            },
+            {
+              "first_line": 155,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-q, --quiet"
+              ]
+            },
+            {
+              "first_line": 159,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-Q, --squiet=SECS"
+              ]
+            },
+            {
+              "first_line": 163,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-r, --retry=N"
+              ]
+            },
+            {
+              "first_line": 167,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-R, --random"
+              ]
+            },
+            {
+              "first_line": 171,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-s, --stats"
+              ]
+            },
+            {
+              "first_line": 174,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-S, --src=addr"
+              ]
+            },
+            {
+              "first_line": 177,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-t, --timeout=MSEC"
+              ]
+            },
+            {
+              "first_line": 182,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 188,
+              "request": "sp",
+              "args": []
+            },
+            {
+              "first_line": 192,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-T n"
+              ]
+            },
+            {
+              "first_line": 195,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-u, --unreach"
+              ]
+            },
+            {
+              "first_line": 198,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-v, --version"
+              ]
+            },
+            {
+              "first_line": 201,
+              "request": "IX",
+              "args": [
+                "Item",
+                "-x, --reachable=N"
+              ]
+            },
+            {
+              "first_line": 205,
+              "request": "IX",
+              "args": [
+                "Header",
+                "EXAMPLES"
+              ]
+            },
+            {
+              "first_line": 209,
+              "request": "Vb",
+              "args": [
+                "1"
+              ]
+            },
+            {
+              "first_line": 211,
+              "request": "Ve",
+              "args": []
+            },
+            {
+              "first_line": 213,
+              "request": "IX",
+              "args": [
+                "Header",
+                "AUTHORS"
+              ]
+            },
+            {
+              "first_line": 225,
+              "request": "IX",
+              "args": [
+                "Header",
+                "DIAGNOSTICS"
+              ]
+            },
+            {
+              "first_line": 230,
+              "request": "IX",
+              "args": [
+                "Header",
+                "RESTRICTIONS"
+              ]
+            },
+            {
+              "first_line": 238,
+              "request": "IX",
+              "args": [
+                "Header",
+                "SEE ALSO"
+              ]
+            }
+          ],
+          "source_comments": [
+            {
+              "raw": ".\\\" For nroff, turn off justification.  Always turn off hyphenation; it makes\n",
+              "first_line": 2,
+              "kind": "comment"
+            },
+            {
+              "raw": ".\\\" way too many mistakes in technical documents.\n",
+              "first_line": 3,
+              "kind": "comment"
+            }
+          ],
+          "presentation_changes": [
+            "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+            "Paragraph lines joined; style macros mapped to inline code",
+            "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+            "Raw source bytes retained separately; non-content layout requests recorded",
+            "Historical statements translated from dated source, not independently retested claims",
+            "Exact generated Pod::Man preamble retained as data, never executed",
+            "Only exact source-bound justification/hyphenation/Sp layout mappings applied",
+            "Vb/Ve verbatim blocks and known font/size/quote escapes rendered without macro execution"
+          ],
+          "layout_adjusted_lines": 239,
+          "source_layout_adapter": {
+            "source_sha256": "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+            "original_preamble": ".\\\" Automatically generated by Pod::Man 4.11 (Pod::Simple 3.35)\n.\\\"\n.\\\" Standard preamble:\n.\\\" ========================================================================\n.de Sp \\\" Vertical space (when we can't use .PP)\n.if t .sp .5v\n.if n .sp\n..\n.de Vb \\\" Begin verbatim text\n.ft CW\n.nf\n.ne \\\\$1\n..\n.de Ve \\\" End verbatim text\n.ft R\n.fi\n..\n.\\\" Set up some character translations and predefined strings.  \\*(-- will\n.\\\" give an unbreakable dash, \\*(PI will give pi, \\*(L\" will give a left\n.\\\" double quote, and \\*(R\" will give a right double quote.  \\*(C+ will\n.\\\" give a nicer C++.  Capital omega is used to do unbreakable dashes and\n.\\\" therefore won't be available.  \\*(C` and \\*(C' expand to `' in nroff,\n.\\\" nothing in troff, for use with C<>.\n.tr \\(*W-\n.ds C+ C\\v'-.1v'\\h'-1p'\\s-2+\\h'-1p'+\\s0\\v'.1v'\\h'-1p'\n.ie n \\{\\\n.    ds -- \\(*W-\n.    ds PI pi\n.    if (\\n(.H=4u)&(1m=24u) .ds -- \\(*W\\h'-12u'\\(*W\\h'-12u'-\\\" diablo 10 pitch\n.    if (\\n(.H=4u)&(1m=20u) .ds -- \\(*W\\h'-12u'\\(*W\\h'-8u'-\\\"  diablo 12 pitch\n.    ds L\" \"\"\n.    ds R\" \"\"\n.    ds C` \"\"\n.    ds C' \"\"\n'br\\}\n.el\\{\\\n.    ds -- \\|\\(em\\|\n.    ds PI \\(*p\n.    ds L\" ``\n.    ds R\" ''\n.    ds C`\n.    ds C'\n'br\\}\n.\\\"\n.\\\" Escape single quotes in literal strings from groff's Unicode transform.\n.ie \\n(.g .ds Aq \\(aq\n.el       .ds Aq '\n.\\\"\n.\\\" If the F register is >0, we'll generate index entries on stderr for\n.\\\" titles (.TH), headers (.SH), subsections (.SS), items (.Ip), and index\n.\\\" entries marked with X<> in POD.  Of course, you'll have to process the\n.\\\" output yourself in some meaningful fashion.\n.\\\"\n.\\\" Avoid warning from groff about undefined register 'F'.\n.de IX\n..\n.nr rF 0\n.if \\n(.g .if rF .nr rF 1\n.if (\\n(rF:(\\n(.g==0)) \\{\\\n.    if \\nF \\{\\\n.        de IX\n.        tm Index:\\\\$1\\t\\\\n%\\t\"\\\\$2\"\n..\n.        if !\\nF==2 \\{\\\n.            nr % 0\n.            nr F 2\n.        \\}\n.    \\}\n.\\}\n.rr rF\n.\\\"\n.\\\" Accent mark definitions (@(#)ms.acc 1.5 88/02/08 SMI; from UCB 4.2).\n.\\\" Fear.  Run.  Save yourself.  No user-serviceable parts.\n.    \\\" fudge factors for nroff and troff\n.if n \\{\\\n.    ds #H 0\n.    ds #V .8m\n.    ds #F .3m\n.    ds #[ \\f1\n.    ds #] \\fP\n.\\}\n.if t \\{\\\n.    ds #H ((1u-(\\\\\\\\n(.fu%2u))*.13m)\n.    ds #V .6m\n.    ds #F 0\n.    ds #[ \\&\n.    ds #] \\&\n.\\}\n.    \\\" simple accents for nroff and troff\n.if n \\{\\\n.    ds ' \\&\n.    ds ` \\&\n.    ds ^ \\&\n.    ds , \\&\n.    ds ~ ~\n.    ds /\n.\\}\n.if t \\{\\\n.    ds ' \\\\k:\\h'-(\\\\n(.wu*8/10-\\*(#H)'\\'\\h\"|\\\\n:u\"\n.    ds ` \\\\k:\\h'-(\\\\n(.wu*8/10-\\*(#H)'\\`\\h'|\\\\n:u'\n.    ds ^ \\\\k:\\h'-(\\\\n(.wu*10/11-\\*(#H)'^\\h'|\\\\n:u'\n.    ds , \\\\k:\\h'-(\\\\n(.wu*8/10)',\\h'|\\\\n:u'\n.    ds ~ \\\\k:\\h'-(\\\\n(.wu-\\*(#H-.1m)'~\\h'|\\\\n:u'\n.    ds / \\\\k:\\h'-(\\\\n(.wu*8/10-\\*(#H)'\\z\\(sl\\h'|\\\\n:u'\n.\\}\n.    \\\" troff and (daisy-wheel) nroff accents\n.ds : \\\\k:\\h'-(\\\\n(.wu*8/10-\\*(#H+.1m+\\*(#F)'\\v'-\\*(#V'\\z.\\h'.2m+\\*(#F'.\\h'|\\\\n:u'\\v'\\*(#V'\n.ds 8 \\h'\\*(#H'\\(*b\\h'-\\*(#H'\n.ds o \\\\k:\\h'-(\\\\n(.wu+\\w'\\(de'u-\\*(#H)/2u'\\v'-.3n'\\*(#[\\z\\(de\\v'.3n'\\h'|\\\\n:u'\\*(#]\n.ds d- \\h'\\*(#H'\\(pd\\h'-\\w'~'u'\\v'-.25m'\\f2\\(hy\\fP\\v'.25m'\\h'-\\*(#H'\n.ds D- D\\\\k:\\h'-\\w'D'u'\\v'-.11m'\\z\\(hy\\v'.11m'\\h'|\\\\n:u'\n.ds th \\*(#[\\v'.3m'\\s+1I\\s-1\\v'-.3m'\\h'-(\\w'I'u*2/3)'\\s-1o\\s+1\\*(#]\n.ds Th \\*(#[\\s+2I\\s-2\\h'-\\w'I'u*3/5'\\v'-.3m'o\\v'.3m'\\*(#]\n.ds ae a\\h'-(\\w'a'u*4/10)'e\n.ds Ae A\\h'-(\\w'A'u*4/10)'E\n.    \\\" corrections for vroff\n.if v .ds ~ \\\\k:\\h'-(\\\\n(.wu*9/10-\\*(#H)'\\s-2\\u~\\d\\s+2\\h'|\\\\n:u'\n.if v .ds ^ \\\\k:\\h'-(\\\\n(.wu*10/11-\\*(#H)'\\v'-.4m'^\\v'.4m'\\h'|\\\\n:u'\n.    \\\" for low resolution devices (crt and lpr)\n.if \\n(.H>23 .if \\n(.V>19 \\\n\\{\\\n.    ds : e\n.    ds 8 ss\n.    ds o a\n.    ds d- d\\h'-1'\\(ga\n.    ds D- D\\h'-1'\\(hy\n.    ds th \\o'bp'\n.    ds Th \\o'LP'\n.    ds ae ae\n.    ds Ae AE\n.\\}\n.rm #[ #] #H #V #F C\n.\\\" ========================================================================\n.\\\"\n.IX Title \"FPING 8\"\n",
+            "preamble_sha256": "3bd63166142ec36f8343631f805024909832763c7a8b6a07902ae8b173fd4270",
+            "changes": [
+              "Exact generated Pod::Man preamble retained as data, never executed",
+              "Only exact source-bound justification/hyphenation/Sp layout mappings applied",
+              "Vb/Ve verbatim blocks and known font/size/quote escapes rendered without macro execution"
+            ]
+          },
+          "line_number_basis": "Layout-adjusted source; exact original retained"
+        },
+        "editorial_translation": {
+          "source_sha256": "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+          "translation_file": "translations/pt-BR/fping/fping.8.md",
+          "translation_sha256": "12b7d960b1a67e7fde1cb110cb24bcf1b03672b26fcb8e6c7928a1bba3bc326d",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+          "segment_file": "catalog/editorial-segments/fping-8.pt-br.json",
+          "segment_sha256": "805259510b14eb0ba0aab6a170028bfbca874294b00302a30d9414dcb0fe3dea",
+          "review_scope": "All 98 source-bound segments; 9 sections and 36 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/fping-help-tests.json",
+          "sha256": "4f73ff77218267d0ef63f824c1b869f6006f43b2372c8f98f6e07a5c0a38a873",
+          "test_script": "scripts/test_network_help.py"
+        }
+      },
+      {
+        "source_path": "fping6.8",
+        "note": "vault/02-Tools/fping/fping-fping6-8.md",
+        "original": "sources/upstream/fping/fping6.8.source",
+        "source_sha256": "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271",
+        "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+        "translation_sha256": "1fae089e0cbeb99e8a31e22d9652233bdbf5ae5f066b40e89a50e322993d5969",
+        "source_fenced_blocks": 1,
+        "code_blocks_equal": true,
+        "translation_method": "assistant-translated",
+        "pipeline_version": "0.7-truthful-native-package-sources",
+        "presentation_changes": [
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "name"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "synopsis"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "description"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "see-also"
+          },
+          {
+            "kind": "original-heading-id-preserved",
+            "anchor": "author"
+          },
+          {
+            "kind": "plain-text-manual-to-markdown",
+            "details": [
+              "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+              "Paragraph lines joined; style macros mapped to inline code",
+              "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+              "Raw source bytes retained separately; non-content layout requests recorded",
+              "Historical statements translated from dated source, not independently retested claims",
+              "Exact generated Pod::Man preamble retained as data, never executed",
+              "Only exact source-bound justification/hyphenation/Sp layout mappings applied",
+              "Vb/Ve verbatim blocks and known font/size/quote escapes rendered without macro execution"
+            ]
+          }
+        ],
+        "human_review": "pending",
+        "source_format": "packaged-man-roff-v1",
+        "prepared_source": "sources/upstream/fping/fping6.8.presentation.md.source",
+        "prepared_source_sha256": "6418455724559b098107d62b7b8f732a8c571bd7c7e2d95417011795c8dab022",
+        "manual_structure": {
+          "format": "packaged-man-roff-v1",
+          "title": [
+            "FPING6",
+            "8",
+            "2022-02-07",
+            "BACKWARDS-COMPATIBILITY",
+            ""
+          ],
+          "source_lines": 101,
+          "all_source_text_accounted": true,
+          "sections": [
+            "NAME",
+            "SYNOPSIS",
+            "DESCRIPTION",
+            "SEE ALSO",
+            "AUTHOR"
+          ],
+          "option_syntax": [],
+          "literal_blocks": [
+            {
+              "first_line": 8,
+              "body": "fping6 [ options ] [ systems... ]\n",
+              "origin": "decoded non-executing roff presentation"
+            }
+          ],
+          "layout_requests": [
+            {
+              "first_line": 7,
+              "request": "IX",
+              "args": [
+                "Header",
+                "SYNOPSIS"
+              ]
+            },
+            {
+              "first_line": 10,
+              "request": "IX",
+              "args": [
+                "Header",
+                "DESCRIPTION"
+              ]
+            },
+            {
+              "first_line": 21,
+              "request": "IX",
+              "args": [
+                "Header",
+                "SEE ALSO"
+              ]
+            },
+            {
+              "first_line": 24,
+              "request": "IX",
+              "args": [
+                "Header",
+                "AUTHOR"
+              ]
+            }
+          ],
+          "source_comments": [
+            {
+              "raw": ".\\\" For nroff, turn off justification.  Always turn off hyphenation; it makes\n",
+              "first_line": 2,
+              "kind": "comment"
+            },
+            {
+              "raw": ".\\\" way too many mistakes in technical documents.\n",
+              "first_line": 3,
+              "kind": "comment"
+            }
+          ],
+          "presentation_changes": [
+            "Strict man requests interpreted as data; no external formatter, includes or shell executed",
+            "Paragraph lines joined; style macros mapped to inline code",
+            "Synopsis/no-fill rendered with explicit font, zero-width and spacing escape decoding",
+            "Raw source bytes retained separately; non-content layout requests recorded",
+            "Historical statements translated from dated source, not independently retested claims",
+            "Exact generated Pod::Man preamble retained as data, never executed",
+            "Only exact source-bound justification/hyphenation/Sp layout mappings applied",
+            "Vb/Ve verbatim blocks and known font/size/quote escapes rendered without macro execution"
+          ],
+          "layout_adjusted_lines": 26,
+          "source_layout_adapter": {
+            "source_sha256": "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271",
+            "original_preamble": ".\\\" Automatically generated by Pod::Man 4.14 (Pod::Simple 3.42)\n.\\\"\n.\\\" Standard preamble:\n.\\\" ========================================================================\n.de Sp \\\" Vertical space (when we can't use .PP)\n.if t .sp .5v\n.if n .sp\n..\n.de Vb \\\" Begin verbatim text\n.ft CW\n.nf\n.ne \\\\$1\n..\n.de Ve \\\" End verbatim text\n.ft R\n.fi\n..\n.\\\" Set up some character translations and predefined strings.  \\*(-- will\n.\\\" give an unbreakable dash, \\*(PI will give pi, \\*(L\" will give a left\n.\\\" double quote, and \\*(R\" will give a right double quote.  \\*(C+ will\n.\\\" give a nicer C++.  Capital omega is used to do unbreakable dashes and\n.\\\" therefore won't be available.  \\*(C` and \\*(C' expand to `' in nroff,\n.\\\" nothing in troff, for use with C<>.\n.tr \\(*W-\n.ds C+ C\\v'-.1v'\\h'-1p'\\s-2+\\h'-1p'+\\s0\\v'.1v'\\h'-1p'\n.ie n \\{\\\n.    ds -- \\(*W-\n.    ds PI pi\n.    if (\\n(.H=4u)&(1m=24u) .ds -- \\(*W\\h'-12u'\\(*W\\h'-12u'-\\\" diablo 10 pitch\n.    if (\\n(.H=4u)&(1m=20u) .ds -- \\(*W\\h'-12u'\\(*W\\h'-8u'-\\\"  diablo 12 pitch\n.    ds L\" \"\"\n.    ds R\" \"\"\n.    ds C` \"\"\n.    ds C' \"\"\n'br\\}\n.el\\{\\\n.    ds -- \\|\\(em\\|\n.    ds PI \\(*p\n.    ds L\" ``\n.    ds R\" ''\n.    ds C`\n.    ds C'\n'br\\}\n.\\\"\n.\\\" Escape single quotes in literal strings from groff's Unicode transform.\n.ie \\n(.g .ds Aq \\(aq\n.el       .ds Aq '\n.\\\"\n.\\\" If the F register is >0, we'll generate index entries on stderr for\n.\\\" titles (.TH), headers (.SH), subsections (.SS), items (.Ip), and index\n.\\\" entries marked with X<> in POD.  Of course, you'll have to process the\n.\\\" output yourself in some meaningful fashion.\n.\\\"\n.\\\" Avoid warning from groff about undefined register 'F'.\n.de IX\n..\n.nr rF 0\n.if \\n(.g .if rF .nr rF 1\n.if (\\n(rF:(\\n(.g==0)) \\{\\\n.    if \\nF \\{\\\n.        de IX\n.        tm Index:\\\\$1\\t\\\\n%\\t\"\\\\$2\"\n..\n.        if !\\nF==2 \\{\\\n.            nr % 0\n.            nr F 2\n.        \\}\n.    \\}\n.\\}\n.rr rF\n.\\\" ========================================================================\n.\\\"\n.IX Title \"FPING6 8\"\n",
+            "preamble_sha256": "09c08309635b170e42cb4c63d3c956c303f25da1f58aa636bffe0a35223d9553",
+            "changes": [
+              "Exact generated Pod::Man preamble retained as data, never executed",
+              "Only exact source-bound justification/hyphenation/Sp layout mappings applied",
+              "Vb/Ve verbatim blocks and known font/size/quote escapes rendered without macro execution"
+            ]
+          },
+          "line_number_basis": "Layout-adjusted source; exact original retained"
+        },
+        "editorial_translation": {
+          "source_sha256": "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271",
+          "translation_file": "translations/pt-BR/fping/fping6.8.md",
+          "translation_sha256": "9acb94ac8470140736998fab339997a8630c972ced9a1abe9f8c310294f9235b",
+          "translation_method": "assistant-translated",
+          "human_review": "pending",
+          "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+          "segment_file": "catalog/editorial-segments/fping6-8.pt-br.json",
+          "segment_sha256": "b7c43e7795e5b20b077acf3e3b82404efbaa12a8a8416269172ace77f8e7fb7e",
+          "review_scope": "All 10 source-bound segments; 5 sections and 0 option headings. Original syntax retained. Historical claims preserved as source statements; independent human review pending."
+        },
+        "runtime_compatibility": {
+          "evidence": "evidence/fping6-help-tests.json",
+          "sha256": "87048777ef6536a59fa82800d764336f50b24ca4e25bb7c5821d42b9d3e71673",
+          "test_script": "scripts/test_network_help.py"
+        }
+      }
+    ],
+    "source_scope": "Complete selected installed English manuals fping(8) and fping6(8); upstream README, websites and other documentation remain pending coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
   }
 }

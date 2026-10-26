@@ -1,0 +1,59 @@
+{
+  "source_sha256": "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271",
+  "prepared_sha256": "6418455724559b098107d62b7b8f732a8c571bd7c7e2d95417011795c8dab022",
+  "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "fping6 - backwards compatibility with fping below version 4.0",
+      "translation": "fping6 - compatibilidade retroativa com fping anterior à versão 4.0"
+    },
+    {
+      "id": 2,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 3,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 4,
+      "source": "fping6 is a backwards-compatibility symbolic link to fping solely for the purpose to be able to specify Smokeping remote configurations which work on systems with fping ≥ 4.0 as well as on systems with fping < 4.0.",
+      "translation": "fping6 é um link simbólico de compatibilidade retroativa para fping, destinado exclusivamente a permitir configurações remotas do Smokeping que funcionem tanto em sistemas com fping ≥ 4.0 quanto em sistemas com fping < 4.0."
+    },
+    {
+      "id": 5,
+      "source": "Please do not use fping in in scripts or configurations which don't require it for backwards-compatibility with older fping versions. It will vanish as soon as it's no more required in setups as mentioned above.",
+      "translation": "Não use fping em scripts ou configurações que não exijam essa compatibilidade com versões antigas. Ele desaparecerá assim que não for mais necessário nas configurações mencionadas acima.\n\n> **Nota editorial:** o original escreve \"fping in in\" nesta advertência, embora a página trate de `fping6`. O nome citado foi mantido; a frase é uma declaração histórica da fonte, não a confirmação de uma data de remoção."
+    },
+    {
+      "id": 6,
+      "source": "SEE ALSO",
+      "translation": "VEJA TAMBÉM"
+    },
+    {
+      "id": 7,
+      "source": "fping(8)",
+      "translation": "fping(8)"
+    },
+    {
+      "id": 8,
+      "source": "AUTHOR",
+      "translation": "AUTOR"
+    },
+    {
+      "id": 9,
+      "source": "This man page was written by Axel Beckert <abe@debian.org> for the Debian Project, but may be used by others.",
+      "translation": "Esta página de manual foi escrita por Axel Beckert <abe@debian.org> para o Projeto Debian, mas pode ser usada por outros."
+    }
+  ]
+}

@@ -15,3 +15,7 @@ A existência de README adquirido não comprova cobertura integral de wiki, manu
 
 Dependências e modelo de tradução ficam fora do repositório publicável. Nenhum executável das
 ferramentas Kali ou modelo de tradução é redistribuído neste pacote.
+
+## Reconhecimentos exigidos pelas fontes
+
+This software was developed by Stanford University.

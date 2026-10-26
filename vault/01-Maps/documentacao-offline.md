@@ -8,8 +8,8 @@ tags: ["documentation", "offline"]
 
 # Documentação offline — acervo
 
-**29 ferramentas com notas importadas; 53 documentos disponíveis.**
-43 traduções automáticas, 9 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
+**31 ferramentas com notas importadas; 56 documentos disponíveis.**
+43 traduções automáticas, 12 tradução(ões) editorial(is) por assistente de IA e 1 fonte(s) oficial(is) em português. Revisão humana completa: pendente.
 
 Estas páginas preservam a documentação adquirida, não substituem manuais não incluídos. O catálogo completo tem 820 registros.
 
@@ -37,10 +37,12 @@ Estas páginas preservam a documentação adquirida, não substituem manuais nã
 | dnsrecon | [dnsrecon.1](../02-Tools/dnsrecon/dnsrecon-dnsrecon-1.md) | [dnsrecon — cheatsheet](../02-Tools/dnsrecon/dnsrecon-cheatsheet.md) | GPL-2.0-only | Revisão pendente |
 | feroxbuster | [README.md](../02-Tools/feroxbuster/feroxbuster-documentacao.md) | [Exemplos upstream](../02-Tools/feroxbuster/feroxbuster-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | ffuf | [README.md](../02-Tools/ffuf/ffuf-documentacao.md) | [Exemplos upstream](../02-Tools/ffuf/ffuf-cheatsheet-upstream.md) · [ffuf — cheatsheet](../02-Tools/ffuf/ffuf-cheatsheet.md) | MIT | Revisão pendente |
+| fping | [fping.8](../02-Tools/fping/fping-fping-8.md) · [fping6.8](../02-Tools/fping/fping-fping6-8.md) | [fping — cheatsheet](../02-Tools/fping/fping-cheatsheet.md) | LicenseRef-Fping-Stanford-Variant | Revisão pendente |
 | gobuster | [README.md](../02-Tools/gobuster/gobuster-documentacao.md) | [Exemplos upstream](../02-Tools/gobuster/gobuster-cheatsheet-upstream.md) | Apache-2.0 | Revisão pendente |
 | katana | [README.md](../02-Tools/katana/katana-documentacao.md) | [Exemplos upstream](../02-Tools/katana/katana-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | naabu | [README.md](../02-Tools/naabu/naabu-documentacao.md) | [Exemplos upstream](../02-Tools/naabu/naabu-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | nbtscan | [nbtscan.1](../02-Tools/nbtscan/nbtscan-nbtscan-1.md) | [nbtscan — cheatsheet](../02-Tools/nbtscan/nbtscan-cheatsheet.md) | GPL-2.0-or-later | Revisão pendente |
+| netdiscover | [netdiscover.8](../02-Tools/netdiscover/netdiscover-netdiscover-8.md) | [netdiscover — cheatsheet](../02-Tools/netdiscover/netdiscover-cheatsheet.md) | GPL-3.0-or-later | Revisão pendente |
 | nuclei | [README.md](../02-Tools/nuclei/nuclei-documentacao.md) · [README_PT-BR.md](../02-Tools/nuclei/nuclei-documentacao-pt-br-oficial.md) | [Exemplos upstream](../02-Tools/nuclei/nuclei-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | subfinder | [README.md](../02-Tools/subfinder/subfinder-documentacao.md) | [Exemplos upstream](../02-Tools/subfinder/subfinder-cheatsheet-upstream.md) | MIT | Revisão pendente |
 | whois | [whois.1](../02-Tools/whois/whois-whois-1.md) | [whois — cheatsheet](../02-Tools/whois/whois-cheatsheet.md) | GPL-2.0-or-later | Revisão pendente |

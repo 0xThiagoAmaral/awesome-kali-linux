@@ -1,0 +1,73 @@
+{
+  "source_kind": "installed-kali-package",
+  "package": "fping",
+  "binary_version": "5.1-1",
+  "source_package": "fping",
+  "source_version": "5.1-1",
+  "license_review": {
+    "basis": "Package Files: * and debian/* declare the specifically worded Stanford variant, not standard SPDX BSD-3-Clause. Full copyright/conditions retained verbatim, including Stanford acknowledgement and no-endorsement condition. src/optparse.* Unlicense exception is not attributed to these manuals. fping6.8 is a separate compatibility page authored for Debian, not a man include alias.",
+    "review_method": "assistant-source-inspection",
+    "independent_legal_review": false,
+    "package_copyright_sha256": "bdf7995d4d3f4c92eb94e8f066e6b7ac48237433b04207e31d0031bb91e696d2",
+    "selected_document_sha256": [
+      "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+      "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271"
+    ]
+  },
+  "documents": [
+    {
+      "path": "fping.8",
+      "installed_path": "/usr/share/man/man8/fping.8.gz",
+      "sha256": "3a8c8083d52de352e65c96e6b267c61806666b3dd387c5f1146b496037bb6995",
+      "compressed_sha256": "a5e5e43142fe86c6e67b1e0a6fecdb6187ac2a458f95567c0fae8de1580de609",
+      "bytes": 14441,
+      "language": "en",
+      "source_format": "packaged-man-roff-v1",
+      "source_url": "https://www.fping.org/",
+      "source_url_role": "project-reference-not-exact-file",
+      "compressed_asset": "originals/fping.8.gz",
+      "runtime_evidence_file": "fping-help-tests.json",
+      "binary": "fping",
+      "editorial_segment_file": "catalog/editorial-segments/fping-8.pt-br.json"
+    },
+    {
+      "path": "fping6.8",
+      "installed_path": "/usr/share/man/man8/fping6.8.gz",
+      "sha256": "51970fc71574ef3e370041c2660df7e720a2607d95a1aec7ed83ac7b52987271",
+      "compressed_sha256": "d8cafccfc215f54eea3136635625d2cfb21c9031e7174ffad964e6a2a50df500",
+      "bytes": 3027,
+      "language": "en",
+      "source_format": "packaged-man-roff-v1",
+      "source_url": "https://www.fping.org/",
+      "source_url_role": "project-reference-not-exact-file",
+      "compressed_asset": "originals/fping6.8.gz",
+      "runtime_evidence_file": "fping6-help-tests.json",
+      "binary": "fping6",
+      "editorial_segment_file": "catalog/editorial-segments/fping6-8.pt-br.json"
+    }
+  ],
+  "license_spdx": "LicenseRef-Fping-Stanford-Variant",
+  "retained_files": [
+    {
+      "path": "COPYRIGHT.package.txt",
+      "bytes": 3445,
+      "sha256": "bdf7995d4d3f4c92eb94e8f066e6b7ac48237433b04207e31d0031bb91e696d2"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 3445,
+      "sha256": "bdf7995d4d3f4c92eb94e8f066e6b7ac48237433b04207e31d0031bb91e696d2"
+    },
+    {
+      "path": "originals/fping.8.gz",
+      "bytes": 5811,
+      "sha256": "a5e5e43142fe86c6e67b1e0a6fecdb6187ac2a458f95567c0fae8de1580de609"
+    },
+    {
+      "path": "originals/fping6.8.gz",
+      "bytes": 1510,
+      "sha256": "d8cafccfc215f54eea3136635625d2cfb21c9031e7174ffad964e6a2a50df500"
+    }
+  ],
+  "required_acknowledgement": "This software was developed by Stanford University."
+}

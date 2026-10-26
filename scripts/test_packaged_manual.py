@@ -10,6 +10,7 @@ import tempfile
 from package_source import validate_package_source,package_fields
 from package_layout_repairs import repair_arping_layout,ARPING_SHA
 from package_layout_repairs import prepare_dns_package_layout,DNSENUM_SHA,DNSRECON_SHA
+from package_layout_repairs import prepare_fping_layout,FPING_SHA,FPING6_SHA
 from test_dns_help import extract_help_flags
 from import_translate_docs import code_bodies
 import hashlib
@@ -178,5 +179,59 @@ class DnsManualTests(unittest.TestCase):
         for tool,expected in [('dnsenum','GPL-2.0-or-later'),('dnsrecon','GPL-2.0-only')]:
             self.assertEqual(registry[tool]['license_spdx'],expected)
             self.assertTrue(validate_package_source(registry[tool],self.root/'vault/99-Assets/upstream'/tool))
+
+class NetdiscoverFpingTests(unittest.TestCase):
+    def setUp(self):
+        self.root=pathlib.Path(__file__).resolve().parents[1]
+        self.registry=json.loads((self.root/'catalog/source-registry.json').read_text(encoding='utf-8'))
+    def source(self,name):
+        package='fping' if name.startswith('fping') else 'netdiscover'
+        return (self.root/'sources/upstream'/package/(name+'.source')).read_text(encoding='utf-8')
+    def test_netdiscover_keyboard_reference_tables(self):
+        rendered,info=prepare_packaged_manual(self.source('netdiscover.8'),'netdiscover')
+        self.assertEqual(len(info['sections']),8)
+        self.assertEqual(len(info['option_syntax']),16)
+        self.assertEqual(len(info['reference_tables']),2)
+        self.assertEqual([r[0] for r in info['reference_tables'][0]['rows']],list('hjk.,q'))
+        self.assertEqual([r[0] for r in info['reference_tables'][1]['rows']],list('aru'))
+        self.assertEqual(len(code_bodies(rendered)),9)
+    def test_inconsistent_fast_defaults_preserved(self):
+        rendered,_=prepare_packaged_manual(self.source('netdiscover.8'),'netdiscover')
+        self.assertIn('.1, .100 and .254',rendered)
+        self.assertIn('(1,100,154)',rendered)
+    def test_fping_full_structure_and_exact_example(self):
+        rendered,info=prepare_packaged_manual(self.source('fping.8'),'fping')
+        self.assertEqual(len(info['sections']),9)
+        self.assertEqual(len(info['option_syntax']),36)
+        self.assertEqual(len(code_bodies(rendered)),6)
+        self.assertIn(' $ fping --quiet --interval=1 --vcount=20 --period=50 127.0.0.1 127.0.0.2\n',''.join(code_bodies(rendered)))
+    def test_compatibility_page_is_separate_not_include(self):
+        rendered,info=prepare_packaged_manual(self.source('fping6.8'),'fping')
+        self.assertEqual(info['title'][0],'FPING6')
+        self.assertEqual(len(info['sections']),5)
+        self.assertEqual(info['option_syntax'],[])
+        self.assertIn('backwards-compatibility symbolic link',rendered)
+    def test_unknown_fping_source_rejected(self):
+        with self.assertRaises(ValueError):prepare_fping_layout(self.source('fping.8')+'\n')
+    def test_pod_preambles_retained_without_execution(self):
+        for name,digest in [('fping.8',FPING_SHA),('fping6.8',FPING6_SHA)]:
+            source=self.source(name)
+            self.assertEqual(hashlib.sha256(source.encode()).hexdigest(),digest)
+            _,_,info=prepare_fping_layout(source)
+            self.assertIn('.de Vb',info['original_preamble'])
+    def test_pod_escape_glyphs(self):
+        self.assertEqual(decode(r'\s-1ICMP\s0'),'ICMP')
+        self.assertEqual(decode(r'\*(L"quoted\*(R"'),'"quoted"')
+        self.assertEqual(decode(r'^\e'),'^'+chr(92))
+    def test_distinct_licenses_and_two_document_snapshot(self):
+        self.assertEqual(self.registry['netdiscover']['license_spdx'],'GPL-3.0-or-later')
+        record=self.registry['fping']
+        self.assertEqual(record['license_spdx'],'LicenseRef-Fping-Stanford-Variant')
+        self.assertEqual(len(record['documents']),2)
+        self.assertTrue(all(d.get('editorial_segment_file') for d in record['documents']))
+        self.assertTrue(validate_package_source(record,self.root/'vault/99-Assets/upstream/fping'))
+    def test_required_acknowledgement_cannot_be_removed(self):
+        record=copy.deepcopy(self.registry['fping']);record.pop('required_acknowledgement')
+        with self.assertRaises(AssertionError):validate_package_source(record,self.root/'vault/99-Assets/upstream/fping')
 if __name__=='__main__':
     unittest.main()

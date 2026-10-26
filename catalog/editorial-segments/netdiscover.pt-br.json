@@ -1,0 +1,414 @@
+{
+  "source_sha256": "94a0043626ac895ad1e235c1dae683a8f554a833b84420a621f1c523ceed8f82",
+  "prepared_sha256": "f802b9392f05988cc077b8b9e84885cb1dc19764fdfc704199f4eafbab307f41",
+  "license_spdx": "GPL-3.0-or-later",
+  "translation_method": "assistant-translated",
+  "human_review": "pending",
+  "segments": [
+    {
+      "id": 0,
+      "source": "NAME",
+      "translation": "NOME"
+    },
+    {
+      "id": 1,
+      "source": "netdiscover - active/passive ARP reconnaissance tool",
+      "translation": "netdiscover - ferramenta de reconhecimento ARP ativo/passivo"
+    },
+    {
+      "id": 2,
+      "source": "SYNOPSIS",
+      "translation": "SINOPSE"
+    },
+    {
+      "id": 3,
+      "source": "DESCRIPTION",
+      "translation": "DESCRIÇÃO"
+    },
+    {
+      "id": 4,
+      "source": "netdiscover is an active/passive ARP reconnaissance tool, initially developed to gain information about wireless networks without DHCP servers in wardriving scenarios. It can also be used on switched networks. Built on top of libnet and libpcap, it can passively detect online hosts or search for them by sending ARP requests.",
+      "translation": "netdiscover é uma ferramenta de reconhecimento ARP ativo/passivo, desenvolvida inicialmente para obter informações sobre redes sem fio sem servidores DHCP em cenários de wardriving. Também pode ser usada em redes com switches. Construída sobre libnet e libpcap, pode detectar passivamente hosts online ou procurá-los enviando solicitações ARP."
+    },
+    {
+      "id": 5,
+      "source": "Furthermore, it can be used to inspect your network's ARP traffic, or find network addresses using auto scan mode, which will scan for common local networks.",
+      "translation": "Além disso, pode ser usada para inspecionar o tráfego ARP da sua rede ou encontrar endereços de rede usando o modo de varredura automática, que examina redes locais comuns."
+    },
+    {
+      "id": 6,
+      "source": "OPTIONS",
+      "translation": "OPÇÕES"
+    },
+    {
+      "id": 7,
+      "source": "`-i device`",
+      "translation": "`-i device`"
+    },
+    {
+      "id": 8,
+      "source": "The network interface to sniff and inject packets. If no interface is specified, first available will be used.",
+      "translation": "A interface de rede para capturar e injetar pacotes. Se nenhuma interface for especificada, será usada a primeira disponível."
+    },
+    {
+      "id": 9,
+      "source": "`-r range`",
+      "translation": "`-r range`"
+    },
+    {
+      "id": 10,
+      "source": "Scan a given range instead of auto scan. Valid range values include, for example: 192.168.0.0/24, 192.168.2.0/23, 192.168.0.0/12, 192.168.0.0/8. Note that netdiscover is also a passive scanner, and all detected IPs will be displayed, in addition to those included in the specified range.",
+      "translation": "Varre um intervalo especificado em vez de executar a varredura automática. Valores válidos de intervalo incluem, por exemplo: `192.168.0.0/24`, `192.168.2.0/23`, `192.168.0.0/12` e `192.168.0.0/8`. O netdiscover também é um scanner passivo, e todos os IPs detectados serão exibidos, além dos incluídos no intervalo especificado."
+    },
+    {
+      "id": 11,
+      "source": "`-l file`",
+      "translation": "`-l file`"
+    },
+    {
+      "id": 12,
+      "source": "Scan ranges contained on the given file. It must contain only one range per line.",
+      "translation": "Varre os intervalos contidos no arquivo especificado. Ele deve conter apenas um intervalo por linha."
+    },
+    {
+      "id": 13,
+      "source": "`-p`",
+      "translation": "`-p`"
+    },
+    {
+      "id": 14,
+      "source": "Enable passive mode. In passive mode, netdiscover does not send anything, but does only sniff.",
+      "translation": "Ativa o modo passivo. Nesse modo, o netdiscover não envia nada; apenas captura o tráfego."
+    },
+    {
+      "id": 15,
+      "source": "`-m file`",
+      "translation": "`-m file`"
+    },
+    {
+      "id": 16,
+      "source": "Scan a list of known MACs and host names.",
+      "translation": "Varre uma lista de MACs e nomes de hosts conhecidos."
+    },
+    {
+      "id": 17,
+      "source": "`-F filter`",
+      "translation": "`-F filter`"
+    },
+    {
+      "id": 18,
+      "source": "Customize pcap filter expression (default: \"arp\").",
+      "translation": "Personaliza a expressão de filtro pcap (padrão: \"`arp`\")."
+    },
+    {
+      "id": 19,
+      "source": "`-s time`",
+      "translation": "`-s time`"
+    },
+    {
+      "id": 20,
+      "source": "Sleep given time in milliseconds between each ARP request injection. (default 1)",
+      "translation": "Aguarda o tempo especificado, em milissegundos, entre as injeções de solicitações ARP. (Padrão: 1.)"
+    },
+    {
+      "id": 21,
+      "source": "`-c count`",
+      "translation": "`-c count`"
+    },
+    {
+      "id": 22,
+      "source": "Number of times to send each ARP request. Useful for networks with packet loss, so it will scan given times for each host. (default 1)",
+      "translation": "Número de vezes que cada solicitação ARP será enviada. Útil em redes com perda de pacotes: a varredura será repetida o número especificado de vezes para cada host. (Padrão: 1.)"
+    },
+    {
+      "id": 23,
+      "source": "`-n node`",
+      "translation": "`-n node`"
+    },
+    {
+      "id": 24,
+      "source": "Last IP octet of the source IP used for scanning. You can change it if the default host (x.x.x.67) is already used. (allowed range is 2 to 253, default 67)",
+      "translation": "Último octeto do IP de origem usado para a varredura. Você pode alterá-lo se o host padrão (`x.x.x.67`) já estiver em uso. (Intervalo permitido: 2 a 253; padrão: 67.)"
+    },
+    {
+      "id": 25,
+      "source": "`-d`",
+      "translation": "`-d`"
+    },
+    {
+      "id": 26,
+      "source": "Ignore configuration files at home dir (for autoscan and fast mode only). This will use default ranges and IPs for autoscan and fast mode. See below for information about configuration files.",
+      "translation": "Ignora os arquivos de configuração no diretório pessoal (somente para os modos automático e rápido). Serão usados os intervalos e IPs padrão desses modos. Veja abaixo as informações sobre os arquivos de configuração."
+    },
+    {
+      "id": 27,
+      "source": "`-R`",
+      "translation": "`-R`"
+    },
+    {
+      "id": 28,
+      "source": "Assume user is root or that he has the required capabilities without running any checks.",
+      "translation": "Presume que o usuário é root ou possui as capacidades necessárias, sem executar verificações."
+    },
+    {
+      "id": 29,
+      "source": "`-f`",
+      "translation": "`-f`"
+    },
+    {
+      "id": 30,
+      "source": "Enable fast mode scan. This will only scan for .1, .100 and .254 on each network. This mode is useful while searching for ranges being used. After you found such range you can make a specific range scan to find online boxes.",
+      "translation": "Ativa o modo de varredura rápida. Ele examina apenas `.1`, `.100` e `.254` em cada rede. É útil para procurar os intervalos em uso. Depois de encontrar um intervalo, você pode fazer uma varredura específica dele para encontrar máquinas online."
+    },
+    {
+      "id": 31,
+      "source": "`-P`",
+      "translation": "`-P`"
+    },
+    {
+      "id": 32,
+      "source": "Produces an output suitable to be redirected into a file or to be parsed by another program, instead of using interactive mode. Enabling this option, netdiscover will stop after scanning given ranges.",
+      "translation": "Produz uma saída adequada para redirecionamento a um arquivo ou análise por outro programa, em vez de usar o modo interativo. Ao ativar esta opção, o netdiscover encerra após varrer os intervalos especificados."
+    },
+    {
+      "id": 33,
+      "source": "`-L`",
+      "translation": "`-L`"
+    },
+    {
+      "id": 34,
+      "source": "Similar to -P but continue program execution to capture ARP packets passively after the active scan. phase to capture ARP packets passively.",
+      "translation": "Semelhante a `-P`, mas continua a execução para capturar pacotes ARP passivamente após a varredura ativa. Fase para capturar pacotes ARP passivamente."
+    },
+    {
+      "id": 35,
+      "source": "`-N`",
+      "translation": "`-N`"
+    },
+    {
+      "id": 36,
+      "source": "Do not print header. Only valid when -P or -L is enabled.",
+      "translation": "Não imprime o cabeçalho. Só é válida quando `-P` ou `-L` está ativada."
+    },
+    {
+      "id": 37,
+      "source": "`-S`",
+      "translation": "`-S`"
+    },
+    {
+      "id": 38,
+      "source": "(DEPRECATED) Enable sleep time suppression between each request. If set, netdiscover will sleep after having scanned 255 hosts instead of sleeping after each one. This mode was used in netdiscover 0.3 beta4 and before. Avoid this option in networks with packet loss, or in wireless networks with low signal level. (also called hardcore mode)",
+      "translation": "(OBSOLETA) Ativa a supressão da espera entre solicitações. Se definida, o netdiscover aguardará após varrer 255 hosts em vez de aguardar após cada um. Esse modo era usado no netdiscover 0.3 beta4 e anteriores. Evite esta opção em redes com perda de pacotes ou redes sem fio com sinal fraco. (Também chamado de modo hardcore.)"
+    },
+    {
+      "id": 39,
+      "source": "USAGE",
+      "translation": "USO"
+    },
+    {
+      "id": 40,
+      "source": "If passive mode (-p), scan list (-l) or scan range (-r) options aren't enabled, netdiscover will scan for common LAN addresses (192.168.0.0/16, 172.16.0.0/12 and 10.0.0.0/8).",
+      "translation": "Se não estiverem ativadas as opções de modo passivo (`-p`), lista de varredura (`-l`) ou intervalo de varredura (`-r`), o netdiscover varrerá endereços LAN comuns (`192.168.0.0/16`, `172.16.0.0/12` e `10.0.0.0/8`)."
+    },
+    {
+      "id": 41,
+      "source": "Screen control keys:",
+      "translation": "Teclas de controle da tela:"
+    },
+    {
+      "id": 42,
+      "source": "Key",
+      "translation": "Tecla"
+    },
+    {
+      "id": 43,
+      "source": "Action",
+      "translation": "Ação"
+    },
+    {
+      "id": 44,
+      "source": "`h`",
+      "translation": "`h`"
+    },
+    {
+      "id": 45,
+      "source": "Show help screen.",
+      "translation": "Mostrar a tela de ajuda."
+    },
+    {
+      "id": 46,
+      "source": "`j`",
+      "translation": "`j`"
+    },
+    {
+      "id": 47,
+      "source": "Scroll down (or down arrow).",
+      "translation": "Rolar para baixo (ou seta para baixo)."
+    },
+    {
+      "id": 48,
+      "source": "`k`",
+      "translation": "`k`"
+    },
+    {
+      "id": 49,
+      "source": "Scroll up (or up arrow).",
+      "translation": "Rolar para cima (ou seta para cima)."
+    },
+    {
+      "id": 50,
+      "source": "`.`",
+      "translation": "`.`"
+    },
+    {
+      "id": 51,
+      "source": "Scroll page up.",
+      "translation": "Rolar uma página para cima."
+    },
+    {
+      "id": 52,
+      "source": "`,`",
+      "translation": "`,`"
+    },
+    {
+      "id": 53,
+      "source": "Scroll page down.",
+      "translation": "Rolar uma página para baixo."
+    },
+    {
+      "id": 54,
+      "source": "`q`",
+      "translation": "`q`"
+    },
+    {
+      "id": 55,
+      "source": "Close help screen or end application.",
+      "translation": "Fechar a ajuda ou encerrar o aplicativo."
+    },
+    {
+      "id": 56,
+      "source": "Screen views:",
+      "translation": "Visualizações da tela:"
+    },
+    {
+      "id": 57,
+      "source": "`a`",
+      "translation": "`a`"
+    },
+    {
+      "id": 58,
+      "source": "Show ARP replies list.",
+      "translation": "Mostrar a lista de respostas ARP."
+    },
+    {
+      "id": 59,
+      "source": "`r`",
+      "translation": "`r`"
+    },
+    {
+      "id": 60,
+      "source": "Show ARP requests list.",
+      "translation": "Mostrar a lista de solicitações ARP."
+    },
+    {
+      "id": 61,
+      "source": "`u`",
+      "translation": "`u`"
+    },
+    {
+      "id": 62,
+      "source": "Show unique hosts detected.",
+      "translation": "Mostrar os hosts únicos detectados."
+    },
+    {
+      "id": 63,
+      "source": "CONFIG FILES",
+      "translation": "ARQUIVOS DE CONFIGURAÇÃO"
+    },
+    {
+      "id": 64,
+      "source": "There are 2 configuration files that netdiscover will look for, each time it is executed. If files doesn't exist, netdiscover will use default values. You can use the -d switch to disable reading and loading configuration files.",
+      "translation": "O netdiscover procura dois arquivos de configuração a cada execução. Se eles não existirem, usará os valores padrão. Você pode usar a opção `-d` para desativar a leitura e o carregamento desses arquivos."
+    },
+    {
+      "id": 65,
+      "source": "`~/.netdiscover/ranges`",
+      "translation": "`~/.netdiscover/ranges`"
+    },
+    {
+      "id": 66,
+      "source": "This file contains a list of ranges (one per line) used for auto scan mode instead of default ranges. By default netdiscover will use a list of common ranges used on local networks.",
+      "translation": "Este arquivo contém uma lista de intervalos (um por linha) usados no modo de varredura automática em vez dos intervalos padrão. Por padrão, o netdiscover usa uma lista de intervalos comuns em redes locais."
+    },
+    {
+      "id": 67,
+      "source": "Example:",
+      "translation": "Exemplo:"
+    },
+    {
+      "id": 68,
+      "source": "`~/.netdiscover/fastips`",
+      "translation": "`~/.netdiscover/fastips`"
+    },
+    {
+      "id": 69,
+      "source": "List containing the last octet of the IPs to be scanned on each subnet, when using fast mode (-f), by default (1,100,154). You must put a number per line.",
+      "translation": "Lista que contém o último octeto dos IPs a varrer em cada sub-rede no modo rápido (`-f`); por padrão, (1,100,154). É necessário colocar um número por linha.\n\n> **Nota editorial:** esta parte do original informa 154, enquanto a descrição de `-f` informa 254. Os dois valores foram preservados, sem escolher silenciosamente um deles; o comportamento de varredura não foi testado."
+    },
+    {
+      "id": 70,
+      "source": "USAGE EXAMPLES",
+      "translation": "EXEMPLOS DE USO"
+    },
+    {
+      "id": 71,
+      "source": "Scan common LAN addresses on eth0:",
+      "translation": "Varre endereços LAN comuns em eth0:"
+    },
+    {
+      "id": 72,
+      "source": "Fast scan common LAN addresses on eth0 (search only for gateways):",
+      "translation": "Varredura rápida de endereços LAN comuns em eth0 (procura apenas gateways):"
+    },
+    {
+      "id": 73,
+      "source": "Scan some fixed ranges:",
+      "translation": "Varre alguns intervalos fixos:"
+    },
+    {
+      "id": 74,
+      "source": "Scan common LAN addresses with sleep time 0.5 milliseconds instead of default 1:",
+      "translation": "Varre endereços LAN comuns com espera de 0,5 milissegundo em vez do padrão 1:"
+    },
+    {
+      "id": 75,
+      "source": "Scan fixed range on fast mode with sleep time 0.5 milliseconds instead of default 1:",
+      "translation": "Varre um intervalo fixo no modo rápido com espera de 0,5 milissegundo em vez do padrão 1:"
+    },
+    {
+      "id": 76,
+      "source": "Scan a range using 101 as last octet for SOURCE IP",
+      "translation": "Varre um intervalo usando 101 como último octeto do IP de ORIGEM:"
+    },
+    {
+      "id": 77,
+      "source": "Only sniff for ARP traffic, don't send nothing:",
+      "translation": "Apenas captura tráfego ARP, sem enviar nada:"
+    },
+    {
+      "id": 78,
+      "source": "AUTHOR",
+      "translation": "AUTOR"
+    },
+    {
+      "id": 79,
+      "source": "netdiscover was written by Jaime Penalba Estebanez <jpenalbae@gmail.com>.",
+      "translation": "netdiscover foi escrito por Jaime Penalba Estebanez <jpenalbae@gmail.com>."
+    },
+    {
+      "id": 80,
+      "source": "This manual page was originally written by Nicolas Weyland, for the Debian project. This man page has been merged into netdiscover project and modified from the original by Jaime Penalba and Joao Eriberto Mota Filho.",
+      "translation": "Esta página de manual foi escrita originalmente por Nicolas Weyland para o projeto Debian. Ela foi incorporada ao projeto netdiscover e modificada a partir do original por Jaime Penalba e Joao Eriberto Mota Filho."
+    }
+  ]
+}

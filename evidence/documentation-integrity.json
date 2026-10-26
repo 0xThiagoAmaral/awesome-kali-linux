@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "tools": 29,
-  "documents": 53,
-  "code_blocks": 416,
+  "tools": 31,
+  "documents": 56,
+  "code_blocks": 432,
   "checks": [
     {
       "check": "ffuf retained source license hash",
@@ -3960,6 +3960,530 @@
     },
     {
       "check": "dnsrecon:dnsrecon.1 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover retained asset hash: COPYRIGHT.package.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover retained asset hash: originals/netdiscover.8.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover retained asset hash: PACKAGE-SNAPSHOT.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover native source snapshot, gzip, notice and version binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 exact fenced-code bodies",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "check": "netdiscover:netdiscover.8 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 27,
+        "translation": 53
+      }
+    },
+    {
+      "check": "netdiscover:netdiscover.8 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "netdiscover:netdiscover.8 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "netdiscover:netdiscover.8 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping retained source license hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping exact named license variant retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping retained asset hash: COPYRIGHT.package.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping retained asset hash: originals/fping.8.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping retained asset hash: originals/fping6.8.gz",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping retained asset hash: PACKAGE-SNAPSHOT.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping native source snapshot, gzip, notice and version binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 required source acknowledgement",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping acknowledgement in third-party record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 exact fenced-code bodies",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "check": "fping:fping.8 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 38,
+        "translation": 73
+      }
+    },
+    {
+      "check": "fping:fping.8 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping.8 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "fping:fping.8 review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 source-registry binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 prepared-source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 deterministic format conversion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 all original manual text accounted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 manual-structure manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 required source acknowledgement",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping acknowledgement in third-party record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 native provenance field source_kind",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 native provenance field package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 native provenance field binary_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 native provenance field source_package",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 native provenance field source_version",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 native provenance field source_snapshot_sha256",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 native original bound to gzip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 no fabricated commit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 document-specific license field",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 document-specific license link",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 editorial translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 editorial source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 editorial not mislabeled human-reviewed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 editorial segment file hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 recorded runtime evidence hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 runtime evidence source binding",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 runtime evidence script hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 exact fenced-code bodies",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "fping:fping6.8 inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 0,
+        "translation": 6
+      }
+    },
+    {
+      "check": "fping:fping6.8 no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fping:fping6.8 displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "fping:fping6.8 review status honest",
       "pass": true,
       "detail": null
     }

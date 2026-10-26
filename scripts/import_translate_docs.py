@@ -405,6 +405,8 @@ def main():
                     if extra:
                         compatibility_notice+='Ela lista '+extra+', ausente deste manual. '
                     compatibility_notice+='A fonte fixada foi mantida sem trocar opções silenciosamente. '+runtime.get('verification_scope_pt','')+' [Evidência e limites do teste]('+evidence_rel+').\n\n'
+                    if runtime.get('compatibility_summary_pt'):
+                        compatibility_notice='> **Compatibilidade observada:** '+runtime['installed_version']+'. '+runtime['compatibility_summary_pt']+' [Evidência e limites do teste]('+evidence_rel+').\n\n'
                     props['test_status']=runtime.get('test_status','partial-local')
                     props['tested_version']=runtime['installed_version']
                     format_info['runtime_compatibility']={'evidence':'evidence/'+runtime_path.name,'sha256':sha(runtime_path.read_bytes()),
@@ -413,6 +415,9 @@ def main():
             notice=('> Texto em português fornecido pelo próprio projeto upstream e preservado nesta importação. Links e imagens receberam adaptações para navegação local; isso não comprova revisão técnica por este repositório.\n\n' if native_portuguese else '> Tradução automática local para português, ainda sem revisão humana integral. Estrutura e blocos de código preservados; referências externas não significam conteúdo espelhado.\n\n')
             if editorial:
                 notice='> Tradução para português produzida por assistente de IA e conferida seção por seção contra a fonte. Revisão humana independente: pendente. Opções e exemplos originais foram preservados; nenhum exemplo foi executado automaticamente.\n\n'
+            acknowledgement=record.get('required_acknowledgement')
+            if acknowledgement and acknowledgement not in translated:
+                notice+='> **Reconhecimento da licença:** '+acknowledgement+'\n\n'
             notice+=compatibility_notice
             license_link=pathlib.Path(os.path.relpath(assets/doc.get('license_asset','LICENSE.txt'),note.parent)).as_posix()
             attribution='\n\n---\n\n## Procedência desta tradução\n\nFonte: ['+record['repository']+']('+doc['source_url']+'). Licença: ['+doc.get('license_spdx',record['license_spdx'])+']('+license_link+'). Commit: '+str(record.get('commit') or '')+'.\n\nO original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.\n'

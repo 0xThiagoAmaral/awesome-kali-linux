@@ -1,0 +1,16 @@
+name: Validate documentation
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  offline-structure:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout pinned source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Validate local notes and links
+        run: python3 scripts/validate_vault.py
+      - name: Validate Awesome README
+        run: python3 scripts/check_readme_contract.py README.md
+      - name: Validate imported documentation integrity
+        run: python3 scripts/validate_documentation.py

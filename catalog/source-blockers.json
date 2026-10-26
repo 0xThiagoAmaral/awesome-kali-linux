@@ -1,0 +1,10 @@
+{
+  "afflib": {
+    "error": "ValueError('Explicit documentation-compatible repository license not confirmed: sshock/AFFLIBv3 NOASSERTION')",
+    "resolution": "Confirm applicable source license or choose another official documentation source; do not silently mirror unlicensed content"
+  },
+  "aflplusplus": {
+    "error": "ValueError('Explicit documentation-compatible repository license not confirmed: AFLplusplus/AFLplusplus AGPL-3.0')",
+    "resolution": "Confirm applicable source license or choose another official documentation source; do not silently mirror unlicensed content"
+  }
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "path": "docs/Changelog.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 153445
+  },
+  {
+    "path": "docs/FAQ.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 13871
+  },
+  {
+    "path": "docs/FrameShift.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 7273
+  },
+  {
+    "path": "docs/IJON.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 14687
+  },
+  {
+    "path": "docs/INSTALL.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 8377
+  },
+  {
+    "path": "docs/README.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 2682
+  },
+  {
+    "path": "docs/SAND.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 4681
+  },
+  {
+    "path": "docs/afl-fuzz_approach.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 28948
+  },
+  {
+    "path": "docs/best_practices.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 9775
+  },
+  {
+    "path": "docs/custom_mutators.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 14870
+  },
+  {
+    "path": "docs/env_variables.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 72688
+  },
+  {
+    "path": "docs/features.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 7220
+  },
+  {
+    "path": "docs/fuzzing_binary-only_targets.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 12387
+  },
+  {
+    "path": "docs/fuzzing_in_depth.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 50706
+  },
+  {
+    "path": "docs/important_changes.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 3232
+  },
+  {
+    "path": "docs/rpc_statsd.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 5870
+  },
+  {
+    "path": "docs/third_party_tools.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 4170
+  },
+  {
+    "path": "docs/tutorials.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 4176
+  },
+  {
+    "path": "docs/value_profiling.md",
+    "status": "included",
+    "spdx": "AGPL-3.0-or-later",
+    "bytes": 13960
+  }
+]

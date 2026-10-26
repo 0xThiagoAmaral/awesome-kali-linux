@@ -1,0 +1,3119 @@
+{
+  "ffuf": {
+    "repository": "https://github.com/ffuf/ffuf",
+    "commit": "8d65e0373e5f223530174e5694285af849770078",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/ffuf/ffuf-documentacao.md",
+        "original": "sources/upstream/ffuf/README.md.source",
+        "source_sha256": "2419b892f8a77ba3c5021300dcf5c37f2587ac9b7d579303c9add707fc0b93e4",
+        "translation_sha256": "407379107522f1a78d50f95886a8eee2940a7a0ef89c7a3ea693ecb3b595df48",
+        "source_fenced_blocks": 11,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://asciinema.org/a/211350.png"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://asciinema.org/a/211360.png"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "CONTRIBUTING.md"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "gobuster": {
+    "repository": "https://github.com/OJ/gobuster",
+    "commit": "c77583fbb8824058d74d38240896eff610683c8e",
+    "license_spdx": "Apache-2.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/gobuster/gobuster-documentacao.md",
+        "original": "sources/upstream/gobuster/README.md.source",
+        "source_sha256": "9c5b67cdd42cd59eb9d4c3c0ed9c90aae05fce56803ff92d81e8fd097a6fff0d",
+        "translation_sha256": "dd20816d4961ed32cbf5c4cddb850d0c7a8a295f5e4f2a841c00e6a1a631bae3",
+        "source_fenced_blocks": 22,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://goreportcard.com/badge/github.com/OJ/gobuster/v3"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/badge/License-Apache%202.0-blue.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://opencollective.com/gobuster/backers/badge.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://opencollective.com/gobuster/sponsors/badge.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://opencollective.com/gobuster/backers/badge.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://opencollective.com/gobuster/sponsors/badge.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://opencollective.com/gobuster/backers.svg?width=890"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "subfinder": {
+    "repository": "https://github.com/projectdiscovery/subfinder",
+    "commit": "98ef8711acb91f52bc27a979e6c5320a6e1365ae",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/subfinder/subfinder-documentacao.md",
+        "original": "sources/upstream/subfinder/README.md.source",
+        "source_sha256": "38c2ad7da121806ed1594fbfb8a6f268eb213c337a90edc2c249fd6065c49fe0",
+        "translation_sha256": "b3be4f8fb8f1724454e52037cbdfe76f4b6740ce6bbe69a4f4f493f2bee8e996",
+        "source_fenced_blocks": 4,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://goreportcard.com/badge/github.com/projectdiscovery/subfinder"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/release/projectdiscovery/subfinder"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/twitter/follow/pdiscoveryio.svg?logo=twitter"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/discord/695645237418131507.svg?logo=discord"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "examples/main.go"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "assetfinder": {
+    "repository": "https://github.com/tomnomnom/assetfinder",
+    "commit": "4e95d8701aae8cff1c27af2626eb22ba110ad583",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/assetfinder/assetfinder-documentacao.md",
+        "original": "sources/upstream/assetfinder/README.md.source",
+        "source_sha256": "6a5f2f6b3beb4e8510d234392001dd8059b49dd334719203980f039a588cf063",
+        "translation_sha256": "6c6c12406c6e24d0e28c89246f3008e1150507fe71b979f87b3eadec39d22ddc",
+        "source_fenced_blocks": 2,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "feroxbuster": {
+    "repository": "https://github.com/epi052/feroxbuster",
+    "commit": "b07a7662d588bd8e4371e9be4704a02d976c89bb",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/feroxbuster/feroxbuster-documentacao.md",
+        "original": "sources/upstream/feroxbuster/README.md.source",
+        "source_sha256": "dd28579002e3cfb0753706423e15f1671cbd27f852494879efe3cc53671a5457",
+        "translation_sha256": "a2bc31a7c1dbbf521566f0e7a82606e96d4bbe42b4098be723c8e9b7c63412bd",
+        "source_fenced_blocks": 16,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "img/demo.gif"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "img/logo/default-cropped.png"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/actions/workflow/status/epi052/feroxbuster/.github/workflows/check.yml?branch=main&logo=github"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/downloads/epi052/feroxbuster/total?label=downloads&logo=github&color=inactive"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/last-commit/epi052/feroxbuster?logo=github"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/crates/v/feroxbuster?color=blue&label=version&logo=rust"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/crates/d/feroxbuster?label=downloads&logo=rust&color=inactive"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://codecov.io/gh/epi052/feroxbuster/branch/master/graph/badge.svg"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/all_contributors-31-orange.svg"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Releases-CF4F4B?style=flat-square&logo=github&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Examples-CF4F4B?style=flat-square"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Contributing-CF4F4B?style=flat-square"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Documentation-CF4F4B?style=flat-square&logo=bookstack&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Pro-CF4F4B?style=flat-square"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5235109?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/20546041?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/30773779?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/19519553?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/330292?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8016228?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/46975855?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/302127?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/9998303?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/11645898?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/16578570?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/99729?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/15611424?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/53866088?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/48113936?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1489045?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/31564517?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/7712154?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/30686803?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3851678?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/24260009?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/72578879?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45028933?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/32225186?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1208121?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6428561?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/47282747?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/36804488?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/46222314?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/34527333?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2658661?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/16690056?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1893909?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/95562424?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/21272239?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/15280042?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/12116508?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/81207744?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/44453666?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/24677271?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2078364?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3488554?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/67125885?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/76954092?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/59575870?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/93531354?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/12671?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1936757?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/111092?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/14863147?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/71529469?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/75022552?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/58670593?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6473725?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1351279?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2099767?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/33274680?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/26653157?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6284204?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/54672433?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17295243?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8413651?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1257705?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/107522312?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/14914796?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6706818?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/19836003?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/56048157?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/30024085?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6897405?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/9629314?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/67729597?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/11061864?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/35213773?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/145961515?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/73059809?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/15929497?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/115349974?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/85353?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/36310667?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/34941249?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/64508791?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/92878901?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/90011249?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/53094530?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25797286?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/56180050?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/147445097?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/123986259?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3712226?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/21209130?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/42714034?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/23642921?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17575242?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22128014?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/152078880?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/616758?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22872513?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/7385023?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/46447744?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/85586890?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/174417079?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/41958137?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/75381620?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/61412285?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/202219877?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/12570668?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/173112933?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/54741970?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/125687454?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/19826831?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/178115486?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/11917633?v=4?s=100"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/218396309?v=4?s=100"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "img/demo.gif"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "katana": {
+    "repository": "https://github.com/projectdiscovery/katana",
+    "commit": "4b41dd02a095df15ae0cd04cbb658af457d3c1ab",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/katana/katana-documentacao.md",
+        "original": "sources/upstream/katana/README.md.source",
+        "source_sha256": "7f6cf81d98053ab01a802aecb0bf3f01fca797e7b0313b82f692625959188c5b",
+        "translation_sha256": "f0ebb47b4a4fa88a880b225abb718fa3b2a571cca9564bcb8b7814995398e2e0",
+        "source_fenced_blocks": 95,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://user-images.githubusercontent.com/8293321/199371558-daba03b6-bf9c-4883-8506-76497c6c3a44.png"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://user-images.githubusercontent.com/8293321/196779266-421c79d4-643a-4f73-9b54-3da379bbac09.png"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://goreportcard.com/badge/github.com/projectdiscovery/katana"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/release/projectdiscovery/katana"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/twitter/follow/pdiscoveryio.svg?logo=twitter"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/discord/695645237418131507.svg?logo=discord"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://raw.githubusercontent.com/projectdiscovery/nuclei-burp-plugin/main/static/join-discord.png"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "naabu": {
+    "repository": "https://github.com/projectdiscovery/naabu",
+    "commit": "a4df9f40ba77bd08920bd47c2adf9f5939edcebb",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/naabu/naabu-documentacao.md",
+        "original": "sources/upstream/naabu/README.md.source",
+        "source_sha256": "f61b2cfdd205798a236715d3a20ef54ffaa2e7ac7f5880b0f9170b1bfcb62180",
+        "translation_sha256": "4cbdfc1128b90045e3269a4bdf2e6808be8dd2e7f77de8372798dcc520ca5f7a",
+        "source_fenced_blocks": 20,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/license-MIT-_red.svg"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://goreportcard.com/badge/github.com/projectdiscovery/naabu"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/github/release/projectdiscovery/naabu"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/twitter/follow/pdiscoveryio.svg?logo=twitter"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/discord/695645237418131507.svg?logo=discord"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://user-images.githubusercontent.com/8293321/180417395-25b1b990-c032-4b5c-9b66-03b58db0789a.png"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "above": {
+    "repository": "https://github.com/caster0x00/Above",
+    "commit": "313f550ebb87d815aeece6792104b8c3f2a9db8f",
+    "license_spdx": "Apache-2.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/above/above-documentacao.md",
+        "original": "sources/upstream/above/README.md.source",
+        "source_sha256": "7dec6e01263ed4064e2ba2428c1e6a011b0a17539db14b3c88da2df90d02633e",
+        "translation_sha256": "d815a7c51c01ed157d6b5515a57a9f007e4ce03adc5ba6ed7f07479961c214bc",
+        "source_fenced_blocks": 17,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "/banner/banner.png"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "/banner/banner.png"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "adaptixc2": {
+    "repository": "https://github.com/Adaptix-Framework/AdaptixC2",
+    "commit": "e99535c9ef4642190f7ea125c2983d1611f1a3f3",
+    "license_spdx": "GPL-3.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/adaptixc2/adaptixc2-documentacao.md",
+        "original": "sources/upstream/adaptixc2/README.md.source",
+        "source_sha256": "2982dc32a5c17ae2f06998614bd9bbda02d46fe1d65faad15d780b1d66c78aa1",
+        "translation_sha256": "5ab1d5f5d7f7a4bfa835f1ea671ae9951708cf8b1185bb98525fac823ee9f53f",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://adaptix-framework.gitbook.io/adaptix-framework/~gitbook/image?url=https%3A%2F%2F2104178602-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FS8p8XLFtLmf0NkofQvoa%252Fuploads%252FB6UKkj5WzVJ4Gty9dKYD%252FScreenshot_20251226_235357.png%3Falt%3Dmedia%26token%3Ddd04b937-3f02-43b2-a7bd-4dd8c876d763&width=768&dpr=4&quality=100&sign=7ee59d4&sv=2"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://adaptix-framework.gitbook.io/adaptix-framework/~gitbook/image?url=https%3A%2F%2F2104178602-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FS8p8XLFtLmf0NkofQvoa%252Fuploads%252FyRPFnlkvGJr2UEE1uzA2%252FScreenshot_20260129_233929.png%3Falt%3Dmedia%26token%3D61c90128-20f4-4756-80f4-24e7122c7c10&width=768&dpr=3&quality=100&sign=f15a166a&sv=2"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://adaptix-framework.gitbook.io/adaptix-framework/~gitbook/image?url=https%3A%2F%2F2104178602-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FS8p8XLFtLmf0NkofQvoa%252Fuploads%252FnAVr0nfGpuQkiSYSPQvU%252FScreenshot_20260129_233944.png%3Falt%3Dmedia%26token%3Dd98dfda1-1607-45ba-9a92-deb420293335&width=768&dpr=3&quality=100&sign=7c1d6ea&sv=2"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://adaptix-framework.gitbook.io/adaptix-framework/~gitbook/image?url=https%3A%2F%2F2104178602-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FS8p8XLFtLmf0NkofQvoa%252Fuploads%252Fxxn9BnUfG0byuRamOy4y%252FScreenshot_20260129_233957.png%3Falt%3Dmedia%26token%3D053c7d47-39af-433b-a2d2-87a1b8dec7bb&width=768&dpr=3&quality=100&sign=f1581010&sv=2"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "airgeddon": {
+    "repository": "https://github.com/v1s1t0r1sh3r3/airgeddon",
+    "commit": "700ad7d63df04e565bcd14d2aec6f935fcec5185",
+    "license_spdx": "GPL-3.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/airgeddon/airgeddon-documentacao.md",
+        "original": "sources/upstream/airgeddon/README.md.source",
+        "source_sha256": "c47046de73be7b4562376e5cb195ad2b08b23ba3aa758b7d2de61277f14c78f2",
+        "translation_sha256": "002b8a43d6fffafd6269a751b668c38c47fbd96a047bf5d3ec43fcf19282bfd7",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "presentation_changes": [],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "nuclei": {
+    "repository": "https://github.com/projectdiscovery/nuclei",
+    "commit": "263bc134120af1548023c23a9b55ec14f9217295",
+    "license_spdx": "MIT",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/nuclei/nuclei-documentacao.md",
+        "original": "sources/upstream/nuclei/README.md.source",
+        "source_sha256": "d9fa7d06e5c6fc9734f84521c72b1959a27b0bc39752bf1c36f4fbfb321bde07",
+        "translation_sha256": "a885210362efa7244004e0e71debe41771f644715206d034665fda96de2bb1d8",
+        "source_fenced_blocks": 8,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Documentation-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ib29rLW9wZW4iPjxwYXRoIGQ9Ik0xMiA3djE0Ii8+PHBhdGggZD0iTTMgMThhMSAxIDAgMCAxLTEtMVY0YTEgMSAwIDAgMSAxLTFoNWE0IDQgMCAwIDEgNCA0IDQgNCAwIDAgMSA0LTRoNWExIDEgMCAwIDEgMSAxdjEzYTEgMSAwIDAgMS0xIDFoLTZhMyAzIDAgMCAwLTMgMyAzIDMgMCAwIDAtMy0zeiIvPjwvc3ZnPg==&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Templates Library-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNoaWVsZCI+PHBhdGggZD0iTTIwIDEzYzAgNS0zLjUgNy41LTcuNjYgOC45NWExIDEgMCAwIDEtLjY3LS4wMUM3LjUgMjAuNSA0IDE4IDQgMTNWNmExIDEgMCAwIDEgMS0xYzIgMCA0LjUtMS4yIDYuMjQtMi43MmExLjE3IDEuMTcgMCAwIDEgMS41MiAwQzE0LjUxIDMuODEgMTcgNSAxOSA1YTEgMSAwIDAgMSAxIDF6Ii8+PC9zdmc+&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22318055?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/in/29110?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8293321?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/13421144?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/13679401?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45962551?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/819314?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65916846?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65292895?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/16835787?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/10209695?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45902122?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/90540245?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/85764322?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1111099?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3502075?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25837540?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/73166077?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/39925709?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/35542790?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/687694?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/466878?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/32599364?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45340011?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1474884?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/4451504?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/10137?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/20457968?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/985054?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17433202?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22783163?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5549643?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6784287?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/72813848?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/30642514?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25148195?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6826244?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/69216?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17107206?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/376317?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3006875?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/13842393?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22732484?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/199681?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/127235272?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/21117771?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6044920?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2551605?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/79321261?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/61242234?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/19563282?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5173352?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/97121933?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/35783570?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/7644862?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/24284231?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2536231?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/857712?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5610269?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18223385?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1825202?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/835733?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/47953210?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1148127?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/91873652?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1580956?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/77744293?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/60960197?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/67585616?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1313154?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/159776828?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2528207?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/10264710?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18695984?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/31680027?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65381620?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/157139422?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/72417455?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/29765332?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25416365?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/40228052?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/23011166?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/69640071?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/4180104?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/144735608?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/99586?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/111818823?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/4046118?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/9288082?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1785821?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/42600601?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/9978183?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1032286?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/149686094?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18207552?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/68570441?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/41125338?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/16869800?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/51520913?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2879617?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25498254?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/51889048?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45124775?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/42201667?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17912559?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/12314941?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/166296299?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18432966?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/170242051?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/110003596?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/10233873?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/35263248?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/166206050?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8717479?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8353133?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/171416994?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/124937?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2119212?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/93268441?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/14978093?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/233374?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22938931?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5116641?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22633385?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/75549184?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17150767?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5291556?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/82880?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2129762?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/36066426?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/15079567?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/14286797?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25112463?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/155628741?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/51196227?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18552197?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/98418121?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/16578570?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/7813511?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/33086594?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18194777?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5142014?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/44442082?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65838556?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65706193?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8571?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3691490?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/28601533?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3049157?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/29408109?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/42398278?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/36522826?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/19687798?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/48237511?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/44919834?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/680830?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/40246850?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45498226?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8801754?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/93918469?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5072452?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/23056537?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/162917546?v=4"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "README_PT-BR.md",
+        "note": "vault/02-Tools/nuclei/nuclei-documentacao-pt-br-oficial.md",
+        "original": "sources/upstream/nuclei/README_PT-BR.md.source",
+        "source_sha256": "8e6c3576463a43d3cc780c64d6f9e0354114ce87bf6919ec63bdd175b950c96f",
+        "translation_sha256": "40782f4045ebbba01210f16f1e1cb0a99a39b7898d8058a5ea2eca85b577c611",
+        "source_fenced_blocks": 8,
+        "code_blocks_equal": true,
+        "translation_method": "upstream-portuguese",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Documentation-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ib29rLW9wZW4iPjxwYXRoIGQ9Ik0xMiA3djE0Ii8+PHBhdGggZD0iTTMgMThhMSAxIDAgMCAxLTEtMVY0YTEgMSAwIDAgMSAxLTFoNWE0IDQgMCAwIDEgNCA0IDQgNCAwIDAgMSA0LTRoNWExIDEgMCAwIDEgMSAxdjEzYTEgMSAwIDAgMS0xIDFoLTZhMyAzIDAgMCAwLTMgMyAzIDMgMCAwIDAtMy0zeiIvPjwvc3ZnPg==&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Templates Library-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNoaWVsZCI+PHBhdGggZD0iTTIwIDEzYzAgNS0zLjUgNy41LTcuNjYgOC45NWExIDEgMCAwIDEtLjY3LS4wMUM3LjUgMjAuNSA0IDE4IDQgMTNWNmExIDEgMCAwIDEgMS0xYzIgMCA0LjUtMS4yIDYuMjQtMi43MmExLjE3IDEuMTcgMCAwIDEgMS41MiAwQzE0LjUxIDMuODEgMTcgNSAxOSA1YTEgMSAwIDAgMSAxIDF6Ii8+PC9zdmc+&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22318055?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/in/29110?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8293321?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/13421144?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/13679401?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45962551?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/819314?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65916846?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65292895?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/16835787?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/10209695?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45902122?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/90540245?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/85764322?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1111099?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3502075?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25837540?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/73166077?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/39925709?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/35542790?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/687694?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/466878?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/32599364?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45340011?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1474884?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/4451504?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/10137?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/20457968?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/985054?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17433202?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22783163?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5549643?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6784287?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/72813848?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/30642514?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25148195?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6826244?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/69216?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17107206?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/376317?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3006875?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/13842393?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22732484?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/199681?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/127235272?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/21117771?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/6044920?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2551605?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/79321261?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/61242234?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/19563282?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5173352?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/97121933?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/35783570?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/7644862?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/24284231?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2536231?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/857712?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5610269?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18223385?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1825202?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/835733?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/47953210?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1148127?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/91873652?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1580956?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/77744293?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/60960197?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/67585616?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1313154?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/159776828?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2528207?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/10264710?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18695984?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/31680027?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65381620?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/157139422?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/72417455?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/29765332?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25416365?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/40228052?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/23011166?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/69640071?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/4180104?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/144735608?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/99586?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/111818823?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/4046118?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/9288082?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1785821?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/42600601?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/9978183?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/1032286?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/149686094?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18207552?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/68570441?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/41125338?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/16869800?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/51520913?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2879617?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25498254?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/51889048?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45124775?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/42201667?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17912559?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/12314941?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/166296299?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18432966?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/170242051?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/110003596?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/10233873?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/35263248?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/166206050?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8717479?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8353133?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/171416994?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/124937?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2119212?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/93268441?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/14978093?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/233374?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22938931?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5116641?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/22633385?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/75549184?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/17150767?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5291556?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/82880?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/2129762?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/36066426?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/15079567?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/14286797?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/25112463?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/155628741?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/51196227?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18552197?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/98418121?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/16578570?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/7813511?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/33086594?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/18194777?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5142014?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/44442082?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65838556?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/65706193?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8571?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3691490?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/28601533?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/3049157?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/29408109?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/42398278?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/36522826?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/19687798?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/48237511?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/44919834?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/680830?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/40246850?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/45498226?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/8801754?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/93918469?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/5072452?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/23056537?v=4"
+          },
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://avatars.githubusercontent.com/u/162917546?v=4"
+          }
+        ],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  },
+  "aflplusplus": {
+    "repository": "https://github.com/AFLplusplus/AFLplusplus",
+    "commit": "d0070729206a80a9af297b2341edd63f68fdac35",
+    "license_spdx": "AGPL-3.0",
+    "documents": [
+      {
+        "source_path": "README.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-documentacao.md",
+        "original": "sources/upstream/aflplusplus/README.md.source",
+        "source_sha256": "1e6bc1d9e5870d70052165fe1004345c56743851ad4b930cacc44a744d884866",
+        "translation_sha256": "74f3ad3d7052aa986f0b994262513a1c1c2be286bc4129d6d3e926b21c90dd46",
+        "source_fenced_blocks": 6,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "remote-html-image-removed",
+            "url": "https://raw.githubusercontent.com/AFLplusplus/Website/main/static/aflpp_bg.svg"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://img.shields.io/badge/Ask_Zread-_.svg?style=flat&color=00b0aa&labelColor=000000&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuOTYxNTYgMS42MDAxSDIuMjQxNTZDMS44ODgxIDEuNjAwMSAxLjYwMTU2IDEuODg2NjQgMS42MDE1NiAyLjI0MDFWNC45NjAxQzEuNjAxNTYgNS4zMTM1NiAxLjg4ODEgNS42MDAxIDIuMjQxNTYgNS42MDAxSDQuOTYxNTZDNS4zMTUwMiA1LjYwMDEgNS42MDE1NiA1LjMxMzU2IDUuNjAxNTYgNC45NjAxVjIuMjQwMUM1LjYwMTU2IDEuODg2NjQgNS4zMTUwMiAxLjYwMDEgNC45NjE1NiAxLjYwMDFaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00Ljk2MTU2IDEwLjM5OTlIMi4yNDE1NkMxLjg4ODEgMTAuMzk5OSAxLjYwMTU2IDEwLjY4NjQgMS42MDE1NiAxMS4wMzk5VjEzLjc1OTlDMS42MDE1NiAxNC4xMTM0IDEuODg4MSAxNC4zOTk5IDIuMjQxNTYgMTQuMzk5OUg0Ljk2MTU2QzUuMzE1MDIgMTQuMzk5OSA1LjYwMTU2IDE0LjExMzQgNS42MDE1NiAxMy43NTk5VjExLjAzOTlDNS42MDE1NiAxMC42ODY0IDUuMzE1MDIgMTAuMzk5OSA0Ljk2MTU2IDEwLjM5OTlaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik0xMy43NTg0IDEuNjAwMUgxMS4wMzg0QzEwLjY4NSAxLjYwMDEgMTAuMzk4NCAxLjg4NjY0IDEwLjM5ODQgMi4yNDAxVjQuOTYwMUMxMC4zOTg0IDUuMzEzNTYgMTAuNjg1IDUuNjAwMSAxMS4wMzg0IDUuNjAwMUgxMy43NTg0QzE0LjExMTkgNS42MDAxIDE0LjM5ODQgNS4zMTM1NiAxNC4zOTg0IDQuOTYwMVYyLjI0MDFDMTQuMzk4NCAxLjg4NjY0IDE0LjExMTkgMS42MDAxIDEzLjc1ODQgMS42MDAxWiIgZmlsbD0iI2ZmZiIvPgo8cGF0aCBkPSJNNCAxMkwxMiA0TDQgMTJaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00IDEyTDEyIDQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K&logoColor=ffffff"
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://deepwiki.com/badge.svg"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "LICENSING.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "dictionaries/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "CONTRIBUTING.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "LICENSING.md"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/README.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-readme-md.md",
+        "original": "sources/upstream/aflplusplus/docs/README.md.source",
+        "source_sha256": "ab7474ae77f5168ff21fc851e4c14fb7c752d8baf6564212b8df065cb0af91ee",
+        "translation_sha256": "7365a6aab24e9af2479070da5a74d34df71855482e150dd53f4a9f9710acd9c8",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/0_fuzzing_process_overview.drawio.svg \"Fuzzing process overview\""
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/1_instrument_target.drawio.svg \"Instrumenting the target\""
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/2_prepare_campaign.drawio.svg \"Preparing the fuzzing campaign\""
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/3_fuzz_target.drawio.svg \"Fuzzing the target\""
+          },
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "https://raw.githubusercontent.com/AFLplusplus/AFLplusplus/dev/docs/resources/4_manage_campaign.drawio.svg \"Managing the fuzzing campaign\""
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "frida_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "unicorn_mode/README.md"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/INSTALL.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-install-md.md",
+        "original": "sources/upstream/aflplusplus/docs/INSTALL.md.source",
+        "source_sha256": "4cac783c3be5777aa10051066ad05c593a22f1db30f3439d91acb43a1123b4f9",
+        "translation_sha256": "7058c99e40bdf9abb1b76760711b908c4b0cbd7a58d47215fb072990930bbfba",
+        "source_fenced_blocks": 14,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "Dockerfile"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/FAQ.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-faq-md.md",
+        "original": "sources/upstream/aflplusplus/docs/FAQ.md.source",
+        "source_sha256": "18c61dafbfe58555c0e28cd022865534a6217805dc8fbcc1b35f71c4f8ac0c96",
+        "translation_sha256": "e254ef0dd5acc00edce11d67db07768ebe60a7a72fe5648197bebc126d3dec26",
+        "source_fenced_blocks": 9,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/features.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-features-md.md",
+        "original": "sources/upstream/aflplusplus/docs/features.md.source",
+        "source_sha256": "782c30afb7b85e7a3ad9b51e3ef277bc2202b7d268d1570243d1377e2d3b8ae0",
+        "translation_sha256": "fce0bf8f2a303591ed099f5c875340f4aa4b4e0a2c30875e1341b6fe38af4506",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.laf-intel.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.cmplog.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.instrument_list.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.lto.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.lto.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "nyx_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/FrameShift.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-frameshift-md.md",
+        "original": "sources/upstream/aflplusplus/docs/FrameShift.md.source",
+        "source_sha256": "3da15c4dc3621b7c3843cc6b7880d9db7ffec7860444d0c5a0cfd60fc482fdab",
+        "translation_sha256": "5212f3a406263b8ced052eb13d16a6d3337f8b45b7e174932614fab57c37154b",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/IJON.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-ijon-md.md",
+        "original": "sources/upstream/aflplusplus/docs/IJON.md.source",
+        "source_sha256": "7f7fa00f996c32b0e3be6bdeb7d5a4506aac29fe334201e0bd4bd13aa1c3ab3e",
+        "translation_sha256": "189a933bc23b6ddfbc28cf4ba2f44285427da80433a3beabf6643b95740d4d2b",
+        "source_fenced_blocks": 13,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "qemu_mode/README.md"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/SAND.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-sand-md.md",
+        "original": "sources/upstream/aflplusplus/docs/SAND.md.source",
+        "source_sha256": "160b79c13dc735589666c56ecaae0a538e399d12a03b2c34d22fbcb99a107f52",
+        "translation_sha256": "64e4cbe83495f282166a6a540a124f5df240fc81e86fec65e59a014f57f9f611",
+        "source_fenced_blocks": 3,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "test-instr.c"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/afl-fuzz_approach.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-afl-fuzz-approach-md.md",
+        "original": "sources/upstream/aflplusplus/docs/afl-fuzz_approach.md.source",
+        "source_sha256": "ae8fd56c1e27c993be8ff88e412871e6881e91709bc64f8f19097fe81028eb10",
+        "translation_sha256": "eb847e4d63c2375118b18accdfa0c6a9744f5112bffb04108bad966e44e65b1e",
+        "source_fenced_blocks": 11,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/best_practices.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-best-practices-md.md",
+        "original": "sources/upstream/aflplusplus/docs/best_practices.md.source",
+        "source_sha256": "0697a453310aeb9b7c47179a437d3dd333bc035453486cb79165c10a8db9f8b5",
+        "translation_sha256": "baa7f9c0ec85735d605351948fb657c2e4d457748ae8eca0f6cc7bef80321513",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "custom_mutators/guifuzz/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "utils/socket_fuzzing"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.instrument_list.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.instrument_list.md"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/custom_mutators.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-custom-mutators-md.md",
+        "original": "sources/upstream/aflplusplus/docs/custom_mutators.md.source",
+        "source_sha256": "85ac8b5f64f0e584cb348326d1b2d0b21cdd2cd4f384bb7c1f72fdac4cd4cc06",
+        "translation_sha256": "4b97ab172cdf75417c0032cdc2abffe6f1020ecd9733ae3113d355a13dac1ef3",
+        "source_fenced_blocks": 7,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "custom_mutators/examples/custom_send.c"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "custom_mutators/examples/example.c"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "custom_mutators/examples/example.py"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/env_variables.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-env-variables-md.md",
+        "original": "sources/upstream/aflplusplus/docs/env_variables.md.source",
+        "source_sha256": "349eff538b1b7b515c726f2e418680911acbb2b8c04b48f3bc8a3d0d60153c47",
+        "translation_sha256": "88b60a2689b188710f8d28505c8e459cb57f679a7f74016277a2586f076e2cb5",
+        "source_fenced_blocks": 5,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.cmplog.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.lto.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.instrument_list.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.laf-intel.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.lto.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.lto.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.instrument_list.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "qemu_mode/libcompcov/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "qemu_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "qemu_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "frida_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "frida_mode/Scripting.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "frida_mode/Scripting.md"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/fuzzing_binary-only_targets.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-fuzzing-binary-only-targets-md.md",
+        "original": "sources/upstream/aflplusplus/docs/fuzzing_binary-only_targets.md.source",
+        "source_sha256": "b3517d0e5191dd5facd31ec53ae4a0968805353365a69046b79308055cebf428",
+        "translation_sha256": "31bde2975e988254745bb3249f1c2ed7939653466a107bf8885c4f62ce8bb8df",
+        "source_fenced_blocks": 3,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "qemu_mode/README.persistent.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "qemu_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "qemu_mode/README.persistent.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "qemu_mode/README.wine.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "frida_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "nyx_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "unicorn_mode/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "utils/afl_untracer/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "coresight_mode/README.md"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/fuzzing_in_depth.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-fuzzing-in-depth-md.md",
+        "original": "sources/upstream/aflplusplus/docs/fuzzing_in_depth.md.source",
+        "source_sha256": "52dc5a3ae5119d7b8584c2bf0bfb0504e2a41129d6b30b0020e42bb54a1459c1",
+        "translation_sha256": "c9020d272b8469615dcb49de793999b3ceb93ec59b65d7d236c3c78e14d3e6e8",
+        "source_fenced_blocks": 25,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "resources/screenshot.png"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.lto.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.gcc_plugin.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.laf-intel.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.cmplog.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.instrument_list.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.llvm.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.lto.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.lto.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "utils/aflpp_driver/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "testcases"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "dictionaries"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "utils/libtokencap/README.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs/resources/screenshot.png"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "utils/distributed_fuzzing"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "utils/libaflppdesock"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "instrumentation/README.persistent_mode.md"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/important_changes.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-important-changes-md.md",
+        "original": "sources/upstream/aflplusplus/docs/important_changes.md.source",
+        "source_sha256": "4293f8c719197eb8c9d574bf4c3f481b559531cac6826620d7750e2158b78f2e",
+        "translation_sha256": "8b4b84dbcc99100e91b47f52a3f058a20a1954a91f23b9578d7a1556d35f48c1",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/rpc_statsd.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-rpc-statsd-md.md",
+        "original": "sources/upstream/aflplusplus/docs/rpc_statsd.md.source",
+        "source_sha256": "2728f461a25974b04ee1840ebb646575132184fcf6f43926554c22079aec8738",
+        "translation_sha256": "c8208f729b366cf451aeacbbda840fa57de2e3e047957cbfae2778eb25ba755b",
+        "source_fenced_blocks": 5,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [
+          {
+            "kind": "remote-image-to-reference-link",
+            "url": "resources/statsd-grafana.png"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs/resources/statsd-grafana.png"
+          },
+          {
+            "kind": "unacquired-relative-reference-pinned-online",
+            "source_path": "docs/resources/grafana-afl++.json"
+          }
+        ],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/third_party_tools.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-third-party-tools-md.md",
+        "original": "sources/upstream/aflplusplus/docs/third_party_tools.md.source",
+        "source_sha256": "990a648dae247ecf5ae9e8f9af30062ce8257e994330222d7bf0a9c0e958e41b",
+        "translation_sha256": "904c5da12765d8204f84b13d6592dd1ec4822ad09c6c22070853da128425b260",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/tutorials.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-tutorials-md.md",
+        "original": "sources/upstream/aflplusplus/docs/tutorials.md.source",
+        "source_sha256": "6fed8eb785b45b37bf433fee65c39261465be61a9417632098a672abbb2da972",
+        "translation_sha256": "b190f99de8b0013025b44091475b7204ab42138c6303a9dc109efbadbfe1a3cc",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/value_profiling.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-value-profiling-md.md",
+        "original": "sources/upstream/aflplusplus/docs/value_profiling.md.source",
+        "source_sha256": "d202c8c5edb2488da7dd8db6b2c97403d8535a04d70f2a0690c09f9ca2f0291b",
+        "translation_sha256": "c1c4875d82bdde2baeba1112b3d40e2cacfc9548f981086757a4037d10f27e08",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [],
+        "human_review": "pending"
+      },
+      {
+        "source_path": "docs/Changelog.md",
+        "note": "vault/02-Tools/aflplusplus/aflplusplus-docs-changelog-md.md",
+        "original": "sources/upstream/aflplusplus/docs/Changelog.md.source",
+        "source_sha256": "2b8190c09159c7fefb1ae01c0fa525343fc27e588b104dd08dfe9638058a42fc",
+        "translation_sha256": "892abdc2520175f6c24d0974b8c8ae3a916d41b9d53f42f27d71332833f86e55",
+        "source_fenced_blocks": 0,
+        "code_blocks_equal": true,
+        "translation_method": "machine-local",
+        "pipeline_version": "0.3-source-language-and-literal-integrity",
+        "presentation_changes": [],
+        "human_review": "pending"
+      }
+    ],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_official_page_complete": false,
+    "translation_complete_for_acquired_documents": true,
+    "human_review_complete": false,
+    "model": {
+      "engine": "Argos EN-PT model through CTranslate2",
+      "model_sha256": "0c5350a2fa5b923de1346edc0d42e08e38bab2e33cede3a0b9a48eb4281ad8a9",
+      "model_source": "https://argos-net.com/v1/translate-en_pt-1_9.argosmodel",
+      "packages": {
+        "ctranslate2": "4.8.4",
+        "sentencepiece": "0.2.1"
+      },
+      "paid_api_used": false,
+      "inference_network_requests": 0,
+      "review_status": "machine-translation-not-human-reviewed",
+      "editorial_adjustments": [
+        "SentencePiece whitespace decoded as in Argos tokenizer",
+        "Limited PT-BR terminology glossary; commands and URLs protected"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2695 @@
+[
+  {
+    "id": "7zip",
+    "kind": "package-candidate",
+    "version": "26.01+dfsg-2",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "aircrack-ng",
+    "kind": "package-candidate",
+    "version": "1:1.7+git20230807.4bf83f1a-3",
+    "categories": [
+      "kali-tools-802-11",
+      "kali-tools-top10",
+      "kali-wifi-credential-access"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "amass",
+    "kind": "package-candidate",
+    "version": "5.1.1-0kali1",
+    "categories": [
+      "kali-discovery",
+      "kali-identify",
+      "kali-network-information",
+      "kali-network-service-discovery",
+      "kali-tools-identify"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "apache2",
+    "kind": "package-candidate",
+    "version": "2.4.68-1",
+    "categories": [
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "arping",
+    "kind": "package-candidate",
+    "version": "2.28-1",
+    "categories": [
+      "kali-discovery",
+      "kali-remote-system-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "binwalk",
+    "kind": "package-candidate",
+    "version": "2.4.3+dfsg1-2",
+    "categories": [
+      "kali-forensics",
+      "kali-tools-forensics",
+      "kali-tools-hardware"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "binwalk3",
+    "kind": "package-candidate",
+    "version": "3.1.0-0kali4",
+    "categories": [
+      "kali-forensics",
+      "kali-tools-forensics",
+      "kali-tools-hardware"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "bloodhound.py",
+    "kind": "package-candidate",
+    "version": "1.9.0-0kali1",
+    "categories": [
+      "kali-active-directory"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "bluez",
+    "kind": "package-candidate",
+    "version": "5.85-4",
+    "categories": [
+      "kali-tools-bluetooth"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "bulk-extractor",
+    "kind": "package-candidate",
+    "version": "2.1.1+git20260109.898db1-0kali2",
+    "categories": [
+      "kali-forensics",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "bully",
+    "kind": "package-candidate",
+    "version": "1.4.00-2+b1",
+    "categories": [
+      "kali-tools-802-11",
+      "kali-wifi-credential-access"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "burpsuite",
+    "kind": "package-candidate",
+    "version": "2026.8-0kali1",
+    "categories": [
+      "kali-reconnaissance",
+      "kali-tools-top10",
+      "kali-tools-web",
+      "kali-web-vulnerability-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cadaver",
+    "kind": "package-candidate",
+    "version": "0.28+dfsg-2",
+    "categories": [
+      "kali-application-layer-protocol",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cewl",
+    "kind": "package-candidate",
+    "version": "6.2.1-1",
+    "categories": [
+      "kali-credential-access",
+      "kali-password-profiling-wordlists",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "chntpw",
+    "kind": "package-candidate",
+    "version": "140201-1.3",
+    "categories": [
+      "kali-os-credential-dumping",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "clang",
+    "kind": "package-candidate",
+    "version": "1:21.1.6-71+b1",
+    "categories": [
+      "kali-resource-development",
+      "kali-tools-reverse-engineering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "commix",
+    "kind": "package-candidate",
+    "version": "4.1-0kali1",
+    "categories": [
+      "kali-initial-access",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "crackmapexec",
+    "kind": "package-candidate",
+    "version": "5.4.0-0kali7",
+    "categories": [
+      "kali-application-layer-protocol",
+      "kali-brute-force",
+      "kali-lateral-movement",
+      "kali-network-share-discovery",
+      "kali-pass-the-hash"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "creddump7",
+    "kind": "package-candidate",
+    "version": "0.1+git20190429-1.1",
+    "categories": [
+      "kali-os-credential-dumping",
+      "kali-tools-forensics",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "crunch",
+    "kind": "package-candidate",
+    "version": "3.6-3.1",
+    "categories": [
+      "kali-credential-access",
+      "kali-password-profiling-wordlists",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cryptsetup",
+    "kind": "package-candidate",
+    "version": "2:2.8.6-2",
+    "categories": [
+      "kali-tools-protect"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cryptsetup-bin",
+    "kind": "package-candidate",
+    "version": "2:2.8.6-2",
+    "categories": [
+      "kali-protect"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cryptsetup-initramfs",
+    "kind": "package-candidate",
+    "version": "2:2.8.6-2",
+    "categories": [
+      "kali-tools-protect"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cryptsetup-nuke-password",
+    "kind": "package-candidate",
+    "version": "9",
+    "categories": [
+      "kali-tools-protect"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "davtest",
+    "kind": "package-candidate",
+    "version": "1.2+git20230307.34d31db-0kali1",
+    "categories": [
+      "kali-tools-web",
+      "kali-web-vulnerability-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "dbd",
+    "kind": "package-candidate",
+    "version": "1.50-1kali7",
+    "categories": [
+      "kali-non-application-layer-protocol",
+      "kali-tools-post-exploitation",
+      "kali-tools-windows-resources"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "default-mysql-server",
+    "kind": "package-candidate",
+    "version": "1.1.1",
+    "categories": [
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "dirb",
+    "kind": "package-candidate",
+    "version": "2.22+dfsg-7",
+    "categories": [
+      "kali-reconnaissance",
+      "kali-tools-web",
+      "kali-web-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "dmitry",
+    "kind": "package-candidate",
+    "version": "1.3a-8",
+    "categories": [
+      "kali-network-information",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "dns2tcp",
+    "kind": "package-candidate",
+    "version": "0.5.2-4",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-post-exploitation"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "dnschef",
+    "kind": "package-candidate",
+    "version": "0.4+git20190327-0kali4",
+    "categories": [
+      "kali-network-sniffing",
+      "kali-tools-sniffing-spoofing",
+      "kali-tools-windows-resources"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "dnsenum",
+    "kind": "package-candidate",
+    "version": "1.3.2-1",
+    "categories": [
+      "kali-network-information-dns",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "dnsrecon",
+    "kind": "package-candidate",
+    "version": "1.3.1-3",
+    "categories": [
+      "kali-network-information-dns",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "dsniff",
+    "kind": "package-candidate",
+    "version": "2.5a2-1",
+    "categories": [
+      "kali-network-sniffing",
+      "kali-tools-sniffing-spoofing"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "enum4linux",
+    "kind": "package-candidate",
+    "version": "0.9.1-0kali2",
+    "categories": [
+      "kali-discovery",
+      "kali-network-share-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ettercap-graphical",
+    "kind": "package-candidate",
+    "version": "1:0.8.4.1-2",
+    "categories": [
+      "kali-collection",
+      "kali-tools-sniffing-spoofing"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "evil-winrm",
+    "kind": "package-candidate",
+    "version": "3.9-0kali2",
+    "categories": [
+      "kali-application-layer-protocol",
+      "kali-lateral-movement",
+      "kali-pass-the-hash"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "exe2hexbat",
+    "kind": "package-candidate",
+    "version": "1.5.1-0kali2",
+    "categories": [
+      "kali-defense-evasion",
+      "kali-tools-post-exploitation"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "exiv2",
+    "kind": "package-candidate",
+    "version": "0.28.8+dfsg-1",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "exploitdb",
+    "kind": "package-candidate",
+    "version": "20260602-0kali1",
+    "categories": [
+      "kali-identify",
+      "kali-resource-development",
+      "kali-tools-exploitation",
+      "kali-tools-identify"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "exploitdb-papers",
+    "kind": "package-candidate",
+    "version": "20221122-0kali1",
+    "categories": [
+      "kali-identify",
+      "kali-resource-development"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "eyewitness",
+    "kind": "package-candidate",
+    "version": "20230525.1+git20230720-0kali4",
+    "categories": [
+      "kali-reporting-tools",
+      "kali-tools-reporting",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "feroxbuster",
+    "kind": "package-candidate",
+    "version": "2.13.1-0kali3",
+    "categories": [
+      "kali-web-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ffuf",
+    "kind": "package-candidate",
+    "version": "2.1.0-1+b11",
+    "categories": [
+      "kali-reconnaissance",
+      "kali-web-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "pilot"
+  },
+  {
+    "id": "fierce",
+    "kind": "package-candidate",
+    "version": "1.6.0-2",
+    "categories": [
+      "kali-discovery",
+      "kali-remote-system-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "flashrom",
+    "kind": "package-candidate",
+    "version": "1.6.0-3",
+    "categories": [
+      "kali-tools-hardware"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "fping",
+    "kind": "package-candidate",
+    "version": "5.1-1",
+    "categories": [
+      "kali-remote-system-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "freerdp-x11",
+    "kind": "package-candidate",
+    "version": "3.26.0+dfsg-1",
+    "categories": [
+      "kali-application-layer-protocol",
+      "kali-lateral-movement",
+      "kali-pass-the-hash"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "freerdp3-x11",
+    "kind": "package-candidate",
+    "version": "3.26.0+dfsg-1",
+    "categories": [
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "gdb",
+    "kind": "package-candidate",
+    "version": "17.2-1",
+    "categories": [
+      "kali-resource-development",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ghidra",
+    "kind": "package-candidate",
+    "version": "12.1.1+ds-0kali1",
+    "categories": [
+      "kali-resource-development",
+      "kali-respond",
+      "kali-tools-respond"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "gobuster",
+    "kind": "package-candidate",
+    "version": "3.8.2-1",
+    "categories": [
+      "kali-reconnaissance",
+      "kali-web-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "gpp-decrypt",
+    "kind": "package-candidate",
+    "version": "0.1-1kali3",
+    "categories": [
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hash-identifier",
+    "kind": "package-candidate",
+    "version": "1.2+git20180314-0kali3",
+    "categories": [
+      "kali-hash-identification",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hashcat",
+    "kind": "package-candidate",
+    "version": "7.1.2+ds1-4",
+    "categories": [
+      "kali-credential-access",
+      "kali-password-cracking",
+      "kali-tools-802-11",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hashcat-utils",
+    "kind": "package-candidate",
+    "version": "1.10-0kali2",
+    "categories": [
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hashdeep",
+    "kind": "package-candidate",
+    "version": "4.4+git20170824+ds-1",
+    "categories": [
+      "kali-forensics",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hashid",
+    "kind": "package-candidate",
+    "version": "3.1.4-5",
+    "categories": [
+      "kali-hash-identification",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hping3",
+    "kind": "package-candidate",
+    "version": "3.a2.ds2-11~kali1",
+    "categories": [
+      "kali-discovery",
+      "kali-remote-system-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hydra",
+    "kind": "package-candidate",
+    "version": "9.7-1",
+    "categories": [
+      "kali-brute-force",
+      "kali-credential-access",
+      "kali-tools-passwords",
+      "kali-tools-top10",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hyperion",
+    "kind": "package-candidate",
+    "version": "2.0-0kali4",
+    "categories": [
+      "kali-tools-windows-resources"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ike-scan",
+    "kind": "package-candidate",
+    "version": "1.9.5-2",
+    "categories": [
+      "kali-network-service-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "impacket-scripts",
+    "kind": "package-candidate",
+    "version": "1.10",
+    "categories": [
+      "kali-application-layer-protocol",
+      "kali-pass-the-hash",
+      "kali-respond",
+      "kali-tools-respond"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "inetsim",
+    "kind": "package-candidate",
+    "version": "1.3.2+dfsg.1-6",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "iodine",
+    "kind": "package-candidate",
+    "version": "0.7.0-13",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-post-exploitation"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "iw",
+    "kind": "package-candidate",
+    "version": "6.17-1",
+    "categories": [
+      "kali-tools-802-11"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "john",
+    "kind": "package-candidate",
+    "version": "1.9.0-Jumbo-1+git20211102-0kali10",
+    "categories": [
+      "kali-credential-access",
+      "kali-password-cracking",
+      "kali-tools-passwords",
+      "kali-tools-top10"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "kismet",
+    "kind": "package-candidate",
+    "version": "2025.09.R1-0kali3",
+    "categories": [
+      "kali-tools-802-11"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "kismet-core",
+    "kind": "package-candidate",
+    "version": "2025.09.R1-0kali3",
+    "categories": [
+      "kali-wifi"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "laudanum",
+    "kind": "package-candidate",
+    "version": "1.0+r36-0kali6",
+    "categories": [
+      "kali-persistence",
+      "kali-tools-post-exploitation",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "lbd",
+    "kind": "package-candidate",
+    "version": "0.4-1kali3",
+    "categories": [
+      "kali-tools-information-gathering",
+      "kali-tools-web",
+      "kali-web-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "macchanger",
+    "kind": "package-candidate",
+    "version": "1.7.0-6",
+    "categories": [
+      "kali-defense-evasion",
+      "kali-tools-802-11",
+      "kali-tools-sniffing-spoofing"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "magicrescue",
+    "kind": "package-candidate",
+    "version": "1.1.10+dfsg-3",
+    "categories": [
+      "kali-forensic-carving-tools",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "mariadb-client-core",
+    "kind": "package-candidate",
+    "version": "1:11.8.6-6",
+    "categories": [
+      "kali-databases"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "maskprocessor",
+    "kind": "package-candidate",
+    "version": "0.73+git20170609.1708898-4",
+    "categories": [
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "masscan",
+    "kind": "package-candidate",
+    "version": "2:1.3.2+ds1-2",
+    "categories": [
+      "kali-discovery",
+      "kali-network-service-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "medusa",
+    "kind": "package-candidate",
+    "version": "2.3-3",
+    "categories": [
+      "kali-brute-force",
+      "kali-credential-access",
+      "kali-tools-passwords",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "metasploit-framework",
+    "kind": "package-candidate",
+    "version": "6.4.135-0kali1",
+    "categories": [
+      "kali-command-and-control",
+      "kali-defense-evasion",
+      "kali-execution",
+      "kali-initial-access",
+      "kali-privilege-escalation",
+      "kali-resource-development",
+      "kali-tools-exploitation",
+      "kali-tools-reverse-engineering",
+      "kali-tools-top10"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "mimikatz",
+    "kind": "package-candidate",
+    "version": "2.2.0-git20220919-0kali1",
+    "categories": [
+      "kali-os-credential-dumping",
+      "kali-pass-the-hash",
+      "kali-tools-passwords",
+      "kali-tools-post-exploitation",
+      "kali-tools-windows-resources"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "minicom",
+    "kind": "package-candidate",
+    "version": "2.11.1-1",
+    "categories": [
+      "kali-application-layer-protocol",
+      "kali-tools-hardware"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "miredo",
+    "kind": "package-candidate",
+    "version": "1.2.6-7.2",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-post-exploitation"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "mitmproxy",
+    "kind": "package-candidate",
+    "version": "12.2.3-0kali2",
+    "categories": [
+      "kali-collection",
+      "kali-tools-sniffing-spoofing",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "msfpc",
+    "kind": "package-candidate",
+    "version": "1.4.5-0kali3",
+    "categories": [
+      "kali-resource-development",
+      "kali-tools-exploitation",
+      "kali-tools-social-engineering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "nasm",
+    "kind": "package-candidate",
+    "version": "3.01-1",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "nbtscan",
+    "kind": "package-candidate",
+    "version": "1.7.2-3",
+    "categories": [
+      "kali-network-share-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ncrack",
+    "kind": "package-candidate",
+    "version": "0.7+debian-6",
+    "categories": [
+      "kali-brute-force",
+      "kali-credential-access",
+      "kali-tools-passwords",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "netcat-traditional",
+    "kind": "package-candidate",
+    "version": "1.10-50.1",
+    "categories": [
+      "kali-exfiltration",
+      "kali-non-application-layer-protocol"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "netdiscover",
+    "kind": "package-candidate",
+    "version": "0.21-1",
+    "categories": [
+      "kali-discovery",
+      "kali-system-network-configuration-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "netexec",
+    "kind": "package-candidate",
+    "version": "1.5.1-0kali2",
+    "categories": [
+      "kali-application-layer-protocol",
+      "kali-brute-force",
+      "kali-credential-access",
+      "kali-lateral-movement",
+      "kali-network-share-discovery",
+      "kali-pass-the-hash",
+      "kali-tools-top10"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "netmask",
+    "kind": "package-candidate",
+    "version": "2.5.0-1",
+    "categories": [
+      "kali-system-network-configuration-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "netsniff-ng",
+    "kind": "package-candidate",
+    "version": "0.6.9-2+b1",
+    "categories": [
+      "kali-network-sniffing",
+      "kali-respond",
+      "kali-tools-respond",
+      "kali-tools-sniffing-spoofing"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "nikto",
+    "kind": "package-candidate",
+    "version": "1:2.6.0-0kali4",
+    "categories": [
+      "kali-tools-vulnerability",
+      "kali-tools-web",
+      "kali-web-vulnerability-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "nmap",
+    "kind": "package-candidate",
+    "version": "7.99+dfsg-1kali1",
+    "categories": [
+      "kali-discovery",
+      "kali-network-information",
+      "kali-network-service-discovery",
+      "kali-reconnaissance",
+      "kali-tools-information-gathering",
+      "kali-tools-top10",
+      "kali-tools-voip",
+      "kali-tools-vulnerability",
+      "kali-tools-web",
+      "kali-vulnerability-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "pilot"
+  },
+  {
+    "id": "onesixtyone",
+    "kind": "package-candidate",
+    "version": "0.3.4-1",
+    "categories": [
+      "kali-snmp",
+      "kali-tools-information-gathering",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "parted",
+    "kind": "package-candidate",
+    "version": "3.7-1",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "passing-the-hash",
+    "kind": "package-candidate",
+    "version": "0~2015.12.37+b1",
+    "categories": [
+      "kali-pass-the-hash",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "patator",
+    "kind": "package-candidate",
+    "version": "1.1.0-1",
+    "categories": [
+      "kali-brute-force",
+      "kali-tools-passwords",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pdf-parser",
+    "kind": "package-candidate",
+    "version": "0.7.14-0kali1",
+    "categories": [
+      "kali-pdf-forensics-tools",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pdfid",
+    "kind": "package-candidate",
+    "version": "0.2.10-0kali1",
+    "categories": [
+      "kali-pdf-forensics-tools",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "peass",
+    "kind": "package-candidate",
+    "version": "20260601.a39c90f1-0kali1",
+    "categories": [
+      "kali-privilege-escalation",
+      "kali-tools-vulnerability"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "php",
+    "kind": "package-candidate",
+    "version": "2:8.4+99",
+    "categories": [
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "php-mysql",
+    "kind": "package-candidate",
+    "version": "2:8.4+99",
+    "categories": [
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pipal",
+    "kind": "package-candidate",
+    "version": "3.4.0-0kali1",
+    "categories": [
+      "kali-reporting-tools",
+      "kali-tools-passwords",
+      "kali-tools-reporting"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pixiewps",
+    "kind": "package-candidate",
+    "version": "1.4.2-5",
+    "categories": [
+      "kali-tools-802-11",
+      "kali-wifi-credential-access"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "polenum",
+    "kind": "package-candidate",
+    "version": "1.7-1",
+    "categories": [
+      "kali-tools-forensics",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "powershell",
+    "kind": "package-candidate",
+    "version": "7.6.2-1.deb",
+    "categories": [
+      "kali-services-and-other-tools"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "powershell-empire",
+    "kind": "package-candidate",
+    "version": "6.5.0-0kali4",
+    "categories": [
+      "kali-command-and-control",
+      "kali-system-services"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "powersploit",
+    "kind": "package-candidate",
+    "version": "3.0.0+git20200817.d943001-0kali1",
+    "categories": [
+      "kali-execution",
+      "kali-tools-post-exploitation"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "proxychains4",
+    "kind": "package-candidate",
+    "version": "4.17-3.1",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-post-exploitation",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "proxytunnel",
+    "kind": "package-candidate",
+    "version": "1.13.0-1",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-post-exploitation",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ptunnel",
+    "kind": "package-candidate",
+    "version": "0.72-4",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-post-exploitation"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pwnat",
+    "kind": "package-candidate",
+    "version": "0.3.0-0kali2",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-post-exploitation"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pyinstaller",
+    "kind": "package-candidate",
+    "version": "6.18.0+ds-3",
+    "categories": [
+      "kali-resource-development"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "python3-capstone",
+    "kind": "package-candidate",
+    "version": "5.0.7-2",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "python3-impacket",
+    "kind": "package-candidate",
+    "version": "0.13.0+git20251120-9c2d8b6-0kali1",
+    "categories": [
+      "kali-databases",
+      "kali-exfiltration",
+      "kali-lateral-movement"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "python3-scapy",
+    "kind": "package-candidate",
+    "version": "2.7.0+dfsg1-1",
+    "categories": [
+      "kali-impact",
+      "kali-network-sniffing"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "qemu-user",
+    "kind": "package-candidate",
+    "version": "1:10.2.2+ds-1",
+    "categories": [
+      "kali-tools-hardware"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "qsslcaudit",
+    "kind": "package-candidate",
+    "version": "0.8.3-0kali2",
+    "categories": [
+      "kali-tools-information-gathering",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "radare2",
+    "kind": "package-candidate",
+    "version": "6.0.4+dfsg-1",
+    "categories": [
+      "kali-resource-development",
+      "kali-tools-forensics",
+      "kali-tools-hardware",
+      "kali-tools-reverse-engineering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "reaver",
+    "kind": "package-candidate",
+    "version": "1.6.6-2+b1",
+    "categories": [
+      "kali-tools-802-11",
+      "kali-wifi",
+      "kali-wifi-credential-access"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rebind",
+    "kind": "package-candidate",
+    "version": "0.3.4-1kali10",
+    "categories": [
+      "kali-initial-access",
+      "kali-tools-sniffing-spoofing"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "recon-ng",
+    "kind": "package-candidate",
+    "version": "5.1.2-2",
+    "categories": [
+      "kali-reconnaissance",
+      "kali-tools-information-gathering",
+      "kali-web-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "redsocks",
+    "kind": "package-candidate",
+    "version": "0.5-2+b5",
+    "categories": [
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "responder",
+    "kind": "package-candidate",
+    "version": "3.2.2.0-0kali1",
+    "categories": [
+      "kali-credential-access",
+      "kali-tools-sniffing-spoofing",
+      "kali-tools-top10"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rfkill",
+    "kind": "package-candidate",
+    "version": "2.42.1-3",
+    "categories": [
+      "kali-tools-wireless"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rsmangler",
+    "kind": "package-candidate",
+    "version": "1.5-0kali3",
+    "categories": [
+      "kali-password-profiling-wordlists",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "sakis3g",
+    "kind": "package-candidate",
+    "version": "0.2.0e+git20150717-0kali2",
+    "categories": [
+      "kali-tools-wireless"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "samdump2",
+    "kind": "package-candidate",
+    "version": "3.0.0-8",
+    "categories": [
+      "kali-os-credential-dumping",
+      "kali-tools-forensics",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "sbd",
+    "kind": "package-candidate",
+    "version": "1.37-1kali6",
+    "categories": [
+      "kali-non-application-layer-protocol",
+      "kali-tools-post-exploitation",
+      "kali-tools-windows-resources"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "scalpel",
+    "kind": "package-candidate",
+    "version": "1.60+git20240110.6960eb2-2",
+    "categories": [
+      "kali-forensic-carving-tools",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "scrounge-ntfs",
+    "kind": "package-candidate",
+    "version": "0.9-11",
+    "categories": [
+      "kali-forensic-carving-tools",
+      "kali-recover",
+      "kali-tools-forensics",
+      "kali-tools-recover"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "seclists",
+    "kind": "package-candidate",
+    "version": "2025.3-0kali1",
+    "categories": [
+      "kali-password-profiling-wordlists",
+      "kali-persistence",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "set",
+    "kind": "package-candidate",
+    "version": "8.0.3+git20241021-0kali1",
+    "categories": [
+      "kali-initial-access",
+      "kali-tools-exploitation",
+      "kali-tools-social-engineering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "skipfish",
+    "kind": "package-candidate",
+    "version": "2.10b-2kali8",
+    "categories": [
+      "kali-tools-web",
+      "kali-web-vulnerability-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "sleuthkit",
+    "kind": "package-candidate",
+    "version": "4.14.0+dfsg-0kali1",
+    "categories": [
+      "kali-respond",
+      "kali-sleuth-kit-suite",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "smbclient",
+    "kind": "package-candidate",
+    "version": "2:4.24.3+dfsg-1",
+    "categories": [
+      "kali-application-layer-protocol",
+      "kali-network-share-discovery"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "smbmap",
+    "kind": "package-candidate",
+    "version": "1.10.7-1",
+    "categories": [
+      "kali-network-share-discovery",
+      "kali-pass-the-hash",
+      "kali-tools-information-gathering",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "snmpcheck",
+    "kind": "package-candidate",
+    "version": "1.9-0kali2",
+    "categories": [
+      "kali-snmp",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "socat",
+    "kind": "package-candidate",
+    "version": "1.8.1.1-2",
+    "categories": [
+      "kali-non-application-layer-protocol"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "spiderfoot",
+    "kind": "package-candidate",
+    "version": "4.0-0kali5",
+    "categories": [
+      "kali-host-information",
+      "kali-identify",
+      "kali-tools-identify"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "spike",
+    "kind": "package-candidate",
+    "version": "2.9-1kali11",
+    "categories": [
+      "kali-resource-development",
+      "kali-tools-fuzzing",
+      "kali-tools-vulnerability"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "spooftooph",
+    "kind": "package-candidate",
+    "version": "0.5.2-1kali4",
+    "categories": [
+      "kali-bluetooth",
+      "kali-tools-bluetooth"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "sqlmap",
+    "kind": "package-candidate",
+    "version": "1.10.6-1",
+    "categories": [
+      "kali-initial-access",
+      "kali-tools-database",
+      "kali-tools-exploitation",
+      "kali-tools-top10",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ssldump",
+    "kind": "package-candidate",
+    "version": "1.9-2",
+    "categories": [
+      "kali-collection",
+      "kali-tools-information-gathering",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "sslh",
+    "kind": "package-candidate",
+    "version": "2.1.4-1+b1",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-information-gathering",
+      "kali-tools-post-exploitation",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "sslscan",
+    "kind": "package-candidate",
+    "version": "2.1.5-1",
+    "categories": [
+      "kali-ssl-tls",
+      "kali-tools-information-gathering",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "sslsplit",
+    "kind": "package-candidate",
+    "version": "0.5.5-3",
+    "categories": [
+      "kali-collection",
+      "kali-tools-sniffing-spoofing",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "sslyze",
+    "kind": "package-candidate",
+    "version": "6.3.1-0kali1",
+    "categories": [
+      "kali-ssl-tls",
+      "kali-tools-information-gathering",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "statsprocessor",
+    "kind": "package-candidate",
+    "version": "0.11+git20160316-5",
+    "categories": [
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "stunnel",
+    "kind": "package-candidate",
+    "version": "3:5.78-4",
+    "categories": [
+      "kali-protocol-tunneling"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "stunnel4",
+    "kind": "package-candidate",
+    "version": "3:5.78-4",
+    "categories": [
+      "kali-tools-post-exploitation",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "subfinder",
+    "kind": "package-candidate",
+    "version": "2.14.0-0kali1",
+    "categories": [
+      "kali-web-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "swaks",
+    "kind": "package-candidate",
+    "version": "20240103.0-2",
+    "categories": [
+      "kali-smtp",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "tcpdump",
+    "kind": "package-candidate",
+    "version": "4.99.6-2",
+    "categories": [
+      "kali-discovery",
+      "kali-network-sniffing",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "tcpick",
+    "kind": "package-candidate",
+    "version": "0.2.1-12",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "tcpreplay",
+    "kind": "package-candidate",
+    "version": "4.5.2-1",
+    "categories": [
+      "kali-network-security-appliances",
+      "kali-tools-forensics",
+      "kali-tools-sniffing-spoofing"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "testdisk",
+    "kind": "package-candidate",
+    "version": "7.2-0.1",
+    "categories": [
+      "kali-forensic-carving-tools"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "thc-ipv6",
+    "kind": "package-candidate",
+    "version": "3.8-2",
+    "categories": [
+      "kali-remote-system-discovery",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "thc-pptp-bruter",
+    "kind": "package-candidate",
+    "version": "0.1.4-1kali5",
+    "categories": [
+      "kali-brute-force",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "theharvester",
+    "kind": "package-candidate",
+    "version": "4.10.1-0kali2",
+    "categories": [
+      "kali-network-information",
+      "kali-tools-information-gathering"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "udptunnel",
+    "kind": "package-candidate",
+    "version": "1.1-12+b1",
+    "categories": [
+      "kali-protocol-tunneling",
+      "kali-tools-post-exploitation"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "unix-privesc-check",
+    "kind": "package-candidate",
+    "version": "1.4-0kali1",
+    "categories": [
+      "kali-privilege-escalation",
+      "kali-tools-vulnerability"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "unrar",
+    "kind": "package-candidate",
+    "version": "1:7.2.6-1",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "upx-ucl",
+    "kind": "package-candidate",
+    "version": "4.2.4-1.1",
+    "categories": [
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "voiphopper",
+    "kind": "package-candidate",
+    "version": "2.04-1kali7",
+    "categories": [
+      "kali-tools-voip",
+      "kali-tools-vulnerability",
+      "kali-voip"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "wafw00f",
+    "kind": "package-candidate",
+    "version": "2.4.2-1",
+    "categories": [
+      "kali-network-security-appliances",
+      "kali-tools-information-gathering",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "wce",
+    "kind": "package-candidate",
+    "version": "1.42-beta-0kali4",
+    "categories": [
+      "kali-tools-forensics",
+      "kali-tools-windows-resources"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "webshells",
+    "kind": "package-candidate",
+    "version": "1.1+kali8",
+    "categories": [
+      "kali-persistence",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "weevely",
+    "kind": "package-candidate",
+    "version": "4.0.2-1",
+    "categories": [
+      "kali-persistence",
+      "kali-tools-post-exploitation",
+      "kali-tools-web"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "wfuzz",
+    "kind": "package-candidate",
+    "version": "3.1.0-6",
+    "categories": [
+      "kali-tools-fuzzing",
+      "kali-tools-web",
+      "kali-web-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "whatweb",
+    "kind": "package-candidate",
+    "version": "0.6.4-1",
+    "categories": [
+      "kali-tools-web",
+      "kali-web-vulnerability-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "wifite",
+    "kind": "package-candidate",
+    "version": "2.8.2-1",
+    "categories": [
+      "kali-tools-802-11",
+      "kali-wifi-credential-access"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "windows-binaries",
+    "kind": "package-candidate",
+    "version": "0.6.10",
+    "categories": [
+      "kali-tools-windows-resources"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "wireshark",
+    "kind": "package-candidate",
+    "version": "4.6.6-1",
+    "categories": [
+      "kali-discovery",
+      "kali-network-sniffing",
+      "kali-respond",
+      "kali-tools-forensics",
+      "kali-tools-sniffing-spoofing",
+      "kali-tools-top10",
+      "kali-tools-voip",
+      "kali-tools-web",
+      "kali-tools-wireless"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "wordlists",
+    "kind": "package-candidate",
+    "version": "2026.2.0",
+    "categories": [
+      "kali-credential-access",
+      "kali-password-profiling-wordlists",
+      "kali-tools-passwords"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "wpscan",
+    "kind": "package-candidate",
+    "version": "3.8.28-0kali1",
+    "categories": [
+      "kali-tools-web",
+      "kali-web-vulnerability-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "yara",
+    "kind": "package-candidate",
+    "version": "4.5.6-1",
+    "categories": [
+      "kali-forensics",
+      "kali-respond",
+      "kali-tools-forensics"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "zaproxy",
+    "kind": "package-candidate",
+    "version": "2.17.0-0kali1",
+    "categories": [
+      "kali-identify",
+      "kali-tools-identify",
+      "kali-tools-web",
+      "kali-web-vulnerability-scanning"
+    ],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ROPgadget",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "angr",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "angr-mcp",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "arjun",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "asm",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "assetfinder",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cargo",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cargo-clippy",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cargo-fmt",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cargo-miri",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cart",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "checksec",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "clippy-driver",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "constgrep",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "cyclic",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "debug",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "disablenx",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "disasm",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "elfdiff",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "elfpatch",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "errno",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-apk",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-compile",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-create",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-discover",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-itrace",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-join",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-kill",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-ls",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-ls-devices",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-pm",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-ps",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-pull",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-push",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-rm",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-strace",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "frida-trace",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "futurize",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hakrawler",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "hex",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "httprobe",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "katana",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "libcdb",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "naabu",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "nuclei",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pasteurize",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "phd",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pip",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pip3",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pip3.13",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pwn",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pwnstrip",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pyserial-miniterm",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "pyserial-ports",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "readelf.py",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rls",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "ropper",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rpyc_classic",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rpyc_classic.py",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rpyc_registry",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rpyc_registry.py",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rust-analyzer",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rust-gdb",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rust-gdbgui",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rust-lldb",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rustc",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rustdoc",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rustfmt",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "rustup",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "scramble",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "shellcraft",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "template",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "thm-check",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "thm-new-lab",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "thm-vpn",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "uefi-firmware-parser",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "unhex",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "uro",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "waybackurls",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "wes",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  },
+  {
+    "id": "z3",
+    "kind": "extra-executable-candidate",
+    "version": null,
+    "categories": [],
+    "triage": "needs-review",
+    "module": "not-written"
+  }
+]

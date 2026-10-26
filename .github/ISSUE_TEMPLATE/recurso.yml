@@ -1,0 +1,20 @@
+name: Sugerir recurso
+description: Propor uma ferramenta, fonte ou nota para o Awesome Kali Linux.
+title: "[Recurso] "
+body:
+  - type: input
+    id: official-url
+    attributes:
+      label: URL oficial
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Por que deve entrar na curadoria?
+    validations:
+      required: true
+  - type: textarea
+    id: offline
+    attributes:
+      label: Conteúdo offline, versão e licença, se aplicável

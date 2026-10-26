@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-10-26T19:11:51.140456+00:00",
+  "platform": "Linux",
+  "target": "127.0.0.1 owned synthetic HTTP fixture",
+  "port": 45069,
+  "passed": true,
+  "checks": [
+    {
+      "check": "Nmap sees owned fixture port open",
+      "pass": true
+    },
+    {
+      "check": "ffuf matches admin and health, excludes missing",
+      "pass": true,
+      "observed": [
+        "admin",
+        "health"
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "nmap",
+        "--version"
+      ],
+      "stdout": "Nmap version 7.99 ( https://nmap.org )\nPlatform: x86_64-pc-linux-gnu\nCompiled with: liblua-5.4.8 openssl-3.6.2 libssh2-1.11.1 libz-1.3.1 libpcre2-10.46 libpcap-1.10.6 nmap-libdnet-1.18.0 ipv6\nCompiled without:\nAvailable nsock engines: epoll poll select\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "ffuf",
+        "-V"
+      ],
+      "stdout": "ffuf version: 2.1.0-dev\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "nmap",
+        "-sT",
+        "-Pn",
+        "-n",
+        "-p",
+        "45069",
+        "-oX",
+        "<TEST_DIR>/nmap.xml",
+        "127.0.0.1"
+      ],
+      "stdout": "Starting Nmap 7.99 ( https://nmap.org ) at 2026-10-26 16:11 -0300\nNmap scan report for 127.0.0.1\nHost is up (0.0014s latency).\n\nPORT      STATE SERVICE\n45069/tcp open  unknown\n\nNmap done: 1 IP address (1 host up) scanned in 0.04 seconds\n",
+      "stderr": "",
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "ffuf",
+        "-noninteractive",
+        "-w",
+        "<PROJECT_ROOT>/vault/99-Assets/fixtures/paths.txt",
+        "-u",
+        "http://127.0.0.1:45069/FUZZ",
+        "-mc",
+        "200",
+        "-t",
+        "1",
+        "-rate",
+        "5",
+        "-of",
+        "json",
+        "-o",
+        "<TEST_DIR>/ffuf.json"
+      ],
+      "stdout": "\n\u001b[2Kadmin                   [Status: 200, Size: 50, Words: 6, Lines: 1, Duration: 2ms]\u001b[0m\n\n\u001b[2Khealth                  [Status: 200, Size: 51, Words: 6, Lines: 1, Duration: 1ms]\u001b[0m\n",
+      "stderr": "\n        /'___\\  /'___\\           /'___\\       \n       /\\ \\__/ /\\ \\__/  __  __  /\\ \\__/       \n       \\ \\ ,__\\\\ \\ ,__\\/\\ \\/\\ \\ \\ \\ ,__\\      \n        \\ \\ \\_/ \\ \\ \\_/\\ \\ \\_\\ \\ \\ \\ \\_/      \n         \\ \\_\\   \\ \\_\\  \\ \\____/  \\ \\_\\       \n          \\/_/    \\/_/   \\/___/    \\/_/       \n\n       v2.1.0-dev\n________________________________________________\n\n :: Method           : GET\n :: URL              : http://127.0.0.1:45069/FUZZ\n :: Wordlist         : FUZZ: <PROJECT_ROOT>/vault/99-Assets/fixtures/paths.txt\n :: Output file      : <TEST_DIR>/ffuf.json\n :: File format      : json\n :: Follow redirects : false\n :: Calibration      : false\n :: Timeout          : 10\n :: Threads          : 1\n :: Matcher          : Response status: 200\n________________________________________________\n\n\n\u001b[2K:: Progress: [0/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n\u001b[2K:: Progress: [0/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n\u001b[2K:: Progress: [1/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n\u001b[2K:: Progress: [1/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n\u001b[2K:: Progress: [1/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n\u001b[2K:: Progress: [2/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n\u001b[2K:: Progress: [2/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n\u001b[2K:: Progress: [3/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n\u001b[2K:: Progress: [3/3] :: Job [1/1] :: 0 req/sec :: Duration: [0:00:00] :: Errors: 0 ::\n",
+      "exit_status": 0
+    }
+  ],
+  "error": null,
+  "fixture_closed": true,
+  "limits": [
+    "Only tool versions, one TCP connect/XML result and one bounded ffuf JSON recipe were executed.",
+    "Other cheatsheet commands, GUI appearance, Internet/VPN and complete manuals were not tested."
+  ],
+  "evidence_format": "Path-normalized public evidence; machine-specific project/temp paths replaced.",
+  "raw_evidence_sha256": "cb7463485d8196be90abf92efb331f331df0e446a8235ce91036e0fff5facb8c"
+}

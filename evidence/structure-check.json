@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "markdown_notes": 51,
+  "local_links_checked": 193,
+  "errors": [],
+  "limits": [
+    "Pattern checks are not a complete secret-scanning audit.",
+    "No external URL fetch or Obsidian visual test performed."
+  ]
+}

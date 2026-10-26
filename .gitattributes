@@ -1,0 +1,16 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.zip binary
+
+sources/upstream/** -diff
+
+vault/02-Tools/*/*documentacao*.md whitespace=-blank-at-eol
+
+# Preserve literal upstream code whitespace and verbatim license endings.
+
+vault/02-Tools/*/*-docs-*.md whitespace=-blank-at-eol
+
+LICENSE whitespace=-blank-at-eof
+
+LICENSES/*.txt whitespace=-blank-at-eof

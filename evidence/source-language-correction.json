@@ -1,0 +1,41 @@
+{
+  "excluded": [
+    {
+      "tool": "nuclei",
+      "path": "README_CN.md",
+      "reason": "non-English non-Portuguese source; not sent to EN-PT model"
+    },
+    {
+      "tool": "nuclei",
+      "path": "README_ES.md",
+      "reason": "non-English non-Portuguese source; not sent to EN-PT model"
+    },
+    {
+      "tool": "nuclei",
+      "path": "README_FA.md",
+      "reason": "non-English non-Portuguese source; not sent to EN-PT model"
+    },
+    {
+      "tool": "nuclei",
+      "path": "README_ID.md",
+      "reason": "non-English non-Portuguese source; not sent to EN-PT model"
+    },
+    {
+      "tool": "nuclei",
+      "path": "README_JP.md",
+      "reason": "non-English non-Portuguese source; not sent to EN-PT model"
+    },
+    {
+      "tool": "nuclei",
+      "path": "README_KR.md",
+      "reason": "non-English non-Portuguese source; not sent to EN-PT model"
+    },
+    {
+      "tool": "nuclei",
+      "path": "README_TR.md",
+      "reason": "non-English non-Portuguese source; not sent to EN-PT model"
+    }
+  ],
+  "overwriting_prevented": true,
+  "action": "Reimport from selected source files; discarded render is not accepted as evidence"
+}

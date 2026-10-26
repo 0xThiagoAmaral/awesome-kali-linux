@@ -1,0 +1,26 @@
+# Dados privados e estado local
+.env
+.env.*
+!.env.example
+*.ovpn
+*.pem
+*.key
+private/
+artifacts/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+vault/.trash/
+vault/.obsidian/*
+!vault/.obsidian/snippets/
+!vault/.obsidian/snippets/*.css
+
+# Private downloads and transaction evidence
+sources-cache/
+transaction/
+*.baseline.md
+
+*.tmp
+
+evidence/*-job.json

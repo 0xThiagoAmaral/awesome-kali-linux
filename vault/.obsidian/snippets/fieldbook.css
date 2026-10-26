@@ -1,0 +1,6 @@
+/* CSS · fieldbook.css · notas com cssclasses: fieldbook · Obsidian */
+body { --file-line-width: 960px; }
+.fieldbook.markdown-rendered h1 { letter-spacing: -0.025em; }
+.fieldbook.markdown-rendered h2 { border-bottom: 1px solid var(--background-modifier-border); padding-bottom: .35em; }
+.fieldbook.markdown-rendered table { font-size: .94em; }
+.fieldbook.markdown-rendered pre { border: 1px solid var(--background-modifier-border); border-radius: 8px; }

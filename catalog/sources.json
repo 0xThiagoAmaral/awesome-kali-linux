@@ -1,0 +1,72 @@
+[
+  {
+    "id": "obsidian-properties",
+    "url": "https://obsidian.md/help/properties",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "obsidian-links",
+    "url": "https://obsidian.md/help/links",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "obsidian-settings",
+    "url": "https://obsidian.md/help/settings",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "obsidian-templates",
+    "url": "https://obsidian.md/help/plugins/templates",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "nmap-connect",
+    "url": "https://nmap.org/book/man-port-scanning-techniques.html",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "nmap-version",
+    "url": "https://nmap.org/book/man-version-detection.html",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "nmap-output",
+    "url": "https://nmap.org/book/man-output.html",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "ffuf",
+    "url": "https://github.com/ffuf/ffuf",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "github-licensing",
+    "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  },
+  {
+    "id": "github-secrets",
+    "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository",
+    "consulted": "2026-10-26",
+    "included_copy": false,
+    "redistribution": "not-assessed; no mirrored copy included"
+  }
+]

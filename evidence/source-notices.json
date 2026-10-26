@@ -1,0 +1,42 @@
+[
+  {
+    "tool": "ffuf",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "gobuster",
+    "license": "Apache-2.0",
+    "notices": 1
+  },
+  {
+    "tool": "subfinder",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "nuclei",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "katana",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "naabu",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "assetfinder",
+    "license": "MIT",
+    "notices": 1
+  },
+  {
+    "tool": "feroxbuster",
+    "license": "MIT",
+    "notices": 1
+  }
+]

@@ -1,0 +1,678 @@
+{
+  "ffuf": {
+    "tool": "ffuf",
+    "repository": "https://github.com/ffuf/ffuf",
+    "commit": "8d65e0373e5f223530174e5694285af849770078",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/ffuf/ffuf/blob/8d65e0373e5f223530174e5694285af849770078/LICENSE",
+    "license_sha256": "27efda573d21acd87c68e008a190c7456bcd93b510b8c35a1500088249d5d930",
+    "archive_sha256": "212f5b442020eb802dd42bf485b83fb4c356da2c50d2aba29d7541aa8a2993f2",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 17130,
+        "sha256": "2419b892f8a77ba3c5021300dcf5c37f2587ac9b7d579303c9add707fc0b93e4",
+        "source_url": "https://github.com/ffuf/ffuf/blob/8d65e0373e5f223530174e5694285af849770078/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [
+      {
+        "path": "_img/ffuf_juggling_250.png",
+        "bytes": 27727,
+        "sha256": "909c2e84347941ae0f0525fc3d8d9b39143a3859d4a24aecbfd581fbb4134f67",
+        "source_url": "https://github.com/ffuf/ffuf/blob/8d65e0373e5f223530174e5694285af849770078/_img/ffuf_juggling_250.png"
+      },
+      {
+        "path": "_img/ffuf_mascot_600.png",
+        "bytes": 64443,
+        "sha256": "7a4205e6c89828eee24a5733b7c1005c9becaa18679e79216645785b3783e9da",
+        "source_url": "https://github.com/ffuf/ffuf/blob/8d65e0373e5f223530174e5694285af849770078/_img/ffuf_mascot_600.png"
+      },
+      {
+        "path": "_img/ffuf_run_logo_600.png",
+        "bytes": 44226,
+        "sha256": "fcab41490fbb82d9b84cbd4e2acf93da6aec22710001d8dc7b0c46cf7d5de5c2",
+        "source_url": "https://github.com/ffuf/ffuf/blob/8d65e0373e5f223530174e5694285af849770078/_img/ffuf_run_logo_600.png"
+      },
+      {
+        "path": "_img/ffuf_running_250.png",
+        "bytes": 22175,
+        "sha256": "90ad5c40493f0660374d6c63129edef885349a5ba9eac8a10c36df8908b9b69f",
+        "source_url": "https://github.com/ffuf/ffuf/blob/8d65e0373e5f223530174e5694285af849770078/_img/ffuf_running_250.png"
+      },
+      {
+        "path": "_img/ffuf_waving_250.png",
+        "bytes": 27201,
+        "sha256": "2705ba6f9fe2d16f8679e971afabf942e68be141a81d1e0f820f53aac2dda032",
+        "source_url": "https://github.com/ffuf/ffuf/blob/8d65e0373e5f223530174e5694285af849770078/_img/ffuf_waving_250.png"
+      },
+      {
+        "path": "_img/offsec-logo.png",
+        "bytes": 22849,
+        "sha256": "90982a045b2fe252502c2181d8585531d6040e17234c618473541335b2ef4877",
+        "source_url": "https://github.com/ffuf/ffuf/blob/8d65e0373e5f223530174e5694285af849770078/_img/offsec-logo.png"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/ffuf/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "27efda573d21acd87c68e008a190c7456bcd93b510b8c35a1500088249d5d930"
+      }
+    ],
+    "excluded_non_target_languages": []
+  },
+  "gobuster": {
+    "tool": "gobuster",
+    "repository": "https://github.com/OJ/gobuster",
+    "commit": "c77583fbb8824058d74d38240896eff610683c8e",
+    "license_spdx": "Apache-2.0",
+    "license_url": "https://github.com/OJ/gobuster/blob/c77583fbb8824058d74d38240896eff610683c8e/LICENSE",
+    "license_sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "archive_sha256": "811a3df6504dd2e76872f9b174852de05b9103d8d9a22504f373f050ff442d0b",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 13006,
+        "sha256": "9c5b67cdd42cd59eb9d4c3c0ed9c90aae05fce56803ff92d81e8fd097a6fff0d",
+        "source_url": "https://github.com/OJ/gobuster/blob/c77583fbb8824058d74d38240896eff610683c8e/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/gobuster/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+      }
+    ],
+    "excluded_non_target_languages": []
+  },
+  "subfinder": {
+    "tool": "subfinder",
+    "repository": "https://github.com/projectdiscovery/subfinder",
+    "commit": "98ef8711acb91f52bc27a979e6c5320a6e1365ae",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/projectdiscovery/subfinder/blob/98ef8711acb91f52bc27a979e6c5320a6e1365ae/LICENSE.md",
+    "license_sha256": "cbcdaab87df3175107aa28915bd253cebdd618a49c9ac5d6c669c0b1cbebcacb",
+    "archive_sha256": "f7cf0d6b23e437c3b3f47cbd7300bc21c2fac6b9260798f4fb6a9f23bf408dad",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 7400,
+        "sha256": "38c2ad7da121806ed1594fbfb8a6f268eb213c337a90edc2c249fd6065c49fe0",
+        "source_url": "https://github.com/projectdiscovery/subfinder/blob/98ef8711acb91f52bc27a979e6c5320a6e1365ae/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [
+      {
+        "path": "static/subfinder-logo.png",
+        "bytes": 9852,
+        "sha256": "b0359788df92645643107e4c50e83163f65b16c7bd52c4f601d40b48c031abf8",
+        "source_url": "https://github.com/projectdiscovery/subfinder/blob/98ef8711acb91f52bc27a979e6c5320a6e1365ae/static/subfinder-logo.png"
+      },
+      {
+        "path": "static/subfinder-run.png",
+        "bytes": 1084958,
+        "sha256": "a0f890bf4aa54702b0440c3b73f9f0479df493700e290f419ae2b6a4c6286609",
+        "source_url": "https://github.com/projectdiscovery/subfinder/blob/98ef8711acb91f52bc27a979e6c5320a6e1365ae/static/subfinder-run.png"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/subfinder/LICENSE.md.txt",
+        "source_path": "LICENSE.md",
+        "sha256": "cbcdaab87df3175107aa28915bd253cebdd618a49c9ac5d6c669c0b1cbebcacb"
+      }
+    ],
+    "excluded_non_target_languages": []
+  },
+  "nuclei": {
+    "tool": "nuclei",
+    "repository": "https://github.com/projectdiscovery/nuclei",
+    "commit": "263bc134120af1548023c23a9b55ec14f9217295",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/LICENSE.md",
+    "license_sha256": "5fa6644d2dd1987a79c06f4af210d2cf8cfc4ee799999029d0f9980c9cf95a2c",
+    "archive_sha256": "2c30259ae12883752e6b5dd979c656a7087735a45696b08017bd020c9bf004c8",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 62413,
+        "sha256": "d9fa7d06e5c6fc9734f84521c72b1959a27b0bc39752bf1c36f4fbfb321bde07",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/README.md",
+        "language": "en"
+      },
+      {
+        "path": "README_PT-BR.md",
+        "bytes": 62572,
+        "sha256": "8e6c3576463a43d3cc780c64d6f9e0354114ce87bf6919ec63bdd175b950c96f",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/README_PT-BR.md",
+        "language": "pt-BR"
+      }
+    ],
+    "assets": [
+      {
+        "path": "static/Join-Discord.png",
+        "bytes": 95194,
+        "sha256": "cccad8b75a19e4547610677a98b1f9661eb5712d26be45621bc2f5feab56c3bc",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/Join-Discord.png"
+      },
+      {
+        "path": "static/check-nuclei-documentation.png",
+        "bytes": 49412,
+        "sha256": "e848e25f79c19eb6908366556816331abdccf3bdd0ae030cfbdaab0e436a50d6",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/check-nuclei-documentation.png"
+      },
+      {
+        "path": "static/learn-more-button.png",
+        "bytes": 44133,
+        "sha256": "70666dea77f58fd477acaad84d10dd41e02f93885b94eac47cd124caf28588fa",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/learn-more-button.png"
+      },
+      {
+        "path": "static/nuclei-cover-image.png",
+        "bytes": 818033,
+        "sha256": "215effb85df85558a7d1fb2405039997733b3752e158f975043ee0aab8834eb6",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-cover-image.png"
+      },
+      {
+        "path": "static/nuclei-cover.png",
+        "bytes": 818033,
+        "sha256": "215effb85df85558a7d1fb2405039997733b3752e158f975043ee0aab8834eb6",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-cover.png"
+      },
+      {
+        "path": "static/nuclei-flow.jpg",
+        "bytes": 1224331,
+        "sha256": "65dd41a3997aad649ca7c9ed25420ec3ee8e626ecbd8733d384dad2d0b9dd365",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-flow.jpg"
+      },
+      {
+        "path": "static/nuclei-getting-started.png",
+        "bytes": 45304,
+        "sha256": "9beeda09f98608bd91344e40739dd36024af693410a97ecda417e1dc339a17c0",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-getting-started.png"
+      },
+      {
+        "path": "static/nuclei-logo.png",
+        "bytes": 7441,
+        "sha256": "5ae110d61d22c8d4110c86c8e29924628620bfaa3acb0d6dd10b263b6f85df04",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-logo.png"
+      },
+      {
+        "path": "static/nuclei-template-example.png",
+        "bytes": 2155430,
+        "sha256": "72cee422a96d25e8947cb35b9a21ae83ee28b025ffbced344f737202e0f7f0cf",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-template-example.png"
+      },
+      {
+        "path": "static/nuclei-templates-teamcity-example.png",
+        "bytes": 1162315,
+        "sha256": "f258a0be5c533ec645a13d7b8650de2165408db0c1dbeabeeee1ac5194a732dd",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-templates-teamcity-example.png"
+      },
+      {
+        "path": "static/nuclei-templates-teamcity.png",
+        "bytes": 1538352,
+        "sha256": "a0c8f3df84c6f98159b066825b6dc5db519fdc59910c9959bb9fc4efb2bae62a",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-templates-teamcity.png"
+      },
+      {
+        "path": "static/nuclei-write-your-first-template.png",
+        "bytes": 47472,
+        "sha256": "3e2010c2ab4ed3df56515c09f445e9b67266a8f6cd6b607c8d7fdc2353769f2c",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/nuclei-write-your-first-template.png"
+      },
+      {
+        "path": "static/projectdiscovery-browse-results.gif",
+        "bytes": 2862660,
+        "sha256": "8be36eaebd012a065e8616552620a80e3fd9c7a8ec1f4904b3970761410aee57",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/projectdiscovery-browse-results.gif"
+      },
+      {
+        "path": "static/regression-with-nuclei.jpg",
+        "bytes": 429674,
+        "sha256": "4cb8dad8c0e341f5779c908c0fe90a646c2c8c2b9b874d641ea5290ca95d3d4d",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/regression-with-nuclei.jpg"
+      },
+      {
+        "path": "static/teamcity-example.png",
+        "bytes": 1098783,
+        "sha256": "8263b189fbf701b30404a28d317c9527ef95acdb45ae076a15aaa4222e415b68",
+        "source_url": "https://github.com/projectdiscovery/nuclei/blob/263bc134120af1548023c23a9b55ec14f9217295/static/teamcity-example.png"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/nuclei/LICENSE.md.txt",
+        "source_path": "LICENSE.md",
+        "sha256": "5fa6644d2dd1987a79c06f4af210d2cf8cfc4ee799999029d0f9980c9cf95a2c"
+      }
+    ],
+    "excluded_non_target_languages": [
+      "README_CN.md",
+      "README_ES.md",
+      "README_FA.md",
+      "README_ID.md",
+      "README_JP.md",
+      "README_KR.md",
+      "README_TR.md"
+    ]
+  },
+  "katana": {
+    "tool": "katana",
+    "repository": "https://github.com/projectdiscovery/katana",
+    "commit": "4b41dd02a095df15ae0cd04cbb658af457d3c1ab",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/projectdiscovery/katana/blob/4b41dd02a095df15ae0cd04cbb658af457d3c1ab/LICENSE.md",
+    "license_sha256": "49982116f64385bdf8582a379e591a19d6040dec22e50e29dc311596d357af23",
+    "archive_sha256": "6d412122de27cb482589cd58e0a871ba9b4f889448e9e19746f67520e1e4a8a1",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 59237,
+        "sha256": "7f6cf81d98053ab01a802aecb0bf3f01fca797e7b0313b82f692625959188c5b",
+        "source_url": "https://github.com/projectdiscovery/katana/blob/4b41dd02a095df15ae0cd04cbb658af457d3c1ab/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/katana/LICENSE.md.txt",
+        "source_path": "LICENSE.md",
+        "sha256": "49982116f64385bdf8582a379e591a19d6040dec22e50e29dc311596d357af23"
+      }
+    ],
+    "excluded_non_target_languages": []
+  },
+  "naabu": {
+    "tool": "naabu",
+    "repository": "https://github.com/projectdiscovery/naabu",
+    "commit": "a4df9f40ba77bd08920bd47c2adf9f5939edcebb",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/projectdiscovery/naabu/blob/a4df9f40ba77bd08920bd47c2adf9f5939edcebb/LICENSE.md",
+    "license_sha256": "cbcdaab87df3175107aa28915bd253cebdd618a49c9ac5d6c669c0b1cbebcacb",
+    "archive_sha256": "d8fa6c59c17117fe0895965a1004f03126f4c31b08e1a44422abc2db770e87c9",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 22286,
+        "sha256": "f61b2cfdd205798a236715d3a20ef54ffaa2e7ac7f5880b0f9170b1bfcb62180",
+        "source_url": "https://github.com/projectdiscovery/naabu/blob/a4df9f40ba77bd08920bd47c2adf9f5939edcebb/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [
+      {
+        "path": "static/naabu-logo.png",
+        "bytes": 4065,
+        "sha256": "93ff80298ab348becad6d88c882d1ec61d993980c9e4027439629ddc72aef406",
+        "source_url": "https://github.com/projectdiscovery/naabu/blob/a4df9f40ba77bd08920bd47c2adf9f5939edcebb/static/naabu-logo.png"
+      },
+      {
+        "path": "static/naabu-run.png",
+        "bytes": 381983,
+        "sha256": "a3459ec082fa9c5259828b2389561bdfbb23963aec71ea77edd06f4d5f853039",
+        "source_url": "https://github.com/projectdiscovery/naabu/blob/a4df9f40ba77bd08920bd47c2adf9f5939edcebb/static/naabu-run.png"
+      }
+    ],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/naabu/LICENSE.md.txt",
+        "source_path": "LICENSE.md",
+        "sha256": "cbcdaab87df3175107aa28915bd253cebdd618a49c9ac5d6c669c0b1cbebcacb"
+      }
+    ],
+    "excluded_non_target_languages": []
+  },
+  "assetfinder": {
+    "tool": "assetfinder",
+    "repository": "https://github.com/tomnomnom/assetfinder",
+    "commit": "4e95d8701aae8cff1c27af2626eb22ba110ad583",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/tomnomnom/assetfinder/blob/4e95d8701aae8cff1c27af2626eb22ba110ad583/LICENSE",
+    "license_sha256": "af212a1c50839119d19aaa40f90e628c934271db502f6f17301273761d16115b",
+    "archive_sha256": "e824aed5f510830fa9de384575aeb64a0409744c4b069941d2f0ff23def093b2",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 1450,
+        "sha256": "6a5f2f6b3beb4e8510d234392001dd8059b49dd334719203980f039a588cf063",
+        "source_url": "https://github.com/tomnomnom/assetfinder/blob/4e95d8701aae8cff1c27af2626eb22ba110ad583/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/assetfinder/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "af212a1c50839119d19aaa40f90e628c934271db502f6f17301273761d16115b"
+      }
+    ],
+    "excluded_non_target_languages": []
+  },
+  "feroxbuster": {
+    "tool": "feroxbuster",
+    "repository": "https://github.com/epi052/feroxbuster",
+    "commit": "b07a7662d588bd8e4371e9be4704a02d976c89bb",
+    "license_spdx": "MIT",
+    "license_url": "https://github.com/epi052/feroxbuster/blob/b07a7662d588bd8e4371e9be4704a02d976c89bb/LICENSE",
+    "license_sha256": "fa189713b5ba5b96fd8d6b3905aba1ca7fb925f85a14f7843579e7a28dba93ea",
+    "archive_sha256": "73f8516b439c1d7a1882e303f5d89b24277110a8270e071b8c99d4cf9b21bbbc",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 51417,
+        "sha256": "dd28579002e3cfb0753706423e15f1671cbd27f852494879efe3cc53671a5457",
+        "source_url": "https://github.com/epi052/feroxbuster/blob/b07a7662d588bd8e4371e9be4704a02d976c89bb/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "retained_notices": [
+      {
+        "path": "sources/upstream/feroxbuster/LICENSE.txt",
+        "source_path": "LICENSE",
+        "sha256": "fa189713b5ba5b96fd8d6b3905aba1ca7fb925f85a14f7843579e7a28dba93ea"
+      }
+    ],
+    "excluded_non_target_languages": []
+  },
+  "above": {
+    "tool": "above",
+    "repository": "https://github.com/caster0x00/Above",
+    "commit": "313f550ebb87d815aeece6792104b8c3f2a9db8f",
+    "license_spdx": "Apache-2.0",
+    "license_url": "https://github.com/caster0x00/Above/blob/313f550ebb87d815aeece6792104b8c3f2a9db8f/LICENSE",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "archive_sha256": "253f49562af182dfccf635fb1e8e0d0795b7fe726b30e6b0ff83b935ed3c7cb2",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 13485,
+        "sha256": "7dec6e01263ed4064e2ba2428c1e6a011b0a17539db14b3c88da2df90d02633e",
+        "source_url": "https://github.com/caster0x00/Above/blob/313f550ebb87d815aeece6792104b8c3f2a9db8f/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "excluded_non_target_languages": []
+  },
+  "adaptixc2": {
+    "tool": "adaptixc2",
+    "repository": "https://github.com/Adaptix-Framework/AdaptixC2",
+    "commit": "e99535c9ef4642190f7ea125c2983d1611f1a3f3",
+    "license_spdx": "GPL-3.0",
+    "license_url": "https://github.com/Adaptix-Framework/AdaptixC2/blob/e99535c9ef4642190f7ea125c2983d1611f1a3f3/LICENSE",
+    "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "archive_sha256": "280ded301cdc60981ee35963978d83129f2e2659667ec322ab5a77d55c9fa81b",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 3460,
+        "sha256": "2982dc32a5c17ae2f06998614bd9bbda02d46fe1d65faad15d780b1d66c78aa1",
+        "source_url": "https://github.com/Adaptix-Framework/AdaptixC2/blob/e99535c9ef4642190f7ea125c2983d1611f1a3f3/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "excluded_non_target_languages": []
+  },
+  "airgeddon": {
+    "tool": "airgeddon",
+    "repository": "https://github.com/v1s1t0r1sh3r3/airgeddon",
+    "commit": "700ad7d63df04e565bcd14d2aec6f935fcec5185",
+    "license_spdx": "GPL-3.0",
+    "license_url": "https://github.com/v1s1t0r1sh3r3/airgeddon/blob/700ad7d63df04e565bcd14d2aec6f935fcec5185/LICENSE",
+    "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "archive_sha256": "a7405bacb189017334343f876363bdd154004d3fb2c91ac33bb07ae6501266d2",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 6211,
+        "sha256": "c47046de73be7b4562376e5cb195ad2b08b23ba3aa758b7d2de61277f14c78f2",
+        "source_url": "https://github.com/v1s1t0r1sh3r3/airgeddon/blob/700ad7d63df04e565bcd14d2aec6f935fcec5185/README.md",
+        "language": "en"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Official English repository README/docs and available upstream Portuguese README; external manuals/wiki coverage tracked separately",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "excluded_non_target_languages": []
+  },
+  "aflplusplus": {
+    "tool": "aflplusplus",
+    "repository": "https://github.com/AFLplusplus/AFLplusplus",
+    "commit": "d0070729206a80a9af297b2341edd63f68fdac35",
+    "license_spdx": "AGPL-3.0",
+    "license_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/LICENSE",
+    "license_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+    "archive_sha256": "535c3d10d82e961af25ca42b0c9b91f0d085bbb459c3a1b577af868101ff9d0d",
+    "documents": [
+      {
+        "path": "README.md",
+        "bytes": 15097,
+        "sha256": "1e6bc1d9e5870d70052165fe1004345c56743851ad4b930cacc44a744d884866",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/README.md",
+        "language": "en"
+      },
+      {
+        "path": "docs/Changelog.md",
+        "bytes": 153445,
+        "sha256": "2b8190c09159c7fefb1ae01c0fa525343fc27e588b104dd08dfe9638058a42fc",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/Changelog.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/FAQ.md",
+        "bytes": 13871,
+        "sha256": "18c61dafbfe58555c0e28cd022865534a6217805dc8fbcc1b35f71c4f8ac0c96",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/FAQ.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/FrameShift.md",
+        "bytes": 7273,
+        "sha256": "3da15c4dc3621b7c3843cc6b7880d9db7ffec7860444d0c5a0cfd60fc482fdab",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/FrameShift.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/IJON.md",
+        "bytes": 14687,
+        "sha256": "7f7fa00f996c32b0e3be6bdeb7d5a4506aac29fe334201e0bd4bd13aa1c3ab3e",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/IJON.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/INSTALL.md",
+        "bytes": 8377,
+        "sha256": "4cac783c3be5777aa10051066ad05c593a22f1db30f3439d91acb43a1123b4f9",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/INSTALL.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/README.md",
+        "bytes": 2682,
+        "sha256": "ab7474ae77f5168ff21fc851e4c14fb7c752d8baf6564212b8df065cb0af91ee",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/README.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/SAND.md",
+        "bytes": 4681,
+        "sha256": "160b79c13dc735589666c56ecaae0a538e399d12a03b2c34d22fbcb99a107f52",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/SAND.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/afl-fuzz_approach.md",
+        "bytes": 28948,
+        "sha256": "ae8fd56c1e27c993be8ff88e412871e6881e91709bc64f8f19097fe81028eb10",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/afl-fuzz_approach.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/best_practices.md",
+        "bytes": 9775,
+        "sha256": "0697a453310aeb9b7c47179a437d3dd333bc035453486cb79165c10a8db9f8b5",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/best_practices.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/custom_mutators.md",
+        "bytes": 14870,
+        "sha256": "85ac8b5f64f0e584cb348326d1b2d0b21cdd2cd4f384bb7c1f72fdac4cd4cc06",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/custom_mutators.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/env_variables.md",
+        "bytes": 72688,
+        "sha256": "349eff538b1b7b515c726f2e418680911acbb2b8c04b48f3bc8a3d0d60153c47",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/env_variables.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/features.md",
+        "bytes": 7220,
+        "sha256": "782c30afb7b85e7a3ad9b51e3ef277bc2202b7d268d1570243d1377e2d3b8ae0",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/features.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/fuzzing_binary-only_targets.md",
+        "bytes": 12387,
+        "sha256": "b3517d0e5191dd5facd31ec53ae4a0968805353365a69046b79308055cebf428",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/fuzzing_binary-only_targets.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/fuzzing_in_depth.md",
+        "bytes": 50706,
+        "sha256": "52dc5a3ae5119d7b8584c2bf0bfb0504e2a41129d6b30b0020e42bb54a1459c1",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/fuzzing_in_depth.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/important_changes.md",
+        "bytes": 3232,
+        "sha256": "4293f8c719197eb8c9d574bf4c3f481b559531cac6826620d7750e2158b78f2e",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/important_changes.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/rpc_statsd.md",
+        "bytes": 5870,
+        "sha256": "2728f461a25974b04ee1840ebb646575132184fcf6f43926554c22079aec8738",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/rpc_statsd.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/third_party_tools.md",
+        "bytes": 4170,
+        "sha256": "990a648dae247ecf5ae9e8f9af30062ce8257e994330222d7bf0a9c0e958e41b",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/third_party_tools.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/tutorials.md",
+        "bytes": 4176,
+        "sha256": "6fed8eb785b45b37bf433fee65c39261465be61a9417632098a672abbb2da972",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/tutorials.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      },
+      {
+        "path": "docs/value_profiling.md",
+        "bytes": 13960,
+        "sha256": "d202c8c5edb2488da7dd8db6b2c97403d8535a04d70f2a0690c09f9ca2f0291b",
+        "source_url": "https://github.com/AFLplusplus/AFLplusplus/blob/d0070729206a80a9af297b2341edd63f68fdac35/docs/value_profiling.md",
+        "language": "en",
+        "license_spdx": "AGPL-3.0-or-later",
+        "license_basis": "Per-file SPDX when present; otherwise root AGPL license explicitly delegated by docs/COPYING"
+      }
+    ],
+    "assets": [],
+    "source_scope": "Repository root README and owned doc/docs/documentation Markdown or RST files; not a claim of full wiki/site coverage",
+    "kali_page_mirrored": false,
+    "translation_status": "pending",
+    "nested_license_resolution": {
+      "path": "docs/COPYING",
+      "sha256": "9c9f17d2f796e921d512067f4420653c711c7f32466918d3c4bf001c792efbcf",
+      "decision": "Explicit delegation to repository root and per-file SPDX retained"
+    }
+  }
+}

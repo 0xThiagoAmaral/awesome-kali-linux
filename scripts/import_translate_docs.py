@@ -1,0 +1,301 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+"""Import licensed documentation faithfully; preserve code and track incomplete coverage."""
+import argparse
+import hashlib
+import json
+import os
+import pathlib
+import posixpath
+import re
+import shutil
+import time
+import unicodedata
+import urllib.parse
+from translation_engine import LocalTranslator
+
+ROOT=pathlib.Path(__file__).resolve().parents[1]
+BT=chr(96)
+FENCE=re.compile(r'^(\s*)('+BT+r'{3,}|~{3,})(.*)$')
+PIPELINE_VERSION='0.3-source-language-and-literal-integrity'
+
+def save_json(path,value):
+    temp=path.with_suffix(path.suffix+'.tmp')
+    temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    temp.replace(path)
+
+def note_name(tool,doc):
+    if doc.get('language','en').startswith('pt'):
+        return tool+'-documentacao-pt-br-oficial'
+    return tool+'-documentacao' if doc['path'].lower()=='readme.md' else tool+'-'+re.sub(r'[^a-z0-9]+','-',doc['path'].lower()).strip('-')
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+def code_bodies(text):
+    out=[]
+    active=None
+    buf=[]
+    for line in text.splitlines(keepends=True):
+        m=FENCE.match(line)
+        if active is None and m:
+            active=(m.group(2)[0],len(m.group(2)))
+            buf=[]
+        elif active and m and m.group(2)[0]==active[0] and len(m.group(2))>=active[1]:
+            out.append(''.join(buf))
+            active=None
+        elif active:
+            buf.append(line)
+    return out
+
+def slug(value):
+    value=re.sub(r'<[^>]*>','',value).replace(BT,'').strip().lower()
+    value=re.sub(r'[^\w -]','',value,flags=re.U)
+    return value.replace(' ','-')
+
+def outside_code(text,callback):
+    result=[]
+    plain=[]
+    active=None
+    for line in text.splitlines(keepends=True):
+        m=FENCE.match(line)
+        if active:
+            result.append(line)
+            if m and m.group(2)[0]==active[0] and len(m.group(2))>=active[1]:
+                active=None
+        elif m:
+            result.append(callback(''.join(plain)))
+            plain=[]
+            result.append(line)
+            active=(m.group(2)[0],len(m.group(2)))
+        else:
+            plain.append(line)
+    result.append(callback(''.join(plain)))
+    return ''.join(result)
+
+def translate_body(source,tr):
+    out=[]
+    active=None
+    heading_map={}
+    for line in source.splitlines(keepends=True):
+        end='\n' if line.endswith('\n') else ''
+        stripped=line.rstrip('\r\n')
+        m=FENCE.match(stripped)
+        if active:
+            out.append(line)
+            if m and m.group(2)[0]==active[0] and len(m.group(2))>=active[1]:
+                active=None
+            continue
+        if m:
+            active=(m.group(2)[0],len(m.group(2)))
+            out.append(stripped+('text' if not m.group(3).strip() else '')+end)
+            continue
+        if stripped.lstrip().startswith('<') and re.search(r'>[^<\s][^<]+<',stripped):
+            out.append(tr.text(stripped)+end)
+            continue
+        if not stripped.strip() or stripped.lstrip().startswith(('<','<!--','[![')) or stripped.startswith(('    ','\t')):
+            out.append(line)
+            continue
+        h=re.match(r'^(#{1,6}\s+)(.*)$',stripped)
+        if h:
+            translated=h.group(2) if h.group(1)=='# ' else tr.text(h.group(2))
+            heading_map[slug(h.group(2))]=slug(translated)
+            out.append(h.group(1)+translated+end)
+            continue
+        if re.fullmatch(r'\s*[| :\-]+\s*',stripped):
+            out.append(line)
+            continue
+        if stripped.lstrip().startswith('|'):
+            out.append('|'.join(tr.text(x.strip()) if x.strip() else '' for x in stripped.split('|'))+end)
+            continue
+        prefix=re.match(r'^(\s*(?:[-*+]|\d+\.)\s+(?:\[[ xX]\]\s+)?)(.*)$',stripped)
+        if prefix:
+            out.append(prefix.group(1)+tr.text(prefix.group(2))+end)
+        else:
+            out.append(tr.text(stripped)+end)
+    result=''.join(out)
+    for before,after in heading_map.items():
+        result=result.replace('](#'+before+')','](#'+after+')')
+    assert code_bodies(result)==code_bodies(source),'Literal fenced code changed'
+    return result
+
+def mirror_images(text,record,asset_root,note):
+    modifications=[]
+    available={x['path']:asset_root/pathlib.Path(x['path']) for x in record['assets']}
+    by_name={pathlib.PurePosixPath(k).name:v for k,v in available.items()}
+    def resolve(url):
+        decoded=urllib.parse.unquote(url.split('?')[0].split('#')[0])
+        target=available.get(decoded.lstrip('./')) or by_name.get(pathlib.PurePosixPath(decoded).name)
+        if target and target.exists():
+            return pathlib.Path(os.path.relpath(target,note.parent)).as_posix()
+        return None
+    def markdown(match):
+        alt,url=match.group(1),match.group(2)
+        local=resolve(url)
+        if local:
+            return '!['+alt+']('+local+')'
+        modifications.append({'kind':'remote-image-to-reference-link','url':url})
+        if match.start()>0 and match.string[match.start()-1]=='[':
+            return alt or 'Recurso externo'
+        return '[Imagem/recurso externo: '+(alt or 'referência')+']('+url+')'
+    def html(match):
+        tag=match.group()
+        m=re.search(r'src=["\']([^"\']+)["\']',tag)
+        if not m:
+            return tag
+        local=resolve(m.group(1))
+        if local:
+            return tag.replace(m.group(1),local)
+        modifications.append({'kind':'remote-html-image-removed','url':m.group(1)})
+        return ''
+    def convert(part):
+        part=re.sub(r'!\[([^\]]*)\]\(([^)]+)\)',markdown,part)
+        return re.sub(r'<img\b[^>]*>',html,part,flags=re.I)
+    return outside_code(text,convert),modifications
+
+def resolve_relative_links(text,record,doc_path,note,asset_root,heading_map):
+    changes=[]
+    def link(match):
+        label,url=match.group(1),match.group(2)
+        parsed=urllib.parse.urlsplit(url)
+        own_page=url.split('#')[0].rstrip('/') in [record['repository'].rstrip('/'),record['repository']+'/blob/'+record['commit']+'/'+doc_path]
+        if parsed.fragment and (own_page or not parsed.path and not parsed.scheme):
+            return '['+label+'](#'+heading_map.get(parsed.fragment,parsed.fragment)+')'
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            return match.group()
+        if pathlib.PurePosixPath(parsed.path).name.upper().startswith(('LICENSE','COPYING')):
+            local=pathlib.Path(os.path.relpath(asset_root/'LICENSE.txt',note.parent)).as_posix()
+            return '['+label+']('+local+')'
+        # References outside the acquired corpus are explicit pinned source links, not broken local files.
+        base=pathlib.PurePosixPath(doc_path).parent
+        joined=posixpath.normpath(str(base/pathlib.PurePosixPath(parsed.path)))
+        acquired=next((x for x in record['documents'] if x['path']==joined),None)
+        if acquired:
+            target=note_name(record['tool'],acquired)+'.md'
+            if parsed.fragment:
+                target+='#'+parsed.fragment
+            return '['+label+']('+target+')'
+        target=record['repository']+'/blob/'+record['commit']+'/'+joined
+        if parsed.fragment:
+            target+='#'+parsed.fragment
+        changes.append({'kind':'unacquired-relative-reference-pinned-online','source_path':joined})
+        return '['+label+']('+target+')'
+    def convert(part):
+        part=re.sub(r'(?<!!)\[([^\]]+)\]\(([^)]+)\)',link,part)
+        for before,after in heading_map.items():
+            part=part.replace('href="#'+before+'"','href="#'+after+'"')
+        return part
+    return outside_code(text,convert),changes
+
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--cache',type=pathlib.Path,required=True)
+    parser.add_argument('--runtime',type=pathlib.Path,required=True)
+    parser.add_argument('--tool',action='append')
+    parser.add_argument('--force',action='store_true')
+    args=parser.parse_args()
+    registry=json.loads((ROOT/'catalog/source-registry.json').read_text(encoding='utf-8'))
+    tr=LocalTranslator(args.runtime)
+    report_file=ROOT/'catalog/imported-documentation.json'
+    report=json.loads(report_file.read_text(encoding='utf-8')) if report_file.exists() else {}
+    job_file=ROOT/'evidence/documentation-import-job.json'
+    job={'pid':os.getpid(),'status':'running','started_epoch':time.time(),'pipeline_version':PIPELINE_VERSION,
+         'selected_tools':args.tool or sorted(registry),'completed_in_this_run':[]}
+    save_json(job_file,job)
+    for tool in args.tool or sorted(registry):
+        record=registry[tool]
+        dest=ROOT/'vault/02-Tools'/tool
+        dest.mkdir(parents=True,exist_ok=True)
+        originals=ROOT/'sources/upstream'/tool
+        assets=ROOT/'vault/99-Assets/upstream'/tool
+        originals.mkdir(parents=True,exist_ok=True)
+        assets.mkdir(parents=True,exist_ok=True)
+        license_bytes=(args.cache/tool/'LICENSE.upstream').read_bytes()
+        assert sha(license_bytes)==record['license_sha256']
+        (assets/'LICENSE.txt').write_bytes(license_bytes)
+        for asset in record['assets']:
+            src=args.cache/tool/'docs'/asset['path']
+            assert sha(src.read_bytes())==asset['sha256']
+            target=assets/asset['path']
+            target.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copyfile(src,target)
+        old_documents={x['source_path']:x for x in report.get(tool,{}).get('documents',[])}
+        documents=[]
+        priority={'README.md':0,'docs/README.md':1,'docs/INSTALL.md':2,'docs/FAQ.md':3,'docs/features.md':4,'docs/Changelog.md':99}
+        selected_docs=sorted(record['documents'],key=lambda x:(priority.get(x['path'],10),x['path']))
+        for doc in selected_docs:
+            old=old_documents.get(doc['path'])
+            if old and old.get('pipeline_version')==PIPELINE_VERSION and not args.force:
+                existing=ROOT/old['note']
+                if existing.exists() and sha(existing.read_bytes())==old['translation_sha256'] and old['source_sha256']==doc['sha256']:
+                    documents.append(old)
+                    continue
+            data=(args.cache/tool/'docs'/doc['path']).read_bytes()
+            assert sha(data)==doc['sha256']
+            raw=originals/(doc['path']+'.source')
+            raw.parent.mkdir(parents=True,exist_ok=True)
+            raw.write_bytes(data)
+            source=data.decode('utf-8')
+            name=note_name(tool,doc)
+            note=dest/(name+'.md')
+            native_portuguese=doc.get('language','en').startswith('pt')
+            translated=source if native_portuguese else translate_body(source,tr)
+            old_heads=re.findall(r'^#{1,6}\s+(.+)$',source,re.M)
+            new_heads=re.findall(r'^#{1,6}\s+(.+)$',translated,re.M)
+            heading_map={slug(a):slug(b) for a,b in zip(old_heads,new_heads)}
+            translated,changes=mirror_images(translated,record,assets,note)
+            translated,link_changes=resolve_relative_links(translated,record,doc['path'],note,assets,heading_map)
+            changes+=link_changes
+            # Add a visible title only if the source did not have a Markdown H1.
+            if not re.search(r'^# ',translated,re.M):
+                translated='# '+tool+' — documentação oficial\n\n'+translated
+            props={'title':tool+' — documentação oficial','type':'official-documentation','tool':tool,
+                   'status':'official-translation' if native_portuguese else 'translated-machine','reviewed':'2026-10-26','language':doc.get('language') if native_portuguese else 'pt-BR',
+                   'tags':['documentation','tool/'+tool],'cssclasses':['fieldbook'],
+                   'source_url':doc['source_url'],'source_commit':record['commit'],
+                   'source_sha256':doc['sha256'],'license_spdx':doc.get('license_spdx',record['license_spdx']),
+                   'human_review':'pending','source_scope':record['source_scope']}
+            fm='---\n'+'\n'.join(k+': '+json.dumps(v,ensure_ascii=False) for k,v in props.items())+'\n---\n\n'
+            notice=('> Texto em português fornecido pelo próprio projeto upstream e preservado nesta importação. Links e imagens receberam adaptações para navegação local; isso não comprova revisão técnica por este repositório.\n\n' if native_portuguese else '> Tradução automática local para português, ainda sem revisão humana integral. Estrutura e blocos de código preservados; referências externas não significam conteúdo espelhado.\n\n')
+            license_link=pathlib.Path(os.path.relpath(assets/'LICENSE.txt',note.parent)).as_posix()
+            attribution='\n\n---\n\n## Procedência desta tradução\n\nFonte: ['+record['repository']+']('+doc['source_url']+'). Licença: ['+record['license_spdx']+']('+license_link+'). Commit: '+record['commit']+'.\n\nO original preservado, a lista de mudanças de apresentação e os hashes constam no manifesto do projeto. Nenhum exemplo desta documentação foi executado automaticamente.\n'
+            final=fm+notice+translated+attribution
+            temp_note=note.with_suffix('.md.tmp')
+            temp_note.write_bytes(final.encode('utf-8'))
+            temp_note.replace(note)
+            documents.append({'source_path':doc['path'],'note':note.relative_to(ROOT).as_posix(),
+                              'original':raw.relative_to(ROOT).as_posix(),'source_sha256':sha(data),
+                              'translation_sha256':sha(final.encode('utf-8')),
+                              'source_fenced_blocks':len(code_bodies(source)),
+                              'code_blocks_equal':code_bodies(translated)==code_bodies(source),
+                              'translation_method':'upstream-portuguese' if native_portuguese else 'machine-local',
+                              'pipeline_version':PIPELINE_VERSION,
+                              'presentation_changes':changes,'human_review':'pending'})
+            report[tool]={'repository':record['repository'],'commit':record['commit'],'license_spdx':record['license_spdx'],
+                          'documents':list(documents),'source_scope':record['source_scope'],'kali_official_page_complete':False,
+                          'translation_complete_for_acquired_documents':len(documents)==len(selected_docs),
+                          'human_review_complete':False,'model':tr.provenance()}
+            save_json(report_file,report)
+            job['completed_in_this_run'].append({'tool':tool,'source':doc['path'],'note':note.relative_to(ROOT).as_posix()})
+            job['updated_epoch']=time.time()
+            save_json(job_file,job)
+            tr.flush()
+            print(json.dumps({'tool':tool,'note':note.name,'code_blocks_preserved':len(code_bodies(source))}),flush=True)
+        report[tool]={'repository':record['repository'],'commit':record['commit'],'license_spdx':record['license_spdx'],
+                      'documents':documents,'source_scope':record['source_scope'],
+                      'kali_official_page_complete':False,'translation_complete_for_acquired_documents':True,
+                      'human_review_complete':False,'model':tr.provenance()}
+        save_json(report_file,report)
+    tr.flush()
+    result={'tools':len(report),'documents':sum(len(x['documents']) for x in report.values()),
+            'all_fenced_code_preserved':all(d['code_blocks_equal'] for x in report.values() for d in x['documents']),
+            'human_review_complete':False,'full_kali_corpus_complete':False}
+    (ROOT/'evidence/documentation-import.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    job['status']='completed'
+    job['completed_epoch']=time.time()
+    job['result']=result
+    save_json(job_file,job)
+    print(json.dumps(result),flush=True)
+
+if __name__=='__main__':
+    main()

@@ -1,0 +1,1229 @@
+{
+  "passed": true,
+  "tools": 12,
+  "documents": 32,
+  "code_blocks": 304,
+  "checks": [
+    {
+      "check": "ffuf:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "check": "ffuf:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 30,
+        "translation": 30
+      }
+    },
+    {
+      "check": "ffuf:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "ffuf:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "ffuf:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "gobuster:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "gobuster:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "gobuster:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 22
+    },
+    {
+      "check": "gobuster:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 33,
+        "translation": 33
+      }
+    },
+    {
+      "check": "gobuster:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "gobuster:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "gobuster:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "check": "subfinder:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 13,
+        "translation": 13
+      }
+    },
+    {
+      "check": "subfinder:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "subfinder:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "subfinder:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "assetfinder:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "assetfinder:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "assetfinder:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "check": "assetfinder:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 7,
+        "translation": 7
+      }
+    },
+    {
+      "check": "assetfinder:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "assetfinder:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "assetfinder:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "check": "feroxbuster:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 5,
+        "translation": 5
+      }
+    },
+    {
+      "check": "feroxbuster:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "feroxbuster:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "feroxbuster:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "katana:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "katana:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "katana:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 95
+    },
+    {
+      "check": "katana:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 220,
+        "translation": 220
+      }
+    },
+    {
+      "check": "katana:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "katana:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "katana:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 20
+    },
+    {
+      "check": "naabu:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 65,
+        "translation": 65
+      }
+    },
+    {
+      "check": "naabu:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "naabu:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "naabu:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 17
+    },
+    {
+      "check": "above:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 9,
+        "translation": 9
+      }
+    },
+    {
+      "check": "above:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "above:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "above:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "adaptixc2:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "adaptixc2:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "adaptixc2:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "adaptixc2:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 0,
+        "translation": 0
+      }
+    },
+    {
+      "check": "adaptixc2:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "adaptixc2:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "adaptixc2:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "airgeddon:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "airgeddon:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "airgeddon:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "airgeddon:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 1,
+        "translation": 1
+      }
+    },
+    {
+      "check": "airgeddon:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "airgeddon:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "airgeddon:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "nuclei:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 14,
+        "translation": 14
+      }
+    },
+    {
+      "check": "nuclei:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "nuclei:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README_PT-BR.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README_PT-BR.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README_PT-BR.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "nuclei:README_PT-BR.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 14,
+        "translation": 14
+      }
+    },
+    {
+      "check": "nuclei:README_PT-BR.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nuclei:README_PT-BR.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "nuclei:README_PT-BR.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "check": "aflplusplus:README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 22,
+        "translation": 22
+      }
+    },
+    {
+      "check": "aflplusplus:README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/README.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/README.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/README.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/README.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 0,
+        "translation": 0
+      }
+    },
+    {
+      "check": "aflplusplus:docs/README.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/README.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/README.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 14
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 21,
+        "translation": 21
+      }
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/INSTALL.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 9
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 29,
+        "translation": 29
+      }
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/FAQ.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/features.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/features.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/features.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/features.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 4,
+        "translation": 4
+      }
+    },
+    {
+      "check": "aflplusplus:docs/features.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/features.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/features.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 40,
+        "translation": 40
+      }
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/FrameShift.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 61,
+        "translation": 61
+      }
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/IJON.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 18,
+        "translation": 18
+      }
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/SAND.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 125,
+        "translation": 125
+      }
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/afl-fuzz_approach.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 27,
+        "translation": 27
+      }
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/best_practices.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 70,
+        "translation": 70
+      }
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/custom_mutators.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 572,
+        "translation": 572
+      }
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/env_variables.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 14,
+        "translation": 14
+      }
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_binary-only_targets.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 25
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 235,
+        "translation": 235
+      }
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/fuzzing_in_depth.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 37,
+        "translation": 37
+      }
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/important_changes.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 15,
+        "translation": 15
+      }
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/rpc_statsd.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 4,
+        "translation": 4
+      }
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/third_party_tools.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 0,
+        "translation": 0
+      }
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/tutorials.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 59,
+        "translation": 59
+      }
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/value_profiling.md review status honest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md original hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md translation hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md exact fenced-code bodies",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md inline literals retained",
+      "pass": true,
+      "detail": {
+        "source": 145,
+        "translation": 145
+      }
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md no tokenizer/placeholder leaks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md displayed images offline",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "aflplusplus:docs/Changelog.md review status honest",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "goal_complete": false,
+  "limits": [
+    "This checks source/literal integrity and assets, not semantic translation quality or complete tool-manual coverage.",
+    "Human technical review and full Kali corpus coverage remain separate acceptance gates."
+  ]
+}

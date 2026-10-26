@@ -1,0 +1,12 @@
+{
+  "source_project": "https://gitlab.com/kalilinux/documentation/kali-tools",
+  "commit": "179168ddb65e49b2f78728921b8935a7faad9895",
+  "archive_sha256": "45a692f40325134617da5661b71d4247cedf3735fc287114aecbb971b1ec5b8d",
+  "tool_index_records": 820,
+  "everything_members": 806,
+  "large_members": 424,
+  "upstream_draft_records": 0,
+  "offline_pilot_modules": 2,
+  "full_documentation_translations": 0,
+  "license_status": "No explicit root LICENSE found and API license=null; full-copy redistribution not confirmed."
+}
